@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: TenorSwaptionVTS Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -151,27 +152,27 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aefcaef10ef62a382ce02f38aea2210a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#aefcaef10ef62a382ce02f38aea2210a6">TenorSwaptionVTS</a> (const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html">SwaptionVolatilityStructure</a> &gt; &amp;baseVTS, const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; &amp;discountCurve, const ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; &amp;baseIndex, const ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; &amp;targIndex, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;baseFixedFreq, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;targFixedFreq, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;baseFixedDC, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;targFixedDC)</td></tr>
-<tr class="separator:aefcaef10ef62a382ce02f38aea2210a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6e865183845ab02714a97ab5f90fc57"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#ab6e865183845ab02714a97ab5f90fc57">maxDate</a> () const</td></tr>
-<tr class="memdesc:ab6e865183845ab02714a97ab5f90fc57"><td class="mdescLeft">&#160;</td><td class="mdescRight">the latest date for which the curve can return values  <a href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#ab6e865183845ab02714a97ab5f90fc57">More...</a><br /></td></tr>
-<tr class="separator:ab6e865183845ab02714a97ab5f90fc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57f490b1917711f9a8a053833ed97f4e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a57f490b1917711f9a8a053833ed97f4e">minStrike</a> () const</td></tr>
-<tr class="memdesc:a57f490b1917711f9a8a053833ed97f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">the minimum strike for which the term structure can return vols  <a href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a57f490b1917711f9a8a053833ed97f4e">More...</a><br /></td></tr>
-<tr class="separator:a57f490b1917711f9a8a053833ed97f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a112bd57e4ec648c23bcd3aba6e4066d1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a112bd57e4ec648c23bcd3aba6e4066d1">maxStrike</a> () const</td></tr>
-<tr class="memdesc:a112bd57e4ec648c23bcd3aba6e4066d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">the maximum strike for which the term structure can return vols  <a href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a112bd57e4ec648c23bcd3aba6e4066d1">More...</a><br /></td></tr>
-<tr class="separator:a112bd57e4ec648c23bcd3aba6e4066d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b40c1dd744f1b53edb698d0e72e7b1a"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a1b40c1dd744f1b53edb698d0e72e7b1a">maxSwapTenor</a> () const</td></tr>
-<tr class="memdesc:a1b40c1dd744f1b53edb698d0e72e7b1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">the largest length for which the term structure can return vols  <a href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a1b40c1dd744f1b53edb698d0e72e7b1a">More...</a><br /></td></tr>
-<tr class="separator:a1b40c1dd744f1b53edb698d0e72e7b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dc89350c102baaf3296381115522b09"><td class="memItemLeft" align="right" valign="top">virtual ext::shared_ptr&lt; <a class="el" href="../../d9/db6/class_quant_lib_1_1_smile_section.html">SmileSection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a8dc89350c102baaf3296381115522b09">smileSectionImpl</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> optionTime, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a79f138ac8de07dd9c5e7cd8f95e2c8f5">swapLength</a>) const</td></tr>
-<tr class="separator:a8dc89350c102baaf3296381115522b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac964f137cf0d8a5eeb2910292905eb6f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#ac964f137cf0d8a5eeb2910292905eb6f">volatilityImpl</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> optionTime, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a79f138ac8de07dd9c5e7cd8f95e2c8f5">swapLength</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> strike) const</td></tr>
-<tr class="separator:ac964f137cf0d8a5eeb2910292905eb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab95b24d256542f56472b2b4c63cde369"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d7b/namespace_quant_lib.html#a8b2aa10016abb1ffb6f55484a04a5143">VolatilityType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#ab95b24d256542f56472b2b4c63cde369">volatilityType</a> () const</td></tr>
-<tr class="memdesc:ab95b24d256542f56472b2b4c63cde369"><td class="mdescLeft">&#160;</td><td class="mdescRight">volatility type  <a href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#ab95b24d256542f56472b2b4c63cde369">More...</a><br /></td></tr>
-<tr class="separator:ab95b24d256542f56472b2b4c63cde369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8033265b33078738e4dd0c6160c6e6e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a8033265b33078738e4dd0c6160c6e6e7">TenorSwaptionVTS</a> (const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html">SwaptionVolatilityStructure</a> &gt; &amp;baseVTS, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; discountCurve, ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; baseIndex, ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; targIndex, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;baseFixedFreq, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;targFixedFreq, <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> baseFixedDC, <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> targFixedDC)</td></tr>
+<tr class="separator:a8033265b33078738e4dd0c6160c6e6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa72216913cb42d4910ebcae64d655934"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#aa72216913cb42d4910ebcae64d655934">maxDate</a> () const override</td></tr>
+<tr class="memdesc:aa72216913cb42d4910ebcae64d655934"><td class="mdescLeft">&#160;</td><td class="mdescRight">the latest date for which the curve can return values  <a href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#aa72216913cb42d4910ebcae64d655934">More...</a><br /></td></tr>
+<tr class="separator:aa72216913cb42d4910ebcae64d655934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d1cd932a2b24ec22ee592c0a527435"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a37d1cd932a2b24ec22ee592c0a527435">minStrike</a> () const override</td></tr>
+<tr class="memdesc:a37d1cd932a2b24ec22ee592c0a527435"><td class="mdescLeft">&#160;</td><td class="mdescRight">the minimum strike for which the term structure can return vols  <a href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a37d1cd932a2b24ec22ee592c0a527435">More...</a><br /></td></tr>
+<tr class="separator:a37d1cd932a2b24ec22ee592c0a527435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c7aba64057da6c20c739569c96d9539"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a2c7aba64057da6c20c739569c96d9539">maxStrike</a> () const override</td></tr>
+<tr class="memdesc:a2c7aba64057da6c20c739569c96d9539"><td class="mdescLeft">&#160;</td><td class="mdescRight">the maximum strike for which the term structure can return vols  <a href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a2c7aba64057da6c20c739569c96d9539">More...</a><br /></td></tr>
+<tr class="separator:a2c7aba64057da6c20c739569c96d9539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c530fa8e4c3c147934250e6c526b019"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a1c530fa8e4c3c147934250e6c526b019">maxSwapTenor</a> () const override</td></tr>
+<tr class="memdesc:a1c530fa8e4c3c147934250e6c526b019"><td class="mdescLeft">&#160;</td><td class="mdescRight">the largest length for which the term structure can return vols  <a href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a1c530fa8e4c3c147934250e6c526b019">More...</a><br /></td></tr>
+<tr class="separator:a1c530fa8e4c3c147934250e6c526b019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa851a4021834e40a63d99ecbe167f242"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d9/db6/class_quant_lib_1_1_smile_section.html">SmileSection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#aa851a4021834e40a63d99ecbe167f242">smileSectionImpl</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> optionTime, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a79f138ac8de07dd9c5e7cd8f95e2c8f5">swapLength</a>) const override</td></tr>
+<tr class="separator:aa851a4021834e40a63d99ecbe167f242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21c65fd5d8f58e6763117bebeab35bdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a21c65fd5d8f58e6763117bebeab35bdb">volatilityImpl</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> optionTime, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a79f138ac8de07dd9c5e7cd8f95e2c8f5">swapLength</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> strike) const override</td></tr>
+<tr class="separator:a21c65fd5d8f58e6763117bebeab35bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72983c4ae34d208cce6942ef26bec58c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d7b/namespace_quant_lib.html#a8b2aa10016abb1ffb6f55484a04a5143">VolatilityType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a72983c4ae34d208cce6942ef26bec58c">volatilityType</a> () const override</td></tr>
+<tr class="memdesc:a72983c4ae34d208cce6942ef26bec58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">volatility type  <a href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a72983c4ae34d208cce6942ef26bec58c">More...</a><br /></td></tr>
+<tr class="separator:a72983c4ae34d208cce6942ef26bec58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_swaption_volatility_structure"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_swaption_volatility_structure')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html">SwaptionVolatilityStructure</a></td></tr>
 <tr class="memitem:a4ae32fc9ee5910b3da98ce36c581a121 inherit pub_methods_class_quant_lib_1_1_swaption_volatility_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a4ae32fc9ee5910b3da98ce36c581a121">SwaptionVolatilityStructure</a> (<a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> bdc, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
 <tr class="separator:a4ae32fc9ee5910b3da98ce36c581a121 inherit pub_methods_class_quant_lib_1_1_swaption_volatility_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,8 +182,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afe47b4b3a44530c5c1da6bba3c01945b inherit pub_methods_class_quant_lib_1_1_swaption_volatility_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#afe47b4b3a44530c5c1da6bba3c01945b">SwaptionVolatilityStructure</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">settlementDays</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;, <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> bdc, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
 <tr class="memdesc:afe47b4b3a44530c5c1da6bba3c01945b inherit pub_methods_class_quant_lib_1_1_swaption_volatility_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the reference date based on the global evaluation date  <a href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#afe47b4b3a44530c5c1da6bba3c01945b">More...</a><br /></td></tr>
 <tr class="separator:afe47b4b3a44530c5c1da6bba3c01945b inherit pub_methods_class_quant_lib_1_1_swaption_volatility_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a816d75a27ea3640e6c1b3e4102f2e588 inherit pub_methods_class_quant_lib_1_1_swaption_volatility_structure"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a816d75a27ea3640e6c1b3e4102f2e588">~SwaptionVolatilityStructure</a> ()</td></tr>
-<tr class="separator:a816d75a27ea3640e6c1b3e4102f2e588 inherit pub_methods_class_quant_lib_1_1_swaption_volatility_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860edad13003f305609169bfa8e4cfff inherit pub_methods_class_quant_lib_1_1_swaption_volatility_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a860edad13003f305609169bfa8e4cfff">~SwaptionVolatilityStructure</a> () override=default</td></tr>
+<tr class="separator:a860edad13003f305609169bfa8e4cfff inherit pub_methods_class_quant_lib_1_1_swaption_volatility_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82aa634bec702b990f6f855e0d4ec898 inherit pub_methods_class_quant_lib_1_1_swaption_volatility_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a82aa634bec702b990f6f855e0d4ec898">volatility</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;optionTenor, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;swapTenor, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> strike, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=false) const</td></tr>
 <tr class="memdesc:a82aa634bec702b990f6f855e0d4ec898 inherit pub_methods_class_quant_lib_1_1_swaption_volatility_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the volatility for a given option tenor and swap tenor  <a href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a82aa634bec702b990f6f855e0d4ec898">More...</a><br /></td></tr>
 <tr class="separator:a82aa634bec702b990f6f855e0d4ec898 inherit pub_methods_class_quant_lib_1_1_swaption_volatility_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,17 +281,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af3be26fd18355b452218cf51e28ba5fd inherit pub_methods_class_quant_lib_1_1_volatility_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">period/date conversion  <a href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#af3be26fd18355b452218cf51e28ba5fd">More...</a><br /></td></tr>
 <tr class="separator:af3be26fd18355b452218cf51e28ba5fd inherit pub_methods_class_quant_lib_1_1_volatility_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_term_structure"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_term_structure')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html">TermStructure</a></td></tr>
-<tr class="memitem:a4a8e0f324391a12454f11f5f5d5e66e8 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a4a8e0f324391a12454f11f5f5d5e66e8">TermStructure</a> (const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
-<tr class="memdesc:a4a8e0f324391a12454f11f5f5d5e66e8 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a4a8e0f324391a12454f11f5f5d5e66e8">More...</a><br /></td></tr>
-<tr class="separator:a4a8e0f324391a12454f11f5f5d5e66e8 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44918f70ab345cad67a287d46641f20f inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a44918f70ab345cad67a287d46641f20f">TermStructure</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a">referenceDate</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f">calendar</a>=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
-<tr class="memdesc:a44918f70ab345cad67a287d46641f20f inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize with a fixed reference date  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a44918f70ab345cad67a287d46641f20f">More...</a><br /></td></tr>
-<tr class="separator:a44918f70ab345cad67a287d46641f20f inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab72309c6d49bd4b6dc5b9ed09b67c7b9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ab72309c6d49bd4b6dc5b9ed09b67c7b9">TermStructure</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">settlementDays</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
-<tr class="memdesc:ab72309c6d49bd4b6dc5b9ed09b67c7b9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the reference date based on the global evaluation date  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ab72309c6d49bd4b6dc5b9ed09b67c7b9">More...</a><br /></td></tr>
-<tr class="separator:ab72309c6d49bd4b6dc5b9ed09b67c7b9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cd56b3d79445a9c5e72fbc0ddd4d201 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7cd56b3d79445a9c5e72fbc0ddd4d201">~TermStructure</a> ()</td></tr>
-<tr class="separator:a7cd56b3d79445a9c5e72fbc0ddd4d201 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a8af4eb53fd6dc79080752fccf3cfa9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7a8af4eb53fd6dc79080752fccf3cfa9">TermStructure</a> (<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
+<tr class="memdesc:a7a8af4eb53fd6dc79080752fccf3cfa9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7a8af4eb53fd6dc79080752fccf3cfa9">More...</a><br /></td></tr>
+<tr class="separator:a7a8af4eb53fd6dc79080752fccf3cfa9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f529896d168540176e50f5323beea0 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a39f529896d168540176e50f5323beea0">TermStructure</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a">referenceDate</a>, <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f">calendar</a>=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
+<tr class="memdesc:a39f529896d168540176e50f5323beea0 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize with a fixed reference date  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a39f529896d168540176e50f5323beea0">More...</a><br /></td></tr>
+<tr class="separator:a39f529896d168540176e50f5323beea0 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0943142f14acf195d50b98ad93423c5e inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a0943142f14acf195d50b98ad93423c5e">TermStructure</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">settlementDays</a>, <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>, <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
+<tr class="memdesc:a0943142f14acf195d50b98ad93423c5e inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the reference date based on the global evaluation date  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a0943142f14acf195d50b98ad93423c5e">More...</a><br /></td></tr>
+<tr class="separator:a0943142f14acf195d50b98ad93423c5e inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acc06bd66a1578d714c5afc5493e053 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7acc06bd66a1578d714c5afc5493e053">~TermStructure</a> () override=default</td></tr>
+<tr class="separator:a7acc06bd66a1578d714c5afc5493e053 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad49654ea33055b03f8666910acc13880 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880">dayCounter</a> () const</td></tr>
 <tr class="memdesc:ad49654ea33055b03f8666910acc13880 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">the day counter used for date/time conversion  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880">More...</a><br /></td></tr>
 <tr class="separator:ad49654ea33055b03f8666910acc13880 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -309,11 +310,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a32e050c75a34ceee6f0633bdb799a080 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">settlementDays</a> () const</td></tr>
 <tr class="memdesc:a32e050c75a34ceee6f0633bdb799a080 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">the settlementDays used for reference date calculation  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">More...</a><br /></td></tr>
 <tr class="separator:a32e050c75a34ceee6f0633bdb799a080 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5c54df7ed3b930268c8d7752c101725 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
-<tr class="separator:ac5c54df7ed3b930268c8d7752c101725 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
+<tr class="separator:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
-<tr class="memitem:abbd00a8000bd3ee5cd7e35aeb436f937 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#abbd00a8000bd3ee5cd7e35aeb436f937">Observer</a> ()</td></tr>
-<tr class="separator:abbd00a8000bd3ee5cd7e35aeb436f937 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a52ef9232283da6f842e4574afeb854a0">Observer</a> ()=default</td></tr>
+<tr class="separator:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#af6a9d3ca0b7f388f3b7ccb1eccf11f63">Observer</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
 <tr class="separator:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6810b3645967da11d5f5d4804d37bacc inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a6810b3645967da11d5f5d4804d37bacc">operator=</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
@@ -337,15 +338,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a522aacdd0f2408fe5e46527a6db999b4">operator=</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
 <tr class="separator:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f0b266a5d1e6ed41027d3e8c8d7ff1f inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a5f0b266a5d1e6ed41027d3e8c8d7ff1f">~Observable</a> ()</td></tr>
-<tr class="separator:a5f0b266a5d1e6ed41027d3e8c8d7ff1f inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a99f4333cda953ce3bfdc958ccea5fbf9">~Observable</a> ()=default</td></tr>
+<tr class="separator:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a> ()</td></tr>
 <tr class="separator:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_extrapolator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_extrapolator')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html">Extrapolator</a></td></tr>
-<tr class="memitem:ac799544aa04b6a67f067b21ad88147bb inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ac799544aa04b6a67f067b21ad88147bb">Extrapolator</a> ()</td></tr>
-<tr class="separator:ac799544aa04b6a67f067b21ad88147bb inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73300245f5c6c28e6b91da76454c00fb inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#a73300245f5c6c28e6b91da76454c00fb">~Extrapolator</a> ()</td></tr>
-<tr class="separator:a73300245f5c6c28e6b91da76454c00fb inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c29f9a2a9efdf12a8d81c6f74b9ed3 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ac0c29f9a2a9efdf12a8d81c6f74b9ed3">Extrapolator</a> ()=default</td></tr>
+<tr class="separator:ac0c29f9a2a9efdf12a8d81c6f74b9ed3 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d5b5a39a87eeb712a188d1929787001 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#a3d5b5a39a87eeb712a188d1929787001">~Extrapolator</a> ()=default</td></tr>
+<tr class="separator:a3d5b5a39a87eeb712a188d1929787001 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae60e793a77f44a9c022b103458fa993c inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ae60e793a77f44a9c022b103458fa993c">enableExtrapolation</a> (<a class="el" href="../../d9/db9/classbool.html">bool</a> b=true)</td></tr>
 <tr class="memdesc:ae60e793a77f44a9c022b103458fa993c inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable extrapolation in subsequent calls  <a href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ae60e793a77f44a9c022b103458fa993c">More...</a><br /></td></tr>
 <tr class="separator:ae60e793a77f44a9c022b103458fa993c inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -375,9 +376,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a3eff7d552ce2f813e8ea760733ebf016"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a3eff7d552ce2f813e8ea760733ebf016">targFixedDC_</a></td></tr>
 <tr class="separator:a3eff7d552ce2f813e8ea760733ebf016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_quant_lib_1_1_term_structure"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_quant_lib_1_1_term_structure')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html">TermStructure</a></td></tr>
-<tr class="memitem:a3cfce9cb19de6f0604adee64b6d80a35 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a3cfce9cb19de6f0604adee64b6d80a35">moving_</a></td></tr>
+<tr class="memitem:a3cfce9cb19de6f0604adee64b6d80a35 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a3cfce9cb19de6f0604adee64b6d80a35">moving_</a> = false</td></tr>
 <tr class="separator:a3cfce9cb19de6f0604adee64b6d80a35 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56cd8ee45c3477740e0429f98758c935 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a56cd8ee45c3477740e0429f98758c935">updated_</a></td></tr>
+<tr class="memitem:a56cd8ee45c3477740e0429f98758c935 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a56cd8ee45c3477740e0429f98758c935">updated_</a> = true</td></tr>
 <tr class="separator:a56cd8ee45c3477740e0429f98758c935 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a021eab7f1f44c1c71b8dfd29b9c4864b inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a021eab7f1f44c1c71b8dfd29b9c4864b">calendar_</a></td></tr>
 <tr class="separator:a021eab7f1f44c1c71b8dfd29b9c4864b inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -416,10 +417,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aefcaef10ef62a382ce02f38aea2210a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefcaef10ef62a382ce02f38aea2210a6">&#9670;&nbsp;</a></span>TenorSwaptionVTS()</h2>
+<a id="a8033265b33078738e4dd0c6160c6e6e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8033265b33078738e4dd0c6160c6e6e7">&#9670;&nbsp;</a></span>TenorSwaptionVTS()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -433,19 +434,19 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt;&#160;</td>
           <td class="paramname"><em>discountCurve</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt;&#160;</td>
           <td class="paramname"><em>baseIndex</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt;&#160;</td>
           <td class="paramname"><em>targIndex</em>, </td>
         </tr>
         <tr>
@@ -463,13 +464,13 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&#160;</td>
           <td class="paramname"><em>baseFixedDC</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&#160;</td>
           <td class="paramname"><em>targFixedDC</em>&#160;</td>
         </tr>
         <tr>
@@ -480,13 +481,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00077">77</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00078">78</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab6e865183845ab02714a97ab5f90fc57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6e865183845ab02714a97ab5f90fc57">&#9670;&nbsp;</a></span>maxDate()</h2>
+<a id="aa72216913cb42d4910ebcae64d655934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa72216913cb42d4910ebcae64d655934">&#9670;&nbsp;</a></span>maxDate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -495,7 +496,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> maxDate </td>
+          <td class="memname"><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> maxDate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -503,7 +504,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -512,12 +513,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a9d5c437961b8f9e30cffb723777ed7c6">TermStructure</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00096">96</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00098">98</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a57f490b1917711f9a8a053833ed97f4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57f490b1917711f9a8a053833ed97f4e">&#9670;&nbsp;</a></span>minStrike()</h2>
+<a id="a37d1cd932a2b24ec22ee592c0a527435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37d1cd932a2b24ec22ee592c0a527435">&#9670;&nbsp;</a></span>minStrike()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -526,7 +527,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> minStrike </td>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> minStrike </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -534,7 +535,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -543,12 +544,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#aaa54e38ec0aabcec3de3342602c4015f">VolatilityTermStructure</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00101">101</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00103">103</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a112bd57e4ec648c23bcd3aba6e4066d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a112bd57e4ec648c23bcd3aba6e4066d1">&#9670;&nbsp;</a></span>maxStrike()</h2>
+<a id="a2c7aba64057da6c20c739569c96d9539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7aba64057da6c20c739569c96d9539">&#9670;&nbsp;</a></span>maxStrike()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -557,7 +558,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> maxStrike </td>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> maxStrike </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -565,7 +566,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -574,12 +575,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#a50d3c0b68286f6b64878e8c785822805">VolatilityTermStructure</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00103">103</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00105">105</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a1b40c1dd744f1b53edb698d0e72e7b1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b40c1dd744f1b53edb698d0e72e7b1a">&#9670;&nbsp;</a></span>maxSwapTenor()</h2>
+<a id="a1c530fa8e4c3c147934250e6c526b019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c530fa8e4c3c147934250e6c526b019">&#9670;&nbsp;</a></span>maxSwapTenor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -588,7 +589,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp; maxSwapTenor </td>
+          <td class="memname">const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp; maxSwapTenor </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -596,7 +597,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -605,12 +606,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a95eb3bcb1f89026d83f78dd535d803a0">SwaptionVolatilityStructure</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00109">109</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00111">111</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a8dc89350c102baaf3296381115522b09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dc89350c102baaf3296381115522b09">&#9670;&nbsp;</a></span>smileSectionImpl()</h2>
+<a id="aa851a4021834e40a63d99ecbe167f242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa851a4021834e40a63d99ecbe167f242">&#9670;&nbsp;</a></span>smileSectionImpl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -619,7 +620,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ext::shared_ptr&lt;<a class="el" href="../../d9/db6/class_quant_lib_1_1_smile_section.html">SmileSection</a>&gt; smileSectionImpl </td>
+          <td class="memname">ext::shared_ptr&lt;<a class="el" href="../../d9/db6/class_quant_lib_1_1_smile_section.html">SmileSection</a>&gt; smileSectionImpl </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a>&#160;</td>
           <td class="paramname"><em>optionTime</em>, </td>
@@ -638,21 +639,21 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a8ba8c385743933f855c34c5697ad6150">SwaptionVolatilityStructure</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00111">111</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00113">113</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_a8dc89350c102baaf3296381115522b09_cgraph.png" border="0" usemap="#ad8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_a8dc89350c102baaf3296381115522b09_cgraph" alt=""/></div>
-<map name="d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_a8dc89350c102baaf3296381115522b09_cgraph" id="ad8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_a8dc89350c102baaf3296381115522b09_cgraph">
+<div class="center"><img src="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_aa851a4021834e40a63d99ecbe167f242_cgraph.png" border="0" usemap="#ad8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_aa851a4021834e40a63d99ecbe167f242_cgraph" alt=""/></div>
+<map name="d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_aa851a4021834e40a63d99ecbe167f242_cgraph" id="ad8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_aa851a4021834e40a63d99ecbe167f242_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,127,57"/>
 <area shape="rect" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a79f138ac8de07dd9c5e7cd8f95e2c8f5" title="implements the conversion between swap tenor and swap (time) length" alt="" coords="175,23,360,65"/>
 <area shape="rect" href="../../df/dfa/class_quant_lib_1_1_period.html#a51235d6c8430ad71b14f89554683ec35" title=" " alt="" coords="408,5,571,32"/>
@@ -664,17 +665,17 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_a8dc89350c102baaf3296381115522b09_icgraph.png" border="0" usemap="#ad8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_a8dc89350c102baaf3296381115522b09_icgraph" alt=""/></div>
-<map name="d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_a8dc89350c102baaf3296381115522b09_icgraph" id="ad8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_a8dc89350c102baaf3296381115522b09_icgraph">
+<div class="center"><img src="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_aa851a4021834e40a63d99ecbe167f242_icgraph.png" border="0" usemap="#ad8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_aa851a4021834e40a63d99ecbe167f242_icgraph" alt=""/></div>
+<map name="d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_aa851a4021834e40a63d99ecbe167f242_icgraph" id="ad8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_aa851a4021834e40a63d99ecbe167f242_icgraph">
 <area shape="rect" title=" " alt="" coords="145,5,267,32"/>
-<area shape="rect" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#ac964f137cf0d8a5eeb2910292905eb6f" title=" " alt="" coords="5,5,97,32"/>
+<area shape="rect" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a21c65fd5d8f58e6763117bebeab35bdb" title=" " alt="" coords="5,5,97,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ac964f137cf0d8a5eeb2910292905eb6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac964f137cf0d8a5eeb2910292905eb6f">&#9670;&nbsp;</a></span>volatilityImpl()</h2>
+<a id="a21c65fd5d8f58e6763117bebeab35bdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21c65fd5d8f58e6763117bebeab35bdb">&#9670;&nbsp;</a></span>volatilityImpl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -683,7 +684,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> volatilityImpl </td>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> volatilityImpl </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a>&#160;</td>
           <td class="paramname"><em>optionTime</em>, </td>
@@ -708,23 +709,23 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a657711758bbba79a2c406d318957bb27">SwaptionVolatilityStructure</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00117">117</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00119">119</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_ac964f137cf0d8a5eeb2910292905eb6f_cgraph.png" border="0" usemap="#ad8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_ac964f137cf0d8a5eeb2910292905eb6f_cgraph" alt=""/></div>
-<map name="d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_ac964f137cf0d8a5eeb2910292905eb6f_cgraph" id="ad8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_ac964f137cf0d8a5eeb2910292905eb6f_cgraph">
+<div class="center"><img src="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_a21c65fd5d8f58e6763117bebeab35bdb_cgraph.png" border="0" usemap="#ad8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_a21c65fd5d8f58e6763117bebeab35bdb_cgraph" alt=""/></div>
+<map name="d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_a21c65fd5d8f58e6763117bebeab35bdb_cgraph" id="ad8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s_a21c65fd5d8f58e6763117bebeab35bdb_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,97,57"/>
-<area shape="rect" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#a8dc89350c102baaf3296381115522b09" title=" " alt="" coords="145,5,267,32"/>
+<area shape="rect" href="../../d8/dfe/class_quant_lib_1_1_tenor_swaption_v_t_s.html#aa851a4021834e40a63d99ecbe167f242" title=" " alt="" coords="145,5,267,32"/>
 <area shape="rect" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#a79f138ac8de07dd9c5e7cd8f95e2c8f5" title="implements the conversion between swap tenor and swap (time) length" alt="" coords="315,23,500,65"/>
 <area shape="rect" href="../../df/dfa/class_quant_lib_1_1_period.html#a51235d6c8430ad71b14f89554683ec35" title=" " alt="" coords="548,5,711,32"/>
 <area shape="rect" href="../../df/dfa/class_quant_lib_1_1_period.html#a1a8b0cb2a146d49f0be2b17f669cf678" title=" " alt="" coords="552,56,707,83"/>
@@ -733,8 +734,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ab95b24d256542f56472b2b4c63cde369"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab95b24d256542f56472b2b4c63cde369">&#9670;&nbsp;</a></span>volatilityType()</h2>
+<a id="a72983c4ae34d208cce6942ef26bec58c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72983c4ae34d208cce6942ef26bec58c">&#9670;&nbsp;</a></span>volatilityType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -751,7 +752,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -760,7 +761,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html#aac2cf778b45a245e5ec96ca1242a91a3">SwaptionVolatilityStructure</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00122">122</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00124">124</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>
@@ -785,7 +786,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00066">66</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>
@@ -809,7 +810,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00066">66</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>
@@ -833,7 +834,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00068">68</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00069">69</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>
@@ -857,7 +858,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00069">69</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00070">70</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>
@@ -881,7 +882,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00070">70</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>
@@ -905,7 +906,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00072">72</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>
@@ -929,7 +930,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00072">72</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00073">73</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>
@@ -953,7 +954,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00073">73</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html#l00074">74</a> of file <a class="el" href="../../d8/d26/tenorswaptionvts_8hpp_source.html">tenorswaptionvts.hpp</a>.</p>
 
 </div>
 </div>

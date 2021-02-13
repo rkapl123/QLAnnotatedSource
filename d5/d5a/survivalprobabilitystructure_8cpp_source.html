@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/termstructures/credit/survivalprobabilitystructure.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -126,7 +127,7 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; jumpDates)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    : <a class="code" href="../../db/df4/class_quant_lib_1_1_default_probability_term_structure.html">DefaultProbabilityTermStructure</a>(settlDays, cal, dc, jumps, jumpDates) {}</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d7/d0f/class_quant_lib_1_1_survival_probability_structure.html#ad62fcb18ff6e85469eabd53df2cf8c74">   46</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d7/d0f/class_quant_lib_1_1_survival_probability_structure.html#ad62fcb18ff6e85469eabd53df2cf8c74">SurvivalProbabilityStructure::defaultDensityImpl</a>(<a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d7/d0f/class_quant_lib_1_1_survival_probability_structure.html#a03ea6b95fcace07c1e56a5c9ff680257">   46</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d7/d0f/class_quant_lib_1_1_survival_probability_structure.html#a03ea6b95fcace07c1e56a5c9ff680257">SurvivalProbabilityStructure::defaultDensityImpl</a>(<a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> dt = 0.0001;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t1 = std::max(t-dt, 0.0);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t2 = t+dt;</div>
@@ -140,12 +141,12 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_survival_probability_structure_html_a03ea6b95fcace07c1e56a5c9ff680257"><div class="ttname"><a href="../../d7/d0f/class_quant_lib_1_1_survival_probability_structure.html#a03ea6b95fcace07c1e56a5c9ff680257">QuantLib::SurvivalProbabilityStructure::defaultDensityImpl</a></div><div class="ttdeci">Real defaultDensityImpl(Time) const override</div><div class="ttdoc">instantaneous default density at a given time</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/survivalprobabilitystructure_8cpp_source.html#l00046">survivalprobabilitystructure.cpp:46</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_survival_probability_structure_html_ab595f65d804bf2d47b14dbd14116b758"><div class="ttname"><a href="../../d7/d0f/class_quant_lib_1_1_survival_probability_structure.html#ab595f65d804bf2d47b14dbd14116b758">QuantLib::SurvivalProbabilityStructure::SurvivalProbabilityStructure</a></div><div class="ttdeci">SurvivalProbabilityStructure(const DayCounter &amp;dayCounter=DayCounter(), const std::vector&lt; Handle&lt; Quote &gt; &gt; &amp;jumps=std::vector&lt; Handle&lt; Quote &gt; &gt;(), const std::vector&lt; Date &gt; &amp;jumpDates=std::vector&lt; Date &gt;())</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/survivalprobabilitystructure_8cpp_source.html#l00024">survivalprobabilitystructure.cpp:24</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_default_probability_term_structure_html"><div class="ttname"><a href="../../db/df4/class_quant_lib_1_1_default_probability_term_structure.html">QuantLib::DefaultProbabilityTermStructure</a></div><div class="ttdoc">Default probability term structure.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d7c/defaulttermstructure_8hpp_source.html#l00041">defaulttermstructure.hpp:41</a></div></div>
 <div class="ttc" id="agroup__types_html_gad9817a6a21dfcb91429f0152c99d6313"><div class="ttname"><a href="../../d6/d59/group__types.html#gad9817a6a21dfcb91429f0152c99d6313">QuantLib::Probability</a></div><div class="ttdeci">Real Probability</div><div class="ttdoc">probability</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00082">types.hpp:82</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_default_probability_term_structure_html_a344fea84748c884236cd26be3f3b1dd5"><div class="ttname"><a href="../../db/df4/class_quant_lib_1_1_default_probability_term_structure.html#a344fea84748c884236cd26be3f3b1dd5">QuantLib::DefaultProbabilityTermStructure::survivalProbabilityImpl</a></div><div class="ttdeci">virtual Probability survivalProbabilityImpl(Time) const =0</div><div class="ttdoc">survival probability calculation</div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_survival_probability_structure_html_ad62fcb18ff6e85469eabd53df2cf8c74"><div class="ttname"><a href="../../d7/d0f/class_quant_lib_1_1_survival_probability_structure.html#ad62fcb18ff6e85469eabd53df2cf8c74">QuantLib::SurvivalProbabilityStructure::defaultDensityImpl</a></div><div class="ttdeci">Real defaultDensityImpl(Time) const</div><div class="ttdoc">instantaneous default density at a given time</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/survivalprobabilitystructure_8cpp_source.html#l00046">survivalprobabilitystructure.cpp:46</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_day_counter_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html">QuantLib::DayCounter</a></div><div class="ttdoc">day counter class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00043">daycounter.hpp:43</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_day_counter_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html">QuantLib::DayCounter</a></div><div class="ttdoc">day counter class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00044">daycounter.hpp:44</a></div></div>
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>

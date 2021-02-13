@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: PastFixingsOnly Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -85,7 +86,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../de/db8/mcdiscreteasianengine_8hpp_source.html">ql/pricingengines/asian/mcdiscreteasianengine.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../de/dd1/mcdiscreteasianenginebase_8hpp_source.html">ql/pricingengines/asian/mcdiscreteasianenginebase.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for PastFixingsOnly:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -93,8 +94,8 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d7/df3/class_quant_lib_1_1detail_1_1_past_fixings_only__inherit__graph.png" border="0" usemap="#a_past_fixings_only_inherit__map" alt="Inheritance graph"/></div>
 <map name="_past_fixings_only_inherit__map" id="a_past_fixings_only_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,285,144,363"/>
-<area shape="rect" href="../../da/d81/class_quant_lib_1_1_error.html" title="Base error class." alt="" coords="29,131,120,237"/>
+<area shape="rect" title=" " alt="" coords="5,271,144,348"/>
+<area shape="rect" href="../../da/d81/class_quant_lib_1_1_error.html" title="Base error class." alt="" coords="29,131,120,223"/>
 <area shape="rect" title="STL class." alt="" coords="35,5,114,83"/>
 </map>
 </div>
@@ -105,8 +106,8 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d5/db5/class_quant_lib_1_1detail_1_1_past_fixings_only__coll__graph.png" border="0" usemap="#a_past_fixings_only_coll__map" alt="Collaboration graph"/></div>
 <map name="_past_fixings_only_coll__map" id="a_past_fixings_only_coll__map">
-<area shape="rect" title=" " alt="" coords="49,301,187,379"/>
-<area shape="rect" href="../../da/d81/class_quant_lib_1_1_error.html" title="Base error class." alt="" coords="79,145,157,252"/>
+<area shape="rect" title=" " alt="" coords="49,287,187,364"/>
+<area shape="rect" href="../../da/d81/class_quant_lib_1_1_error.html" title="Base error class." alt="" coords="83,145,153,237"/>
 <area shape="rect" title="STL class." alt="" coords="5,5,84,83"/>
 <area shape="rect" title=" " alt="" coords="109,5,274,83"/>
 </map>
@@ -119,15 +120,13 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_error"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_error')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../da/d81/class_quant_lib_1_1_error.html">Error</a></td></tr>
 <tr class="memitem:a55f022485ff175b831875b9a8b39a600 inherit pub_methods_class_quant_lib_1_1_error"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d81/class_quant_lib_1_1_error.html#a55f022485ff175b831875b9a8b39a600">Error</a> (const std::string &amp;file, long line, const std::string &amp;functionName, const std::string &amp;message=&quot;&quot;)</td></tr>
 <tr class="separator:a55f022485ff175b831875b9a8b39a600 inherit pub_methods_class_quant_lib_1_1_error"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e90ca50dff9f67db785f712731faa43 inherit pub_methods_class_quant_lib_1_1_error"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d81/class_quant_lib_1_1_error.html#a9e90ca50dff9f67db785f712731faa43">~Error</a> ()  throw ()</td></tr>
-<tr class="separator:a9e90ca50dff9f67db785f712731faa43 inherit pub_methods_class_quant_lib_1_1_error"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d4b96162e93e11e5816d83702578af8 inherit pub_methods_class_quant_lib_1_1_error"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d81/class_quant_lib_1_1_error.html#a8d4b96162e93e11e5816d83702578af8">what</a> () const  throw ()</td></tr>
-<tr class="memdesc:a8d4b96162e93e11e5816d83702578af8 inherit pub_methods_class_quant_lib_1_1_error"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the error message.  <a href="../../da/d81/class_quant_lib_1_1_error.html#a8d4b96162e93e11e5816d83702578af8">More...</a><br /></td></tr>
-<tr class="separator:a8d4b96162e93e11e5816d83702578af8 inherit pub_methods_class_quant_lib_1_1_error"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884afade2d98361da8b22f200dd1ccb5 inherit pub_methods_class_quant_lib_1_1_error"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d81/class_quant_lib_1_1_error.html#a884afade2d98361da8b22f200dd1ccb5">what</a> () const QL_NOEXCEPT override</td></tr>
+<tr class="memdesc:a884afade2d98361da8b22f200dd1ccb5 inherit pub_methods_class_quant_lib_1_1_error"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the error message.  <a href="../../da/d81/class_quant_lib_1_1_error.html#a884afade2d98361da8b22f200dd1ccb5">More...</a><br /></td></tr>
+<tr class="separator:a884afade2d98361da8b22f200dd1ccb5 inherit pub_methods_class_quant_lib_1_1_error"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../de/db8/mcdiscreteasianengine_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../de/db8/mcdiscreteasianengine_8hpp_source.html">mcdiscreteasianengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd1/mcdiscreteasianenginebase_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../de/dd1/mcdiscreteasianenginebase_8hpp_source.html">mcdiscreteasianenginebase.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5d2c2a4d8e67c4b4d900dd26a0b7aee6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d2c2a4d8e67c4b4d900dd26a0b7aee6">&#9670;&nbsp;</a></span>PastFixingsOnly()</h2>
@@ -144,7 +143,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/db8/mcdiscreteasianengine_8hpp_source.html#l00040">40</a> of file <a class="el" href="../../de/db8/mcdiscreteasianengine_8hpp_source.html">mcdiscreteasianengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd1/mcdiscreteasianenginebase_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../de/dd1/mcdiscreteasianenginebase_8hpp_source.html">mcdiscreteasianenginebase.hpp</a>.</p>
 
 </div>
 </div>

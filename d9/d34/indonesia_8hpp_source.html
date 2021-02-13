@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/time/calendars/indonesia.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -112,8 +113,8 @@ $(function() {
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../db/df5/class_quant_lib_1_1_indonesia_1_1_bej_impl.html">   64</a></span>&#160;        <span class="keyword">class </span><a class="code" href="../../db/df5/class_quant_lib_1_1_indonesia_1_1_bej_impl.html">BejImpl</a> : <span class="keyword">public</span> <a class="code" href="../../d8/db6/class_quant_lib_1_1_calendar_1_1_western_impl.html">Calendar::WesternImpl</a> {</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../db/df5/class_quant_lib_1_1_indonesia_1_1_bej_impl.html#a1d89c28bd42ba9a52da008bb69367171">   66</a></span>&#160;            std::string <a class="code" href="../../db/df5/class_quant_lib_1_1_indonesia_1_1_bej_impl.html#a1d89c28bd42ba9a52da008bb69367171">name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Jakarta stock exchange&quot;</span>; }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="../../db/df5/class_quant_lib_1_1_indonesia_1_1_bej_impl.html#a73e16b7dad4cebec21174d1a7af095b9">isBusinessDay</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../db/df5/class_quant_lib_1_1_indonesia_1_1_bej_impl.html#aa4f4ba750a08765e64da2d0bd473944a">   66</a></span>&#160;            std::string <a class="code" href="../../db/df5/class_quant_lib_1_1_indonesia_1_1_bej_impl.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Jakarta stock exchange&quot;</span>; }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="../../db/df5/class_quant_lib_1_1_indonesia_1_1_bej_impl.html#a0850bb5ce5d116ab4bd209e4e608e06f">isBusinessDay</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp;) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        };</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../df/d8e/class_quant_lib_1_1_indonesia.html#abe41cfffd960e29a5d8b07be00aeda42">   70</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="../../df/d8e/class_quant_lib_1_1_indonesia.html#abe41cfffd960e29a5d8b07be00aeda42">Market</a> { <a class="code" href="../../df/d8e/class_quant_lib_1_1_indonesia.html#abe41cfffd960e29a5d8b07be00aeda42a9b6e36c4fdbb23bc0eee738aea95adaa">BEJ</a>,  </div>
@@ -129,7 +130,6 @@ $(function() {
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_indonesia_html"><div class="ttname"><a href="../../df/d8e/class_quant_lib_1_1_indonesia.html">QuantLib::Indonesia</a></div><div class="ttdoc">Indonesian calendars</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d34/indonesia_8hpp_source.html#l00062">indonesia.hpp:62</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_indonesia_1_1_bej_impl_html_a1d89c28bd42ba9a52da008bb69367171"><div class="ttname"><a href="../../db/df5/class_quant_lib_1_1_indonesia_1_1_bej_impl.html#a1d89c28bd42ba9a52da008bb69367171">QuantLib::Indonesia::BejImpl::name</a></div><div class="ttdeci">std::string name() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d34/indonesia_8hpp_source.html#l00066">indonesia.hpp:66</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_indonesia_html_abe41cfffd960e29a5d8b07be00aeda42abc9a578be019fe3ffa489578a97f9a75"><div class="ttname"><a href="../../df/d8e/class_quant_lib_1_1_indonesia.html#abe41cfffd960e29a5d8b07be00aeda42abc9a578be019fe3ffa489578a97f9a75">QuantLib::Indonesia::JSX</a></div><div class="ttdeci">@ JSX</div><div class="ttdoc">Jakarta stock exchange (merged into IDX)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d34/indonesia_8hpp_source.html#l00071">indonesia.hpp:71</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_indonesia_html_abe41cfffd960e29a5d8b07be00aeda42a66be860650da4b438a498218e252c6e3"><div class="ttname"><a href="../../df/d8e/class_quant_lib_1_1_indonesia.html#abe41cfffd960e29a5d8b07be00aeda42a66be860650da4b438a498218e252c6e3">QuantLib::Indonesia::IDX</a></div><div class="ttdeci">@ IDX</div><div class="ttdoc">Indonesia stock exchange.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d34/indonesia_8hpp_source.html#l00073">indonesia.hpp:72</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_1_1_western_impl_html"><div class="ttname"><a href="../../d8/db6/class_quant_lib_1_1_calendar_1_1_western_impl.html">QuantLib::Calendar::WesternImpl</a></div><div class="ttdoc">partial calendar implementation</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00176">calendar.hpp:176</a></div></div>
@@ -137,9 +137,10 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_indonesia_html_abe41cfffd960e29a5d8b07be00aeda42"><div class="ttname"><a href="../../df/d8e/class_quant_lib_1_1_indonesia.html#abe41cfffd960e29a5d8b07be00aeda42">QuantLib::Indonesia::Market</a></div><div class="ttdeci">Market</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d34/indonesia_8hpp_source.html#l00070">indonesia.hpp:70</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_indonesia_html_a2d8460ba3b252bf2724a1f0451bb9cbe"><div class="ttname"><a href="../../df/d8e/class_quant_lib_1_1_indonesia.html#a2d8460ba3b252bf2724a1f0451bb9cbe">QuantLib::Indonesia::Indonesia</a></div><div class="ttdeci">Indonesia(Market m=IDX)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d29/indonesia_8cpp_source.html#l00025">indonesia.cpp:25</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_indonesia_1_1_bej_impl_html_a0850bb5ce5d116ab4bd209e4e608e06f"><div class="ttname"><a href="../../db/df5/class_quant_lib_1_1_indonesia_1_1_bej_impl.html#a0850bb5ce5d116ab4bd209e4e608e06f">QuantLib::Indonesia::BejImpl::isBusinessDay</a></div><div class="ttdeci">bool isBusinessDay(const Date &amp;) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d29/indonesia_8cpp_source.html#l00040">indonesia.cpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_indonesia_1_1_bej_impl_html_aa4f4ba750a08765e64da2d0bd473944a"><div class="ttname"><a href="../../db/df5/class_quant_lib_1_1_indonesia_1_1_bej_impl.html#aa4f4ba750a08765e64da2d0bd473944a">QuantLib::Indonesia::BejImpl::name</a></div><div class="ttdeci">std::string name() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d34/indonesia_8hpp_source.html#l00066">indonesia.hpp:66</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_indonesia_html_abe41cfffd960e29a5d8b07be00aeda42a9b6e36c4fdbb23bc0eee738aea95adaa"><div class="ttname"><a href="../../df/d8e/class_quant_lib_1_1_indonesia.html#abe41cfffd960e29a5d8b07be00aeda42a9b6e36c4fdbb23bc0eee738aea95adaa">QuantLib::Indonesia::BEJ</a></div><div class="ttdeci">@ BEJ</div><div class="ttdoc">Jakarta stock exchange (merged into IDX)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d34/indonesia_8hpp_source.html#l00070">indonesia.hpp:70</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_indonesia_1_1_bej_impl_html_a73e16b7dad4cebec21174d1a7af095b9"><div class="ttname"><a href="../../db/df5/class_quant_lib_1_1_indonesia_1_1_bej_impl.html#a73e16b7dad4cebec21174d1a7af095b9">QuantLib::Indonesia::BejImpl::isBusinessDay</a></div><div class="ttdeci">bool isBusinessDay(const Date &amp;) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d29/indonesia_8cpp_source.html#l00040">indonesia.cpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html">QuantLib::Calendar</a></div><div class="ttdoc">calendar class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00061">calendar.hpp:61</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

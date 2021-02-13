@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/utilities/disposable.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -107,45 +108,57 @@ $(function() {
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">    #ifndef QL_USE_DISPOSABLE</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">   64</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable</a> : <span class="keyword">public</span> <a class="code" href="../../d3/dee/class_t.html">T</a> {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../d2/d3b/class_quant_lib_1_1_disposable.html#ab538a1e5ad0d5028c1fa92f4d849dc3f">   66</a></span>&#160;        <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html#ab538a1e5ad0d5028c1fa92f4d849dc3f">Disposable</a>(<a class="code" href="../../d3/dee/class_t.html">T</a>&amp; t);</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../d2/d3b/class_quant_lib_1_1_disposable.html#a4e34b6d01a65daf06beaa13b266c1459">   67</a></span>&#160;        <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html#a4e34b6d01a65daf06beaa13b266c1459">Disposable</a>(<span class="keyword">const</span> <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;T&gt;</a>&amp; t);</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../d2/d3b/class_quant_lib_1_1_disposable.html#a62e578457d50f2dfccc17ba03ebd94de">   68</a></span>&#160;        <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;T&gt;</a>&amp; <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html#a62e578457d50f2dfccc17ba03ebd94de">operator=</a>(<span class="keyword">const</span> <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;T&gt;</a>&amp; t);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    };</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// inline definitions</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../d2/d3b/class_quant_lib_1_1_disposable.html#ab538a1e5ad0d5028c1fa92f4d849dc3f">   75</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html#ab538a1e5ad0d5028c1fa92f4d849dc3f">Disposable&lt;T&gt;::Disposable</a>(<a class="code" href="../../d3/dee/class_t.html">T</a>&amp; t) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        this-&gt;<a class="code" href="../../d5/d7b/namespace_quant_lib.html#ac659821443d7196fa1a4abd73e9e6301">swap</a>(t);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../d2/d3b/class_quant_lib_1_1_disposable.html#a4e34b6d01a65daf06beaa13b266c1459">   80</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html#ab538a1e5ad0d5028c1fa92f4d849dc3f">Disposable&lt;T&gt;::Disposable</a>(<span class="keyword">const</span> <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;T&gt;</a>&amp; t) : <a class="code" href="../../d3/dee/class_t.html">T</a>() {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        this-&gt;<a class="code" href="../../d5/d7b/namespace_quant_lib.html#ac659821443d7196fa1a4abd73e9e6301">swap</a>(<span class="keyword">const_cast&lt;</span><a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;T&gt;</a>&amp;<span class="keyword">&gt;</span>(t));</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">   34</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a> = <a class="code" href="../../d3/dee/class_t.html">T</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">    #else</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">    #pragma message(&quot;Warning: enabling the old Disposable class template is deprecated.&quot;)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">    #pragma message(&quot;    If you&#39;re using --enable-disposable in your build&quot;)</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">    #pragma message(&quot;    or if you defined QL_USE_DISPOSABLE in ql/userconfig.hpp,&quot;)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">    #pragma message(&quot;    please restore the default compilation options in the near future.&quot;)</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">class </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a> : <span class="keyword">public</span> <a class="code" href="../../d3/dee/class_t.html">T</a> {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a>(<a class="code" href="../../d3/dee/class_t.html">T</a>&amp; t);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a>(<span class="keyword">const</span> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable&lt;T&gt;</a>&amp; t);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable&lt;T&gt;</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable&lt;T&gt;</a>&amp; t);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    };</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="../../d2/d3b/class_quant_lib_1_1_disposable.html#a62e578457d50f2dfccc17ba03ebd94de">   85</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;T&gt;</a>&amp; <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html#a62e578457d50f2dfccc17ba03ebd94de">Disposable&lt;T&gt;::operator=</a>(<span class="keyword">const</span> <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;T&gt;</a>&amp; t) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        this-&gt;<a class="code" href="../../d5/d7b/namespace_quant_lib.html#ac659821443d7196fa1a4abd73e9e6301">swap</a>(<span class="keyword">const_cast&lt;</span><a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;T&gt;</a>&amp;<span class="keyword">&gt;</span>(t));</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">// inline definitions</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">inline</span> Disposable&lt;T&gt;::Disposable(<a class="code" href="../../d3/dee/class_t.html">T</a>&amp; t) {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        this-&gt;<a class="code" href="../../d5/d7b/namespace_quant_lib.html#ac659821443d7196fa1a4abd73e9e6301">swap</a>(t);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">inline</span> Disposable&lt;T&gt;::Disposable(<span class="keyword">const</span> Disposable&lt;T&gt;&amp; t) : <a class="code" href="../../d3/dee/class_t.html">T</a>() {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        this-&gt;<a class="code" href="../../d5/d7b/namespace_quant_lib.html#ac659821443d7196fa1a4abd73e9e6301">swap</a>(<span class="keyword">const_cast&lt;</span>Disposable&lt;T&gt;&amp;<span class="keyword">&gt;</span>(t));</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">inline</span> Disposable&lt;T&gt;&amp; Disposable&lt;T&gt;::operator=(<span class="keyword">const</span> Disposable&lt;T&gt;&amp; t) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        this-&gt;<a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html#a8ef3e86157636ff80b3a8557835d8a1b">swap</a>(<span class="keyword">const_cast&lt;</span>Disposable&lt;T&gt;&amp;<span class="keyword">&gt;</span>(t));</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespace_quant_lib_html_ac659821443d7196fa1a4abd73e9e6301"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ac659821443d7196fa1a4abd73e9e6301">QuantLib::swap</a></div><div class="ttdeci">void swap(Array &amp;v, Array &amp;w)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00651">array.hpp:651</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html_a4e34b6d01a65daf06beaa13b266c1459"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html#a4e34b6d01a65daf06beaa13b266c1459">QuantLib::Disposable::Disposable</a></div><div class="ttdeci">Disposable(const Disposable&lt; T &gt; &amp;t)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00080">disposable.hpp:80</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html_a62e578457d50f2dfccc17ba03ebd94de"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html#a62e578457d50f2dfccc17ba03ebd94de">QuantLib::Disposable::operator=</a></div><div class="ttdeci">Disposable&lt; T &gt; &amp; operator=(const Disposable&lt; T &gt; &amp;t)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00085">disposable.hpp:85</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html_ab538a1e5ad0d5028c1fa92f4d849dc3f"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html#ab538a1e5ad0d5028c1fa92f4d849dc3f">QuantLib::Disposable::Disposable</a></div><div class="ttdeci">Disposable(T &amp;t)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00075">disposable.hpp:75</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_ac659821443d7196fa1a4abd73e9e6301"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ac659821443d7196fa1a4abd73e9e6301">QuantLib::swap</a></div><div class="ttdeci">void swap(Array &amp;v, Array &amp;w)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00673">array.hpp:673</a></div></div>
 <div class="ttc" id="aclass_t_html"><div class="ttname"><a href="../../d3/dee/class_t.html">T</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html">QuantLib::Disposable</a></div><div class="ttdoc">generic disposable object with move semantics</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00064">disposable.hpp:64</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_aab56fb6f79c404afbf5fedf756b41bc1"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">QuantLib::Disposable</a></div><div class="ttdeci">T Disposable</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00034">disposable.hpp:34</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_array_html_a8ef3e86157636ff80b3a8557835d8a1b"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#a8ef3e86157636ff80b3a8557835d8a1b">QuantLib::Array::swap</a></div><div class="ttdeci">void swap(Array &amp;, Array &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00673">array.hpp:673</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

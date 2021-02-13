@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/models/marketmodels/historicalratesanalysis.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -100,97 +101,98 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ql/models/marketmodels/historicalratesanalysis.hpp&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;ql/time/calendar.hpp&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;ql/indexes/interestrateindex.hpp&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#ae70d59586330c63b62061527db2cd887">   26</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#ae70d59586330c63b62061527db2cd887">historicalRatesAnalysis</a>(</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <a class="code" href="../../d7/d67/class_quant_lib_1_1_generic_sequence_statistics.html">SequenceStatistics</a>&amp; statistics,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                std::vector&lt;Date&gt;&amp; skippedDates,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                std::vector&lt;std::string&gt;&amp; skippedDatesErrorMessage,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; startDate,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; endDate,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keyword">const</span> <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp; step,</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keyword">const</span> std::vector&lt;ext::shared_ptr&lt;InterestRateIndex&gt; &gt;&amp; indexes) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        skippedDates.clear();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        skippedDatesErrorMessage.clear();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> nRates = indexes.size();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        statistics.<a class="code" href="../../d7/d67/class_quant_lib_1_1_generic_sequence_statistics.html#a58bd77d1d091d636b8d5400814152bc5">reset</a>(nRates);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        std::vector&lt;Rate&gt; sample(nRates);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::vector&lt;Rate&gt; prevSample(nRates);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::vector&lt;Rate&gt; sampleDiff(nRates);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> cal = indexes[0]-&gt;fixingCalendar();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">// start with a valid business date</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> currentDate = cal.<a class="code" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(startDate, 1*<a class="code" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">Days</a>, <a class="code" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18">Following</a>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">bool</span> isFirst = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">// Loop over the historical dataset</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">for</span> (; currentDate&lt;=endDate;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            currentDate = cal.<a class="code" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(currentDate, step, <a class="code" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18">Following</a>)) {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;nRates; ++i) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    <a class="code" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> fixing = indexes[i]-&gt;fixing(currentDate, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    sample[i] = fixing;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            } <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                skippedDates.push_back(currentDate);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                skippedDatesErrorMessage.push_back(e.what());</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="comment">// From 2nd step onwards, calculate forward rate</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">// relative differences</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">if</span> (!isFirst){</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;nRates; ++i)</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    sampleDiff[i] = sample[i]/prevSample[i] -1.0;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="comment">// add observation</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                statistics.<a class="code" href="../../d7/d67/class_quant_lib_1_1_generic_sequence_statistics.html#a1f278171ca690f5a6c24ca31583fdad6">add</a>(sampleDiff.begin(), sampleDiff.end());</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                isFirst = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="comment">// Store last calculated forward rates</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            std::swap(prevSample, sample);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#acc0fd38dfcc59f1cd850b4efec4b5e7e">   81</a></span>&#160;    <a class="code" href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#acc0fd38dfcc59f1cd850b4efec4b5e7e">HistoricalRatesAnalysis::HistoricalRatesAnalysis</a>(</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="keyword">const</span> ext::shared_ptr&lt;SequenceStatistics&gt;&amp; stats,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; startDate,</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; endDate,</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keyword">const</span> <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp; step,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keyword">const</span> std::vector&lt;ext::shared_ptr&lt;InterestRateIndex&gt; &gt;&amp; indexes)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    : stats_(stats) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="../../d5/d7b/namespace_quant_lib.html#ae70d59586330c63b62061527db2cd887">historicalRatesAnalysis</a>(</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    *<a class="code" href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#ad98185ab5224538bba12c21583b5ceea">stats_</a>,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    <a class="code" href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#aa88299924157a2ff41d5ad78318b0054">skippedDates_</a>, <a class="code" href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#af5d524c8f8687fd7dbb1bbb9a1290344">skippedDatesErrorMessage_</a>,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    startDate, endDate, step,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    indexes);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ql/indexes/interestrateindex.hpp&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;ql/models/marketmodels/historicalratesanalysis.hpp&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;ql/time/calendar.hpp&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#ae70d59586330c63b62061527db2cd887">   27</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#ae70d59586330c63b62061527db2cd887">historicalRatesAnalysis</a>(</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <a class="code" href="../../d7/d67/class_quant_lib_1_1_generic_sequence_statistics.html">SequenceStatistics</a>&amp; statistics,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                std::vector&lt;Date&gt;&amp; skippedDates,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                std::vector&lt;std::string&gt;&amp; skippedDatesErrorMessage,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; startDate,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; endDate,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keyword">const</span> <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp; step,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keyword">const</span> std::vector&lt;ext::shared_ptr&lt;InterestRateIndex&gt; &gt;&amp; indexes) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        skippedDates.clear();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        skippedDatesErrorMessage.clear();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> nRates = indexes.size();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        statistics.<a class="code" href="../../d7/d67/class_quant_lib_1_1_generic_sequence_statistics.html#a58bd77d1d091d636b8d5400814152bc5">reset</a>(nRates);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::vector&lt;Rate&gt; sample(nRates);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::vector&lt;Rate&gt; prevSample(nRates);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::vector&lt;Rate&gt; sampleDiff(nRates);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> cal = indexes[0]-&gt;fixingCalendar();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// start with a valid business date</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> currentDate = cal.<a class="code" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(startDate, 1*<a class="code" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">Days</a>, <a class="code" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18">Following</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">bool</span> isFirst = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">// Loop over the historical dataset</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">for</span> (; currentDate&lt;=endDate;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            currentDate = cal.<a class="code" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(currentDate, step, <a class="code" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18">Following</a>)) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;nRates; ++i) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    <a class="code" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> fixing = indexes[i]-&gt;fixing(currentDate, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    sample[i] = fixing;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            } <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                skippedDates.push_back(currentDate);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                skippedDatesErrorMessage.push_back(e.what());</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">// From 2nd step onwards, calculate forward rate</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">// relative differences</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">if</span> (!isFirst){</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;nRates; ++i)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    sampleDiff[i] = sample[i]/prevSample[i] -1.0;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="comment">// add observation</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                statistics.<a class="code" href="../../d7/d67/class_quant_lib_1_1_generic_sequence_statistics.html#a1f278171ca690f5a6c24ca31583fdad6">add</a>(sampleDiff.begin(), sampleDiff.end());</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                isFirst = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="comment">// Store last calculated forward rates</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            std::swap(prevSample, sample);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#aff5dff9c25cc7c1592a798c54f3b11dc">   82</a></span>&#160;    <a class="code" href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#aff5dff9c25cc7c1592a798c54f3b11dc">HistoricalRatesAnalysis::HistoricalRatesAnalysis</a>(</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        ext::shared_ptr&lt;SequenceStatistics&gt; stats,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; startDate,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; endDate,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp; step,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">const</span> std::vector&lt;ext::shared_ptr&lt;InterestRateIndex&gt; &gt;&amp; indexes)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    : stats_(std::move(stats)) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="../../d5/d7b/namespace_quant_lib.html#ae70d59586330c63b62061527db2cd887">historicalRatesAnalysis</a>(</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    *<a class="code" href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#ad98185ab5224538bba12c21583b5ceea">stats_</a>,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    <a class="code" href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#aa88299924157a2ff41d5ad78318b0054">skippedDates_</a>, <a class="code" href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#af5d524c8f8687fd7dbb1bbb9a1290344">skippedDatesErrorMessage_</a>,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    startDate, endDate, step,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    indexes);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespace_quant_lib_html_ae70d59586330c63b62061527db2cd887"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ae70d59586330c63b62061527db2cd887">QuantLib::historicalRatesAnalysis</a></div><div class="ttdeci">void historicalRatesAnalysis(SequenceStatistics &amp;statistics, std::vector&lt; Date &gt; &amp;skippedDates, std::vector&lt; std::string &gt; &amp;skippedDatesErrorMessage, const Date &amp;startDate, const Date &amp;endDate, const Period &amp;step, const std::vector&lt; ext::shared_ptr&lt; InterestRateIndex &gt; &gt; &amp;indexes)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ded/historicalratesanalysis_8cpp_source.html#l00026">historicalratesanalysis.cpp:26</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_ae70d59586330c63b62061527db2cd887"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ae70d59586330c63b62061527db2cd887">QuantLib::historicalRatesAnalysis</a></div><div class="ttdeci">void historicalRatesAnalysis(SequenceStatistics &amp;statistics, std::vector&lt; Date &gt; &amp;skippedDates, std::vector&lt; std::string &gt; &amp;skippedDatesErrorMessage, const Date &amp;startDate, const Date &amp;endDate, const Period &amp;step, const std::vector&lt; ext::shared_ptr&lt; InterestRateIndex &gt; &gt; &amp;indexes)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ded/historicalratesanalysis_8cpp_source.html#l00027">historicalratesanalysis.cpp:27</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">QuantLib::Days</a></div><div class="ttdeci">@ Days</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00037">timeunit.hpp:37</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_historical_rates_analysis_html_ad98185ab5224538bba12c21583b5ceea"><div class="ttname"><a href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#ad98185ab5224538bba12c21583b5ceea">QuantLib::HistoricalRatesAnalysis::stats_</a></div><div class="ttdeci">ext::shared_ptr&lt; SequenceStatistics &gt; stats_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfc/historicalratesanalysis_8hpp_source.html#l00057">historicalratesanalysis.hpp:57</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_historical_rates_analysis_html_ad98185ab5224538bba12c21583b5ceea"><div class="ttname"><a href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#ad98185ab5224538bba12c21583b5ceea">QuantLib::HistoricalRatesAnalysis::stats_</a></div><div class="ttdeci">ext::shared_ptr&lt; SequenceStatistics &gt; stats_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfc/historicalratesanalysis_8hpp_source.html#l00056">historicalratesanalysis.hpp:56</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18">QuantLib::Following</a></div><div class="ttdeci">@ Following</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00044">businessdayconvention.hpp:43</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_historical_rates_analysis_html_acc0fd38dfcc59f1cd850b4efec4b5e7e"><div class="ttname"><a href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#acc0fd38dfcc59f1cd850b4efec4b5e7e">QuantLib::HistoricalRatesAnalysis::HistoricalRatesAnalysis</a></div><div class="ttdeci">HistoricalRatesAnalysis(const ext::shared_ptr&lt; SequenceStatistics &gt; &amp;stats, const Date &amp;startDate, const Date &amp;endDate, const Period &amp;step, const std::vector&lt; ext::shared_ptr&lt; InterestRateIndex &gt; &gt; &amp;indexes)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ded/historicalratesanalysis_8cpp_source.html#l00081">historicalratesanalysis.cpp:81</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_generic_sequence_statistics_html_a58bd77d1d091d636b8d5400814152bc5"><div class="ttname"><a href="../../d7/d67/class_quant_lib_1_1_generic_sequence_statistics.html#a58bd77d1d091d636b8d5400814152bc5">QuantLib::GenericSequenceStatistics::reset</a></div><div class="ttdeci">void reset(Size dimension=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/sequencestatistics_8hpp_source.html#l00230">sequencestatistics.hpp:230</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_historical_rates_analysis_html_aa88299924157a2ff41d5ad78318b0054"><div class="ttname"><a href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#aa88299924157a2ff41d5ad78318b0054">QuantLib::HistoricalRatesAnalysis::skippedDates_</a></div><div class="ttdeci">std::vector&lt; Date &gt; skippedDates_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfc/historicalratesanalysis_8hpp_source.html#l00058">historicalratesanalysis.hpp:58</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_generic_sequence_statistics_html_a58bd77d1d091d636b8d5400814152bc5"><div class="ttname"><a href="../../d7/d67/class_quant_lib_1_1_generic_sequence_statistics.html#a58bd77d1d091d636b8d5400814152bc5">QuantLib::GenericSequenceStatistics::reset</a></div><div class="ttdeci">void reset(Size dimension=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/sequencestatistics_8hpp_source.html#l00229">sequencestatistics.hpp:229</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_historical_rates_analysis_html_aa88299924157a2ff41d5ad78318b0054"><div class="ttname"><a href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#aa88299924157a2ff41d5ad78318b0054">QuantLib::HistoricalRatesAnalysis::skippedDates_</a></div><div class="ttdeci">std::vector&lt; Date &gt; skippedDates_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfc/historicalratesanalysis_8hpp_source.html#l00057">historicalratesanalysis.hpp:57</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_generic_sequence_statistics_html"><div class="ttname"><a href="../../d7/d67/class_quant_lib_1_1_generic_sequence_statistics.html">QuantLib::GenericSequenceStatistics</a></div><div class="ttdoc">Statistics analysis of N-dimensional (sequence) data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/sequencestatistics_8hpp_source.html#l00050">sequencestatistics.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html_ab3fc4d2c4ba5243c3f5d51dcb3077ceb"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">QuantLib::Calendar::advance</a></div><div class="ttdeci">Date advance(const Date &amp;, Integer n, TimeUnit unit, BusinessDayConvention convention=Following, bool endOfMonth=false) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d2e/calendar_8cpp_source.html#l00110">calendar.cpp:110</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_historical_rates_analysis_html_aff5dff9c25cc7c1592a798c54f3b11dc"><div class="ttname"><a href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#aff5dff9c25cc7c1592a798c54f3b11dc">QuantLib::HistoricalRatesAnalysis::HistoricalRatesAnalysis</a></div><div class="ttdeci">HistoricalRatesAnalysis(ext::shared_ptr&lt; SequenceStatistics &gt; stats, const Date &amp;startDate, const Date &amp;endDate, const Period &amp;step, const std::vector&lt; ext::shared_ptr&lt; InterestRateIndex &gt; &gt; &amp;indexes)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ded/historicalratesanalysis_8cpp_source.html#l00082">historicalratesanalysis.cpp:82</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_generic_sequence_statistics_html_a1f278171ca690f5a6c24ca31583fdad6"><div class="ttname"><a href="../../d7/d67/class_quant_lib_1_1_generic_sequence_statistics.html#a1f278171ca690f5a6c24ca31583fdad6">QuantLib::GenericSequenceStatistics::add</a></div><div class="ttdeci">void add(const Sequence &amp;sample, Real weight=1.0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/sequencestatistics_8hpp_source.html#l00115">sequencestatistics.hpp:115</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_historical_rates_analysis_html_af5d524c8f8687fd7dbb1bbb9a1290344"><div class="ttname"><a href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#af5d524c8f8687fd7dbb1bbb9a1290344">QuantLib::HistoricalRatesAnalysis::skippedDatesErrorMessage_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; skippedDatesErrorMessage_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfc/historicalratesanalysis_8hpp_source.html#l00059">historicalratesanalysis.hpp:59</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_historical_rates_analysis_html_af5d524c8f8687fd7dbb1bbb9a1290344"><div class="ttname"><a href="../../d8/d9c/class_quant_lib_1_1_historical_rates_analysis.html#af5d524c8f8687fd7dbb1bbb9a1290344">QuantLib::HistoricalRatesAnalysis::skippedDatesErrorMessage_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; skippedDatesErrorMessage_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfc/historicalratesanalysis_8hpp_source.html#l00058">historicalratesanalysis.hpp:58</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html">QuantLib::Calendar</a></div><div class="ttdoc">calendar class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00061">calendar.hpp:61</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->

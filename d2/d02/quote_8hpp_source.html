@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/quote.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -113,7 +114,7 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../df/dec/class_quant_lib_1_1_quote.html">   37</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../df/dec/class_quant_lib_1_1_quote.html#a6afb98d2d98c29387a91bf2feedc31cb">   39</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../df/dec/class_quant_lib_1_1_quote.html#a6afb98d2d98c29387a91bf2feedc31cb">~Quote</a>() {}</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../df/dec/class_quant_lib_1_1_quote.html#acc5f296ecfc3aba704e185217ab35880">   39</a></span>&#160;        <a class="code" href="../../df/dec/class_quant_lib_1_1_quote.html#acc5f296ecfc3aba704e185217ab35880">~Quote</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../df/dec/class_quant_lib_1_1_quote.html#ab60805c81ba477be9e2c45b12a8f4f9e">   41</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../df/dec/class_quant_lib_1_1_quote.html#ab60805c81ba477be9e2c45b12a8f4f9e">value</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../df/dec/class_quant_lib_1_1_quote.html#a84d80615491ecea423f99490445b73ae">   43</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../df/dec/class_quant_lib_1_1_quote.html#a84d80615491ecea423f99490445b73ae">isValid</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
@@ -123,9 +124,9 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_quote_html_ab60805c81ba477be9e2c45b12a8f4f9e"><div class="ttname"><a href="../../df/dec/class_quant_lib_1_1_quote.html#ab60805c81ba477be9e2c45b12a8f4f9e">QuantLib::Quote::value</a></div><div class="ttdeci">virtual Real value() const =0</div><div class="ttdoc">returns the current value</div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_quote_html_a6afb98d2d98c29387a91bf2feedc31cb"><div class="ttname"><a href="../../df/dec/class_quant_lib_1_1_quote.html#a6afb98d2d98c29387a91bf2feedc31cb">QuantLib::Quote::~Quote</a></div><div class="ttdeci">virtual ~Quote()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d02/quote_8hpp_source.html#l00039">quote.hpp:39</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_observable_html"><div class="ttname"><a href="../../d5/de0/class_quant_lib_1_1_observable.html">QuantLib::Observable</a></div><div class="ttdoc">Object that notifies its changes to a set of observers.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00079">observable.hpp:79</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_quote_html_a84d80615491ecea423f99490445b73ae"><div class="ttname"><a href="../../df/dec/class_quant_lib_1_1_quote.html#a84d80615491ecea423f99490445b73ae">QuantLib::Quote::isValid</a></div><div class="ttdeci">virtual bool isValid() const =0</div><div class="ttdoc">returns true if the Quote holds a valid value</div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_quote_html_acc5f296ecfc3aba704e185217ab35880"><div class="ttname"><a href="../../df/dec/class_quant_lib_1_1_quote.html#acc5f296ecfc3aba704e185217ab35880">QuantLib::Quote::~Quote</a></div><div class="ttdeci">~Quote() override=default</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_quote_html"><div class="ttname"><a href="../../df/dec/class_quant_lib_1_1_quote.html">QuantLib::Quote</a></div><div class="ttdoc">purely virtual base class for market observables</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d02/quote_8hpp_source.html#l00037">quote.hpp:37</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/credit/lossdistribution.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -255,7 +256,7 @@ $(function() {
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="../../d3/d3f/class_quant_lib_1_1_loss_dist_binomial.html#ad47193b571312f99352987c0187c2396">  175</a></span>&#160;    <a class="code" href="../../dc/d4d/class_quant_lib_1_1_distribution.html">Distribution</a> LossDistBinomial::operator()(<span class="keyword">const</span> vector&lt;Real&gt;&amp; nominals,</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="../../d3/d3f/class_quant_lib_1_1_loss_dist_binomial.html#a1896de496353610b2a904f4d17ad51d6">  175</a></span>&#160;    <a class="code" href="../../dc/d4d/class_quant_lib_1_1_distribution.html">Distribution</a> LossDistBinomial::operator()(<span class="keyword">const</span> vector&lt;Real&gt;&amp; nominals,</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                                    <span class="keyword">const</span> vector&lt;Real&gt;&amp; probabilities)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">return</span> operator()(nominals.size(), nominals[0], probabilities[0]);</div>
@@ -300,14 +301,14 @@ $(function() {
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="../../dd/d3e/class_quant_lib_1_1_loss_dist_homogeneous.html#ad47193b571312f99352987c0187c2396">  220</a></span>&#160;    <a class="code" href="../../dc/d4d/class_quant_lib_1_1_distribution.html">Distribution</a> LossDistHomogeneous::operator()(<span class="keyword">const</span> vector&lt;Real&gt;&amp; nominals,</div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="../../dd/d3e/class_quant_lib_1_1_loss_dist_homogeneous.html#a1896de496353610b2a904f4d17ad51d6">  220</a></span>&#160;    <a class="code" href="../../dc/d4d/class_quant_lib_1_1_distribution.html">Distribution</a> LossDistHomogeneous::operator()(<span class="keyword">const</span> vector&lt;Real&gt;&amp; nominals,</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                                    <span class="keyword">const</span> vector&lt;Real&gt;&amp; probabilities)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">return</span> operator()(nominals[0], probabilities);</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html#ad47193b571312f99352987c0187c2396">  227</a></span>&#160;    <a class="code" href="../../dc/d4d/class_quant_lib_1_1_distribution.html">Distribution</a> LossDistBucketing::operator()(<span class="keyword">const</span> vector&lt;Real&gt;&amp; nominals,</div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html#a1896de496353610b2a904f4d17ad51d6">  227</a></span>&#160;    <a class="code" href="../../dc/d4d/class_quant_lib_1_1_distribution.html">Distribution</a> LossDistBucketing::operator()(<span class="keyword">const</span> vector&lt;Real&gt;&amp; nominals,</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                                    <span class="keyword">const</span> vector&lt;Real&gt;&amp; probabilities)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        QL_REQUIRE (nominals.size() == probabilities.size(), <span class="stringliteral">&quot;sizes differ: &quot;</span></div>
@@ -382,7 +383,7 @@ $(function() {
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno"><a class="line" href="../../dd/d07/class_quant_lib_1_1_loss_dist_monte_carlo.html#ad47193b571312f99352987c0187c2396">  302</a></span>&#160;    <a class="code" href="../../dc/d4d/class_quant_lib_1_1_distribution.html">Distribution</a> LossDistMonteCarlo::operator()(<span class="keyword">const</span> vector&lt;Real&gt;&amp; nominals,</div>
+<div class="line"><a name="l00302"></a><span class="lineno"><a class="line" href="../../dd/d07/class_quant_lib_1_1_loss_dist_monte_carlo.html#a1896de496353610b2a904f4d17ad51d6">  302</a></span>&#160;    <a class="code" href="../../dc/d4d/class_quant_lib_1_1_distribution.html">Distribution</a> LossDistMonteCarlo::operator()(<span class="keyword">const</span> vector&lt;Real&gt;&amp; nominals,</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                                   <span class="keyword">const</span> vector&lt;Real&gt;&amp; probabilities)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <a class="code" href="../../dc/d4d/class_quant_lib_1_1_distribution.html">Distribution</a> dist (nBuckets_, 0.0, maximum_);</div>
@@ -410,7 +411,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_distribution_html_afee087822aef4b6a05ca1e04c5e81676"><div class="ttname"><a href="../../dc/d4d/class_quant_lib_1_1_distribution.html#afee087822aef4b6a05ca1e04c5e81676">QuantLib::Distribution::addAverage</a></div><div class="ttdeci">void addAverage(int bucket, Real value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de6/distribution_8cpp_source.html#l00104">distribution.cpp:104</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_distribution_html_aebb76be371542621628f2f6c069d0fa6"><div class="ttname"><a href="../../dc/d4d/class_quant_lib_1_1_distribution.html#aebb76be371542621628f2f6c069d0fa6">QuantLib::Distribution::addDensity</a></div><div class="ttdeci">void addDensity(int bucket, Real value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de6/distribution_8cpp_source.html#l00096">distribution.cpp:96</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_distribution_html_a76c7f4735a8763cd10f83c9fb6985b41"><div class="ttname"><a href="../../dc/d4d/class_quant_lib_1_1_distribution.html#a76c7f4735a8763cd10f83c9fb6985b41">QuantLib::Distribution::locate</a></div><div class="ttdeci">int locate(Real x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de6/distribution_8cpp_source.html#l00056">distribution.cpp:56</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_distribution_html_a28040c7c6c6eb0308e009db2fe8da501"><div class="ttname"><a href="../../dc/d4d/class_quant_lib_1_1_distribution.html#a28040c7c6c6eb0308e009db2fe8da501">QuantLib::Distribution::dx</a></div><div class="ttdeci">Real dx(Size k)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5f/distribution_8hpp_source.html#l00051">distribution.hpp:51</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_distribution_html_a28040c7c6c6eb0308e009db2fe8da501"><div class="ttname"><a href="../../dc/d4d/class_quant_lib_1_1_distribution.html#a28040c7c6c6eb0308e009db2fe8da501">QuantLib::Distribution::dx</a></div><div class="ttdeci">Real dx(Size k)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5f/distribution_8hpp_source.html#l00052">distribution.hpp:52</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_binomial_distribution_html"><div class="ttname"><a href="../../d3/dcc/class_quant_lib_1_1_binomial_distribution.html">QuantLib::BinomialDistribution</a></div><div class="ttdoc">Binomial probability distribution function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9b/binomialdistribution_8hpp_source.html#l00051">binomialdistribution.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_distribution_html"><div class="ttname"><a href="../../dc/d4d/class_quant_lib_1_1_distribution.html">QuantLib::Distribution</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5f/distribution_8hpp_source.html#l00037">distribution.hpp:37</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_distribution_html_a66988e47ca0a8186d7af846cf2378e53"><div class="ttname"><a href="../../dc/d4d/class_quant_lib_1_1_distribution.html#a66988e47ca0a8186d7af846cf2378e53">QuantLib::Distribution::add</a></div><div class="ttdeci">void add(Real value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de6/distribution_8cpp_source.html#l00079">distribution.cpp:79</a></div></div>

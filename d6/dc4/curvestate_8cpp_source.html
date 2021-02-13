@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/models/marketmodels/curvestate.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -212,7 +213,7 @@ $(function() {
 <div class="ttc" id="anamespace_quant_lib_html_ac1977049ef1da411ecb646b74d70d2d0"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ac1977049ef1da411ecb646b74d70d2d0">QuantLib::constantMaturityFromDiscountRatios</a></div><div class="ttdeci">void constantMaturityFromDiscountRatios(const Size spanningForwards, const Size firstValidIndex, const std::vector&lt; DiscountFactor &gt; &amp;ds, const std::vector&lt; Time &gt; &amp;taus, std::vector&lt; Rate &gt; &amp;constMatSwapRates, std::vector&lt; Real &gt; &amp;constMatSwapAnnuities)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc4/curvestate_8cpp_source.html#l00088">curvestate.cpp:88</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_curve_state_html_ae1be6d8a46ccb12032638385f87d737a"><div class="ttname"><a href="../../de/db4/class_quant_lib_1_1_curve_state.html#ae1be6d8a46ccb12032638385f87d737a">QuantLib::CurveState::discountRatio</a></div><div class="ttdeci">virtual Real discountRatio(Size i, Size j) const =0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_curve_state_html_aa688289997396acdd1ad9b7c64735213"><div class="ttname"><a href="../../de/db4/class_quant_lib_1_1_curve_state.html#aa688289997396acdd1ad9b7c64735213">QuantLib::CurveState::rateTaus_</a></div><div class="ttdeci">std::vector&lt; Time &gt; rateTaus_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d20/curvestate_8hpp_source.html#l00089">curvestate.hpp:89</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html_a780971ccbfff5b15323a0f7c8c50eb4e"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a780971ccbfff5b15323a0f7c8c50eb4e">QuantLib::checkIncreasingTimesAndCalculateTaus</a></div><div class="ttdeci">void checkIncreasingTimesAndCalculateTaus(const std::vector&lt; Time &gt; &amp;times, std::vector&lt; Time &gt; &amp;taus)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da5/utilities_8cpp_source.html#l00109">utilities.cpp:109</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_a780971ccbfff5b15323a0f7c8c50eb4e"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a780971ccbfff5b15323a0f7c8c50eb4e">QuantLib::checkIncreasingTimesAndCalculateTaus</a></div><div class="ttdeci">void checkIncreasingTimesAndCalculateTaus(const std::vector&lt; Time &gt; &amp;times, std::vector&lt; Time &gt; &amp;taus)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da5/utilities_8cpp_source.html#l00106">utilities.cpp:106</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_curve_state_html_a88fd3af37567d6296eb23d2712a9079a"><div class="ttname"><a href="../../de/db4/class_quant_lib_1_1_curve_state.html#a88fd3af37567d6296eb23d2712a9079a">QuantLib::CurveState::CurveState</a></div><div class="ttdeci">CurveState(const std::vector&lt; Time &gt; &amp;rateTimes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc4/curvestate_8cpp_source.html#l00026">curvestate.cpp:26</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a6486d669ff1692e25b29c167cd621df9"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a6486d669ff1692e25b29c167cd621df9">QuantLib::coterminalFromDiscountRatios</a></div><div class="ttdeci">void coterminalFromDiscountRatios(const Size firstValidIndex, const std::vector&lt; DiscountFactor &gt; &amp;discountFactors, const std::vector&lt; Time &gt; &amp;taus, std::vector&lt; Rate &gt; &amp;cotSwapRates, std::vector&lt; Real &gt; &amp;cotSwapAnnuities)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc4/curvestate_8cpp_source.html#l00058">curvestate.cpp:58</a></div></div>

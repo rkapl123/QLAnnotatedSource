@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/vanilla/analyticdividendeuropeanengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -112,9 +113,9 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html">   38</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html">AnalyticDividendEuropeanEngine</a></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        : <span class="keyword">public</span> <a class="code" href="../../d8/de7/class_quant_lib_1_1_dividend_vanilla_option_1_1engine.html">DividendVanillaOption::engine</a> {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a112b5a8ce21a6450dff9239ef1d92070">AnalyticDividendEuropeanEngine</a>(</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    <span class="keyword">const</span> ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;&amp;);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a2bbc0f10e41a3238f471aee63083ebf2">AnalyticDividendEuropeanEngine</a>(ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   45</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    };</div>
@@ -125,11 +126,11 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::AnalyticDividendEuropeanEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d00/analyticdividendeuropeanengine_8hpp_source.html#l00045">analyticdividendeuropeanengine.hpp:45</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::AnalyticDividendEuropeanEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da8/analyticdividendeuropeanengine_8cpp_source.html#l00032">analyticdividendeuropeanengine.cpp:32</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::AnalyticDividendEuropeanEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da8/analyticdividendeuropeanengine_8cpp_source.html#l00033">analyticdividendeuropeanengine.cpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html">QuantLib::AnalyticDividendEuropeanEngine</a></div><div class="ttdoc">Analytic pricing engine for European options with discrete dividends.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d00/analyticdividendeuropeanengine_8hpp_source.html#l00038">analyticdividendeuropeanengine.hpp:39</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html_a112b5a8ce21a6450dff9239ef1d92070"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a112b5a8ce21a6450dff9239ef1d92070">QuantLib::AnalyticDividendEuropeanEngine::AnalyticDividendEuropeanEngine</a></div><div class="ttdeci">AnalyticDividendEuropeanEngine(const ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da8/analyticdividendeuropeanengine_8cpp_source.html#l00026">analyticdividendeuropeanengine.cpp:26</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_dividend_vanilla_option_1_1engine_html"><div class="ttname"><a href="../../d8/de7/class_quant_lib_1_1_dividend_vanilla_option_1_1engine.html">QuantLib::DividendVanillaOption::engine</a></div><div class="ttdoc">Dividend-vanilla-option engine base class</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d65/dividendvanillaoption_8hpp_source.html#l00072">dividendvanillaoption.hpp:74</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_dividend_vanilla_option_1_1engine_html"><div class="ttname"><a href="../../d8/de7/class_quant_lib_1_1_dividend_vanilla_option_1_1engine.html">QuantLib::DividendVanillaOption::engine</a></div><div class="ttdoc">Dividend-vanilla-option engine base class</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d65/dividendvanillaoption_8hpp_source.html#l00073">dividendvanillaoption.hpp:75</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html_a2bbc0f10e41a3238f471aee63083ebf2"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a2bbc0f10e41a3238f471aee63083ebf2">QuantLib::AnalyticDividendEuropeanEngine::AnalyticDividendEuropeanEngine</a></div><div class="ttdeci">AnalyticDividendEuropeanEngine(ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da8/analyticdividendeuropeanengine_8cpp_source.html#l00027">analyticdividendeuropeanengine.cpp:27</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/vanilla/analyticbsmhullwhiteengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -116,11 +117,11 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                    VanillaOption::arguments,</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                    VanillaOption::results&gt; {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#a4d9fd5b52ad307c67bb03e8a22e8fae0">AnalyticBSMHullWhiteEngine</a>(</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                     <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> equityShortRateCorrelation,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                     <span class="keyword">const</span> ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;&amp;,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                     <span class="keyword">const</span> ext::shared_ptr&lt;HullWhite&gt;&amp;);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#ad28eefb93cc5e5392f1c552b9f48fc4f">AnalyticBSMHullWhiteEngine</a>(<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> equityShortRateCorrelation,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                   ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                   <span class="keyword">const</span> ext::shared_ptr&lt;HullWhite&gt;&amp;);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#a98f57706bc57f4e14ca8c8cb1cfa213b">   56</a></span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#a98f57706bc57f4e14ca8c8cb1cfa213b">rho_</a>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   57</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
@@ -131,13 +132,13 @@ $(function() {
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_b_s_m_hull_white_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::AnalyticBSMHullWhiteEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/analyticbsmhullwhiteengine_8cpp_source.html#l00074">analyticbsmhullwhiteengine.cpp:74</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_b_s_m_hull_white_engine_html_ad28eefb93cc5e5392f1c552b9f48fc4f"><div class="ttname"><a href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#ad28eefb93cc5e5392f1c552b9f48fc4f">QuantLib::AnalyticBSMHullWhiteEngine::AnalyticBSMHullWhiteEngine</a></div><div class="ttdeci">AnalyticBSMHullWhiteEngine(Real equityShortRateCorrelation, ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt;, const ext::shared_ptr&lt; HullWhite &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/analyticbsmhullwhiteengine_8cpp_source.html#l00065">analyticbsmhullwhiteengine.cpp:65</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_b_s_m_hull_white_engine_html"><div class="ttname"><a href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html">QuantLib::AnalyticBSMHullWhiteEngine</a></div><div class="ttdoc">analytic european option pricer including stochastic interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d97/analyticbsmhullwhiteengine_8hpp_source.html#l00045">analyticbsmhullwhiteengine.hpp:48</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_b_s_m_hull_white_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::AnalyticBSMHullWhiteEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/analyticbsmhullwhiteengine_8cpp_source.html#l00074">analyticbsmhullwhiteengine.cpp:74</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_b_s_m_hull_white_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::AnalyticBSMHullWhiteEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d97/analyticbsmhullwhiteengine_8hpp_source.html#l00057">analyticbsmhullwhiteengine.hpp:57</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_generic_model_engine_html"><div class="ttname"><a href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html">QuantLib::GenericModelEngine</a></div><div class="ttdoc">Base class for some pricing engine on a particular model.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4f/genericmodelengine_8hpp_source.html#l00038">genericmodelengine.hpp:39</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_generic_model_engine_html"><div class="ttname"><a href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html">QuantLib::GenericModelEngine</a></div><div class="ttdoc">Base class for some pricing engine on a particular model.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4f/genericmodelengine_8hpp_source.html#l00039">genericmodelengine.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_b_s_m_hull_white_engine_html_a98f57706bc57f4e14ca8c8cb1cfa213b"><div class="ttname"><a href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#a98f57706bc57f4e14ca8c8cb1cfa213b">QuantLib::AnalyticBSMHullWhiteEngine::rho_</a></div><div class="ttdeci">Real rho_</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d97/analyticbsmhullwhiteengine_8hpp_source.html#l00056">analyticbsmhullwhiteengine.hpp:56</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_b_s_m_hull_white_engine_html_a4d9fd5b52ad307c67bb03e8a22e8fae0"><div class="ttname"><a href="../../d4/de9/class_quant_lib_1_1_analytic_b_s_m_hull_white_engine.html#a4d9fd5b52ad307c67bb03e8a22e8fae0">QuantLib::AnalyticBSMHullWhiteEngine::AnalyticBSMHullWhiteEngine</a></div><div class="ttdeci">AnalyticBSMHullWhiteEngine(Real equityShortRateCorrelation, const ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;, const ext::shared_ptr&lt; HullWhite &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/analyticbsmhullwhiteengine_8cpp_source.html#l00063">analyticbsmhullwhiteengine.cpp:63</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: InterestRate Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -111,9 +112,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa302b38a9a595c752fb01fcb473e2924"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#aa302b38a9a595c752fb01fcb473e2924">InterestRate</a> ()</td></tr>
 <tr class="memdesc:aa302b38a9a595c752fb01fcb473e2924"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d6b/struct_quant_lib_1_1_default.html">Default</a> constructor returning a null interest rate.  <a href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#aa302b38a9a595c752fb01fcb473e2924">More...</a><br /></td></tr>
 <tr class="separator:aa302b38a9a595c752fb01fcb473e2924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8a1baa4ac690cf1e2cf6da375b3f11e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#ab8a1baa4ac690cf1e2cf6da375b3f11e">InterestRate</a> (<a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> r, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc, <a class="el" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">Compounding</a> comp, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> freq)</td></tr>
-<tr class="memdesc:ab8a1baa4ac690cf1e2cf6da375b3f11e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard constructor.  <a href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#ab8a1baa4ac690cf1e2cf6da375b3f11e">More...</a><br /></td></tr>
-<tr class="separator:ab8a1baa4ac690cf1e2cf6da375b3f11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80958bad006bf684a8c9ca06465af583"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#a80958bad006bf684a8c9ca06465af583">InterestRate</a> (<a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> r, <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc, <a class="el" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">Compounding</a> comp, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> freq)</td></tr>
+<tr class="memdesc:a80958bad006bf684a8c9ca06465af583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard constructor.  <a href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#a80958bad006bf684a8c9ca06465af583">More...</a><br /></td></tr>
+<tr class="separator:a80958bad006bf684a8c9ca06465af583"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">conversions</div></td></tr>
 <tr class="memitem:a1fbfb208cb49879dd5646ce51a4b90b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#a1fbfb208cb49879dd5646ce51a4b90b1">operator Rate</a> () const</td></tr>
 <tr class="separator:a1fbfb208cb49879dd5646ce51a4b90b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,7 +180,7 @@ equivalent rate calculations</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Concrete interest rate class. </p>
 <p>This class encapsulate the interest rate compounding algebra. It manages day-counting conventions, compounding conventions, conversion between different conventions, discount/compound factor calculations, and implied/equivalent rate calculations.</p>
-<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000030">Tests:</a></b></dt><dd>Converted rates are checked against known good results </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000033">Tests:</a></b></dt><dd>Converted rates are checked against known good results </dd></dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d3/daa/_callable_bonds_8cpp-example.html#_a8">CallableBonds.cpp</a>.</dd>
 </dl>
 
@@ -202,7 +203,7 @@ equivalent rate calculations</h2></td></tr>
 
 <p><a class="el" href="../../da/d6b/struct_quant_lib_1_1_default.html">Default</a> constructor returning a null interest rate. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/de1/interestrate_8cpp_source.html#l00029">29</a> of file <a class="el" href="../../d5/de1/interestrate_8cpp_source.html">interestrate.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/de1/interestrate_8cpp_source.html#l00030">30</a> of file <a class="el" href="../../d5/de1/interestrate_8cpp_source.html">interestrate.cpp</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -217,9 +218,9 @@ equivalent rate calculations</h2></td></tr>
 <area shape="rect" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#a779d7cefddffa0b2fd85199c840dd3c3" title="implied rate for a given compound factor between two dates." alt="" coords="313,315,403,342"/>
 <area shape="rect" href="../../db/dab/class_quant_lib_1_1_forward.html#a639e594493d01a309391da84b2b48f7e" title=" " alt="" coords="290,367,426,408"/>
 <area shape="rect" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html#aa055828cc9c2c181ac05401da5a2adee" title=" " alt="" coords="261,184,455,225"/>
-<area shape="rect" href="../../dd/d53/class_quant_lib_1_1_composite_zero_yield_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the composite zero yield rate" alt="" coords="10,5,209,47"/>
-<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="5,71,213,127"/>
-<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="14,152,205,193"/>
+<area shape="rect" href="../../dd/d53/class_quant_lib_1_1_composite_zero_yield_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the composite zero yield rate" alt="" coords="10,5,209,47"/>
+<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="5,71,213,127"/>
+<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="14,152,205,193"/>
 <area shape="rect" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html#a28dfb39c8d0545274c583b6424b030c8" title=" " alt="" coords="13,283,206,324"/>
 <area shape="rect" href="../../d5/d5e/class_quant_lib_1_1_f_d_vanilla_engine.html#a0f0b354688b17794e34125e548a2aa09" title=" " alt="" coords="20,217,199,259"/>
 </map>
@@ -227,8 +228,8 @@ equivalent rate calculations</h2></td></tr>
 
 </div>
 </div>
-<a id="ab8a1baa4ac690cf1e2cf6da375b3f11e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8a1baa4ac690cf1e2cf6da375b3f11e">&#9670;&nbsp;</a></span>InterestRate() <span class="overload">[2/2]</span></h2>
+<a id="a80958bad006bf684a8c9ca06465af583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80958bad006bf684a8c9ca06465af583">&#9670;&nbsp;</a></span>InterestRate() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -242,7 +243,7 @@ equivalent rate calculations</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&#160;</td>
           <td class="paramname"><em>dc</em>, </td>
         </tr>
         <tr>
@@ -267,7 +268,7 @@ equivalent rate calculations</h2></td></tr>
 
 <p>Standard constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/de1/interestrate_8cpp_source.html#l00032">32</a> of file <a class="el" href="../../d5/de1/interestrate_8cpp_source.html">interestrate.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/de1/interestrate_8cpp_source.html#l00033">33</a> of file <a class="el" href="../../d5/de1/interestrate_8cpp_source.html">interestrate.cpp</a>.</p>
 
 </div>
 </div>
@@ -287,7 +288,7 @@ equivalent rate calculations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 
 </div>
 </div>
@@ -306,7 +307,7 @@ equivalent rate calculations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00058">58</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -336,7 +337,7 @@ equivalent rate calculations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00059">59</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -345,10 +346,10 @@ equivalent rate calculations</h2></td></tr>
 <div class="center"><img src="../../d8/d93/class_quant_lib_1_1_interest_rate_acbcdd847e0f9efae18c97da3f649a023_icgraph.png" border="0" usemap="#ad8/d93/class_quant_lib_1_1_interest_rate_acbcdd847e0f9efae18c97da3f649a023_icgraph" alt=""/></div>
 <map name="d8/d93/class_quant_lib_1_1_interest_rate_acbcdd847e0f9efae18c97da3f649a023_icgraph" id="ad8/d93/class_quant_lib_1_1_interest_rate_acbcdd847e0f9efae18c97da3f649a023_icgraph">
 <area shape="rect" title=" " alt="" coords="261,105,349,131"/>
-<area shape="rect" href="../../d7/d31/class_quant_lib_1_1_fixed_rate_coupon.html#ad49654ea33055b03f8666910acc13880" title="day counter for accrual calculation" alt="" coords="17,5,202,47"/>
+<area shape="rect" href="../../d7/d31/class_quant_lib_1_1_fixed_rate_coupon.html#a94fc547efda67580a0ae559769b5fc71" title="day counter for accrual calculation" alt="" coords="17,5,202,47"/>
 <area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#adb35d0d2fa3433e175cb9dba464fcc3c" title=" " alt="" coords="37,71,182,98"/>
-<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="5,122,213,178"/>
-<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="14,203,205,244"/>
+<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="5,122,213,178"/>
+<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="14,203,205,244"/>
 </map>
 </div>
 
@@ -369,7 +370,7 @@ equivalent rate calculations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00060">60</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00057">57</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -379,8 +380,8 @@ equivalent rate calculations</h2></td></tr>
 <map name="d8/d93/class_quant_lib_1_1_interest_rate_a5a01caa3322c3d4cac50fedbebde9ced_icgraph" id="ad8/d93/class_quant_lib_1_1_interest_rate_a5a01caa3322c3d4cac50fedbebde9ced_icgraph">
 <area shape="rect" title=" " alt="" coords="261,71,360,97"/>
 <area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#adb35d0d2fa3433e175cb9dba464fcc3c" title=" " alt="" coords="37,5,182,32"/>
-<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="5,56,213,112"/>
-<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="14,137,205,178"/>
+<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="5,56,213,112"/>
+<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="14,137,205,178"/>
 </map>
 </div>
 
@@ -401,7 +402,7 @@ equivalent rate calculations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00058">58</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -411,8 +412,8 @@ equivalent rate calculations</h2></td></tr>
 <map name="d8/d93/class_quant_lib_1_1_interest_rate_adbf0d54ac5dbc652d38513b587cbc100_icgraph" id="ad8/d93/class_quant_lib_1_1_interest_rate_adbf0d54ac5dbc652d38513b587cbc100_icgraph">
 <area shape="rect" title=" " alt="" coords="261,71,340,97"/>
 <area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#adb35d0d2fa3433e175cb9dba464fcc3c" title=" " alt="" coords="37,5,182,32"/>
-<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="5,56,213,112"/>
-<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="14,137,205,178"/>
+<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="5,56,213,112"/>
+<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="14,137,205,178"/>
 </map>
 </div>
 
@@ -435,9 +436,9 @@ equivalent rate calculations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>discount factor implied by the rate compounded at time t. </p>
-<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000076">Warning:</a></b></dt><dd>Time must be measured using <a class="el" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html" title="Concrete interest rate class.">InterestRate</a>'s own day counter. </dd></dl>
+<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000079">Warning:</a></b></dt><dd>Time must be measured using <a class="el" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html" title="Concrete interest rate class.">InterestRate</a>'s own day counter. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00072">72</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00069">69</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -458,7 +459,7 @@ equivalent rate calculations</h2></td></tr>
 <map name="d8/d93/class_quant_lib_1_1_interest_rate_a9f0217e36fda633b528327857269ea5b_icgraph" id="ad8/d93/class_quant_lib_1_1_interest_rate_a9f0217e36fda633b528327857269ea5b_icgraph">
 <area shape="rect" title="discount factor implied by the rate compounded at time t." alt="" coords="204,35,312,61"/>
 <area shape="rect" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#abcaad58e21d3becd628553ba26f575d7" title="discount factor implied by the rate compounded between two dates" alt="" coords="27,5,135,32"/>
-<area shape="rect" href="../../db/d2a/class_quant_lib_1_1_flat_forward.html#a08c98cafd406e91aa8e17cedb889c99d" title="discount factor calculation" alt="" coords="5,57,156,98"/>
+<area shape="rect" href="../../db/d2a/class_quant_lib_1_1_flat_forward.html#a9e1d90640f3af8049962bf46af4a38b7" title="discount factor calculation" alt="" coords="5,57,156,98"/>
 </map>
 </div>
 
@@ -504,7 +505,7 @@ equivalent rate calculations</h2></td></tr>
 
 <p>discount factor implied by the rate compounded between two dates </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00077">77</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00074">74</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -539,9 +540,9 @@ equivalent rate calculations</h2></td></tr>
 
 <p>compound factor implied by the rate compounded at time t. </p>
 <p>returns the compound (a.k.a capitalization) factor implied by the rate compounded at time t.</p>
-<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000077">Warning:</a></b></dt><dd>Time must be measured using <a class="el" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html" title="Concrete interest rate class.">InterestRate</a>'s own day counter. </dd></dl>
+<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000080">Warning:</a></b></dt><dd>Time must be measured using <a class="el" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html" title="Concrete interest rate class.">InterestRate</a>'s own day counter. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/de1/interestrate_8cpp_source.html#l00046">46</a> of file <a class="el" href="../../d5/de1/interestrate_8cpp_source.html">interestrate.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/de1/interestrate_8cpp_source.html#l00044">44</a> of file <a class="el" href="../../d5/de1/interestrate_8cpp_source.html">interestrate.cpp</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -551,18 +552,18 @@ equivalent rate calculations</h2></td></tr>
 <map name="d8/d93/class_quant_lib_1_1_interest_rate_aa476c0aefb34f65e38bd84eb67648b56_icgraph" id="ad8/d93/class_quant_lib_1_1_interest_rate_aa476c0aefb34f65e38bd84eb67648b56_icgraph">
 <area shape="rect" title="compound factor implied by the rate compounded at time t." alt="" coords="539,202,657,229"/>
 <area shape="rect" href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html#a9ad3a1e90090378e20e5a755a1269caf" title=" " alt="" coords="272,5,491,47"/>
-<area shape="rect" href="../../d7/d31/class_quant_lib_1_1_fixed_rate_coupon.html#a8bf88aa11f876bd17edf990a82164b6f" title="accrued amount at the given date" alt="" coords="289,71,474,112"/>
-<area shape="rect" href="../../d7/d31/class_quant_lib_1_1_fixed_rate_coupon.html#aebd2894f0f18274fd9a79140833c5e96" title="returns the amount of the cash flow" alt="" coords="289,136,474,177"/>
+<area shape="rect" href="../../d7/d31/class_quant_lib_1_1_fixed_rate_coupon.html#aa43e927f4721ad32857a00df12dc03d3" title="accrued amount at the given date" alt="" coords="289,71,474,112"/>
+<area shape="rect" href="../../d7/d31/class_quant_lib_1_1_fixed_rate_coupon.html#a6ae6aa2462b7305b78f7d58b260d226f" title="returns the amount of the cash flow" alt="" coords="289,136,474,177"/>
 <area shape="rect" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#abb3ffc58a9719d084faf2d9dc6f35d41" title="compound factor implied by the rate compounded between two dates" alt="" coords="322,202,441,229"/>
 <area shape="rect" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#a9f0217e36fda633b528327857269ea5b" title="discount factor implied by the rate compounded at time t." alt="" coords="327,253,435,279"/>
 <area shape="rect" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#ae1b205dede433da13379844f4dce3d3a" title="equivalent interest rate for a compounding period t." alt="" coords="328,347,435,374"/>
-<area shape="rect" href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html#a2bb5d56364044aa5899a663ba84e92a3" title="Spot value (NPV) of the underlying loan." alt="" coords="272,439,491,480"/>
+<area shape="rect" href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html#a86b7869ef0285a4e04a7e1c4f97c19b0" title="Spot value (NPV) of the underlying loan." alt="" coords="272,439,491,480"/>
 <area shape="rect" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#abcaad58e21d3becd628553ba26f575d7" title="discount factor implied by the rate compounded between two dates" alt="" coords="61,171,169,198"/>
-<area shape="rect" href="../../db/d2a/class_quant_lib_1_1_flat_forward.html#a08c98cafd406e91aa8e17cedb889c99d" title="discount factor calculation" alt="" coords="39,223,190,264"/>
-<area shape="rect" href="../../dd/d53/class_quant_lib_1_1_composite_zero_yield_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the composite zero yield rate" alt="" coords="15,288,214,329"/>
-<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="11,354,219,410"/>
-<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="19,435,210,476"/>
-<area shape="rect" href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html#a33f04fb3ac37abe7c9c6032cff611745" title=" " alt="" coords="5,500,224,541"/>
+<area shape="rect" href="../../db/d2a/class_quant_lib_1_1_flat_forward.html#a9e1d90640f3af8049962bf46af4a38b7" title="discount factor calculation" alt="" coords="39,223,190,264"/>
+<area shape="rect" href="../../dd/d53/class_quant_lib_1_1_composite_zero_yield_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the composite zero yield rate" alt="" coords="15,288,214,329"/>
+<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="11,354,219,410"/>
+<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="19,435,210,476"/>
+<area shape="rect" href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html#a1127cccc9668a02247dc139d27121708" title=" " alt="" coords="5,500,224,541"/>
 </map>
 </div>
 
@@ -609,7 +610,7 @@ equivalent rate calculations</h2></td></tr>
 <p>compound factor implied by the rate compounded between two dates </p>
 <p>returns the compound (a.k.a capitalization) factor implied by the rate compounded between two dates. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00101">101</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00098">98</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -679,9 +680,9 @@ equivalent rate calculations</h2></td></tr>
 
 <p>implied interest rate for a given compound factor at a given time. </p>
 <p>The resulting <a class="el" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html" title="Concrete interest rate class.">InterestRate</a> has the day-counter provided as input.</p>
-<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000078">Warning:</a></b></dt><dd>Time must be measured using the day-counter provided as input. </dd></dl>
+<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000081">Warning:</a></b></dt><dd>Time must be measured using the day-counter provided as input. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/de1/interestrate_8cpp_source.html#l00072">72</a> of file <a class="el" href="../../d5/de1/interestrate_8cpp_source.html">interestrate.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/de1/interestrate_8cpp_source.html#l00070">70</a> of file <a class="el" href="../../d5/de1/interestrate_8cpp_source.html">interestrate.cpp</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -706,9 +707,9 @@ equivalent rate calculations</h2></td></tr>
 <area shape="rect" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html#a779d7cefddffa0b2fd85199c840dd3c3" title="implied rate for a given compound factor between two dates." alt="" coords="313,315,403,342"/>
 <area shape="rect" href="../../db/dab/class_quant_lib_1_1_forward.html#a639e594493d01a309391da84b2b48f7e" title=" " alt="" coords="290,367,426,408"/>
 <area shape="rect" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html#aa055828cc9c2c181ac05401da5a2adee" title=" " alt="" coords="261,184,455,225"/>
-<area shape="rect" href="../../dd/d53/class_quant_lib_1_1_composite_zero_yield_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the composite zero yield rate" alt="" coords="10,5,209,47"/>
-<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="5,71,213,127"/>
-<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="14,152,205,193"/>
+<area shape="rect" href="../../dd/d53/class_quant_lib_1_1_composite_zero_yield_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the composite zero yield rate" alt="" coords="10,5,209,47"/>
+<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="5,71,213,127"/>
+<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="14,152,205,193"/>
 <area shape="rect" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html#a28dfb39c8d0545274c583b6424b030c8" title=" " alt="" coords="13,283,206,324"/>
 <area shape="rect" href="../../d5/d5e/class_quant_lib_1_1_f_d_vanilla_engine.html#a0f0b354688b17794e34125e548a2aa09" title=" " alt="" coords="20,217,199,259"/>
 </map>
@@ -789,7 +790,7 @@ equivalent rate calculations</h2></td></tr>
 <p>implied rate for a given compound factor between two dates. </p>
 <p>The resulting rate is calculated taking the required day-counting rule into account. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00132">132</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00129">129</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -840,9 +841,9 @@ equivalent rate calculations</h2></td></tr>
 
 <p>equivalent interest rate for a compounding period t. </p>
 <p>The resulting <a class="el" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html" title="Concrete interest rate class.">InterestRate</a> shares the same implicit day-counting rule of the original <a class="el" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html" title="Concrete interest rate class.">InterestRate</a> instance.</p>
-<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000079">Warning:</a></b></dt><dd>Time must be measured using the <a class="el" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html" title="Concrete interest rate class.">InterestRate</a>'s own day counter. </dd></dl>
+<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000082">Warning:</a></b></dt><dd>Time must be measured using the <a class="el" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html" title="Concrete interest rate class.">InterestRate</a>'s own day counter. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00158">158</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 <div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
@@ -864,9 +865,9 @@ equivalent rate calculations</h2></td></tr>
 <div class="center"><img src="../../d8/d93/class_quant_lib_1_1_interest_rate_ae1b205dede433da13379844f4dce3d3a_icgraph.png" border="0" usemap="#ad8/d93/class_quant_lib_1_1_interest_rate_ae1b205dede433da13379844f4dce3d3a_icgraph" alt=""/></div>
 <map name="d8/d93/class_quant_lib_1_1_interest_rate_ae1b205dede433da13379844f4dce3d3a_icgraph" id="ad8/d93/class_quant_lib_1_1_interest_rate_ae1b205dede433da13379844f4dce3d3a_icgraph">
 <area shape="rect" title="equivalent interest rate for a compounding period t." alt="" coords="261,86,368,113"/>
-<area shape="rect" href="../../dd/d53/class_quant_lib_1_1_composite_zero_yield_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the composite zero yield rate" alt="" coords="10,5,209,47"/>
-<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="5,71,213,127"/>
-<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a0a6051c0be9de7feadb867c45518e611" title="returns the spreaded zero yield rate" alt="" coords="14,152,205,193"/>
+<area shape="rect" href="../../dd/d53/class_quant_lib_1_1_composite_zero_yield_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the composite zero yield rate" alt="" coords="10,5,209,47"/>
+<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="5,71,213,127"/>
+<area shape="rect" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a36cf15acb4285be6869ceae87a4925e2" title="returns the spreaded zero yield rate" alt="" coords="14,152,205,193"/>
 </map>
 </div>
 
@@ -931,7 +932,7 @@ equivalent rate calculations</h2></td></tr>
 <p>equivalent rate for a compounding period between two dates </p>
 <p>The resulting rate is calculated taking the required day-counting rule into account. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00168">168</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00165">165</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 <div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
@@ -984,7 +985,7 @@ equivalent rate calculations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/de1/interestrate_8cpp_source.html#l00117">117</a> of file <a class="el" href="../../d5/de1/interestrate_8cpp_source.html">interestrate.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/de1/interestrate_8cpp_source.html#l00115">115</a> of file <a class="el" href="../../d5/de1/interestrate_8cpp_source.html">interestrate.cpp</a>.</p>
 
 </div>
 </div>
@@ -1009,7 +1010,7 @@ equivalent rate calculations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00184">184</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00181">181</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 
 </div>
 </div>
@@ -1033,7 +1034,7 @@ equivalent rate calculations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00185">185</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00182">182</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1058,7 @@ equivalent rate calculations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00186">186</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00183">183</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 
 </div>
 </div>
@@ -1081,7 +1082,7 @@ equivalent rate calculations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00187">187</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00184">184</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 
 </div>
 </div>
@@ -1105,7 +1106,7 @@ equivalent rate calculations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00188">188</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html#l00185">185</a> of file <a class="el" href="../../dd/dc3/interestrate_8hpp_source.html">interestrate.hpp</a>.</p>
 
 </div>
 </div>

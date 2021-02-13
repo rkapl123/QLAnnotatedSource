@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/math/optimization/projectedcostfunction.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -121,28 +122,27 @@ $(function() {
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                  <span class="keyword">const</span> <a class="code" href="../../df/dba/class_quant_lib_1_1_projection.html">Projection</a>&amp; projection);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#aa034f73a5e72acd242471dadd8f56b28">value</a>(<span class="keyword">const</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; freeParameters) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;Array&gt;</a></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                   <a class="code" href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#adfef000bf8ce409e96c43faabfc02ace">values</a>(<span class="keyword">const</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; freeParameters) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#a3fbcb1659c22a689f2c8223653a60b8a">   56</a></span>&#160;            <span class="keyword">const</span> <a class="code" href="../../da/d68/class_quant_lib_1_1_cost_function.html">CostFunction</a>&amp; <a class="code" href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#a3fbcb1659c22a689f2c8223653a60b8a">costFunction_</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    };</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#a3983dae3fe0588a8f4801803c3030bbe">value</a>(<span class="keyword">const</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; freeParameters) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="../../d3/dee/class_t.html">Disposable&lt;Array&gt;</a> <a class="code" href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#a954a63af1160f8b7fb50bf6b6d14fb86">values</a>(<span class="keyword">const</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; freeParameters) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#a3fbcb1659c22a689f2c8223653a60b8a">   55</a></span>&#160;            <span class="keyword">const</span> <a class="code" href="../../da/d68/class_quant_lib_1_1_cost_function.html">CostFunction</a>&amp; <a class="code" href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#a3fbcb1659c22a689f2c8223653a60b8a">costFunction_</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    };</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_cost_function_html"><div class="ttname"><a href="../../da/d68/class_quant_lib_1_1_cost_function.html">QuantLib::CostFunction</a></div><div class="ttdoc">Cost function abstract class for optimization problem.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d16/costfunction_8hpp_source.html#l00035">costfunction.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_projected_cost_function_html_a712093e976b14d0d33b5adf304a891c3"><div class="ttname"><a href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#a712093e976b14d0d33b5adf304a891c3">QuantLib::ProjectedCostFunction::ProjectedCostFunction</a></div><div class="ttdeci">ProjectedCostFunction(const CostFunction &amp;costFunction, const Array &amp;parameterValues, const std::vector&lt; bool &gt; &amp;fixParameters)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/projectedcostfunction_8cpp_source.html#l00026">projectedcostfunction.cpp:26</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00053">array.hpp:53</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_projected_cost_function_html_a3fbcb1659c22a689f2c8223653a60b8a"><div class="ttname"><a href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#a3fbcb1659c22a689f2c8223653a60b8a">QuantLib::ProjectedCostFunction::costFunction_</a></div><div class="ttdeci">const CostFunction &amp; costFunction_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d23/projectedcostfunction_8hpp_source.html#l00056">projectedcostfunction.hpp:56</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_projected_cost_function_html_a3fbcb1659c22a689f2c8223653a60b8a"><div class="ttname"><a href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#a3fbcb1659c22a689f2c8223653a60b8a">QuantLib::ProjectedCostFunction::costFunction_</a></div><div class="ttdeci">const CostFunction &amp; costFunction_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d23/projectedcostfunction_8hpp_source.html#l00055">projectedcostfunction.hpp:55</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_projection_html"><div class="ttname"><a href="../../df/dba/class_quant_lib_1_1_projection.html">QuantLib::Projection</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dbd/projection_8hpp_source.html#l00033">projection.hpp:33</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html">QuantLib::Disposable</a></div><div class="ttdoc">generic disposable object with move semantics</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00064">disposable.hpp:64</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_projected_cost_function_html_aa034f73a5e72acd242471dadd8f56b28"><div class="ttname"><a href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#aa034f73a5e72acd242471dadd8f56b28">QuantLib::ProjectedCostFunction::value</a></div><div class="ttdeci">virtual Real value(const Array &amp;freeParameters) const</div><div class="ttdoc">method to overload to compute the cost function value in x</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/projectedcostfunction_8cpp_source.html#l00037">projectedcostfunction.cpp:37</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_projected_cost_function_html_adfef000bf8ce409e96c43faabfc02ace"><div class="ttname"><a href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#adfef000bf8ce409e96c43faabfc02ace">QuantLib::ProjectedCostFunction::values</a></div><div class="ttdeci">virtual Disposable&lt; Array &gt; values(const Array &amp;freeParameters) const</div><div class="ttdoc">method to overload to compute the cost function values in x</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/projectedcostfunction_8cpp_source.html#l00042">projectedcostfunction.cpp:42</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_projected_cost_function_html_a954a63af1160f8b7fb50bf6b6d14fb86"><div class="ttname"><a href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#a954a63af1160f8b7fb50bf6b6d14fb86">QuantLib::ProjectedCostFunction::values</a></div><div class="ttdeci">Disposable&lt; Array &gt; values(const Array &amp;freeParameters) const override</div><div class="ttdoc">method to overload to compute the cost function values in x</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/projectedcostfunction_8cpp_source.html#l00042">projectedcostfunction.cpp:42</a></div></div>
+<div class="ttc" id="aclass_t_html"><div class="ttname"><a href="../../d3/dee/class_t.html">T</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_projected_cost_function_html_a3983dae3fe0588a8f4801803c3030bbe"><div class="ttname"><a href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html#a3983dae3fe0588a8f4801803c3030bbe">QuantLib::ProjectedCostFunction::value</a></div><div class="ttdeci">Real value(const Array &amp;freeParameters) const override</div><div class="ttdoc">method to overload to compute the cost function value in x</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d7e/projectedcostfunction_8cpp_source.html#l00037">projectedcostfunction.cpp:37</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_projected_cost_function_html"><div class="ttname"><a href="../../d1/db4/class_quant_lib_1_1_projected_cost_function.html">QuantLib::ProjectedCostFunction</a></div><div class="ttdoc">Parameterized cost function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d23/projectedcostfunction_8hpp_source.html#l00039">projectedcostfunction.hpp:39</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->

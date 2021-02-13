@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/payoff.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -116,7 +117,7 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d8/d34/class_quant_lib_1_1_payoff.html#af498733f2fd0abef2f5f1071a1b9354a">   38</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d8/d34/class_quant_lib_1_1_payoff.html#af498733f2fd0abef2f5f1071a1b9354a">argument_type</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d8/d34/class_quant_lib_1_1_payoff.html#abd4b619e88e62e8c704bc850340fc078">   39</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d8/d34/class_quant_lib_1_1_payoff.html#abd4b619e88e62e8c704bc850340fc078">result_type</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d8/d34/class_quant_lib_1_1_payoff.html#a6e5057c430de1f2920b50de1c36b402d">   41</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d8/d34/class_quant_lib_1_1_payoff.html#a6e5057c430de1f2920b50de1c36b402d">~Payoff</a>() {}</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d8/d34/class_quant_lib_1_1_payoff.html#a182532de19f3dc05cdef8da7a1105782">   41</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d8/d34/class_quant_lib_1_1_payoff.html#a182532de19f3dc05cdef8da7a1105782">~Payoff</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d8/d34/class_quant_lib_1_1_payoff.html#a7f04e718c6856c4d3d77a496b6acad0d">   48</a></span>&#160;        <span class="keyword">virtual</span> std::string <a class="code" href="../../d8/d34/class_quant_lib_1_1_payoff.html#a7f04e718c6856c4d3d77a496b6acad0d">name</a>() <span class="keyword">const</span> = 0;</div>
@@ -130,8 +131,8 @@ $(function() {
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// inline definitions</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d8/d34/class_quant_lib_1_1_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">   61</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../d8/d34/class_quant_lib_1_1_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">Payoff::accept</a>(<a class="code" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp; v) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="../../d6/d87/class_quant_lib_1_1_visitor.html">Visitor&lt;Payoff&gt;</a>* v1 = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../d6/d87/class_quant_lib_1_1_visitor.html">Visitor&lt;Payoff&gt;</a>*<span class="keyword">&gt;</span>(&amp;v);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span> (v1 != 0)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">auto</span>* v1 = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../d6/d87/class_quant_lib_1_1_visitor.html">Visitor&lt;Payoff&gt;</a>*<span class="keyword">&gt;</span>(&amp;v);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span> (v1 != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            v1-&gt;<a class="code" href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">visit</a>(*<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            QL_FAIL(<span class="stringliteral">&quot;not a payoff visitor&quot;</span>);</div>
@@ -145,10 +146,10 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_acyclic_visitor_html"><div class="ttname"><a href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">QuantLib::AcyclicVisitor</a></div><div class="ttdoc">degenerate base class for the Acyclic Visitor pattern</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00033">visitor.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_visitor_html"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html">QuantLib::Visitor&lt; Payoff &gt;</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_payoff_html_a1d7eaf2f5dccce1c7781b54d64ba4a07"><div class="ttname"><a href="../../d8/d34/class_quant_lib_1_1_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">QuantLib::Payoff::accept</a></div><div class="ttdeci">virtual void accept(AcyclicVisitor &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db3/payoff_8hpp_source.html#l00061">payoff.hpp:61</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_payoff_html_a182532de19f3dc05cdef8da7a1105782"><div class="ttname"><a href="../../d8/d34/class_quant_lib_1_1_payoff.html#a182532de19f3dc05cdef8da7a1105782">QuantLib::Payoff::~Payoff</a></div><div class="ttdeci">virtual ~Payoff()=default</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_visitor_html_a6d7e98e3f298924633a9ba9bf5b04a83"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">QuantLib::Visitor::visit</a></div><div class="ttdeci">virtual void visit(T &amp;)=0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_payoff_html_af498733f2fd0abef2f5f1071a1b9354a"><div class="ttname"><a href="../../d8/d34/class_quant_lib_1_1_payoff.html#af498733f2fd0abef2f5f1071a1b9354a">QuantLib::Payoff::argument_type</a></div><div class="ttdeci">Real argument_type</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db3/payoff_8hpp_source.html#l00038">payoff.hpp:38</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_payoff_html"><div class="ttname"><a href="../../d8/d34/class_quant_lib_1_1_payoff.html">QuantLib::Payoff</a></div><div class="ttdoc">Abstract base class for option payoffs.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db3/payoff_8hpp_source.html#l00036">payoff.hpp:36</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_payoff_html_a6e5057c430de1f2920b50de1c36b402d"><div class="ttname"><a href="../../d8/d34/class_quant_lib_1_1_payoff.html#a6e5057c430de1f2920b50de1c36b402d">QuantLib::Payoff::~Payoff</a></div><div class="ttdeci">virtual ~Payoff()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db3/payoff_8hpp_source.html#l00041">payoff.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_payoff_html_a6d8b8d4f6c9e7904c5de2786903518b6"><div class="ttname"><a href="../../d8/d34/class_quant_lib_1_1_payoff.html#a6d8b8d4f6c9e7904c5de2786903518b6">QuantLib::Payoff::operator()</a></div><div class="ttdeci">virtual Real operator()(Real price) const =0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_payoff_html_abd4b619e88e62e8c704bc850340fc078"><div class="ttname"><a href="../../d8/d34/class_quant_lib_1_1_payoff.html#abd4b619e88e62e8c704bc850340fc078">QuantLib::Payoff::result_type</a></div><div class="ttdeci">Real result_type</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db3/payoff_8hpp_source.html#l00039">payoff.hpp:39</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_payoff_html_a7f04e718c6856c4d3d77a496b6acad0d"><div class="ttname"><a href="../../d8/d34/class_quant_lib_1_1_payoff.html#a7f04e718c6856c4d3d77a496b6acad0d">QuantLib::Payoff::name</a></div><div class="ttdeci">virtual std::string name() const =0</div></div>

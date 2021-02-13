@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/math/optimization/conjugategradient.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -110,7 +111,7 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../dd/d68/class_quant_lib_1_1_conjugate_gradient.html#a5978ac232ebb20c5c9e6ac1d14364c3f">   30</a></span>&#160;    <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;Array&gt;</a> <a class="code" href="../../dd/d68/class_quant_lib_1_1_conjugate_gradient.html#a5978ac232ebb20c5c9e6ac1d14364c3f">ConjugateGradient::getUpdatedDirection</a>(<span class="keyword">const</span> <a class="code" href="../../d4/de4/class_quant_lib_1_1_problem.html">Problem</a>&amp; P,</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../dd/d68/class_quant_lib_1_1_conjugate_gradient.html#ae4212ce5f082ec9adc817e4841228ace">   30</a></span>&#160;    <a class="code" href="../../d3/dee/class_t.html">Disposable&lt;Array&gt;</a> <a class="code" href="../../dd/d68/class_quant_lib_1_1_conjugate_gradient.html#ae4212ce5f082ec9adc817e4841228ace">ConjugateGradient::getUpdatedDirection</a>(<span class="keyword">const</span> <a class="code" href="../../d4/de4/class_quant_lib_1_1_problem.html">Problem</a>&amp; P,</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                                             <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gold2,</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                                             <span class="keyword">const</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp;) {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> -<a class="code" href="../../d3/d98/class_quant_lib_1_1_line_search_based_method.html#ae63b30d6881ce3f59184cb2595736817">lineSearch_</a>-&gt;lastGradient() +</div>
@@ -119,12 +120,12 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_conjugate_gradient_html_a5978ac232ebb20c5c9e6ac1d14364c3f"><div class="ttname"><a href="../../dd/d68/class_quant_lib_1_1_conjugate_gradient.html#a5978ac232ebb20c5c9e6ac1d14364c3f">QuantLib::ConjugateGradient::getUpdatedDirection</a></div><div class="ttdeci">Disposable&lt; Array &gt; getUpdatedDirection(const Problem &amp;P, Real gold2, const Array &amp;oldGradient)</div><div class="ttdoc">computes the new search direction</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d74/conjugategradient_8cpp_source.html#l00030">conjugategradient.cpp:30</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_conjugate_gradient_html_ae4212ce5f082ec9adc817e4841228ace"><div class="ttname"><a href="../../dd/d68/class_quant_lib_1_1_conjugate_gradient.html#ae4212ce5f082ec9adc817e4841228ace">QuantLib::ConjugateGradient::getUpdatedDirection</a></div><div class="ttdeci">Disposable&lt; Array &gt; getUpdatedDirection(const Problem &amp;P, Real gold2, const Array &amp;oldGradient) override</div><div class="ttdoc">computes the new search direction</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d74/conjugategradient_8cpp_source.html#l00030">conjugategradient.cpp:30</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00053">array.hpp:53</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_problem_html_a8e1917a03a536fd788612eba7c78ed61"><div class="ttname"><a href="../../d4/de4/class_quant_lib_1_1_problem.html#a8e1917a03a536fd788612eba7c78ed61">QuantLib::Problem::gradientNormValue</a></div><div class="ttdeci">Real gradientNormValue() const</div><div class="ttdoc">value of cost function gradient norm</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d37/problem_8hpp_source.html#l00095">problem.hpp:95</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html">QuantLib::Disposable</a></div><div class="ttdoc">generic disposable object with move semantics</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00064">disposable.hpp:64</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_line_search_based_method_html_ae63b30d6881ce3f59184cb2595736817"><div class="ttname"><a href="../../d3/d98/class_quant_lib_1_1_line_search_based_method.html#ae63b30d6881ce3f59184cb2595736817">QuantLib::LineSearchBasedMethod::lineSearch_</a></div><div class="ttdeci">ext::shared_ptr&lt; LineSearch &gt; lineSearch_</div><div class="ttdoc">line search</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcf/linesearchbasedmethod_8hpp_source.html#l00053">linesearchbasedmethod.hpp:53</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_problem_html"><div class="ttname"><a href="../../d4/de4/class_quant_lib_1_1_problem.html">QuantLib::Problem</a></div><div class="ttdoc">Constrained optimization problem.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d37/problem_8hpp_source.html#l00041">problem.hpp:41</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_problem_html_a8e1917a03a536fd788612eba7c78ed61"><div class="ttname"><a href="../../d4/de4/class_quant_lib_1_1_problem.html#a8e1917a03a536fd788612eba7c78ed61">QuantLib::Problem::gradientNormValue</a></div><div class="ttdeci">Real gradientNormValue() const</div><div class="ttdoc">value of cost function gradient norm</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d37/problem_8hpp_source.html#l00094">problem.hpp:94</a></div></div>
+<div class="ttc" id="aclass_t_html"><div class="ttname"><a href="../../d3/dee/class_t.html">T</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_line_search_based_method_html_ae63b30d6881ce3f59184cb2595736817"><div class="ttname"><a href="../../d3/d98/class_quant_lib_1_1_line_search_based_method.html#ae63b30d6881ce3f59184cb2595736817">QuantLib::LineSearchBasedMethod::lineSearch_</a></div><div class="ttdeci">ext::shared_ptr&lt; LineSearch &gt; lineSearch_</div><div class="ttdoc">line search</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcf/linesearchbasedmethod_8hpp_source.html#l00052">linesearchbasedmethod.hpp:52</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_problem_html"><div class="ttname"><a href="../../d4/de4/class_quant_lib_1_1_problem.html">QuantLib::Problem</a></div><div class="ttdoc">Constrained optimization problem.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d37/problem_8hpp_source.html#l00042">problem.hpp:42</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->

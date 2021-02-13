@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/math/integrals/gaussianquadratures.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -206,8 +207,8 @@ $(function() {
 <div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="../../dc/df4/class_quant_lib_1_1_tabulated_gauss_legendre.html#a2720b47fd53c707f8cf669dea4d28861">  214</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../dc/df4/class_quant_lib_1_1_tabulated_gauss_legendre.html#a2720b47fd53c707f8cf669dea4d28861">TabulatedGaussLegendre</a>(<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n = 20) { <a class="code" href="../../dc/df4/class_quant_lib_1_1_tabulated_gauss_legendre.html#a65b77e7c95dfd0a50188ba3336db37f1">order</a>(n); }</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">class</span> F&gt;</div>
 <div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="../../dc/df4/class_quant_lib_1_1_tabulated_gauss_legendre.html#aab30aef20b1772f470be15b87aaf5e12">  216</a></span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../dc/df4/class_quant_lib_1_1_tabulated_gauss_legendre.html#aab30aef20b1772f470be15b87aaf5e12">operator() </a>(<span class="keyword">const</span> F&amp; f)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            QL_ASSERT(<a class="code" href="../../dc/df4/class_quant_lib_1_1_tabulated_gauss_legendre.html#a7224479b2679870fad1a3f9383d2b7e9">w_</a>!=0, <span class="stringliteral">&quot;Null weights&quot;</span> );</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            QL_ASSERT(<a class="code" href="../../dc/df4/class_quant_lib_1_1_tabulated_gauss_legendre.html#ad66b620fee7854688e3ec37c9d435d0a">x_</a>!=0, <span class="stringliteral">&quot;Null abscissas&quot;</span>);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            QL_ASSERT(<a class="code" href="../../dc/df4/class_quant_lib_1_1_tabulated_gauss_legendre.html#a7224479b2679870fad1a3f9383d2b7e9">w_</a> != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;Null weights&quot;</span>);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            QL_ASSERT(<a class="code" href="../../dc/df4/class_quant_lib_1_1_tabulated_gauss_legendre.html#ad66b620fee7854688e3ec37c9d435d0a">x_</a> != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;Null abscissas&quot;</span>);</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> startIdx;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> val;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
@@ -300,7 +301,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_gauss_laguerre_integration_html"><div class="ttname"><a href="../../dd/d74/class_quant_lib_1_1_gauss_laguerre_integration.html">QuantLib::GaussLaguerreIntegration</a></div><div class="ttdoc">generalized Gauss-Laguerre integration</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d97/gaussianquadratures_8hpp_source.html#l00090">gaussianquadratures.hpp:90</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_gauss_hyperbolic_polynomial_html"><div class="ttname"><a href="../../d7/dca/class_quant_lib_1_1_gauss_hyperbolic_polynomial.html">QuantLib::GaussHyperbolicPolynomial</a></div><div class="ttdoc">Gauss hyperbolic polynomial.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1a/gaussianorthogonalpolynomial_8hpp_source.html#l00130">gaussianorthogonalpolynomial.hpp:130</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_gauss_chebyshev_integration_html"><div class="ttname"><a href="../../dd/dae/class_quant_lib_1_1_gauss_chebyshev_integration.html">QuantLib::GaussChebyshevIntegration</a></div><div class="ttdoc">Gauss-Chebyshev integration.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d97/gaussianquadratures_8hpp_source.html#l00171">gaussianquadratures.hpp:171</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_array_html_acce0ab2cacc475b2434f24c65c91685a"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#acce0ab2cacc475b2434f24c65c91685a">QuantLib::Array::size</a></div><div class="ttdeci">Size size() const</div><div class="ttdoc">dimension of the array</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00428">array.hpp:428</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_array_html_acce0ab2cacc475b2434f24c65c91685a"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#acce0ab2cacc475b2434f24c65c91685a">QuantLib::Array::size</a></div><div class="ttdeci">Size size() const</div><div class="ttdoc">dimension of the array</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00450">array.hpp:450</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_tabulated_gauss_legendre_html_a0744a1149a803ead956331c068b19dee"><div class="ttname"><a href="../../dc/df4/class_quant_lib_1_1_tabulated_gauss_legendre.html#a0744a1149a803ead956331c068b19dee">QuantLib::TabulatedGaussLegendre::n6</a></div><div class="ttdeci">static const Size n6</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d97/gaussianquadratures_8hpp_source.html#l00252">gaussianquadratures.hpp:252</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_gaussian_quadrature_html_aab30aef20b1772f470be15b87aaf5e12"><div class="ttname"><a href="../../d5/d90/class_quant_lib_1_1_gaussian_quadrature.html#aab30aef20b1772f470be15b87aaf5e12">QuantLib::GaussianQuadrature::operator()</a></div><div class="ttdeci">Real operator()(const F &amp;f) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d97/gaussianquadratures_8hpp_source.html#l00058">gaussianquadratures.hpp:58</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_tabulated_gauss_legendre_html_af75ae96b6711f17b9a128c15d15bf0cb"><div class="ttname"><a href="../../dc/df4/class_quant_lib_1_1_tabulated_gauss_legendre.html#af75ae96b6711f17b9a128c15d15bf0cb">QuantLib::TabulatedGaussLegendre::w7</a></div><div class="ttdeci">static const Real w7[4]</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d97/gaussianquadratures_8hpp_source.html#l00254">gaussianquadratures.hpp:254</a></div></div>

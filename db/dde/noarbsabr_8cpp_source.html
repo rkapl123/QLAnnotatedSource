@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/volatility/noarbsabr.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -320,7 +321,7 @@ $(function() {
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> tauL = (expiryTimeTmp - <a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#ad9d33e6b14b5b2f271260e3d1ef4dbff">tauG_</a>[tauInd - 1]) /</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                (<a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#ad9d33e6b14b5b2f271260e3d1ef4dbff">tauG_</a>[tauInd] - <a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#ad9d33e6b14b5b2f271260e3d1ef4dbff">tauG_</a>[tauInd - 1]);</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordtype">int</span> sigmaIInd =</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> sigmaIInd =</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#a286cbd6e679cf0a2ecccfe29b69bd18c">sigmaIG_</a>.size() -</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        (std::upper_bound(<a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#a286cbd6e679cf0a2ecccfe29b69bd18c">sigmaIG_</a>.rbegin(), <a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#a286cbd6e679cf0a2ecccfe29b69bd18c">sigmaIG_</a>.rend(), <a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#a9df9a15640d0b9154e0cf9128830a92a">sigmaI_</a>) -</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;         <a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#a286cbd6e679cf0a2ecccfe29b69bd18c">sigmaIG_</a>.rbegin());</div>
@@ -329,13 +330,13 @@ $(function() {
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> sigmaIL = (<a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#a9df9a15640d0b9154e0cf9128830a92a">sigmaI_</a> - <a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#a286cbd6e679cf0a2ecccfe29b69bd18c">sigmaIG_</a>[sigmaIInd - 1]) /</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                   (<a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#a286cbd6e679cf0a2ecccfe29b69bd18c">sigmaIG_</a>[sigmaIInd] - <a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#a286cbd6e679cf0a2ecccfe29b69bd18c">sigmaIG_</a>[sigmaIInd - 1]);</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">int</span> rhoInd =</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> rhoInd =</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#ae9118d6dd33ca1c493e30f5e3dc9202d">rhoG_</a>.size() -</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        (std::upper_bound(<a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#ae9118d6dd33ca1c493e30f5e3dc9202d">rhoG_</a>.rbegin(), <a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#ae9118d6dd33ca1c493e30f5e3dc9202d">rhoG_</a>.rend(), <a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#a350ede3211a53486a5fb393ec23d4a21">rho_</a>) - <a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#ae9118d6dd33ca1c493e30f5e3dc9202d">rhoG_</a>.rbegin());</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">if</span> (rhoInd == 0) {</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        rhoInd++;</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">if</span> (rhoInd == <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#ae9118d6dd33ca1c493e30f5e3dc9202d">rhoG_</a>.size())) {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">if</span> (rhoInd == <a class="code" href="../../dd/d3e/class_quant_lib_1_1detail_1_1_d0_interpolator.html#ae9118d6dd33ca1c493e30f5e3dc9202d">rhoG_</a>.size()) {</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        rhoInd--;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> rhoL =</div>

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/bond/discountingbondengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -112,10 +113,10 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html">   34</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html">DiscountingBondEngine</a> : <span class="keyword">public</span> <a class="code" href="../../df/d03/class_quant_lib_1_1_bond_1_1engine.html">Bond::engine</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#ada5cf44a411711e4e40ed36251e973b4">DiscountingBondEngine</a>(</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; <a class="code" href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#aaf8367f628c8d43c4c5854f7dc121663">discountCurve</a> = <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>(),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#a91f162154c1196bbccf8287dc01fe151">DiscountingBondEngine</a>(</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> <a class="code" href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#aaf8367f628c8d43c4c5854f7dc121663">discountCurve</a> = <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>(),</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keyword">const</span> boost::optional&lt;bool&gt;&amp; includeSettlementDateFlows = boost::none);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#aaf8367f628c8d43c4c5854f7dc121663">   40</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> <a class="code" href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#aaf8367f628c8d43c4c5854f7dc121663">discountCurve</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#a188f6df4c42679c1c133919254e351c5">discountCurve_</a>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
@@ -130,13 +131,13 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle&lt; YieldTermStructure &gt;</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_discounting_bond_engine_html_a188f6df4c42679c1c133919254e351c5"><div class="ttname"><a href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#a188f6df4c42679c1c133919254e351c5">QuantLib::DiscountingBondEngine::discountCurve_</a></div><div class="ttdeci">Handle&lt; YieldTermStructure &gt; discountCurve_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df9/discountingbondengine_8hpp_source.html#l00044">discountingbondengine.hpp:44</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_discounting_bond_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::DiscountingBondEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/ddd/discountingbondengine_8cpp_source.html#l00033">discountingbondengine.cpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_discounting_bond_engine_html_aaf8367f628c8d43c4c5854f7dc121663"><div class="ttname"><a href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#aaf8367f628c8d43c4c5854f7dc121663">QuantLib::DiscountingBondEngine::discountCurve</a></div><div class="ttdeci">Handle&lt; YieldTermStructure &gt; discountCurve() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df9/discountingbondengine_8hpp_source.html#l00040">discountingbondengine.hpp:40</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_discounting_bond_engine_html_ada5cf44a411711e4e40ed36251e973b4"><div class="ttname"><a href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#ada5cf44a411711e4e40ed36251e973b4">QuantLib::DiscountingBondEngine::DiscountingBondEngine</a></div><div class="ttdeci">DiscountingBondEngine(const Handle&lt; YieldTermStructure &gt; &amp;discountCurve=Handle&lt; YieldTermStructure &gt;(), const boost::optional&lt; bool &gt; &amp;includeSettlementDateFlows=boost::none)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/ddd/discountingbondengine_8cpp_source.html#l00026">discountingbondengine.cpp:26</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_discounting_bond_engine_html"><div class="ttname"><a href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html">QuantLib::DiscountingBondEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df9/discountingbondengine_8hpp_source.html#l00034">discountingbondengine.hpp:34</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bond_1_1engine_html"><div class="ttname"><a href="../../df/d03/class_quant_lib_1_1_bond_1_1engine.html">QuantLib::Bond::engine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00312">bond.hpp:313</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_discounting_bond_engine_html_a4c03bc11ff086bfab1c39eb1409e968a"><div class="ttname"><a href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#a4c03bc11ff086bfab1c39eb1409e968a">QuantLib::DiscountingBondEngine::includeSettlementDateFlows_</a></div><div class="ttdeci">boost::optional&lt; bool &gt; includeSettlementDateFlows_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df9/discountingbondengine_8hpp_source.html#l00045">discountingbondengine.hpp:45</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_discounting_bond_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::DiscountingBondEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/ddd/discountingbondengine_8cpp_source.html#l00035">discountingbondengine.cpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_discounting_bond_engine_html_a91f162154c1196bbccf8287dc01fe151"><div class="ttname"><a href="../../d0/d7a/class_quant_lib_1_1_discounting_bond_engine.html#a91f162154c1196bbccf8287dc01fe151">QuantLib::DiscountingBondEngine::DiscountingBondEngine</a></div><div class="ttdeci">DiscountingBondEngine(Handle&lt; YieldTermStructure &gt; discountCurve=Handle&lt; YieldTermStructure &gt;(), const boost::optional&lt; bool &gt; &amp;includeSettlementDateFlows=boost::none)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/ddd/discountingbondengine_8cpp_source.html#l00027">discountingbondengine.cpp:27</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

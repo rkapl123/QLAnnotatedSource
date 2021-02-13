@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/math/integrals/simpsonintegral.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -115,46 +116,44 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> maxIterations)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        : <a class="code" href="../../d6/d05/class_quant_lib_1_1_trapezoid_integral.html">TrapezoidIntegral</a>&lt;<a class="code" href="../../da/d6b/struct_quant_lib_1_1_default.html">Default</a>&gt;(accuracy, maxIterations) {}</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#af2814a0bfdd9b570f40f2f9b47418a96">   42</a></span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#af2814a0bfdd9b570f40f2f9b47418a96">integrate</a>(<span class="keyword">const</span> ext::function&lt;<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> (<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt;&amp; f,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                       <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a, </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                       <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> b)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="comment">// start from the coarsest trapezoid...</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> N = 1;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> I = (f(a)+f(b))*(b-a)/2.0, newI;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> adjI = I, newAdjI;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">// ...and refine it</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i = 1;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">do</span> {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                newI = <a class="code" href="../../da/d6b/struct_quant_lib_1_1_default.html#a023fee80186df103f1c7dce5d7eea878">Default::integrate</a>(f,a,b,I,N);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                N *= 2;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                newAdjI = (4.0*newI-I)/3.0;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="comment">// good enough? Also, don&#39;t run away immediately</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">if</span> (std::fabs(adjI-newAdjI) &lt;= <a class="code" href="../../db/df7/class_quant_lib_1_1_integrator.html#a040f464985da978503dd2088334cc59d">absoluteAccuracy</a>() &amp;&amp; i &gt; 5)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    <span class="comment">// ok, exit</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    <span class="keywordflow">return</span> newAdjI;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="comment">// oh well. Another step.</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                I = newI;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                adjI = newAdjI;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                i++;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            } <span class="keywordflow">while</span> (i &lt; <a class="code" href="../../db/df7/class_quant_lib_1_1_integrator.html#a174acab51f4fb05a361ebc5326f78bce">maxEvaluations</a>());</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            QL_FAIL(<span class="stringliteral">&quot;max number of iterations reached&quot;</span>);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    };</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">   42</a></span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">integrate</a>(<span class="keyword">const</span> ext::function&lt;<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt;&amp; f, <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a, <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> b)<span class="keyword"> const override </span>{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="comment">// start from the coarsest trapezoid...</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> N = 1;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> I = (f(a)+f(b))*(b-a)/2.0, newI;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> adjI = I, newAdjI;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="comment">// ...and refine it</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i = 1;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                newI = <a class="code" href="../../da/d6b/struct_quant_lib_1_1_default.html#a023fee80186df103f1c7dce5d7eea878">Default::integrate</a>(f,a,b,I,N);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                N *= 2;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                newAdjI = (4.0*newI-I)/3.0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="comment">// good enough? Also, don&#39;t run away immediately</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">if</span> (std::fabs(adjI-newAdjI) &lt;= <a class="code" href="../../db/df7/class_quant_lib_1_1_integrator.html#a040f464985da978503dd2088334cc59d">absoluteAccuracy</a>() &amp;&amp; i &gt; 5)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    <span class="comment">// ok, exit</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    <span class="keywordflow">return</span> newAdjI;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="comment">// oh well. Another step.</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                I = newI;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                adjI = newAdjI;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                i++;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            } <span class="keywordflow">while</span> (i &lt; <a class="code" href="../../db/df7/class_quant_lib_1_1_integrator.html#a174acab51f4fb05a361ebc5326f78bce">maxEvaluations</a>());</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            QL_FAIL(<span class="stringliteral">&quot;max number of iterations reached&quot;</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    };</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_simpson_integral_html"><div class="ttname"><a href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html">QuantLib::SimpsonIntegral</a></div><div class="ttdoc">Integral of a one-dimensional function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dec/simpsonintegral_8hpp_source.html#l00036">simpsonintegral.hpp:36</a></div></div>
-<div class="ttc" id="astruct_quant_lib_1_1_default_html_a023fee80186df103f1c7dce5d7eea878"><div class="ttname"><a href="../../da/d6b/struct_quant_lib_1_1_default.html#a023fee80186df103f1c7dce5d7eea878">QuantLib::Default::integrate</a></div><div class="ttdeci">static Real integrate(const ext::function&lt; Real(Real)&gt; &amp;f, Real a, Real b, Real I, Size N)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d60/trapezoidintegral_8hpp_source.html#l00085">trapezoidintegral.hpp:85</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_default_html_a023fee80186df103f1c7dce5d7eea878"><div class="ttname"><a href="../../da/d6b/struct_quant_lib_1_1_default.html#a023fee80186df103f1c7dce5d7eea878">QuantLib::Default::integrate</a></div><div class="ttdeci">static Real integrate(const ext::function&lt; Real(Real)&gt; &amp;f, Real a, Real b, Real I, Size N)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d60/trapezoidintegral_8hpp_source.html#l00083">trapezoidintegral.hpp:83</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_integrator_html_a040f464985da978503dd2088334cc59d"><div class="ttname"><a href="../../db/df7/class_quant_lib_1_1_integrator.html#a040f464985da978503dd2088334cc59d">QuantLib::Integrator::absoluteAccuracy</a></div><div class="ttdeci">Real absoluteAccuracy() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d35/integral_8cpp_source.html#l00043">integral.cpp:43</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simpson_integral_html_a0fc90f4cf7b13eda7b657cf829bbdba2"><div class="ttname"><a href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#a0fc90f4cf7b13eda7b657cf829bbdba2">QuantLib::SimpsonIntegral::SimpsonIntegral</a></div><div class="ttdeci">SimpsonIntegral(Real accuracy, Size maxIterations)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dec/simpsonintegral_8hpp_source.html#l00038">simpsonintegral.hpp:38</a></div></div>
-<div class="ttc" id="astruct_quant_lib_1_1_default_html"><div class="ttname"><a href="../../da/d6b/struct_quant_lib_1_1_default.html">QuantLib::Default</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d60/trapezoidintegral_8hpp_source.html#l00084">trapezoidintegral.hpp:84</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_default_html"><div class="ttname"><a href="../../da/d6b/struct_quant_lib_1_1_default.html">QuantLib::Default</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d60/trapezoidintegral_8hpp_source.html#l00082">trapezoidintegral.hpp:82</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_integrator_html_a174acab51f4fb05a361ebc5326f78bce"><div class="ttname"><a href="../../db/df7/class_quant_lib_1_1_integrator.html#a174acab51f4fb05a361ebc5326f78bce">QuantLib::Integrator::maxEvaluations</a></div><div class="ttdeci">Size maxEvaluations() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d35/integral_8cpp_source.html#l00047">integral.cpp:47</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_trapezoid_integral_html"><div class="ttname"><a href="../../d6/d05/class_quant_lib_1_1_trapezoid_integral.html">QuantLib::TrapezoidIntegral</a></div><div class="ttdoc">Integral of a one-dimensional function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d60/trapezoidintegral_8hpp_source.html#l00052">trapezoidintegral.hpp:52</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_simpson_integral_html_a7204bd05d6a0697ae1ca38f11f004d84"><div class="ttname"><a href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">QuantLib::SimpsonIntegral::integrate</a></div><div class="ttdeci">Real integrate(const ext::function&lt; Real(Real)&gt; &amp;f, Real a, Real b) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dec/simpsonintegral_8hpp_source.html#l00042">simpsonintegral.hpp:42</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_simpson_integral_html_af2814a0bfdd9b570f40f2f9b47418a96"><div class="ttname"><a href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#af2814a0bfdd9b570f40f2f9b47418a96">QuantLib::SimpsonIntegral::integrate</a></div><div class="ttdeci">Real integrate(const ext::function&lt; Real(Real)&gt; &amp;f, Real a, Real b) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dec/simpsonintegral_8hpp_source.html#l00042">simpsonintegral.hpp:42</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->

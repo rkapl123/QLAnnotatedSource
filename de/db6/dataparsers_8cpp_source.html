@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/utilities/dataparsers.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -188,7 +189,7 @@ $(function() {
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    <span class="stringliteral">&quot; in &#39;&quot;</span> &lt;&lt; str &lt;&lt; <span class="stringliteral">&quot;&#39;. Error:&quot;</span> &lt;&lt; e.what());</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(n, units);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> {n, units};</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
 <div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="../../d9/d55/class_quant_lib_1_1_date_parser.html#afbcce5d5795910ee4650251e6931afcc">  111</a></span>&#160;    <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code" href="../../d9/d55/class_quant_lib_1_1_date_parser.html#afbcce5d5795910ee4650251e6931afcc">DateParser::parseFormatted</a>(<span class="keyword">const</span> std::string&amp; str,</div>
@@ -214,7 +215,7 @@ $(function() {
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <a class="code" href="../../d1/d37/group__datetime.html#gae34b763987dcf60c6c619d327b8c9dbb">Month</a> month = <span class="keyword">static_cast&lt;</span><a class="code" href="../../d1/d37/group__datetime.html#gae34b763987dcf60c6c619d327b8c9dbb">Month</a><span class="keyword">&gt;</span>(<a class="code" href="../../d4/d6d/namespace_quant_lib_1_1io.html#a185fbb33691556c565a047ba68dc999e">io::to_integer</a>(str.substr(5, 2)));</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> day = <a class="code" href="../../d4/d6d/namespace_quant_lib_1_1io.html#a185fbb33691556c565a047ba68dc999e">io::to_integer</a>(str.substr(8, 2));</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(day, month, year);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> {day, month, year};</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>

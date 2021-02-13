@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/commodities/commoditypricinghelpers.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -149,13 +150,13 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_energy_commodity_html_aa8a473eb00f211a22d296c4d2f750c9a"><div class="ttname"><a href="../../d3/d6a/class_quant_lib_1_1_energy_commodity.html#aa8a473eb00f211a22d296c4d2f750c9a">QuantLib::EnergyCommodity::DeliverySchedule</a></div><div class="ttdeci">DeliverySchedule</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dda/energycommodity_8hpp_source.html#l00069">energycommodity.hpp:69</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_energy_commodity_html_aa8a473eb00f211a22d296c4d2f750c9aa6b15f8b55b10fefe6300b2f3bf60ad78"><div class="ttname"><a href="../../d3/d6a/class_quant_lib_1_1_energy_commodity.html#aa8a473eb00f211a22d296c4d2f750c9aa6b15f8b55b10fefe6300b2f3bf60ad78">QuantLib::EnergyCommodity::Daily</a></div><div class="ttdeci">@ Daily</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dda/energycommodity_8hpp_source.html#l00072">energycommodity.hpp:72</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_quantity_html"><div class="ttname"><a href="../../d1/d7c/class_quant_lib_1_1_quantity.html">QuantLib::Quantity</a></div><div class="ttdoc">Amount of a commodity.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/db8/quantity_8hpp_source.html#l00033">quantity.hpp:33</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html_a601cc4510014fa91b837b14a03d22ab3"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a601cc4510014fa91b837b14a03d22ab3">QuantLib::PricingPeriods</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; PricingPeriod &gt; &gt; PricingPeriods</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5d/pricingperiod_8hpp_source.html#l00049">pricingperiod.hpp:49</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_quantity_html"><div class="ttname"><a href="../../d1/d7c/class_quant_lib_1_1_quantity.html">QuantLib::Quantity</a></div><div class="ttdoc">Amount of a commodity.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/db8/quantity_8hpp_source.html#l00034">quantity.hpp:34</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_a601cc4510014fa91b837b14a03d22ab3"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a601cc4510014fa91b837b14a03d22ab3">QuantLib::PricingPeriods</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; PricingPeriod &gt; &gt; PricingPeriods</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5d/pricingperiod_8hpp_source.html#l00051">pricingperiod.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_energy_commodity_html_ae1c35b00dd9a7841aac1026aa504db9faccb3efba137e4dd3074b8032720085aa"><div class="ttname"><a href="../../d3/d6a/class_quant_lib_1_1_energy_commodity.html#ae1c35b00dd9a7841aac1026aa504db9faccb3efba137e4dd3074b8032720085aa">QuantLib::EnergyCommodity::PerDay</a></div><div class="ttdeci">@ PerDay</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dda/energycommodity_8hpp_source.html#l00079">energycommodity.hpp:79</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_commodity_pricing_helper_html_a9d5daed01f68489eb0fce169bcb9f568"><div class="ttname"><a href="../../db/d70/class_quant_lib_1_1_commodity_pricing_helper.html#a9d5daed01f68489eb0fce169bcb9f568">QuantLib::CommodityPricingHelper::createPricingPeriods</a></div><div class="ttdeci">static void createPricingPeriods(Date startDate, Date endDate, const Quantity &amp;quantity, EnergyCommodity::DeliverySchedule deliverySchedule, EnergyCommodity::QuantityPeriodicity qtyPeriodicity, const PaymentTerm &amp;paymentTerm, PricingPeriods &amp;pricingPeriods)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d2e/commoditypricinghelpers_8cpp_source.html#l00024">commoditypricinghelpers.cpp:24</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_energy_commodity_html_ae1c35b00dd9a7841aac1026aa504db9f"><div class="ttname"><a href="../../d3/d6a/class_quant_lib_1_1_energy_commodity.html#ae1c35b00dd9a7841aac1026aa504db9f">QuantLib::EnergyCommodity::QuantityPeriodicity</a></div><div class="ttdeci">QuantityPeriodicity</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dda/energycommodity_8hpp_source.html#l00077">energycommodity.hpp:77</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_energy_commodity_html_ae1c35b00dd9a7841aac1026aa504db9fa836ce08aeb278e8f1464a0331f5bf193"><div class="ttname"><a href="../../d3/d6a/class_quant_lib_1_1_energy_commodity.html#ae1c35b00dd9a7841aac1026aa504db9fa836ce08aeb278e8f1464a0331f5bf193">QuantLib::EnergyCommodity::PerMonth</a></div><div class="ttdeci">@ PerMonth</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dda/energycommodity_8hpp_source.html#l00081">energycommodity.hpp:81</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_payment_term_html"><div class="ttname"><a href="../../d4/dbc/class_quant_lib_1_1_payment_term.html">QuantLib::PaymentTerm</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d41/paymentterm_8hpp_source.html#l00032">paymentterm.hpp:32</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_payment_term_html"><div class="ttname"><a href="../../d4/dbc/class_quant_lib_1_1_payment_term.html">QuantLib::PaymentTerm</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d41/paymentterm_8hpp_source.html#l00033">paymentterm.hpp:33</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54">QuantLib::Months</a></div><div class="ttdeci">@ Months</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00039">timeunit.hpp:39</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_payment_term_html_a0cb3610986dced470f52a27e49db829d"><div class="ttname"><a href="../../d4/dbc/class_quant_lib_1_1_payment_term.html#a0cb3610986dced470f52a27e49db829d">QuantLib::PaymentTerm::getPaymentDate</a></div><div class="ttdeci">Date getPaymentDate(const Date &amp;date) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d41/paymentterm_8hpp_source.html#l00107">paymentterm.hpp:107</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>

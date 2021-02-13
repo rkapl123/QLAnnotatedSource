@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ExtendedCoxIngersollRoss Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -168,40 +169,40 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acf1226057b6c3cf514b56275429707e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#acf1226057b6c3cf514b56275429707e8">ExtendedCoxIngersollRoss</a> (const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; &amp;<a class="el" href="../../d2/d2b/class_quant_lib_1_1_term_structure_consistent_model.html#a8a05762901cb5fa1d585c21609d460f5">termStructure</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a211532127d83c15b17647a043e9efd36">theta</a>=0.1, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a8acb7edfaba81c3c90d003645a1bb486">k</a>=0.1, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a3bf7456c7feee4fc5c40c1ea775619de">sigma</a>=0.1, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#ae7a72a4c8dd1f131143d89a535765d42">x0</a>=0.05, <a class="el" href="../../d9/db9/classbool.html">bool</a> withFellerConstraint=true)</td></tr>
 <tr class="separator:acf1226057b6c3cf514b56275429707e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affce4b288592456be38694b3062d53ef"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d5/db1/class_quant_lib_1_1_lattice.html">Lattice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#affce4b288592456be38694b3062d53ef">tree</a> (const <a class="el" href="../../df/dff/class_quant_lib_1_1_time_grid.html">TimeGrid</a> &amp;grid) const</td></tr>
-<tr class="memdesc:affce4b288592456be38694b3062d53ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return by default a trinomial recombining tree.  <a href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#affce4b288592456be38694b3062d53ef">More...</a><br /></td></tr>
-<tr class="separator:affce4b288592456be38694b3062d53ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7a5bc2d8c0fa8544142f51f2281bb31"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d6/d8d/class_quant_lib_1_1_one_factor_model_1_1_short_rate_dynamics.html">ShortRateDynamics</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#aa7a5bc2d8c0fa8544142f51f2281bb31">dynamics</a> () const</td></tr>
-<tr class="memdesc:aa7a5bc2d8c0fa8544142f51f2281bb31"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the short-rate dynamics  <a href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#aa7a5bc2d8c0fa8544142f51f2281bb31">More...</a><br /></td></tr>
-<tr class="separator:aa7a5bc2d8c0fa8544142f51f2281bb31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa464aed598619815346c0d08cf2c7ccd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#aa464aed598619815346c0d08cf2c7ccd">discountBondOption</a> (<a class="el" href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7">Option::Type</a> type, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> maturity, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> bondMaturity) const</td></tr>
-<tr class="separator:aa464aed598619815346c0d08cf2c7ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacb086b078866e343d072277c6198a43"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d5/db1/class_quant_lib_1_1_lattice.html">Lattice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#aacb086b078866e343d072277c6198a43">tree</a> (const <a class="el" href="../../df/dff/class_quant_lib_1_1_time_grid.html">TimeGrid</a> &amp;grid) const override</td></tr>
+<tr class="memdesc:aacb086b078866e343d072277c6198a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return by default a trinomial recombining tree.  <a href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#aacb086b078866e343d072277c6198a43">More...</a><br /></td></tr>
+<tr class="separator:aacb086b078866e343d072277c6198a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2619715f1df5d67eed0aa09c1dd2f1f"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d6/d8d/class_quant_lib_1_1_one_factor_model_1_1_short_rate_dynamics.html">ShortRateDynamics</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#ad2619715f1df5d67eed0aa09c1dd2f1f">dynamics</a> () const override</td></tr>
+<tr class="memdesc:ad2619715f1df5d67eed0aa09c1dd2f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the short-rate dynamics  <a href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#ad2619715f1df5d67eed0aa09c1dd2f1f">More...</a><br /></td></tr>
+<tr class="separator:ad2619715f1df5d67eed0aa09c1dd2f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eefd9f90ea9465f4f775f9a0b11fa6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#a6eefd9f90ea9465f4f775f9a0b11fa6b">discountBondOption</a> (<a class="el" href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7">Option::Type</a> type, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> maturity, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> bondMaturity) const override</td></tr>
+<tr class="separator:a6eefd9f90ea9465f4f775f9a0b11fa6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_cox_ingersoll_ross"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_cox_ingersoll_ross')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html">CoxIngersollRoss</a></td></tr>
 <tr class="memitem:aca60d485a55da01ebe184b10df6916c5 inherit pub_methods_class_quant_lib_1_1_cox_ingersoll_ross"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#aca60d485a55da01ebe184b10df6916c5">CoxIngersollRoss</a> (<a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> r0=0.05, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a211532127d83c15b17647a043e9efd36">theta</a>=0.1, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a8acb7edfaba81c3c90d003645a1bb486">k</a>=0.1, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a3bf7456c7feee4fc5c40c1ea775619de">sigma</a>=0.1, <a class="el" href="../../d9/db9/classbool.html">bool</a> withFellerConstraint=true)</td></tr>
 <tr class="separator:aca60d485a55da01ebe184b10df6916c5 inherit pub_methods_class_quant_lib_1_1_cox_ingersoll_ross"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_one_factor_affine_model')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d2/d2c/class_quant_lib_1_1_one_factor_affine_model.html">OneFactorAffineModel</a></td></tr>
 <tr class="memitem:a7ba76488a8dafa032560538843a5737f inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2c/class_quant_lib_1_1_one_factor_affine_model.html#a7ba76488a8dafa032560538843a5737f">OneFactorAffineModel</a> (<a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> nArguments)</td></tr>
 <tr class="separator:a7ba76488a8dafa032560538843a5737f inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28b8fe8e1849a874ebb63691d20b72df inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2c/class_quant_lib_1_1_one_factor_affine_model.html#a28b8fe8e1849a874ebb63691d20b72df">discountBond</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> now, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> maturity, <a class="el" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> factors) const</td></tr>
-<tr class="separator:a28b8fe8e1849a874ebb63691d20b72df inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e253ff8eafea0820e2aca5c27eb4704 inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2c/class_quant_lib_1_1_one_factor_affine_model.html#a0e253ff8eafea0820e2aca5c27eb4704">discountBond</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> now, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> maturity, <a class="el" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> factors) const override</td></tr>
+<tr class="separator:a0e253ff8eafea0820e2aca5c27eb4704 inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa197593574e9905998cee94adc4aa34f inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2c/class_quant_lib_1_1_one_factor_affine_model.html#aa197593574e9905998cee94adc4aa34f">discountBond</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> now, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> maturity, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> rate) const</td></tr>
 <tr class="separator:aa197593574e9905998cee94adc4aa34f inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69a7c0281cc05c0c70142afd62e7b0f1 inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">DiscountFactor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2c/class_quant_lib_1_1_one_factor_affine_model.html#a69a7c0281cc05c0c70142afd62e7b0f1">discount</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t) const</td></tr>
-<tr class="memdesc:a69a7c0281cc05c0c70142afd62e7b0f1 inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implied discount curve.  <a href="../../d2/d2c/class_quant_lib_1_1_one_factor_affine_model.html#a69a7c0281cc05c0c70142afd62e7b0f1">More...</a><br /></td></tr>
-<tr class="separator:a69a7c0281cc05c0c70142afd62e7b0f1 inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bf550a7a4df311ac28bbe4888969134 inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">DiscountFactor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2c/class_quant_lib_1_1_one_factor_affine_model.html#a8bf550a7a4df311ac28bbe4888969134">discount</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t) const override</td></tr>
+<tr class="memdesc:a8bf550a7a4df311ac28bbe4888969134 inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implied discount curve.  <a href="../../d2/d2c/class_quant_lib_1_1_one_factor_affine_model.html#a8bf550a7a4df311ac28bbe4888969134">More...</a><br /></td></tr>
+<tr class="separator:a8bf550a7a4df311ac28bbe4888969134 inherit pub_methods_class_quant_lib_1_1_one_factor_affine_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_one_factor_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_one_factor_model')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d7/d6c/class_quant_lib_1_1_one_factor_model.html">OneFactorModel</a></td></tr>
 <tr class="memitem:a9063908949ff755f1a8ac0562b05d6a0 inherit pub_methods_class_quant_lib_1_1_one_factor_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d6c/class_quant_lib_1_1_one_factor_model.html#a9063908949ff755f1a8ac0562b05d6a0">OneFactorModel</a> (<a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> nArguments)</td></tr>
 <tr class="separator:a9063908949ff755f1a8ac0562b05d6a0 inherit pub_methods_class_quant_lib_1_1_one_factor_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa58d01bd47bbd015e07402677e91d39e inherit pub_methods_class_quant_lib_1_1_one_factor_model"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d6c/class_quant_lib_1_1_one_factor_model.html#aa58d01bd47bbd015e07402677e91d39e">~OneFactorModel</a> ()</td></tr>
-<tr class="separator:aa58d01bd47bbd015e07402677e91d39e inherit pub_methods_class_quant_lib_1_1_one_factor_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5665413b8502bb06e594971e68d5de95 inherit pub_methods_class_quant_lib_1_1_one_factor_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d6c/class_quant_lib_1_1_one_factor_model.html#a5665413b8502bb06e594971e68d5de95">~OneFactorModel</a> () override=default</td></tr>
+<tr class="separator:a5665413b8502bb06e594971e68d5de95 inherit pub_methods_class_quant_lib_1_1_one_factor_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_short_rate_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_short_rate_model')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d3/d73/class_quant_lib_1_1_short_rate_model.html">ShortRateModel</a></td></tr>
 <tr class="memitem:acd870a956670fdf361759405e3d2e5eb inherit pub_methods_class_quant_lib_1_1_short_rate_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d73/class_quant_lib_1_1_short_rate_model.html#acd870a956670fdf361759405e3d2e5eb">ShortRateModel</a> (<a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> nArguments)</td></tr>
 <tr class="separator:acd870a956670fdf361759405e3d2e5eb inherit pub_methods_class_quant_lib_1_1_short_rate_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_calibrated_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_calibrated_model')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html">CalibratedModel</a></td></tr>
 <tr class="memitem:ab43067bd779206b1a734151bd62e9c5f inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#ab43067bd779206b1a734151bd62e9c5f">CalibratedModel</a> (<a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> nArguments)</td></tr>
 <tr class="separator:ab43067bd779206b1a734151bd62e9c5f inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5c54df7ed3b930268c8d7752c101725 inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
-<tr class="separator:ac5c54df7ed3b930268c8d7752c101725 inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
+<tr class="separator:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae69ee2240ab519337f90df4a345984ca inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#ae69ee2240ab519337f90df4a345984ca">calibrate</a> (const std::vector&lt; ext::shared_ptr&lt; <a class="el" href="../../dd/dc4/class_quant_lib_1_1_calibration_helper.html">CalibrationHelper</a> &gt; &gt; &amp;, <a class="el" href="../../dc/dd8/class_quant_lib_1_1_optimization_method.html">OptimizationMethod</a> &amp;method, const <a class="el" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html">EndCriteria</a> &amp;<a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#a689f17edf70f02c42a061798e1344cc6">endCriteria</a>, const <a class="el" href="../../d2/d42/class_quant_lib_1_1_constraint.html">Constraint</a> &amp;<a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#a9b542f77b9f84eeb36ac1ea3ca7f2d5f">constraint</a>=<a class="el" href="../../d2/d42/class_quant_lib_1_1_constraint.html">Constraint</a>(), const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;weights=std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt;(), const std::vector&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt; &amp;fixParameters=std::vector&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt;())</td></tr>
 <tr class="memdesc:ae69ee2240ab519337f90df4a345984ca inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calibrate to a set of market instruments (usually caps/swaptions)  <a href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#ae69ee2240ab519337f90df4a345984ca">More...</a><br /></td></tr>
 <tr class="separator:ae69ee2240ab519337f90df4a345984ca inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,7 +220,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aacc31e5f4aa4d15a3f33fd81b916897a inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#aacc31e5f4aa4d15a3f33fd81b916897a">problemValues</a> () const</td></tr>
 <tr class="memdesc:aacc31e5f4aa4d15a3f33fd81b916897a inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the problem values.  <a href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#aacc31e5f4aa4d15a3f33fd81b916897a">More...</a><br /></td></tr>
 <tr class="separator:aacc31e5f4aa4d15a3f33fd81b916897a inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6b52286eb8a7f7028ecae71a4d5bc84 inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable</a>&lt; <a class="el" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#af6b52286eb8a7f7028ecae71a4d5bc84">params</a> () const</td></tr>
+<tr class="memitem:af6b52286eb8a7f7028ecae71a4d5bc84 inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a>&lt; <a class="el" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#af6b52286eb8a7f7028ecae71a4d5bc84">params</a> () const</td></tr>
 <tr class="memdesc:af6b52286eb8a7f7028ecae71a4d5bc84 inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns array of arguments on which calibration is done.  <a href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#af6b52286eb8a7f7028ecae71a4d5bc84">More...</a><br /></td></tr>
 <tr class="separator:af6b52286eb8a7f7028ecae71a4d5bc84 inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae83c058519d7bfc23a3101b42ee038bf inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#ae83c058519d7bfc23a3101b42ee038bf">setParams</a> (const <a class="el" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> &amp;<a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#af6b52286eb8a7f7028ecae71a4d5bc84">params</a>)</td></tr>
@@ -227,8 +228,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a82ee0985ecccbdc973ccd4ac78d82497 inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#a82ee0985ecccbdc973ccd4ac78d82497">functionEvaluation</a> () const</td></tr>
 <tr class="separator:a82ee0985ecccbdc973ccd4ac78d82497 inherit pub_methods_class_quant_lib_1_1_calibrated_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
-<tr class="memitem:abbd00a8000bd3ee5cd7e35aeb436f937 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#abbd00a8000bd3ee5cd7e35aeb436f937">Observer</a> ()</td></tr>
-<tr class="separator:abbd00a8000bd3ee5cd7e35aeb436f937 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a52ef9232283da6f842e4574afeb854a0">Observer</a> ()=default</td></tr>
+<tr class="separator:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#af6a9d3ca0b7f388f3b7ccb1eccf11f63">Observer</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
 <tr class="separator:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6810b3645967da11d5f5d4804d37bacc inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a6810b3645967da11d5f5d4804d37bacc">operator=</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
@@ -252,28 +253,28 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a522aacdd0f2408fe5e46527a6db999b4">operator=</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
 <tr class="separator:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f0b266a5d1e6ed41027d3e8c8d7ff1f inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a5f0b266a5d1e6ed41027d3e8c8d7ff1f">~Observable</a> ()</td></tr>
-<tr class="separator:a5f0b266a5d1e6ed41027d3e8c8d7ff1f inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a99f4333cda953ce3bfdc958ccea5fbf9">~Observable</a> ()=default</td></tr>
+<tr class="separator:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a> ()</td></tr>
 <tr class="separator:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_affine_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_affine_model')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../db/d2c/class_quant_lib_1_1_affine_model.html">AffineModel</a></td></tr>
 <tr class="memitem:a56610b6dae683bf89489bbf516d2652d inherit pub_methods_class_quant_lib_1_1_affine_model"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2c/class_quant_lib_1_1_affine_model.html#a56610b6dae683bf89489bbf516d2652d">discountBondOption</a> (<a class="el" href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7">Option::Type</a> type, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> maturity, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> bondStart, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> bondMaturity) const</td></tr>
 <tr class="separator:a56610b6dae683bf89489bbf516d2652d inherit pub_methods_class_quant_lib_1_1_affine_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_term_structure_consistent_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_term_structure_consistent_model')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d2/d2b/class_quant_lib_1_1_term_structure_consistent_model.html">TermStructureConsistentModel</a></td></tr>
-<tr class="memitem:abc88328a9ce3013c5c8689ee87a0205c inherit pub_methods_class_quant_lib_1_1_term_structure_consistent_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2b/class_quant_lib_1_1_term_structure_consistent_model.html#abc88328a9ce3013c5c8689ee87a0205c">TermStructureConsistentModel</a> (const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; &amp;<a class="el" href="../../d2/d2b/class_quant_lib_1_1_term_structure_consistent_model.html#a8a05762901cb5fa1d585c21609d460f5">termStructure</a>)</td></tr>
-<tr class="separator:abc88328a9ce3013c5c8689ee87a0205c inherit pub_methods_class_quant_lib_1_1_term_structure_consistent_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d443556ce365ca6064c39cc28a3754d inherit pub_methods_class_quant_lib_1_1_term_structure_consistent_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2b/class_quant_lib_1_1_term_structure_consistent_model.html#a2d443556ce365ca6064c39cc28a3754d">TermStructureConsistentModel</a> (<a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; <a class="el" href="../../d2/d2b/class_quant_lib_1_1_term_structure_consistent_model.html#a8a05762901cb5fa1d585c21609d460f5">termStructure</a>)</td></tr>
+<tr class="separator:a2d443556ce365ca6064c39cc28a3754d inherit pub_methods_class_quant_lib_1_1_term_structure_consistent_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a05762901cb5fa1d585c21609d460f5 inherit pub_methods_class_quant_lib_1_1_term_structure_consistent_model"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2b/class_quant_lib_1_1_term_structure_consistent_model.html#a8a05762901cb5fa1d585c21609d460f5">termStructure</a> () const</td></tr>
 <tr class="separator:a8a05762901cb5fa1d585c21609d460f5 inherit pub_methods_class_quant_lib_1_1_term_structure_consistent_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4d8a7e8e132cf1dd8d1d9eac02f2bfae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#a4d8a7e8e132cf1dd8d1d9eac02f2bfae">generateArguments</a> ()</td></tr>
-<tr class="separator:a4d8a7e8e132cf1dd8d1d9eac02f2bfae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc348b40097f738841cc2b04eccb9ee3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#acc348b40097f738841cc2b04eccb9ee3">A</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d3/dee/class_t.html">T</a>) const</td></tr>
-<tr class="separator:acc348b40097f738841cc2b04eccb9ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75f94e794eec91194cba08e629bfe745"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#a75f94e794eec91194cba08e629bfe745">generateArguments</a> () override</td></tr>
+<tr class="separator:a75f94e794eec91194cba08e629bfe745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6375b9ccbe7c1bed093e7ca4669c01d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#ad6375b9ccbe7c1bed093e7ca4669c01d">A</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d3/dee/class_t.html">T</a>) const override</td></tr>
+<tr class="separator:ad6375b9ccbe7c1bed093e7ca4669c01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_quant_lib_1_1_cox_ingersoll_ross"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_quant_lib_1_1_cox_ingersoll_ross')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html">CoxIngersollRoss</a></td></tr>
-<tr class="memitem:af180314a3071f54e4512a3f665cb1c9c inherit pro_methods_class_quant_lib_1_1_cox_ingersoll_ross"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#af180314a3071f54e4512a3f665cb1c9c">B</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d3/dee/class_t.html">T</a>) const</td></tr>
-<tr class="separator:af180314a3071f54e4512a3f665cb1c9c inherit pro_methods_class_quant_lib_1_1_cox_ingersoll_ross"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2968c3f61cfe1d1e175b0af877590645 inherit pro_methods_class_quant_lib_1_1_cox_ingersoll_ross"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a2968c3f61cfe1d1e175b0af877590645">B</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d3/dee/class_t.html">T</a>) const override</td></tr>
+<tr class="separator:a2968c3f61cfe1d1e175b0af877590645 inherit pro_methods_class_quant_lib_1_1_cox_ingersoll_ross"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a211532127d83c15b17647a043e9efd36 inherit pro_methods_class_quant_lib_1_1_cox_ingersoll_ross"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a211532127d83c15b17647a043e9efd36">theta</a> () const</td></tr>
 <tr class="separator:a211532127d83c15b17647a043e9efd36 inherit pro_methods_class_quant_lib_1_1_cox_ingersoll_ross"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8acb7edfaba81c3c90d003645a1bb486 inherit pro_methods_class_quant_lib_1_1_cox_ingersoll_ross"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a8acb7edfaba81c3c90d003645a1bb486">k</a> () const</td></tr>
@@ -314,7 +315,7 @@ Additional Inherited Members</h2></td></tr>
 </p>
 <dl class="bug"><dt><b><a class="el" href="../../de/da5/bug.html#_bug000006">Bug:</a></b></dt><dd>this class was not tested enough to guarantee its functionality.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html">extendedcoxingersollross.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html">extendedcoxingersollross.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acf1226057b6c3cf514b56275429707e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf1226057b6c3cf514b56275429707e8">&#9670;&nbsp;</a></span>ExtendedCoxIngersollRoss()</h2>
@@ -375,7 +376,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="center"><img src="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_acf1226057b6c3cf514b56275429707e8_cgraph.png" border="0" usemap="#add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_acf1226057b6c3cf514b56275429707e8_cgraph" alt=""/></div>
 <map name="dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_acf1226057b6c3cf514b56275429707e8_cgraph" id="add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_acf1226057b6c3cf514b56275429707e8_cgraph">
 <area shape="rect" title=" " alt="" coords="5,129,184,156"/>
-<area shape="rect" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#a4d8a7e8e132cf1dd8d1d9eac02f2bfae" title=" " alt="" coords="232,129,367,156"/>
+<area shape="rect" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#a75f94e794eec91194cba08e629bfe745" title=" " alt="" coords="232,129,367,156"/>
 <area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a8acb7edfaba81c3c90d003645a1bb486" title=" " alt="" coords="429,5,627,32"/>
 <area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a3bf7456c7feee4fc5c40c1ea775619de" title=" " alt="" coords="437,57,619,98"/>
 <area shape="rect" href="../../d2/d2b/class_quant_lib_1_1_term_structure_consistent_model.html#a8a05762901cb5fa1d585c21609d460f5" title=" " alt="" coords="415,122,641,163"/>
@@ -387,8 +388,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="affce4b288592456be38694b3062d53ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affce4b288592456be38694b3062d53ef">&#9670;&nbsp;</a></span>tree()</h2>
+<a id="aacb086b078866e343d072277c6198a43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacb086b078866e343d072277c6198a43">&#9670;&nbsp;</a></span>tree()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -406,14 +407,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Return by default a trinomial recombining tree. </p>
 
-<p>Reimplemented from <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#affce4b288592456be38694b3062d53ef">CoxIngersollRoss</a>.</p>
+<p>Reimplemented from <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#aacb086b078866e343d072277c6198a43">CoxIngersollRoss</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dbb/extendedcoxingersollross_8cpp_source.html#l00035">35</a> of file <a class="el" href="../../de/dbb/extendedcoxingersollross_8cpp_source.html">extendedcoxingersollross.cpp</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -421,8 +422,8 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_affce4b288592456be38694b3062d53ef_cgraph.png" border="0" usemap="#add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_affce4b288592456be38694b3062d53ef_cgraph" alt=""/></div>
-<map name="dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_affce4b288592456be38694b3062d53ef_cgraph" id="add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_affce4b288592456be38694b3062d53ef_cgraph">
+<div class="center"><img src="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_aacb086b078866e343d072277c6198a43_cgraph.png" border="0" usemap="#add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_aacb086b078866e343d072277c6198a43_cgraph" alt=""/></div>
+<map name="dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_aacb086b078866e343d072277c6198a43_cgraph" id="add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_aacb086b078866e343d072277c6198a43_cgraph">
 <area shape="rect" title="Return by default a trinomial recombining tree." alt="" coords="5,163,49,190"/>
 <area shape="rect" href="../../d4/d47/class_quant_lib_1_1_parameter.html#a313450c6f08d4f9f1b9aeb2b6d9f4221" title=" " alt="" coords="139,5,282,47"/>
 <area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a8acb7edfaba81c3c90d003645a1bb486" title=" " alt="" coords="111,71,310,98"/>
@@ -435,8 +436,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aa7a5bc2d8c0fa8544142f51f2281bb31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7a5bc2d8c0fa8544142f51f2281bb31">&#9670;&nbsp;</a></span>dynamics()</h2>
+<a id="ad2619715f1df5d67eed0aa09c1dd2f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2619715f1df5d67eed0aa09c1dd2f1f">&#9670;&nbsp;</a></span>dynamics()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -453,23 +454,23 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>returns the short-rate dynamics </p>
 
-<p>Reimplemented from <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#aa7a5bc2d8c0fa8544142f51f2281bb31">CoxIngersollRoss</a>.</p>
+<p>Reimplemented from <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#ad2619715f1df5d67eed0aa09c1dd2f1f">CoxIngersollRoss</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html#l00149">149</a> of file <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html">extendedcoxingersollross.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html#l00143">143</a> of file <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html">extendedcoxingersollross.hpp</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_aa7a5bc2d8c0fa8544142f51f2281bb31_cgraph.png" border="0" usemap="#add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_aa7a5bc2d8c0fa8544142f51f2281bb31_cgraph" alt=""/></div>
-<map name="dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_aa7a5bc2d8c0fa8544142f51f2281bb31_cgraph" id="add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_aa7a5bc2d8c0fa8544142f51f2281bb31_cgraph">
+<div class="center"><img src="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_ad2619715f1df5d67eed0aa09c1dd2f1f_cgraph.png" border="0" usemap="#add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_ad2619715f1df5d67eed0aa09c1dd2f1f_cgraph" alt=""/></div>
+<map name="dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_ad2619715f1df5d67eed0aa09c1dd2f1f_cgraph" id="add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_ad2619715f1df5d67eed0aa09c1dd2f1f_cgraph">
 <area shape="rect" title="returns the short&#45;rate dynamics" alt="" coords="5,97,84,124"/>
 <area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a8acb7edfaba81c3c90d003645a1bb486" title=" " alt="" coords="135,5,334,32"/>
 <area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a3bf7456c7feee4fc5c40c1ea775619de" title=" " alt="" coords="143,57,326,98"/>
@@ -480,8 +481,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aa464aed598619815346c0d08cf2c7ccd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa464aed598619815346c0d08cf2c7ccd">&#9670;&nbsp;</a></span>discountBondOption()</h2>
+<a id="a6eefd9f90ea9465f4f775f9a0b11fa6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eefd9f90ea9465f4f775f9a0b11fa6b">&#9670;&nbsp;</a></span>discountBondOption()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -521,12 +522,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#aa464aed598619815346c0d08cf2c7ccd">CoxIngersollRoss</a>.</p>
+<p>Reimplemented from <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a6eefd9f90ea9465f4f775f9a0b11fa6b">CoxIngersollRoss</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dbb/extendedcoxingersollross_8cpp_source.html#l00061">61</a> of file <a class="el" href="../../de/dbb/extendedcoxingersollross_8cpp_source.html">extendedcoxingersollross.cpp</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -534,14 +535,14 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_aa464aed598619815346c0d08cf2c7ccd_cgraph.png" border="0" usemap="#add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_aa464aed598619815346c0d08cf2c7ccd_cgraph" alt=""/></div>
-<map name="dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_aa464aed598619815346c0d08cf2c7ccd_cgraph" id="add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_aa464aed598619815346c0d08cf2c7ccd_cgraph">
+<div class="center"><img src="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a6eefd9f90ea9465f4f775f9a0b11fa6b_cgraph.png" border="0" usemap="#add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a6eefd9f90ea9465f4f775f9a0b11fa6b_cgraph" alt=""/></div>
+<map name="dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a6eefd9f90ea9465f4f775f9a0b11fa6b_cgraph" id="add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a6eefd9f90ea9465f4f775f9a0b11fa6b_cgraph">
 <area shape="rect" title=" " alt="" coords="5,128,144,155"/>
-<area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#acc348b40097f738841cc2b04eccb9ee3" title=" " alt="" coords="205,103,405,130"/>
+<area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#ad6375b9ccbe7c1bed093e7ca4669c01d" title=" " alt="" coords="205,103,405,130"/>
 <area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a8acb7edfaba81c3c90d003645a1bb486" title=" " alt="" coords="467,6,665,32"/>
 <area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a3bf7456c7feee4fc5c40c1ea775619de" title=" " alt="" coords="475,122,657,164"/>
 <area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a211532127d83c15b17647a043e9efd36" title=" " alt="" coords="475,190,657,232"/>
-<area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#af180314a3071f54e4512a3f665cb1c9c" title=" " alt="" coords="205,52,405,79"/>
+<area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a2968c3f61cfe1d1e175b0af877590645" title=" " alt="" coords="205,52,405,79"/>
 <area shape="rect" href="../../d2/d2b/class_quant_lib_1_1_term_structure_consistent_model.html#a8a05762901cb5fa1d585c21609d460f5" title=" " alt="" coords="192,256,419,297"/>
 <area shape="rect" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#a6c2fb01b68f90892cc39a5c6c12d4e09" title=" " alt="" coords="479,57,653,98"/>
 <area shape="rect" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#af6b52286eb8a7f7028ecae71a4d5bc84" title="Returns array of arguments on which calibration is done." alt="" coords="713,57,888,98"/>
@@ -550,8 +551,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a4d8a7e8e132cf1dd8d1d9eac02f2bfae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d8a7e8e132cf1dd8d1d9eac02f2bfae">&#9670;&nbsp;</a></span>generateArguments()</h2>
+<a id="a75f94e794eec91194cba08e629bfe745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75f94e794eec91194cba08e629bfe745">&#9670;&nbsp;</a></span>generateArguments()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -568,21 +569,21 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#a2a6a0697363420cbf8673f8e61fe6d7e">CalibratedModel</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html">extendedcoxingersollross.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html#l00148">148</a> of file <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html">extendedcoxingersollross.hpp</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a4d8a7e8e132cf1dd8d1d9eac02f2bfae_cgraph.png" border="0" usemap="#add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a4d8a7e8e132cf1dd8d1d9eac02f2bfae_cgraph" alt=""/></div>
-<map name="dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a4d8a7e8e132cf1dd8d1d9eac02f2bfae_cgraph" id="add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a4d8a7e8e132cf1dd8d1d9eac02f2bfae_cgraph">
+<div class="center"><img src="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a75f94e794eec91194cba08e629bfe745_cgraph.png" border="0" usemap="#add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a75f94e794eec91194cba08e629bfe745_cgraph" alt=""/></div>
+<map name="dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a75f94e794eec91194cba08e629bfe745_cgraph" id="add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a75f94e794eec91194cba08e629bfe745_cgraph">
 <area shape="rect" title=" " alt="" coords="5,129,140,156"/>
 <area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a8acb7edfaba81c3c90d003645a1bb486" title=" " alt="" coords="202,5,401,32"/>
 <area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a3bf7456c7feee4fc5c40c1ea775619de" title=" " alt="" coords="210,57,393,98"/>
@@ -596,8 +597,8 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a4d8a7e8e132cf1dd8d1d9eac02f2bfae_icgraph.png" border="0" usemap="#add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a4d8a7e8e132cf1dd8d1d9eac02f2bfae_icgraph" alt=""/></div>
-<map name="dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a4d8a7e8e132cf1dd8d1d9eac02f2bfae_icgraph" id="add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a4d8a7e8e132cf1dd8d1d9eac02f2bfae_icgraph">
+<div class="center"><img src="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a75f94e794eec91194cba08e629bfe745_icgraph.png" border="0" usemap="#add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a75f94e794eec91194cba08e629bfe745_icgraph" alt=""/></div>
+<map name="dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a75f94e794eec91194cba08e629bfe745_icgraph" id="add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_a75f94e794eec91194cba08e629bfe745_icgraph">
 <area shape="rect" title=" " alt="" coords="232,5,367,32"/>
 <area shape="rect" href="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross.html#acf1226057b6c3cf514b56275429707e8" title=" " alt="" coords="5,5,184,32"/>
 </map>
@@ -605,8 +606,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="acc348b40097f738841cc2b04eccb9ee3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc348b40097f738841cc2b04eccb9ee3">&#9670;&nbsp;</a></span>A()</h2>
+<a id="ad6375b9ccbe7c1bed093e7ca4669c01d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6375b9ccbe7c1bed093e7ca4669c01d">&#9670;&nbsp;</a></span>A()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -634,12 +635,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#acc348b40097f738841cc2b04eccb9ee3">CoxIngersollRoss</a>.</p>
+<p>Reimplemented from <a class="el" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#ad6375b9ccbe7c1bed093e7ca4669c01d">CoxIngersollRoss</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dbb/extendedcoxingersollross_8cpp_source.html#l00052">52</a> of file <a class="el" href="../../de/dbb/extendedcoxingersollross_8cpp_source.html">extendedcoxingersollross.cpp</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -647,12 +648,12 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_acc348b40097f738841cc2b04eccb9ee3_cgraph.png" border="0" usemap="#add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_acc348b40097f738841cc2b04eccb9ee3_cgraph" alt=""/></div>
-<map name="dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_acc348b40097f738841cc2b04eccb9ee3_cgraph" id="add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_acc348b40097f738841cc2b04eccb9ee3_cgraph">
+<div class="center"><img src="../../dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_ad6375b9ccbe7c1bed093e7ca4669c01d_cgraph.png" border="0" usemap="#add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_ad6375b9ccbe7c1bed093e7ca4669c01d_cgraph" alt=""/></div>
+<map name="dd/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_ad6375b9ccbe7c1bed093e7ca4669c01d_cgraph" id="add/d36/class_quant_lib_1_1_extended_cox_ingersoll_ross_ad6375b9ccbe7c1bed093e7ca4669c01d_cgraph">
 <area shape="rect" title=" " alt="" coords="5,147,44,173"/>
-<area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#acc348b40097f738841cc2b04eccb9ee3" title=" " alt="" coords="105,96,305,123"/>
+<area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#ad6375b9ccbe7c1bed093e7ca4669c01d" title=" " alt="" coords="105,96,305,123"/>
 <area shape="rect" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#a6c2fb01b68f90892cc39a5c6c12d4e09" title=" " alt="" coords="379,122,553,163"/>
-<area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#af180314a3071f54e4512a3f665cb1c9c" title=" " alt="" coords="105,45,305,72"/>
+<area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a2968c3f61cfe1d1e175b0af877590645" title=" " alt="" coords="105,45,305,72"/>
 <area shape="rect" href="../../d2/d2b/class_quant_lib_1_1_term_structure_consistent_model.html#a8a05762901cb5fa1d585c21609d460f5" title=" " alt="" coords="92,198,319,239"/>
 <area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#ae7a72a4c8dd1f131143d89a535765d42" title=" " alt="" coords="103,264,308,291"/>
 <area shape="rect" href="../../d0/dfb/class_quant_lib_1_1_cox_ingersoll_ross.html#a8acb7edfaba81c3c90d003645a1bb486" title=" " alt="" coords="367,5,565,32"/>
@@ -685,7 +686,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html">extendedcoxingersollross.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html#l00072">72</a> of file <a class="el" href="../../d3/d20/extendedcoxingersollross_8hpp_source.html">extendedcoxingersollross.hpp</a>.</p>
 
 </div>
 </div>

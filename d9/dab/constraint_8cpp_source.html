@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/math/optimization/constraint.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -101,11 +102,11 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ql/math/optimization/constraint.hpp&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d2/d42/class_quant_lib_1_1_constraint.html#ad0d62f1ab5502641171b2178f69dd414">   24</a></span>&#160;    <a class="code" href="../../d2/d42/class_quant_lib_1_1_constraint.html#ad0d62f1ab5502641171b2178f69dd414">Constraint::Constraint</a>(<span class="keyword">const</span> ext::shared_ptr&lt;Constraint::Impl&gt;&amp; impl)</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    : impl_(impl) {}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d2/d42/class_quant_lib_1_1_constraint.html#ac13038110046f96eafbefa1ad5c0e522">   25</a></span>&#160;    <a class="code" href="../../d2/d42/class_quant_lib_1_1_constraint.html#ac13038110046f96eafbefa1ad5c0e522">Constraint::Constraint</a>(ext::shared_ptr&lt;Constraint::Impl&gt; impl) : impl_(std::move(impl)) {}</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d2/d42/class_quant_lib_1_1_constraint.html#a776e34e7c97642cef0062f87d4b7f338">   27</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d2/d42/class_quant_lib_1_1_constraint.html#a776e34e7c97642cef0062f87d4b7f338">Constraint::update</a>(<a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; params, <span class="keyword">const</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; direction, <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> beta)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
@@ -126,10 +127,10 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_constraint_html_a3286c254042be62fa8622ef76a3b373f"><div class="ttname"><a href="../../d2/d42/class_quant_lib_1_1_constraint.html#a3286c254042be62fa8622ef76a3b373f">QuantLib::Constraint::test</a></div><div class="ttdeci">bool test(const Array &amp;p) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/de1/constraint_8hpp_source.html#l00055">constraint.hpp:55</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_constraint_html_a3286c254042be62fa8622ef76a3b373f"><div class="ttname"><a href="../../d2/d42/class_quant_lib_1_1_constraint.html#a3286c254042be62fa8622ef76a3b373f">QuantLib::Constraint::test</a></div><div class="ttdeci">bool test(const Array &amp;p) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/de1/constraint_8hpp_source.html#l00056">constraint.hpp:56</a></div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_constraint_html_ad0d62f1ab5502641171b2178f69dd414"><div class="ttname"><a href="../../d2/d42/class_quant_lib_1_1_constraint.html#ad0d62f1ab5502641171b2178f69dd414">QuantLib::Constraint::Constraint</a></div><div class="ttdeci">Constraint(const ext::shared_ptr&lt; Impl &gt; &amp;impl=ext::shared_ptr&lt; Impl &gt;())</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dab/constraint_8cpp_source.html#l00024">constraint.cpp:24</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00053">array.hpp:53</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_constraint_html_ac13038110046f96eafbefa1ad5c0e522"><div class="ttname"><a href="../../d2/d42/class_quant_lib_1_1_constraint.html#ac13038110046f96eafbefa1ad5c0e522">QuantLib::Constraint::Constraint</a></div><div class="ttdeci">Constraint(ext::shared_ptr&lt; Impl &gt; impl=ext::shared_ptr&lt; Impl &gt;())</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dab/constraint_8cpp_source.html#l00025">constraint.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_constraint_html_a776e34e7c97642cef0062f87d4b7f338"><div class="ttname"><a href="../../d2/d42/class_quant_lib_1_1_constraint.html#a776e34e7c97642cef0062f87d4b7f338">QuantLib::Constraint::update</a></div><div class="ttdeci">Real update(Array &amp;p, const Array &amp;direction, Real beta) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dab/constraint_8cpp_source.html#l00027">constraint.cpp:27</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>

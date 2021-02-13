@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/indexes/ibor/shibor.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -113,8 +114,8 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keyword">const</span> <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp; <a class="code" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a893a77839fce3112da824bd5e08d5834">tenor</a>,</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; h = <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>());</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        ext::shared_ptr&lt;IborIndex&gt; <a class="code" href="../../dd/d24/class_quant_lib_1_1_shibor.html#abf3fa7d5349a70183398a3e667a9f18e">clone</a>(</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                        <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; forwarding) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        ext::shared_ptr&lt;IborIndex&gt;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="../../dd/d24/class_quant_lib_1_1_shibor.html#a43115e11e5a5314cbe892e49de0fe34e">clone</a>(<span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; forwarding) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    };</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
@@ -125,10 +126,10 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle&lt; YieldTermStructure &gt;</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_shibor_html_afad0411a9ab5ffc02333ac8f924cfcbc"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_shibor.html#afad0411a9ab5ffc02333ac8f924cfcbc">QuantLib::Shibor::Shibor</a></div><div class="ttdeci">Shibor(const Period &amp;tenor, const Handle&lt; YieldTermStructure &gt; &amp;h=Handle&lt; YieldTermStructure &gt;())</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d13/shibor_8cpp_source.html#l00044">shibor.cpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_ibor_index_html"><div class="ttname"><a href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">QuantLib::IborIndex</a></div><div class="ttdoc">base class for Inter-Bank-Offered-Rate indexes (e.g. Libor, etc.)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d13/iborindex_8hpp_source.html#l00035">iborindex.hpp:35</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_interest_rate_index_html_a893a77839fce3112da824bd5e08d5834"><div class="ttname"><a href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a893a77839fce3112da824bd5e08d5834">QuantLib::InterestRateIndex::tenor</a></div><div class="ttdeci">Period tenor() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d22/interestrateindex_8hpp_source.html#l00063">interestrateindex.hpp:63</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_interest_rate_index_html_a893a77839fce3112da824bd5e08d5834"><div class="ttname"><a href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a893a77839fce3112da824bd5e08d5834">QuantLib::InterestRateIndex::tenor</a></div><div class="ttdeci">Period tenor() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d22/interestrateindex_8hpp_source.html#l00062">interestrateindex.hpp:62</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_shibor_html_a43115e11e5a5314cbe892e49de0fe34e"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_shibor.html#a43115e11e5a5314cbe892e49de0fe34e">QuantLib::Shibor::clone</a></div><div class="ttdeci">ext::shared_ptr&lt; IborIndex &gt; clone(const Handle&lt; YieldTermStructure &gt; &amp;forwarding) const override</div><div class="ttdoc">returns a copy of itself linked to a different forwarding curve</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d13/shibor_8cpp_source.html#l00050">shibor.cpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_shibor_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_shibor.html">QuantLib::Shibor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d08/shibor_8hpp_source.html#l00031">shibor.hpp:31</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_shibor_html_abf3fa7d5349a70183398a3e667a9f18e"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_shibor.html#abf3fa7d5349a70183398a3e667a9f18e">QuantLib::Shibor::clone</a></div><div class="ttdeci">ext::shared_ptr&lt; IborIndex &gt; clone(const Handle&lt; YieldTermStructure &gt; &amp;forwarding) const</div><div class="ttdoc">returns a copy of itself linked to a different forwarding curve</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d13/shibor_8cpp_source.html#l00050">shibor.cpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/commodities/commoditytype.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -108,7 +109,7 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::map&lt;std::string, ext::shared_ptr&lt;CommodityType::Data&gt; &gt;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a7600e8c76677719157ba98162af57b22">CommodityType::commodityTypes_</a>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a8b6363fe49172948d3e690db183123de">   28</a></span>&#160;    <a class="code" href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a09c2a6e182b14dee1fa4190dd20359b2">CommodityType::CommodityType</a>(<span class="keyword">const</span> std::string&amp; name,</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a8b6363fe49172948d3e690db183123de">   28</a></span>&#160;    <a class="code" href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a81c2bdc045f77f9913948817b9f65682">CommodityType::CommodityType</a>(<span class="keyword">const</span> std::string&amp; name,</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                 <span class="keyword">const</span> std::string&amp; code) {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::map&lt;std::string, ext::shared_ptr&lt;CommodityType::Data&gt; &gt;::const_iterator i = <a class="code" href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a7600e8c76677719157ba98162af57b22">commodityTypes_</a>.find(<a class="code" href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a19a22c307846d12f190e071667a2498e">code</a>);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span> (i != <a class="code" href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a7600e8c76677719157ba98162af57b22">commodityTypes_</a>.end())</div>
@@ -131,12 +132,12 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_commodity_type_html_a644718bb2fb240de962dc3c9a1fdf0dc"><div class="ttname"><a href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a644718bb2fb240de962dc3c9a1fdf0dc">QuantLib::CommodityType::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">is this a usable instance?</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d46/commoditytype_8hpp_source.html#l00103">commoditytype.hpp:103</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_commodity_type_html_ae5bf3e19b58a51ff5183190c53999eae"><div class="ttname"><a href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#ae5bf3e19b58a51ff5183190c53999eae">QuantLib::CommodityType::data_</a></div><div class="ttdeci">ext::shared_ptr&lt; Data &gt; data_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d46/commoditytype_8hpp_source.html#l00062">commoditytype.hpp:61</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_commodity_type_html_ae5bf3e19b58a51ff5183190c53999eae"><div class="ttname"><a href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#ae5bf3e19b58a51ff5183190c53999eae">QuantLib::CommodityType::data_</a></div><div class="ttdeci">ext::shared_ptr&lt; Data &gt; data_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d46/commoditytype_8hpp_source.html#l00063">commoditytype.hpp:62</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_commodity_type_html_a24dcbf29c0d6cd766009a182a6484e3b"><div class="ttname"><a href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a24dcbf29c0d6cd766009a182a6484e3b">QuantLib::CommodityType::name</a></div><div class="ttdeci">const std::string &amp; name() const</div><div class="ttdoc">name, e.g, &quot;Heating Oil&quot;</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d46/commoditytype_8hpp_source.html#l00099">commoditytype.hpp:99</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html_a6026ac67efc8234b303bd3633aebdabe"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a6026ac67efc8234b303bd3633aebdabe">QuantLib::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, GFunctionFactory::YieldCurveModel type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da9/conundrumpricer_8hpp_source.html#l00179">conundrumpricer.hpp:179</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_commodity_type_html_a09c2a6e182b14dee1fa4190dd20359b2"><div class="ttname"><a href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a09c2a6e182b14dee1fa4190dd20359b2">QuantLib::CommodityType::CommodityType</a></div><div class="ttdeci">CommodityType()</div><div class="ttdoc">default constructor</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d46/commoditytype_8hpp_source.html#l00044">commoditytype.hpp:44</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_commodity_type_html_a81c2bdc045f77f9913948817b9f65682"><div class="ttname"><a href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a81c2bdc045f77f9913948817b9f65682">QuantLib::CommodityType::CommodityType</a></div><div class="ttdeci">CommodityType()=default</div><div class="ttdoc">default constructor</div></div>
+<div class="ttc" id="anamespace_quant_lib_html_a6026ac67efc8234b303bd3633aebdabe"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a6026ac67efc8234b303bd3633aebdabe">QuantLib::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, GFunctionFactory::YieldCurveModel type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da9/conundrumpricer_8hpp_source.html#l00177">conundrumpricer.hpp:177</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_commodity_type_html_a19a22c307846d12f190e071667a2498e"><div class="ttname"><a href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a19a22c307846d12f190e071667a2498e">QuantLib::CommodityType::code</a></div><div class="ttdeci">const std::string &amp; code() const</div><div class="ttdoc">commodity code, e.g, &quot;HO&quot;</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d46/commoditytype_8hpp_source.html#l00095">commoditytype.hpp:95</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_commodity_type_html"><div class="ttname"><a href="../../d7/d79/class_quant_lib_1_1_commodity_type.html">QuantLib::CommodityType</a></div><div class="ttdoc">commodity type</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d46/commoditytype_8hpp_source.html#l00036">commoditytype.hpp:36</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_commodity_type_html"><div class="ttname"><a href="../../d7/d79/class_quant_lib_1_1_commodity_type.html">QuantLib::CommodityType</a></div><div class="ttdoc">commodity type</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d46/commoditytype_8hpp_source.html#l00037">commoditytype.hpp:37</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_commodity_type_html_a7600e8c76677719157ba98162af57b22"><div class="ttname"><a href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a7600e8c76677719157ba98162af57b22">QuantLib::CommodityType::commodityTypes_</a></div><div class="ttdeci">static std::map&lt; std::string, ext::shared_ptr&lt; Data &gt; &gt; commodityTypes_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d46/commoditytype_8hpp_source.html#l00072">commoditytype.hpp:72</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->

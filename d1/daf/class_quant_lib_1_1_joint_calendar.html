@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: JointCalendar Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -130,8 +131,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a44f28f46581415658dce2206ab1b0a4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/daf/class_quant_lib_1_1_joint_calendar.html#a44f28f46581415658dce2206ab1b0a4d">JointCalendar</a> (const std::vector&lt; <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &gt; &amp;, <a class="el" href="../../d5/d7b/namespace_quant_lib.html#a51033ff28c58a4dd772d61053b4f3bca">JointCalendarRule</a>=<a class="el" href="../../d5/d7b/namespace_quant_lib.html#a51033ff28c58a4dd772d61053b4f3bcaace2716211f162ba977b383f360af683e">JoinHolidays</a>)</td></tr>
 <tr class="separator:a44f28f46581415658dce2206ab1b0a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_calendar"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_calendar')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a></td></tr>
-<tr class="memitem:af5714af8cb45a29153e0fd53ee5e7241 inherit pub_methods_class_quant_lib_1_1_calendar"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html#af5714af8cb45a29153e0fd53ee5e7241">Calendar</a> ()</td></tr>
-<tr class="separator:af5714af8cb45a29153e0fd53ee5e7241 inherit pub_methods_class_quant_lib_1_1_calendar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d66ba30abf9db537021e09494ae428c inherit pub_methods_class_quant_lib_1_1_calendar"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a0d66ba30abf9db537021e09494ae428c">Calendar</a> ()=default</td></tr>
+<tr class="separator:a0d66ba30abf9db537021e09494ae428c inherit pub_methods_class_quant_lib_1_1_calendar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc inherit pub_methods_class_quant_lib_1_1_calendar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
 <tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc inherit pub_methods_class_quant_lib_1_1_calendar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not the calendar is initialized.  <a href="../../da/d3e/class_quant_lib_1_1_calendar.html#a644718bb2fb240de962dc3c9a1fdf0dc">More...</a><br /></td></tr>
 <tr class="separator:a644718bb2fb240de962dc3c9a1fdf0dc inherit pub_methods_class_quant_lib_1_1_calendar"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,7 +190,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Joint calendar. </p>
 <p>Depending on the chosen rule, this calendar has a set of business days given by either the union or the intersection of the sets of business days of the given calendars.</p>
-<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000158">Tests:</a></b></dt><dd>the correctness of the returned results is tested by reproducing the calculations. </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000166">Tests:</a></b></dt><dd>the correctness of the returned results is tested by reproducing the calculations. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/df2/jointcalendar_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../d2/df2/jointcalendar_8hpp_source.html">jointcalendar.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -225,7 +226,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html#l00125">125</a> of file <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html">jointcalendar.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html#l00124">124</a> of file <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html">jointcalendar.cpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +268,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html#l00132">132</a> of file <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html">jointcalendar.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html#l00131">131</a> of file <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html">jointcalendar.cpp</a>.</p>
 
 </div>
 </div>
@@ -315,7 +316,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html#l00140">140</a> of file <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html">jointcalendar.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html#l00139">139</a> of file <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html">jointcalendar.cpp</a>.</p>
 
 </div>
 </div>
@@ -353,7 +354,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html#l00149">149</a> of file <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html">jointcalendar.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html#l00148">148</a> of file <a class="el" href="../../da/d08/jointcalendar_8cpp_source.html">jointcalendar.cpp</a>.</p>
 
 </div>
 </div>

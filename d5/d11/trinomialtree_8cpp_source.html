@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/methods/lattices/trinomialtree.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -132,7 +133,7 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> j=jMin; j&lt;=jMax; j++) {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x = <a class="code" href="../../df/d1c/class_quant_lib_1_1_trinomial_tree.html#afb597b35edab96eecbcbf9a2df04f05d">x0_</a> + j*<a class="code" href="../../df/d1c/class_quant_lib_1_1_trinomial_tree.html#aef7f39f95dbbf62fd365a1ec2a0e70bf">dx_</a>[i];</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> m = process-&gt;expectation(t, x, dt);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> temp = <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>(std::floor((m-<a class="code" href="../../df/d1c/class_quant_lib_1_1_trinomial_tree.html#afb597b35edab96eecbcbf9a2df04f05d">x0_</a>)/<a class="code" href="../../df/d1c/class_quant_lib_1_1_trinomial_tree.html#aef7f39f95dbbf62fd365a1ec2a0e70bf">dx_</a>[i+1] + 0.5));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keyword">auto</span> temp = <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>(std::floor((m - <a class="code" href="../../df/d1c/class_quant_lib_1_1_trinomial_tree.html#afb597b35edab96eecbcbf9a2df04f05d">x0_</a>) / <a class="code" href="../../df/d1c/class_quant_lib_1_1_trinomial_tree.html#aef7f39f95dbbf62fd365a1ec2a0e70bf">dx_</a>[i + 1] + 0.5));</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">if</span> (isPositive) {</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    <span class="keywordflow">while</span> (<a class="code" href="../../df/d1c/class_quant_lib_1_1_trinomial_tree.html#afb597b35edab96eecbcbf9a2df04f05d">x0_</a>+(temp-1)*<a class="code" href="../../df/d1c/class_quant_lib_1_1_trinomial_tree.html#aef7f39f95dbbf62fd365a1ec2a0e70bf">dx_</a>[i+1]&lt;=0) {</div>
@@ -160,15 +161,15 @@ $(function() {
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_time_grid_html_a1efed8644695efe00d33bebfdac02b41"><div class="ttname"><a href="../../df/dff/class_quant_lib_1_1_time_grid.html#a1efed8644695efe00d33bebfdac02b41">QuantLib::TimeGrid::dt</a></div><div class="ttdeci">Time dt(Size i) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc9/timegrid_8hpp_source.html#l00150">timegrid.hpp:150</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_time_grid_html_a1efed8644695efe00d33bebfdac02b41"><div class="ttname"><a href="../../df/dff/class_quant_lib_1_1_time_grid.html#a1efed8644695efe00d33bebfdac02b41">QuantLib::TimeGrid::dt</a></div><div class="ttdeci">Time dt(Size i) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc9/timegrid_8hpp_source.html#l00149">timegrid.hpp:149</a></div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_trinomial_tree_1_1_branching_html"><div class="ttname"><a href="../../d9/d68/class_quant_lib_1_1_trinomial_tree_1_1_branching.html">QuantLib::TrinomialTree::Branching</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d60/trinomialtree_8hpp_source.html#l00066">trinomialtree.hpp:66</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_trinomial_tree_1_1_branching_html_a46f636cf264b8dad3a8ee4f420b7e59b"><div class="ttname"><a href="../../d9/d68/class_quant_lib_1_1_trinomial_tree_1_1_branching.html#a46f636cf264b8dad3a8ee4f420b7e59b">QuantLib::TrinomialTree::Branching::jMax</a></div><div class="ttdeci">Integer jMax() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d60/trinomialtree_8hpp_source.html#l00127">trinomialtree.hpp:127</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_trinomial_tree_1_1_branching_html_a25a0e10cdf9107072f4cbb75a0ee0cce"><div class="ttname"><a href="../../d9/d68/class_quant_lib_1_1_trinomial_tree_1_1_branching.html#a25a0e10cdf9107072f4cbb75a0ee0cce">QuantLib::TrinomialTree::Branching::jMin</a></div><div class="ttdeci">Integer jMin() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d60/trinomialtree_8hpp_source.html#l00123">trinomialtree.hpp:123</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_tree_html"><div class="ttname"><a href="../../d4/d3f/class_quant_lib_1_1_tree.html">QuantLib::Tree</a></div><div class="ttdoc">Tree approximating a single-factor diffusion</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dfd/tree_8hpp_source.html#l00051">tree.hpp:51</a></div></div>
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_time_grid_html"><div class="ttname"><a href="../../df/dff/class_quant_lib_1_1_time_grid.html">QuantLib::TimeGrid</a></div><div class="ttdoc">time grid class</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc9/timegrid_8hpp_source.html#l00041">timegrid.hpp:41</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_time_grid_html_acce0ab2cacc475b2434f24c65c91685a"><div class="ttname"><a href="../../df/dff/class_quant_lib_1_1_time_grid.html#acce0ab2cacc475b2434f24c65c91685a">QuantLib::TimeGrid::size</a></div><div class="ttdeci">Size size() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc9/timegrid_8hpp_source.html#l00160">timegrid.hpp:160</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_time_grid_html"><div class="ttname"><a href="../../df/dff/class_quant_lib_1_1_time_grid.html">QuantLib::TimeGrid</a></div><div class="ttdoc">time grid class</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc9/timegrid_8hpp_source.html#l00042">timegrid.hpp:42</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_time_grid_html_acce0ab2cacc475b2434f24c65c91685a"><div class="ttname"><a href="../../df/dff/class_quant_lib_1_1_time_grid.html#acce0ab2cacc475b2434f24c65c91685a">QuantLib::TimeGrid::size</a></div><div class="ttdeci">Size size() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc9/timegrid_8hpp_source.html#l00159">timegrid.hpp:159</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_trinomial_tree_html_ab1b4f3ee63c7fc18845e10236dd5df8d"><div class="ttname"><a href="../../df/d1c/class_quant_lib_1_1_trinomial_tree.html#ab1b4f3ee63c7fc18845e10236dd5df8d">QuantLib::TrinomialTree::timeGrid</a></div><div class="ttdeci">const TimeGrid &amp; timeGrid() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d60/trinomialtree_8hpp_source.html#l00049">trinomialtree.hpp:49</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_trinomial_tree_1_1_branching_html_ab4fabe8e08237f19708696793524622a"><div class="ttname"><a href="../../d9/d68/class_quant_lib_1_1_trinomial_tree_1_1_branching.html#ab4fabe8e08237f19708696793524622a">QuantLib::TrinomialTree::Branching::add</a></div><div class="ttdeci">void add(Integer k, Real p1, Real p2, Real p3)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d60/trinomialtree_8hpp_source.html#l00131">trinomialtree.hpp:131</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_trinomial_tree_html_a4cab8fbe3eb882df8aa3ed9dceb1edf5"><div class="ttname"><a href="../../df/d1c/class_quant_lib_1_1_trinomial_tree.html#a4cab8fbe3eb882df8aa3ed9dceb1edf5">QuantLib::TrinomialTree::branchings_</a></div><div class="ttdeci">std::vector&lt; Branching &gt; branchings_</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d60/trinomialtree_8hpp_source.html#l00057">trinomialtree.hpp:57</a></div></div>

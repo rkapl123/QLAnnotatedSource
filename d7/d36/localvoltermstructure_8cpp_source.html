@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/termstructures/volatility/equityfx/localvoltermstructure.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -138,15 +139,14 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d7/d2d/class_quant_lib_1_1_local_vol_term_structure.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">   57</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/d2d/class_quant_lib_1_1_local_vol_term_structure.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">LocalVolTermStructure::accept</a>(<a class="code" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp; v) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="../../d6/d87/class_quant_lib_1_1_visitor.html">Visitor&lt;LocalVolTermStructure&gt;</a>* v1 =</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../d6/d87/class_quant_lib_1_1_visitor.html">Visitor&lt;LocalVolTermStructure&gt;</a>*<span class="keyword">&gt;</span>(&amp;v);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> (v1 != 0)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            v1-&gt;<a class="code" href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">visit</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            QL_FAIL(<span class="stringliteral">&quot;not a local-volatility term structure visitor&quot;</span>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">auto</span>* v1 = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../d6/d87/class_quant_lib_1_1_visitor.html">Visitor&lt;LocalVolTermStructure&gt;</a>*<span class="keyword">&gt;</span>(&amp;v);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> (v1 != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            v1-&gt;<a class="code" href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">visit</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            QL_FAIL(<span class="stringliteral">&quot;not a local-volatility term structure visitor&quot;</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_acyclic_visitor_html"><div class="ttname"><a href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">QuantLib::AcyclicVisitor</a></div><div class="ttdoc">degenerate base class for the Acyclic Visitor pattern</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00033">visitor.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_visitor_html"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html">QuantLib::Visitor</a></div><div class="ttdoc">Visitor for a specific class</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00040">visitor.hpp:40</a></div></div>
@@ -157,11 +157,11 @@ $(function() {
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_volatility_term_structure_html"><div class="ttname"><a href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html">QuantLib::VolatilityTermStructure</a></div><div class="ttdoc">Volatility term structure.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d74/voltermstructure_8hpp_source.html#l00036">voltermstructure.hpp:36</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_volatility_term_structure_html_aac9780b2660b2ea2d619592ece52b2fa"><div class="ttname"><a href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#aac9780b2660b2ea2d619592ece52b2fa">QuantLib::VolatilityTermStructure::checkStrike</a></div><div class="ttdeci">void checkStrike(Rate strike, bool extrapolate) const</div><div class="ttdoc">strike-range check</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d64/voltermstructure_8cpp_source.html#l00040">voltermstructure.cpp:40</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_term_structure_html_abbff679b6600c49cafed098870f94376"><div class="ttname"><a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#abbff679b6600c49cafed098870f94376">QuantLib::TermStructure::checkRange</a></div><div class="ttdeci">void checkRange(const Date &amp;d, bool extrapolate) const</div><div class="ttdoc">date-range check</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d3a/termstructure_8cpp_source.html#l00063">termstructure.cpp:63</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_day_counter_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html">QuantLib::DayCounter</a></div><div class="ttdoc">day counter class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00043">daycounter.hpp:43</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_term_structure_html_abbff679b6600c49cafed098870f94376"><div class="ttname"><a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#abbff679b6600c49cafed098870f94376">QuantLib::TermStructure::checkRange</a></div><div class="ttdeci">void checkRange(const Date &amp;d, bool extrapolate) const</div><div class="ttdoc">date-range check</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d3a/termstructure_8cpp_source.html#l00054">termstructure.cpp:54</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_day_counter_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html">QuantLib::DayCounter</a></div><div class="ttdoc">day counter class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00044">daycounter.hpp:44</a></div></div>
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_term_structure_html_aa249f26327547294e5f920745cab10fd"><div class="ttname"><a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd">QuantLib::TermStructure::timeFromReference</a></div><div class="ttdeci">Time timeFromReference(const Date &amp;date) const</div><div class="ttdoc">date/time conversion</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da6/termstructure_8hpp_source.html#l00135">termstructure.hpp:135</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_term_structure_html_aa249f26327547294e5f920745cab10fd"><div class="ttname"><a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd">QuantLib::TermStructure::timeFromReference</a></div><div class="ttdeci">Time timeFromReference(const Date &amp;date) const</div><div class="ttdoc">date/time conversion</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da6/termstructure_8hpp_source.html#l00133">termstructure.hpp:133</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_local_vol_term_structure_html_a0b539b6f4f12c8e2835533e11e593c95"><div class="ttname"><a href="../../d7/d2d/class_quant_lib_1_1_local_vol_term_structure.html#a0b539b6f4f12c8e2835533e11e593c95">QuantLib::LocalVolTermStructure::localVolImpl</a></div><div class="ttdeci">virtual Volatility localVolImpl(Time t, Real strike) const =0</div><div class="ttdoc">local vol calculation</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>

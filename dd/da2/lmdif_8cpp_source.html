@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/math/optimization/lmdif.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -1458,10 +1459,10 @@ $(function() {
 <div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;<span class="comment">*    calculate the jacobian matrix.</span></div>
 <div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;iflag = 2;</div>
-<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;<span class="keywordflow">if</span> (jacFcn != 0) <span class="comment">// use user supplied jacobian calculation</span></div>
-<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;    jacFcn(m,n,x,fjac,&amp;iflag);</div>
+<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;<span class="keywordflow">if</span> (jacFcn == QL_NULL_FUNCTION) <span class="comment">// use user supplied jacobian calculation</span></div>
+<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;    <a class="code" href="../../dd/d38/namespace_quant_lib_1_1_m_i_n_p_a_c_k.html#a6262f61fbaa2da2bafab3f507d59c687">fdjac2</a>(m,n,x,fvec,fjac,ldfjac,&amp;iflag,epsfcn,wa4, fcn);</div>
 <div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;<span class="keywordflow">else</span></div>
-<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;    <a class="code" href="../../dd/d38/namespace_quant_lib_1_1_m_i_n_p_a_c_k.html#a6262f61fbaa2da2bafab3f507d59c687">fdjac2</a>(m,n,x,fvec,fjac,ldfjac,&amp;iflag,epsfcn,wa4, fcn);</div>
+<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;    jacFcn(m,n,x,fjac,&amp;iflag);</div>
 <div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;*nfev += n;</div>
 <div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;<span class="keywordflow">if</span>(iflag &lt; 0)</div>
 <div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;    <span class="keywordflow">goto</span> L300;</div>

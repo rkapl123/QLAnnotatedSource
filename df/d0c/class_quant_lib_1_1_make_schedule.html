@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: MakeSchedule Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -156,9 +157,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a322aa0ac577ea2e90e03945520d74936"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a921c528c244c534f0dbe71a3faad14d2"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html#a921c528c244c534f0dbe71a3faad14d2">terminationDateConvention_</a></td></tr>
 <tr class="separator:a921c528c244c534f0dbe71a3faad14d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a0428b85c9033946cc024aa41a482eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dcb/struct_quant_lib_1_1_date_generation.html#a11fcd51ef86118f65e603c1474377a78">DateGeneration::Rule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html#a8a0428b85c9033946cc024aa41a482eb">rule_</a></td></tr>
+<tr class="memitem:a8a0428b85c9033946cc024aa41a482eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dcb/struct_quant_lib_1_1_date_generation.html#a11fcd51ef86118f65e603c1474377a78">DateGeneration::Rule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html#a8a0428b85c9033946cc024aa41a482eb">rule_</a> = <a class="el" href="../../dc/dcb/struct_quant_lib_1_1_date_generation.html#a11fcd51ef86118f65e603c1474377a78a67e19347f85332c3bbfd61266cecbe4e">DateGeneration::Backward</a></td></tr>
 <tr class="separator:a8a0428b85c9033946cc024aa41a482eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f9cce4f14d75f9e75dcba9a025ee764"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html#a0f9cce4f14d75f9e75dcba9a025ee764">endOfMonth_</a></td></tr>
+<tr class="memitem:a0f9cce4f14d75f9e75dcba9a025ee764"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html#a0f9cce4f14d75f9e75dcba9a025ee764">endOfMonth_</a> = false</td></tr>
 <tr class="separator:a0f9cce4f14d75f9e75dcba9a025ee764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a694f4875a6fafbb45f10ca444b27896b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html#a694f4875a6fafbb45f10ca444b27896b">firstDate_</a></td></tr>
 <tr class="separator:a694f4875a6fafbb45f10ca444b27896b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,7 +169,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>helper class </p>
 <p>This class provides a more comfortable interface to the argument list of <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html" title="Payment schedule.">Schedule</a>'s constructor. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#_a19">CDS.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#_a21">CDS.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dd1/schedule_8hpp_source.html#l00126">126</a> of file <a class="el" href="../../d2/dd1/schedule_8hpp_source.html">schedule.hpp</a>.</p>
@@ -178,6 +179,9 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html">MakeSchedule</a> </td>
@@ -186,9 +190,12 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00568">568</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 
 </div>
 </div>
@@ -208,10 +215,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a20">CDS.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a22">CDS.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00571">571</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00546">546</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -219,16 +226,17 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d0c/class_quant_lib_1_1_make_schedule_aa4e47e7d352c7772d613c0ed964804fb_icgraph.png" border="0" usemap="#adf/d0c/class_quant_lib_1_1_make_schedule_aa4e47e7d352c7772d613c0ed964804fb_icgraph" alt=""/></div>
 <map name="df/d0c/class_quant_lib_1_1_make_schedule_aa4e47e7d352c7772d613c0ed964804fb_icgraph" id="adf/d0c/class_quant_lib_1_1_make_schedule_aa4e47e7d352c7772d613c0ed964804fb_icgraph">
-<area shape="rect" title=" " alt="" coords="756,143,803,170"/>
-<area shape="rect" href="../../d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#abc1ead12a99402a17ff6612472712436" title=" " alt="" coords="491,5,708,47"/>
-<area shape="rect" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html#afc12c1eac0967ca3d9cfcb0cf282109b" title=" " alt="" coords="528,71,671,112"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="528,136,671,177"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="496,201,703,243"/>
-<area shape="rect" href="../../de/d09/class_quant_lib_1_1_year_on_year_inflation_swap_helper.html#aeeeff42ebf958777b9b9ccd43b92ea8a" title=" " alt="" coords="500,267,699,308"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#ac40f6d804d833de63ce21acf7411382e" title=" " alt="" coords="268,71,411,112"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="248,136,431,177"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a9e430fa5e813aa719e71085dc95c78aa" title=" " alt="" coords="5,136,188,177"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a1ee44f4beb3be308229e4a9d10aba814" title=" " alt="" coords="236,201,443,243"/>
+<area shape="rect" title=" " alt="" coords="861,177,908,203"/>
+<area shape="rect" href="../../d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#a9837be54271ea374430cfe3afbd0c5d8" title=" " alt="" coords="575,5,792,47"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a0720a4a8a4c5edc8062d72972cde408b" title=" " alt="" coords="553,71,813,112"/>
+<area shape="rect" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html#afc12c1eac0967ca3d9cfcb0cf282109b" title=" " alt="" coords="612,136,755,177"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="612,201,755,243"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="580,267,787,308"/>
+<area shape="rect" href="../../de/d09/class_quant_lib_1_1_year_on_year_inflation_swap_helper.html#a2f8e9153669e9cae44818541286e3e51" title=" " alt="" coords="584,332,783,373"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="299,71,505,112"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a1fbbb236908331346e02473699d866dc" title=" " alt="" coords="5,63,251,119"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d89c0cd03e7eaf5521f7025e425c70" title=" " alt="" coords="331,201,473,243"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#aca307d4a8e14cb5f3b9f6604336a26fd" title=" " alt="" coords="299,267,505,308"/>
 </map>
 </div>
 
@@ -249,10 +257,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a21">CDS.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a23">CDS.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00576">576</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00551">551</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -260,16 +268,17 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d0c/class_quant_lib_1_1_make_schedule_a7b1713f25412ed69bc6ba7c2a7dca182_icgraph.png" border="0" usemap="#adf/d0c/class_quant_lib_1_1_make_schedule_a7b1713f25412ed69bc6ba7c2a7dca182_icgraph" alt=""/></div>
 <map name="df/d0c/class_quant_lib_1_1_make_schedule_a7b1713f25412ed69bc6ba7c2a7dca182_icgraph" id="adf/d0c/class_quant_lib_1_1_make_schedule_a7b1713f25412ed69bc6ba7c2a7dca182_icgraph">
-<area shape="rect" title=" " alt="" coords="756,143,795,170"/>
-<area shape="rect" href="../../d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#abc1ead12a99402a17ff6612472712436" title=" " alt="" coords="491,5,708,47"/>
-<area shape="rect" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html#afc12c1eac0967ca3d9cfcb0cf282109b" title=" " alt="" coords="528,71,671,112"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="528,136,671,177"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="496,201,703,243"/>
-<area shape="rect" href="../../de/d09/class_quant_lib_1_1_year_on_year_inflation_swap_helper.html#aeeeff42ebf958777b9b9ccd43b92ea8a" title=" " alt="" coords="500,267,699,308"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#ac40f6d804d833de63ce21acf7411382e" title=" " alt="" coords="268,71,411,112"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="248,136,431,177"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a9e430fa5e813aa719e71085dc95c78aa" title=" " alt="" coords="5,136,188,177"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a1ee44f4beb3be308229e4a9d10aba814" title=" " alt="" coords="236,201,443,243"/>
+<area shape="rect" title=" " alt="" coords="861,177,900,203"/>
+<area shape="rect" href="../../d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#a9837be54271ea374430cfe3afbd0c5d8" title=" " alt="" coords="575,5,792,47"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a0720a4a8a4c5edc8062d72972cde408b" title=" " alt="" coords="553,71,813,112"/>
+<area shape="rect" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html#afc12c1eac0967ca3d9cfcb0cf282109b" title=" " alt="" coords="612,136,755,177"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="612,201,755,243"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="580,267,787,308"/>
+<area shape="rect" href="../../de/d09/class_quant_lib_1_1_year_on_year_inflation_swap_helper.html#a2f8e9153669e9cae44818541286e3e51" title=" " alt="" coords="584,332,783,373"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="299,71,505,112"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a1fbbb236908331346e02473699d866dc" title=" " alt="" coords="5,63,251,119"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d89c0cd03e7eaf5521f7025e425c70" title=" " alt="" coords="331,201,473,243"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#aca307d4a8e14cb5f3b9f6604336a26fd" title=" " alt="" coords="299,267,505,308"/>
 </map>
 </div>
 
@@ -291,7 +300,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00581">581</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00556">556</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -299,11 +308,14 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d0c/class_quant_lib_1_1_make_schedule_a80dd026edd470f9928903009ada55ffa_icgraph.png" border="0" usemap="#adf/d0c/class_quant_lib_1_1_make_schedule_a80dd026edd470f9928903009ada55ffa_icgraph" alt=""/></div>
 <map name="df/d0c/class_quant_lib_1_1_make_schedule_a80dd026edd470f9928903009ada55ffa_icgraph" id="adf/d0c/class_quant_lib_1_1_make_schedule_a80dd026edd470f9928903009ada55ffa_icgraph">
-<area shape="rect" title=" " alt="" coords="525,78,603,105"/>
-<area shape="rect" href="../../d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#abc1ead12a99402a17ff6612472712436" title=" " alt="" coords="260,5,477,47"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="265,71,472,112"/>
-<area shape="rect" href="../../de/d09/class_quant_lib_1_1_year_on_year_inflation_swap_helper.html#aeeeff42ebf958777b9b9ccd43b92ea8a" title=" " alt="" coords="269,136,468,177"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a1ee44f4beb3be308229e4a9d10aba814" title=" " alt="" coords="5,71,212,112"/>
+<area shape="rect" title=" " alt="" coords="861,111,939,138"/>
+<area shape="rect" href="../../d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#a9837be54271ea374430cfe3afbd0c5d8" title=" " alt="" coords="575,5,792,47"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a0720a4a8a4c5edc8062d72972cde408b" title=" " alt="" coords="553,71,813,112"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="580,136,787,177"/>
+<area shape="rect" href="../../de/d09/class_quant_lib_1_1_year_on_year_inflation_swap_helper.html#a2f8e9153669e9cae44818541286e3e51" title=" " alt="" coords="584,201,783,243"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="299,71,505,112"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a1fbbb236908331346e02473699d866dc" title=" " alt="" coords="5,63,251,119"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#aca307d4a8e14cb5f3b9f6604336a26fd" title=" " alt="" coords="299,136,505,177"/>
 </map>
 </div>
 
@@ -324,10 +336,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a22">CDS.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a24">CDS.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00586">586</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00561">561</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -335,12 +347,10 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d0c/class_quant_lib_1_1_make_schedule_ac11c5462aa04f83feb4eb41ac543e13d_icgraph.png" border="0" usemap="#adf/d0c/class_quant_lib_1_1_make_schedule_ac11c5462aa04f83feb4eb41ac543e13d_icgraph" alt=""/></div>
 <map name="df/d0c/class_quant_lib_1_1_make_schedule_ac11c5462aa04f83feb4eb41ac543e13d_icgraph" id="adf/d0c/class_quant_lib_1_1_make_schedule_ac11c5462aa04f83feb4eb41ac543e13d_icgraph">
-<area shape="rect" title=" " alt="" coords="657,46,764,73"/>
-<area shape="rect" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html#afc12c1eac0967ca3d9cfcb0cf282109b" title=" " alt="" coords="467,5,609,47"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="467,71,609,112"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#ac40f6d804d833de63ce21acf7411382e" title=" " alt="" coords="256,37,399,79"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="236,103,419,144"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a9e430fa5e813aa719e71085dc95c78aa" title=" " alt="" coords="5,103,188,144"/>
+<area shape="rect" title=" " alt="" coords="387,46,493,73"/>
+<area shape="rect" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html#afc12c1eac0967ca3d9cfcb0cf282109b" title=" " alt="" coords="196,5,339,47"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="196,71,339,112"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d89c0cd03e7eaf5521f7025e425c70" title=" " alt="" coords="5,71,148,112"/>
 </map>
 </div>
 
@@ -361,10 +371,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a23">CDS.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a25">CDS.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00591">591</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00566">566</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -372,16 +382,17 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d0c/class_quant_lib_1_1_make_schedule_afe306f10182e2a6dc9b44082879e5aaf_icgraph.png" border="0" usemap="#adf/d0c/class_quant_lib_1_1_make_schedule_afe306f10182e2a6dc9b44082879e5aaf_icgraph" alt=""/></div>
 <map name="df/d0c/class_quant_lib_1_1_make_schedule_afe306f10182e2a6dc9b44082879e5aaf_icgraph" id="adf/d0c/class_quant_lib_1_1_make_schedule_afe306f10182e2a6dc9b44082879e5aaf_icgraph">
-<area shape="rect" title=" " alt="" coords="756,143,852,170"/>
-<area shape="rect" href="../../d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#abc1ead12a99402a17ff6612472712436" title=" " alt="" coords="491,5,708,47"/>
-<area shape="rect" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html#afc12c1eac0967ca3d9cfcb0cf282109b" title=" " alt="" coords="528,71,671,112"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="528,136,671,177"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="496,201,703,243"/>
-<area shape="rect" href="../../de/d09/class_quant_lib_1_1_year_on_year_inflation_swap_helper.html#aeeeff42ebf958777b9b9ccd43b92ea8a" title=" " alt="" coords="500,267,699,308"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#ac40f6d804d833de63ce21acf7411382e" title=" " alt="" coords="268,71,411,112"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="248,136,431,177"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a9e430fa5e813aa719e71085dc95c78aa" title=" " alt="" coords="5,136,188,177"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a1ee44f4beb3be308229e4a9d10aba814" title=" " alt="" coords="236,201,443,243"/>
+<area shape="rect" title=" " alt="" coords="861,177,957,203"/>
+<area shape="rect" href="../../d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#a9837be54271ea374430cfe3afbd0c5d8" title=" " alt="" coords="575,5,792,47"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a0720a4a8a4c5edc8062d72972cde408b" title=" " alt="" coords="553,71,813,112"/>
+<area shape="rect" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html#afc12c1eac0967ca3d9cfcb0cf282109b" title=" " alt="" coords="612,136,755,177"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="612,201,755,243"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="580,267,787,308"/>
+<area shape="rect" href="../../de/d09/class_quant_lib_1_1_year_on_year_inflation_swap_helper.html#a2f8e9153669e9cae44818541286e3e51" title=" " alt="" coords="584,332,783,373"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="299,71,505,112"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a1fbbb236908331346e02473699d866dc" title=" " alt="" coords="5,63,251,119"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d89c0cd03e7eaf5521f7025e425c70" title=" " alt="" coords="331,201,473,243"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#aca307d4a8e14cb5f3b9f6604336a26fd" title=" " alt="" coords="299,267,505,308"/>
 </map>
 </div>
 
@@ -402,10 +413,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a32">CDS.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a34">CDS.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00596">596</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00571">571</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -413,16 +424,17 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d0c/class_quant_lib_1_1_make_schedule_a07ce0e5967872214e9afdc5cd7bcd984_icgraph.png" border="0" usemap="#adf/d0c/class_quant_lib_1_1_make_schedule_a07ce0e5967872214e9afdc5cd7bcd984_icgraph" alt=""/></div>
 <map name="df/d0c/class_quant_lib_1_1_make_schedule_a07ce0e5967872214e9afdc5cd7bcd984_icgraph" id="adf/d0c/class_quant_lib_1_1_make_schedule_a07ce0e5967872214e9afdc5cd7bcd984_icgraph">
-<area shape="rect" title=" " alt="" coords="756,143,864,170"/>
-<area shape="rect" href="../../d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#abc1ead12a99402a17ff6612472712436" title=" " alt="" coords="491,5,708,47"/>
-<area shape="rect" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html#afc12c1eac0967ca3d9cfcb0cf282109b" title=" " alt="" coords="528,71,671,112"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="528,136,671,177"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="496,201,703,243"/>
-<area shape="rect" href="../../de/d09/class_quant_lib_1_1_year_on_year_inflation_swap_helper.html#aeeeff42ebf958777b9b9ccd43b92ea8a" title=" " alt="" coords="500,267,699,308"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#ac40f6d804d833de63ce21acf7411382e" title=" " alt="" coords="268,71,411,112"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="248,136,431,177"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a9e430fa5e813aa719e71085dc95c78aa" title=" " alt="" coords="5,136,188,177"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a1ee44f4beb3be308229e4a9d10aba814" title=" " alt="" coords="236,201,443,243"/>
+<area shape="rect" title=" " alt="" coords="861,177,969,203"/>
+<area shape="rect" href="../../d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#a9837be54271ea374430cfe3afbd0c5d8" title=" " alt="" coords="575,5,792,47"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a0720a4a8a4c5edc8062d72972cde408b" title=" " alt="" coords="553,71,813,112"/>
+<area shape="rect" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html#afc12c1eac0967ca3d9cfcb0cf282109b" title=" " alt="" coords="612,136,755,177"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="612,201,755,243"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="580,267,787,308"/>
+<area shape="rect" href="../../de/d09/class_quant_lib_1_1_year_on_year_inflation_swap_helper.html#a2f8e9153669e9cae44818541286e3e51" title=" " alt="" coords="584,332,783,373"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="299,71,505,112"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a1fbbb236908331346e02473699d866dc" title=" " alt="" coords="5,63,251,119"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d89c0cd03e7eaf5521f7025e425c70" title=" " alt="" coords="331,201,473,243"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#aca307d4a8e14cb5f3b9f6604336a26fd" title=" " alt="" coords="299,267,505,308"/>
 </map>
 </div>
 
@@ -443,10 +455,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a24">CDS.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a26">CDS.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00601">601</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00576">576</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -454,11 +466,9 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d0c/class_quant_lib_1_1_make_schedule_a245596cde074f2de2f811b79146aebc8_icgraph.png" border="0" usemap="#adf/d0c/class_quant_lib_1_1_make_schedule_a245596cde074f2de2f811b79146aebc8_icgraph" alt=""/></div>
 <map name="df/d0c/class_quant_lib_1_1_make_schedule_a245596cde074f2de2f811b79146aebc8_icgraph" id="adf/d0c/class_quant_lib_1_1_make_schedule_a245596cde074f2de2f811b79146aebc8_icgraph">
-<area shape="rect" title=" " alt="" coords="657,46,860,73"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="467,39,609,80"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#ac40f6d804d833de63ce21acf7411382e" title=" " alt="" coords="256,5,399,47"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="236,71,419,112"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a9e430fa5e813aa719e71085dc95c78aa" title=" " alt="" coords="5,71,188,112"/>
+<area shape="rect" title=" " alt="" coords="387,13,589,39"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="196,5,339,47"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d89c0cd03e7eaf5521f7025e425c70" title=" " alt="" coords="5,5,148,47"/>
 </map>
 </div>
 
@@ -479,10 +489,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a26">CDS.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#a28">CDS.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00607">607</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00582">582</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -490,11 +500,9 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d0c/class_quant_lib_1_1_make_schedule_a38464ef9a7558ebf5ec4855e72d727b3_icgraph.png" border="0" usemap="#adf/d0c/class_quant_lib_1_1_make_schedule_a38464ef9a7558ebf5ec4855e72d727b3_icgraph" alt=""/></div>
 <map name="df/d0c/class_quant_lib_1_1_make_schedule_a38464ef9a7558ebf5ec4855e72d727b3_icgraph" id="adf/d0c/class_quant_lib_1_1_make_schedule_a38464ef9a7558ebf5ec4855e72d727b3_icgraph">
-<area shape="rect" title=" " alt="" coords="657,46,728,73"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="467,39,609,80"/>
-<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#ac40f6d804d833de63ce21acf7411382e" title=" " alt="" coords="256,5,399,47"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="236,71,419,112"/>
-<area shape="rect" href="../../d8/dbc/class_quant_lib_1_1_upfront_cds_helper.html#a9e430fa5e813aa719e71085dc95c78aa" title=" " alt="" coords="5,71,188,112"/>
+<area shape="rect" title=" " alt="" coords="387,13,457,39"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="196,5,339,47"/>
+<area shape="rect" href="../../d8/d9a/class_quant_lib_1_1_cds_helper.html#a99d89c0cd03e7eaf5521f7025e425c70" title=" " alt="" coords="5,5,148,47"/>
 </map>
 </div>
 
@@ -515,7 +523,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00612">612</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00587">587</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -545,7 +553,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00617">617</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00592">592</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -553,11 +561,14 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d0c/class_quant_lib_1_1_make_schedule_a3da5ae0e0cb83672e205fd9fcc64b42c_icgraph.png" border="0" usemap="#adf/d0c/class_quant_lib_1_1_make_schedule_a3da5ae0e0cb83672e205fd9fcc64b42c_icgraph" alt=""/></div>
 <map name="df/d0c/class_quant_lib_1_1_make_schedule_a3da5ae0e0cb83672e205fd9fcc64b42c_icgraph" id="adf/d0c/class_quant_lib_1_1_make_schedule_a3da5ae0e0cb83672e205fd9fcc64b42c_icgraph">
-<area shape="rect" title=" " alt="" coords="525,78,609,105"/>
-<area shape="rect" href="../../d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#abc1ead12a99402a17ff6612472712436" title=" " alt="" coords="260,5,477,47"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="265,71,472,112"/>
-<area shape="rect" href="../../de/d09/class_quant_lib_1_1_year_on_year_inflation_swap_helper.html#aeeeff42ebf958777b9b9ccd43b92ea8a" title=" " alt="" coords="269,136,468,177"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a1ee44f4beb3be308229e4a9d10aba814" title=" " alt="" coords="5,71,212,112"/>
+<area shape="rect" title=" " alt="" coords="861,111,945,138"/>
+<area shape="rect" href="../../d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#a9837be54271ea374430cfe3afbd0c5d8" title=" " alt="" coords="575,5,792,47"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a0720a4a8a4c5edc8062d72972cde408b" title=" " alt="" coords="553,71,813,112"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="580,136,787,177"/>
+<area shape="rect" href="../../de/d09/class_quant_lib_1_1_year_on_year_inflation_swap_helper.html#a2f8e9153669e9cae44818541286e3e51" title=" " alt="" coords="584,201,783,243"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="299,71,505,112"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a1fbbb236908331346e02473699d866dc" title=" " alt="" coords="5,63,251,119"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#aca307d4a8e14cb5f3b9f6604336a26fd" title=" " alt="" coords="299,136,505,177"/>
 </map>
 </div>
 
@@ -579,7 +590,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00622">622</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00597">597</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -587,9 +598,12 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d0c/class_quant_lib_1_1_make_schedule_aa5fb54527a267e78da1e8d6ef6df5b09_icgraph.png" border="0" usemap="#adf/d0c/class_quant_lib_1_1_make_schedule_aa5fb54527a267e78da1e8d6ef6df5b09_icgraph" alt=""/></div>
 <map name="df/d0c/class_quant_lib_1_1_make_schedule_aa5fb54527a267e78da1e8d6ef6df5b09_icgraph" id="adf/d0c/class_quant_lib_1_1_make_schedule_aa5fb54527a267e78da1e8d6ef6df5b09_icgraph">
-<area shape="rect" title=" " alt="" coords="515,13,607,39"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a5b508edbd7d439284c55178fd681adb0" title=" " alt="" coords="260,5,467,47"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a1ee44f4beb3be308229e4a9d10aba814" title=" " alt="" coords="5,5,212,47"/>
+<area shape="rect" title=" " alt="" coords="861,53,953,80"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a0720a4a8a4c5edc8062d72972cde408b" title=" " alt="" coords="553,13,813,54"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="580,78,787,119"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a99d980fe812ceb975a5e391d34d36439" title=" " alt="" coords="299,13,505,54"/>
+<area shape="rect" href="../../dd/dfe/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper.html#a1fbbb236908331346e02473699d866dc" title=" " alt="" coords="5,5,251,61"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_b_m_a_swap_rate_helper.html#aca307d4a8e14cb5f3b9f6604336a26fd" title=" " alt="" coords="299,78,505,119"/>
 </map>
 </div>
 
@@ -611,7 +625,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00627">627</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00602">602</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 
 </div>
 </div>
@@ -631,7 +645,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00632">632</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00607">607</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 
 </div>
 </div>
@@ -650,7 +664,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00637">637</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d9a/schedule_8cpp_source.html#l00612">612</a> of file <a class="el" href="../../d2/d9a/schedule_8cpp_source.html">schedule.cpp</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -820,7 +834,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dcb/struct_quant_lib_1_1_date_generation.html#a11fcd51ef86118f65e603c1474377a78">DateGeneration::Rule</a> rule_</td>
+          <td class="memname"><a class="el" href="../../dc/dcb/struct_quant_lib_1_1_date_generation.html#a11fcd51ef86118f65e603c1474377a78">DateGeneration::Rule</a> rule_ = <a class="el" href="../../dc/dcb/struct_quant_lib_1_1_date_generation.html#a11fcd51ef86118f65e603c1474377a78a67e19347f85332c3bbfd61266cecbe4e">DateGeneration::Backward</a></td>
         </tr>
       </table>
   </td>
@@ -844,7 +858,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d9/db9/classbool.html">bool</a> endOfMonth_</td>
+          <td class="memname"><a class="el" href="../../d9/db9/classbool.html">bool</a> endOfMonth_ = false</td>
         </tr>
       </table>
   </td>

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/coupons/proxyibor.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -101,39 +102,45 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ql/experimental/coupons/proxyibor.hpp&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d8/dc4/class_quant_lib_1_1_proxy_ibor.html#aa04e118296e87e32508a5e7fdba5906e">   24</a></span>&#160;    <a class="code" href="../../d8/dc4/class_quant_lib_1_1_proxy_ibor.html#aa04e118296e87e32508a5e7fdba5906e">ProxyIbor::ProxyIbor</a>(<span class="keyword">const</span> std::string&amp; familyName,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp; tenor,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                         <a class="code" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> settlementDays,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../d3/dd4/class_quant_lib_1_1_currency.html">Currency</a>&amp; currency,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>&amp; fixingCalendar,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                         <a class="code" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> convention,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                         <span class="keywordtype">bool</span> endOfMonth,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&amp; dayCounter,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>&amp; gearing,</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                         <span class="keyword">const</span> ext::shared_ptr&lt;IborIndex&gt;&amp; iborIndex,</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>&amp; spread)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    : <a class="code" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a>(familyName, tenor, settlementDays, currency,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                fixingCalendar, convention, endOfMonth, dayCounter),</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      gearing_(gearing), iborIndex_(iborIndex), spread_(spread) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d8/dc4/class_quant_lib_1_1_proxy_ibor.html#a5d73b916d9852e2366fa73be8ab72f99">iborIndex_</a>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d8/dc4/class_quant_lib_1_1_proxy_ibor.html#a14bd6627d1f1d8be0a88c6623ead1625">   25</a></span>&#160;    <a class="code" href="../../d8/dc4/class_quant_lib_1_1_proxy_ibor.html#a14bd6627d1f1d8be0a88c6623ead1625">ProxyIbor::ProxyIbor</a>(<span class="keyword">const</span> std::string&amp; familyName,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp; tenor,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                         <a class="code" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> settlementDays,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../d3/dd4/class_quant_lib_1_1_currency.html">Currency</a>&amp; currency,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>&amp; fixingCalendar,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                         <a class="code" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> convention,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                         <span class="keywordtype">bool</span> endOfMonth,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&amp; dayCounter,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                         <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> gearing,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                         ext::shared_ptr&lt;IborIndex&gt; iborIndex,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                         <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> spread)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    : <a class="code" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a>(familyName,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                tenor,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                settlementDays,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                currency,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                fixingCalendar,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                convention,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                endOfMonth,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                dayCounter),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      gearing_(std::move(gearing)), iborIndex_(std::move(iborIndex)), spread_(std::move(spread)) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d8/dc4/class_quant_lib_1_1_proxy_ibor.html#a5d73b916d9852e2366fa73be8ab72f99">iborIndex_</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_observer_html_aa6ade205ed506bf712da2704f80a73a0"><div class="ttname"><a href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">QuantLib::Observer::registerWith</a></div><div class="ttdeci">std::pair&lt; iterator, bool &gt; registerWith(const ext::shared_ptr&lt; Observable &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00211">observable.hpp:211</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_proxy_ibor_html_a14bd6627d1f1d8be0a88c6623ead1625"><div class="ttname"><a href="../../d8/dc4/class_quant_lib_1_1_proxy_ibor.html#a14bd6627d1f1d8be0a88c6623ead1625">QuantLib::ProxyIbor::ProxyIbor</a></div><div class="ttdeci">ProxyIbor(const std::string &amp;familyName, const Period &amp;tenor, Natural settlementDays, const Currency &amp;currency, const Calendar &amp;fixingCalendar, BusinessDayConvention convention, bool endOfMonth, const DayCounter &amp;dayCounter, Handle&lt; Quote &gt; gearing, ext::shared_ptr&lt; IborIndex &gt; iborIndex, Handle&lt; Quote &gt; spread)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dec/proxyibor_8cpp_source.html#l00025">proxyibor.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_ibor_index_html"><div class="ttname"><a href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">QuantLib::IborIndex</a></div><div class="ttdoc">base class for Inter-Bank-Offered-Rate indexes (e.g. Libor, etc.)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d13/iborindex_8hpp_source.html#l00035">iborindex.hpp:35</a></div></div>
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_proxy_ibor_html_a5d73b916d9852e2366fa73be8ab72f99"><div class="ttname"><a href="../../d8/dc4/class_quant_lib_1_1_proxy_ibor.html#a5d73b916d9852e2366fa73be8ab72f99">QuantLib::ProxyIbor::iborIndex_</a></div><div class="ttdeci">ext::shared_ptr&lt; IborIndex &gt; iborIndex_</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/da8/proxyibor_8hpp_source.html#l00050">proxyibor.hpp:50</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_proxy_ibor_html_a5d73b916d9852e2366fa73be8ab72f99"><div class="ttname"><a href="../../d8/dc4/class_quant_lib_1_1_proxy_ibor.html#a5d73b916d9852e2366fa73be8ab72f99">QuantLib::ProxyIbor::iborIndex_</a></div><div class="ttdeci">ext::shared_ptr&lt; IborIndex &gt; iborIndex_</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/da8/proxyibor_8hpp_source.html#l00051">proxyibor.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_day_counter_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html">QuantLib::DayCounter</a></div><div class="ttdoc">day counter class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00043">daycounter.hpp:43</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_day_counter_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html">QuantLib::DayCounter</a></div><div class="ttdoc">day counter class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00044">daycounter.hpp:44</a></div></div>
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_currency_html"><div class="ttname"><a href="../../d3/dd4/class_quant_lib_1_1_currency.html">QuantLib::Currency</a></div><div class="ttdoc">Currency specification</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5f/currency_8hpp_source.html#l00035">currency.hpp:35</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_proxy_ibor_html_aa04e118296e87e32508a5e7fdba5906e"><div class="ttname"><a href="../../d8/dc4/class_quant_lib_1_1_proxy_ibor.html#aa04e118296e87e32508a5e7fdba5906e">QuantLib::ProxyIbor::ProxyIbor</a></div><div class="ttdeci">ProxyIbor(const std::string &amp;familyName, const Period &amp;tenor, Natural settlementDays, const Currency &amp;currency, const Calendar &amp;fixingCalendar, BusinessDayConvention convention, bool endOfMonth, const DayCounter &amp;dayCounter, const Handle&lt; Quote &gt; &amp;gearing, const ext::shared_ptr&lt; IborIndex &gt; &amp;iborIndex, const Handle&lt; Quote &gt; &amp;spread)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dec/proxyibor_8cpp_source.html#l00024">proxyibor.cpp:24</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html">QuantLib::Calendar</a></div><div class="ttdoc">calendar class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00061">calendar.hpp:61</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

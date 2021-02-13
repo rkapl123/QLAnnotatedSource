@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/methods/montecarlo/exercisestrategy.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -113,7 +114,7 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> State&gt;</div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html">   31</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html">ExerciseStrategy</a> {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#a131d63d54acfaaee85f99d675cb83fa8">   33</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#a131d63d54acfaaee85f99d675cb83fa8">~ExerciseStrategy</a>() {}</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#a396bdc4e933177a89b6c7585afc23123">   33</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#a396bdc4e933177a89b6c7585afc23123">~ExerciseStrategy</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#af117f62bb721ee93fb0da745f4018258">   34</a></span>&#160;        <span class="keyword">virtual</span> std::vector&lt;Time&gt; <a class="code" href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#af117f62bb721ee93fb0da745f4018258">exerciseTimes</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#aac73cc2b0828ec5d0db4a0ced4ca2066">   35</a></span>&#160;        <span class="keyword">virtual</span> std::vector&lt;Time&gt; <a class="code" href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#aac73cc2b0828ec5d0db4a0ced4ca2066">relevantTimes</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#a20dcbdfbd0ec77afc802522bb7e379c1">   36</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#a20dcbdfbd0ec77afc802522bb7e379c1">reset</a>() = 0;</div>
@@ -132,9 +133,9 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_exercise_strategy_html_a06832a3ff993830ac38bdb9932a65b14"><div class="ttname"><a href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#a06832a3ff993830ac38bdb9932a65b14">QuantLib::ExerciseStrategy::clone</a></div><div class="ttdeci">virtual std::auto_ptr&lt; ExerciseStrategy&lt; State &gt; &gt; clone() const =0</div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_exercise_strategy_html_a396bdc4e933177a89b6c7585afc23123"><div class="ttname"><a href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#a396bdc4e933177a89b6c7585afc23123">QuantLib::ExerciseStrategy::~ExerciseStrategy</a></div><div class="ttdeci">virtual ~ExerciseStrategy()=default</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_exercise_strategy_html"><div class="ttname"><a href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html">QuantLib::ExerciseStrategy</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d56/exercisestrategy_8hpp_source.html#l00031">exercisestrategy.hpp:31</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_exercise_strategy_html_a0790cb4dda543bdf138f7b4d99e0d056"><div class="ttname"><a href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#a0790cb4dda543bdf138f7b4d99e0d056">QuantLib::ExerciseStrategy::nextStep</a></div><div class="ttdeci">virtual void nextStep(const State &amp;currentState)=0</div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_exercise_strategy_html_a131d63d54acfaaee85f99d675cb83fa8"><div class="ttname"><a href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#a131d63d54acfaaee85f99d675cb83fa8">QuantLib::ExerciseStrategy::~ExerciseStrategy</a></div><div class="ttdeci">virtual ~ExerciseStrategy()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d56/exercisestrategy_8hpp_source.html#l00033">exercisestrategy.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_exercise_strategy_html_aac73cc2b0828ec5d0db4a0ced4ca2066"><div class="ttname"><a href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#aac73cc2b0828ec5d0db4a0ced4ca2066">QuantLib::ExerciseStrategy::relevantTimes</a></div><div class="ttdeci">virtual std::vector&lt; Time &gt; relevantTimes() const =0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_exercise_strategy_html_a20dcbdfbd0ec77afc802522bb7e379c1"><div class="ttname"><a href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#a20dcbdfbd0ec77afc802522bb7e379c1">QuantLib::ExerciseStrategy::reset</a></div><div class="ttdeci">virtual void reset()=0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_exercise_strategy_html_a75ca33d032c1f93ad3448fb15167a9d9"><div class="ttname"><a href="../../de/de9/class_quant_lib_1_1_exercise_strategy.html#a75ca33d032c1f93ad3448fb15167a9d9">QuantLib::ExerciseStrategy::exercise</a></div><div class="ttdeci">virtual bool exercise(const State &amp;currentState) const =0</div></div>

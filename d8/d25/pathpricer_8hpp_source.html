@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/methods/montecarlo/pathpricer.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -117,7 +118,7 @@ $(function() {
 <div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a7524e06c7157318afe5e1473a52f704c">   42</a></span>&#160;        <span class="keyword">typedef</span> PathType <a class="code" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a7524e06c7157318afe5e1473a52f704c">argument_type</a>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#acd5891901c77cb22bf37f2309008560f">   43</a></span>&#160;        <span class="keyword">typedef</span> ValueType <a class="code" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#acd5891901c77cb22bf37f2309008560f">result_type</a>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a7b2e7c8e91d0214fca02b2094622a1ff">   45</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a7b2e7c8e91d0214fca02b2094622a1ff">~PathPricer</a>() {}</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a0edc11fd5a3f3c7fee36b1afd0bf8ba4">   45</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a0edc11fd5a3f3c7fee36b1afd0bf8ba4">~PathPricer</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a8d202422e04c42b1c33fe366569a4ef5">   46</a></span>&#160;        <span class="keyword">virtual</span> ValueType <a class="code" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a8d202422e04c42b1c33fe366569a4ef5">operator()</a>(<span class="keyword">const</span> PathType&amp; path) <span class="keyword">const</span>=0;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    };</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
@@ -128,10 +129,10 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_path_pricer_html_a7524e06c7157318afe5e1473a52f704c"><div class="ttname"><a href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a7524e06c7157318afe5e1473a52f704c">QuantLib::PathPricer::argument_type</a></div><div class="ttdeci">PathType argument_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/pathpricer_8hpp_source.html#l00042">pathpricer.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_path_pricer_html_a8d202422e04c42b1c33fe366569a4ef5"><div class="ttname"><a href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a8d202422e04c42b1c33fe366569a4ef5">QuantLib::PathPricer::operator()</a></div><div class="ttdeci">virtual ValueType operator()(const PathType &amp;path) const =0</div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_path_pricer_html_a0edc11fd5a3f3c7fee36b1afd0bf8ba4"><div class="ttname"><a href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a0edc11fd5a3f3c7fee36b1afd0bf8ba4">QuantLib::PathPricer::~PathPricer</a></div><div class="ttdeci">virtual ~PathPricer()=default</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_path_pricer_html"><div class="ttname"><a href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html">QuantLib::PathPricer</a></div><div class="ttdoc">base class for path pricers</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/pathpricer_8hpp_source.html#l00040">pathpricer.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_path_pricer_html_acd5891901c77cb22bf37f2309008560f"><div class="ttname"><a href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#acd5891901c77cb22bf37f2309008560f">QuantLib::PathPricer::result_type</a></div><div class="ttdeci">ValueType result_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/pathpricer_8hpp_source.html#l00043">pathpricer.hpp:43</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_path_pricer_html_a7b2e7c8e91d0214fca02b2094622a1ff"><div class="ttname"><a href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a7b2e7c8e91d0214fca02b2094622a1ff">QuantLib::PathPricer::~PathPricer</a></div><div class="ttdeci">virtual ~PathPricer()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/pathpricer_8hpp_source.html#l00045">pathpricer.hpp:45</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

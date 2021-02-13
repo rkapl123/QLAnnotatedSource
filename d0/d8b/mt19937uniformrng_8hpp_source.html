@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/math/randomnumbers/mt19937uniformrng.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -119,7 +120,7 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#aef3c88d0c299ac67776029d65f00617f">MersenneTwisterUniformRng</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> seed = 0);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#aef3c88d0c299ac67776029d65f00617f">MersenneTwisterUniformRng</a>(</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                     <span class="keyword">const</span> std::vector&lt;unsigned long&gt;&amp; seeds);</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a1dd1acca2b223c8da6c27cad720cfc7d">   54</a></span>&#160;        <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html">sample_type</a> <a class="code" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a1dd1acca2b223c8da6c27cad720cfc7d">next</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#ad6ae312199547dfd98f3b79b89a036f0">sample_type</a>(<a class="code" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a97a3fedfd3fb15531808709d2e58073f">nextReal</a>(),1.0); }</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a1dd1acca2b223c8da6c27cad720cfc7d">   54</a></span>&#160;        <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html">sample_type</a> <a class="code" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a1dd1acca2b223c8da6c27cad720cfc7d">next</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> {<a class="code" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a97a3fedfd3fb15531808709d2e58073f">nextReal</a>(), 1.0}; }</div>
 <div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a97a3fedfd3fb15531808709d2e58073f">   56</a></span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a97a3fedfd3fb15531808709d2e58073f">nextReal</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span> (<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<a class="code" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a57e46443f5120e9967183e7f183635a7">nextInt32</a>()) + 0.5)/4294967296.0;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
@@ -163,7 +164,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_mersenne_twister_uniform_rng_html_abc87b880bad973b4298d524f70a60337"><div class="ttname"><a href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#abc87b880bad973b4298d524f70a60337">QuantLib::MersenneTwisterUniformRng::M</a></div><div class="ttdeci">static const Size M</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/mt19937uniformrng_8hpp_source.html#l00044">mt19937uniformrng.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_mersenne_twister_uniform_rng_html_a377fc4326ff55bfb0a133460a9af6a0f"><div class="ttname"><a href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a377fc4326ff55bfb0a133460a9af6a0f">QuantLib::MersenneTwisterUniformRng::UPPER_MASK</a></div><div class="ttdeci">static const unsigned long UPPER_MASK</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/mt19937uniformrng_8hpp_source.html#l00078">mt19937uniformrng.hpp:78</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_mersenne_twister_uniform_rng_html_a64d8071a5dc5f8fb14953be5395013f5"><div class="ttname"><a href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a64d8071a5dc5f8fb14953be5395013f5">QuantLib::MersenneTwisterUniformRng::mti</a></div><div class="ttdeci">Size mti</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/mt19937uniformrng_8hpp_source.html#l00077">mt19937uniformrng.hpp:77</a></div></div>
-<div class="ttc" id="astruct_quant_lib_1_1_sample_html"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html">QuantLib::Sample</a></div><div class="ttdoc">weighted sample</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00034">sample.hpp:34</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_sample_html"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html">QuantLib::Sample</a></div><div class="ttdoc">weighted sample</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00035">sample.hpp:35</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_mersenne_twister_uniform_rng_html_a8c9252468299eb1ed5bbbb0a0a98d83b"><div class="ttname"><a href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a8c9252468299eb1ed5bbbb0a0a98d83b">QuantLib::MersenneTwisterUniformRng::N</a></div><div class="ttdeci">static const Size N</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/mt19937uniformrng_8hpp_source.html#l00043">mt19937uniformrng.hpp:43</a></div></div>

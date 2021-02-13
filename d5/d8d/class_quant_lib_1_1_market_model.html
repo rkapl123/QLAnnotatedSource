@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: MarketModel Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -125,8 +126,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a816506d51e4cf5c6e2dccec53af55e6f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8d/class_quant_lib_1_1_market_model.html#a816506d51e4cf5c6e2dccec53af55e6f">~MarketModel</a> ()</td></tr>
-<tr class="separator:a816506d51e4cf5c6e2dccec53af55e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e01d5150d4362d1fbe8bba05a53c1bb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8d/class_quant_lib_1_1_market_model.html#a5e01d5150d4362d1fbe8bba05a53c1bb">~MarketModel</a> ()=default</td></tr>
+<tr class="separator:a5e01d5150d4362d1fbe8bba05a53c1bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc217a0c2cb706bc4f845d44424e1b06"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8d/class_quant_lib_1_1_market_model.html#adc217a0c2cb706bc4f845d44424e1b06">initialRates</a> () const =0</td></tr>
 <tr class="separator:adc217a0c2cb706bc4f845d44424e1b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77c3a5ee494fde88b9eca13f27fd28eb"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8d/class_quant_lib_1_1_market_model.html#a77c3a5ee494fde88b9eca13f27fd28eb">displacements</a> () const =0</td></tr>
@@ -161,8 +162,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/de3/marketmodel_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../d3/de3/marketmodel_8hpp_source.html">marketmodel.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a816506d51e4cf5c6e2dccec53af55e6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a816506d51e4cf5c6e2dccec53af55e6f">&#9670;&nbsp;</a></span>~MarketModel()</h2>
+<a id="a5e01d5150d4362d1fbe8bba05a53c1bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e01d5150d4362d1fbe8bba05a53c1bb">&#9670;&nbsp;</a></span>~MarketModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,12 +180,10 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/de3/marketmodel_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../d3/de3/marketmodel_8hpp_source.html">marketmodel.hpp</a>.</p>
 
 </div>
 </div>
@@ -212,7 +211,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#abe4250547c1a9a1c32e1fe09f2c054ad">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#abe4250547c1a9a1c32e1fe09f2c054ad">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#abe4250547c1a9a1c32e1fe09f2c054ad">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#abe4250547c1a9a1c32e1fe09f2c054ad">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#abe4250547c1a9a1c32e1fe09f2c054ad">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#abe4250547c1a9a1c32e1fe09f2c054ad">AbcdVol</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#a285363685b50fe77abe43a894429adb1">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a285363685b50fe77abe43a894429adb1">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#a285363685b50fe77abe43a894429adb1">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#a285363685b50fe77abe43a894429adb1">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#a285363685b50fe77abe43a894429adb1">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#a285363685b50fe77abe43a894429adb1">AbcdVol</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -252,7 +251,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#aaaf3644f30aa430cf19718186afc5cc5">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#aaaf3644f30aa430cf19718186afc5cc5">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#aaaf3644f30aa430cf19718186afc5cc5">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#aaaf3644f30aa430cf19718186afc5cc5">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#aaaf3644f30aa430cf19718186afc5cc5">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#aaaf3644f30aa430cf19718186afc5cc5">AbcdVol</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#a14a34a8c69fbc9444f8aeba4c104b857">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a14a34a8c69fbc9444f8aeba4c104b857">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#a14a34a8c69fbc9444f8aeba4c104b857">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#a14a34a8c69fbc9444f8aeba4c104b857">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#a14a34a8c69fbc9444f8aeba4c104b857">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#a14a34a8c69fbc9444f8aeba4c104b857">AbcdVol</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -290,7 +289,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#a7d9ba7619a08e47149e4e83edad1f517">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a7d9ba7619a08e47149e4e83edad1f517">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#a7d9ba7619a08e47149e4e83edad1f517">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#a7d9ba7619a08e47149e4e83edad1f517">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#a7d9ba7619a08e47149e4e83edad1f517">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#a7d9ba7619a08e47149e4e83edad1f517">AbcdVol</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#a8ed01b196c210ab280774504bb77b357">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a8ed01b196c210ab280774504bb77b357">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#a8ed01b196c210ab280774504bb77b357">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#a8ed01b196c210ab280774504bb77b357">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#a8ed01b196c210ab280774504bb77b357">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#a8ed01b196c210ab280774504bb77b357">AbcdVol</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -331,7 +330,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#a1f7fca17f1af46f16730a2f1dbdd7f29">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a1f7fca17f1af46f16730a2f1dbdd7f29">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#a1f7fca17f1af46f16730a2f1dbdd7f29">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#a1f7fca17f1af46f16730a2f1dbdd7f29">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#a1f7fca17f1af46f16730a2f1dbdd7f29">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#a1f7fca17f1af46f16730a2f1dbdd7f29">AbcdVol</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#abe6d51234daf4c86e55061066c844aff">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#abe6d51234daf4c86e55061066c844aff">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#abe6d51234daf4c86e55061066c844aff">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#abe6d51234daf4c86e55061066c844aff">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#abe6d51234daf4c86e55061066c844aff">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#abe6d51234daf4c86e55061066c844aff">AbcdVol</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -369,7 +368,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#a5aa885c06de2eea0c5caa8a1a317861d">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a5aa885c06de2eea0c5caa8a1a317861d">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#a5aa885c06de2eea0c5caa8a1a317861d">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#a5aa885c06de2eea0c5caa8a1a317861d">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#a5aa885c06de2eea0c5caa8a1a317861d">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#a5aa885c06de2eea0c5caa8a1a317861d">AbcdVol</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#ab22fe266a821b2efdf285ab822af8ea9">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#ab22fe266a821b2efdf285ab822af8ea9">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#ab22fe266a821b2efdf285ab822af8ea9">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#ab22fe266a821b2efdf285ab822af8ea9">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#ab22fe266a821b2efdf285ab822af8ea9">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#ab22fe266a821b2efdf285ab822af8ea9">AbcdVol</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -407,7 +406,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#a9d1cf8d9e7aa612c66fee3a68fac3066">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a9d1cf8d9e7aa612c66fee3a68fac3066">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#a9d1cf8d9e7aa612c66fee3a68fac3066">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#a9d1cf8d9e7aa612c66fee3a68fac3066">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#a9d1cf8d9e7aa612c66fee3a68fac3066">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#a9d1cf8d9e7aa612c66fee3a68fac3066">AbcdVol</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#ac8715a756e532028cd7f4a9cdf67e85c">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#ac8715a756e532028cd7f4a9cdf67e85c">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#ac8715a756e532028cd7f4a9cdf67e85c">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#ac8715a756e532028cd7f4a9cdf67e85c">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#ac8715a756e532028cd7f4a9cdf67e85c">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#ac8715a756e532028cd7f4a9cdf67e85c">AbcdVol</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -454,7 +453,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#a2c2eed4ce4b9bef5aeae2184e86e638d">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a2c2eed4ce4b9bef5aeae2184e86e638d">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#a2c2eed4ce4b9bef5aeae2184e86e638d">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#a2c2eed4ce4b9bef5aeae2184e86e638d">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#a2c2eed4ce4b9bef5aeae2184e86e638d">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#a2c2eed4ce4b9bef5aeae2184e86e638d">AbcdVol</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/d4c/class_quant_lib_1_1_pseudo_root_facade.html#a626eb62fda9901067e31f43b7766253c">PseudoRootFacade</a>, <a class="el" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a626eb62fda9901067e31f43b7766253c">FwdToCotSwapAdapter</a>, <a class="el" href="../../da/db0/class_quant_lib_1_1_fwd_period_adapter.html#a626eb62fda9901067e31f43b7766253c">FwdPeriodAdapter</a>, <a class="el" href="../../d6/d84/class_quant_lib_1_1_flat_vol.html#a626eb62fda9901067e31f43b7766253c">FlatVol</a>, <a class="el" href="../../d7/da7/class_quant_lib_1_1_cot_swap_to_fwd_adapter.html#a626eb62fda9901067e31f43b7766253c">CotSwapToFwdAdapter</a>, and <a class="el" href="../../d3/df1/class_quant_lib_1_1_abcd_vol.html#a626eb62fda9901067e31f43b7766253c">AbcdVol</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">

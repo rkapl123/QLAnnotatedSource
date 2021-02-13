@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/quotes/forwardvaluequote.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -102,42 +103,41 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;ql/quotes/forwardvaluequote.hpp&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#adf80dced76685d0883cb8def8b8a0474">   25</a></span>&#160;    <a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#adf80dced76685d0883cb8def8b8a0474">ForwardValueQuote::ForwardValueQuote</a>(</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                            <span class="keyword">const</span> ext::shared_ptr&lt;Index&gt;&amp; index,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                            <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; fixingDate)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    : index_(index), fixingDate_(fixingDate) {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a0708fbf84a3e6c75d728832214e23d03">index_</a>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a72887400b9a4d1ba185b887b84876cdc">   32</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a72887400b9a4d1ba185b887b84876cdc">ForwardValueQuote::value</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a0708fbf84a3e6c75d728832214e23d03">index_</a>-&gt;fixing(<a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a0f3d454856e688ed07ac415619cd9fda">fixingDate_</a>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a5bc2a781be2586924afce4e4a4ea6697">   36</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a5bc2a781be2586924afce4e4a4ea6697">ForwardValueQuote::isValid</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// not sure this is the best approach...</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#ac5c54df7ed3b930268c8d7752c101725">   41</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#ac5c54df7ed3b930268c8d7752c101725">ForwardValueQuote::update</a>() {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#aee5ebc6ea63dbf417dda24a002d05a7f">   26</a></span>&#160;    <a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#aee5ebc6ea63dbf417dda24a002d05a7f">ForwardValueQuote::ForwardValueQuote</a>(ext::shared_ptr&lt;Index&gt; index, <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; fixingDate)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    : index_(std::move(index)), fixingDate_(fixingDate) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a0708fbf84a3e6c75d728832214e23d03">index_</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#adfd3389569608e424be9ed9361d07994">   31</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#adfd3389569608e424be9ed9361d07994">ForwardValueQuote::value</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a0708fbf84a3e6c75d728832214e23d03">index_</a>-&gt;fixing(<a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a0f3d454856e688ed07ac415619cd9fda">fixingDate_</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#af6bf7ccb76ff0485d02cae827edb1c56">   35</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#af6bf7ccb76ff0485d02cae827edb1c56">ForwardValueQuote::isValid</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">// not sure this is the best approach...</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a44137bb65de2396875934e48a6ee5099">   40</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a44137bb65de2396875934e48a6ee5099">ForwardValueQuote::update</a>() {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_forward_value_quote_html_a0f3d454856e688ed07ac415619cd9fda"><div class="ttname"><a href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a0f3d454856e688ed07ac415619cd9fda">QuantLib::ForwardValueQuote::fixingDate_</a></div><div class="ttdeci">Date fixingDate_</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d9c/forwardvaluequote_8hpp_source.html#l00047">forwardvaluequote.hpp:47</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_forward_value_quote_html_a72887400b9a4d1ba185b887b84876cdc"><div class="ttname"><a href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a72887400b9a4d1ba185b887b84876cdc">QuantLib::ForwardValueQuote::value</a></div><div class="ttdeci">Real value() const</div><div class="ttdoc">returns the current value</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd0/forwardvaluequote_8cpp_source.html#l00032">forwardvaluequote.cpp:32</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_forward_value_quote_html_a44137bb65de2396875934e48a6ee5099"><div class="ttname"><a href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a44137bb65de2396875934e48a6ee5099">QuantLib::ForwardValueQuote::update</a></div><div class="ttdeci">void update() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd0/forwardvaluequote_8cpp_source.html#l00040">forwardvaluequote.cpp:40</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_forward_value_quote_html_af6bf7ccb76ff0485d02cae827edb1c56"><div class="ttname"><a href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#af6bf7ccb76ff0485d02cae827edb1c56">QuantLib::ForwardValueQuote::isValid</a></div><div class="ttdeci">bool isValid() const override</div><div class="ttdoc">returns true if the Quote holds a valid value</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd0/forwardvaluequote_8cpp_source.html#l00035">forwardvaluequote.cpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_observer_html_aa6ade205ed506bf712da2704f80a73a0"><div class="ttname"><a href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">QuantLib::Observer::registerWith</a></div><div class="ttdeci">std::pair&lt; iterator, bool &gt; registerWith(const ext::shared_ptr&lt; Observable &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00211">observable.hpp:211</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_forward_value_quote_html_a0708fbf84a3e6c75d728832214e23d03"><div class="ttname"><a href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a0708fbf84a3e6c75d728832214e23d03">QuantLib::ForwardValueQuote::index_</a></div><div class="ttdeci">ext::shared_ptr&lt; Index &gt; index_</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d9c/forwardvaluequote_8hpp_source.html#l00046">forwardvaluequote.hpp:46</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_forward_value_quote_html_a5bc2a781be2586924afce4e4a4ea6697"><div class="ttname"><a href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#a5bc2a781be2586924afce4e4a4ea6697">QuantLib::ForwardValueQuote::isValid</a></div><div class="ttdeci">bool isValid() const</div><div class="ttdoc">returns true if the Quote holds a valid value</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd0/forwardvaluequote_8cpp_source.html#l00036">forwardvaluequote.cpp:36</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_forward_value_quote_html_aee5ebc6ea63dbf417dda24a002d05a7f"><div class="ttname"><a href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#aee5ebc6ea63dbf417dda24a002d05a7f">QuantLib::ForwardValueQuote::ForwardValueQuote</a></div><div class="ttdeci">ForwardValueQuote(ext::shared_ptr&lt; Index &gt; index, const Date &amp;fixingDate)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd0/forwardvaluequote_8cpp_source.html#l00026">forwardvaluequote.cpp:26</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_observable_html_a397546715bfc5aedd1d16dd202a19d4c"><div class="ttname"><a href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">QuantLib::Observable::notifyObservers</a></div><div class="ttdeci">void notifyObservers()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d2a/observable_8cpp_source.html#l00057">observable.cpp:57</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_forward_value_quote_html_ac5c54df7ed3b930268c8d7752c101725"><div class="ttname"><a href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#ac5c54df7ed3b930268c8d7752c101725">QuantLib::ForwardValueQuote::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd0/forwardvaluequote_8cpp_source.html#l00041">forwardvaluequote.cpp:41</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_observable_html_a397546715bfc5aedd1d16dd202a19d4c"><div class="ttname"><a href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">QuantLib::Observable::notifyObservers</a></div><div class="ttdeci">void notifyObservers()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d2a/observable_8cpp_source.html#l00056">observable.cpp:56</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_forward_value_quote_html_adf80dced76685d0883cb8def8b8a0474"><div class="ttname"><a href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#adf80dced76685d0883cb8def8b8a0474">QuantLib::ForwardValueQuote::ForwardValueQuote</a></div><div class="ttdeci">ForwardValueQuote(const ext::shared_ptr&lt; Index &gt; &amp;index, const Date &amp;fixingDate)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd0/forwardvaluequote_8cpp_source.html#l00025">forwardvaluequote.cpp:25</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_forward_value_quote_html_adfd3389569608e424be9ed9361d07994"><div class="ttname"><a href="../../d6/d2e/class_quant_lib_1_1_forward_value_quote.html#adfd3389569608e424be9ed9361d07994">QuantLib::ForwardValueQuote::value</a></div><div class="ttdeci">Real value() const override</div><div class="ttdoc">returns the current value</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd0/forwardvaluequote_8cpp_source.html#l00031">forwardvaluequote.cpp:31</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

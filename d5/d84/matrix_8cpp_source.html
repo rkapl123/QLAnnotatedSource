@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/math/matrix.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -141,7 +142,7 @@ $(function() {
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a108afc5575edbd37891a391d18231f6e">   65</a></span>&#160;    <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;Matrix&gt;</a> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a108afc5575edbd37891a391d18231f6e">inverse</a>(<span class="keyword">const</span> <a class="code" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a>&amp; m) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a108afc5575edbd37891a391d18231f6e">   65</a></span>&#160;    <a class="code" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable&lt;Matrix&gt;</a> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a108afc5575edbd37891a391d18231f6e">inverse</a>(<span class="keyword">const</span> <a class="code" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a>&amp; m) {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">        #if !defined(QL_NO_UBLAS_SUPPORT)</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        QL_REQUIRE(m.<a class="code" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a74da223ed3bde38f5e9f6822f6cacfbe">rows</a>() == m.<a class="code" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a86a771d47cf764c4ef43aab250442fda">columns</a>(), <span class="stringliteral">&quot;matrix is not square&quot;</span>);</div>
@@ -214,13 +215,13 @@ $(function() {
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a3dece4c106f934e6135985fdad30c0c8"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a3dece4c106f934e6135985fdad30c0c8">QuantLib::Matrix::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00282">matrix.hpp:282</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a3dece4c106f934e6135985fdad30c0c8"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a3dece4c106f934e6135985fdad30c0c8">QuantLib::Matrix::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00300">matrix.hpp:300</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a108afc5575edbd37891a391d18231f6e"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a108afc5575edbd37891a391d18231f6e">QuantLib::inverse</a></div><div class="ttdeci">Disposable&lt; Matrix &gt; inverse(const Matrix &amp;m)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d84/matrix_8cpp_source.html#l00065">matrix.cpp:65</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a86a771d47cf764c4ef43aab250442fda"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a86a771d47cf764c4ef43aab250442fda">QuantLib::Matrix::columns</a></div><div class="ttdeci">Size columns() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00463">matrix.hpp:463</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a74da223ed3bde38f5e9f6822f6cacfbe"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a74da223ed3bde38f5e9f6822f6cacfbe">QuantLib::Matrix::rows</a></div><div class="ttdeci">Size rows() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00459">matrix.hpp:459</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html">QuantLib::Disposable</a></div><div class="ttdoc">generic disposable object with move semantics</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00064">disposable.hpp:64</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a86a771d47cf764c4ef43aab250442fda"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a86a771d47cf764c4ef43aab250442fda">QuantLib::Matrix::columns</a></div><div class="ttdeci">Size columns() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00481">matrix.hpp:481</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a74da223ed3bde38f5e9f6822f6cacfbe"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a74da223ed3bde38f5e9f6822f6cacfbe">QuantLib::Matrix::rows</a></div><div class="ttdeci">Size rows() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00477">matrix.hpp:477</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_aab56fb6f79c404afbf5fedf756b41bc1"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">QuantLib::Disposable</a></div><div class="ttdeci">T Disposable</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00034">disposable.hpp:34</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_ab0f6618a644ad7e28a603ec95dc48230"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ab0f6618a644ad7e28a603ec95dc48230">QuantLib::determinant</a></div><div class="ttdeci">Real determinant(const Matrix &amp;m)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d84/matrix_8cpp_source.html#l00109">matrix.cpp:109</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a82a59cb80a1b5eed6e558cf220b24cc9"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a82a59cb80a1b5eed6e558cf220b24cc9">QuantLib::Matrix::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00290">matrix.hpp:290</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a82a59cb80a1b5eed6e558cf220b24cc9"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a82a59cb80a1b5eed6e558cf220b24cc9">QuantLib::Matrix::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00308">matrix.hpp:308</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_matrix_html"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html">QuantLib::Matrix</a></div><div class="ttdoc">Matrix used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00039">matrix.hpp:39</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>

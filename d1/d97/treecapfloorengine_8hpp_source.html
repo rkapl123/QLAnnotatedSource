@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/capfloor/treecapfloorengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -113,33 +114,32 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        : <span class="keyword">public</span> <a class="code" href="../../d5/dbc/class_quant_lib_1_1_lattice_short_rate_model_engine.html">LatticeShortRateModelEngine</a>&lt;CapFloor::arguments,</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                             CapFloor::results&gt; {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#ad6051f9da04a15b2473bc0d087ab502a">TreeCapFloorEngine</a>(<span class="keyword">const</span> ext::shared_ptr&lt;ShortRateModel&gt;&amp; model,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#a8025800196999fcd5f503b0467035a0b">TreeCapFloorEngine</a>(<span class="keyword">const</span> ext::shared_ptr&lt;ShortRateModel&gt;&amp; model,</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                           <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> timeSteps,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                           <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; termStructure =</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                                 <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>());</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#ad6051f9da04a15b2473bc0d087ab502a">TreeCapFloorEngine</a>(<span class="keyword">const</span> ext::shared_ptr&lt;ShortRateModel&gt;&amp; model,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                           <span class="keyword">const</span> <a class="code" href="../../df/dff/class_quant_lib_1_1_time_grid.html">TimeGrid</a>&amp; timeGrid,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                           <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; termStructure =</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                                 <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>());</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#accfb2e6f0d4ec3fb0789e250aa3295ca">   54</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> <a class="code" href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#accfb2e6f0d4ec3fb0789e250aa3295ca">termStructure_</a>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    };</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                           <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> termStructure = <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>());</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#a8025800196999fcd5f503b0467035a0b">TreeCapFloorEngine</a>(<span class="keyword">const</span> ext::shared_ptr&lt;ShortRateModel&gt;&amp; model,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                           <span class="keyword">const</span> <a class="code" href="../../df/dff/class_quant_lib_1_1_time_grid.html">TimeGrid</a>&amp; timeGrid,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                           <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> termStructure = <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>());</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#accfb2e6f0d4ec3fb0789e250aa3295ca">   53</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> <a class="code" href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#accfb2e6f0d4ec3fb0789e250aa3295ca">termStructure_</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle&lt; YieldTermStructure &gt;</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_time_grid_html"><div class="ttname"><a href="../../df/dff/class_quant_lib_1_1_time_grid.html">QuantLib::TimeGrid</a></div><div class="ttdoc">time grid class</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc9/timegrid_8hpp_source.html#l00041">timegrid.hpp:41</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_time_grid_html"><div class="ttname"><a href="../../df/dff/class_quant_lib_1_1_time_grid.html">QuantLib::TimeGrid</a></div><div class="ttdoc">time grid class</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc9/timegrid_8hpp_source.html#l00042">timegrid.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_tree_cap_floor_engine_html"><div class="ttname"><a href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html">QuantLib::TreeCapFloorEngine</a></div><div class="ttdoc">Numerical lattice engine for cap/floors.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d97/treecapfloorengine_8hpp_source.html#l00034">treecapfloorengine.hpp:36</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_tree_cap_floor_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::TreeCapFloorEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df1/treecapfloorengine_8cpp_source.html#l00046">treecapfloorengine.cpp:46</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_tree_cap_floor_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::TreeCapFloorEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df1/treecapfloorengine_8cpp_source.html#l00043">treecapfloorengine.cpp:43</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_lattice_short_rate_model_engine_html"><div class="ttname"><a href="../../d5/dbc/class_quant_lib_1_1_lattice_short_rate_model_engine.html">QuantLib::LatticeShortRateModelEngine</a></div><div class="ttdoc">Engine for a short-rate model specialized on a lattice.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d81/latticeshortratemodelengine_8hpp_source.html#l00038">latticeshortratemodelengine.hpp:39</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_tree_cap_floor_engine_html_accfb2e6f0d4ec3fb0789e250aa3295ca"><div class="ttname"><a href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#accfb2e6f0d4ec3fb0789e250aa3295ca">QuantLib::TreeCapFloorEngine::termStructure_</a></div><div class="ttdeci">Handle&lt; YieldTermStructure &gt; termStructure_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d97/treecapfloorengine_8hpp_source.html#l00054">treecapfloorengine.hpp:54</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_tree_cap_floor_engine_html_ad6051f9da04a15b2473bc0d087ab502a"><div class="ttname"><a href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#ad6051f9da04a15b2473bc0d087ab502a">QuantLib::TreeCapFloorEngine::TreeCapFloorEngine</a></div><div class="ttdeci">TreeCapFloorEngine(const ext::shared_ptr&lt; ShortRateModel &gt; &amp;model, Size timeSteps, const Handle&lt; YieldTermStructure &gt; &amp;termStructure=Handle&lt; YieldTermStructure &gt;())</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df1/treecapfloorengine_8cpp_source.html#l00026">treecapfloorengine.cpp:26</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_tree_cap_floor_engine_html_accfb2e6f0d4ec3fb0789e250aa3295ca"><div class="ttname"><a href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#accfb2e6f0d4ec3fb0789e250aa3295ca">QuantLib::TreeCapFloorEngine::termStructure_</a></div><div class="ttdeci">Handle&lt; YieldTermStructure &gt; termStructure_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d97/treecapfloorengine_8hpp_source.html#l00053">treecapfloorengine.hpp:53</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_tree_cap_floor_engine_html_a8025800196999fcd5f503b0467035a0b"><div class="ttname"><a href="../../d5/d65/class_quant_lib_1_1_tree_cap_floor_engine.html#a8025800196999fcd5f503b0467035a0b">QuantLib::TreeCapFloorEngine::TreeCapFloorEngine</a></div><div class="ttdeci">TreeCapFloorEngine(const ext::shared_ptr&lt; ShortRateModel &gt; &amp;model, Size timeSteps, Handle&lt; YieldTermStructure &gt; termStructure=Handle&lt; YieldTermStructure &gt;())</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df1/treecapfloorengine_8cpp_source.html#l00027">treecapfloorengine.cpp:27</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

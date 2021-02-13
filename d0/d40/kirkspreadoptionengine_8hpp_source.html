@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/exoticoptions/kirkspreadoptionengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -110,11 +111,11 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html">   33</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html">KirkSpreadOptionEngine</a> : <span class="keyword">public</span> <a class="code" href="../../da/d67/class_quant_lib_1_1_spread_option_1_1engine.html">SpreadOption::engine</a> {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a04aa950ab05c870fbfbdc9fb8ea139e3">KirkSpreadOptionEngine</a>(</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keyword">const</span> ext::shared_ptr&lt;BlackProcess&gt;&amp; process1,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">const</span> ext::shared_ptr&lt;BlackProcess&gt;&amp; process2,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>&amp; correlation);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a3fc8c360136d4cd33ce2cafa5e017b51">KirkSpreadOptionEngine</a>(ext::shared_ptr&lt;BlackProcess&gt; process1,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                               ext::shared_ptr&lt;BlackProcess&gt; process2,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                               <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> correlation);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a6ce7c58ae579555b17c75dd24967b8c3">   41</a></span>&#160;        ext::shared_ptr&lt;BlackProcess&gt; <a class="code" href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a6ce7c58ae579555b17c75dd24967b8c3">process1_</a>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a6ec1f95293e2f23107429b4050cf3763">   42</a></span>&#160;        ext::shared_ptr&lt;BlackProcess&gt; <a class="code" href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a6ec1f95293e2f23107429b4050cf3763">process2_</a>;</div>
@@ -126,9 +127,9 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_kirk_spread_option_engine_html_a04aa950ab05c870fbfbdc9fb8ea139e3"><div class="ttname"><a href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a04aa950ab05c870fbfbdc9fb8ea139e3">QuantLib::KirkSpreadOptionEngine::KirkSpreadOptionEngine</a></div><div class="ttdeci">KirkSpreadOptionEngine(const ext::shared_ptr&lt; BlackProcess &gt; &amp;process1, const ext::shared_ptr&lt; BlackProcess &gt; &amp;process2, const Handle&lt; Quote &gt; &amp;correlation)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d9a/kirkspreadoptionengine_8cpp_source.html#l00028">kirkspreadoptionengine.cpp:28</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_kirk_spread_option_engine_html_a6ce7c58ae579555b17c75dd24967b8c3"><div class="ttname"><a href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a6ce7c58ae579555b17c75dd24967b8c3">QuantLib::KirkSpreadOptionEngine::process1_</a></div><div class="ttdeci">ext::shared_ptr&lt; BlackProcess &gt; process1_</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d40/kirkspreadoptionengine_8hpp_source.html#l00041">kirkspreadoptionengine.hpp:41</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_kirk_spread_option_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::KirkSpreadOptionEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d9a/kirkspreadoptionengine_8cpp_source.html#l00038">kirkspreadoptionengine.cpp:38</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_kirk_spread_option_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::KirkSpreadOptionEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d9a/kirkspreadoptionengine_8cpp_source.html#l00038">kirkspreadoptionengine.cpp:38</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_kirk_spread_option_engine_html_a3fc8c360136d4cd33ce2cafa5e017b51"><div class="ttname"><a href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a3fc8c360136d4cd33ce2cafa5e017b51">QuantLib::KirkSpreadOptionEngine::KirkSpreadOptionEngine</a></div><div class="ttdeci">KirkSpreadOptionEngine(ext::shared_ptr&lt; BlackProcess &gt; process1, ext::shared_ptr&lt; BlackProcess &gt; process2, Handle&lt; Quote &gt; correlation)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d9a/kirkspreadoptionengine_8cpp_source.html#l00029">kirkspreadoptionengine.cpp:29</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_kirk_spread_option_engine_html_a6ec1f95293e2f23107429b4050cf3763"><div class="ttname"><a href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#a6ec1f95293e2f23107429b4050cf3763">QuantLib::KirkSpreadOptionEngine::process2_</a></div><div class="ttdeci">ext::shared_ptr&lt; BlackProcess &gt; process2_</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d40/kirkspreadoptionengine_8hpp_source.html#l00042">kirkspreadoptionengine.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_kirk_spread_option_engine_html_aa87769c49eac4cbcd447093b1ae38b36"><div class="ttname"><a href="../../dd/dbb/class_quant_lib_1_1_kirk_spread_option_engine.html#aa87769c49eac4cbcd447093b1ae38b36">QuantLib::KirkSpreadOptionEngine::rho_</a></div><div class="ttdeci">Handle&lt; Quote &gt; rho_</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d40/kirkspreadoptionengine_8hpp_source.html#l00043">kirkspreadoptionengine.hpp:43</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_spread_option_1_1engine_html"><div class="ttname"><a href="../../da/d67/class_quant_lib_1_1_spread_option_1_1engine.html">QuantLib::SpreadOption::engine</a></div><div class="ttdoc">Spread option engine base class</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6e/spreadoption_8hpp_source.html#l00042">spreadoption.hpp:44</a></div></div>

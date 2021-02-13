@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/methods/finitedifferences/stepconditions/fdmamericanstepcondition.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -104,44 +105,42 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;ql/methods/finitedifferences/operators/fdmlinearoplayout.hpp&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;ql/methods/finitedifferences/stepconditions/fdmamericanstepcondition.hpp&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#a4e6eb5dda19736efb3b03a0fe5f50af5">   27</a></span>&#160;    <a class="code" href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#a4e6eb5dda19736efb3b03a0fe5f50af5">FdmAmericanStepCondition::FdmAmericanStepCondition</a>(</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">const</span> ext::shared_ptr&lt;FdmMesher&gt; &amp; mesher,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">const</span> ext::shared_ptr&lt;FdmInnerValueCalculator&gt; &amp; calculator)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    : mesher_(mesher),</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      calculator_(calculator) {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#aaf8d7fac182d1a67fa52cfdb67cbb8fb">   34</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#aaf8d7fac182d1a67fa52cfdb67cbb8fb">FdmAmericanStepCondition::applyTo</a>(<a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; a, <a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        ext::shared_ptr&lt;FdmLinearOpLayout&gt; layout = <a class="code" href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#a8f1a0a73890b0cd75e50da93b8861cc1">mesher_</a>-&gt;layout();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        QL_REQUIRE(layout-&gt;size() == a.<a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html#acce0ab2cacc475b2434f24c65c91685a">size</a>(),</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                   <span class="stringliteral">&quot;inconsistent array dimensions&quot;</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#a7c1fcfe18aeac41d65ddf3a9340bea8b">   28</a></span>&#160;    <a class="code" href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#a7c1fcfe18aeac41d65ddf3a9340bea8b">FdmAmericanStepCondition::FdmAmericanStepCondition</a>(</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        ext::shared_ptr&lt;FdmMesher&gt; mesher, ext::shared_ptr&lt;FdmInnerValueCalculator&gt; calculator)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    : mesher_(std::move(mesher)), calculator_(std::move(calculator)) {}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#aebe1358758809b73957b3f7a364be613">   32</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#aebe1358758809b73957b3f7a364be613">FdmAmericanStepCondition::applyTo</a>(<a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; a, <a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        ext::shared_ptr&lt;FdmLinearOpLayout&gt; layout = <a class="code" href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#a8f1a0a73890b0cd75e50da93b8861cc1">mesher_</a>-&gt;layout();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        QL_REQUIRE(layout-&gt;size() == a.<a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html#acce0ab2cacc475b2434f24c65c91685a">size</a>(),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                   <span class="stringliteral">&quot;inconsistent array dimensions&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../df/d11/class_quant_lib_1_1_fdm_linear_op_iterator.html">FdmLinearOpIterator</a> endIter = layout-&gt;end();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../df/d11/class_quant_lib_1_1_fdm_linear_op_iterator.html">FdmLinearOpIterator</a> endIter = layout-&gt;end();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../df/d11/class_quant_lib_1_1_fdm_linear_op_iterator.html">FdmLinearOpIterator</a> iter = layout-&gt;begin(); iter != endIter;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            ++iter) {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">const</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> innerValue = <a class="code" href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#ab2372b8990170443e906ad9504c80045">calculator_</a>-&gt;innerValue(iter, t);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">if</span> (innerValue &gt; a[iter.index()]) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                a[iter.index()] = innerValue;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../df/d11/class_quant_lib_1_1_fdm_linear_op_iterator.html">FdmLinearOpIterator</a> iter = layout-&gt;begin(); iter != endIter;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            ++iter) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">const</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> innerValue = <a class="code" href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#ab2372b8990170443e906ad9504c80045">calculator_</a>-&gt;innerValue(iter, t);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> (innerValue &gt; a[iter.index()]) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                a[iter.index()] = innerValue;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_quant_lib_1_1_fdm_american_step_condition_html_aebe1358758809b73957b3f7a364be613"><div class="ttname"><a href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#aebe1358758809b73957b3f7a364be613">QuantLib::FdmAmericanStepCondition::applyTo</a></div><div class="ttdeci">void applyTo(Array &amp;a, Time) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d15/fdmamericanstepcondition_8cpp_source.html#l00032">fdmamericanstepcondition.cpp:32</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_fdm_american_step_condition_html_a7c1fcfe18aeac41d65ddf3a9340bea8b"><div class="ttname"><a href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#a7c1fcfe18aeac41d65ddf3a9340bea8b">QuantLib::FdmAmericanStepCondition::FdmAmericanStepCondition</a></div><div class="ttdeci">FdmAmericanStepCondition(ext::shared_ptr&lt; FdmMesher &gt; mesher, ext::shared_ptr&lt; FdmInnerValueCalculator &gt; calculator)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d15/fdmamericanstepcondition_8cpp_source.html#l00028">fdmamericanstepcondition.cpp:28</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00053">array.hpp:53</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_fdm_american_step_condition_html_ab2372b8990170443e906ad9504c80045"><div class="ttname"><a href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#ab2372b8990170443e906ad9504c80045">QuantLib::FdmAmericanStepCondition::calculator_</a></div><div class="ttdeci">const ext::shared_ptr&lt; FdmInnerValueCalculator &gt; calculator_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df6/fdmamericanstepcondition_8hpp_source.html#l00046">fdmamericanstepcondition.hpp:46</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_array_html_acce0ab2cacc475b2434f24c65c91685a"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#acce0ab2cacc475b2434f24c65c91685a">QuantLib::Array::size</a></div><div class="ttdeci">Size size() const</div><div class="ttdoc">dimension of the array</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00428">array.hpp:428</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_fdm_american_step_condition_html_ab2372b8990170443e906ad9504c80045"><div class="ttname"><a href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#ab2372b8990170443e906ad9504c80045">QuantLib::FdmAmericanStepCondition::calculator_</a></div><div class="ttdeci">const ext::shared_ptr&lt; FdmInnerValueCalculator &gt; calculator_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df6/fdmamericanstepcondition_8hpp_source.html#l00044">fdmamericanstepcondition.hpp:44</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_array_html_acce0ab2cacc475b2434f24c65c91685a"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#acce0ab2cacc475b2434f24c65c91685a">QuantLib::Array::size</a></div><div class="ttdeci">Size size() const</div><div class="ttdoc">dimension of the array</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00450">array.hpp:450</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_fdm_american_step_condition_html_a4e6eb5dda19736efb3b03a0fe5f50af5"><div class="ttname"><a href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#a4e6eb5dda19736efb3b03a0fe5f50af5">QuantLib::FdmAmericanStepCondition::FdmAmericanStepCondition</a></div><div class="ttdeci">FdmAmericanStepCondition(const ext::shared_ptr&lt; FdmMesher &gt; &amp;mesher, const ext::shared_ptr&lt; FdmInnerValueCalculator &gt; &amp;calculator)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d15/fdmamericanstepcondition_8cpp_source.html#l00027">fdmamericanstepcondition.cpp:27</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_fdm_american_step_condition_html_a8f1a0a73890b0cd75e50da93b8861cc1"><div class="ttname"><a href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#a8f1a0a73890b0cd75e50da93b8861cc1">QuantLib::FdmAmericanStepCondition::mesher_</a></div><div class="ttdeci">const ext::shared_ptr&lt; FdmMesher &gt; mesher_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df6/fdmamericanstepcondition_8hpp_source.html#l00045">fdmamericanstepcondition.hpp:45</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_fdm_american_step_condition_html_aaf8d7fac182d1a67fa52cfdb67cbb8fb"><div class="ttname"><a href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#aaf8d7fac182d1a67fa52cfdb67cbb8fb">QuantLib::FdmAmericanStepCondition::applyTo</a></div><div class="ttdeci">void applyTo(Array &amp;a, Time) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d15/fdmamericanstepcondition_8cpp_source.html#l00034">fdmamericanstepcondition.cpp:34</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_fdm_american_step_condition_html_a8f1a0a73890b0cd75e50da93b8861cc1"><div class="ttname"><a href="../../d9/d67/class_quant_lib_1_1_fdm_american_step_condition.html#a8f1a0a73890b0cd75e50da93b8861cc1">QuantLib::FdmAmericanStepCondition::mesher_</a></div><div class="ttdeci">const ext::shared_ptr&lt; FdmMesher &gt; mesher_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df6/fdmamericanstepcondition_8hpp_source.html#l00043">fdmamericanstepcondition.hpp:43</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_fdm_linear_op_iterator_html"><div class="ttname"><a href="../../df/d11/class_quant_lib_1_1_fdm_linear_op_iterator.html">QuantLib::FdmLinearOpIterator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/fdmlinearopiterator_8hpp_source.html#l00036">fdmlinearopiterator.hpp:36</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_fdm_linear_op_iterator_html"><div class="ttname"><a href="../../df/d11/class_quant_lib_1_1_fdm_linear_op_iterator.html">QuantLib::FdmLinearOpIterator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/fdmlinearopiterator_8hpp_source.html#l00037">fdmlinearopiterator.hpp:37</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/models/marketmodels/products/multistep/multistepnothing.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -111,7 +112,7 @@ $(function() {
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    : <a class="code" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html">MultiProductMultiStep</a>(evolution.rateTimes()),</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      numberOfProducts_(numberOfProducts), doneIndex_(doneIndex) {}</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d2/d7b/class_quant_lib_1_1_multi_step_nothing.html#a283de6131ea2db647e886d8ec976c498">   31</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d2/d7b/class_quant_lib_1_1_multi_step_nothing.html#a283de6131ea2db647e886d8ec976c498">MultiStepNothing::nextTimeStep</a>(</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d2/d7b/class_quant_lib_1_1_multi_step_nothing.html#a61a20512ceb7db10dcb83fa870b25777">   31</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d2/d7b/class_quant_lib_1_1_multi_step_nothing.html#a61a20512ceb7db10dcb83fa870b25777">MultiStepNothing::nextTimeStep</a>(</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../de/db4/class_quant_lib_1_1_curve_state.html">CurveState</a>&amp;,</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        std::vector&lt;Size&gt;&amp; numberCashFlowsThisStep,</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::vector&lt;std::vector&lt;MarketModelMultiProduct::CashFlow&gt; &gt;&amp;) {</div>
@@ -131,7 +132,7 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_curve_state_html"><div class="ttname"><a href="../../de/db4/class_quant_lib_1_1_curve_state.html">QuantLib::CurveState</a></div><div class="ttdoc">Curve state for market-model simulations</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d20/curvestate_8hpp_source.html#l00041">curvestate.hpp:41</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_multi_step_nothing_html_a283de6131ea2db647e886d8ec976c498"><div class="ttname"><a href="../../d2/d7b/class_quant_lib_1_1_multi_step_nothing.html#a283de6131ea2db647e886d8ec976c498">QuantLib::MultiStepNothing::nextTimeStep</a></div><div class="ttdeci">bool nextTimeStep(const CurveState &amp;, std::vector&lt; Size &gt; &amp;, std::vector&lt; std::vector&lt; CashFlow &gt; &gt; &amp;)</div><div class="ttdoc">return value indicates whether path is finished, TRUE means done</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d4b/multistepnothing_8cpp_source.html#l00031">multistepnothing.cpp:31</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_multi_step_nothing_html_a61a20512ceb7db10dcb83fa870b25777"><div class="ttname"><a href="../../d2/d7b/class_quant_lib_1_1_multi_step_nothing.html#a61a20512ceb7db10dcb83fa870b25777">QuantLib::MultiStepNothing::nextTimeStep</a></div><div class="ttdeci">bool nextTimeStep(const CurveState &amp;, std::vector&lt; Size &gt; &amp;, std::vector&lt; std::vector&lt; CashFlow &gt; &gt; &amp;) override</div><div class="ttdoc">return value indicates whether path is finished, TRUE means done</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d4b/multistepnothing_8cpp_source.html#l00031">multistepnothing.cpp:31</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_multi_step_nothing_html_a3495084176af63912be0fa34354c98a9"><div class="ttname"><a href="../../d2/d7b/class_quant_lib_1_1_multi_step_nothing.html#a3495084176af63912be0fa34354c98a9">QuantLib::MultiStepNothing::currentIndex_</a></div><div class="ttdeci">Size currentIndex_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/multistepnothing_8hpp_source.html#l00051">multistepnothing.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_multi_step_nothing_html_aec7ec3adbff817a2a45b5d9fbb598df4"><div class="ttname"><a href="../../d2/d7b/class_quant_lib_1_1_multi_step_nothing.html#aec7ec3adbff817a2a45b5d9fbb598df4">QuantLib::MultiStepNothing::MultiStepNothing</a></div><div class="ttdeci">MultiStepNothing(const EvolutionDescription &amp;evolution, Size numberOfProducts=1, Size doneIndex=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d4b/multistepnothing_8cpp_source.html#l00025">multistepnothing.cpp:25</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>

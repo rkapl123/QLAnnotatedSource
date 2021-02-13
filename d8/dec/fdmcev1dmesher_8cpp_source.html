@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/methods/finitedifferences/meshers/fdmcev1dmesher.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -121,13 +122,13 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../de/dd7/class_quant_lib_1_1_c_e_v_r_n_d_calculator.html">CEVRNDCalculator</a> rndCalculator(f0, alpha, beta);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> upperBound =</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            scaleFactor*rndCalculator.<a class="code" href="../../de/dd7/class_quant_lib_1_1_c_e_v_r_n_d_calculator.html#a2922a10e60aff280c58afbd867f2aa3e">invcdf</a>(1-eps, maturity);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            scaleFactor*rndCalculator.<a class="code" href="../../de/dd7/class_quant_lib_1_1_c_e_v_r_n_d_calculator.html#a974b66bc0991dcda4288639b327da64d">invcdf</a>(1-eps, maturity);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> massAtZero = rndCalculator.<a class="code" href="../../de/dd7/class_quant_lib_1_1_c_e_v_r_n_d_calculator.html#a73ca8e6bca1171443d2bd9a161f35304">massAtZero</a>(maturity);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> lowerBound = (massAtZero &gt; eps)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            ? ((beta &lt; 0)? <a class="code" href="../../d3/d8f/group__limit_macros.html#ga4f2e6bcf6b19224bce1a5a6234286c17">QL_EPSILON</a> : 0.0)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            : rndCalculator.<a class="code" href="../../de/dd7/class_quant_lib_1_1_c_e_v_r_n_d_calculator.html#a2922a10e60aff280c58afbd867f2aa3e">invcdf</a>(eps, maturity)/scaleFactor;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            : rndCalculator.<a class="code" href="../../de/dd7/class_quant_lib_1_1_c_e_v_r_n_d_calculator.html#a974b66bc0991dcda4288639b327da64d">invcdf</a>(eps, maturity)/scaleFactor;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        ext::shared_ptr&lt;Fdm1dMesher&gt; helper;</div>
@@ -155,7 +156,6 @@ $(function() {
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_fdm1d_mesher_html_ac9eac9d51ed573fa746ca81e2f5be9af"><div class="ttname"><a href="../../db/dcc/class_quant_lib_1_1_fdm1d_mesher.html#ac9eac9d51ed573fa746ca81e2f5be9af">QuantLib::Fdm1dMesher::dplus_</a></div><div class="ttdeci">std::vector&lt; Real &gt; dplus_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d61/fdm1dmesher_8hpp_source.html#l00048">fdm1dmesher.hpp:48</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_c_e_v_r_n_d_calculator_html_a2922a10e60aff280c58afbd867f2aa3e"><div class="ttname"><a href="../../de/dd7/class_quant_lib_1_1_c_e_v_r_n_d_calculator.html#a2922a10e60aff280c58afbd867f2aa3e">QuantLib::CEVRNDCalculator::invcdf</a></div><div class="ttdeci">Real invcdf(Real q, Time t) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d75/cevrndcalculator_8cpp_source.html#l00104">cevrndcalculator.cpp:104</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_null_html"><div class="ttname"><a href="../../d0/d7a/class_quant_lib_1_1_null.html">QuantLib::Null</a></div><div class="ttdoc">template class providing a null value for a given type.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5b/null_8hpp_source.html#l00074">null.hpp:74</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm1d_mesher_html_acce0ab2cacc475b2434f24c65c91685a"><div class="ttname"><a href="../../db/dcc/class_quant_lib_1_1_fdm1d_mesher.html#acce0ab2cacc475b2434f24c65c91685a">QuantLib::Fdm1dMesher::size</a></div><div class="ttdeci">Size size() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d61/fdm1dmesher_8hpp_source.html#l00040">fdm1dmesher.hpp:40</a></div></div>
 <div class="ttc" id="agroup__limit_macros_html_ga4f2e6bcf6b19224bce1a5a6234286c17"><div class="ttname"><a href="../../d3/d8f/group__limit_macros.html#ga4f2e6bcf6b19224bce1a5a6234286c17">QL_EPSILON</a></div><div class="ttdeci">#define QL_EPSILON</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/qldefines_8hpp_source.html#l00178">qldefines.hpp:178</a></div></div>
@@ -165,6 +165,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_c_e_v_r_n_d_calculator_html"><div class="ttname"><a href="../../de/dd7/class_quant_lib_1_1_c_e_v_r_n_d_calculator.html">QuantLib::CEVRNDCalculator</a></div><div class="ttdoc">constant elasticity of variance process (absorbing boundary at f=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de1/cevrndcalculator_8hpp_source.html#l00043">cevrndcalculator.hpp:43</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm1d_mesher_html_a2e993815b92a6d8d46c5212de911b331"><div class="ttname"><a href="../../db/dcc/class_quant_lib_1_1_fdm1d_mesher.html#a2e993815b92a6d8d46c5212de911b331">QuantLib::Fdm1dMesher::locations_</a></div><div class="ttdeci">std::vector&lt; Real &gt; locations_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d61/fdm1dmesher_8hpp_source.html#l00047">fdm1dmesher.hpp:47</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_c_e_v_r_n_d_calculator_html_a974b66bc0991dcda4288639b327da64d"><div class="ttname"><a href="../../de/dd7/class_quant_lib_1_1_c_e_v_r_n_d_calculator.html#a974b66bc0991dcda4288639b327da64d">QuantLib::CEVRNDCalculator::invcdf</a></div><div class="ttdeci">Real invcdf(Real q, Time t) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d75/cevrndcalculator_8cpp_source.html#l00104">cevrndcalculator.cpp:104</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm1d_mesher_html"><div class="ttname"><a href="../../db/dcc/class_quant_lib_1_1_fdm1d_mesher.html">QuantLib::Fdm1dMesher</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d61/fdm1dmesher_8hpp_source.html#l00034">fdm1dmesher.hpp:34</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>

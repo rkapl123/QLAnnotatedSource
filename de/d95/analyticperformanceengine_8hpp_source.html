@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/cliquet/analyticperformanceengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -111,9 +112,9 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html">   38</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html">AnalyticPerformanceEngine</a> : <span class="keyword">public</span> <a class="code" href="../../de/d95/class_quant_lib_1_1_cliquet_option_1_1engine.html">CliquetOption::engine</a> {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html#a7a03e581a02ef56d0dedf4ae0039983a">AnalyticPerformanceEngine</a>(</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">const</span> ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;&amp; process);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html#a103d8b0d436faab68de66113945ab824">AnalyticPerformanceEngine</a>(ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; process);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   44</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    };</div>
@@ -123,12 +124,12 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_cliquet_option_1_1engine_html"><div class="ttname"><a href="../../de/d95/class_quant_lib_1_1_cliquet_option_1_1engine.html">QuantLib::CliquetOption::engine</a></div><div class="ttdoc">Cliquet engine base class.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/cliquetoption_8hpp_source.html#l00077">cliquetoption.hpp:79</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_performance_engine_html_a103d8b0d436faab68de66113945ab824"><div class="ttname"><a href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html#a103d8b0d436faab68de66113945ab824">QuantLib::AnalyticPerformanceEngine::AnalyticPerformanceEngine</a></div><div class="ttdeci">AnalyticPerformanceEngine(ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dea/analyticperformanceengine_8cpp_source.html#l00027">analyticperformanceengine.cpp:27</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_cliquet_option_1_1engine_html"><div class="ttname"><a href="../../de/d95/class_quant_lib_1_1_cliquet_option_1_1engine.html">QuantLib::CliquetOption::engine</a></div><div class="ttdoc">Cliquet engine base class.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/cliquetoption_8hpp_source.html#l00078">cliquetoption.hpp:80</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_performance_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::AnalyticPerformanceEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dea/analyticperformanceengine_8cpp_source.html#l00033">analyticperformanceengine.cpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_performance_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::AnalyticPerformanceEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d95/analyticperformanceengine_8hpp_source.html#l00044">analyticperformanceengine.hpp:44</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_performance_engine_html_a7a03e581a02ef56d0dedf4ae0039983a"><div class="ttname"><a href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html#a7a03e581a02ef56d0dedf4ae0039983a">QuantLib::AnalyticPerformanceEngine::AnalyticPerformanceEngine</a></div><div class="ttdeci">AnalyticPerformanceEngine(const ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;process)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dea/analyticperformanceengine_8cpp_source.html#l00026">analyticperformanceengine.cpp:26</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_performance_engine_html"><div class="ttname"><a href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html">QuantLib::AnalyticPerformanceEngine</a></div><div class="ttdoc">Pricing engine for performance options using analytical formulae.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d95/analyticperformanceengine_8hpp_source.html#l00038">analyticperformanceengine.hpp:38</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_performance_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::AnalyticPerformanceEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dea/analyticperformanceengine_8cpp_source.html#l00032">analyticperformanceengine.cpp:32</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

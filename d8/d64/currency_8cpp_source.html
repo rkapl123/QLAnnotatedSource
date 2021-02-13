@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/currency.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -101,42 +102,41 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ql/currency.hpp&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#aaa8de416e67ebde2653729bba054b60f">   24</a></span>&#160;    std::ostream&amp; <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a6026ac67efc8234b303bd3633aebdabe">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code" href="../../d3/dd4/class_quant_lib_1_1_currency.html">Currency</a>&amp; c) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span> (!c.<a class="code" href="../../d3/dd4/class_quant_lib_1_1_currency.html#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a>())</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">return</span> out &lt;&lt; c.<a class="code" href="../../d3/dd4/class_quant_lib_1_1_currency.html#a19a22c307846d12f190e071667a2498e">code</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot;null currency&quot;</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d0/d67/struct_quant_lib_1_1_currency_1_1_data.html#a2b0fd6aa19741b3f220155e1b692092f">   31</a></span>&#160;    <a class="code" href="../../d0/d67/struct_quant_lib_1_1_currency_1_1_data.html#a2b0fd6aa19741b3f220155e1b692092f">Currency::Data::Data</a>(<span class="keyword">const</span> std::string&amp; name,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                         <span class="keyword">const</span> std::string&amp; code,</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                         <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> numericCode,</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                         <span class="keyword">const</span> std::string&amp; symbol,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                         <span class="keyword">const</span> std::string&amp; fractionSymbol,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                         <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> fractionsPerUnit,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../d7/da0/class_quant_lib_1_1_rounding.html">Rounding</a>&amp; rounding,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                         <span class="keyword">const</span> std::string&amp; formatString,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../d3/dd4/class_quant_lib_1_1_currency.html">Currency</a>&amp; triangulationCurrency)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    : name(name), code(code), numeric(numericCode),</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      symbol(symbol), fractionSymbol(fractionSymbol),</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      fractionsPerUnit(fractionsPerUnit), rounding(rounding),</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      triangulated(triangulationCurrency),</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      formatString(formatString) {}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#aaa8de416e67ebde2653729bba054b60f">   25</a></span>&#160;    std::ostream&amp; <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a6026ac67efc8234b303bd3633aebdabe">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code" href="../../d3/dd4/class_quant_lib_1_1_currency.html">Currency</a>&amp; c) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span> (!c.<a class="code" href="../../d3/dd4/class_quant_lib_1_1_currency.html#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a>())</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">return</span> out &lt;&lt; c.<a class="code" href="../../d3/dd4/class_quant_lib_1_1_currency.html#a19a22c307846d12f190e071667a2498e">code</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot;null currency&quot;</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d0/d67/struct_quant_lib_1_1_currency_1_1_data.html#ac9011845115bf230c6a8ffd55a43dad3">   32</a></span>&#160;    <a class="code" href="../../d0/d67/struct_quant_lib_1_1_currency_1_1_data.html#ac9011845115bf230c6a8ffd55a43dad3">Currency::Data::Data</a>(std::string name,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                         std::string code,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                         <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> numericCode,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                         std::string symbol,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                         std::string fractionSymbol,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                         <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> fractionsPerUnit,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../d7/da0/class_quant_lib_1_1_rounding.html">Rounding</a>&amp; rounding,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                         std::string formatString,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                         <a class="code" href="../../d3/dd4/class_quant_lib_1_1_currency.html">Currency</a> triangulationCurrency)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    : name(std::move(name)), code(std::move(code)), numeric(numericCode), symbol(std::move(symbol)),</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      fractionSymbol(std::move(fractionSymbol)), fractionsPerUnit(fractionsPerUnit),</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      rounding(rounding), triangulated(std::move(triangulationCurrency)),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      formatString(std::move(formatString)) {}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_currency_html_a644718bb2fb240de962dc3c9a1fdf0dc"><div class="ttname"><a href="../../d3/dd4/class_quant_lib_1_1_currency.html#a644718bb2fb240de962dc3c9a1fdf0dc">QuantLib::Currency::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">is this a usable instance?</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5f/currency_8hpp_source.html#l00147">currency.hpp:147</a></div></div>
-<div class="ttc" id="astruct_quant_lib_1_1_currency_1_1_data_html_a2b0fd6aa19741b3f220155e1b692092f"><div class="ttname"><a href="../../d0/d67/struct_quant_lib_1_1_currency_1_1_data.html#a2b0fd6aa19741b3f220155e1b692092f">QuantLib::Currency::Data::Data</a></div><div class="ttdeci">Data(const std::string &amp;name, const std::string &amp;code, Integer numericCode, const std::string &amp;symbol, const std::string &amp;fractionSymbol, Integer fractionsPerUnit, const Rounding &amp;rounding, const std::string &amp;formatString, const Currency &amp;triangulationCurrency=Currency())</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d64/currency_8cpp_source.html#l00031">currency.cpp:31</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_currency_html_a644718bb2fb240de962dc3c9a1fdf0dc"><div class="ttname"><a href="../../d3/dd4/class_quant_lib_1_1_currency.html#a644718bb2fb240de962dc3c9a1fdf0dc">QuantLib::Currency::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">is this a usable instance?</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5f/currency_8hpp_source.html#l00161">currency.hpp:161</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_rounding_html"><div class="ttname"><a href="../../d7/da0/class_quant_lib_1_1_rounding.html">QuantLib::Rounding</a></div><div class="ttdoc">basic rounding class</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db3/rounding_8hpp_source.html#l00035">rounding.hpp:35</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html_a6026ac67efc8234b303bd3633aebdabe"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a6026ac67efc8234b303bd3633aebdabe">QuantLib::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, GFunctionFactory::YieldCurveModel type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da9/conundrumpricer_8hpp_source.html#l00179">conundrumpricer.hpp:179</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_a6026ac67efc8234b303bd3633aebdabe"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a6026ac67efc8234b303bd3633aebdabe">QuantLib::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, GFunctionFactory::YieldCurveModel type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da9/conundrumpricer_8hpp_source.html#l00177">conundrumpricer.hpp:177</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_currency_1_1_data_html_ac9011845115bf230c6a8ffd55a43dad3"><div class="ttname"><a href="../../d0/d67/struct_quant_lib_1_1_currency_1_1_data.html#ac9011845115bf230c6a8ffd55a43dad3">QuantLib::Currency::Data::Data</a></div><div class="ttdeci">Data(std::string name, std::string code, Integer numericCode, std::string symbol, std::string fractionSymbol, Integer fractionsPerUnit, const Rounding &amp;rounding, std::string formatString, Currency triangulationCurrency=Currency())</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d64/currency_8cpp_source.html#l00032">currency.cpp:32</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_currency_html"><div class="ttname"><a href="../../d3/dd4/class_quant_lib_1_1_currency.html">QuantLib::Currency</a></div><div class="ttdoc">Currency specification</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5f/currency_8hpp_source.html#l00035">currency.hpp:35</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_currency_html_a19a22c307846d12f190e071667a2498e"><div class="ttname"><a href="../../d3/dd4/class_quant_lib_1_1_currency.html#a19a22c307846d12f190e071667a2498e">QuantLib::Currency::code</a></div><div class="ttdeci">const std::string &amp; code() const</div><div class="ttdoc">ISO 4217 three-letter code, e.g, &quot;USD&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5f/currency_8hpp_source.html#l00119">currency.hpp:119</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_currency_html_a19a22c307846d12f190e071667a2498e"><div class="ttname"><a href="../../d3/dd4/class_quant_lib_1_1_currency.html#a19a22c307846d12f190e071667a2498e">QuantLib::Currency::code</a></div><div class="ttdeci">const std::string &amp; code() const</div><div class="ttdoc">ISO 4217 three-letter code, e.g, &quot;USD&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5f/currency_8hpp_source.html#l00126">currency.hpp:126</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/legacy/libormarketmodels/lfmswaptionengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -114,24 +115,25 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                                        Swaption::arguments,</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                                        Swaption::results&gt; {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#ae58888085a3fc8fbdab3d8299e2d0fd7">LfmSwaptionEngine</a>(<span class="keyword">const</span> ext::shared_ptr&lt;LiborForwardModel&gt;&amp; model,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                          <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; discountCurve);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a188f6df4c42679c1c133919254e351c5">   43</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> <a class="code" href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a188f6df4c42679c1c133919254e351c5">discountCurve_</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a723ce21cf2e9c6f8a1b4200f6b6acc83">LfmSwaptionEngine</a>(<span class="keyword">const</span> ext::shared_ptr&lt;LiborForwardModel&gt;&amp; model,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                          <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> discountCurve);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a188f6df4c42679c1c133919254e351c5">   44</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> <a class="code" href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a188f6df4c42679c1c133919254e351c5">discountCurve_</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    };</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle&lt; YieldTermStructure &gt;</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_lfm_swaption_engine_html_ae58888085a3fc8fbdab3d8299e2d0fd7"><div class="ttname"><a href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#ae58888085a3fc8fbdab3d8299e2d0fd7">QuantLib::LfmSwaptionEngine::LfmSwaptionEngine</a></div><div class="ttdeci">LfmSwaptionEngine(const ext::shared_ptr&lt; LiborForwardModel &gt; &amp;model, const Handle&lt; YieldTermStructure &gt; &amp;discountCurve)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d7f/lfmswaptionengine_8cpp_source.html#l00026">lfmswaptionengine.cpp:26</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_generic_model_engine_html"><div class="ttname"><a href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html">QuantLib::GenericModelEngine</a></div><div class="ttdoc">Base class for some pricing engine on a particular model.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4f/genericmodelengine_8hpp_source.html#l00038">genericmodelengine.hpp:39</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_lfm_swaption_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::LfmSwaptionEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d7f/lfmswaptionengine_8cpp_source.html#l00037">lfmswaptionengine.cpp:37</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_lfm_swaption_engine_html_a723ce21cf2e9c6f8a1b4200f6b6acc83"><div class="ttname"><a href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a723ce21cf2e9c6f8a1b4200f6b6acc83">QuantLib::LfmSwaptionEngine::LfmSwaptionEngine</a></div><div class="ttdeci">LfmSwaptionEngine(const ext::shared_ptr&lt; LiborForwardModel &gt; &amp;model, Handle&lt; YieldTermStructure &gt; discountCurve)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d7f/lfmswaptionengine_8cpp_source.html#l00027">lfmswaptionengine.cpp:27</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_lfm_swaption_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::LfmSwaptionEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d7f/lfmswaptionengine_8cpp_source.html#l00035">lfmswaptionengine.cpp:35</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_generic_model_engine_html"><div class="ttname"><a href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html">QuantLib::GenericModelEngine</a></div><div class="ttdoc">Base class for some pricing engine on a particular model.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4f/genericmodelengine_8hpp_source.html#l00039">genericmodelengine.hpp:40</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_lfm_swaption_engine_html_a188f6df4c42679c1c133919254e351c5"><div class="ttname"><a href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a188f6df4c42679c1c133919254e351c5">QuantLib::LfmSwaptionEngine::discountCurve_</a></div><div class="ttdeci">Handle&lt; YieldTermStructure &gt; discountCurve_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0c/lfmswaptionengine_8hpp_source.html#l00043">lfmswaptionengine.hpp:43</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_lfm_swaption_engine_html_a188f6df4c42679c1c133919254e351c5"><div class="ttname"><a href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a188f6df4c42679c1c133919254e351c5">QuantLib::LfmSwaptionEngine::discountCurve_</a></div><div class="ttdeci">Handle&lt; YieldTermStructure &gt; discountCurve_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0c/lfmswaptionengine_8hpp_source.html#l00044">lfmswaptionengine.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_lfm_swaption_engine_html"><div class="ttname"><a href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html">QuantLib::LfmSwaptionEngine</a></div><div class="ttdoc">Libor forward model swaption engine based on Black formula</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0c/lfmswaptionengine_8hpp_source.html#l00035">lfmswaptionengine.hpp:37</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

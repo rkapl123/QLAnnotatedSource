@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: MultiPathGenerator&lt; GSG &gt; Class Template Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -127,8 +128,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6de372cc08e6770b102eb6c4b28b66bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d95/class_quant_lib_1_1_multi_path_generator.html#a6de372cc08e6770b102eb6c4b28b66bc">MultiPathGenerator</a> (const ext::shared_ptr&lt; <a class="el" href="../../d7/dc8/class_quant_lib_1_1_stochastic_process.html">StochasticProcess</a> &gt; &amp;, const <a class="el" href="../../df/dff/class_quant_lib_1_1_time_grid.html">TimeGrid</a> &amp;, const GSG &amp;generator, <a class="el" href="../../d9/db9/classbool.html">bool</a> brownianBridge=false)</td></tr>
-<tr class="separator:a6de372cc08e6770b102eb6c4b28b66bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ba9e01e1e840fd0b4e16f2dfd69880"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d95/class_quant_lib_1_1_multi_path_generator.html#a36ba9e01e1e840fd0b4e16f2dfd69880">MultiPathGenerator</a> (const ext::shared_ptr&lt; <a class="el" href="../../d7/dc8/class_quant_lib_1_1_stochastic_process.html">StochasticProcess</a> &gt; &amp;, const <a class="el" href="../../df/dff/class_quant_lib_1_1_time_grid.html">TimeGrid</a> &amp;, GSG generator, <a class="el" href="../../d9/db9/classbool.html">bool</a> brownianBridge=false)</td></tr>
+<tr class="separator:a36ba9e01e1e840fd0b4e16f2dfd69880"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6660f759e522af8273984616d188ff47"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../da/d95/class_quant_lib_1_1_multi_path_generator.html#a0f7a5af246b6d497bbf49e20515d29b2">sample_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d95/class_quant_lib_1_1_multi_path_generator.html#a6660f759e522af8273984616d188ff47">next</a> () const</td></tr>
 <tr class="separator:a6660f759e522af8273984616d188ff47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bbb03903b501d234e369855d00a8a0b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../da/d95/class_quant_lib_1_1_multi_path_generator.html#a0f7a5af246b6d497bbf49e20515d29b2">sample_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d95/class_quant_lib_1_1_multi_path_generator.html#a0bbb03903b501d234e369855d00a8a0b">antithetic</a> () const</td></tr>
@@ -158,9 +159,9 @@ class QuantLib::MultiPathGenerator&lt; GSG &gt;</h3>
 <p>RSG is a sample generator which returns a random sequence. It must have the minimal interface: </p><div class="fragment"><div class="line">RSG {</div>
 <div class="line">    Sample&lt;Array&gt; <a class="code" href="../../da/d95/class_quant_lib_1_1_multi_path_generator.html#a6660f759e522af8273984616d188ff47">next</a>();</div>
 <div class="line">};</div>
-</div><!-- fragment --><dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000086">Tests:</a></b></dt><dd>the generated paths are checked against cached results </dd></dl>
+</div><!-- fragment --><dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000089">Tests:</a></b></dt><dd>the generated paths are checked against cached results </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00050">50</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a0f7a5af246b6d497bbf49e20515d29b2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0f7a5af246b6d497bbf49e20515d29b2">&#9670;&nbsp;</a></span>sample_type</h2>
@@ -174,13 +175,13 @@ class QuantLib::MultiPathGenerator&lt; GSG &gt;</h3>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00053">53</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a6de372cc08e6770b102eb6c4b28b66bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6de372cc08e6770b102eb6c4b28b66bc">&#9670;&nbsp;</a></span>MultiPathGenerator()</h2>
+<a id="a36ba9e01e1e840fd0b4e16f2dfd69880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36ba9e01e1e840fd0b4e16f2dfd69880">&#9670;&nbsp;</a></span>MultiPathGenerator()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,7 +201,7 @@ class QuantLib::MultiPathGenerator&lt; GSG &gt;</h3>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const GSG &amp;&#160;</td>
+          <td class="paramtype">GSG&#160;</td>
           <td class="paramname"><em>generator</em>, </td>
         </tr>
         <tr>
@@ -217,14 +218,14 @@ class QuantLib::MultiPathGenerator&lt; GSG &gt;</h3>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00072">72</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../da/d95/class_quant_lib_1_1_multi_path_generator_a6de372cc08e6770b102eb6c4b28b66bc_cgraph.png" border="0" usemap="#ada/d95/class_quant_lib_1_1_multi_path_generator_a6de372cc08e6770b102eb6c4b28b66bc_cgraph" alt=""/></div>
-<map name="da/d95/class_quant_lib_1_1_multi_path_generator_a6de372cc08e6770b102eb6c4b28b66bc_cgraph" id="ada/d95/class_quant_lib_1_1_multi_path_generator_a6de372cc08e6770b102eb6c4b28b66bc_cgraph">
+<div class="center"><img src="../../da/d95/class_quant_lib_1_1_multi_path_generator_a36ba9e01e1e840fd0b4e16f2dfd69880_cgraph.png" border="0" usemap="#ada/d95/class_quant_lib_1_1_multi_path_generator_a36ba9e01e1e840fd0b4e16f2dfd69880_cgraph" alt=""/></div>
+<map name="da/d95/class_quant_lib_1_1_multi_path_generator_a36ba9e01e1e840fd0b4e16f2dfd69880_cgraph" id="ada/d95/class_quant_lib_1_1_multi_path_generator_a36ba9e01e1e840fd0b4e16f2dfd69880_cgraph">
 <area shape="rect" title=" " alt="" coords="5,13,140,39"/>
 <area shape="rect" href="../../df/dff/class_quant_lib_1_1_time_grid.html#acce0ab2cacc475b2434f24c65c91685a" title=" " alt="" coords="188,5,323,47"/>
 </map>
@@ -327,7 +328,7 @@ class QuantLib::MultiPathGenerator&lt; GSG &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00062">62</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
 
 </div>
 </div>
@@ -351,7 +352,7 @@ class QuantLib::MultiPathGenerator&lt; GSG &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00062">62</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00063">63</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
 
 </div>
 </div>
@@ -375,7 +376,7 @@ class QuantLib::MultiPathGenerator&lt; GSG &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00063">63</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00064">64</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
 
 </div>
 </div>
@@ -399,7 +400,7 @@ class QuantLib::MultiPathGenerator&lt; GSG &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00064">64</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../d1/d67/multipathgenerator_8hpp_source.html">multipathgenerator.hpp</a>.</p>
 
 </div>
 </div>

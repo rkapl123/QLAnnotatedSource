@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/instruments/claim.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -104,7 +105,7 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../de/da7/class_quant_lib_1_1_face_value_claim.html#a2fae7868db984bff47549d7940ef369e">   24</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../de/da7/class_quant_lib_1_1_face_value_claim.html#a2fae7868db984bff47549d7940ef369e">FaceValueClaim::amount</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp;,</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../de/da7/class_quant_lib_1_1_face_value_claim.html#a45d516b849ab3642b893440862883394">   24</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../de/da7/class_quant_lib_1_1_face_value_claim.html#a45d516b849ab3642b893440862883394">FaceValueClaim::amount</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp;,</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> notional,</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> recoveryRate)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">return</span> notional * (1.0-recoveryRate);</div>
@@ -118,7 +119,7 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(referenceSecurity);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../da/dff/class_quant_lib_1_1_face_value_accrual_claim.html#a2fae7868db984bff47549d7940ef369e">   38</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../da/dff/class_quant_lib_1_1_face_value_accrual_claim.html#a2fae7868db984bff47549d7940ef369e">FaceValueAccrualClaim::amount</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; d,</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../da/dff/class_quant_lib_1_1_face_value_accrual_claim.html#a45d516b849ab3642b893440862883394">   38</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../da/dff/class_quant_lib_1_1_face_value_accrual_claim.html#a45d516b849ab3642b893440862883394">FaceValueAccrualClaim::amount</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; d,</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                       <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> notional,</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                       <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> recoveryRate)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> accrual = <a class="code" href="../../da/dff/class_quant_lib_1_1_face_value_accrual_claim.html#ae0c67b651b72e0769b7d095b5a15dc95">referenceSecurity_</a>-&gt;accruedAmount(d)</div>
@@ -129,11 +130,11 @@ $(function() {
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_face_value_accrual_claim_html_a2fae7868db984bff47549d7940ef369e"><div class="ttname"><a href="../../da/dff/class_quant_lib_1_1_face_value_accrual_claim.html#a2fae7868db984bff47549d7940ef369e">QuantLib::FaceValueAccrualClaim::amount</a></div><div class="ttdeci">Real amount(const Date &amp;d, Real notional, Real recoveryRate) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/db0/claim_8cpp_source.html#l00038">claim.cpp:38</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_face_value_accrual_claim_html_ae0c67b651b72e0769b7d095b5a15dc95"><div class="ttname"><a href="../../da/dff/class_quant_lib_1_1_face_value_accrual_claim.html#ae0c67b651b72e0769b7d095b5a15dc95">QuantLib::FaceValueAccrualClaim::referenceSecurity_</a></div><div class="ttdeci">ext::shared_ptr&lt; Bond &gt; referenceSecurity_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/deb/claim_8hpp_source.html#l00059">claim.hpp:59</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_face_value_claim_html_a2fae7868db984bff47549d7940ef369e"><div class="ttname"><a href="../../de/da7/class_quant_lib_1_1_face_value_claim.html#a2fae7868db984bff47549d7940ef369e">QuantLib::FaceValueClaim::amount</a></div><div class="ttdeci">Real amount(const Date &amp;d, Real notional, Real recoveryRate) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/db0/claim_8cpp_source.html#l00024">claim.cpp:24</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_face_value_claim_html_a45d516b849ab3642b893440862883394"><div class="ttname"><a href="../../de/da7/class_quant_lib_1_1_face_value_claim.html#a45d516b849ab3642b893440862883394">QuantLib::FaceValueClaim::amount</a></div><div class="ttdeci">Real amount(const Date &amp;d, Real notional, Real recoveryRate) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/db0/claim_8cpp_source.html#l00024">claim.cpp:24</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_face_value_accrual_claim_html_ae0c67b651b72e0769b7d095b5a15dc95"><div class="ttname"><a href="../../da/dff/class_quant_lib_1_1_face_value_accrual_claim.html#ae0c67b651b72e0769b7d095b5a15dc95">QuantLib::FaceValueAccrualClaim::referenceSecurity_</a></div><div class="ttdeci">ext::shared_ptr&lt; Bond &gt; referenceSecurity_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/deb/claim_8hpp_source.html#l00056">claim.hpp:56</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_observer_html_aa6ade205ed506bf712da2704f80a73a0"><div class="ttname"><a href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">QuantLib::Observer::registerWith</a></div><div class="ttdeci">std::pair&lt; iterator, bool &gt; registerWith(const ext::shared_ptr&lt; Observable &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00211">observable.hpp:211</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_face_value_accrual_claim_html_aa04a9ff9edb9453611a4572cbdcdd80f"><div class="ttname"><a href="../../da/dff/class_quant_lib_1_1_face_value_accrual_claim.html#aa04a9ff9edb9453611a4572cbdcdd80f">QuantLib::FaceValueAccrualClaim::FaceValueAccrualClaim</a></div><div class="ttdeci">FaceValueAccrualClaim(const ext::shared_ptr&lt; Bond &gt; &amp;referenceSecurity)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/db0/claim_8cpp_source.html#l00032">claim.cpp:32</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_face_value_accrual_claim_html_a45d516b849ab3642b893440862883394"><div class="ttname"><a href="../../da/dff/class_quant_lib_1_1_face_value_accrual_claim.html#a45d516b849ab3642b893440862883394">QuantLib::FaceValueAccrualClaim::amount</a></div><div class="ttdeci">Real amount(const Date &amp;d, Real notional, Real recoveryRate) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/db0/claim_8cpp_source.html#l00038">claim.cpp:38</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>

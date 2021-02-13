@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/exoticoptions/analyticeuropeanmargrabeengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -111,11 +112,11 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html">   41</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html">AnalyticEuropeanMargrabeEngine</a> : <span class="keyword">public</span> <a class="code" href="../../d5/d44/class_quant_lib_1_1_margrabe_option_1_1engine.html">MargrabeOption::engine</a> {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#a634b1aea090fee2e8ae005f4505fa242">AnalyticEuropeanMargrabeEngine</a>(</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">const</span> ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;&amp; process1,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">const</span> ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;&amp; process2,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> correlation);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#accba3fe662453abd4a4278a5f2d4ce36">AnalyticEuropeanMargrabeEngine</a>(ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; process1,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                       ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; process2,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                       <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> correlation);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#a40130e69f12f6a7b01e0b071f127cf08">   49</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#a40130e69f12f6a7b01e0b071f127cf08">process1_</a>;</div>
 <div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#a09fceea60150abdef9b9664a0d055c2e">   50</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#a09fceea60150abdef9b9664a0d055c2e">process2_</a>;</div>
@@ -126,14 +127,14 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_european_margrabe_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::AnalyticEuropeanMargrabeEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d34/analyticeuropeanmargrabeengine_8cpp_source.html#l00036">analyticeuropeanmargrabeengine.cpp:36</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_european_margrabe_engine_html"><div class="ttname"><a href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html">QuantLib::AnalyticEuropeanMargrabeEngine</a></div><div class="ttdoc">Analytic engine for European Margrabe option.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d08/analyticeuropeanmargrabeengine_8hpp_source.html#l00041">analyticeuropeanmargrabeengine.hpp:41</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_european_margrabe_engine_html_a634b1aea090fee2e8ae005f4505fa242"><div class="ttname"><a href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#a634b1aea090fee2e8ae005f4505fa242">QuantLib::AnalyticEuropeanMargrabeEngine::AnalyticEuropeanMargrabeEngine</a></div><div class="ttdeci">AnalyticEuropeanMargrabeEngine(const ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;process1, const ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;process2, Real correlation)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d34/analyticeuropeanmargrabeengine_8cpp_source.html#l00027">analyticeuropeanmargrabeengine.cpp:27</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_european_margrabe_engine_html_accba3fe662453abd4a4278a5f2d4ce36"><div class="ttname"><a href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#accba3fe662453abd4a4278a5f2d4ce36">QuantLib::AnalyticEuropeanMargrabeEngine::AnalyticEuropeanMargrabeEngine</a></div><div class="ttdeci">AnalyticEuropeanMargrabeEngine(ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process1, ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process2, Real correlation)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d34/analyticeuropeanmargrabeengine_8cpp_source.html#l00028">analyticeuropeanmargrabeengine.cpp:28</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_european_margrabe_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::AnalyticEuropeanMargrabeEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d34/analyticeuropeanmargrabeengine_8cpp_source.html#l00037">analyticeuropeanmargrabeengine.cpp:37</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_european_margrabe_engine_html_a09fceea60150abdef9b9664a0d055c2e"><div class="ttname"><a href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#a09fceea60150abdef9b9664a0d055c2e">QuantLib::AnalyticEuropeanMargrabeEngine::process2_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process2_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d08/analyticeuropeanmargrabeengine_8hpp_source.html#l00050">analyticeuropeanmargrabeengine.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_european_margrabe_engine_html_a98f57706bc57f4e14ca8c8cb1cfa213b"><div class="ttname"><a href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#a98f57706bc57f4e14ca8c8cb1cfa213b">QuantLib::AnalyticEuropeanMargrabeEngine::rho_</a></div><div class="ttdeci">Real rho_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d08/analyticeuropeanmargrabeengine_8hpp_source.html#l00051">analyticeuropeanmargrabeengine.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_european_margrabe_engine_html_a40130e69f12f6a7b01e0b071f127cf08"><div class="ttname"><a href="../../d2/d94/class_quant_lib_1_1_analytic_european_margrabe_engine.html#a40130e69f12f6a7b01e0b071f127cf08">QuantLib::AnalyticEuropeanMargrabeEngine::process1_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process1_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d08/analyticeuropeanmargrabeengine_8hpp_source.html#l00049">analyticeuropeanmargrabeengine.hpp:49</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_margrabe_option_1_1engine_html"><div class="ttname"><a href="../../d5/d44/class_quant_lib_1_1_margrabe_option_1_1engine.html">QuantLib::MargrabeOption::engine</a></div><div class="ttdoc">Margrabe option engine base class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/margrabeoption_8hpp_source.html#l00090">margrabeoption.hpp:92</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_margrabe_option_1_1engine_html"><div class="ttname"><a href="../../d5/d44/class_quant_lib_1_1_margrabe_option_1_1engine.html">QuantLib::MargrabeOption::engine</a></div><div class="ttdoc">Margrabe option engine base class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/margrabeoption_8hpp_source.html#l00091">margrabeoption.hpp:93</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

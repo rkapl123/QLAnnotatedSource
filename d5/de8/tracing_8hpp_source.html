@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/utilities/tracing.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -115,9 +116,9 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html">   37</a></span>&#160;        <span class="keyword">class </span><a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html">Tracing</a> : <span class="keyword">public</span> <a class="code" href="../../db/ddb/class_quant_lib_1_1_singleton.html">Singleton</a>&lt;Tracing&gt; {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../db/ddb/class_quant_lib_1_1_singleton.html">QuantLib::Singleton</a>&lt;<a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html">Tracing</a>&gt;;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a6f5029a99a424c669154db0011e6c8e9">Tracing</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;          <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a6f5029a99a424c669154db0011e6c8e9">Tracing</a>();  <span class="comment">// NOLINT(modernize-use-equals-delete)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;          <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a486f22824bd83c5308a0d70ffac6f758">   42</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a486f22824bd83c5308a0d70ffac6f758">enable</a>() {</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">                #if defined(QL_ENABLE_TRACING)</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#ab6dfcb3e6c79f4def1295fea7f0de8c0">enabled_</a> = <span class="keyword">true</span>;</div>
@@ -132,10 +133,10 @@ $(function() {
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#adf6c38e5e458a498510211aff3bc6d03">   53</a></span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#adf6c38e5e458a498510211aff3bc6d03">depth</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a5c026231da11874bd824a06d0a516708">depth_</a>; }</div>
 <div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a6663cf1e20c2f8162d29d31c8f6324e6">   54</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a6663cf1e20c2f8162d29d31c8f6324e6">down</a>() { <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a5c026231da11874bd824a06d0a516708">depth_</a>++; }</div>
 <div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a0a1d932d49dd1079cfd0964b11adc7a0">   55</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a0a1d932d49dd1079cfd0964b11adc7a0">up</a>() { <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a5c026231da11874bd824a06d0a516708">depth_</a>--; }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a045e6ebcc2cec847920a49abcf5599c8">   57</a></span>&#160;            std::ostream* <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a045e6ebcc2cec847920a49abcf5599c8">out_</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#ab6dfcb3e6c79f4def1295fea7f0de8c0">   58</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#ab6dfcb3e6c79f4def1295fea7f0de8c0">enabled_</a>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a5c026231da11874bd824a06d0a516708">   59</a></span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a5c026231da11874bd824a06d0a516708">depth_</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#ab6dfcb3e6c79f4def1295fea7f0de8c0">   58</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#ab6dfcb3e6c79f4def1295fea7f0de8c0">enabled_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a5c026231da11874bd824a06d0a516708">   59</a></span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> <a class="code" href="../../d2/dc5/class_quant_lib_1_1detail_1_1_tracing.html#a5c026231da11874bd824a06d0a516708">depth_</a> = 0;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        };</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/vanilla/fdstepconditionengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -138,89 +139,88 @@ $(function() {
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">class</span>&gt; <span class="keyword">class </span>Scheme&gt;</div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d3/d56/class_quant_lib_1_1_f_d_step_condition_engine.html#a9f76ac719862b1c13f0fd778aaa8ba60">   61</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/d56/class_quant_lib_1_1_f_d_step_condition_engine.html#a9f76ac719862b1c13f0fd778aaa8ba60">FDStepConditionEngine&lt;Scheme&gt;::calculate</a>(</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                            <a class="code" href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">PricingEngine::results</a>* r)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="../../d5/dea/class_quant_lib_1_1_one_asset_option_1_1results.html">OneAssetOption::results</a> * <a class="code" href="../../db/d9e/class_dividend_barrier_option_1_1results.html">results</a> =</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../d5/dea/class_quant_lib_1_1_one_asset_option_1_1results.html">OneAssetOption::results</a> *<span class="keyword">&gt;</span>(r);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        setGridLimits();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        initializeInitialCondition();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        initializeOperator();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        initializeBoundaryConditions();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        initializeStepCondition();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="../../dc/d6d/class_quant_lib_1_1_finite_difference_model.html">FiniteDifferenceModel</a>&lt;<a class="code" href="../../d1/d40/class_quant_lib_1_1_parallel_evolver.html">ParallelEvolver</a>&lt;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    Scheme&lt;TridiagonalOperator&gt; &gt; &gt; model_type;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">typename</span> model_type::operator_type operatorSet;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">typename</span> model_type::array_type arraySet;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">typename</span> model_type::bc_set bcSet;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">typename</span> model_type::condition_type conditionSet;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        prices_ = intrinsicValues_;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        controlPrices_ = intrinsicValues_;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        controlOperator_ = finiteDifferenceOperator_;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        controlBCs_[0] = BCs_[0];</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        controlBCs_[1] = BCs_[1];</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        operatorSet.push_back(finiteDifferenceOperator_);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        operatorSet.push_back(controlOperator_);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        arraySet.push_back(prices_.values());</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        arraySet.push_back(controlPrices_.values());</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        bcSet.push_back(BCs_);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        bcSet.push_back(controlBCs_);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        conditionSet.push_back(stepCondition_);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        conditionSet.push_back(ext::shared_ptr&lt;StandardStepCondition&gt;(</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                                   <span class="keyword">new</span> <a class="code" href="../../d6/dc2/class_quant_lib_1_1_null_condition.html">NullCondition&lt;Array&gt;</a>));</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        model_type model(operatorSet, bcSet);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        model.rollback(arraySet, getResidualTime(),</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                       0.0, timeSteps_, conditionSet);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        prices_.values() = arraySet[0];</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        controlPrices_.values() = arraySet[1];</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        ext::shared_ptr&lt;StrikedTypePayoff&gt; striked_payoff =</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            ext::dynamic_pointer_cast&lt;StrikedTypePayoff&gt;(payoff_);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        QL_REQUIRE(striked_payoff, <span class="stringliteral">&quot;non-striked payoff given&quot;</span>);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> variance =</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            process_-&gt;blackVolatility()-&gt;blackVariance(</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                     exerciseDate_, striked_payoff-&gt;strike());</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">DiscountFactor</a> dividendDiscount =</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            process_-&gt;dividendYield()-&gt;discount(exerciseDate_);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">DiscountFactor</a> riskFreeDiscount =</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            process_-&gt;riskFreeRate()-&gt;discount(exerciseDate_);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spot = process_-&gt;stateVariable()-&gt;value();</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> forwardPrice = spot * dividendDiscount / riskFreeDiscount;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="../../de/dac/class_quant_lib_1_1_black_calculator.html">BlackCalculator</a> black(striked_payoff, forwardPrice,</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                              std::sqrt(variance), riskFreeDiscount);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="../../db/d9e/class_dividend_barrier_option_1_1results.html">results</a>-&gt;value = prices_.valueAtCenter()</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            - controlPrices_.valueAtCenter()</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            + black.<a class="code" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc">value</a>();</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="../../db/d9e/class_dividend_barrier_option_1_1results.html">results</a>-&gt;delta = prices_.firstDerivativeAtCenter()</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            - controlPrices_.firstDerivativeAtCenter()</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            + black.<a class="code" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a1ce2edf271b7df5907ea9a3b100383fe">delta</a>(spot);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="../../db/d9e/class_dividend_barrier_option_1_1results.html">results</a>-&gt;gamma = prices_.secondDerivativeAtCenter()</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            - controlPrices_.secondDerivativeAtCenter()</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            + black.<a class="code" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a57565309e7b2cbfe856209958c63cfa5">gamma</a>(spot);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="../../db/d9e/class_dividend_barrier_option_1_1results.html">results</a>-&gt;additionalResults[<span class="stringliteral">&quot;priceCurve&quot;</span>] = prices_;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">auto</span>* <a class="code" href="../../db/d9e/class_dividend_barrier_option_1_1results.html">results</a> = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../d5/dea/class_quant_lib_1_1_one_asset_option_1_1results.html">OneAssetOption::results</a>*<span class="keyword">&gt;</span>(r);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        setGridLimits();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        initializeInitialCondition();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        initializeOperator();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        initializeBoundaryConditions();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        initializeStepCondition();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="../../dc/d6d/class_quant_lib_1_1_finite_difference_model.html">FiniteDifferenceModel</a>&lt;<a class="code" href="../../d1/d40/class_quant_lib_1_1_parallel_evolver.html">ParallelEvolver</a>&lt;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    Scheme&lt;TridiagonalOperator&gt; &gt; &gt; model_type;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">typename</span> model_type::operator_type operatorSet;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">typename</span> model_type::array_type arraySet;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">typename</span> model_type::bc_set bcSet;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">typename</span> model_type::condition_type conditionSet;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        prices_ = intrinsicValues_;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        controlPrices_ = intrinsicValues_;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        controlOperator_ = finiteDifferenceOperator_;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        controlBCs_[0] = BCs_[0];</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        controlBCs_[1] = BCs_[1];</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        operatorSet.push_back(finiteDifferenceOperator_);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        operatorSet.push_back(controlOperator_);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        arraySet.push_back(prices_.values());</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        arraySet.push_back(controlPrices_.values());</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        bcSet.push_back(BCs_);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        bcSet.push_back(controlBCs_);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        conditionSet.push_back(stepCondition_);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        conditionSet.push_back(ext::shared_ptr&lt;StandardStepCondition&gt;(</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                                   <span class="keyword">new</span> <a class="code" href="../../d6/dc2/class_quant_lib_1_1_null_condition.html">NullCondition&lt;Array&gt;</a>));</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        model_type model(operatorSet, bcSet);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        model.rollback(arraySet, getResidualTime(),</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                       0.0, timeSteps_, conditionSet);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        prices_.values() = arraySet[0];</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        controlPrices_.values() = arraySet[1];</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        ext::shared_ptr&lt;StrikedTypePayoff&gt; striked_payoff =</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            ext::dynamic_pointer_cast&lt;StrikedTypePayoff&gt;(payoff_);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        QL_REQUIRE(striked_payoff, <span class="stringliteral">&quot;non-striked payoff given&quot;</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> variance =</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            process_-&gt;blackVolatility()-&gt;blackVariance(</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                     exerciseDate_, striked_payoff-&gt;strike());</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">DiscountFactor</a> dividendDiscount =</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            process_-&gt;dividendYield()-&gt;discount(exerciseDate_);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">DiscountFactor</a> riskFreeDiscount =</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            process_-&gt;riskFreeRate()-&gt;discount(exerciseDate_);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spot = process_-&gt;stateVariable()-&gt;value();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> forwardPrice = spot * dividendDiscount / riskFreeDiscount;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="../../de/dac/class_quant_lib_1_1_black_calculator.html">BlackCalculator</a> black(striked_payoff, forwardPrice,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                              std::sqrt(variance), riskFreeDiscount);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="../../db/d9e/class_dividend_barrier_option_1_1results.html">results</a>-&gt;value = prices_.valueAtCenter()</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            - controlPrices_.valueAtCenter()</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            + black.<a class="code" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc">value</a>();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="../../db/d9e/class_dividend_barrier_option_1_1results.html">results</a>-&gt;delta = prices_.firstDerivativeAtCenter()</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            - controlPrices_.firstDerivativeAtCenter()</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            + black.<a class="code" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a1ce2edf271b7df5907ea9a3b100383fe">delta</a>(spot);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="../../db/d9e/class_dividend_barrier_option_1_1results.html">results</a>-&gt;gamma = prices_.secondDerivativeAtCenter()</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            - controlPrices_.secondDerivativeAtCenter()</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            + black.<a class="code" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a57565309e7b2cbfe856209958c63cfa5">gamma</a>(spot);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="../../db/d9e/class_dividend_barrier_option_1_1results.html">results</a>-&gt;additionalResults[<span class="stringliteral">&quot;priceCurve&quot;</span>] = prices_;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_black_calculator_html"><div class="ttname"><a href="../../de/dac/class_quant_lib_1_1_black_calculator.html">QuantLib::BlackCalculator</a></div><div class="ttdoc">Black 1976 calculator class.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d90/blackcalculator_8hpp_source.html#l00037">blackcalculator.hpp:37</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_f_d_step_condition_engine_html_ab88681c2339de3e010c4e3fd219517e2"><div class="ttname"><a href="../../d3/d56/class_quant_lib_1_1_f_d_step_condition_engine.html#ab88681c2339de3e010c4e3fd219517e2">QuantLib::FDStepConditionEngine::controlOperator_</a></div><div class="ttdeci">TridiagonalOperator controlOperator_</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de5/fdstepconditionengine_8hpp_source.html#l00050">fdstepconditionengine.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_f_d_step_condition_engine_html_a68d5c67c88c1a217f21a0dbf253abaf4"><div class="ttname"><a href="../../d3/d56/class_quant_lib_1_1_f_d_step_condition_engine.html#a68d5c67c88c1a217f21a0dbf253abaf4">QuantLib::FDStepConditionEngine::prices_</a></div><div class="ttdeci">SampledCurve prices_</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de5/fdstepconditionengine_8hpp_source.html#l00049">fdstepconditionengine.hpp:49</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_tridiagonal_operator_html"><div class="ttname"><a href="../../db/d06/class_quant_lib_1_1_tridiagonal_operator.html">QuantLib::TridiagonalOperator</a></div><div class="ttdoc">Base implementation for tridiagonal operator.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcb/tridiagonaloperator_8hpp_source.html#l00042">tridiagonaloperator.hpp:42</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_f_d_vanilla_engine_html"><div class="ttname"><a href="../../d5/d5e/class_quant_lib_1_1_f_d_vanilla_engine.html">QuantLib::FDVanillaEngine</a></div><div class="ttdoc">Finite-differences pricing engine for BSM one asset options.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dbd/fdvanillaengine_8hpp_source.html#l00046">fdvanillaengine.hpp:46</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_f_d_vanilla_engine_html"><div class="ttname"><a href="../../d5/d5e/class_quant_lib_1_1_f_d_vanilla_engine.html">QuantLib::FDVanillaEngine</a></div><div class="ttdoc">Finite-differences pricing engine for BSM one asset options.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dbd/fdvanillaengine_8hpp_source.html#l00047">fdvanillaengine.hpp:47</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_f_d_step_condition_engine_html_a9f76ac719862b1c13f0fd778aaa8ba60"><div class="ttname"><a href="../../d3/d56/class_quant_lib_1_1_f_d_step_condition_engine.html#a9f76ac719862b1c13f0fd778aaa8ba60">QuantLib::FDStepConditionEngine::calculate</a></div><div class="ttdeci">virtual void calculate(PricingEngine::results *) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de5/fdstepconditionengine_8hpp_source.html#l00061">fdstepconditionengine.hpp:61</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_null_condition_html"><div class="ttname"><a href="../../d6/dc2/class_quant_lib_1_1_null_condition.html">QuantLib::NullCondition</a></div><div class="ttdoc">null step condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0a/stepcondition_8hpp_source.html#l00126">stepcondition.hpp:126</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_f_d_step_condition_engine_html_afd440604ad7e7a187d1bb72170eb602e"><div class="ttname"><a href="../../d3/d56/class_quant_lib_1_1_f_d_step_condition_engine.html#afd440604ad7e7a187d1bb72170eb602e">QuantLib::FDStepConditionEngine::initializeStepCondition</a></div><div class="ttdeci">virtual void initializeStepCondition() const =0</div></div>
@@ -232,14 +232,14 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_f_d_step_condition_engine_html_a4d13291612f90dd1b2d60f8251ae3569"><div class="ttname"><a href="../../d3/d56/class_quant_lib_1_1_f_d_step_condition_engine.html#a4d13291612f90dd1b2d60f8251ae3569">QuantLib::FDStepConditionEngine::controlPrices_</a></div><div class="ttdeci">SampledCurve controlPrices_</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de5/fdstepconditionengine_8hpp_source.html#l00052">fdstepconditionengine.hpp:52</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_black_calculator_html_a1ce2edf271b7df5907ea9a3b100383fe"><div class="ttname"><a href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a1ce2edf271b7df5907ea9a3b100383fe">QuantLib::BlackCalculator::delta</a></div><div class="ttdeci">virtual Real delta(Real spot) const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5b/blackcalculator_8cpp_source.html#l00202">blackcalculator.cpp:202</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pricing_engine_1_1results_html"><div class="ttname"><a href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">QuantLib::PricingEngine::results</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcc/pricingengine_8hpp_source.html#l00051">pricingengine.hpp:51</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_finite_difference_model_html"><div class="ttname"><a href="../../dc/d6d/class_quant_lib_1_1_finite_difference_model.html">QuantLib::FiniteDifferenceModel</a></div><div class="ttdoc">Generic finite difference model.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8c/finitedifferencemodel_8hpp_source.html#l00036">finitedifferencemodel.hpp:36</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_finite_difference_model_html"><div class="ttname"><a href="../../dc/d6d/class_quant_lib_1_1_finite_difference_model.html">QuantLib::FiniteDifferenceModel</a></div><div class="ttdoc">Generic finite difference model.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8c/finitedifferencemodel_8hpp_source.html#l00037">finitedifferencemodel.hpp:37</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_sampled_curve_html"><div class="ttname"><a href="../../da/d78/class_quant_lib_1_1_sampled_curve.html">QuantLib::SampledCurve</a></div><div class="ttdoc">This class contains a sampled curve.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d5d/sampledcurve_8hpp_source.html#l00035">sampledcurve.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_black_calculator_html_a72887400b9a4d1ba185b887b84876cdc"><div class="ttname"><a href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc">QuantLib::BlackCalculator::value</a></div><div class="ttdeci">Real value() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5b/blackcalculator_8cpp_source.html#l00197">blackcalculator.cpp:197</a></div></div>
 <div class="ttc" id="agroup__types_html_ga642a971a0bcbbd2fb26c35e1a06e5761"><div class="ttname"><a href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">QuantLib::DiscountFactor</a></div><div class="ttdeci">Real DiscountFactor</div><div class="ttdoc">discount factor between dates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00066">types.hpp:66</a></div></div>
 <div class="ttc" id="aclass_dividend_barrier_option_1_1results_html"><div class="ttname"><a href="../../db/d9e/class_dividend_barrier_option_1_1results.html">results</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_f_d_step_condition_engine_html_a1503ff7e0e2cf51e0f159ba5cbeb9937"><div class="ttname"><a href="../../d3/d56/class_quant_lib_1_1_f_d_step_condition_engine.html#a1503ff7e0e2cf51e0f159ba5cbeb9937">QuantLib::FDStepConditionEngine::FDStepConditionEngine</a></div><div class="ttdeci">FDStepConditionEngine(const ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;process, Size timeSteps, Size gridPoints, bool timeDependent=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de5/fdstepconditionengine_8hpp_source.html#l00041">fdstepconditionengine.hpp:41</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_one_asset_option_1_1results_html"><div class="ttname"><a href="../../d5/dea/class_quant_lib_1_1_one_asset_option_1_1results.html">QuantLib::OneAssetOption::results</a></div><div class="ttdoc">Results from single-asset option calculation</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2b/oneassetoption_8hpp_source.html#l00068">oneassetoption.hpp:70</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_one_asset_option_1_1results_html"><div class="ttname"><a href="../../d5/dea/class_quant_lib_1_1_one_asset_option_1_1results.html">QuantLib::OneAssetOption::results</a></div><div class="ttdoc">Results from single-asset option calculation</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2b/oneassetoption_8hpp_source.html#l00069">oneassetoption.hpp:71</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->

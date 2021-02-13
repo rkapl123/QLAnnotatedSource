@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/exoticoptions/analyticsimplechooserengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -111,22 +112,23 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html">   36</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html">AnalyticSimpleChooserEngine</a> : <span class="keyword">public</span> <a class="code" href="../../d9/d16/class_quant_lib_1_1_simple_chooser_option_1_1engine.html">SimpleChooserOption::engine</a> {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#a3efb357e9af08cf4750199c900e4087a">AnalyticSimpleChooserEngine</a>(</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">const</span> ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;&amp; process);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   42</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    };</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#a66c3b20b24b8127eba3257f2ab9b6efe">AnalyticSimpleChooserEngine</a>(</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; process);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   43</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_simple_chooser_option_1_1engine_html"><div class="ttname"><a href="../../d9/d16/class_quant_lib_1_1_simple_chooser_option_1_1engine.html">QuantLib::SimpleChooserOption::engine</a></div><div class="ttdoc">Simple chooser option engine base class.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df1/simplechooseroption_8hpp_source.html#l00059">simplechooseroption.hpp:61</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_simple_chooser_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::AnalyticSimpleChooserEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d51/analyticsimplechooserengine_8hpp_source.html#l00042">analyticsimplechooserengine.hpp:42</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_simple_chooser_option_1_1engine_html"><div class="ttname"><a href="../../d9/d16/class_quant_lib_1_1_simple_chooser_option_1_1engine.html">QuantLib::SimpleChooserOption::engine</a></div><div class="ttdoc">Simple chooser option engine base class.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df1/simplechooseroption_8hpp_source.html#l00060">simplechooseroption.hpp:62</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_simple_chooser_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::AnalyticSimpleChooserEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d51/analyticsimplechooserengine_8hpp_source.html#l00043">analyticsimplechooserengine.hpp:43</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_simple_chooser_engine_html"><div class="ttname"><a href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html">QuantLib::AnalyticSimpleChooserEngine</a></div><div class="ttdoc">Pricing engine for European Simple Chooser option.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d51/analyticsimplechooserengine_8hpp_source.html#l00036">analyticsimplechooserengine.hpp:36</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_simple_chooser_engine_html_a3efb357e9af08cf4750199c900e4087a"><div class="ttname"><a href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#a3efb357e9af08cf4750199c900e4087a">QuantLib::AnalyticSimpleChooserEngine::AnalyticSimpleChooserEngine</a></div><div class="ttdeci">AnalyticSimpleChooserEngine(const ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;process)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd9/analyticsimplechooserengine_8cpp_source.html#l00027">analyticsimplechooserengine.cpp:27</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_simple_chooser_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::AnalyticSimpleChooserEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd9/analyticsimplechooserengine_8cpp_source.html#l00033">analyticsimplechooserengine.cpp:33</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_simple_chooser_engine_html_a66c3b20b24b8127eba3257f2ab9b6efe"><div class="ttname"><a href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#a66c3b20b24b8127eba3257f2ab9b6efe">QuantLib::AnalyticSimpleChooserEngine::AnalyticSimpleChooserEngine</a></div><div class="ttdeci">AnalyticSimpleChooserEngine(ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd9/analyticsimplechooserengine_8cpp_source.html#l00028">analyticsimplechooserengine.cpp:28</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_simple_chooser_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d5/dfd/class_quant_lib_1_1_analytic_simple_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::AnalyticSimpleChooserEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd9/analyticsimplechooserengine_8cpp_source.html#l00034">analyticsimplechooserengine.cpp:34</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

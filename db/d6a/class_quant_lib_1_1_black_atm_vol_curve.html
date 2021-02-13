@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: BlackAtmVolCurve Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -154,8 +155,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3eee3278ff50e14cd7d0974a4bbc034c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#a3eee3278ff50e14cd7d0974a4bbc034c">BlackAtmVolCurve</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">settlementDays</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;, <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> bdc=<a class="el" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18">Following</a>, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
 <tr class="memdesc:a3eee3278ff50e14cd7d0974a4bbc034c"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the reference date based on the global evaluation date  <a href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#a3eee3278ff50e14cd7d0974a4bbc034c">More...</a><br /></td></tr>
 <tr class="separator:a3eee3278ff50e14cd7d0974a4bbc034c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a925518cec21ed7df88b85bfa905854fd"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#a925518cec21ed7df88b85bfa905854fd">~BlackAtmVolCurve</a> ()</td></tr>
-<tr class="separator:a925518cec21ed7df88b85bfa905854fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8637a0b1912de25b9d5386aa53465be8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#a8637a0b1912de25b9d5386aa53465be8">~BlackAtmVolCurve</a> () override=default</td></tr>
+<tr class="separator:a8637a0b1912de25b9d5386aa53465be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Black at-the-money spot volatility</div></td></tr>
 <tr class="memitem:a19f411978a85d50e6e26875e5179ec5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#a19f411978a85d50e6e26875e5179ec5d">atmVol</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;optionTenor, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=false) const</td></tr>
 <tr class="memdesc:a19f411978a85d50e6e26875e5179ec5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">spot at-the-money volatility  <a href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#a19f411978a85d50e6e26875e5179ec5d">More...</a><br /></td></tr>
@@ -200,17 +201,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a50d3c0b68286f6b64878e8c785822805 inherit pub_methods_class_quant_lib_1_1_volatility_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">the maximum strike for which the term structure can return vols  <a href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#a50d3c0b68286f6b64878e8c785822805">More...</a><br /></td></tr>
 <tr class="separator:a50d3c0b68286f6b64878e8c785822805 inherit pub_methods_class_quant_lib_1_1_volatility_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_term_structure"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_term_structure')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html">TermStructure</a></td></tr>
-<tr class="memitem:a4a8e0f324391a12454f11f5f5d5e66e8 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a4a8e0f324391a12454f11f5f5d5e66e8">TermStructure</a> (const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
-<tr class="memdesc:a4a8e0f324391a12454f11f5f5d5e66e8 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a4a8e0f324391a12454f11f5f5d5e66e8">More...</a><br /></td></tr>
-<tr class="separator:a4a8e0f324391a12454f11f5f5d5e66e8 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44918f70ab345cad67a287d46641f20f inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a44918f70ab345cad67a287d46641f20f">TermStructure</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a">referenceDate</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f">calendar</a>=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
-<tr class="memdesc:a44918f70ab345cad67a287d46641f20f inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize with a fixed reference date  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a44918f70ab345cad67a287d46641f20f">More...</a><br /></td></tr>
-<tr class="separator:a44918f70ab345cad67a287d46641f20f inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab72309c6d49bd4b6dc5b9ed09b67c7b9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ab72309c6d49bd4b6dc5b9ed09b67c7b9">TermStructure</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">settlementDays</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
-<tr class="memdesc:ab72309c6d49bd4b6dc5b9ed09b67c7b9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the reference date based on the global evaluation date  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ab72309c6d49bd4b6dc5b9ed09b67c7b9">More...</a><br /></td></tr>
-<tr class="separator:ab72309c6d49bd4b6dc5b9ed09b67c7b9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cd56b3d79445a9c5e72fbc0ddd4d201 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7cd56b3d79445a9c5e72fbc0ddd4d201">~TermStructure</a> ()</td></tr>
-<tr class="separator:a7cd56b3d79445a9c5e72fbc0ddd4d201 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a8af4eb53fd6dc79080752fccf3cfa9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7a8af4eb53fd6dc79080752fccf3cfa9">TermStructure</a> (<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
+<tr class="memdesc:a7a8af4eb53fd6dc79080752fccf3cfa9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7a8af4eb53fd6dc79080752fccf3cfa9">More...</a><br /></td></tr>
+<tr class="separator:a7a8af4eb53fd6dc79080752fccf3cfa9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f529896d168540176e50f5323beea0 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a39f529896d168540176e50f5323beea0">TermStructure</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a">referenceDate</a>, <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f">calendar</a>=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
+<tr class="memdesc:a39f529896d168540176e50f5323beea0 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize with a fixed reference date  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a39f529896d168540176e50f5323beea0">More...</a><br /></td></tr>
+<tr class="separator:a39f529896d168540176e50f5323beea0 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0943142f14acf195d50b98ad93423c5e inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a0943142f14acf195d50b98ad93423c5e">TermStructure</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">settlementDays</a>, <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>, <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
+<tr class="memdesc:a0943142f14acf195d50b98ad93423c5e inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the reference date based on the global evaluation date  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a0943142f14acf195d50b98ad93423c5e">More...</a><br /></td></tr>
+<tr class="separator:a0943142f14acf195d50b98ad93423c5e inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acc06bd66a1578d714c5afc5493e053 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7acc06bd66a1578d714c5afc5493e053">~TermStructure</a> () override=default</td></tr>
+<tr class="separator:a7acc06bd66a1578d714c5afc5493e053 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad49654ea33055b03f8666910acc13880 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880">dayCounter</a> () const</td></tr>
 <tr class="memdesc:ad49654ea33055b03f8666910acc13880 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">the day counter used for date/time conversion  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880">More...</a><br /></td></tr>
 <tr class="separator:ad49654ea33055b03f8666910acc13880 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,11 +233,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a32e050c75a34ceee6f0633bdb799a080 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">settlementDays</a> () const</td></tr>
 <tr class="memdesc:a32e050c75a34ceee6f0633bdb799a080 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">the settlementDays used for reference date calculation  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">More...</a><br /></td></tr>
 <tr class="separator:a32e050c75a34ceee6f0633bdb799a080 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5c54df7ed3b930268c8d7752c101725 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
-<tr class="separator:ac5c54df7ed3b930268c8d7752c101725 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
+<tr class="separator:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
-<tr class="memitem:abbd00a8000bd3ee5cd7e35aeb436f937 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#abbd00a8000bd3ee5cd7e35aeb436f937">Observer</a> ()</td></tr>
-<tr class="separator:abbd00a8000bd3ee5cd7e35aeb436f937 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a52ef9232283da6f842e4574afeb854a0">Observer</a> ()=default</td></tr>
+<tr class="separator:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#af6a9d3ca0b7f388f3b7ccb1eccf11f63">Observer</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
 <tr class="separator:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6810b3645967da11d5f5d4804d37bacc inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a6810b3645967da11d5f5d4804d37bacc">operator=</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
@@ -260,15 +261,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a522aacdd0f2408fe5e46527a6db999b4">operator=</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
 <tr class="separator:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f0b266a5d1e6ed41027d3e8c8d7ff1f inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a5f0b266a5d1e6ed41027d3e8c8d7ff1f">~Observable</a> ()</td></tr>
-<tr class="separator:a5f0b266a5d1e6ed41027d3e8c8d7ff1f inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a99f4333cda953ce3bfdc958ccea5fbf9">~Observable</a> ()=default</td></tr>
+<tr class="separator:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a> ()</td></tr>
 <tr class="separator:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_extrapolator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_extrapolator')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html">Extrapolator</a></td></tr>
-<tr class="memitem:ac799544aa04b6a67f067b21ad88147bb inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ac799544aa04b6a67f067b21ad88147bb">Extrapolator</a> ()</td></tr>
-<tr class="separator:ac799544aa04b6a67f067b21ad88147bb inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73300245f5c6c28e6b91da76454c00fb inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#a73300245f5c6c28e6b91da76454c00fb">~Extrapolator</a> ()</td></tr>
-<tr class="separator:a73300245f5c6c28e6b91da76454c00fb inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c29f9a2a9efdf12a8d81c6f74b9ed3 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ac0c29f9a2a9efdf12a8d81c6f74b9ed3">Extrapolator</a> ()=default</td></tr>
+<tr class="separator:ac0c29f9a2a9efdf12a8d81c6f74b9ed3 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d5b5a39a87eeb712a188d1929787001 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#a3d5b5a39a87eeb712a188d1929787001">~Extrapolator</a> ()=default</td></tr>
+<tr class="separator:a3d5b5a39a87eeb712a188d1929787001 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae60e793a77f44a9c022b103458fa993c inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ae60e793a77f44a9c022b103458fa993c">enableExtrapolation</a> (<a class="el" href="../../d9/db9/classbool.html">bool</a> b=true)</td></tr>
 <tr class="memdesc:ae60e793a77f44a9c022b103458fa993c inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable extrapolation in subsequent calls  <a href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ae60e793a77f44a9c022b103458fa993c">More...</a><br /></td></tr>
 <tr class="separator:ae60e793a77f44a9c022b103458fa993c inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -310,9 +311,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ae98429250f6997df7b87f4b37454609e inherit pub_types_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">typedef set_type::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#ae98429250f6997df7b87f4b37454609e">iterator</a></td></tr>
 <tr class="separator:ae98429250f6997df7b87f4b37454609e inherit pub_types_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_quant_lib_1_1_term_structure"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_quant_lib_1_1_term_structure')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html">TermStructure</a></td></tr>
-<tr class="memitem:a3cfce9cb19de6f0604adee64b6d80a35 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a3cfce9cb19de6f0604adee64b6d80a35">moving_</a></td></tr>
+<tr class="memitem:a3cfce9cb19de6f0604adee64b6d80a35 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a3cfce9cb19de6f0604adee64b6d80a35">moving_</a> = false</td></tr>
 <tr class="separator:a3cfce9cb19de6f0604adee64b6d80a35 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56cd8ee45c3477740e0429f98758c935 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a56cd8ee45c3477740e0429f98758c935">updated_</a></td></tr>
+<tr class="memitem:a56cd8ee45c3477740e0429f98758c935 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a56cd8ee45c3477740e0429f98758c935">updated_</a> = true</td></tr>
 <tr class="separator:a56cd8ee45c3477740e0429f98758c935 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a021eab7f1f44c1c71b8dfd29b9c4864b inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a021eab7f1f44c1c71b8dfd29b9c4864b">calendar_</a></td></tr>
 <tr class="separator:a021eab7f1f44c1c71b8dfd29b9c4864b inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -445,8 +446,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a925518cec21ed7df88b85bfa905854fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a925518cec21ed7df88b85bfa905854fd">&#9670;&nbsp;</a></span>~BlackAtmVolCurve()</h2>
+<a id="a8637a0b1912de25b9d5386aa53465be8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8637a0b1912de25b9d5386aa53465be8">&#9670;&nbsp;</a></span>~BlackAtmVolCurve()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -455,7 +456,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~<a class="el" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html">BlackAtmVolCurve</a> </td>
+          <td class="memname">~<a class="el" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html">BlackAtmVolCurve</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -463,12 +464,10 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../de/d3f/blackatmvolcurve_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../de/d3f/blackatmvolcurve_8hpp_source.html">blackatmvolcurve.hpp</a>.</p>
 
 </div>
 </div>
@@ -509,29 +508,28 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve_a19f411978a85d50e6e26875e5179ec5d_cgraph.png" border="0" usemap="#adb/d6a/class_quant_lib_1_1_black_atm_vol_curve_a19f411978a85d50e6e26875e5179ec5d_cgraph" alt=""/></div>
 <map name="db/d6a/class_quant_lib_1_1_black_atm_vol_curve_a19f411978a85d50e6e26875e5179ec5d_cgraph" id="adb/d6a/class_quant_lib_1_1_black_atm_vol_curve_a19f411978a85d50e6e26875e5179ec5d_cgraph">
-<area shape="rect" title="spot at&#45;the&#45;money volatility" alt="" coords="5,264,68,291"/>
-<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#af3be26fd18355b452218cf51e28ba5fd" title="period/date conversion" alt="" coords="116,257,323,298"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="655,193,789,234"/>
-<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#adb162cdfeed00aeb62b8cac19f5d0948" title="the business day convention used in tenor to date conversion" alt="" coords="371,227,592,269"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="640,282,804,323"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="399,345,563,386"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1060,163,1193,205"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1297,222,1431,263"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="852,281,985,322"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="852,163,985,205"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1271,145,1457,172"/>
+<area shape="rect" title="spot at&#45;the&#45;money volatility" alt="" coords="5,224,68,251"/>
+<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#af3be26fd18355b452218cf51e28ba5fd" title="period/date conversion" alt="" coords="116,217,323,258"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="655,129,789,170"/>
+<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#adb162cdfeed00aeb62b8cac19f5d0948" title="the business day convention used in tenor to date conversion" alt="" coords="371,311,592,353"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="640,194,804,235"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="399,246,563,287"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1060,98,1193,139"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1297,210,1431,251"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="852,161,985,202"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="852,95,985,137"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1271,107,1457,133"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1508,56,1661,83"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1713,5,1892,32"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="1944,56,2087,83"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1725,157,1880,184"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1725,208,1880,235"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1709,107,1896,133"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2135,31,2311,57"/>
 <area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1518,259,1651,301"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1033,351,1220,377"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#aff49fc2cda4491ff4457ca481bb8edf9" title="Default constructor returning a null date." alt="" coords="1292,376,1436,403"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1268,427,1460,453"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="654,347,790,389"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="640,413,804,454"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1033,277,1220,304"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1268,276,1460,303"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="654,259,790,301"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="640,325,804,366"/>
 </map>
 </div>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -584,33 +582,32 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve_abfb8263a22525a517536d56ad8c18f84_cgraph.png" border="0" usemap="#adb/d6a/class_quant_lib_1_1_black_atm_vol_curve_abfb8263a22525a517536d56ad8c18f84_cgraph" alt=""/></div>
 <map name="db/d6a/class_quant_lib_1_1_black_atm_vol_curve_abfb8263a22525a517536d56ad8c18f84_cgraph" id="adb/d6a/class_quant_lib_1_1_black_atm_vol_curve_abfb8263a22525a517536d56ad8c18f84_cgraph">
-<area shape="rect" title="spot at&#45;the&#45;money volatility" alt="" coords="5,199,68,225"/>
-<area shape="rect" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#a19f411978a85d50e6e26875e5179ec5d" title="spot at&#45;the&#45;money volatility" alt="" coords="167,159,229,185"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="116,230,280,271"/>
-<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#af3be26fd18355b452218cf51e28ba5fd" title="period/date conversion" alt="" coords="328,131,535,173"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="867,193,1001,234"/>
-<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#adb162cdfeed00aeb62b8cac19f5d0948" title="the business day convention used in tenor to date conversion" alt="" coords="583,73,804,114"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="852,127,1016,169"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="611,253,775,294"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1272,163,1405,205"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1509,222,1643,263"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="1064,281,1197,322"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="1064,163,1197,205"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1483,145,1669,172"/>
+<area shape="rect" title="spot at&#45;the&#45;money volatility" alt="" coords="5,284,68,311"/>
+<area shape="rect" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#a19f411978a85d50e6e26875e5179ec5d" title="spot at&#45;the&#45;money volatility" alt="" coords="167,239,229,265"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="116,322,280,363"/>
+<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#af3be26fd18355b452218cf51e28ba5fd" title="period/date conversion" alt="" coords="328,217,535,258"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="867,129,1001,170"/>
+<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#adb162cdfeed00aeb62b8cac19f5d0948" title="the business day convention used in tenor to date conversion" alt="" coords="583,217,804,258"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="852,199,1016,241"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="611,282,775,323"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1272,98,1405,139"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1509,210,1643,251"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="1064,161,1197,202"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="1064,95,1197,137"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1483,107,1669,133"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1720,56,1873,83"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1925,5,2104,32"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="2156,56,2299,83"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1937,157,2092,184"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1937,208,2092,235"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1921,107,2108,133"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2347,31,2523,57"/>
 <area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1730,259,1863,301"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1245,351,1432,377"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#aff49fc2cda4491ff4457ca481bb8edf9" title="Default constructor returning a null date." alt="" coords="1504,376,1648,403"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1480,427,1672,453"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="866,258,1002,299"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="852,323,1016,365"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="349,197,513,238"/>
-<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="356,262,507,303"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1245,277,1432,304"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1480,276,1672,303"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="866,275,1002,317"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="852,341,1016,382"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="349,338,513,379"/>
+<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="356,403,507,445"/>
 </map>
 </div>
 
@@ -652,31 +649,30 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve_a2fb54f97a1e2045749280c3bfc2af7c0_cgraph.png" border="0" usemap="#adb/d6a/class_quant_lib_1_1_black_atm_vol_curve_a2fb54f97a1e2045749280c3bfc2af7c0_cgraph" alt=""/></div>
 <map name="db/d6a/class_quant_lib_1_1_black_atm_vol_curve_a2fb54f97a1e2045749280c3bfc2af7c0_cgraph" id="adb/d6a/class_quant_lib_1_1_black_atm_vol_curve_a2fb54f97a1e2045749280c3bfc2af7c0_cgraph">
-<area shape="rect" title="spot at&#45;the&#45;money volatility" alt="" coords="5,229,68,256"/>
-<area shape="rect" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#a3e805d2195b83e2011386f39514d6100" title="spot at&#45;the&#45;money volatility calculation" alt="" coords="155,200,241,227"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#abbff679b6600c49cafed098870f94376" title="date&#45;range check" alt="" coords="116,251,280,293"/>
-<area shape="rect" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#a323f875818fddd62a1c56c25ddaee418" title="tells whether extrapolation is enabled" alt="" coords="334,186,486,227"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a9d5c437961b8f9e30cffb723777ed7c6" title="the latest date for which the curve can return values" alt="" coords="328,251,492,293"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="328,317,492,358"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="555,218,689,259"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="540,283,704,325"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="554,349,690,390"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="540,414,704,455"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="960,163,1093,205"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1197,247,1331,289"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="752,306,885,347"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="752,189,885,230"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1171,145,1357,172"/>
+<area shape="rect" title="spot at&#45;the&#45;money volatility" alt="" coords="5,139,68,165"/>
+<area shape="rect" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#a3e805d2195b83e2011386f39514d6100" title="spot at&#45;the&#45;money volatility calculation" alt="" coords="155,109,241,136"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#abbff679b6600c49cafed098870f94376" title="date&#45;range check" alt="" coords="116,161,280,202"/>
+<area shape="rect" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#a323f875818fddd62a1c56c25ddaee418" title="tells whether extrapolation is enabled" alt="" coords="334,95,486,137"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a9d5c437961b8f9e30cffb723777ed7c6" title="the latest date for which the curve can return values" alt="" coords="328,161,492,202"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="328,226,492,267"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="555,127,689,169"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="540,193,704,234"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="554,258,690,299"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="540,323,704,365"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="960,98,1093,139"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1197,210,1331,251"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="752,161,885,202"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="752,95,885,137"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1171,107,1357,133"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1408,56,1561,83"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1613,5,1792,32"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="1844,56,1987,83"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1625,157,1780,184"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1625,208,1780,235"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1609,107,1796,133"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2035,31,2211,57"/>
 <area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1418,259,1551,301"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="933,351,1120,377"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#aff49fc2cda4491ff4457ca481bb8edf9" title="Default constructor returning a null date." alt="" coords="1192,376,1336,403"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1168,427,1360,453"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="933,277,1120,304"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1168,276,1360,303"/>
 </map>
 </div>
 
@@ -718,29 +714,28 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve_ae1168c8ddc8a65860c9c611297d08c7d_cgraph.png" border="0" usemap="#adb/d6a/class_quant_lib_1_1_black_atm_vol_curve_ae1168c8ddc8a65860c9c611297d08c7d_cgraph" alt=""/></div>
 <map name="db/d6a/class_quant_lib_1_1_black_atm_vol_curve_ae1168c8ddc8a65860c9c611297d08c7d_cgraph" id="adb/d6a/class_quant_lib_1_1_black_atm_vol_curve_ae1168c8ddc8a65860c9c611297d08c7d_cgraph">
-<area shape="rect" title="spot at&#45;the&#45;money variance" alt="" coords="5,264,100,291"/>
-<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#af3be26fd18355b452218cf51e28ba5fd" title="period/date conversion" alt="" coords="148,257,355,298"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="687,193,821,234"/>
-<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#adb162cdfeed00aeb62b8cac19f5d0948" title="the business day convention used in tenor to date conversion" alt="" coords="403,227,624,269"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="672,282,836,323"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="431,345,595,386"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1092,163,1225,205"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1329,222,1463,263"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="884,281,1017,322"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="884,163,1017,205"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1303,145,1489,172"/>
+<area shape="rect" title="spot at&#45;the&#45;money variance" alt="" coords="5,224,100,251"/>
+<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#af3be26fd18355b452218cf51e28ba5fd" title="period/date conversion" alt="" coords="148,217,355,258"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="687,129,821,170"/>
+<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#adb162cdfeed00aeb62b8cac19f5d0948" title="the business day convention used in tenor to date conversion" alt="" coords="403,311,624,353"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="672,194,836,235"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="431,246,595,287"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1092,98,1225,139"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1329,210,1463,251"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="884,161,1017,202"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="884,95,1017,137"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1303,107,1489,133"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1540,56,1693,83"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1745,5,1924,32"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="1976,56,2119,83"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1757,157,1912,184"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1757,208,1912,235"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1741,107,1928,133"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2167,31,2343,57"/>
 <area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1550,259,1683,301"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1065,351,1252,377"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#aff49fc2cda4491ff4457ca481bb8edf9" title="Default constructor returning a null date." alt="" coords="1324,376,1468,403"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1300,427,1492,453"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="686,347,822,389"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="672,413,836,454"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1065,277,1252,304"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1300,276,1492,303"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="686,259,822,301"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="672,325,836,366"/>
 </map>
 </div>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -794,33 +789,32 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve_ac5a8ef9d3f36dca752ec48845b3f50bb_cgraph.png" border="0" usemap="#adb/d6a/class_quant_lib_1_1_black_atm_vol_curve_ac5a8ef9d3f36dca752ec48845b3f50bb_cgraph" alt=""/></div>
 <map name="db/d6a/class_quant_lib_1_1_black_atm_vol_curve_ac5a8ef9d3f36dca752ec48845b3f50bb_cgraph" id="adb/d6a/class_quant_lib_1_1_black_atm_vol_curve_ac5a8ef9d3f36dca752ec48845b3f50bb_cgraph">
-<area shape="rect" title="spot at&#45;the&#45;money variance" alt="" coords="5,199,100,225"/>
-<area shape="rect" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#ae1168c8ddc8a65860c9c611297d08c7d" title="spot at&#45;the&#45;money variance" alt="" coords="183,159,277,185"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="148,230,312,271"/>
-<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#af3be26fd18355b452218cf51e28ba5fd" title="period/date conversion" alt="" coords="360,131,567,173"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="899,193,1033,234"/>
-<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#adb162cdfeed00aeb62b8cac19f5d0948" title="the business day convention used in tenor to date conversion" alt="" coords="615,73,836,114"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="884,127,1048,169"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="643,253,807,294"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1304,163,1437,205"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1541,222,1675,263"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="1096,281,1229,322"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="1096,163,1229,205"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1515,145,1701,172"/>
+<area shape="rect" title="spot at&#45;the&#45;money variance" alt="" coords="5,284,100,311"/>
+<area shape="rect" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#ae1168c8ddc8a65860c9c611297d08c7d" title="spot at&#45;the&#45;money variance" alt="" coords="183,239,277,265"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="148,322,312,363"/>
+<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#af3be26fd18355b452218cf51e28ba5fd" title="period/date conversion" alt="" coords="360,217,567,258"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="899,129,1033,170"/>
+<area shape="rect" href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#adb162cdfeed00aeb62b8cac19f5d0948" title="the business day convention used in tenor to date conversion" alt="" coords="615,217,836,258"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="884,199,1048,241"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="643,282,807,323"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1304,98,1437,139"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1541,210,1675,251"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="1096,161,1229,202"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="1096,95,1229,137"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1515,107,1701,133"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1752,56,1905,83"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1957,5,2136,32"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="2188,56,2331,83"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1969,157,2124,184"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1969,208,2124,235"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1953,107,2140,133"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2379,31,2555,57"/>
 <area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1762,259,1895,301"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1277,351,1464,377"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#aff49fc2cda4491ff4457ca481bb8edf9" title="Default constructor returning a null date." alt="" coords="1536,376,1680,403"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1512,427,1704,453"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="898,258,1034,299"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="884,323,1048,365"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="381,197,545,238"/>
-<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="388,262,539,303"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1277,277,1464,304"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1512,276,1704,303"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="898,275,1034,317"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="884,341,1048,382"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="381,338,545,379"/>
+<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="388,403,539,445"/>
 </map>
 </div>
 
@@ -862,31 +856,30 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve_a4223612f034e298cd880f6e17aad162a_cgraph.png" border="0" usemap="#adb/d6a/class_quant_lib_1_1_black_atm_vol_curve_a4223612f034e298cd880f6e17aad162a_cgraph" alt=""/></div>
 <map name="db/d6a/class_quant_lib_1_1_black_atm_vol_curve_a4223612f034e298cd880f6e17aad162a_cgraph" id="adb/d6a/class_quant_lib_1_1_black_atm_vol_curve_a4223612f034e298cd880f6e17aad162a_cgraph">
-<area shape="rect" title="spot at&#45;the&#45;money variance" alt="" coords="5,229,100,256"/>
-<area shape="rect" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#a3f60fbe8f11376ac813a5f751d33161c" title="spot at&#45;the&#45;money variance calculation" alt="" coords="171,200,289,227"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#abbff679b6600c49cafed098870f94376" title="date&#45;range check" alt="" coords="148,251,312,293"/>
-<area shape="rect" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#a323f875818fddd62a1c56c25ddaee418" title="tells whether extrapolation is enabled" alt="" coords="366,186,518,227"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a9d5c437961b8f9e30cffb723777ed7c6" title="the latest date for which the curve can return values" alt="" coords="360,251,524,293"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="360,317,524,358"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="587,218,721,259"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="572,283,736,325"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="586,349,722,390"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="572,414,736,455"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="992,163,1125,205"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1229,247,1363,289"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="784,306,917,347"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="784,189,917,230"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1203,145,1389,172"/>
+<area shape="rect" title="spot at&#45;the&#45;money variance" alt="" coords="5,139,100,165"/>
+<area shape="rect" href="../../db/d6a/class_quant_lib_1_1_black_atm_vol_curve.html#a3f60fbe8f11376ac813a5f751d33161c" title="spot at&#45;the&#45;money variance calculation" alt="" coords="171,109,289,136"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#abbff679b6600c49cafed098870f94376" title="date&#45;range check" alt="" coords="148,161,312,202"/>
+<area shape="rect" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#a323f875818fddd62a1c56c25ddaee418" title="tells whether extrapolation is enabled" alt="" coords="366,95,518,137"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a9d5c437961b8f9e30cffb723777ed7c6" title="the latest date for which the curve can return values" alt="" coords="360,161,524,202"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="360,226,524,267"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="587,127,721,169"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="572,193,736,234"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="586,258,722,299"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="572,323,736,365"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="992,98,1125,139"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1229,210,1363,251"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="784,161,917,202"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="784,95,917,137"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1203,107,1389,133"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1440,56,1593,83"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1645,5,1824,32"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="1876,56,2019,83"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1657,157,1812,184"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1657,208,1812,235"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1641,107,1828,133"/>
 <area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2067,31,2243,57"/>
 <area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1450,259,1583,301"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="965,351,1152,377"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#aff49fc2cda4491ff4457ca481bb8edf9" title="Default constructor returning a null date." alt="" coords="1224,376,1368,403"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1200,427,1392,453"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="965,277,1152,304"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1200,276,1392,303"/>
 </map>
 </div>
 
@@ -916,7 +909,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../df/d7f/class_quant_lib_1_1_sabr_vol_surface.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">SabrVolSurface</a>, <a class="el" href="../../dc/d6d/class_quant_lib_1_1_interest_rate_vol_surface.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">InterestRateVolSurface</a>, <a class="el" href="../../d2/dc3/class_quant_lib_1_1_equity_f_x_vol_surface.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">EquityFXVolSurface</a>, <a class="el" href="../../d8/d33/class_quant_lib_1_1_black_vol_surface.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">BlackVolSurface</a>, and <a class="el" href="../../d6/d4e/class_quant_lib_1_1_abcd_atm_vol_curve.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">AbcdAtmVolCurve</a>.</p>
+<p>Reimplemented in <a class="el" href="../../df/d7f/class_quant_lib_1_1_sabr_vol_surface.html#a6fcc1b62510947fbc30b2952fff63c2d">SabrVolSurface</a>, <a class="el" href="../../dc/d6d/class_quant_lib_1_1_interest_rate_vol_surface.html#a6fcc1b62510947fbc30b2952fff63c2d">InterestRateVolSurface</a>, <a class="el" href="../../d2/dc3/class_quant_lib_1_1_equity_f_x_vol_surface.html#a6fcc1b62510947fbc30b2952fff63c2d">EquityFXVolSurface</a>, <a class="el" href="../../d8/d33/class_quant_lib_1_1_black_vol_surface.html#a6fcc1b62510947fbc30b2952fff63c2d">BlackVolSurface</a>, and <a class="el" href="../../d6/d4e/class_quant_lib_1_1_abcd_atm_vol_curve.html#a6fcc1b62510947fbc30b2952fff63c2d">AbcdAtmVolCurve</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d8d/blackatmvolcurve_8cpp_source.html#l00076">76</a> of file <a class="el" href="../../da/d8d/blackatmvolcurve_8cpp_source.html">blackatmvolcurve.cpp</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -959,7 +952,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>spot at-the-money variance calculation </p>
 
-<p>Implemented in <a class="el" href="../../d8/d33/class_quant_lib_1_1_black_vol_surface.html#a2e58867e19f6d30647160ccf0e155f0f">BlackVolSurface</a>, and <a class="el" href="../../d6/d4e/class_quant_lib_1_1_abcd_atm_vol_curve.html#a2e58867e19f6d30647160ccf0e155f0f">AbcdAtmVolCurve</a>.</p>
+<p>Implemented in <a class="el" href="../../d8/d33/class_quant_lib_1_1_black_vol_surface.html#ad4d4bef8063c5ea4c6174664db57f4b0">BlackVolSurface</a>, and <a class="el" href="../../d6/d4e/class_quant_lib_1_1_abcd_atm_vol_curve.html#ad4d4bef8063c5ea4c6174664db57f4b0">AbcdAtmVolCurve</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -1000,7 +993,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>spot at-the-money volatility calculation </p>
 
-<p>Implemented in <a class="el" href="../../d8/d33/class_quant_lib_1_1_black_vol_surface.html#a8b580ac38356b851bdcc70de81b5be5b">BlackVolSurface</a>, and <a class="el" href="../../d6/d4e/class_quant_lib_1_1_abcd_atm_vol_curve.html#a8b580ac38356b851bdcc70de81b5be5b">AbcdAtmVolCurve</a>.</p>
+<p>Implemented in <a class="el" href="../../d8/d33/class_quant_lib_1_1_black_vol_surface.html#a2825e3d0d974ba01596eddb22b983429">BlackVolSurface</a>, and <a class="el" href="../../d6/d4e/class_quant_lib_1_1_abcd_atm_vol_curve.html#a2825e3d0d974ba01596eddb22b983429">AbcdAtmVolCurve</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/vanilla Directory Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -173,17 +174,16 @@ Files</h2></td></tr>
 <tr class="memitem:dc/d9c/exponentialfittinghestonengine_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>exponentialfittinghestonengine.hpp</b> <a href="dc/d9c/exponentialfittinghestonengine_8hpp_source.html">[code]</a></td></tr>
 <tr class="memdesc:dc/d9c/exponentialfittinghestonengine_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">analytic Heston-model engine based on exponential fitting <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:d4/d86/fdamericanengine_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fdamericanengine.hpp</b> <a href="d4/d86/fdamericanengine_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:d4/d86/fdamericanengine_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finite-differences American option engine. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d2/df4/fdbatesvanillaengine_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fdbatesvanillaengine.cpp</b> <a href="d2/df4/fdbatesvanillaengine_8cpp_source.html">[code]</a></td></tr>
 <tr class="memdesc:d2/df4/fdbatesvanillaengine_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partial Integro Finite-Differences Bates vanilla option engine. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d7/d85/fdbatesvanillaengine_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fdbatesvanillaengine.hpp</b> <a href="d7/d85/fdbatesvanillaengine_8hpp_source.html">[code]</a></td></tr>
 <tr class="memdesc:d7/d85/fdbatesvanillaengine_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partial Integro Finite-Differences Bates vanilla option engine. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:d2/d42/fdbermudanengine_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fdbermudanengine.hpp</b> <a href="d2/d42/fdbermudanengine_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:d2/d42/fdbermudanengine_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">finite-difference Bermudan engine <br /></td></tr>
+<tr class="memitem:d6/ddd/fdblackscholesshoutengine_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fdblackscholesshoutengine.cpp</b> <a href="d6/ddd/fdblackscholesshoutengine_8cpp_source.html">[code]</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:da/d00/fdblackscholesshoutengine_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fdblackscholesshoutengine.hpp</b> <a href="da/d00/fdblackscholesshoutengine_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:da/d00/fdblackscholesshoutengine_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finite-Differences Black Scholes shout option engine. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d7/d60/fdblackscholesvanillaengine_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fdblackscholesvanillaengine.cpp</b> <a href="d7/d60/fdblackscholesvanillaengine_8cpp_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,20 +203,11 @@ Files</h2></td></tr>
 <tr class="memitem:df/dcc/fdconditions_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fdconditions.hpp</b> <a href="df/dcc/fdconditions_8hpp_source.html">[code]</a></td></tr>
 <tr class="memdesc:df/dcc/fdconditions_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finite-difference templates to generate engines. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:dd/d27/fddividendamericanengine_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fddividendamericanengine.hpp</b> <a href="dd/d27/fddividendamericanengine_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:dd/d27/fddividendamericanengine_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">american engine with discrete deterministic dividends <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:da/da8/fddividendengine_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fddividendengine.hpp</b> <a href="da/da8/fddividendengine_8hpp_source.html">[code]</a></td></tr>
 <tr class="memdesc:da/da8/fddividendengine_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">base engine for option with dividends <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:dc/d36/fddividendeuropeanengine_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fddividendeuropeanengine.hpp</b> <a href="dc/d36/fddividendeuropeanengine_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:dc/d36/fddividendeuropeanengine_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">finite-differences engine for European option with dividends <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:de/dae/fddividendshoutengine_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fddividendshoutengine.hpp</b> <a href="de/dae/fddividendshoutengine_8hpp_source.html">[code]</a></td></tr>
 <tr class="memdesc:de/dae/fddividendshoutengine_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">base class for shout engine with dividends <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:d2/df0/fdeuropeanengine_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fdeuropeanengine.hpp</b> <a href="d2/df0/fdeuropeanengine_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:d2/df0/fdeuropeanengine_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finite-difference European engine. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d6/d3b/fdhestonhullwhitevanillaengine_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>fdhestonhullwhitevanillaengine.cpp</b> <a href="d6/d3b/fdhestonhullwhitevanillaengine_8cpp_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>

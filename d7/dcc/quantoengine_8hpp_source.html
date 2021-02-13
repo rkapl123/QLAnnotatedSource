@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/quanto/quantoengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -104,88 +105,88 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef quantlib_quanto_engine_hpp</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define quantlib_quanto_engine_hpp</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;ql/instruments/quantovanillaoption.hpp&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;ql/processes/blackscholesprocess.hpp&gt;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;ql/termstructures/yield/quantotermstructure.hpp&gt;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;ql/instruments/payoffs.hpp&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Instr, <span class="keyword">class</span> Engine&gt;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html">   48</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html">QuantoEngine</a> :</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">public</span> <a class="code" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html">GenericEngine</a>&lt;typename Instr::arguments,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                             QuantoOptionResults&lt;typename Instr::results&gt; &gt; {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a4785c0f15884e0f99ea031cb4ed0b583">QuantoEngine</a>(</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                 <span class="keyword">const</span> ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;&amp;,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                 <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; foreignRiskFreeRate,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                 <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;BlackVolTermStructure&gt;</a>&amp; exchangeRateVolatility,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                 <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>&amp; correlation);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   59</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a115031ddc05d2c8bd162f615a6e8a4f2">   60</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a115031ddc05d2c8bd162f615a6e8a4f2">foreignRiskFreeRate_</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ad1c2bc20bc9b5f0ebc98b57b92c21bc9">   61</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;BlackVolTermStructure&gt;</a> <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ad1c2bc20bc9b5f0ebc98b57b92c21bc9">exchangeRateVolatility_</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a0bbb8459d54c70260f5dc06646c622fe">   62</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a0bbb8459d54c70260f5dc06646c622fe">correlation_</a>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    };</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;ql/instruments/payoffs.hpp&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;ql/instruments/quantovanillaoption.hpp&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;ql/processes/blackscholesprocess.hpp&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;ql/termstructures/yield/quantotermstructure.hpp&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Instr, <span class="keyword">class</span> Engine&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html">   49</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html">QuantoEngine</a> :</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">public</span> <a class="code" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html">GenericEngine</a>&lt;typename Instr::arguments,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                             QuantoOptionResults&lt;typename Instr::results&gt; &gt; {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a3609933724f1e296c0f6c9811faa6aac">QuantoEngine</a>(ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                     <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> foreignRiskFreeRate,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                     <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;BlackVolTermStructure&gt;</a> exchangeRateVolatility,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                     <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> correlation);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   60</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a115031ddc05d2c8bd162f615a6e8a4f2">   61</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a115031ddc05d2c8bd162f615a6e8a4f2">foreignRiskFreeRate_</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ad1c2bc20bc9b5f0ebc98b57b92c21bc9">   62</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;BlackVolTermStructure&gt;</a> <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ad1c2bc20bc9b5f0ebc98b57b92c21bc9">exchangeRateVolatility_</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a0bbb8459d54c70260f5dc06646c622fe">   63</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a0bbb8459d54c70260f5dc06646c622fe">correlation_</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    };</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// template definitions</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Instr, <span class="keyword">class</span> Engine&gt;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a4785c0f15884e0f99ea031cb4ed0b583">   69</a></span>&#160;    <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a4785c0f15884e0f99ea031cb4ed0b583">QuantoEngine&lt;Instr,Engine&gt;::QuantoEngine</a>(</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;             <span class="keyword">const</span> ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;&amp; process,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;             <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; foreignRiskFreeRate,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;             <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;BlackVolTermStructure&gt;</a>&amp; exchangeRateVolatility,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;             <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>&amp; correlation)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    : process_(process), foreignRiskFreeRate_(foreignRiskFreeRate),</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      exchangeRateVolatility_(exchangeRateVolatility),</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      correlation_(correlation) {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        this-&gt;<a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        this-&gt;<a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a115031ddc05d2c8bd162f615a6e8a4f2">foreignRiskFreeRate_</a>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        this-&gt;<a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ad1c2bc20bc9b5f0ebc98b57b92c21bc9">exchangeRateVolatility_</a>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        this-&gt;<a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a0bbb8459d54c70260f5dc06646c622fe">correlation_</a>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Instr, <span class="keyword">class</span> Engine&gt;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a082ff96da379d5e17436372ccb3c0972">   84</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantoEngine&lt;Instr,Engine&gt;::calculate</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">// ATM exchangeRate level needed here</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> exchangeRateATMlevel = 1.0;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">// determine strike from payoff</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        ext::shared_ptr&lt;StrikedTypePayoff&gt; payoff =</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            ext::dynamic_pointer_cast&lt;StrikedTypePayoff&gt;(</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                this-&gt;arguments_.payoff);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        QL_REQUIRE(payoff, <span class="stringliteral">&quot;non-striked payoff given&quot;</span>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike = payoff-&gt;strike();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> spot = process_-&gt;stateVariable();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        QL_REQUIRE(spot-&gt;value() &gt; 0.0, <span class="stringliteral">&quot;negative or null underlying&quot;</span>);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> riskFreeRate = process_-&gt;riskFreeRate();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="comment">// dividendTS needs modification</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> dividendYield(</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            ext::shared_ptr&lt;YieldTermStructure&gt;(</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keyword">new</span> <a class="code" href="../../d4/d8e/class_quant_lib_1_1_quanto_term_structure.html">QuantoTermStructure</a>(process_-&gt;dividendYield(),</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                                        process_-&gt;riskFreeRate(),</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                        foreignRiskFreeRate_,</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                                        process_-&gt;blackVolatility(),</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                        strike,</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                                        exchangeRateVolatility_,</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                                        exchangeRateATMlevel,</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                        correlation_-&gt;value())));</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;BlackVolTermStructure&gt;</a> blackVol = process_-&gt;blackVolatility();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; quantoProcess(</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                  <span class="keyword">new</span> <a class="code" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html">GeneralizedBlackScholesProcess</a>(spot, dividendYield,</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                                     riskFreeRate, blackVol));</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        ext::shared_ptr&lt;Engine&gt; originalEngine(<span class="keyword">new</span> Engine(quantoProcess));</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        originalEngine-&gt;reset();</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keyword">typename</span> Instr::arguments* originalArguments =</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keyword">dynamic_cast&lt;</span>typename Instr::arguments*<span class="keyword">&gt;</span>(</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                                              originalEngine-&gt;getArguments());</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// template definitions</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Instr, <span class="keyword">class</span> Engine&gt;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a3609933724f1e296c0f6c9811faa6aac">   70</a></span>&#160;    <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a3609933724f1e296c0f6c9811faa6aac">QuantoEngine&lt;Instr, Engine&gt;::QuantoEngine</a>(</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; process,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> foreignRiskFreeRate,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;BlackVolTermStructure&gt;</a> exchangeRateVolatility,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> correlation)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    : process_(std::move(process)), foreignRiskFreeRate_(std::move(foreignRiskFreeRate)),</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      exchangeRateVolatility_(std::move(exchangeRateVolatility)),</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      correlation_(std::move(correlation)) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        this-&gt;<a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        this-&gt;<a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a115031ddc05d2c8bd162f615a6e8a4f2">foreignRiskFreeRate_</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        this-&gt;<a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ad1c2bc20bc9b5f0ebc98b57b92c21bc9">exchangeRateVolatility_</a>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        this-&gt;<a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a0bbb8459d54c70260f5dc06646c622fe">correlation_</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Instr, <span class="keyword">class</span> Engine&gt;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">   85</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantoEngine&lt;Instr,Engine&gt;::calculate</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">// ATM exchangeRate level needed here</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> exchangeRateATMlevel = 1.0;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">// determine strike from payoff</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        ext::shared_ptr&lt;StrikedTypePayoff&gt; payoff =</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            ext::dynamic_pointer_cast&lt;StrikedTypePayoff&gt;(</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                this-&gt;arguments_.payoff);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        QL_REQUIRE(payoff, <span class="stringliteral">&quot;non-striked payoff given&quot;</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike = payoff-&gt;strike();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> spot = process_-&gt;stateVariable();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        QL_REQUIRE(spot-&gt;value() &gt; 0.0, <span class="stringliteral">&quot;negative or null underlying&quot;</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> riskFreeRate = process_-&gt;riskFreeRate();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">// dividendTS needs modification</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> dividendYield(</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            ext::shared_ptr&lt;YieldTermStructure&gt;(</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keyword">new</span> <a class="code" href="../../d4/d8e/class_quant_lib_1_1_quanto_term_structure.html">QuantoTermStructure</a>(process_-&gt;dividendYield(),</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                        process_-&gt;riskFreeRate(),</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                                        foreignRiskFreeRate_,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                        process_-&gt;blackVolatility(),</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                                        strike,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                                        exchangeRateVolatility_,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                        exchangeRateATMlevel,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                        correlation_-&gt;value())));</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;BlackVolTermStructure&gt;</a> blackVol = process_-&gt;blackVolatility();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; quantoProcess(</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                  <span class="keyword">new</span> <a class="code" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html">GeneralizedBlackScholesProcess</a>(spot, dividendYield,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                                                     riskFreeRate, blackVol));</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        ext::shared_ptr&lt;Engine&gt; originalEngine(<span class="keyword">new</span> Engine(quantoProcess));</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        originalEngine-&gt;reset();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">auto</span>* originalArguments =</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keyword">dynamic_cast&lt;</span>typename Instr::arguments*<span class="keyword">&gt;</span>(originalEngine-&gt;getArguments());</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        QL_REQUIRE(originalArguments, <span class="stringliteral">&quot;wrong engine type&quot;</span>);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        *originalArguments = this-&gt;arguments_;</div>
@@ -193,77 +194,76 @@ $(function() {
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        originalArguments-&gt;validate();</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        originalEngine-&gt;calculate();</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">const</span> <span class="keyword">typename</span> Instr::results* originalResults =</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>typename Instr::results*<span class="keyword">&gt;</span>(</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                                                originalEngine-&gt;getResults());</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        QL_REQUIRE(originalResults, <span class="stringliteral">&quot;wrong engine type&quot;</span>);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        this-&gt;results_.<a class="code" href="../../d7/dde/class_quant_lib_1_1_instrument_1_1results.html#abd5746c9a8c4bf217e5294c6c702559b">value</a> = originalResults-&gt;value;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        this-&gt;results_.delta = originalResults-&gt;delta;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        this-&gt;results_.gamma = originalResults-&gt;gamma;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        this-&gt;results_.theta = originalResults-&gt;theta;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">if</span> (originalResults-&gt;rho != <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>() &amp;&amp;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            originalResults-&gt;dividendRho != <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>()) {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            this-&gt;results_.rho = originalResults-&gt;rho +</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                originalResults-&gt;dividendRho;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            this-&gt;results_.dividendRho = originalResults-&gt;dividendRho;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            this-&gt;results_.rho = this-&gt;results_.dividendRho = <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>();</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> exchangeRateFlatVol =</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            exchangeRateVolatility_-&gt;blackVol(</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                                        this-&gt;arguments_.exercise-&gt;lastDate(),</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                                        exchangeRateATMlevel);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">if</span> (originalResults-&gt;vega != <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>()</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            &amp;&amp; originalResults-&gt;dividendRho != <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>()) {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            this-&gt;results_.vega = originalResults-&gt;vega +</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                correlation_-&gt;value() * exchangeRateFlatVol *</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                originalResults-&gt;dividendRho;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            this-&gt;results_.vega = <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>();</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">if</span> (originalResults-&gt;dividendRho != <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>()) {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> <a class="code" href="../../dc/da8/group__manips.html#gac402ef7c87f63f7c603ee87210b5750c">volatility</a> = process_-&gt;blackVolatility()-&gt;blackVol(</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                                        this-&gt;arguments_.exercise-&gt;lastDate(),</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                                        process_-&gt;stateVariable()-&gt;value());</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            this-&gt;results_.qvega = correlation_-&gt;value() *</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                process_-&gt;blackVolatility()-&gt;blackVol(</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                                        this-&gt;arguments_.exercise-&gt;lastDate(),</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                                        process_-&gt;stateVariable()-&gt;value()) *</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                originalResults-&gt;dividendRho;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            this-&gt;results_.qrho = - originalResults-&gt;dividendRho;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            this-&gt;results_.qlambda = exchangeRateFlatVol *</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                <a class="code" href="../../dc/da8/group__manips.html#gac402ef7c87f63f7c603ee87210b5750c">volatility</a> * originalResults-&gt;dividendRho;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            this-&gt;results_.qvega = this-&gt;results_.qrho =</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                this-&gt;results_.qlambda = <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>();</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        }</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>* originalResults =</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>typename Instr::results*<span class="keyword">&gt;</span>(originalEngine-&gt;getResults());</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        QL_REQUIRE(originalResults, <span class="stringliteral">&quot;wrong engine type&quot;</span>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        this-&gt;results_.<a class="code" href="../../d7/dde/class_quant_lib_1_1_instrument_1_1results.html#abd5746c9a8c4bf217e5294c6c702559b">value</a> = originalResults-&gt;value;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        this-&gt;results_.delta = originalResults-&gt;delta;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        this-&gt;results_.gamma = originalResults-&gt;gamma;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        this-&gt;results_.theta = originalResults-&gt;theta;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">if</span> (originalResults-&gt;rho != <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>() &amp;&amp;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            originalResults-&gt;dividendRho != <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>()) {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            this-&gt;results_.rho = originalResults-&gt;rho +</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                originalResults-&gt;dividendRho;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            this-&gt;results_.dividendRho = originalResults-&gt;dividendRho;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            this-&gt;results_.rho = this-&gt;results_.dividendRho = <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> exchangeRateFlatVol =</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            exchangeRateVolatility_-&gt;blackVol(</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                                        this-&gt;arguments_.exercise-&gt;lastDate(),</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                                        exchangeRateATMlevel);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">if</span> (originalResults-&gt;vega != <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>()</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            &amp;&amp; originalResults-&gt;dividendRho != <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>()) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            this-&gt;results_.vega = originalResults-&gt;vega +</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                correlation_-&gt;value() * exchangeRateFlatVol *</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                originalResults-&gt;dividendRho;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            this-&gt;results_.vega = <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">if</span> (originalResults-&gt;dividendRho != <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>()) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> <a class="code" href="../../dc/da8/group__manips.html#gac402ef7c87f63f7c603ee87210b5750c">volatility</a> = process_-&gt;blackVolatility()-&gt;blackVol(</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                                        this-&gt;arguments_.exercise-&gt;lastDate(),</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                                        process_-&gt;stateVariable()-&gt;value());</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            this-&gt;results_.qvega = correlation_-&gt;value() *</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                process_-&gt;blackVolatility()-&gt;blackVol(</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                                        this-&gt;arguments_.exercise-&gt;lastDate(),</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                                        process_-&gt;stateVariable()-&gt;value()) *</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                originalResults-&gt;dividendRho;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            this-&gt;results_.qrho = - originalResults-&gt;dividendRho;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            this-&gt;results_.qlambda = exchangeRateFlatVol *</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <a class="code" href="../../dc/da8/group__manips.html#gac402ef7c87f63f7c603ee87210b5750c">volatility</a> * originalResults-&gt;dividendRho;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            this-&gt;results_.qvega = this-&gt;results_.qrho =</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                this-&gt;results_.qlambda = <a class="code" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html_a3609933724f1e296c0f6c9811faa6aac"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a3609933724f1e296c0f6c9811faa6aac">QuantLib::QuantoEngine::QuantoEngine</a></div><div class="ttdeci">QuantoEngine(ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt;, Handle&lt; YieldTermStructure &gt; foreignRiskFreeRate, Handle&lt; BlackVolTermStructure &gt; exchangeRateVolatility, Handle&lt; Quote &gt; correlation)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00070">quantoengine.hpp:70</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle&lt; YieldTermStructure &gt;</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html_a0bbb8459d54c70260f5dc06646c622fe"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a0bbb8459d54c70260f5dc06646c622fe">QuantLib::QuantoEngine::correlation_</a></div><div class="ttdeci">Handle&lt; Quote &gt; correlation_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00062">quantoengine.hpp:62</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html_a0bbb8459d54c70260f5dc06646c622fe"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a0bbb8459d54c70260f5dc06646c622fe">QuantLib::QuantoEngine::correlation_</a></div><div class="ttdeci">Handle&lt; Quote &gt; correlation_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00063">quantoengine.hpp:63</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_null_html"><div class="ttname"><a href="../../d0/d7a/class_quant_lib_1_1_null.html">QuantLib::Null</a></div><div class="ttdoc">template class providing a null value for a given type.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5b/null_8hpp_source.html#l00074">null.hpp:74</a></div></div>
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_observer_html_aa6ade205ed506bf712da2704f80a73a0"><div class="ttname"><a href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">QuantLib::Observer::registerWith</a></div><div class="ttdeci">std::pair&lt; iterator, bool &gt; registerWith(const ext::shared_ptr&lt; Observable &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00211">observable.hpp:211</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::QuantoEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00059">quantoengine.hpp:59</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html_ad1c2bc20bc9b5f0ebc98b57b92c21bc9"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ad1c2bc20bc9b5f0ebc98b57b92c21bc9">QuantLib::QuantoEngine::exchangeRateVolatility_</a></div><div class="ttdeci">Handle&lt; BlackVolTermStructure &gt; exchangeRateVolatility_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00061">quantoengine.hpp:61</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html_a115031ddc05d2c8bd162f615a6e8a4f2"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a115031ddc05d2c8bd162f615a6e8a4f2">QuantLib::QuantoEngine::foreignRiskFreeRate_</a></div><div class="ttdeci">Handle&lt; YieldTermStructure &gt; foreignRiskFreeRate_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00060">quantoengine.hpp:60</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_quanto_term_structure_html"><div class="ttname"><a href="../../d4/d8e/class_quant_lib_1_1_quanto_term_structure.html">QuantLib::QuantoTermStructure</a></div><div class="ttdoc">Quanto term structure.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dab/quantotermstructure_8hpp_source.html#l00041">quantotermstructure.hpp:41</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::QuantoEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00084">quantoengine.hpp:84</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::QuantoEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00060">quantoengine.hpp:60</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html_ad1c2bc20bc9b5f0ebc98b57b92c21bc9"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#ad1c2bc20bc9b5f0ebc98b57b92c21bc9">QuantLib::QuantoEngine::exchangeRateVolatility_</a></div><div class="ttdeci">Handle&lt; BlackVolTermStructure &gt; exchangeRateVolatility_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00062">quantoengine.hpp:62</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html_a115031ddc05d2c8bd162f615a6e8a4f2"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a115031ddc05d2c8bd162f615a6e8a4f2">QuantLib::QuantoEngine::foreignRiskFreeRate_</a></div><div class="ttdeci">Handle&lt; YieldTermStructure &gt; foreignRiskFreeRate_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00061">quantoengine.hpp:61</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_quanto_term_structure_html"><div class="ttname"><a href="../../d4/d8e/class_quant_lib_1_1_quanto_term_structure.html">QuantLib::QuantoTermStructure</a></div><div class="ttdoc">Quanto term structure.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dab/quantotermstructure_8hpp_source.html#l00042">quantotermstructure.hpp:42</a></div></div>
 <div class="ttc" id="agroup__manips_html_gac402ef7c87f63f7c603ee87210b5750c"><div class="ttname"><a href="../../dc/da8/group__manips.html#gac402ef7c87f63f7c603ee87210b5750c">QuantLib::io::volatility</a></div><div class="ttdeci">detail::percent_holder volatility(Volatility)</div><div class="ttdoc">output volatilities as percentages</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db9/dataformatters_8hpp_source.html#l00133">dataformatters.hpp:133</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html">QuantLib::QuantoEngine</a></div><div class="ttdoc">Quanto engine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00048">quantoengine.hpp:50</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::QuantoEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00085">quantoengine.hpp:85</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html">QuantLib::QuantoEngine</a></div><div class="ttdoc">Quanto engine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00049">quantoengine.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_instrument_1_1results_html_abd5746c9a8c4bf217e5294c6c702559b"><div class="ttname"><a href="../../d7/dde/class_quant_lib_1_1_instrument_1_1results.html#abd5746c9a8c4bf217e5294c6c702559b">QuantLib::Instrument::results::value</a></div><div class="ttdeci">Real value</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da7/instrument_8hpp_source.html#l00120">instrument.hpp:120</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_generic_engine_html"><div class="ttname"><a href="../../d4/db7/class_quant_lib_1_1_generic_engine.html">QuantLib::GenericEngine</a></div><div class="ttdoc">template base class for option pricing engines</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcc/pricingengine_8hpp_source.html#l00063">pricingengine.hpp:64</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_generalized_black_scholes_process_html"><div class="ttname"><a href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html">QuantLib::GeneralizedBlackScholesProcess</a></div><div class="ttdoc">Generalized Black-Scholes stochastic process.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da0/blackscholesprocess_8hpp_source.html#l00054">blackscholesprocess.hpp:54</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_quanto_engine_html_a4785c0f15884e0f99ea031cb4ed0b583"><div class="ttname"><a href="../../d9/d3f/class_quant_lib_1_1_quanto_engine.html#a4785c0f15884e0f99ea031cb4ed0b583">QuantLib::QuantoEngine::QuantoEngine</a></div><div class="ttdeci">QuantoEngine(const ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;, const Handle&lt; YieldTermStructure &gt; &amp;foreignRiskFreeRate, const Handle&lt; BlackVolTermStructure &gt; &amp;exchangeRateVolatility, const Handle&lt; Quote &gt; &amp;correlation)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dcc/quantoengine_8hpp_source.html#l00069">quantoengine.hpp:69</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

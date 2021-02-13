@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/quotes/lastfixingquote.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -102,21 +103,21 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ql/quotes/lastfixingquote.hpp&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;ql/settings.hpp&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a6c0feffe9a6614ce39be37aaabc99a04">   25</a></span>&#160;    <a class="code" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a6c0feffe9a6614ce39be37aaabc99a04">LastFixingQuote::LastFixingQuote</a>(<span class="keyword">const</span> ext::shared_ptr&lt;Index&gt;&amp; index)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    : index_(index) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a66207ec062be4de29ca74bab3340e3c6">   26</a></span>&#160;    <a class="code" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a66207ec062be4de29ca74bab3340e3c6">LastFixingQuote::LastFixingQuote</a>(ext::shared_ptr&lt;Index&gt; index) : index_(std::move(index)) {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a0708fbf84a3e6c75d728832214e23d03">index_</a>);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a72887400b9a4d1ba185b887b84876cdc">   30</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a72887400b9a4d1ba185b887b84876cdc">LastFixingQuote::value</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        QL_ENSURE(<a class="code" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a5bc2a781be2586924afce4e4a4ea6697">isValid</a>(),</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#adfd3389569608e424be9ed9361d07994">   30</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#adfd3389569608e424be9ed9361d07994">LastFixingQuote::value</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        QL_ENSURE(<a class="code" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#af6bf7ccb76ff0485d02cae827edb1c56">isValid</a>(),</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                  <a class="code" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a0708fbf84a3e6c75d728832214e23d03">index_</a>-&gt;name() &lt;&lt; <span class="stringliteral">&quot; has no fixing&quot;</span>);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a0708fbf84a3e6c75d728832214e23d03">index_</a>-&gt;fixing(<a class="code" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a5448a751fbd4326aa319257417c909d7">referenceDate</a>());</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a5bc2a781be2586924afce4e4a4ea6697">   36</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a5bc2a781be2586924afce4e4a4ea6697">LastFixingQuote::isValid</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#af6bf7ccb76ff0485d02cae827edb1c56">   36</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#af6bf7ccb76ff0485d02cae827edb1c56">LastFixingQuote::isValid</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> !<a class="code" href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a0708fbf84a3e6c75d728832214e23d03">index_</a>-&gt;timeSeries().empty();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
@@ -127,14 +128,14 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_last_fixing_quote_html_a5448a751fbd4326aa319257417c909d7"><div class="ttname"><a href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a5448a751fbd4326aa319257417c909d7">QuantLib::LastFixingQuote::referenceDate</a></div><div class="ttdeci">Date referenceDate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/deb/lastfixingquote_8cpp_source.html#l00040">lastfixingquote.cpp:40</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_last_fixing_quote_html_a72887400b9a4d1ba185b887b84876cdc"><div class="ttname"><a href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a72887400b9a4d1ba185b887b84876cdc">QuantLib::LastFixingQuote::value</a></div><div class="ttdeci">Real value() const</div><div class="ttdoc">returns the current value</div><div class="ttdef"><b>Definition:</b> <a href="../../db/deb/lastfixingquote_8cpp_source.html#l00030">lastfixingquote.cpp:30</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_singleton_html_ab7455b7e1235d292c444095842349291"><div class="ttname"><a href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">QuantLib::Singleton::instance</a></div><div class="ttdeci">static T &amp; instance()</div><div class="ttdoc">access to the unique instance</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/singleton_8hpp_source.html#l00160">singleton.hpp:160</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_observer_html_aa6ade205ed506bf712da2704f80a73a0"><div class="ttname"><a href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">QuantLib::Observer::registerWith</a></div><div class="ttdeci">std::pair&lt; iterator, bool &gt; registerWith(const ext::shared_ptr&lt; Observable &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00211">observable.hpp:211</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_last_fixing_quote_html_a5bc2a781be2586924afce4e4a4ea6697"><div class="ttname"><a href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a5bc2a781be2586924afce4e4a4ea6697">QuantLib::LastFixingQuote::isValid</a></div><div class="ttdeci">bool isValid() const</div><div class="ttdoc">returns true if the Quote holds a valid value</div><div class="ttdef"><b>Definition:</b> <a href="../../db/deb/lastfixingquote_8cpp_source.html#l00036">lastfixingquote.cpp:36</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_last_fixing_quote_html_a0708fbf84a3e6c75d728832214e23d03"><div class="ttname"><a href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a0708fbf84a3e6c75d728832214e23d03">QuantLib::LastFixingQuote::index_</a></div><div class="ttdeci">ext::shared_ptr&lt; Index &gt; index_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ddc/lastfixingquote_8hpp_source.html#l00053">lastfixingquote.hpp:53</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_last_fixing_quote_html_a6c0feffe9a6614ce39be37aaabc99a04"><div class="ttname"><a href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a6c0feffe9a6614ce39be37aaabc99a04">QuantLib::LastFixingQuote::LastFixingQuote</a></div><div class="ttdeci">LastFixingQuote(const ext::shared_ptr&lt; Index &gt; &amp;index)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/deb/lastfixingquote_8cpp_source.html#l00025">lastfixingquote.cpp:25</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_last_fixing_quote_html_adfd3389569608e424be9ed9361d07994"><div class="ttname"><a href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#adfd3389569608e424be9ed9361d07994">QuantLib::LastFixingQuote::value</a></div><div class="ttdeci">Real value() const override</div><div class="ttdoc">returns the current value</div><div class="ttdef"><b>Definition:</b> <a href="../../db/deb/lastfixingquote_8cpp_source.html#l00030">lastfixingquote.cpp:30</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_last_fixing_quote_html_af6bf7ccb76ff0485d02cae827edb1c56"><div class="ttname"><a href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#af6bf7ccb76ff0485d02cae827edb1c56">QuantLib::LastFixingQuote::isValid</a></div><div class="ttdeci">bool isValid() const override</div><div class="ttdoc">returns true if the Quote holds a valid value</div><div class="ttdef"><b>Definition:</b> <a href="../../db/deb/lastfixingquote_8cpp_source.html#l00036">lastfixingquote.cpp:36</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_last_fixing_quote_html_a66207ec062be4de29ca74bab3340e3c6"><div class="ttname"><a href="../../dc/d8c/class_quant_lib_1_1_last_fixing_quote.html#a66207ec062be4de29ca74bab3340e3c6">QuantLib::LastFixingQuote::LastFixingQuote</a></div><div class="ttdeci">LastFixingQuote(ext::shared_ptr&lt; Index &gt; index)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/deb/lastfixingquote_8cpp_source.html#l00026">lastfixingquote.cpp:26</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

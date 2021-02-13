@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/credit/pool.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -123,7 +124,7 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#aa4a828f3ad25a750a311f4495766cb52">setTime</a>(<span class="keyword">const</span> std::string&amp; name, <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> time);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#aa0264b09f24ab8e294cabbe3204f75f2">getTime</a> (<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#aa7b69cc128b3e58479f1f93b7664bcc6">names</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;std::vector&lt;DefaultProbKey&gt;</a> &gt; <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#a515375af09ee2904aff7f7e817ad20dc">defaultKeys</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../d3/dee/class_t.html">Disposable&lt;std::vector&lt;DefaultProbKey&gt;</a> &gt; <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#a515375af09ee2904aff7f7e817ad20dc">defaultKeys</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">// \todo: needs to cehck all defaul TS have the same ref date? here or</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">//   where used? e.g. simulations.</span></div>
@@ -142,12 +143,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_pool_html"><div class="ttname"><a href="../../dc/d25/class_quant_lib_1_1_pool.html">QuantLib::Pool</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc1/pool_8hpp_source.html#l00033">pool.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pool_html_aa911ba3ef90e0b3179e0a8dc10586424"><div class="ttname"><a href="../../dc/d25/class_quant_lib_1_1_pool.html#aa911ba3ef90e0b3179e0a8dc10586424">QuantLib::Pool::has</a></div><div class="ttdeci">bool has(const std::string &amp;name) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/pool_8cpp_source.html#l00040">pool.cpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pool_html_aa0264b09f24ab8e294cabbe3204f75f2"><div class="ttname"><a href="../../dc/d25/class_quant_lib_1_1_pool.html#aa0264b09f24ab8e294cabbe3204f75f2">QuantLib::Pool::getTime</a></div><div class="ttdeci">Real getTime(const std::string &amp;name) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/pool_8cpp_source.html#l00064">pool.cpp:64</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_north_america_corp_default_key_html"><div class="ttname"><a href="../../d1/d6c/class_quant_lib_1_1_north_america_corp_default_key.html">QuantLib::NorthAmericaCorpDefaultKey</a></div><div class="ttdoc">ISDA standard default contractual key for corporate US debt.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db3/defaultprobabilitykey_8hpp_source.html#l00070">defaultprobabilitykey.hpp:70</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_north_america_corp_default_key_html"><div class="ttname"><a href="../../d1/d6c/class_quant_lib_1_1_north_america_corp_default_key.html">QuantLib::NorthAmericaCorpDefaultKey</a></div><div class="ttdoc">ISDA standard default contractual key for corporate US debt.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db3/defaultprobabilitykey_8hpp_source.html#l00071">defaultprobabilitykey.hpp:71</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pool_html_a874bbc5b3000d84f699a0badb252ea32"><div class="ttname"><a href="../../dc/d25/class_quant_lib_1_1_pool.html#a874bbc5b3000d84f699a0badb252ea32">QuantLib::Pool::data_</a></div><div class="ttdeci">std::map&lt; std::string, Issuer &gt; data_</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc1/pool_8hpp_source.html#l00051">pool.hpp:51</a></div></div>
+<div class="ttc" id="aclass_t_html"><div class="ttname"><a href="../../d3/dee/class_t.html">T</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pool_html_a515375af09ee2904aff7f7e817ad20dc"><div class="ttname"><a href="../../dc/d25/class_quant_lib_1_1_pool.html#a515375af09ee2904aff7f7e817ad20dc">QuantLib::Pool::defaultKeys</a></div><div class="ttdeci">Disposable&lt; std::vector&lt; DefaultProbKey &gt; &gt; defaultKeys() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/pool_8cpp_source.html#l00077">pool.cpp:77</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_default_prob_key_html"><div class="ttname"><a href="../../d8/daa/class_quant_lib_1_1_default_prob_key.html">QuantLib::DefaultProbKey</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db3/defaultprobabilitykey_8hpp_source.html#l00041">defaultprobabilitykey.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html">QuantLib::Disposable</a></div><div class="ttdoc">generic disposable object with move semantics</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00064">disposable.hpp:64</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pool_html_af71e2c9e63c7a14525b20806f3c40c23"><div class="ttname"><a href="../../dc/d25/class_quant_lib_1_1_pool.html#af71e2c9e63c7a14525b20806f3c40c23">QuantLib::Pool::Pool</a></div><div class="ttdeci">Pool()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/pool_8cpp_source.html#l00026">pool.cpp:26</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pool_html_ae714ca023146dc617d9cd4a8880d55e3"><div class="ttname"><a href="../../dc/d25/class_quant_lib_1_1_pool.html#ae714ca023146dc617d9cd4a8880d55e3">QuantLib::Pool::defaultKeys_</a></div><div class="ttdeci">std::map&lt; std::string, DefaultProbKey &gt; defaultKeys_</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc1/pool_8hpp_source.html#l00056">pool.hpp:56</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a67b45b4a8252bded773b222c6f9428dca58f8d6688b98d67fda81d5f4b61a24e9"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dca58f8d6688b98d67fda81d5f4b61a24e9">QuantLib::SeniorSec</a></div><div class="ttdeci">@ SeniorSec</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d52/defaulttype_8hpp_source.html#l00046">defaulttype.hpp:46</a></div></div>

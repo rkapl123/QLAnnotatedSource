@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/math/curve.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -112,7 +113,7 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../de/d5f/class_quant_lib_1_1_curve.html#af498733f2fd0abef2f5f1071a1b9354a">   35</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../de/d5f/class_quant_lib_1_1_curve.html#af498733f2fd0abef2f5f1071a1b9354a">argument_type</a>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../de/d5f/class_quant_lib_1_1_curve.html#abd4b619e88e62e8c704bc850340fc078">   36</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../de/d5f/class_quant_lib_1_1_curve.html#abd4b619e88e62e8c704bc850340fc078">result_type</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../de/d5f/class_quant_lib_1_1_curve.html#ac18558a7f7b08085261782f72b65ce26">   37</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../de/d5f/class_quant_lib_1_1_curve.html#ac18558a7f7b08085261782f72b65ce26">~Curve</a>() {}</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../de/d5f/class_quant_lib_1_1_curve.html#ab1e55053353624b2312d987b327764e3">   37</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../de/d5f/class_quant_lib_1_1_curve.html#ab1e55053353624b2312d987b327764e3">~Curve</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../de/d5f/class_quant_lib_1_1_curve.html#a7709f6c0612c6668e25d555787a5688b">   38</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../de/d5f/class_quant_lib_1_1_curve.html#a7709f6c0612c6668e25d555787a5688b">operator()</a>(<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    };</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
@@ -121,11 +122,11 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_quant_lib_1_1_curve_html_ab1e55053353624b2312d987b327764e3"><div class="ttname"><a href="../../de/d5f/class_quant_lib_1_1_curve.html#ab1e55053353624b2312d987b327764e3">QuantLib::Curve::~Curve</a></div><div class="ttdeci">virtual ~Curve()=default</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_curve_html_af498733f2fd0abef2f5f1071a1b9354a"><div class="ttname"><a href="../../de/d5f/class_quant_lib_1_1_curve.html#af498733f2fd0abef2f5f1071a1b9354a">QuantLib::Curve::argument_type</a></div><div class="ttdeci">Real argument_type</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc4/curve_8hpp_source.html#l00035">curve.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_curve_html_a7709f6c0612c6668e25d555787a5688b"><div class="ttname"><a href="../../de/d5f/class_quant_lib_1_1_curve.html#a7709f6c0612c6668e25d555787a5688b">QuantLib::Curve::operator()</a></div><div class="ttdeci">virtual Real operator()(Real x) const =0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_curve_html"><div class="ttname"><a href="../../de/d5f/class_quant_lib_1_1_curve.html">QuantLib::Curve</a></div><div class="ttdoc">abstract curve class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc4/curve_8hpp_source.html#l00033">curve.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_curve_html_abd4b619e88e62e8c704bc850340fc078"><div class="ttname"><a href="../../de/d5f/class_quant_lib_1_1_curve.html#abd4b619e88e62e8c704bc850340fc078">QuantLib::Curve::result_type</a></div><div class="ttdeci">Real result_type</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc4/curve_8hpp_source.html#l00036">curve.hpp:36</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_curve_html_ac18558a7f7b08085261782f72b65ce26"><div class="ttname"><a href="../../de/d5f/class_quant_lib_1_1_curve.html#ac18558a7f7b08085261782f72b65ce26">QuantLib::Curve::~Curve</a></div><div class="ttdeci">virtual ~Curve()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc4/curve_8hpp_source.html#l00037">curve.hpp:37</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->

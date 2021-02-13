@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/models/marketmodels/callability/marketmodelparametricexercise.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -113,26 +114,24 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html">   30</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html">MarketModelParametricExercise</a> : <span class="keyword">public</span> <a class="code" href="../../d1/d77/class_quant_lib_1_1_market_model_node_data_provider.html">MarketModelNodeDataProvider</a>,</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                          <span class="keyword">public</span> <a class="code" href="../../d6/de0/class_quant_lib_1_1_parametric_exercise.html">ParametricExercise</a> {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html#ad53051baa2ffe69d403ff9ce337af73a">   33</a></span>&#160;        std::vector&lt;Size&gt; <a class="code" href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html#ad53051baa2ffe69d403ff9ce337af73a">numberOfData</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d6/de0/class_quant_lib_1_1_parametric_exercise.html#aa0653eaa27e5de4fb5764485f7e8c70c">numberOfVariables</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">        #if defined(QL_USE_STD_UNIQUE_PTR)</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">virtual</span> std::unique_ptr&lt;MarketModelParametricExercise&gt; <a class="code" href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html#aa55e9d06cf62fcc3cbd3514ecdeffa51">clone</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">        #else</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html#aa55e9d06cf62fcc3cbd3514ecdeffa51">   39</a></span>&#160;        <span class="keyword">virtual</span> std::auto_ptr&lt;MarketModelParametricExercise&gt; <a class="code" href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html#aa55e9d06cf62fcc3cbd3514ecdeffa51">clone</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    };</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html#a15abd57f48a65ab0a78c19bd27052bd9">   33</a></span>&#160;        std::vector&lt;Size&gt; <a class="code" href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html#a15abd57f48a65ab0a78c19bd27052bd9">numberOfData</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d6/de0/class_quant_lib_1_1_parametric_exercise.html#aa0653eaa27e5de4fb5764485f7e8c70c">numberOfVariables</a>(); }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#if defined(QL_USE_STD_UNIQUE_PTR)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">virtual</span> std::unique_ptr&lt;MarketModelParametricExercise&gt; <a class="code" href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html#aa55e9d06cf62fcc3cbd3514ecdeffa51">clone</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">        #else</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html#aa55e9d06cf62fcc3cbd3514ecdeffa51">   37</a></span>&#160;        <span class="keyword">virtual</span> std::auto_ptr&lt;MarketModelParametricExercise&gt; <a class="code" href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html#aa55e9d06cf62fcc3cbd3514ecdeffa51">clone</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    };</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_market_model_node_data_provider_html"><div class="ttname"><a href="../../d1/d77/class_quant_lib_1_1_market_model_node_data_provider.html">QuantLib::MarketModelNodeDataProvider</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d8a/nodedataprovider_8hpp_source.html#l00033">nodedataprovider.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_market_model_parametric_exercise_html"><div class="ttname"><a href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html">QuantLib::MarketModelParametricExercise</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7a/marketmodelparametricexercise_8hpp_source.html#l00030">marketmodelparametricexercise.hpp:31</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_market_model_parametric_exercise_html_aa55e9d06cf62fcc3cbd3514ecdeffa51"><div class="ttname"><a href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html#aa55e9d06cf62fcc3cbd3514ecdeffa51">QuantLib::MarketModelParametricExercise::clone</a></div><div class="ttdeci">virtual std::auto_ptr&lt; MarketModelParametricExercise &gt; clone() const =0</div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_market_model_parametric_exercise_html_a15abd57f48a65ab0a78c19bd27052bd9"><div class="ttname"><a href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html#a15abd57f48a65ab0a78c19bd27052bd9">QuantLib::MarketModelParametricExercise::numberOfData</a></div><div class="ttdeci">std::vector&lt; Size &gt; numberOfData() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7a/marketmodelparametricexercise_8hpp_source.html#l00033">marketmodelparametricexercise.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_parametric_exercise_html"><div class="ttname"><a href="../../d6/de0/class_quant_lib_1_1_parametric_exercise.html">QuantLib::ParametricExercise</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d54/parametricexercise_8hpp_source.html#l00029">parametricexercise.hpp:29</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_market_model_parametric_exercise_html_ad53051baa2ffe69d403ff9ce337af73a"><div class="ttname"><a href="../../d7/d1f/class_quant_lib_1_1_market_model_parametric_exercise.html#ad53051baa2ffe69d403ff9ce337af73a">QuantLib::MarketModelParametricExercise::numberOfData</a></div><div class="ttdeci">std::vector&lt; Size &gt; numberOfData() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7a/marketmodelparametricexercise_8hpp_source.html#l00033">marketmodelparametricexercise.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_parametric_exercise_html_aa0653eaa27e5de4fb5764485f7e8c70c"><div class="ttname"><a href="../../d6/de0/class_quant_lib_1_1_parametric_exercise.html#aa0653eaa27e5de4fb5764485f7e8c70c">QuantLib::ParametricExercise::numberOfVariables</a></div><div class="ttdeci">virtual std::vector&lt; Size &gt; numberOfVariables() const =0</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->

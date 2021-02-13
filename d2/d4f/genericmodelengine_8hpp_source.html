@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/genericmodelengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -104,19 +105,19 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef quantlib_generic_model_engine_hpp</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define quantlib_generic_model_engine_hpp</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;ql/pricingengine.hpp&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;ql/handle.hpp&gt;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> ModelType, <span class="keyword">class</span> ArgumentsType, <span class="keyword">class</span> ResultsType&gt;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html">   38</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html">GenericModelEngine</a></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        : <span class="keyword">public</span> <a class="code" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html">GenericEngine</a>&lt;ArgumentsType, ResultsType&gt; {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#a3edb57d5adf68af0bd3ab7b6a1633edf">   41</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#a3edb57d5adf68af0bd3ab7b6a1633edf">GenericModelEngine</a>(</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                         <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;ModelType&gt;</a>&amp; model = <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;ModelType&gt;</a>())</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        : <a class="code" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#a6864e2664edc95964c8d3c6325fbd30e">model_</a>(model) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;ql/handle.hpp&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;ql/pricingengine.hpp&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> ModelType, <span class="keyword">class</span> ArgumentsType, <span class="keyword">class</span> ResultsType&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html">   39</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html">GenericModelEngine</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        : <span class="keyword">public</span> <a class="code" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html">GenericEngine</a>&lt;ArgumentsType, ResultsType&gt; {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#abff0d2e5736a96e9eccd7050af152ca6">   42</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#abff0d2e5736a96e9eccd7050af152ca6">GenericModelEngine</a>(<a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;ModelType&gt;</a> model = <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;ModelType&gt;</a>())</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        : <a class="code" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#a6864e2664edc95964c8d3c6325fbd30e">model_</a>(std::move(model)) {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            this-&gt;<a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#a6864e2664edc95964c8d3c6325fbd30e">model_</a>);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#a5ccb95d65abe85dd75848c702a540e88">   46</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#a5ccb95d65abe85dd75848c702a540e88">GenericModelEngine</a>(<span class="keyword">const</span> ext::shared_ptr&lt;ModelType&gt;&amp; model)</div>
@@ -134,9 +135,9 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle&lt; ModelType &gt;</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_generic_model_engine_html_a3edb57d5adf68af0bd3ab7b6a1633edf"><div class="ttname"><a href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#a3edb57d5adf68af0bd3ab7b6a1633edf">QuantLib::GenericModelEngine::GenericModelEngine</a></div><div class="ttdeci">GenericModelEngine(const Handle&lt; ModelType &gt; &amp;model=Handle&lt; ModelType &gt;())</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4f/genericmodelengine_8hpp_source.html#l00041">genericmodelengine.hpp:41</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_generic_model_engine_html_abff0d2e5736a96e9eccd7050af152ca6"><div class="ttname"><a href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#abff0d2e5736a96e9eccd7050af152ca6">QuantLib::GenericModelEngine::GenericModelEngine</a></div><div class="ttdeci">GenericModelEngine(Handle&lt; ModelType &gt; model=Handle&lt; ModelType &gt;())</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4f/genericmodelengine_8hpp_source.html#l00042">genericmodelengine.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_observer_html_aa6ade205ed506bf712da2704f80a73a0"><div class="ttname"><a href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">QuantLib::Observer::registerWith</a></div><div class="ttdeci">std::pair&lt; iterator, bool &gt; registerWith(const ext::shared_ptr&lt; Observable &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00211">observable.hpp:211</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_generic_model_engine_html"><div class="ttname"><a href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html">QuantLib::GenericModelEngine</a></div><div class="ttdoc">Base class for some pricing engine on a particular model.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4f/genericmodelengine_8hpp_source.html#l00038">genericmodelengine.hpp:39</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_generic_model_engine_html"><div class="ttname"><a href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html">QuantLib::GenericModelEngine</a></div><div class="ttdoc">Base class for some pricing engine on a particular model.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4f/genericmodelengine_8hpp_source.html#l00039">genericmodelengine.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_generic_model_engine_html_a6864e2664edc95964c8d3c6325fbd30e"><div class="ttname"><a href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#a6864e2664edc95964c8d3c6325fbd30e">QuantLib::GenericModelEngine::model_</a></div><div class="ttdeci">Handle&lt; ModelType &gt; model_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4f/genericmodelengine_8hpp_source.html#l00051">genericmodelengine.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_generic_model_engine_html_a5ccb95d65abe85dd75848c702a540e88"><div class="ttname"><a href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#a5ccb95d65abe85dd75848c702a540e88">QuantLib::GenericModelEngine::GenericModelEngine</a></div><div class="ttdeci">GenericModelEngine(const ext::shared_ptr&lt; ModelType &gt; &amp;model)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4f/genericmodelengine_8hpp_source.html#l00046">genericmodelengine.hpp:46</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/math/laplaceinterpolation.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -115,7 +116,7 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">struct </span>f_A {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#ad23eee06cf322ac36059829be7e56550">SparseMatrix</a> &amp;g;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">explicit</span> f_A(<span class="keyword">const</span> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#ad23eee06cf322ac36059829be7e56550">SparseMatrix</a> &amp;g) : g(g) {}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;Array&gt;</a> operator()(<span class="keyword">const</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> &amp;x)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable&lt;Array&gt;</a> operator()(<span class="keyword">const</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> &amp;x)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a93815c1c29ab54eb3715c1605f54785e">prod</a>(g, x);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    };</div>
@@ -244,7 +245,7 @@ $(function() {
 <div class="ttc" id="anamespace_quant_lib_html_a8a5a1be983c64b32111b4f2f8ee4d0d4"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a8a5a1be983c64b32111b4f2f8ee4d0d4">QuantLib::laplaceInterpolation</a></div><div class="ttdeci">void laplaceInterpolation(M &amp;A, Real relTol=1E-6)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/da0/laplaceinterpolation_8hpp_source.html#l00039">laplaceinterpolation.hpp:39</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_ad23eee06cf322ac36059829be7e56550"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ad23eee06cf322ac36059829be7e56550">QuantLib::SparseMatrix</a></div><div class="ttdeci">boost::numeric::ublas::compressed_matrix&lt; Real &gt; SparseMatrix</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc8/sparsematrix_8hpp_source.html#l00068">sparsematrix.hpp:68</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00053">array.hpp:53</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html">QuantLib::Disposable</a></div><div class="ttdoc">generic disposable object with move semantics</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00064">disposable.hpp:64</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_aab56fb6f79c404afbf5fedf756b41bc1"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">QuantLib::Disposable</a></div><div class="ttdeci">T Disposable</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00034">disposable.hpp:34</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a93815c1c29ab54eb3715c1605f54785e"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a93815c1c29ab54eb3715c1605f54785e">QuantLib::prod</a></div><div class="ttdeci">Disposable&lt; Array &gt; prod(const SparseMatrix &amp;A, const Array &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dc8/sparsematrix_8hpp_source.html#l00072">sparsematrix.hpp:72</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bi_c_gstab_html"><div class="ttname"><a href="../../df/de7/class_quant_lib_1_1_bi_c_gstab.html">QuantLib::BiCGstab</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5c/bicgstab_8hpp_source.html#l00039">bicgstab.hpp:39</a></div></div>

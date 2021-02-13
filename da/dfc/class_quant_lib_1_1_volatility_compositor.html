@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: VolatilityCompositor Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -117,8 +118,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5e304d417b3145a7458d6fc2cd97fe6a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfc/class_quant_lib_1_1_volatility_compositor.html#a5e304d417b3145a7458d6fc2cd97fe6a">~VolatilityCompositor</a> ()</td></tr>
-<tr class="separator:a5e304d417b3145a7458d6fc2cd97fe6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16ca28e4a234d6d1286bec33dea8c01f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfc/class_quant_lib_1_1_volatility_compositor.html#a16ca28e4a234d6d1286bec33dea8c01f">~VolatilityCompositor</a> ()=default</td></tr>
+<tr class="separator:a16ca28e4a234d6d1286bec33dea8c01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addfa7e601526ecd367916e569222a578"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../da/dfc/class_quant_lib_1_1_volatility_compositor.html#ace8b456cae1c7b6e792a7034174fd19a">time_series</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfc/class_quant_lib_1_1_volatility_compositor.html#addfa7e601526ecd367916e569222a578">calculate</a> (const <a class="el" href="../../da/dfc/class_quant_lib_1_1_volatility_compositor.html#ace8b456cae1c7b6e792a7034174fd19a">time_series</a> &amp;volatilitySeries)=0</td></tr>
 <tr class="separator:addfa7e601526ecd367916e569222a578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b0dc1a9e2110882bb912fa08b15a7a9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfc/class_quant_lib_1_1_volatility_compositor.html#a7b0dc1a9e2110882bb912fa08b15a7a9">calibrate</a> (const <a class="el" href="../../da/dfc/class_quant_lib_1_1_volatility_compositor.html#ace8b456cae1c7b6e792a7034174fd19a">time_series</a> &amp;volatilitySeries)=0</td></tr>
@@ -145,8 +146,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5e304d417b3145a7458d6fc2cd97fe6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e304d417b3145a7458d6fc2cd97fe6a">&#9670;&nbsp;</a></span>~VolatilityCompositor()</h2>
+<a id="a16ca28e4a234d6d1286bec33dea8c01f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16ca28e4a234d6d1286bec33dea8c01f">&#9670;&nbsp;</a></span>~VolatilityCompositor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,12 +164,10 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d5/dbd/volatilitymodel_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d5/dbd/volatilitymodel_8hpp_source.html">volatilitymodel.hpp</a>.</p>
 
 </div>
 </div>
@@ -197,7 +196,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../dd/d01/class_quant_lib_1_1_garch11.html#a66e369e08da81cf2a29991256e94b6b2">Garch11</a>.</p>
+<p>Implemented in <a class="el" href="../../dd/d01/class_quant_lib_1_1_garch11.html#a25ae089722ce99c05ea74c0389f92257">Garch11</a>.</p>
 
 </div>
 </div>
@@ -225,7 +224,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../dd/d01/class_quant_lib_1_1_garch11.html#a372f3eeeab6bd4722cc2d8a6e983b91e">Garch11</a>.</p>
+<p>Implemented in <a class="el" href="../../dd/d01/class_quant_lib_1_1_garch11.html#afc8ef2a0371a12d61cbb82d6a8a966d6">Garch11</a>.</p>
 
 </div>
 </div>

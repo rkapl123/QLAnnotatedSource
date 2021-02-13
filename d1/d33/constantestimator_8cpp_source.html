@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/models/volatility/constantestimator.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -104,7 +105,7 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    TimeSeries&lt;Volatility&gt;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../db/d54/class_quant_lib_1_1_constant_estimator.html#a099ae222846e00212cd7bf57e61668a1">   24</a></span>&#160;    <a class="code" href="../../db/d54/class_quant_lib_1_1_constant_estimator.html#a099ae222846e00212cd7bf57e61668a1">ConstantEstimator::calculate</a>(<span class="keyword">const</span> <a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries&lt;Volatility&gt;</a>&amp; volatilitySeries) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../db/d54/class_quant_lib_1_1_constant_estimator.html#a97fb9033aa0512f390edc1d1ee554ba0">   24</a></span>&#160;    <a class="code" href="../../db/d54/class_quant_lib_1_1_constant_estimator.html#a97fb9033aa0512f390edc1d1ee554ba0">ConstantEstimator::calculate</a>(<span class="keyword">const</span> <a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries&lt;Volatility&gt;</a>&amp; volatilitySeries) {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries&lt;Volatility&gt;</a> retval;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">const</span> std::vector&lt;Volatility&gt; u = volatilitySeries.<a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5c56c587bbc7f7769e5d3779175b493c">values</a>();</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a0833e882f7bd9b10baa8f4ff433ebbd4">TimeSeries&lt;Volatility&gt;::const_iterator</a> prev, next, cur, start;</div>
@@ -132,9 +133,9 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_time_series_html_a29305669b60ca1680752e2fc3592ba99"><div class="ttname"><a href="../../d2/d05/class_quant_lib_1_1_time_series.html#a29305669b60ca1680752e2fc3592ba99">QuantLib::TimeSeries::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db6/timeseries_8hpp_source.html#l00162">timeseries.hpp:162</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_time_series_html_acce0ab2cacc475b2434f24c65c91685a"><div class="ttname"><a href="../../d2/d05/class_quant_lib_1_1_time_series.html#acce0ab2cacc475b2434f24c65c91685a">QuantLib::TimeSeries::size</a></div><div class="ttdeci">Size size() const</div><div class="ttdoc">returns the number of historical data including null ones</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db6/timeseries_8hpp_source.html#l00256">timeseries.hpp:256</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_constant_estimator_html_af413506ef7c7376c1ea8ca4622cb1ada"><div class="ttname"><a href="../../db/d54/class_quant_lib_1_1_constant_estimator.html#af413506ef7c7376c1ea8ca4622cb1ada">QuantLib::ConstantEstimator::size_</a></div><div class="ttdeci">Size size_</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d5e/constantestimator_8hpp_source.html#l00037">constantestimator.hpp:37</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_constant_estimator_html_a97fb9033aa0512f390edc1d1ee554ba0"><div class="ttname"><a href="../../db/d54/class_quant_lib_1_1_constant_estimator.html#a97fb9033aa0512f390edc1d1ee554ba0">QuantLib::ConstantEstimator::calculate</a></div><div class="ttdeci">TimeSeries&lt; Volatility &gt; calculate(const TimeSeries&lt; Volatility &gt; &amp;) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d33/constantestimator_8cpp_source.html#l00024">constantestimator.cpp:24</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_time_series_html_a5c56c587bbc7f7769e5d3779175b493c"><div class="ttname"><a href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5c56c587bbc7f7769e5d3779175b493c">QuantLib::TimeSeries::values</a></div><div class="ttdeci">std::vector&lt; T &gt; values() const</div><div class="ttdoc">returns the historical data</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db6/timeseries_8hpp_source.html#l00298">timeseries.hpp:298</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_time_series_html_a0833e882f7bd9b10baa8f4ff433ebbd4"><div class="ttname"><a href="../../d2/d05/class_quant_lib_1_1_time_series.html#a0833e882f7bd9b10baa8f4ff433ebbd4">QuantLib::TimeSeries::const_iterator</a></div><div class="ttdeci">Container::const_iterator const_iterator</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db6/timeseries_8hpp_source.html#l00110">timeseries.hpp:110</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_constant_estimator_html_a099ae222846e00212cd7bf57e61668a1"><div class="ttname"><a href="../../db/d54/class_quant_lib_1_1_constant_estimator.html#a099ae222846e00212cd7bf57e61668a1">QuantLib::ConstantEstimator::calculate</a></div><div class="ttdeci">TimeSeries&lt; Volatility &gt; calculate(const TimeSeries&lt; Volatility &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d33/constantestimator_8cpp_source.html#l00024">constantestimator.cpp:24</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_time_series_html"><div class="ttname"><a href="../../d2/d05/class_quant_lib_1_1_time_series.html">QuantLib::TimeSeries</a></div><div class="ttdoc">Container for historical data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db6/timeseries_8hpp_source.html#l00050">timeseries.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>

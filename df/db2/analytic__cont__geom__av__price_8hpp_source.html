@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/asian/analytic_cont_geom_av_price.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -113,23 +114,24 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html">   49</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html">AnalyticContinuousGeometricAveragePriceAsianEngine</a></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        : <span class="keyword">public</span> <a class="code" href="../../d0/db0/class_quant_lib_1_1_continuous_averaging_asian_option_1_1engine.html">ContinuousAveragingAsianOption::engine</a> {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a3552be5a0059fd86d7cd33c934dc14e5">AnalyticContinuousGeometricAveragePriceAsianEngine</a>(</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keyword">const</span> ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;&amp; process);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   56</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    };</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a5eee7ac17059173fe63ec6d2b4f5397b">AnalyticContinuousGeometricAveragePriceAsianEngine</a>(</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; process);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   57</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::AnalyticContinuousGeometricAveragePriceAsianEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d49/analytic__cont__geom__av__price_8cpp_source.html#l00035">analytic_cont_geom_av_price.cpp:35</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine_html_a5eee7ac17059173fe63ec6d2b4f5397b"><div class="ttname"><a href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a5eee7ac17059173fe63ec6d2b4f5397b">QuantLib::AnalyticContinuousGeometricAveragePriceAsianEngine::AnalyticContinuousGeometricAveragePriceAsianEngine</a></div><div class="ttdeci">AnalyticContinuousGeometricAveragePriceAsianEngine(ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d49/analytic__cont__geom__av__price_8cpp_source.html#l00029">analytic_cont_geom_av_price.cpp:30</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine_html"><div class="ttname"><a href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html">QuantLib::AnalyticContinuousGeometricAveragePriceAsianEngine</a></div><div class="ttdoc">Pricing engine for European continuous geometric average price Asian.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db2/analytic__cont__geom__av__price_8hpp_source.html#l00049">analytic_cont_geom_av_price.hpp:50</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_continuous_averaging_asian_option_1_1engine_html"><div class="ttname"><a href="../../d0/db0/class_quant_lib_1_1_continuous_averaging_asian_option_1_1engine.html">QuantLib::ContinuousAveragingAsianOption::engine</a></div><div class="ttdoc">Continuous-averaging Asian engine base class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/asianoption_8hpp_source.html#l00104">asianoption.hpp:106</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine_html_a3552be5a0059fd86d7cd33c934dc14e5"><div class="ttname"><a href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a3552be5a0059fd86d7cd33c934dc14e5">QuantLib::AnalyticContinuousGeometricAveragePriceAsianEngine::AnalyticContinuousGeometricAveragePriceAsianEngine</a></div><div class="ttdeci">AnalyticContinuousGeometricAveragePriceAsianEngine(const ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;process)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d49/analytic__cont__geom__av__price_8cpp_source.html#l00028">analytic_cont_geom_av_price.cpp:29</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::AnalyticContinuousGeometricAveragePriceAsianEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db2/analytic__cont__geom__av__price_8hpp_source.html#l00056">analytic_cont_geom_av_price.hpp:56</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_continuous_averaging_asian_option_1_1engine_html"><div class="ttname"><a href="../../d0/db0/class_quant_lib_1_1_continuous_averaging_asian_option_1_1engine.html">QuantLib::ContinuousAveragingAsianOption::engine</a></div><div class="ttdoc">Continuous-averaging Asian engine base class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/asianoption_8hpp_source.html#l00105">asianoption.hpp:107</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::AnalyticContinuousGeometricAveragePriceAsianEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db2/analytic__cont__geom__av__price_8hpp_source.html#l00057">analytic_cont_geom_av_price.hpp:57</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::AnalyticContinuousGeometricAveragePriceAsianEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d49/analytic__cont__geom__av__price_8cpp_source.html#l00036">analytic_cont_geom_av_price.cpp:36</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

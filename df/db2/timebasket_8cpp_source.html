@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/cashflows/timebasket.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -107,7 +108,7 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../df/d50/class_quant_lib_1_1_time_basket.html#a6b78bdcda419ebfef78a827b17032b1d">   27</a></span>&#160;    <a class="code" href="../../df/d50/class_quant_lib_1_1_time_basket.html#adc14373ce1d117c919c147bb18db5a40">TimeBasket::TimeBasket</a>(<span class="keyword">const</span> std::vector&lt;Date&gt;&amp; dates,</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../df/d50/class_quant_lib_1_1_time_basket.html#a6b78bdcda419ebfef78a827b17032b1d">   27</a></span>&#160;    <a class="code" href="../../df/d50/class_quant_lib_1_1_time_basket.html#aef7910d23007e69521259ac2165b5806">TimeBasket::TimeBasket</a>(<span class="keyword">const</span> std::vector&lt;Date&gt;&amp; dates,</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                           <span class="keyword">const</span> std::vector&lt;Real&gt;&amp; values) {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        QL_REQUIRE(dates.size() == values.size(),</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                   <span class="stringliteral">&quot;number of dates differs from number of values&quot;</span>);</div>
@@ -124,12 +125,12 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../df/d50/class_quant_lib_1_1_time_basket.html">TimeBasket</a> result;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i = 0; i &lt; sbuckets.size(); i++)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            result[sbuckets[i]] = 0.0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; sbucket : sbuckets)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            result[sbucket] = 0.0;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../df/d50/class_quant_lib_1_1_time_basket.html#aaae3bb8452ab2076a1678a4ea6ad87ed">const_iterator</a> j = begin(); j != end(); ++j) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> date = j-&gt;first;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> value = j-&gt;second;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : *<span class="keyword">this</span>) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> date = j.first;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> value = j.second;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> pDate = <a class="code" href="../../da/d3a/class_quant_lib_1_1_null_3_01_date_01_4.html">Null&lt;Date&gt;</a>(), nDate = <a class="code" href="../../da/d3a/class_quant_lib_1_1_null_3_01_date_01_4.html">Null&lt;Date&gt;</a>();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            std::vector&lt;Date&gt;::const_iterator bi =</div>
@@ -159,10 +160,9 @@ $(function() {
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_null_3_01_date_01_4_html"><div class="ttname"><a href="../../da/d3a/class_quant_lib_1_1_null_3_01_date_01_4.html">QuantLib::Null&lt; Date &gt;</a></div><div class="ttdoc">specialization of Null template for the Date class</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00376">date.hpp:376</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_time_basket_html_adc14373ce1d117c919c147bb18db5a40"><div class="ttname"><a href="../../df/d50/class_quant_lib_1_1_time_basket.html#adc14373ce1d117c919c147bb18db5a40">QuantLib::TimeBasket::TimeBasket</a></div><div class="ttdeci">TimeBasket()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d43/timebasket_8hpp_source.html#l00040">timebasket.hpp:40</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_null_3_01_date_01_4_html"><div class="ttname"><a href="../../da/d3a/class_quant_lib_1_1_null_3_01_date_01_4.html">QuantLib::Null&lt; Date &gt;</a></div><div class="ttdoc">specialization of Null template for the Date class</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00375">date.hpp:375</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_time_basket_html_aef7910d23007e69521259ac2165b5806"><div class="ttname"><a href="../../df/d50/class_quant_lib_1_1_time_basket.html#aef7910d23007e69521259ac2165b5806">QuantLib::TimeBasket::TimeBasket</a></div><div class="ttdeci">TimeBasket()=default</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_time_basket_html"><div class="ttname"><a href="../../df/d50/class_quant_lib_1_1_time_basket.html">QuantLib::TimeBasket</a></div><div class="ttdoc">Distribution over a number of dates.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d43/timebasket_8hpp_source.html#l00036">timebasket.hpp:36</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_time_basket_html_aaae3bb8452ab2076a1678a4ea6ad87ed"><div class="ttname"><a href="../../df/d50/class_quant_lib_1_1_time_basket.html#aaae3bb8452ab2076a1678a4ea6ad87ed">QuantLib::TimeBasket::const_iterator</a></div><div class="ttdeci">super::const_iterator const_iterator</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d43/timebasket_8hpp_source.html#l00051">timebasket.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_time_basket_html_a3e97740a21d32bbc2a4dd0e5a729312d"><div class="ttname"><a href="../../df/d50/class_quant_lib_1_1_time_basket.html#a3e97740a21d32bbc2a4dd0e5a729312d">QuantLib::TimeBasket::super</a></div><div class="ttdeci">std::map&lt; Date, Real &gt; super</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d43/timebasket_8hpp_source.html#l00038">timebasket.hpp:38</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_time_basket_html_a321d732ff029b3fb432d91ed73691487"><div class="ttname"><a href="../../df/d50/class_quant_lib_1_1_time_basket.html#a321d732ff029b3fb432d91ed73691487">QuantLib::TimeBasket::rebin</a></div><div class="ttdeci">TimeBasket rebin(const std::vector&lt; Date &gt; &amp;buckets) const</div><div class="ttdoc">redistribute the entries over the given dates</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db2/timebasket_8cpp_source.html#l00036">timebasket.cpp:36</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>

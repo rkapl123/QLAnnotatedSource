@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/credit/issuer.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -102,108 +103,96 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;ql/experimental/credit/issuer.hpp&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">namespace </span>{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">bool</span> between(<span class="keyword">const</span> ext::shared_ptr&lt;DefaultEvent&gt;&amp; e,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                     <span class="keyword">const</span> Date&amp; start,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                     <span class="keyword">const</span> Date&amp; end,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                     <span class="keywordtype">bool</span> includeRefDate = <span class="keyword">false</span>) {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">return</span> !e-&gt;hasOccurred(start, includeRefDate) &amp;&amp;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                e-&gt;hasOccurred(end, includeRefDate);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#afd7dca7a5176138f5c0770e4e3f796a7">Issuer::Issuer</a>(<span class="keyword">const</span> std::vector&lt;std::pair&lt;DefaultProbKey,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    Handle&lt;DefaultProbabilityTermStructure&gt; &gt; &gt;&amp;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    probabilities,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                   <span class="keyword">const</span> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a06687e05cc69907f8d868cf0f15e4e6d">DefaultEventSet</a>&amp; events</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        )</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    : probabilities_(probabilities), events_(events) { }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a542c5cf7b97f4a821743b83d86c446f6">   42</a></span>&#160;    <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#afd7dca7a5176138f5c0770e4e3f796a7">Issuer::Issuer</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                       ext::shared_ptr&lt;DefaultType&gt; &gt; &gt;&amp; eventTypes,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                   <span class="keyword">const</span> std::vector&lt;Currency&gt;&amp; currencies,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                   <span class="keyword">const</span> std::vector&lt;Seniority&gt;&amp; seniorities,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                   <span class="keyword">const</span> std::vector&lt;<a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                       <a class="code" href="../../db/df4/class_quant_lib_1_1_default_probability_term_structure.html">DefaultProbabilityTermStructure</a>&gt; &gt;&amp; curves,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                   <span class="keyword">const</span> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a06687e05cc69907f8d868cf0f15e4e6d">DefaultEventSet</a>&amp; events)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    : events_(events) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        QL_REQUIRE((eventTypes.size() == curves.size()) &amp;&amp;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            (curves.size()== currencies.size()) &amp;&amp;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            (currencies.size() == seniorities.size()),</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="stringliteral">&quot;Incompatible size of Issuer parameters.&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i &lt;eventTypes.size(); i++) {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="../../d8/daa/class_quant_lib_1_1_default_prob_key.html">DefaultProbKey</a> keytmp(eventTypes[i], currencies[i],</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                seniorities[i]);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a781aec0eade147fc39f96622465341c2">probabilities_</a>.push_back(std::make_pair(keytmp, curves[i]));</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;DefaultProbabilityTermStructure&gt;</a>&amp;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a5b1e8e7681d44ec994f1e709ce9eed05">   63</a></span>&#160;        <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a5b1e8e7681d44ec994f1e709ce9eed05">Issuer::defaultProbability</a>(<span class="keyword">const</span> <a class="code" href="../../d8/daa/class_quant_lib_1_1_default_prob_key.html">DefaultProbKey</a>&amp; key)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;<a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a781aec0eade147fc39f96622465341c2">probabilities_</a>.size(); i++)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">if</span>(key == <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a781aec0eade147fc39f96622465341c2">probabilities_</a>[i].first)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a781aec0eade147fc39f96622465341c2">probabilities_</a>[i].second;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        QL_FAIL(<span class="stringliteral">&quot;Probability curve not available.&quot;</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    ext::shared_ptr&lt;DefaultEvent&gt;</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a04469d27bad1fe9fbfd3118685b304ed">   71</a></span>&#160;    <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a04469d27bad1fe9fbfd3118685b304ed">Issuer::defaultedBetween</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; start,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                             <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; end,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                             <span class="keyword">const</span> <a class="code" href="../../d8/daa/class_quant_lib_1_1_default_prob_key.html">DefaultProbKey</a>&amp; contractKey,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                             <span class="keywordtype">bool</span> includeRefDate</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                             )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">// to do: the set is ordered, see how to use it to speed this up</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">for</span>(DefaultEventSet::const_iterator itev = <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a4f4ea0fafcd158ca0c220d2e4514c88c">events_</a>.begin();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="comment">// am i really speeding things up with the date comp?</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            itev != <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a4f4ea0fafcd158ca0c220d2e4514c88c">events_</a>.end(); <span class="comment">// &amp;&amp; (*itev)-&gt;date() &gt; start;</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            ++itev) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">if</span>((*itev)-&gt;matchesDefaultKey(contractKey) &amp;&amp;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                between(*itev, start, end, includeRefDate))</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">return</span> *itev;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> ext::shared_ptr&lt;DefaultEvent&gt;();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::vector&lt;ext::shared_ptr&lt;DefaultEvent&gt; &gt;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="../../dd/dda/class_quant_lib_1_1_issuer.html#aa49fa07f6c1ff56aece1d5bc82ca435b">   91</a></span>&#160;    <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#aa49fa07f6c1ff56aece1d5bc82ca435b">Issuer::defaultsBetween</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; start,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                            <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; end,</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                            <span class="keyword">const</span> <a class="code" href="../../d8/daa/class_quant_lib_1_1_default_prob_key.html">DefaultProbKey</a>&amp; contractKey,</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                            <span class="keywordtype">bool</span> includeRefDate</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                            )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        std::vector&lt;ext::shared_ptr&lt;DefaultEvent&gt; &gt; defaults;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="comment">// to do: the set is ordered, see how to use it to speed this up</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">for</span>(DefaultEventSet::const_iterator itev = <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a4f4ea0fafcd158ca0c220d2e4514c88c">events_</a>.begin();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="comment">// am i really speeding things up with the date comp?</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            itev != <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a4f4ea0fafcd158ca0c220d2e4514c88c">events_</a>.end(); <span class="comment">// &amp;&amp; (*itev)-&gt;date() &gt; start;</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            ++itev) {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">if</span>((*itev)-&gt;matchesDefaultKey(contractKey) &amp;&amp;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                between(*itev, start, end, includeRefDate))</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                defaults.push_back(*itev);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> defaults;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">namespace </span>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">bool</span> between(<span class="keyword">const</span> ext::shared_ptr&lt;DefaultEvent&gt;&amp; e,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                     <span class="keyword">const</span> Date&amp; start,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                     <span class="keyword">const</span> Date&amp; end,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                     <span class="keywordtype">bool</span> includeRefDate = <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> !e-&gt;hasOccurred(start, includeRefDate) &amp;&amp;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                e-&gt;hasOccurred(end, includeRefDate);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#aebad9b09e78880ba1649ebed77900946">Issuer::Issuer</a>(std::vector&lt;std::pair&lt;DefaultProbKey, Handle&lt;DefaultProbabilityTermStructure&gt; &gt; &gt;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                       probabilities,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                   <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a06687e05cc69907f8d868cf0f15e4e6d">DefaultEventSet</a> events)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    : probabilities_(std::move(probabilities)), events_(std::move(events)) {}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../dd/dda/class_quant_lib_1_1_issuer.html#accb6a7cea718bfb509e99f2ac257e5ff">   41</a></span>&#160;    <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#aebad9b09e78880ba1649ebed77900946">Issuer::Issuer</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;ext::shared_ptr&lt;DefaultType&gt; &gt; &gt;&amp; eventTypes,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                   <span class="keyword">const</span> std::vector&lt;Currency&gt;&amp; currencies,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                   <span class="keyword">const</span> std::vector&lt;Seniority&gt;&amp; seniorities,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                   <span class="keyword">const</span> std::vector&lt;<a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;DefaultProbabilityTermStructure&gt;</a> &gt;&amp; curves,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                   <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a06687e05cc69907f8d868cf0f15e4e6d">DefaultEventSet</a> events)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    : events_(std::move(events)) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        QL_REQUIRE((eventTypes.size() == curves.size()) &amp;&amp;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            (curves.size()== currencies.size()) &amp;&amp;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            (currencies.size() == seniorities.size()),</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="stringliteral">&quot;Incompatible size of Issuer parameters.&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i &lt;eventTypes.size(); i++) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="../../d8/daa/class_quant_lib_1_1_default_prob_key.html">DefaultProbKey</a> keytmp(eventTypes[i], currencies[i],</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                seniorities[i]);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a781aec0eade147fc39f96622465341c2">probabilities_</a>.push_back(std::make_pair(keytmp, curves[i]));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;DefaultProbabilityTermStructure&gt;</a>&amp;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a5b1e8e7681d44ec994f1e709ce9eed05">   60</a></span>&#160;        <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a5b1e8e7681d44ec994f1e709ce9eed05">Issuer::defaultProbability</a>(<span class="keyword">const</span> <a class="code" href="../../d8/daa/class_quant_lib_1_1_default_prob_key.html">DefaultProbKey</a>&amp; key)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; probabilitie : <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a781aec0eade147fc39f96622465341c2">probabilities_</a>)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">if</span> (key == probabilitie.first)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">return</span> probabilitie.second;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        QL_FAIL(<span class="stringliteral">&quot;Probability curve not available.&quot;</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ext::shared_ptr&lt;DefaultEvent&gt;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a04469d27bad1fe9fbfd3118685b304ed">   68</a></span>&#160;    <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a04469d27bad1fe9fbfd3118685b304ed">Issuer::defaultedBetween</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; start,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                             <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; end,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                             <span class="keyword">const</span> <a class="code" href="../../d8/daa/class_quant_lib_1_1_default_prob_key.html">DefaultProbKey</a>&amp; contractKey,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                             <span class="keywordtype">bool</span> includeRefDate</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                             )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">// to do: the set is ordered, see how to use it to speed this up</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; event : <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a4f4ea0fafcd158ca0c220d2e4514c88c">events_</a>) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> (event-&gt;matchesDefaultKey(contractKey) &amp;&amp; between(event, start, end, includeRefDate))</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">return</span> event;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> ext::shared_ptr&lt;DefaultEvent&gt;();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::vector&lt;ext::shared_ptr&lt;DefaultEvent&gt; &gt;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="../../dd/dda/class_quant_lib_1_1_issuer.html#aa49fa07f6c1ff56aece1d5bc82ca435b">   84</a></span>&#160;    <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#aa49fa07f6c1ff56aece1d5bc82ca435b">Issuer::defaultsBetween</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; start,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                            <span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; end,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                            <span class="keyword">const</span> <a class="code" href="../../d8/daa/class_quant_lib_1_1_default_prob_key.html">DefaultProbKey</a>&amp; contractKey,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                            <span class="keywordtype">bool</span> includeRefDate</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                            )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        std::vector&lt;ext::shared_ptr&lt;DefaultEvent&gt; &gt; defaults;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">// to do: the set is ordered, see how to use it to speed this up</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; event : <a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html#a4f4ea0fafcd158ca0c220d2e4514c88c">events_</a>) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">if</span> (event-&gt;matchesDefaultKey(contractKey) &amp;&amp; between(event, start, end, includeRefDate))</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                defaults.push_back(event);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> defaults;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_issuer_html_a04469d27bad1fe9fbfd3118685b304ed"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html#a04469d27bad1fe9fbfd3118685b304ed">QuantLib::Issuer::defaultedBetween</a></div><div class="ttdeci">ext::shared_ptr&lt; DefaultEvent &gt; defaultedBetween(const Date &amp;start, const Date &amp;end, const DefaultProbKey &amp;key, bool includeRefDate=false) const</div><div class="ttdoc">If a default event with the required seniority and.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d87/issuer_8cpp_source.html#l00071">issuer.cpp:71</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_issuer_html_a04469d27bad1fe9fbfd3118685b304ed"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html#a04469d27bad1fe9fbfd3118685b304ed">QuantLib::Issuer::defaultedBetween</a></div><div class="ttdeci">ext::shared_ptr&lt; DefaultEvent &gt; defaultedBetween(const Date &amp;start, const Date &amp;end, const DefaultProbKey &amp;key, bool includeRefDate=false) const</div><div class="ttdoc">If a default event with the required seniority and.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d87/issuer_8cpp_source.html#l00068">issuer.cpp:68</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a06687e05cc69907f8d868cf0f15e4e6d"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a06687e05cc69907f8d868cf0f15e4e6d">QuantLib::DefaultEventSet</a></div><div class="ttdeci">std::set&lt; ext::shared_ptr&lt; DefaultEvent &gt;, earlier_than&lt; ext::shared_ptr&lt; DefaultEvent &gt; &gt; &gt; DefaultEventSet</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1e/issuer_8hpp_source.html#l00038">issuer.hpp:38</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_issuer_html_a4f4ea0fafcd158ca0c220d2e4514c88c"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html#a4f4ea0fafcd158ca0c220d2e4514c88c">QuantLib::Issuer::events_</a></div><div class="ttdeci">DefaultEventSet events_</div><div class="ttdoc">History of past events affecting this issuer. Notice it is possible.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1e/issuer_8hpp_source.html#l00101">issuer.hpp:101</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_issuer_html_aa49fa07f6c1ff56aece1d5bc82ca435b"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html#aa49fa07f6c1ff56aece1d5bc82ca435b">QuantLib::Issuer::defaultsBetween</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; DefaultEvent &gt; &gt; defaultsBetween(const Date &amp;start, const Date &amp;end, const DefaultProbKey &amp;contractKey, bool includeRefDate) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d87/issuer_8cpp_source.html#l00091">issuer.cpp:91</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_issuer_html_a781aec0eade147fc39f96622465341c2"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html#a781aec0eade147fc39f96622465341c2">QuantLib::Issuer::probabilities_</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; DefaultProbKey, Handle&lt; DefaultProbabilityTermStructure &gt; &gt; &gt; probabilities_</div><div class="ttdoc">probabilities of events for each bond collection</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1e/issuer_8hpp_source.html#l00097">issuer.hpp:97</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_issuer_html_afd7dca7a5176138f5c0770e4e3f796a7"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html#afd7dca7a5176138f5c0770e4e3f796a7">QuantLib::Issuer::Issuer</a></div><div class="ttdeci">Issuer(const std::vector&lt; key_curve_pair &gt; &amp;probabilities=std::vector&lt; key_curve_pair &gt;(), const DefaultEventSet &amp;events=DefaultEventSet())</div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_default_probability_term_structure_html"><div class="ttname"><a href="../../db/df4/class_quant_lib_1_1_default_probability_term_structure.html">QuantLib::DefaultProbabilityTermStructure</a></div><div class="ttdoc">Default probability term structure.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d7c/defaulttermstructure_8hpp_source.html#l00041">defaulttermstructure.hpp:41</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_issuer_html_a4f4ea0fafcd158ca0c220d2e4514c88c"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html#a4f4ea0fafcd158ca0c220d2e4514c88c">QuantLib::Issuer::events_</a></div><div class="ttdeci">DefaultEventSet events_</div><div class="ttdoc">History of past events affecting this issuer. Notice it is possible.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1e/issuer_8hpp_source.html#l00098">issuer.hpp:98</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_issuer_html_aebad9b09e78880ba1649ebed77900946"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html#aebad9b09e78880ba1649ebed77900946">QuantLib::Issuer::Issuer</a></div><div class="ttdeci">Issuer(std::vector&lt; key_curve_pair &gt; probabilities=std::vector&lt; key_curve_pair &gt;(), DefaultEventSet events=DefaultEventSet())</div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_issuer_html_aa49fa07f6c1ff56aece1d5bc82ca435b"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html#aa49fa07f6c1ff56aece1d5bc82ca435b">QuantLib::Issuer::defaultsBetween</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; DefaultEvent &gt; &gt; defaultsBetween(const Date &amp;start, const Date &amp;end, const DefaultProbKey &amp;contractKey, bool includeRefDate) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d87/issuer_8cpp_source.html#l00084">issuer.cpp:84</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_issuer_html_a781aec0eade147fc39f96622465341c2"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html#a781aec0eade147fc39f96622465341c2">QuantLib::Issuer::probabilities_</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; DefaultProbKey, Handle&lt; DefaultProbabilityTermStructure &gt; &gt; &gt; probabilities_</div><div class="ttdoc">probabilities of events for each bond collection</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1e/issuer_8hpp_source.html#l00094">issuer.hpp:94</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_default_prob_key_html"><div class="ttname"><a href="../../d8/daa/class_quant_lib_1_1_default_prob_key.html">QuantLib::DefaultProbKey</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db3/defaultprobabilitykey_8hpp_source.html#l00041">defaultprobabilitykey.hpp:41</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_issuer_html_a5b1e8e7681d44ec994f1e709ce9eed05"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html#a5b1e8e7681d44ec994f1e709ce9eed05">QuantLib::Issuer::defaultProbability</a></div><div class="ttdeci">const Handle&lt; DefaultProbabilityTermStructure &gt; &amp; defaultProbability(const DefaultProbKey &amp;key) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d87/issuer_8cpp_source.html#l00063">issuer.cpp:63</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_issuer_html_a5b1e8e7681d44ec994f1e709ce9eed05"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html#a5b1e8e7681d44ec994f1e709ce9eed05">QuantLib::Issuer::defaultProbability</a></div><div class="ttdeci">const Handle&lt; DefaultProbabilityTermStructure &gt; &amp; defaultProbability(const DefaultProbKey &amp;key) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d87/issuer_8cpp_source.html#l00060">issuer.cpp:60</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

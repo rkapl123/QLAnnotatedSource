@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: Member List</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -86,19 +87,19 @@ $(function() {
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html#a0012bec16d428570d315793248504583">binomialProbabilityOfAtLeastNEvents</a>(int n, std::vector&lt; Real &gt; &amp;p)</td><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html">LossDist</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html#af7a7f5209f9c9d70840062d345d2ddf2">binomialProbabilityOfNEvents</a>(int n, std::vector&lt; Real &gt; &amp;p)</td><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html">LossDist</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html#a1bc2df135e29f8b79a702ced936ce875">buckets</a>() const</td><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html">LossDistBucketing</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html#a1a44f6ebdb47cd4c350b391d8515a100">buckets</a>() const override</td><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html">LossDistBucketing</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html#a0c2c8b8d85c2ef2a8ea5afb1855a7bd7">epsilon_</a></td><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html">LossDistBucketing</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html#a3098ef76da4d8a05756ec55d435e40de">locateTargetBucket</a>(Real loss, Size i0=0) const</td><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html">LossDistBucketing</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html#ab1ed2340c94e1792f0d63fca3f5b1b7e">LossDist</a>()</td><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html">LossDist</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html#ac6984aa4f8d82c01ba70b206751cb208">LossDist</a>()=default</td><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html">LossDist</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html#ac84336ba94974568e944853ca269808b">LossDistBucketing</a>(Size nBuckets, Real maximum, Real epsilon=1e-6)</td><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html">LossDistBucketing</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html#a70b1b2ec68318ee5d62c3f509acee2bc">maximum</a>() const</td><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html">LossDistBucketing</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html#ac3d8f104b5c7b57a54513f2795455682">maximum</a>() const override</td><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html">LossDistBucketing</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html#abff8e9929d1de11ec2ddeae1146c19b2">maximum_</a></td><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html">LossDistBucketing</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html#aec681bdcc2a8f7d46664f2e51620f854">nBuckets_</a></td><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html">LossDistBucketing</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html#ad47193b571312f99352987c0187c2396">operator()</a>(const std::vector&lt; Real &gt; &amp;volumes, const std::vector&lt; Real &gt; &amp;probabilities) const</td><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html">LossDistBucketing</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html#a1896de496353610b2a904f4d17ad51d6">operator()</a>(const std::vector&lt; Real &gt; &amp;volumes, const std::vector&lt; Real &gt; &amp;probabilities) const override</td><td class="entry"><a class="el" href="../../dd/d3c/class_quant_lib_1_1_loss_dist_bucketing.html">LossDistBucketing</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html#ab1a653abfb061bcdb0ae448e9a53e0a7">probabilityOfAtLeastNEvents</a>(int n, std::vector&lt; Real &gt; &amp;p)</td><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html">LossDist</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html#a1f2c04d9cdb5d9c07859772eeda05d2c">probabilityOfNEvents</a>(std::vector&lt; Real &gt; &amp;p)</td><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html">LossDist</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html#a3456fe80454053bebbdda86cc75475e0">probabilityOfNEvents</a>(int n, std::vector&lt; Real &gt; &amp;p)</td><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html">LossDist</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html#a5546766df1db78def3db23dd75033fe9">~LossDist</a>()</td><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html">LossDist</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html#a35f667a9b1d4c743ec2cf82c87c6e45a">~LossDist</a>()=default</td><td class="entry"><a class="el" href="../../d9/d62/class_quant_lib_1_1_loss_dist.html">LossDist</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

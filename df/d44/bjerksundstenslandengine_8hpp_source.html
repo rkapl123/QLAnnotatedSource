@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/vanilla/bjerksundstenslandengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -113,9 +114,9 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html">   39</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html">BjerksundStenslandApproximationEngine</a></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        : <span class="keyword">public</span> <a class="code" href="../../d6/d09/class_quant_lib_1_1_one_asset_option_1_1engine.html">VanillaOption::engine</a> {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a36c48c67d63a1ad62778185327385235">BjerksundStenslandApproximationEngine</a>(</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    <span class="keyword">const</span> ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;&amp;);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a14caaa8bb8d8c9daf00b299bacda0bb5">BjerksundStenslandApproximationEngine</a>(ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   46</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    };</div>
@@ -126,11 +127,11 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_bjerksund_stensland_approximation_engine_html"><div class="ttname"><a href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html">QuantLib::BjerksundStenslandApproximationEngine</a></div><div class="ttdoc">Bjerksund and Stensland pricing engine for American options (1993)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d44/bjerksundstenslandengine_8hpp_source.html#l00039">bjerksundstenslandengine.hpp:40</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bjerksund_stensland_approximation_engine_html_a14caaa8bb8d8c9daf00b299bacda0bb5"><div class="ttname"><a href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a14caaa8bb8d8c9daf00b299bacda0bb5">QuantLib::BjerksundStenslandApproximationEngine::BjerksundStenslandApproximationEngine</a></div><div class="ttdeci">BjerksundStenslandApproximationEngine(ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db5/bjerksundstenslandengine_8cpp_source.html#l00080">bjerksundstenslandengine.cpp:80</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bjerksund_stensland_approximation_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::BjerksundStenslandApproximationEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d44/bjerksundstenslandengine_8hpp_source.html#l00046">bjerksundstenslandengine.hpp:46</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_one_asset_option_1_1engine_html"><div class="ttname"><a href="../../d6/d09/class_quant_lib_1_1_one_asset_option_1_1engine.html">QuantLib::OneAssetOption::engine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2b/oneassetoption_8hpp_source.html#l00079">oneassetoption.hpp:81</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bjerksund_stensland_approximation_engine_html_a36c48c67d63a1ad62778185327385235"><div class="ttname"><a href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a36c48c67d63a1ad62778185327385235">QuantLib::BjerksundStenslandApproximationEngine::BjerksundStenslandApproximationEngine</a></div><div class="ttdeci">BjerksundStenslandApproximationEngine(const ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db5/bjerksundstenslandengine_8cpp_source.html#l00079">bjerksundstenslandengine.cpp:80</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bjerksund_stensland_approximation_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::BjerksundStenslandApproximationEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db5/bjerksundstenslandengine_8cpp_source.html#l00086">bjerksundstenslandengine.cpp:86</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_one_asset_option_1_1engine_html"><div class="ttname"><a href="../../d6/d09/class_quant_lib_1_1_one_asset_option_1_1engine.html">QuantLib::OneAssetOption::engine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2b/oneassetoption_8hpp_source.html#l00080">oneassetoption.hpp:82</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bjerksund_stensland_approximation_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::BjerksundStenslandApproximationEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db5/bjerksundstenslandengine_8cpp_source.html#l00086">bjerksundstenslandengine.cpp:86</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

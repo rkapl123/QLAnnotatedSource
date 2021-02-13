@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/vanilla/juquadraticengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -113,9 +114,9 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html">   52</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html">JuQuadraticApproximationEngine</a></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        : <span class="keyword">public</span> <a class="code" href="../../d6/d09/class_quant_lib_1_1_one_asset_option_1_1engine.html">VanillaOption::engine</a> {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a96e0ff0d37cb76272c9b24bb0fe3b17d">JuQuadraticApproximationEngine</a>(</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    <span class="keyword">const</span> ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;&amp;);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#aa470e317a2e264a116d6f715b6ca8f60">JuQuadraticApproximationEngine</a>(ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   59</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    };</div>
@@ -126,11 +127,11 @@ $(function() {
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_ju_quadratic_approximation_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::JuQuadraticApproximationEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d82/juquadraticengine_8hpp_source.html#l00059">juquadraticengine.hpp:59</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_one_asset_option_1_1engine_html"><div class="ttname"><a href="../../d6/d09/class_quant_lib_1_1_one_asset_option_1_1engine.html">QuantLib::OneAssetOption::engine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2b/oneassetoption_8hpp_source.html#l00079">oneassetoption.hpp:81</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_ju_quadratic_approximation_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::JuQuadraticApproximationEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7e/juquadraticengine_8cpp_source.html#l00043">juquadraticengine.cpp:43</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_one_asset_option_1_1engine_html"><div class="ttname"><a href="../../d6/d09/class_quant_lib_1_1_one_asset_option_1_1engine.html">QuantLib::OneAssetOption::engine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2b/oneassetoption_8hpp_source.html#l00080">oneassetoption.hpp:82</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_ju_quadratic_approximation_engine_html_aa470e317a2e264a116d6f715b6ca8f60"><div class="ttname"><a href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#aa470e317a2e264a116d6f715b6ca8f60">QuantLib::JuQuadraticApproximationEngine::JuQuadraticApproximationEngine</a></div><div class="ttdeci">JuQuadraticApproximationEngine(ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7e/juquadraticengine_8cpp_source.html#l00038">juquadraticengine.cpp:38</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_ju_quadratic_approximation_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::JuQuadraticApproximationEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7e/juquadraticengine_8cpp_source.html#l00044">juquadraticengine.cpp:44</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_ju_quadratic_approximation_engine_html"><div class="ttname"><a href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html">QuantLib::JuQuadraticApproximationEngine</a></div><div class="ttdoc">Pricing engine for American options with Ju quadratic approximation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d82/juquadraticengine_8hpp_source.html#l00052">juquadraticengine.hpp:53</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_ju_quadratic_approximation_engine_html_a96e0ff0d37cb76272c9b24bb0fe3b17d"><div class="ttname"><a href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a96e0ff0d37cb76272c9b24bb0fe3b17d">QuantLib::JuQuadraticApproximationEngine::JuQuadraticApproximationEngine</a></div><div class="ttdeci">JuQuadraticApproximationEngine(const ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d7e/juquadraticengine_8cpp_source.html#l00037">juquadraticengine.cpp:37</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

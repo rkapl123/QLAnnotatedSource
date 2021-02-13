@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/methods/finitedifferences/stepconditions/fdmsnapshotcondition.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -113,7 +114,7 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../d5/dc1/class_quant_lib_1_1_fdm_snapshot_condition.html#ab0d2d23e05d15e613a386d5bc64190c9">FdmSnapshotCondition</a>(<a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d5/dc1/class_quant_lib_1_1_fdm_snapshot_condition.html#ad2950a2f34562f4128a74b106bc0112e">applyTo</a>(<a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; a, <a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d5/dc1/class_quant_lib_1_1_fdm_snapshot_condition.html#abe7b3e67f32110abbd846e32b4012cd1">applyTo</a>(<a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; a, <a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="code" href="../../d5/dc1/class_quant_lib_1_1_fdm_snapshot_condition.html#a06e9fe9f733da90fbf6366d206eb41f8">getTime</a>() <span class="keyword">const</span>;       </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; <a class="code" href="../../d5/dc1/class_quant_lib_1_1_fdm_snapshot_condition.html#a36a843503c3e7cf8b0041630fa549d89">getValues</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
@@ -127,12 +128,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_snapshot_condition_html_a457f33ba3cae0a866042833846c84a81"><div class="ttname"><a href="../../d5/dc1/class_quant_lib_1_1_fdm_snapshot_condition.html#a457f33ba3cae0a866042833846c84a81">QuantLib::FdmSnapshotCondition::t_</a></div><div class="ttdeci">const Time t_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd5/fdmsnapshotcondition_8hpp_source.html#l00042">fdmsnapshotcondition.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_snapshot_condition_html_a36a843503c3e7cf8b0041630fa549d89"><div class="ttname"><a href="../../d5/dc1/class_quant_lib_1_1_fdm_snapshot_condition.html#a36a843503c3e7cf8b0041630fa549d89">QuantLib::FdmSnapshotCondition::getValues</a></div><div class="ttdeci">const Array &amp; getValues() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd2/fdmsnapshotcondition_8cpp_source.html#l00042">fdmsnapshotcondition.cpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_snapshot_condition_html_a06e9fe9f733da90fbf6366d206eb41f8"><div class="ttname"><a href="../../d5/dc1/class_quant_lib_1_1_fdm_snapshot_condition.html#a06e9fe9f733da90fbf6366d206eb41f8">QuantLib::FdmSnapshotCondition::getTime</a></div><div class="ttdeci">Time getTime() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd2/fdmsnapshotcondition_8cpp_source.html#l00037">fdmsnapshotcondition.cpp:37</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_fdm_snapshot_condition_html_abe7b3e67f32110abbd846e32b4012cd1"><div class="ttname"><a href="../../d5/dc1/class_quant_lib_1_1_fdm_snapshot_condition.html#abe7b3e67f32110abbd846e32b4012cd1">QuantLib::FdmSnapshotCondition::applyTo</a></div><div class="ttdeci">void applyTo(Array &amp;a, Time t) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd2/fdmsnapshotcondition_8cpp_source.html#l00031">fdmsnapshotcondition.cpp:31</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_snapshot_condition_html_a99a3a78defaeab5ede226107da665b96"><div class="ttname"><a href="../../d5/dc1/class_quant_lib_1_1_fdm_snapshot_condition.html#a99a3a78defaeab5ede226107da665b96">QuantLib::FdmSnapshotCondition::values_</a></div><div class="ttdeci">Array values_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd5/fdmsnapshotcondition_8hpp_source.html#l00043">fdmsnapshotcondition.hpp:43</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00053">array.hpp:53</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_snapshot_condition_html"><div class="ttname"><a href="../../d5/dc1/class_quant_lib_1_1_fdm_snapshot_condition.html">QuantLib::FdmSnapshotCondition</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd5/fdmsnapshotcondition_8hpp_source.html#l00033">fdmsnapshotcondition.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_step_condition_html"><div class="ttname"><a href="../../dc/dda/class_quant_lib_1_1_step_condition.html">QuantLib::StepCondition</a></div><div class="ttdoc">condition to be applied at every time step</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0a/stepcondition_8hpp_source.html#l00035">stepcondition.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_snapshot_condition_html_ab0d2d23e05d15e613a386d5bc64190c9"><div class="ttname"><a href="../../d5/dc1/class_quant_lib_1_1_fdm_snapshot_condition.html#ab0d2d23e05d15e613a386d5bc64190c9">QuantLib::FdmSnapshotCondition::FdmSnapshotCondition</a></div><div class="ttdeci">FdmSnapshotCondition(Time t)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd2/fdmsnapshotcondition_8cpp_source.html#l00026">fdmsnapshotcondition.cpp:26</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_fdm_snapshot_condition_html_ad2950a2f34562f4128a74b106bc0112e"><div class="ttname"><a href="../../d5/dc1/class_quant_lib_1_1_fdm_snapshot_condition.html#ad2950a2f34562f4128a74b106bc0112e">QuantLib::FdmSnapshotCondition::applyTo</a></div><div class="ttdeci">void applyTo(Array &amp;a, Time t) const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd2/fdmsnapshotcondition_8cpp_source.html#l00031">fdmsnapshotcondition.cpp:31</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/methods/montecarlo/sample.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -104,16 +105,16 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define quantlib_sample_h</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;ql/types.hpp&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d4/da1/struct_quant_lib_1_1_sample.html">   34</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html">Sample</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a265a253612b46abed17c61b0a5e5ce30">   36</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="../../d3/dee/class_t.html">T</a> <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a265a253612b46abed17c61b0a5e5ce30">value_type</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a40d52b6e6a9b7bb6caaf4495a989d75a">   37</a></span>&#160;        <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a40d52b6e6a9b7bb6caaf4495a989d75a">Sample</a>(<span class="keyword">const</span> <a class="code" href="../../d3/dee/class_t.html">T</a>&amp; <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4fc7f59e3113e19697159919a5aad095">value</a>, <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4ddbf238c21d1f8db5aa4efe1aabe9aa">weight</a>)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        : <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4fc7f59e3113e19697159919a5aad095">value</a>(<a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4fc7f59e3113e19697159919a5aad095">value</a>), <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4ddbf238c21d1f8db5aa4efe1aabe9aa">weight</a>(<a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4ddbf238c21d1f8db5aa4efe1aabe9aa">weight</a>) {}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d4/da1/struct_quant_lib_1_1_sample.html">   35</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html">Sample</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a265a253612b46abed17c61b0a5e5ce30">   37</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="../../d3/dee/class_t.html">T</a> <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a265a253612b46abed17c61b0a5e5ce30">value_type</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a574b64715f70cacb3bd035ebbe80a66a">   38</a></span>&#160;        <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a574b64715f70cacb3bd035ebbe80a66a">Sample</a>(<a class="code" href="../../d3/dee/class_t.html">T</a> <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4fc7f59e3113e19697159919a5aad095">value</a>, <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4ddbf238c21d1f8db5aa4efe1aabe9aa">weight</a>) : <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4fc7f59e3113e19697159919a5aad095">value</a>(std::move(<a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4fc7f59e3113e19697159919a5aad095">value</a>)), <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4ddbf238c21d1f8db5aa4efe1aabe9aa">weight</a>(<a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4ddbf238c21d1f8db5aa4efe1aabe9aa">weight</a>) {}</div>
 <div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4fc7f59e3113e19697159919a5aad095">   39</a></span>&#160;        <a class="code" href="../../d3/dee/class_t.html">T</a> <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4fc7f59e3113e19697159919a5aad095">value</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4ddbf238c21d1f8db5aa4efe1aabe9aa">   40</a></span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4ddbf238c21d1f8db5aa4efe1aabe9aa">weight</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    };</div>
@@ -123,14 +124,14 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astruct_quant_lib_1_1_sample_html_a265a253612b46abed17c61b0a5e5ce30"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html#a265a253612b46abed17c61b0a5e5ce30">QuantLib::Sample::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00036">sample.hpp:36</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_sample_html_a265a253612b46abed17c61b0a5e5ce30"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html#a265a253612b46abed17c61b0a5e5ce30">QuantLib::Sample::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00037">sample.hpp:37</a></div></div>
 <div class="ttc" id="aclass_t_html"><div class="ttname"><a href="../../d3/dee/class_t.html">T</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_sample_html_a4fc7f59e3113e19697159919a5aad095"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4fc7f59e3113e19697159919a5aad095">QuantLib::Sample::value</a></div><div class="ttdeci">T value</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00039">sample.hpp:39</a></div></div>
-<div class="ttc" id="astruct_quant_lib_1_1_sample_html_a40d52b6e6a9b7bb6caaf4495a989d75a"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html#a40d52b6e6a9b7bb6caaf4495a989d75a">QuantLib::Sample::Sample</a></div><div class="ttdeci">Sample(const T &amp;value, Real weight)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00037">sample.hpp:37</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="astruct_quant_lib_1_1_sample_html"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html">QuantLib::Sample</a></div><div class="ttdoc">weighted sample</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00034">sample.hpp:34</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_sample_html"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html">QuantLib::Sample</a></div><div class="ttdoc">weighted sample</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00035">sample.hpp:35</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_sample_html_a4ddbf238c21d1f8db5aa4efe1aabe9aa"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4ddbf238c21d1f8db5aa4efe1aabe9aa">QuantLib::Sample::weight</a></div><div class="ttdeci">Real weight</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00040">sample.hpp:40</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_sample_html_a574b64715f70cacb3bd035ebbe80a66a"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html#a574b64715f70cacb3bd035ebbe80a66a">QuantLib::Sample::Sample</a></div><div class="ttdeci">Sample(T value, Real weight)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00038">sample.hpp:38</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

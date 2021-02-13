@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/asian Directory Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -87,7 +88,7 @@ Files</h2></td></tr>
 <tr class="memitem:da/d49/analytic__cont__geom__av__price_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>analytic_cont_geom_av_price.cpp</b> <a href="da/d49/analytic__cont__geom__av__price_8cpp_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:df/db2/analytic__cont__geom__av__price_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>analytic_cont_geom_av_price.hpp</b> <a href="df/db2/analytic__cont__geom__av__price_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:df/db2/analytic__cont__geom__av__price_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analytic engine for continuous geometric average price Asian. <br /></td></tr>
+<tr class="memdesc:df/db2/analytic__cont__geom__av__price_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analytic engine for continuous geometric average price Asian in the Heston model. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d2/d61/analytic__discr__geom__av__price_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>analytic_discr_geom_av_price.cpp</b> <a href="d2/d61/analytic__discr__geom__av__price_8cpp_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,6 +110,11 @@ Files</h2></td></tr>
 <tr class="memitem:de/dd9/mc__discr__arith__av__price_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>mc_discr_arith_av_price.hpp</b> <a href="de/dd9/mc__discr__arith__av__price_8hpp_source.html">[code]</a></td></tr>
 <tr class="memdesc:de/dd9/mc__discr__arith__av__price_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monte Carlo engine for discrete arithmetic average price Asian. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d1/dae/mc__discr__arith__av__price__heston_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>mc_discr_arith_av_price_heston.cpp</b> <a href="d1/dae/mc__discr__arith__av__price__heston_8cpp_source.html">[code]</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:db/dab/mc__discr__arith__av__price__heston_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>mc_discr_arith_av_price_heston.hpp</b> <a href="db/dab/mc__discr__arith__av__price__heston_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:db/dab/mc__discr__arith__av__price__heston_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Heston MC engine for discrete arithmetic average price Asian. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d6/d7c/mc__discr__arith__av__strike_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>mc_discr_arith_av_strike.cpp</b> <a href="d6/d7c/mc__discr__arith__av__strike_8cpp_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d1/ddd/mc__discr__arith__av__strike_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>mc_discr_arith_av_strike.hpp</b> <a href="d1/ddd/mc__discr__arith__av__strike_8hpp_source.html">[code]</a></td></tr>
@@ -119,8 +125,14 @@ Files</h2></td></tr>
 <tr class="memitem:d9/df7/mc__discr__geom__av__price_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>mc_discr_geom_av_price.hpp</b> <a href="d9/df7/mc__discr__geom__av__price_8hpp_source.html">[code]</a></td></tr>
 <tr class="memdesc:d9/df7/mc__discr__geom__av__price_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monte Carlo engine for discrete geometric average price Asian. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:df/d29/mc__discr__geom__av__price__heston_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>mc_discr_geom_av_price_heston.cpp</b> <a href="df/d29/mc__discr__geom__av__price__heston_8cpp_source.html">[code]</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d1/d97/mc__discr__geom__av__price__heston_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>mc_discr_geom_av_price_heston.hpp</b> <a href="d1/d97/mc__discr__geom__av__price__heston_8hpp_source.html">[code]</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:de/db8/mcdiscreteasianengine_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>mcdiscreteasianengine.hpp</b> <a href="de/db8/mcdiscreteasianengine_8hpp_source.html">[code]</a></td></tr>
 <tr class="memdesc:de/db8/mcdiscreteasianengine_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monte Carlo pricing engine for discrete average Asians. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:de/dd1/mcdiscreteasianenginebase_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>mcdiscreteasianenginebase.hpp</b> <a href="de/dd1/mcdiscreteasianenginebase_8hpp_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

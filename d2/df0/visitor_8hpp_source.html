@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/patterns/visitor.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -110,13 +111,13 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">   33</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a> {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html#ad5d3ee45c3c556131083dd7b54f3e21c">   35</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html#ad5d3ee45c3c556131083dd7b54f3e21c">~AcyclicVisitor</a>() {}</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html#a75149f2f44912cc4fa50f03075bbc647">   35</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html#a75149f2f44912cc4fa50f03075bbc647">~AcyclicVisitor</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    };</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d6/d87/class_quant_lib_1_1_visitor.html">   40</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d6/d87/class_quant_lib_1_1_visitor.html">Visitor</a> {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d6/d87/class_quant_lib_1_1_visitor.html#a9c1f95b9888f8b7a2778b470ef7a9be3">   42</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d6/d87/class_quant_lib_1_1_visitor.html#a9c1f95b9888f8b7a2778b470ef7a9be3">~Visitor</a>() {}</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d6/d87/class_quant_lib_1_1_visitor.html#a512315fceef4098b41c8328e4bfa68c4">   42</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d6/d87/class_quant_lib_1_1_visitor.html#a512315fceef4098b41c8328e4bfa68c4">~Visitor</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">   43</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">visit</a>(<a class="code" href="../../d3/dee/class_t.html">T</a>&amp;) = 0;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
@@ -127,11 +128,11 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_acyclic_visitor_html"><div class="ttname"><a href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">QuantLib::AcyclicVisitor</a></div><div class="ttdoc">degenerate base class for the Acyclic Visitor pattern</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00033">visitor.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_visitor_html"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html">QuantLib::Visitor</a></div><div class="ttdoc">Visitor for a specific class</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00040">visitor.hpp:40</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_acyclic_visitor_html_a75149f2f44912cc4fa50f03075bbc647"><div class="ttname"><a href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html#a75149f2f44912cc4fa50f03075bbc647">QuantLib::AcyclicVisitor::~AcyclicVisitor</a></div><div class="ttdeci">virtual ~AcyclicVisitor()=default</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_visitor_html_a6d7e98e3f298924633a9ba9bf5b04a83"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">QuantLib::Visitor::visit</a></div><div class="ttdeci">virtual void visit(T &amp;)=0</div></div>
 <div class="ttc" id="aclass_t_html"><div class="ttname"><a href="../../d3/dee/class_t.html">T</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_visitor_html_a9c1f95b9888f8b7a2778b470ef7a9be3"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html#a9c1f95b9888f8b7a2778b470ef7a9be3">QuantLib::Visitor::~Visitor</a></div><div class="ttdeci">virtual ~Visitor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00042">visitor.hpp:42</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_acyclic_visitor_html_ad5d3ee45c3c556131083dd7b54f3e21c"><div class="ttname"><a href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html#ad5d3ee45c3c556131083dd7b54f3e21c">QuantLib::AcyclicVisitor::~AcyclicVisitor</a></div><div class="ttdeci">virtual ~AcyclicVisitor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00035">visitor.hpp:35</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_visitor_html_a512315fceef4098b41c8328e4bfa68c4"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html#a512315fceef4098b41c8328e4bfa68c4">QuantLib::Visitor::~Visitor</a></div><div class="ttdeci">virtual ~Visitor()=default</div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

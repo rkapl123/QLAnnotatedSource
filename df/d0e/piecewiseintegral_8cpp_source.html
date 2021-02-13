@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/math/piecewiseintegral.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -102,29 +103,29 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ql/experimental/math/piecewiseintegral.hpp&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#a63220852337955f0357be0ed0b8da6b4">   25</a></span>&#160;<a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#a63220852337955f0357be0ed0b8da6b4">PiecewiseIntegral::PiecewiseIntegral</a>(</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">const</span> ext::shared_ptr&lt;Integrator&gt; &amp;integrator,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">const</span> std::vector&lt;Real&gt; &amp;criticalPoints, <span class="keyword">const</span> <span class="keywordtype">bool</span> avoidCriticalPoints)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    : <a class="code" href="../../db/df7/class_quant_lib_1_1_integrator.html">Integrator</a>(1.0, 1), integrator_(integrator),</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      criticalPoints_(criticalPoints),</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      eps_(avoidCriticalPoints ? (1.0 + <a class="code" href="../../d3/d8f/group__limit_macros.html#ga4f2e6bcf6b19224bce1a5a6234286c17">QL_EPSILON</a>) : 1.0) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::sort(<a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#ab8f1065549fbbac5315abf44218a5c53">criticalPoints_</a>.begin(), <a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#ab8f1065549fbbac5315abf44218a5c53">criticalPoints_</a>.end());</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::vector&lt;Real&gt;::const_iterator end =</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::unique(<a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#ab8f1065549fbbac5315abf44218a5c53">criticalPoints_</a>.begin(), <a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#ab8f1065549fbbac5315abf44218a5c53">criticalPoints_</a>.end(),</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span> (*)(<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>, <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)<span class="keyword">&gt;</span>(<a class="code" href="../../d5/d7b/namespace_quant_lib.html#a605b00167a137e3a0b87f0b13f479fda">close_enough</a>));</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#ab8f1065549fbbac5315abf44218a5c53">criticalPoints_</a>.resize(end - <a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#ab8f1065549fbbac5315abf44218a5c53">criticalPoints_</a>.begin());</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#af3230e5dc997c0f802e6e83062cadc6b">   26</a></span>&#160;    <a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#af3230e5dc997c0f802e6e83062cadc6b">PiecewiseIntegral::PiecewiseIntegral</a>(ext::shared_ptr&lt;Integrator&gt; integrator,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                         std::vector&lt;Real&gt; criticalPoints,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                         <span class="keyword">const</span> <span class="keywordtype">bool</span> avoidCriticalPoints)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    : <a class="code" href="../../db/df7/class_quant_lib_1_1_integrator.html">Integrator</a>(1.0, 1), integrator_(std::move(integrator)),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      criticalPoints_(std::move(criticalPoints)),</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      eps_(avoidCriticalPoints ? (1.0 + <a class="code" href="../../d3/d8f/group__limit_macros.html#ga4f2e6bcf6b19224bce1a5a6234286c17">QL_EPSILON</a>) : 1.0) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        std::sort(<a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#ab8f1065549fbbac5315abf44218a5c53">criticalPoints_</a>.begin(), <a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#ab8f1065549fbbac5315abf44218a5c53">criticalPoints_</a>.end());</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::vector&lt;Real&gt;::const_iterator end =</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            std::unique(<a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#ab8f1065549fbbac5315abf44218a5c53">criticalPoints_</a>.begin(), <a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#ab8f1065549fbbac5315abf44218a5c53">criticalPoints_</a>.end(),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                        <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span> (*)(<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>, <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)<span class="keyword">&gt;</span>(<a class="code" href="../../d5/d7b/namespace_quant_lib.html#a605b00167a137e3a0b87f0b13f479fda">close_enough</a>));</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#ab8f1065549fbbac5315abf44218a5c53">criticalPoints_</a>.resize(end - <a class="code" href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#ab8f1065549fbbac5315abf44218a5c53">criticalPoints_</a>.begin());</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;} <span class="comment">// namespace QuantLib</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_quant_lib_html_a605b00167a137e3a0b87f0b13f479fda"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a605b00167a137e3a0b87f0b13f479fda">QuantLib::close_enough</a></div><div class="ttdeci">bool close_enough(const Quantity &amp;m1, const Quantity &amp;m2, Size n)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dbf/quantity_8cpp_source.html#l00182">quantity.cpp:182</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_piecewise_integral_html_af3230e5dc997c0f802e6e83062cadc6b"><div class="ttname"><a href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#af3230e5dc997c0f802e6e83062cadc6b">QuantLib::PiecewiseIntegral::PiecewiseIntegral</a></div><div class="ttdeci">PiecewiseIntegral(ext::shared_ptr&lt; Integrator &gt; integrator, std::vector&lt; Real &gt; criticalPoints, bool avoidCriticalPoints=true)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d0e/piecewiseintegral_8cpp_source.html#l00026">piecewiseintegral.cpp:26</a></div></div>
 <div class="ttc" id="agroup__limit_macros_html_ga4f2e6bcf6b19224bce1a5a6234286c17"><div class="ttname"><a href="../../d3/d8f/group__limit_macros.html#ga4f2e6bcf6b19224bce1a5a6234286c17">QL_EPSILON</a></div><div class="ttdeci">#define QL_EPSILON</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/qldefines_8hpp_source.html#l00178">qldefines.hpp:178</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_piecewise_integral_html_a63220852337955f0357be0ed0b8da6b4"><div class="ttname"><a href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#a63220852337955f0357be0ed0b8da6b4">QuantLib::PiecewiseIntegral::PiecewiseIntegral</a></div><div class="ttdeci">PiecewiseIntegral(const ext::shared_ptr&lt; Integrator &gt; &amp;integrator, const std::vector&lt; Real &gt; &amp;criticalPoints, bool avoidCriticalPoints=true)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d0e/piecewiseintegral_8cpp_source.html#l00025">piecewiseintegral.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_piecewise_integral_html_ab8f1065549fbbac5315abf44218a5c53"><div class="ttname"><a href="../../d5/d81/class_quant_lib_1_1_piecewise_integral.html#ab8f1065549fbbac5315abf44218a5c53">QuantLib::PiecewiseIntegral::criticalPoints_</a></div><div class="ttdeci">std::vector&lt; Real &gt; criticalPoints_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d56/piecewiseintegral_8hpp_source.html#l00051">piecewiseintegral.hpp:51</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_integrator_html"><div class="ttname"><a href="../../db/df7/class_quant_lib_1_1_integrator.html">QuantLib::Integrator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da8/integral_8hpp_source.html#l00030">integral.hpp:30</a></div></div>

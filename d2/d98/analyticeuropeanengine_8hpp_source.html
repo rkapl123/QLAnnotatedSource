@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/pricingengines/vanilla/analyticeuropeanengine.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -113,30 +114,29 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html">   61</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html">AnalyticEuropeanEngine</a> : <span class="keyword">public</span> <a class="code" href="../../d6/d09/class_quant_lib_1_1_one_asset_option_1_1engine.html">VanillaOption::engine</a> {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#aee09bceb3a6a51ccbf13bc173e21a7cd">AnalyticEuropeanEngine</a>(</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <span class="keyword">const</span> ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;&amp;);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#aee09bceb3a6a51ccbf13bc173e21a7cd">AnalyticEuropeanEngine</a>(</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;             <span class="keyword">const</span> ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;&amp; process,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;             <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; discountCurve);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   80</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a188f6df4c42679c1c133919254e351c5">   81</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> <a class="code" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a188f6df4c42679c1c133919254e351c5">discountCurve_</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    };</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#aa115007fb6ebbd8b5fd253f759d316b7">AnalyticEuropeanEngine</a>(ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt;);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#aa115007fb6ebbd8b5fd253f759d316b7">AnalyticEuropeanEngine</a>(ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; process,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                               <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> discountCurve);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   79</a></span>&#160;        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a188f6df4c42679c1c133919254e351c5">   80</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> <a class="code" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a188f6df4c42679c1c133919254e351c5">discountCurve_</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    };</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle&lt; YieldTermStructure &gt;</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_european_engine_html_aee09bceb3a6a51ccbf13bc173e21a7cd"><div class="ttname"><a href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#aee09bceb3a6a51ccbf13bc173e21a7cd">QuantLib::AnalyticEuropeanEngine::AnalyticEuropeanEngine</a></div><div class="ttdeci">AnalyticEuropeanEngine(const ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/db6/analyticeuropeanengine_8cpp_source.html#l00027">analyticeuropeanengine.cpp:27</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_one_asset_option_1_1engine_html"><div class="ttname"><a href="../../d6/d09/class_quant_lib_1_1_one_asset_option_1_1engine.html">QuantLib::OneAssetOption::engine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2b/oneassetoption_8hpp_source.html#l00079">oneassetoption.hpp:81</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_european_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::AnalyticEuropeanEngine::calculate</a></div><div class="ttdeci">void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/db6/analyticeuropeanengine_8cpp_source.html#l00041">analyticeuropeanengine.cpp:41</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_one_asset_option_1_1engine_html"><div class="ttname"><a href="../../d6/d09/class_quant_lib_1_1_one_asset_option_1_1engine.html">QuantLib::OneAssetOption::engine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2b/oneassetoption_8hpp_source.html#l00080">oneassetoption.hpp:82</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_european_engine_html"><div class="ttname"><a href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html">QuantLib::AnalyticEuropeanEngine</a></div><div class="ttdoc">Pricing engine for European vanilla options using analytical formulae.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d98/analyticeuropeanengine_8hpp_source.html#l00061">analyticeuropeanengine.hpp:61</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_european_engine_html_a188f6df4c42679c1c133919254e351c5"><div class="ttname"><a href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a188f6df4c42679c1c133919254e351c5">QuantLib::AnalyticEuropeanEngine::discountCurve_</a></div><div class="ttdeci">Handle&lt; YieldTermStructure &gt; discountCurve_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d98/analyticeuropeanengine_8hpp_source.html#l00081">analyticeuropeanengine.hpp:81</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_european_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::AnalyticEuropeanEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d98/analyticeuropeanengine_8hpp_source.html#l00080">analyticeuropeanengine.hpp:80</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_european_engine_html_a188f6df4c42679c1c133919254e351c5"><div class="ttname"><a href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a188f6df4c42679c1c133919254e351c5">QuantLib::AnalyticEuropeanEngine::discountCurve_</a></div><div class="ttdeci">Handle&lt; YieldTermStructure &gt; discountCurve_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d98/analyticeuropeanengine_8hpp_source.html#l00080">analyticeuropeanengine.hpp:80</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_european_engine_html_aa115007fb6ebbd8b5fd253f759d316b7"><div class="ttname"><a href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#aa115007fb6ebbd8b5fd253f759d316b7">QuantLib::AnalyticEuropeanEngine::AnalyticEuropeanEngine</a></div><div class="ttdeci">AnalyticEuropeanEngine(ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/db6/analyticeuropeanengine_8cpp_source.html#l00028">analyticeuropeanengine.cpp:28</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_european_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::AnalyticEuropeanEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/db6/analyticeuropeanengine_8cpp_source.html#l00042">analyticeuropeanengine.cpp:42</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_european_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::AnalyticEuropeanEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d98/analyticeuropeanengine_8hpp_source.html#l00079">analyticeuropeanengine.hpp:79</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

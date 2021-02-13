@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/math/matrixutilities/getcovariance.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -112,7 +113,7 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> DataIterator&gt;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a58b333f8bf3456b41910e27408364cb8">   49</a></span>&#160;    <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;Matrix&gt;</a> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a58b333f8bf3456b41910e27408364cb8">getCovariance</a>(DataIterator stdDevBegin,</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a58b333f8bf3456b41910e27408364cb8">   49</a></span>&#160;    <a class="code" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable&lt;Matrix&gt;</a> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a58b333f8bf3456b41910e27408364cb8">getCovariance</a>(DataIterator stdDevBegin,</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                     DataIterator stdDevEnd,</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                     <span class="keyword">const</span> <a class="code" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a>&amp; corr,</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                     <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> tolerance = 1.0e-12){</div>
@@ -172,12 +173,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_covariance_decomposition_html"><div class="ttname"><a href="../../dc/d5c/class_quant_lib_1_1_covariance_decomposition.html">QuantLib::CovarianceDecomposition</a></div><div class="ttdoc">Covariance decomposition into correlation and variances.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d95/getcovariance_8hpp_source.html#l00095">getcovariance.hpp:95</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_covariance_decomposition_html_af639c22c388e30a79c1f3c5a3514bbc1"><div class="ttname"><a href="../../dc/d5c/class_quant_lib_1_1_covariance_decomposition.html#af639c22c388e30a79c1f3c5a3514bbc1">QuantLib::CovarianceDecomposition::correlationMatrix</a></div><div class="ttdeci">const Matrix &amp; correlationMatrix() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d95/getcovariance_8hpp_source.html#l00106">getcovariance.hpp:106</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_covariance_decomposition_html_a3d5aeaf3b3e2c9ac3abefa191f9d387a"><div class="ttname"><a href="../../dc/d5c/class_quant_lib_1_1_covariance_decomposition.html#a3d5aeaf3b3e2c9ac3abefa191f9d387a">QuantLib::CovarianceDecomposition::correlationMatrix_</a></div><div class="ttdeci">Matrix correlationMatrix_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d95/getcovariance_8hpp_source.html#l00109">getcovariance.hpp:109</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a86a771d47cf764c4ef43aab250442fda"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a86a771d47cf764c4ef43aab250442fda">QuantLib::Matrix::columns</a></div><div class="ttdeci">Size columns() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00463">matrix.hpp:463</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a86a771d47cf764c4ef43aab250442fda"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a86a771d47cf764c4ef43aab250442fda">QuantLib::Matrix::columns</a></div><div class="ttdeci">Size columns() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00481">matrix.hpp:481</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00053">array.hpp:53</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a74da223ed3bde38f5e9f6822f6cacfbe"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a74da223ed3bde38f5e9f6822f6cacfbe">QuantLib::Matrix::rows</a></div><div class="ttdeci">Size rows() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00459">matrix.hpp:459</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a74da223ed3bde38f5e9f6822f6cacfbe"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a74da223ed3bde38f5e9f6822f6cacfbe">QuantLib::Matrix::rows</a></div><div class="ttdeci">Size rows() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00477">matrix.hpp:477</a></div></div>
 <div class="ttc" id="agroup__manips_html_gace46b8e41fd72ee71b9ca53cafd0277f"><div class="ttname"><a href="../../dc/da8/group__manips.html#gace46b8e41fd72ee71b9ca53cafd0277f">QuantLib::io::ordinal</a></div><div class="ttdeci">detail::ordinal_holder ordinal(Size)</div><div class="ttdoc">outputs naturals as 1st, 2nd, 3rd...</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db9/dataformatters_8hpp_source.html#l00116">dataformatters.hpp:116</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_aab56fb6f79c404afbf5fedf756b41bc1"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">QuantLib::Disposable</a></div><div class="ttdeci">T Disposable</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00034">disposable.hpp:34</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_covariance_decomposition_html_a618d4318c9cd0246dae1935fc514faec"><div class="ttname"><a href="../../dc/d5c/class_quant_lib_1_1_covariance_decomposition.html#a618d4318c9cd0246dae1935fc514faec">QuantLib::CovarianceDecomposition::variances</a></div><div class="ttdeci">const Array &amp; variances() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d95/getcovariance_8hpp_source.html#l00102">getcovariance.hpp:102</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html">QuantLib::Disposable</a></div><div class="ttdoc">generic disposable object with move semantics</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00064">disposable.hpp:64</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_covariance_decomposition_html_ab428dd0735e857e611de38061dda4639"><div class="ttname"><a href="../../dc/d5c/class_quant_lib_1_1_covariance_decomposition.html#ab428dd0735e857e611de38061dda4639">QuantLib::CovarianceDecomposition::standardDeviations</a></div><div class="ttdeci">const Array &amp; standardDeviations() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d95/getcovariance_8hpp_source.html#l00104">getcovariance.hpp:104</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_matrix_html"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html">QuantLib::Matrix</a></div><div class="ttdoc">Matrix used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00039">matrix.hpp:39</a></div></div>

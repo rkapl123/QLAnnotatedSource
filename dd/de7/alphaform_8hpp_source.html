@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/models/marketmodels/models/alphaform.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -109,7 +110,7 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html">   27</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html">AlphaForm</a> {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html#a34759557c2dd9970a96b6ad522c6a16b">   29</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html#a34759557c2dd9970a96b6ad522c6a16b">~AlphaForm</a>() {}</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html#accf6f7f09d6e836e797642551c12c211">   29</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html#accf6f7f09d6e836e797642551c12c211">~AlphaForm</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html#a587be0279d72e2b70a3918f02f6d88ef">   30</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html#a587be0279d72e2b70a3918f02f6d88ef">operator()</a>(<a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> i) <span class="keyword">const</span>=0;</div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html#a866e0aa714c57d7ec779cb7c3976bbf4">   31</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html#a866e0aa714c57d7ec779cb7c3976bbf4">setAlpha</a>(<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> alpha)=0;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
@@ -120,11 +121,11 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_alpha_form_html"><div class="ttname"><a href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html">QuantLib::AlphaForm</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de7/alphaform_8hpp_source.html#l00027">alphaform.hpp:27</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_alpha_form_html_a34759557c2dd9970a96b6ad522c6a16b"><div class="ttname"><a href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html#a34759557c2dd9970a96b6ad522c6a16b">QuantLib::AlphaForm::~AlphaForm</a></div><div class="ttdeci">virtual ~AlphaForm()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de7/alphaform_8hpp_source.html#l00029">alphaform.hpp:29</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_alpha_form_html_a587be0279d72e2b70a3918f02f6d88ef"><div class="ttname"><a href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html#a587be0279d72e2b70a3918f02f6d88ef">QuantLib::AlphaForm::operator()</a></div><div class="ttdeci">virtual Real operator()(Integer i) const =0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_alpha_form_html_a866e0aa714c57d7ec779cb7c3976bbf4"><div class="ttname"><a href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html#a866e0aa714c57d7ec779cb7c3976bbf4">QuantLib::AlphaForm::setAlpha</a></div><div class="ttdeci">virtual void setAlpha(Real alpha)=0</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_alpha_form_html_accf6f7f09d6e836e797642551c12c211"><div class="ttname"><a href="../../dc/d6b/class_quant_lib_1_1_alpha_form.html#accf6f7f09d6e836e797642551c12c211">QuantLib::AlphaForm::~AlphaForm</a></div><div class="ttdeci">virtual ~AlphaForm()=default</div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

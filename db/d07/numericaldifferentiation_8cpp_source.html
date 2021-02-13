@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/methods/finitedifferences/operators/numericaldifferentiation.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -110,103 +111,105 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wunused-local-typedefs&quot;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;boost/multi_array.hpp&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#if defined(__GNUC__) &amp;&amp; (((__GNUC__ == 4) &amp;&amp; (__GNUC_MINOR__ &gt;= 8)) || (__GNUC__ &gt; 4))</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#pragma GCC diagnostic pop</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">namespace </span>{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        Disposable&lt;Array&gt; calcOffsets(</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> h, <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n, <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167">NumericalDifferentiation::Scheme</a> scheme) {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            QL_REQUIRE(n &gt; 1, <span class="stringliteral">&quot;number of steps must be greater than one&quot;</span>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            Array retVal(n);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">switch</span> (scheme) {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167a7ab3a5cea583da15b13bfe3742dca4f8">NumericalDifferentiation::Central</a>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                QL_REQUIRE(n &gt; 2 &amp;&amp; (n % 2),</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    <span class="stringliteral">&quot;number of steps must be an odd number greater than two&quot;</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> i=0; i &lt; <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>(n); ++i)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    retVal[i] = (i-<a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>(n/2))*h;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167a67e19347f85332c3bbfd61266cecbe4e">NumericalDifferentiation::Backward</a>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i &lt; n; ++i)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    retVal[i]=-(i*h);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167ae204c9c3e62b1e9a6b60e40cd05256c5">NumericalDifferentiation::Forward</a>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i &lt; n; ++i)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    retVal[i]=i*h;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;              <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                QL_FAIL(<span class="stringliteral">&quot;unknown numerical differentiation scheme&quot;</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> retVal;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// This is a C++ implementation of the algorithm/pseudo code in</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// B. Fornberg, 1998. Calculation of Weights</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//                    in Finite Difference Formulas</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// https://amath.colorado.edu/faculty/fornberg/Docs/sirev_cl.pdf</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        Disposable&lt;Array&gt; calcWeights(<span class="keyword">const</span> Array&amp; x, <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> M) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keyword">const</span> <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> N = x.size();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            QL_REQUIRE(N &gt; M, <span class="stringliteral">&quot;number of points must be greater &quot;</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                               <span class="stringliteral">&quot;than the order of the derivative&quot;</span>);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            boost::multi_array&lt;Real, 3&gt;  d(boost::extents[M+1][N][N]);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            d[0][0][0] = 1.0;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> c1 = 1.0;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n=1; n &lt; N; ++n) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> c2 = 1.0;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> nu=0; nu &lt; n; ++nu) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    <span class="keyword">const</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> c3 = x[n] - x[nu];</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    c2*=c3;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> m=0; m &lt;= std::min(n, M); ++m) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        d[m][n][nu] = (x[n]*d[m][n-1][nu]</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                             - ((m &gt; 0)? m*d[m-1][n-1][nu] : 0.0))/c3;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> m=0; m &lt;= M; ++m) {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    d[m][n][n] = c1/c2*( ((m &gt; 0)? m*d[m-1][n-1][n-1] : 0.0) -</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                        x[n-1]*d[m][n-1][n-1] );</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                c1=c2;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#if defined(__GNUC__) &amp;&amp; (((__GNUC__ == 4) &amp;&amp; (__GNUC_MINOR__ &gt;= 8)) || (__GNUC__ &gt; 4))</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#    pragma GCC diagnostic pop</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">namespace </span>{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        Disposable&lt;Array&gt; calcOffsets(</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> h, <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n, <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167">NumericalDifferentiation::Scheme</a> scheme) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            QL_REQUIRE(n &gt; 1, <span class="stringliteral">&quot;number of steps must be greater than one&quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            Array retVal(n);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">switch</span> (scheme) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167a7ab3a5cea583da15b13bfe3742dca4f8">NumericalDifferentiation::Central</a>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                QL_REQUIRE(n &gt; 2 &amp;&amp; (n % 2),</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    <span class="stringliteral">&quot;number of steps must be an odd number greater than two&quot;</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> i=0; i &lt; <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>(n); ++i)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    retVal[i] = (i-<a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>(n/2))*h;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167a67e19347f85332c3bbfd61266cecbe4e">NumericalDifferentiation::Backward</a>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i &lt; n; ++i)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    retVal[i]=-(i*h);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167ae204c9c3e62b1e9a6b60e40cd05256c5">NumericalDifferentiation::Forward</a>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i &lt; n; ++i)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    retVal[i]=i*h;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;              <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                QL_FAIL(<span class="stringliteral">&quot;unknown numerical differentiation scheme&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> retVal;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// This is a C++ implementation of the algorithm/pseudo code in</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">// B. Fornberg, 1998. Calculation of Weights</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">//                    in Finite Difference Formulas</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">// https://amath.colorado.edu/faculty/fornberg/Docs/sirev_cl.pdf</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        Disposable&lt;Array&gt; calcWeights(<span class="keyword">const</span> Array&amp; x, <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> M) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keyword">const</span> <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> N = x.size();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            QL_REQUIRE(N &gt; M, <span class="stringliteral">&quot;number of points must be greater &quot;</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                               <span class="stringliteral">&quot;than the order of the derivative&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            boost::multi_array&lt;Real, 3&gt;  d(boost::extents[M+1][N][N]);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            d[0][0][0] = 1.0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> c1 = 1.0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n=1; n &lt; N; ++n) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> c2 = 1.0;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> nu=0; nu &lt; n; ++nu) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    <span class="keyword">const</span> <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> c3 = x[n] - x[nu];</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    c2*=c3;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> m=0; m &lt;= std::min(n, M); ++m) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                        d[m][n][nu] = (x[n]*d[m][n-1][nu]</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                             - ((m &gt; 0)? m*d[m-1][n-1][nu] : 0.0))/c3;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> m=0; m &lt;= M; ++m) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    d[m][n][n] = c1/c2*( ((m &gt; 0)? m*d[m-1][n-1][n-1] : 0.0) -</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        x[n-1]*d[m][n-1][n-1] );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                c1=c2;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            Array retVal(N);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i &lt; N; ++i) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                retVal[i] = d[M][N-1][i];</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">return</span> retVal;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#adec51a7fbe78063605e12fbeb155bd79">  107</a></span>&#160;    <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#adec51a7fbe78063605e12fbeb155bd79">NumericalDifferentiation::NumericalDifferentiation</a>(</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">const</span> ext::function&lt;<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt;&amp; f,</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> orderOfDerivative,    <span class="keyword">const</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; x_offsets)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    : offsets_(x_offsets),</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      w_(calcWeights(offsets_, orderOfDerivative)), f_(f) { }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            Array retVal(N);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i &lt; N; ++i) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                retVal[i] = d[M][N-1][i];</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">return</span> retVal;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#aaf554536f8040f4b8956ec0aa7e6b31b">  108</a></span>&#160;    <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#aaf554536f8040f4b8956ec0aa7e6b31b">NumericalDifferentiation::NumericalDifferentiation</a>(ext::function&lt;<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt; f,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                                       <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> orderOfDerivative,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                                       <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> x_offsets)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    : offsets_(std::move(x_offsets)), w_(calcWeights(offsets_, orderOfDerivative)),</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      f_(std::move(f)) {}</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a30960358cb587b4b60a232020ad741f4">  114</a></span>&#160;    <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#adec51a7fbe78063605e12fbeb155bd79">NumericalDifferentiation::NumericalDifferentiation</a>(</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keyword">const</span> ext::function&lt;<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt;&amp; f,</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> orderOfDerivative,</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> stepSize, <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> steps, <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167">Scheme</a> scheme)</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    : offsets_(calcOffsets(stepSize, steps, scheme)),</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      w_(calcWeights(offsets_, orderOfDerivative)), f_(f) { }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a0bad960024d8f80ad76403394b66b4b0">  115</a></span>&#160;    <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#aaf554536f8040f4b8956ec0aa7e6b31b">NumericalDifferentiation::NumericalDifferentiation</a>(ext::function&lt;<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt; f,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                                                       <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> orderOfDerivative,</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                                       <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> stepSize,</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                                       <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> steps,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                                       <a class="code" href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167">Scheme</a> scheme)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    : offsets_(calcOffsets(stepSize, steps, scheme)), w_(calcWeights(offsets_, orderOfDerivative)),</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      f_(std::move(f)) {}</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_quant_lib_1_1_numerical_differentiation_html_aaf554536f8040f4b8956ec0aa7e6b31b"><div class="ttname"><a href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#aaf554536f8040f4b8956ec0aa7e6b31b">QuantLib::NumericalDifferentiation::NumericalDifferentiation</a></div><div class="ttdeci">NumericalDifferentiation(ext::function&lt; Real(Real)&gt; f, Size orderOfDerivative, Array x_offsets)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d07/numericaldifferentiation_8cpp_source.html#l00108">numericaldifferentiation.cpp:108</a></div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_numerical_differentiation_html_a5c5181a54a4f46149d9c9662b2694167a7ab3a5cea583da15b13bfe3742dca4f8"><div class="ttname"><a href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167a7ab3a5cea583da15b13bfe3742dca4f8">QuantLib::NumericalDifferentiation::Central</a></div><div class="ttdeci">@ Central</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de8/numericaldifferentiation_8hpp_source.html#l00046">numericaldifferentiation.hpp:46</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_numerical_differentiation_html_a5c5181a54a4f46149d9c9662b2694167ae204c9c3e62b1e9a6b60e40cd05256c5"><div class="ttname"><a href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167ae204c9c3e62b1e9a6b60e40cd05256c5">QuantLib::NumericalDifferentiation::Forward</a></div><div class="ttdeci">@ Forward</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de8/numericaldifferentiation_8hpp_source.html#l00046">numericaldifferentiation.hpp:46</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00053">array.hpp:53</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_numerical_differentiation_html_a5c5181a54a4f46149d9c9662b2694167a67e19347f85332c3bbfd61266cecbe4e"><div class="ttname"><a href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167a67e19347f85332c3bbfd61266cecbe4e">QuantLib::NumericalDifferentiation::Backward</a></div><div class="ttdeci">@ Backward</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de8/numericaldifferentiation_8hpp_source.html#l00046">numericaldifferentiation.hpp:46</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_numerical_differentiation_html_adec51a7fbe78063605e12fbeb155bd79"><div class="ttname"><a href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#adec51a7fbe78063605e12fbeb155bd79">QuantLib::NumericalDifferentiation::NumericalDifferentiation</a></div><div class="ttdeci">NumericalDifferentiation(const ext::function&lt; Real(Real)&gt; &amp;f, Size orderOfDerivative, const Array &amp;x_offsets)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d07/numericaldifferentiation_8cpp_source.html#l00107">numericaldifferentiation.cpp:107</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_numerical_differentiation_html_a5c5181a54a4f46149d9c9662b2694167"><div class="ttname"><a href="../../d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a5c5181a54a4f46149d9c9662b2694167">QuantLib::NumericalDifferentiation::Scheme</a></div><div class="ttdeci">Scheme</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de8/numericaldifferentiation_8hpp_source.html#l00046">numericaldifferentiation.hpp:46</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>

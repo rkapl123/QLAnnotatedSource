@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: StrippedOptionletAdapter Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -148,30 +149,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ee4bddeebb6d2f28414a6a320bd9a8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a7ee4bddeebb6d2f28414a6a320bd9a8c">StrippedOptionletAdapter</a> (const ext::shared_ptr&lt; <a class="el" href="../../df/d8b/class_quant_lib_1_1_stripped_optionlet_base.html">StrippedOptionletBase</a> &gt; &amp;)</td></tr>
 <tr class="separator:a7ee4bddeebb6d2f28414a6a320bd9a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">TermStructure interface</div></td></tr>
-<tr class="memitem:a6fa1d746e67f372c6e09e4ec9ad8973b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a6fa1d746e67f372c6e09e4ec9ad8973b">maxDate</a> () const</td></tr>
-<tr class="memdesc:a6fa1d746e67f372c6e09e4ec9ad8973b"><td class="mdescLeft">&#160;</td><td class="mdescRight">the latest date for which the curve can return values  <a href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a6fa1d746e67f372c6e09e4ec9ad8973b">More...</a><br /></td></tr>
-<tr class="separator:a6fa1d746e67f372c6e09e4ec9ad8973b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa72216913cb42d4910ebcae64d655934"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#aa72216913cb42d4910ebcae64d655934">maxDate</a> () const override</td></tr>
+<tr class="memdesc:aa72216913cb42d4910ebcae64d655934"><td class="mdescLeft">&#160;</td><td class="mdescRight">the latest date for which the curve can return values  <a href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#aa72216913cb42d4910ebcae64d655934">More...</a><br /></td></tr>
+<tr class="separator:aa72216913cb42d4910ebcae64d655934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">VolatilityTermStructure interface</div></td></tr>
-<tr class="memitem:acd909bc54367d9d6352149375c56f263"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#acd909bc54367d9d6352149375c56f263">minStrike</a> () const</td></tr>
-<tr class="memdesc:acd909bc54367d9d6352149375c56f263"><td class="mdescLeft">&#160;</td><td class="mdescRight">the minimum strike for which the term structure can return vols  <a href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#acd909bc54367d9d6352149375c56f263">More...</a><br /></td></tr>
-<tr class="separator:acd909bc54367d9d6352149375c56f263"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac57bee91b260d6f11aa0e6264cc69bd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#ac57bee91b260d6f11aa0e6264cc69bd5">maxStrike</a> () const</td></tr>
-<tr class="memdesc:ac57bee91b260d6f11aa0e6264cc69bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">the maximum strike for which the term structure can return vols  <a href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#ac57bee91b260d6f11aa0e6264cc69bd5">More...</a><br /></td></tr>
-<tr class="separator:ac57bee91b260d6f11aa0e6264cc69bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d1cd932a2b24ec22ee592c0a527435"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a37d1cd932a2b24ec22ee592c0a527435">minStrike</a> () const override</td></tr>
+<tr class="memdesc:a37d1cd932a2b24ec22ee592c0a527435"><td class="mdescLeft">&#160;</td><td class="mdescRight">the minimum strike for which the term structure can return vols  <a href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a37d1cd932a2b24ec22ee592c0a527435">More...</a><br /></td></tr>
+<tr class="separator:a37d1cd932a2b24ec22ee592c0a527435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c7aba64057da6c20c739569c96d9539"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a2c7aba64057da6c20c739569c96d9539">maxStrike</a> () const override</td></tr>
+<tr class="memdesc:a2c7aba64057da6c20c739569c96d9539"><td class="mdescLeft">&#160;</td><td class="mdescRight">the maximum strike for which the term structure can return vols  <a href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a2c7aba64057da6c20c739569c96d9539">More...</a><br /></td></tr>
+<tr class="separator:a2c7aba64057da6c20c739569c96d9539"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">LazyObject interface</div></td></tr>
-<tr class="memitem:ac5c54df7ed3b930268c8d7752c101725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
-<tr class="separator:ac5c54df7ed3b930268c8d7752c101725"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33f04fb3ac37abe7c9c6032cff611745"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a33f04fb3ac37abe7c9c6032cff611745">performCalculations</a> () const</td></tr>
-<tr class="separator:a33f04fb3ac37abe7c9c6032cff611745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44137bb65de2396875934e48a6ee5099"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
+<tr class="separator:a44137bb65de2396875934e48a6ee5099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1127cccc9668a02247dc139d27121708"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a1127cccc9668a02247dc139d27121708">performCalculations</a> () const override</td></tr>
+<tr class="separator:a1127cccc9668a02247dc139d27121708"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18bf150063d33b84d238af94703b588c"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../de/dad/class_quant_lib_1_1_optionlet_stripper.html">OptionletStripper</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a18bf150063d33b84d238af94703b588c">optionletStripper</a> () const</td></tr>
 <tr class="separator:a18bf150063d33b84d238af94703b588c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Observer interface</div></td></tr>
-<tr class="memitem:a3d53f9669c128dadc74a5d044a7c8e68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a3d53f9669c128dadc74a5d044a7c8e68">deepUpdate</a> ()</td></tr>
-<tr class="separator:a3d53f9669c128dadc74a5d044a7c8e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab95b24d256542f56472b2b4c63cde369"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d7b/namespace_quant_lib.html#a8b2aa10016abb1ffb6f55484a04a5143">VolatilityType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#ab95b24d256542f56472b2b4c63cde369">volatilityType</a> () const</td></tr>
-<tr class="separator:ab95b24d256542f56472b2b4c63cde369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59b3adcfeda7506f315333c663ca8e67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a59b3adcfeda7506f315333c663ca8e67">displacement</a> () const</td></tr>
-<tr class="separator:a59b3adcfeda7506f315333c663ca8e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492a6d8c60085fa069c57c5229489167"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a492a6d8c60085fa069c57c5229489167">deepUpdate</a> () override</td></tr>
+<tr class="separator:a492a6d8c60085fa069c57c5229489167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72983c4ae34d208cce6942ef26bec58c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d7b/namespace_quant_lib.html#a8b2aa10016abb1ffb6f55484a04a5143">VolatilityType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a72983c4ae34d208cce6942ef26bec58c">volatilityType</a> () const override</td></tr>
+<tr class="separator:a72983c4ae34d208cce6942ef26bec58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add24fda7ff41564d7365154d96563718"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#add24fda7ff41564d7365154d96563718">displacement</a> () const override</td></tr>
+<tr class="separator:add24fda7ff41564d7365154d96563718"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_optionlet_volatility_structure"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_optionlet_volatility_structure')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d9/dfc/class_quant_lib_1_1_optionlet_volatility_structure.html">OptionletVolatilityStructure</a></td></tr>
 <tr class="memitem:aac8c7b91f00da54ac59aed3bdb766beb inherit pub_methods_class_quant_lib_1_1_optionlet_volatility_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfc/class_quant_lib_1_1_optionlet_volatility_structure.html#aac8c7b91f00da54ac59aed3bdb766beb">OptionletVolatilityStructure</a> (<a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> bdc=<a class="el" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18">Following</a>, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
 <tr class="memdesc:aac8c7b91f00da54ac59aed3bdb766beb inherit pub_methods_class_quant_lib_1_1_optionlet_volatility_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor  <a href="../../d9/dfc/class_quant_lib_1_1_optionlet_volatility_structure.html#aac8c7b91f00da54ac59aed3bdb766beb">More...</a><br /></td></tr>
@@ -182,8 +183,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c510799e2a47a0e0db5a8e12c4bdf82 inherit pub_methods_class_quant_lib_1_1_optionlet_volatility_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfc/class_quant_lib_1_1_optionlet_volatility_structure.html#a1c510799e2a47a0e0db5a8e12c4bdf82">OptionletVolatilityStructure</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">settlementDays</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;, <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> bdc, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
 <tr class="memdesc:a1c510799e2a47a0e0db5a8e12c4bdf82 inherit pub_methods_class_quant_lib_1_1_optionlet_volatility_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the reference date based on the global evaluation date  <a href="../../d9/dfc/class_quant_lib_1_1_optionlet_volatility_structure.html#a1c510799e2a47a0e0db5a8e12c4bdf82">More...</a><br /></td></tr>
 <tr class="separator:a1c510799e2a47a0e0db5a8e12c4bdf82 inherit pub_methods_class_quant_lib_1_1_optionlet_volatility_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4629ab98ad7e7f84827e8ae19612a71 inherit pub_methods_class_quant_lib_1_1_optionlet_volatility_structure"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfc/class_quant_lib_1_1_optionlet_volatility_structure.html#ae4629ab98ad7e7f84827e8ae19612a71">~OptionletVolatilityStructure</a> ()</td></tr>
-<tr class="separator:ae4629ab98ad7e7f84827e8ae19612a71 inherit pub_methods_class_quant_lib_1_1_optionlet_volatility_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb533ebd02b61ba6246ffca6b364c266 inherit pub_methods_class_quant_lib_1_1_optionlet_volatility_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfc/class_quant_lib_1_1_optionlet_volatility_structure.html#acb533ebd02b61ba6246ffca6b364c266">~OptionletVolatilityStructure</a> () override=default</td></tr>
+<tr class="separator:acb533ebd02b61ba6246ffca6b364c266 inherit pub_methods_class_quant_lib_1_1_optionlet_volatility_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1410e062a97115812d2410865128002 inherit pub_methods_class_quant_lib_1_1_optionlet_volatility_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfc/class_quant_lib_1_1_optionlet_volatility_structure.html#ad1410e062a97115812d2410865128002">volatility</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;optionTenor, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> strike, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=false) const</td></tr>
 <tr class="memdesc:ad1410e062a97115812d2410865128002 inherit pub_methods_class_quant_lib_1_1_optionlet_volatility_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the volatility for a given option tenor and strike rate  <a href="../../d9/dfc/class_quant_lib_1_1_optionlet_volatility_structure.html#ad1410e062a97115812d2410865128002">More...</a><br /></td></tr>
 <tr class="separator:ad1410e062a97115812d2410865128002 inherit pub_methods_class_quant_lib_1_1_optionlet_volatility_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -227,17 +228,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af3be26fd18355b452218cf51e28ba5fd inherit pub_methods_class_quant_lib_1_1_volatility_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">period/date conversion  <a href="../../d6/dec/class_quant_lib_1_1_volatility_term_structure.html#af3be26fd18355b452218cf51e28ba5fd">More...</a><br /></td></tr>
 <tr class="separator:af3be26fd18355b452218cf51e28ba5fd inherit pub_methods_class_quant_lib_1_1_volatility_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_term_structure"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_term_structure')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html">TermStructure</a></td></tr>
-<tr class="memitem:a4a8e0f324391a12454f11f5f5d5e66e8 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a4a8e0f324391a12454f11f5f5d5e66e8">TermStructure</a> (const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
-<tr class="memdesc:a4a8e0f324391a12454f11f5f5d5e66e8 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a4a8e0f324391a12454f11f5f5d5e66e8">More...</a><br /></td></tr>
-<tr class="separator:a4a8e0f324391a12454f11f5f5d5e66e8 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44918f70ab345cad67a287d46641f20f inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a44918f70ab345cad67a287d46641f20f">TermStructure</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a">referenceDate</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f">calendar</a>=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
-<tr class="memdesc:a44918f70ab345cad67a287d46641f20f inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize with a fixed reference date  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a44918f70ab345cad67a287d46641f20f">More...</a><br /></td></tr>
-<tr class="separator:a44918f70ab345cad67a287d46641f20f inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab72309c6d49bd4b6dc5b9ed09b67c7b9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ab72309c6d49bd4b6dc5b9ed09b67c7b9">TermStructure</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">settlementDays</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
-<tr class="memdesc:ab72309c6d49bd4b6dc5b9ed09b67c7b9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the reference date based on the global evaluation date  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ab72309c6d49bd4b6dc5b9ed09b67c7b9">More...</a><br /></td></tr>
-<tr class="separator:ab72309c6d49bd4b6dc5b9ed09b67c7b9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cd56b3d79445a9c5e72fbc0ddd4d201 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7cd56b3d79445a9c5e72fbc0ddd4d201">~TermStructure</a> ()</td></tr>
-<tr class="separator:a7cd56b3d79445a9c5e72fbc0ddd4d201 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a8af4eb53fd6dc79080752fccf3cfa9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7a8af4eb53fd6dc79080752fccf3cfa9">TermStructure</a> (<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
+<tr class="memdesc:a7a8af4eb53fd6dc79080752fccf3cfa9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7a8af4eb53fd6dc79080752fccf3cfa9">More...</a><br /></td></tr>
+<tr class="separator:a7a8af4eb53fd6dc79080752fccf3cfa9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f529896d168540176e50f5323beea0 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a39f529896d168540176e50f5323beea0">TermStructure</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a">referenceDate</a>, <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f">calendar</a>=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
+<tr class="memdesc:a39f529896d168540176e50f5323beea0 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize with a fixed reference date  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a39f529896d168540176e50f5323beea0">More...</a><br /></td></tr>
+<tr class="separator:a39f529896d168540176e50f5323beea0 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0943142f14acf195d50b98ad93423c5e inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a0943142f14acf195d50b98ad93423c5e">TermStructure</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">settlementDays</a>, <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>, <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
+<tr class="memdesc:a0943142f14acf195d50b98ad93423c5e inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the reference date based on the global evaluation date  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a0943142f14acf195d50b98ad93423c5e">More...</a><br /></td></tr>
+<tr class="separator:a0943142f14acf195d50b98ad93423c5e inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acc06bd66a1578d714c5afc5493e053 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7acc06bd66a1578d714c5afc5493e053">~TermStructure</a> () override=default</td></tr>
+<tr class="separator:a7acc06bd66a1578d714c5afc5493e053 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad49654ea33055b03f8666910acc13880 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880">dayCounter</a> () const</td></tr>
 <tr class="memdesc:ad49654ea33055b03f8666910acc13880 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">the day counter used for date/time conversion  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880">More...</a><br /></td></tr>
 <tr class="separator:ad49654ea33055b03f8666910acc13880 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -257,8 +258,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a32e050c75a34ceee6f0633bdb799a080 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">the settlementDays used for reference date calculation  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">More...</a><br /></td></tr>
 <tr class="separator:a32e050c75a34ceee6f0633bdb799a080 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
-<tr class="memitem:abbd00a8000bd3ee5cd7e35aeb436f937 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#abbd00a8000bd3ee5cd7e35aeb436f937">Observer</a> ()</td></tr>
-<tr class="separator:abbd00a8000bd3ee5cd7e35aeb436f937 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a52ef9232283da6f842e4574afeb854a0">Observer</a> ()=default</td></tr>
+<tr class="separator:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#af6a9d3ca0b7f388f3b7ccb1eccf11f63">Observer</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
 <tr class="separator:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6810b3645967da11d5f5d4804d37bacc inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a6810b3645967da11d5f5d4804d37bacc">operator=</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
@@ -280,15 +281,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a522aacdd0f2408fe5e46527a6db999b4">operator=</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
 <tr class="separator:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f0b266a5d1e6ed41027d3e8c8d7ff1f inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a5f0b266a5d1e6ed41027d3e8c8d7ff1f">~Observable</a> ()</td></tr>
-<tr class="separator:a5f0b266a5d1e6ed41027d3e8c8d7ff1f inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a99f4333cda953ce3bfdc958ccea5fbf9">~Observable</a> ()=default</td></tr>
+<tr class="separator:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a> ()</td></tr>
 <tr class="separator:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_extrapolator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_extrapolator')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html">Extrapolator</a></td></tr>
-<tr class="memitem:ac799544aa04b6a67f067b21ad88147bb inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ac799544aa04b6a67f067b21ad88147bb">Extrapolator</a> ()</td></tr>
-<tr class="separator:ac799544aa04b6a67f067b21ad88147bb inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73300245f5c6c28e6b91da76454c00fb inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#a73300245f5c6c28e6b91da76454c00fb">~Extrapolator</a> ()</td></tr>
-<tr class="separator:a73300245f5c6c28e6b91da76454c00fb inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c29f9a2a9efdf12a8d81c6f74b9ed3 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ac0c29f9a2a9efdf12a8d81c6f74b9ed3">Extrapolator</a> ()=default</td></tr>
+<tr class="separator:ac0c29f9a2a9efdf12a8d81c6f74b9ed3 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d5b5a39a87eeb712a188d1929787001 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#a3d5b5a39a87eeb712a188d1929787001">~Extrapolator</a> ()=default</td></tr>
+<tr class="separator:a3d5b5a39a87eeb712a188d1929787001 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae60e793a77f44a9c022b103458fa993c inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ae60e793a77f44a9c022b103458fa993c">enableExtrapolation</a> (<a class="el" href="../../d9/db9/classbool.html">bool</a> b=true)</td></tr>
 <tr class="memdesc:ae60e793a77f44a9c022b103458fa993c inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable extrapolation in subsequent calls  <a href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ae60e793a77f44a9c022b103458fa993c">More...</a><br /></td></tr>
 <tr class="separator:ae60e793a77f44a9c022b103458fa993c inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -301,8 +302,8 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_lazy_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_lazy_object')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html">LazyObject</a></td></tr>
 <tr class="memitem:a6badf169db619841c91a27420cbdf142 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a6badf169db619841c91a27420cbdf142">LazyObject</a> ()</td></tr>
 <tr class="separator:a6badf169db619841c91a27420cbdf142 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3a128a2ae365a18a03ed05354030a05 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#ae3a128a2ae365a18a03ed05354030a05">~LazyObject</a> ()</td></tr>
-<tr class="separator:ae3a128a2ae365a18a03ed05354030a05 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7196dd7d298381de7f460e46652842 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#aea7196dd7d298381de7f460e46652842">~LazyObject</a> () override=default</td></tr>
+<tr class="separator:aea7196dd7d298381de7f460e46652842 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a467a786be42a2165aa15a26709674547 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a467a786be42a2165aa15a26709674547">recalculate</a> ()</td></tr>
 <tr class="separator:a467a786be42a2165aa15a26709674547 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd8698b462ce90fe56b15ce7a0192d3e inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#abd8698b462ce90fe56b15ce7a0192d3e">freeze</a> ()</td></tr>
@@ -320,12 +321,12 @@ OptionletVolatilityStructure interface</h2></td></tr>
 <tr class="separator:a90c30356ef0ba05e4c9eacc8df7ec953"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abac6bda35c14ac2e51ff0b3e79a5bda7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; ext::shared_ptr&lt; <a class="el" href="../../d9/dbc/class_quant_lib_1_1_interpolation.html">Interpolation</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#abac6bda35c14ac2e51ff0b3e79a5bda7">strikeInterpolations_</a></td></tr>
 <tr class="separator:abac6bda35c14ac2e51ff0b3e79a5bda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4968fd92b08a567dd3f77f78777c8ac"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d9/db6/class_quant_lib_1_1_smile_section.html">SmileSection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#aa4968fd92b08a567dd3f77f78777c8ac">smileSectionImpl</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> optionTime) const</td></tr>
-<tr class="memdesc:aa4968fd92b08a567dd3f77f78777c8ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">implements the actual smile calculation in derived classes  <a href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#aa4968fd92b08a567dd3f77f78777c8ac">More...</a><br /></td></tr>
-<tr class="separator:aa4968fd92b08a567dd3f77f78777c8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac95bb44fe91f518b59e9a42127ae3247"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#ac95bb44fe91f518b59e9a42127ae3247">volatilityImpl</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> length, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> strike) const</td></tr>
-<tr class="memdesc:ac95bb44fe91f518b59e9a42127ae3247"><td class="mdescLeft">&#160;</td><td class="mdescRight">implements the actual volatility calculation in derived classes  <a href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#ac95bb44fe91f518b59e9a42127ae3247">More...</a><br /></td></tr>
-<tr class="separator:ac95bb44fe91f518b59e9a42127ae3247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5623826ce4004e632f0de0a8f46f9faa"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d9/db6/class_quant_lib_1_1_smile_section.html">SmileSection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a5623826ce4004e632f0de0a8f46f9faa">smileSectionImpl</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> optionTime) const override</td></tr>
+<tr class="memdesc:a5623826ce4004e632f0de0a8f46f9faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">implements the actual smile calculation in derived classes  <a href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a5623826ce4004e632f0de0a8f46f9faa">More...</a><br /></td></tr>
+<tr class="separator:a5623826ce4004e632f0de0a8f46f9faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978127008df5162601fde882996ed375"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a978127008df5162601fde882996ed375">volatilityImpl</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> length, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> strike) const override</td></tr>
+<tr class="memdesc:a978127008df5162601fde882996ed375"><td class="mdescLeft">&#160;</td><td class="mdescRight">implements the actual volatility calculation in derived classes  <a href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a978127008df5162601fde882996ed375">More...</a><br /></td></tr>
+<tr class="separator:a978127008df5162601fde882996ed375"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -354,18 +355,18 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a082ff96da379d5e17436372ccb3c0972 inherit pro_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a082ff96da379d5e17436372ccb3c0972">calculate</a> () const</td></tr>
 <tr class="separator:a082ff96da379d5e17436372ccb3c0972 inherit pro_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_quant_lib_1_1_term_structure"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_quant_lib_1_1_term_structure')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html">TermStructure</a></td></tr>
-<tr class="memitem:a3cfce9cb19de6f0604adee64b6d80a35 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a3cfce9cb19de6f0604adee64b6d80a35">moving_</a></td></tr>
+<tr class="memitem:a3cfce9cb19de6f0604adee64b6d80a35 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a3cfce9cb19de6f0604adee64b6d80a35">moving_</a> = false</td></tr>
 <tr class="separator:a3cfce9cb19de6f0604adee64b6d80a35 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56cd8ee45c3477740e0429f98758c935 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a56cd8ee45c3477740e0429f98758c935">updated_</a></td></tr>
+<tr class="memitem:a56cd8ee45c3477740e0429f98758c935 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a56cd8ee45c3477740e0429f98758c935">updated_</a> = true</td></tr>
 <tr class="separator:a56cd8ee45c3477740e0429f98758c935 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a021eab7f1f44c1c71b8dfd29b9c4864b inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a021eab7f1f44c1c71b8dfd29b9c4864b">calendar_</a></td></tr>
 <tr class="separator:a021eab7f1f44c1c71b8dfd29b9c4864b inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_quant_lib_1_1_lazy_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_quant_lib_1_1_lazy_object')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html">LazyObject</a></td></tr>
-<tr class="memitem:abcf8c3b096b3eea8688019abe7180471 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#abcf8c3b096b3eea8688019abe7180471">calculated_</a></td></tr>
+<tr class="memitem:abcf8c3b096b3eea8688019abe7180471 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#abcf8c3b096b3eea8688019abe7180471">calculated_</a> = false</td></tr>
 <tr class="separator:abcf8c3b096b3eea8688019abe7180471 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72e3e9b2ee0ed5ab8aa688b9422d8138 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a72e3e9b2ee0ed5ab8aa688b9422d8138">frozen_</a></td></tr>
+<tr class="memitem:a72e3e9b2ee0ed5ab8aa688b9422d8138 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a72e3e9b2ee0ed5ab8aa688b9422d8138">frozen_</a> = false</td></tr>
 <tr class="separator:a72e3e9b2ee0ed5ab8aa688b9422d8138 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52b368dcda2c9e791f5a8fc63de3c510 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a52b368dcda2c9e791f5a8fc63de3c510">alwaysForward_</a></td></tr>
+<tr class="memitem:a52b368dcda2c9e791f5a8fc63de3c510 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a52b368dcda2c9e791f5a8fc63de3c510">alwaysForward_</a> = false</td></tr>
 <tr class="separator:a52b368dcda2c9e791f5a8fc63de3c510 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -405,8 +406,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6fa1d746e67f372c6e09e4ec9ad8973b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fa1d746e67f372c6e09e4ec9ad8973b">&#9670;&nbsp;</a></span>maxDate()</h2>
+<a id="aa72216913cb42d4910ebcae64d655934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa72216913cb42d4910ebcae64d655934">&#9670;&nbsp;</a></span>maxDate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -423,7 +424,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -436,8 +437,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="acd909bc54367d9d6352149375c56f263"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd909bc54367d9d6352149375c56f263">&#9670;&nbsp;</a></span>minStrike()</h2>
+<a id="a37d1cd932a2b24ec22ee592c0a527435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37d1cd932a2b24ec22ee592c0a527435">&#9670;&nbsp;</a></span>minStrike()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -454,7 +455,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -467,8 +468,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac57bee91b260d6f11aa0e6264cc69bd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac57bee91b260d6f11aa0e6264cc69bd5">&#9670;&nbsp;</a></span>maxStrike()</h2>
+<a id="a2c7aba64057da6c20c739569c96d9539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7aba64057da6c20c739569c96d9539">&#9670;&nbsp;</a></span>maxStrike()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -485,7 +486,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -498,8 +499,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac5c54df7ed3b930268c8d7752c101725"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5c54df7ed3b930268c8d7752c101725">&#9670;&nbsp;</a></span>update()</h2>
+<a id="a44137bb65de2396875934e48a6ee5099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44137bb65de2396875934e48a6ee5099">&#9670;&nbsp;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -516,25 +517,25 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>
 
-<p>Reimplemented from <a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#ac5c54df7ed3b930268c8d7752c101725">LazyObject</a>.</p>
+<p>Reimplemented from <a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a44137bb65de2396875934e48a6ee5099">LazyObject</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html#l00083">83</a> of file <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html">strippedoptionletadapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html#l00081">81</a> of file <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html">strippedoptionletadapter.hpp</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac5c54df7ed3b930268c8d7752c101725_cgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac5c54df7ed3b930268c8d7752c101725_cgraph" alt=""/></div>
-<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac5c54df7ed3b930268c8d7752c101725_cgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac5c54df7ed3b930268c8d7752c101725_cgraph">
+<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a44137bb65de2396875934e48a6ee5099_cgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a44137bb65de2396875934e48a6ee5099_cgraph" alt=""/></div>
+<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a44137bb65de2396875934e48a6ee5099_cgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a44137bb65de2396875934e48a6ee5099_cgraph">
 <area shape="rect" title=" " alt="" coords="5,46,67,73"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#ac5c54df7ed3b930268c8d7752c101725" title=" " alt="" coords="123,5,271,47"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ac5c54df7ed3b930268c8d7752c101725" title=" " alt="" coords="115,71,279,112"/>
+<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a44137bb65de2396875934e48a6ee5099" title=" " alt="" coords="123,5,271,47"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a44137bb65de2396875934e48a6ee5099" title=" " alt="" coords="115,71,279,112"/>
 <area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c" title=" " alt="" coords="327,39,473,80"/>
 <area shape="rect" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html#a99c9de48ef416d34eb59b8fc55fc1842" title=" " alt="" coords="521,5,716,47"/>
 <area shape="rect" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html#ab11dcb6915289c2b393e81df2f8687d3" title=" " alt="" coords="521,71,716,112"/>
@@ -546,17 +547,17 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac5c54df7ed3b930268c8d7752c101725_icgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac5c54df7ed3b930268c8d7752c101725_icgraph" alt=""/></div>
-<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac5c54df7ed3b930268c8d7752c101725_icgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac5c54df7ed3b930268c8d7752c101725_icgraph">
+<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a44137bb65de2396875934e48a6ee5099_icgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a44137bb65de2396875934e48a6ee5099_icgraph" alt=""/></div>
+<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a44137bb65de2396875934e48a6ee5099_icgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a44137bb65de2396875934e48a6ee5099_icgraph">
 <area shape="rect" title=" " alt="" coords="144,5,205,32"/>
-<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a3d53f9669c128dadc74a5d044a7c8e68" title=" " alt="" coords="5,5,96,32"/>
+<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a492a6d8c60085fa069c57c5229489167" title=" " alt="" coords="5,5,96,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a33f04fb3ac37abe7c9c6032cff611745"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33f04fb3ac37abe7c9c6032cff611745">&#9670;&nbsp;</a></span>performCalculations()</h2>
+<a id="a1127cccc9668a02247dc139d27121708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1127cccc9668a02247dc139d27121708">&#9670;&nbsp;</a></span>performCalculations()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -573,7 +574,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -600,12 +601,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html#l00094">94</a> of file <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html">strippedoptionletadapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html#l00092">92</a> of file <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html">strippedoptionletadapter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a3d53f9669c128dadc74a5d044a7c8e68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d53f9669c128dadc74a5d044a7c8e68">&#9670;&nbsp;</a></span>deepUpdate()</h2>
+<a id="a492a6d8c60085fa069c57c5229489167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a492a6d8c60085fa069c57c5229489167">&#9670;&nbsp;</a></span>deepUpdate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -622,7 +623,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -630,18 +631,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a3d53f9669c128dadc74a5d044a7c8e68">Observer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html">strippedoptionletadapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html#l00086">86</a> of file <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html">strippedoptionletadapter.hpp</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a3d53f9669c128dadc74a5d044a7c8e68_cgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a3d53f9669c128dadc74a5d044a7c8e68_cgraph" alt=""/></div>
-<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a3d53f9669c128dadc74a5d044a7c8e68_cgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a3d53f9669c128dadc74a5d044a7c8e68_cgraph">
+<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a492a6d8c60085fa069c57c5229489167_cgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a492a6d8c60085fa069c57c5229489167_cgraph" alt=""/></div>
+<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a492a6d8c60085fa069c57c5229489167_cgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a492a6d8c60085fa069c57c5229489167_cgraph">
 <area shape="rect" title=" " alt="" coords="5,46,96,73"/>
-<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#ac5c54df7ed3b930268c8d7752c101725" title=" " alt="" coords="144,46,205,73"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#ac5c54df7ed3b930268c8d7752c101725" title=" " alt="" coords="261,5,409,47"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ac5c54df7ed3b930268c8d7752c101725" title=" " alt="" coords="253,71,417,112"/>
+<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a44137bb65de2396875934e48a6ee5099" title=" " alt="" coords="144,46,205,73"/>
+<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a44137bb65de2396875934e48a6ee5099" title=" " alt="" coords="261,5,409,47"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a44137bb65de2396875934e48a6ee5099" title=" " alt="" coords="253,71,417,112"/>
 <area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c" title=" " alt="" coords="465,39,612,80"/>
 <area shape="rect" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html#a99c9de48ef416d34eb59b8fc55fc1842" title=" " alt="" coords="660,5,855,47"/>
 <area shape="rect" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html#ab11dcb6915289c2b393e81df2f8687d3" title=" " alt="" coords="660,71,855,112"/>
@@ -651,8 +652,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ab95b24d256542f56472b2b4c63cde369"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab95b24d256542f56472b2b4c63cde369">&#9670;&nbsp;</a></span>volatilityType()</h2>
+<a id="a72983c4ae34d208cce6942ef26bec58c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72983c4ae34d208cce6942ef26bec58c">&#9670;&nbsp;</a></span>volatilityType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -669,7 +670,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -682,17 +683,17 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ab95b24d256542f56472b2b4c63cde369_icgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ab95b24d256542f56472b2b4c63cde369_icgraph" alt=""/></div>
-<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ab95b24d256542f56472b2b4c63cde369_icgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ab95b24d256542f56472b2b4c63cde369_icgraph">
+<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a72983c4ae34d208cce6942ef26bec58c_icgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a72983c4ae34d208cce6942ef26bec58c_icgraph" alt=""/></div>
+<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a72983c4ae34d208cce6942ef26bec58c_icgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a72983c4ae34d208cce6942ef26bec58c_icgraph">
 <area shape="rect" title=" " alt="" coords="175,5,271,32"/>
-<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#aa4968fd92b08a567dd3f77f78777c8ac" title="implements the actual smile calculation in derived classes" alt="" coords="5,5,127,32"/>
+<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a5623826ce4004e632f0de0a8f46f9faa" title="implements the actual smile calculation in derived classes" alt="" coords="5,5,127,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a59b3adcfeda7506f315333c663ca8e67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59b3adcfeda7506f315333c663ca8e67">&#9670;&nbsp;</a></span>displacement()</h2>
+<a id="add24fda7ff41564d7365154d96563718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add24fda7ff41564d7365154d96563718">&#9670;&nbsp;</a></span>displacement()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -709,7 +710,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -722,17 +723,17 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a59b3adcfeda7506f315333c663ca8e67_icgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a59b3adcfeda7506f315333c663ca8e67_icgraph" alt=""/></div>
-<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a59b3adcfeda7506f315333c663ca8e67_icgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a59b3adcfeda7506f315333c663ca8e67_icgraph">
+<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_add24fda7ff41564d7365154d96563718_icgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_add24fda7ff41564d7365154d96563718_icgraph" alt=""/></div>
+<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_add24fda7ff41564d7365154d96563718_icgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_add24fda7ff41564d7365154d96563718_icgraph">
 <area shape="rect" title=" " alt="" coords="175,5,273,32"/>
-<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#aa4968fd92b08a567dd3f77f78777c8ac" title="implements the actual smile calculation in derived classes" alt="" coords="5,5,127,32"/>
+<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a5623826ce4004e632f0de0a8f46f9faa" title="implements the actual smile calculation in derived classes" alt="" coords="5,5,127,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aa4968fd92b08a567dd3f77f78777c8ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4968fd92b08a567dd3f77f78777c8ac">&#9670;&nbsp;</a></span>smileSectionImpl()</h2>
+<a id="a5623826ce4004e632f0de0a8f46f9faa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5623826ce4004e632f0de0a8f46f9faa">&#9670;&nbsp;</a></span>smileSectionImpl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -750,7 +751,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -765,12 +766,12 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_aa4968fd92b08a567dd3f77f78777c8ac_cgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_aa4968fd92b08a567dd3f77f78777c8ac_cgraph" alt=""/></div>
-<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_aa4968fd92b08a567dd3f77f78777c8ac_cgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_aa4968fd92b08a567dd3f77f78777c8ac_cgraph">
+<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a5623826ce4004e632f0de0a8f46f9faa_cgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a5623826ce4004e632f0de0a8f46f9faa_cgraph" alt=""/></div>
+<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a5623826ce4004e632f0de0a8f46f9faa_cgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a5623826ce4004e632f0de0a8f46f9faa_cgraph">
 <area shape="rect" title="implements the actual smile calculation in derived classes" alt="" coords="5,56,127,83"/>
-<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a59b3adcfeda7506f315333c663ca8e67" title=" " alt="" coords="175,5,273,32"/>
-<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#ac95bb44fe91f518b59e9a42127ae3247" title="implements the actual volatility calculation in derived classes" alt="" coords="178,56,270,83"/>
-<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#ab95b24d256542f56472b2b4c63cde369" title=" " alt="" coords="176,107,272,133"/>
+<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#add24fda7ff41564d7365154d96563718" title=" " alt="" coords="175,5,273,32"/>
+<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a978127008df5162601fde882996ed375" title="implements the actual volatility calculation in derived classes" alt="" coords="178,56,270,83"/>
+<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a72983c4ae34d208cce6942ef26bec58c" title=" " alt="" coords="176,107,272,133"/>
 <area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="321,49,469,90"/>
 <area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a572dbe926524786c64db01e31dba7ab8" title=" " alt="" coords="517,49,665,90"/>
 </map>
@@ -778,8 +779,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac95bb44fe91f518b59e9a42127ae3247"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac95bb44fe91f518b59e9a42127ae3247">&#9670;&nbsp;</a></span>volatilityImpl()</h2>
+<a id="a978127008df5162601fde882996ed375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a978127008df5162601fde882996ed375">&#9670;&nbsp;</a></span>volatilityImpl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -807,7 +808,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -822,8 +823,8 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac95bb44fe91f518b59e9a42127ae3247_cgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac95bb44fe91f518b59e9a42127ae3247_cgraph" alt=""/></div>
-<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac95bb44fe91f518b59e9a42127ae3247_cgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac95bb44fe91f518b59e9a42127ae3247_cgraph">
+<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a978127008df5162601fde882996ed375_cgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a978127008df5162601fde882996ed375_cgraph" alt=""/></div>
+<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a978127008df5162601fde882996ed375_cgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a978127008df5162601fde882996ed375_cgraph">
 <area shape="rect" title="implements the actual volatility calculation in derived classes" alt="" coords="5,13,97,39"/>
 <area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="145,5,293,47"/>
 <area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a572dbe926524786c64db01e31dba7ab8" title=" " alt="" coords="341,5,489,47"/>
@@ -834,10 +835,10 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac95bb44fe91f518b59e9a42127ae3247_icgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac95bb44fe91f518b59e9a42127ae3247_icgraph" alt=""/></div>
-<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac95bb44fe91f518b59e9a42127ae3247_icgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_ac95bb44fe91f518b59e9a42127ae3247_icgraph">
+<div class="center"><img src="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a978127008df5162601fde882996ed375_icgraph.png" border="0" usemap="#add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a978127008df5162601fde882996ed375_icgraph" alt=""/></div>
+<map name="dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a978127008df5162601fde882996ed375_icgraph" id="add/db8/class_quant_lib_1_1_stripped_optionlet_adapter_a978127008df5162601fde882996ed375_icgraph">
 <area shape="rect" title="implements the actual volatility calculation in derived classes" alt="" coords="175,5,267,32"/>
-<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#aa4968fd92b08a567dd3f77f78777c8ac" title="implements the actual smile calculation in derived classes" alt="" coords="5,5,127,32"/>
+<area shape="rect" href="../../dd/db8/class_quant_lib_1_1_stripped_optionlet_adapter.html#a5623826ce4004e632f0de0a8f46f9faa" title="implements the actual smile calculation in derived classes" alt="" coords="5,5,127,32"/>
 </map>
 </div>
 
@@ -864,7 +865,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html#l00078">78</a> of file <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html">strippedoptionletadapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html#l00076">76</a> of file <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html">strippedoptionletadapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -888,7 +889,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html#l00079">79</a> of file <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html">strippedoptionletadapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html#l00077">77</a> of file <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html">strippedoptionletadapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -912,7 +913,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html">strippedoptionletadapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html#l00078">78</a> of file <a class="el" href="../../d9/d65/strippedoptionletadapter_8hpp_source.html">strippedoptionletadapter.hpp</a>.</p>
 
 </div>
 </div>

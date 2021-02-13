@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/inflation/cpicapfloorengines.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -116,17 +117,17 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html">   42</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html">InterpolatingCPICapFloorEngine</a> : <span class="keyword">public</span> <a class="code" href="../../d5/dbb/class_quant_lib_1_1_c_p_i_cap_floor_1_1engine.html">CPICapFloor::engine</a> {</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a242990321b88c5ebe1002057f8301bd7">InterpolatingCPICapFloorEngine</a>(</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                  <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;CPICapFloorTermPriceSurface&gt;</a>&amp;);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a082ff96da379d5e17436372ccb3c0972">calculate</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a6a119daa8b83c3aaffdb6e11fac1f97e">   48</a></span>&#160;        <span class="keyword">virtual</span> std::string <a class="code" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a6a119daa8b83c3aaffdb6e11fac1f97e">name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;InterpolatingCPICapFloorEngine&quot;</span>; }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a1a3030dcbcf6db7748b562616f2b06b2">   50</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a1a3030dcbcf6db7748b562616f2b06b2">~InterpolatingCPICapFloorEngine</a>() {}</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a215d496e0eedd3d3bcde568f52718dd4">   53</a></span>&#160;        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;CPICapFloorTermPriceSurface&gt;</a> <a class="code" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a215d496e0eedd3d3bcde568f52718dd4">priceSurf_</a>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          <span class="keyword">explicit</span> <a class="code" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a9697b057bf2da92a3c91ae784bef0635">InterpolatingCPICapFloorEngine</a>(<a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;CPICapFloorTermPriceSurface&gt;</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;          <span class="keywordtype">void</span> <a class="code" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a6a119daa8b83c3aaffdb6e11fac1f97e">   47</a></span>&#160;          <span class="keyword">virtual</span> std::string <a class="code" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a6a119daa8b83c3aaffdb6e11fac1f97e">name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;InterpolatingCPICapFloorEngine&quot;</span>; }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a20e281cda566298e8ffc605933825da1">   49</a></span>&#160;          <a class="code" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a20e281cda566298e8ffc605933825da1">~InterpolatingCPICapFloorEngine</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a215d496e0eedd3d3bcde568f52718dd4">   52</a></span>&#160;          <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;CPICapFloorTermPriceSurface&gt;</a> <a class="code" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a215d496e0eedd3d3bcde568f52718dd4">priceSurf_</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
@@ -134,20 +135,19 @@ $(function() {
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;} <span class="comment">// namespace QuantLib</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif // cpicapfloorengines_hpp</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;} <span class="comment">// namespace QuantLib</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif // cpicapfloorengines_hpp</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html_a6a119daa8b83c3aaffdb6e11fac1f97e"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a6a119daa8b83c3aaffdb6e11fac1f97e">QuantLib::InterpolatingCPICapFloorEngine::name</a></div><div class="ttdeci">virtual std::string name() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5a/cpicapfloorengines_8hpp_source.html#l00048">cpicapfloorengines.hpp:48</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html_a9697b057bf2da92a3c91ae784bef0635"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a9697b057bf2da92a3c91ae784bef0635">QuantLib::InterpolatingCPICapFloorEngine::InterpolatingCPICapFloorEngine</a></div><div class="ttdeci">InterpolatingCPICapFloorEngine(Handle&lt; CPICapFloorTermPriceSurface &gt;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dbb/cpicapfloorengines_8cpp_source.html#l00037">cpicapfloorengines.cpp:37</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::InterpolatingCPICapFloorEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dbb/cpicapfloorengines_8cpp_source.html#l00044">cpicapfloorengines.cpp:44</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html_a6a119daa8b83c3aaffdb6e11fac1f97e"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a6a119daa8b83c3aaffdb6e11fac1f97e">QuantLib::InterpolatingCPICapFloorEngine::name</a></div><div class="ttdeci">virtual std::string name() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5a/cpicapfloorengines_8hpp_source.html#l00047">cpicapfloorengines.hpp:47</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html">QuantLib::InterpolatingCPICapFloorEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5a/cpicapfloorengines_8hpp_source.html#l00042">cpicapfloorengines.hpp:42</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html_a1a3030dcbcf6db7748b562616f2b06b2"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a1a3030dcbcf6db7748b562616f2b06b2">QuantLib::InterpolatingCPICapFloorEngine::~InterpolatingCPICapFloorEngine</a></div><div class="ttdeci">virtual ~InterpolatingCPICapFloorEngine()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5a/cpicapfloorengines_8hpp_source.html#l00050">cpicapfloorengines.hpp:50</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html_a20e281cda566298e8ffc605933825da1"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a20e281cda566298e8ffc605933825da1">QuantLib::InterpolatingCPICapFloorEngine::~InterpolatingCPICapFloorEngine</a></div><div class="ttdeci">~InterpolatingCPICapFloorEngine() override=default</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_p_i_cap_floor_1_1engine_html"><div class="ttname"><a href="../../d5/dbb/class_quant_lib_1_1_c_p_i_cap_floor_1_1engine.html">QuantLib::CPICapFloor::engine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d62/cpicapfloor_8hpp_source.html#l00141">cpicapfloor.hpp:142</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html_a082ff96da379d5e17436372ccb3c0972"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a082ff96da379d5e17436372ccb3c0972">QuantLib::InterpolatingCPICapFloorEngine::calculate</a></div><div class="ttdeci">virtual void calculate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dbb/cpicapfloorengines_8cpp_source.html#l00045">cpicapfloorengines.cpp:45</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html_a215d496e0eedd3d3bcde568f52718dd4"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a215d496e0eedd3d3bcde568f52718dd4">QuantLib::InterpolatingCPICapFloorEngine::priceSurf_</a></div><div class="ttdeci">Handle&lt; CPICapFloorTermPriceSurface &gt; priceSurf_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5a/cpicapfloorengines_8hpp_source.html#l00053">cpicapfloorengines.hpp:53</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html_a242990321b88c5ebe1002057f8301bd7"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a242990321b88c5ebe1002057f8301bd7">QuantLib::InterpolatingCPICapFloorEngine::InterpolatingCPICapFloorEngine</a></div><div class="ttdeci">InterpolatingCPICapFloorEngine(const Handle&lt; CPICapFloorTermPriceSurface &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dbb/cpicapfloorengines_8cpp_source.html#l00037">cpicapfloorengines.cpp:38</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html_a215d496e0eedd3d3bcde568f52718dd4"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a215d496e0eedd3d3bcde568f52718dd4">QuantLib::InterpolatingCPICapFloorEngine::priceSurf_</a></div><div class="ttdeci">Handle&lt; CPICapFloorTermPriceSurface &gt; priceSurf_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5a/cpicapfloorengines_8hpp_source.html#l00052">cpicapfloorengines.hpp:52</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

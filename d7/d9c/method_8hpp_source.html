@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/math/optimization/method.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -113,7 +114,7 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../dc/dd8/class_quant_lib_1_1_optimization_method.html">   36</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../dc/dd8/class_quant_lib_1_1_optimization_method.html">OptimizationMethod</a> {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../dc/dd8/class_quant_lib_1_1_optimization_method.html#a3237213b0884c6c56f304b2da7a0a60a">   38</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../dc/dd8/class_quant_lib_1_1_optimization_method.html#a3237213b0884c6c56f304b2da7a0a60a">~OptimizationMethod</a>() {}</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../dc/dd8/class_quant_lib_1_1_optimization_method.html#ae36f767c69be212e8f6db2324280cbc5">   38</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../dc/dd8/class_quant_lib_1_1_optimization_method.html#ae36f767c69be212e8f6db2324280cbc5">~OptimizationMethod</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../dc/dd8/class_quant_lib_1_1_optimization_method.html#a6bf9f0581475e7a28bdf478f941f116e">   41</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7">EndCriteria::Type</a> <a class="code" href="../../dc/dd8/class_quant_lib_1_1_optimization_method.html#a6bf9f0581475e7a28bdf478f941f116e">minimize</a>(<a class="code" href="../../d4/de4/class_quant_lib_1_1_problem.html">Problem</a>&amp; P,</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                           <span class="keyword">const</span> <a class="code" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html">EndCriteria</a>&amp; endCriteria) = 0;</div>
@@ -126,9 +127,9 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_end_criteria_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::EndCriteria::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d36/endcriteria_8hpp_source.html#l00042">endcriteria.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_optimization_method_html"><div class="ttname"><a href="../../dc/dd8/class_quant_lib_1_1_optimization_method.html">QuantLib::OptimizationMethod</a></div><div class="ttdoc">Abstract class for constrained optimization method.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d9c/method_8hpp_source.html#l00036">method.hpp:36</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_end_criteria_html"><div class="ttname"><a href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html">QuantLib::EndCriteria</a></div><div class="ttdoc">Criteria to end optimization process:</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d36/endcriteria_8hpp_source.html#l00040">endcriteria.hpp:40</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_optimization_method_html_a3237213b0884c6c56f304b2da7a0a60a"><div class="ttname"><a href="../../dc/dd8/class_quant_lib_1_1_optimization_method.html#a3237213b0884c6c56f304b2da7a0a60a">QuantLib::OptimizationMethod::~OptimizationMethod</a></div><div class="ttdeci">virtual ~OptimizationMethod()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d9c/method_8hpp_source.html#l00038">method.hpp:38</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_problem_html"><div class="ttname"><a href="../../d4/de4/class_quant_lib_1_1_problem.html">QuantLib::Problem</a></div><div class="ttdoc">Constrained optimization problem.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d37/problem_8hpp_source.html#l00041">problem.hpp:41</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_problem_html"><div class="ttname"><a href="../../d4/de4/class_quant_lib_1_1_problem.html">QuantLib::Problem</a></div><div class="ttdoc">Constrained optimization problem.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d37/problem_8hpp_source.html#l00042">problem.hpp:42</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_optimization_method_html_ae36f767c69be212e8f6db2324280cbc5"><div class="ttname"><a href="../../dc/dd8/class_quant_lib_1_1_optimization_method.html#ae36f767c69be212e8f6db2324280cbc5">QuantLib::OptimizationMethod::~OptimizationMethod</a></div><div class="ttdeci">virtual ~OptimizationMethod()=default</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_optimization_method_html_a6bf9f0581475e7a28bdf478f941f116e"><div class="ttname"><a href="../../dc/dd8/class_quant_lib_1_1_optimization_method.html#a6bf9f0581475e7a28bdf478f941f116e">QuantLib::OptimizationMethod::minimize</a></div><div class="ttdeci">virtual EndCriteria::Type minimize(Problem &amp;P, const EndCriteria &amp;endCriteria)=0</div><div class="ttdoc">minimize the optimization problem P</div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/math/polarstudenttrng.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -145,15 +146,12 @@ $(function() {
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            u = 2.* uniformGenerator_.next().value - 1.;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            rSqr = v*v + u*u;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }<span class="keywordflow">while</span>(rSqr &gt;= 1.);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/da1/struct_quant_lib_1_1_sample.html">sample_type</a>(u * </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            std::sqrt(degFreedom_ * (std::pow(rSqr, -2./degFreedom_)-1.) </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                / rSqr),</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            1.);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> {u * std::sqrt(degFreedom_ * (std::pow(rSqr, -2. / degFreedom_) - 1.) / rSqr), 1.};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_polar_student_t_rng_html_a39f29f7f6e707a7d6db79b16ddd20052"><div class="ttname"><a href="../../d2/d63/class_quant_lib_1_1_polar_student_t_rng.html#a39f29f7f6e707a7d6db79b16ddd20052">QuantLib::PolarStudentTRng::PolarStudentTRng</a></div><div class="ttdeci">PolarStudentTRng(Real degFreedom, BigNatural seed=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dad/polarstudenttrng_8hpp_source.html#l00055">polarstudenttrng.hpp:55</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_polar_student_t_rng_html_ad6ae312199547dfd98f3b79b89a036f0"><div class="ttname"><a href="../../d2/d63/class_quant_lib_1_1_polar_student_t_rng.html#ad6ae312199547dfd98f3b79b89a036f0">QuantLib::PolarStudentTRng::sample_type</a></div><div class="ttdeci">Sample&lt; Real &gt; sample_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dad/polarstudenttrng_8hpp_source.html#l00052">polarstudenttrng.hpp:52</a></div></div>
@@ -165,7 +163,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_polar_student_t_rng_html_a7f43c45ed1b5ee0bc58d04c8f43146de"><div class="ttname"><a href="../../d2/d63/class_quant_lib_1_1_polar_student_t_rng.html#a7f43c45ed1b5ee0bc58d04c8f43146de">QuantLib::PolarStudentTRng::urng_type</a></div><div class="ttdeci">URNG urng_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dad/polarstudenttrng_8hpp_source.html#l00053">polarstudenttrng.hpp:53</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_polar_student_t_rng_html_aa7eaa27857175ae06d4f9eef6b7309f2"><div class="ttname"><a href="../../d2/d63/class_quant_lib_1_1_polar_student_t_rng.html#aa7eaa27857175ae06d4f9eef6b7309f2">QuantLib::PolarStudentTRng::degFreedom_</a></div><div class="ttdeci">Real degFreedom_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dad/polarstudenttrng_8hpp_source.html#l00073">polarstudenttrng.hpp:73</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="astruct_quant_lib_1_1_sample_html"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html">QuantLib::Sample</a></div><div class="ttdoc">weighted sample</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00034">sample.hpp:34</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_sample_html"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html">QuantLib::Sample</a></div><div class="ttdoc">weighted sample</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00035">sample.hpp:35</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

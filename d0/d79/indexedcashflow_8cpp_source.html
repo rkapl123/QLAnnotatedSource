@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/cashflows/indexedcashflow.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -105,7 +106,7 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#aebd2894f0f18274fd9a79140833c5e96">   25</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#aebd2894f0f18274fd9a79140833c5e96">IndexedCashFlow::amount</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#a6ae6aa2462b7305b78f7d58b260d226f">   25</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#a6ae6aa2462b7305b78f7d58b260d226f">IndexedCashFlow::amount</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> I0 = <a class="code" href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#a0708fbf84a3e6c75d728832214e23d03">index_</a>-&gt;fixing(<a class="code" href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#a3da982a1d3d4255d4c6c1a00135cab37">baseDate_</a>);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> I1 = <a class="code" href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#a0708fbf84a3e6c75d728832214e23d03">index_</a>-&gt;fixing(<a class="code" href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#a0f3d454856e688ed07ac415619cd9fda">fixingDate_</a>);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
@@ -117,11 +118,11 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_quant_lib_1_1_indexed_cash_flow_html_a6ae6aa2462b7305b78f7d58b260d226f"><div class="ttname"><a href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#a6ae6aa2462b7305b78f7d58b260d226f">QuantLib::IndexedCashFlow::amount</a></div><div class="ttdeci">Real amount() const override</div><div class="ttdoc">returns the amount of the cash flow</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d79/indexedcashflow_8cpp_source.html#l00025">indexedcashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_indexed_cash_flow_html_a3da982a1d3d4255d4c6c1a00135cab37"><div class="ttname"><a href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#a3da982a1d3d4255d4c6c1a00135cab37">QuantLib::IndexedCashFlow::baseDate_</a></div><div class="ttdeci">Date baseDate_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d7c/indexedcashflow_8hpp_source.html#l00082">indexedcashflow.hpp:82</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_indexed_cash_flow_html_a3d1edba4f4e875e8a85a5626164b9c6b"><div class="ttname"><a href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#a3d1edba4f4e875e8a85a5626164b9c6b">QuantLib::IndexedCashFlow::notional_</a></div><div class="ttdeci">Real notional_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d7c/indexedcashflow_8hpp_source.html#l00080">indexedcashflow.hpp:80</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_indexed_cash_flow_html_a0708fbf84a3e6c75d728832214e23d03"><div class="ttname"><a href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#a0708fbf84a3e6c75d728832214e23d03">QuantLib::IndexedCashFlow::index_</a></div><div class="ttdeci">ext::shared_ptr&lt; Index &gt; index_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d7c/indexedcashflow_8hpp_source.html#l00081">indexedcashflow.hpp:81</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_indexed_cash_flow_html_a0f3d454856e688ed07ac415619cd9fda"><div class="ttname"><a href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#a0f3d454856e688ed07ac415619cd9fda">QuantLib::IndexedCashFlow::fixingDate_</a></div><div class="ttdeci">Date fixingDate_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d7c/indexedcashflow_8hpp_source.html#l00082">indexedcashflow.hpp:82</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_indexed_cash_flow_html_aebd2894f0f18274fd9a79140833c5e96"><div class="ttname"><a href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#aebd2894f0f18274fd9a79140833c5e96">QuantLib::IndexedCashFlow::amount</a></div><div class="ttdeci">Real amount() const</div><div class="ttdoc">returns the amount of the cash flow</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d79/indexedcashflow_8cpp_source.html#l00025">indexedcashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_indexed_cash_flow_html_adc460eee16e23c544191ba2a3997c078"><div class="ttname"><a href="../../d6/dbe/class_quant_lib_1_1_indexed_cash_flow.html#adc460eee16e23c544191ba2a3997c078">QuantLib::IndexedCashFlow::growthOnly_</a></div><div class="ttdeci">bool growthOnly_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d7c/indexedcashflow_8hpp_source.html#l00083">indexedcashflow.hpp:83</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>

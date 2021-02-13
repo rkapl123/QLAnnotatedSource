@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/event.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -115,7 +116,7 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d2/d6c/class_quant_lib_1_1_event.html">   40</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d2/d6c/class_quant_lib_1_1_event.html">Event</a> : <span class="keyword">public</span> <a class="code" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d2/d6c/class_quant_lib_1_1_event.html#aa28124883bfb17601f85db7e635094b1">   42</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d2/d6c/class_quant_lib_1_1_event.html#aa28124883bfb17601f85db7e635094b1">~Event</a>() {}</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d2/d6c/class_quant_lib_1_1_event.html#a2b4170e3e745845eb7d18f569f770ad2">   42</a></span>&#160;        <a class="code" href="../../d2/d6c/class_quant_lib_1_1_event.html#a2b4170e3e745845eb7d18f569f770ad2">~Event</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code" href="../../d2/d6c/class_quant_lib_1_1_event.html#ac659412fae5cc99a0fdf25f7f4b9562e">date</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
@@ -135,31 +136,32 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">// to be replaced with specific events as soon as we find out which.</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html">   69</a></span>&#160;        <span class="keyword">class </span><a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html">simple_event</a> : <span class="keyword">public</span> <a class="code" href="../../d2/d6c/class_quant_lib_1_1_event.html">Event</a> {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;          <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#aafbb0786dca875b972ca9ddf654f4840">   71</a></span>&#160;            <span class="keyword">explicit</span> <a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#aafbb0786dca875b972ca9ddf654f4840">simple_event</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; <a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ad4276f5a24965b35acc5d01b31fc5e17">date</a>) : <a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ae66f66b0d2874fc0d466bc1ef6dd2976">date_</a>(<a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ad4276f5a24965b35acc5d01b31fc5e17">date</a>) {}</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ad4276f5a24965b35acc5d01b31fc5e17">   72</a></span>&#160;            <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ad4276f5a24965b35acc5d01b31fc5e17">date</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ae66f66b0d2874fc0d466bc1ef6dd2976">date_</a>; }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;          <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ae66f66b0d2874fc0d466bc1ef6dd2976">   74</a></span>&#160;            <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ae66f66b0d2874fc0d466bc1ef6dd2976">date_</a>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        };</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#aafbb0786dca875b972ca9ddf654f4840">   71</a></span>&#160;            <span class="keyword">explicit</span> <a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#aafbb0786dca875b972ca9ddf654f4840">simple_event</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; <a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#acda6b54c0fae709ae1bcccfae9e1d83d">date</a>) : <a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ae66f66b0d2874fc0d466bc1ef6dd2976">date_</a>(<a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#acda6b54c0fae709ae1bcccfae9e1d83d">date</a>) {}</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#acda6b54c0fae709ae1bcccfae9e1d83d">   72</a></span>&#160;            <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#acda6b54c0fae709ae1bcccfae9e1d83d">date</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ae66f66b0d2874fc0d466bc1ef6dd2976">date_</a>; }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;          <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ae66f66b0d2874fc0d466bc1ef6dd2976">   75</a></span>&#160;            <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code" href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ae66f66b0d2874fc0d466bc1ef6dd2976">date_</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        };</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_acyclic_visitor_html"><div class="ttname"><a href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">QuantLib::AcyclicVisitor</a></div><div class="ttdoc">degenerate base class for the Acyclic Visitor pattern</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00033">visitor.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_event_html_ac659412fae5cc99a0fdf25f7f4b9562e"><div class="ttname"><a href="../../d2/d6c/class_quant_lib_1_1_event.html#ac659412fae5cc99a0fdf25f7f4b9562e">QuantLib::Event::date</a></div><div class="ttdeci">virtual Date date() const =0</div><div class="ttdoc">returns the date at which the event occurs</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1detail_1_1simple__event_html"><div class="ttname"><a href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html">QuantLib::detail::simple_event</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d94/event_8hpp_source.html#l00069">event.hpp:69</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_observable_html"><div class="ttname"><a href="../../d5/de0/class_quant_lib_1_1_observable.html">QuantLib::Observable</a></div><div class="ttdoc">Object that notifies its changes to a set of observers.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00079">observable.hpp:79</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_event_html"><div class="ttname"><a href="../../d2/d6c/class_quant_lib_1_1_event.html">QuantLib::Event</a></div><div class="ttdoc">Base class for event.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d94/event_8hpp_source.html#l00040">event.hpp:40</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_event_html_aa28124883bfb17601f85db7e635094b1"><div class="ttname"><a href="../../d2/d6c/class_quant_lib_1_1_event.html#aa28124883bfb17601f85db7e635094b1">QuantLib::Event::~Event</a></div><div class="ttdeci">virtual ~Event()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d94/event_8hpp_source.html#l00042">event.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1detail_1_1simple__event_html_aafbb0786dca875b972ca9ddf654f4840"><div class="ttname"><a href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#aafbb0786dca875b972ca9ddf654f4840">QuantLib::detail::simple_event::simple_event</a></div><div class="ttdeci">simple_event(const Date &amp;date)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d94/event_8hpp_source.html#l00071">event.hpp:71</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_event_html_a2b4170e3e745845eb7d18f569f770ad2"><div class="ttname"><a href="../../d2/d6c/class_quant_lib_1_1_event.html#a2b4170e3e745845eb7d18f569f770ad2">QuantLib::Event::~Event</a></div><div class="ttdeci">~Event() override=default</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_event_html_a63142c7253e86adcdd9da972165a4b8d"><div class="ttname"><a href="../../d2/d6c/class_quant_lib_1_1_event.html#a63142c7253e86adcdd9da972165a4b8d">QuantLib::Event::hasOccurred</a></div><div class="ttdeci">virtual bool hasOccurred(const Date &amp;refDate=Date(), boost::optional&lt; bool &gt; includeRefDate=boost::none) const</div><div class="ttdoc">returns true if an event has already occurred before a date</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d1b/event_8cpp_source.html#l00027">event.cpp:27</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_event_html_a1d7eaf2f5dccce1c7781b54d64ba4a07"><div class="ttname"><a href="../../d2/d6c/class_quant_lib_1_1_event.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">QuantLib::Event::accept</a></div><div class="ttdeci">virtual void accept(AcyclicVisitor &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d1b/event_8cpp_source.html#l00040">event.cpp:40</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1detail_1_1simple__event_html_ae66f66b0d2874fc0d466bc1ef6dd2976"><div class="ttname"><a href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ae66f66b0d2874fc0d466bc1ef6dd2976">QuantLib::detail::simple_event::date_</a></div><div class="ttdeci">Date date_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d94/event_8hpp_source.html#l00074">event.hpp:74</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1detail_1_1simple__event_html_ae66f66b0d2874fc0d466bc1ef6dd2976"><div class="ttname"><a href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ae66f66b0d2874fc0d466bc1ef6dd2976">QuantLib::detail::simple_event::date_</a></div><div class="ttdeci">Date date_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d94/event_8hpp_source.html#l00075">event.hpp:75</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1detail_1_1simple__event_html_acda6b54c0fae709ae1bcccfae9e1d83d"><div class="ttname"><a href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#acda6b54c0fae709ae1bcccfae9e1d83d">QuantLib::detail::simple_event::date</a></div><div class="ttdeci">Date date() const override</div><div class="ttdoc">returns the date at which the event occurs</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d94/event_8hpp_source.html#l00072">event.hpp:72</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1detail_1_1simple__event_html_ad4276f5a24965b35acc5d01b31fc5e17"><div class="ttname"><a href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ad4276f5a24965b35acc5d01b31fc5e17">QuantLib::detail::simple_event::date</a></div><div class="ttdeci">Date date() const</div><div class="ttdoc">returns the date at which the event occurs</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d94/event_8hpp_source.html#l00072">event.hpp:72</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

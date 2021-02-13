@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/models/marketmodels/products/multiproductmultistep.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -100,14 +101,14 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ql/models/marketmodels/products/multiproductmultistep.hpp&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;ql/errors.hpp&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a8646c435d8d2ae90f0b7fbb459701486">   25</a></span>&#160;    <a class="code" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a8646c435d8d2ae90f0b7fbb459701486">MultiProductMultiStep::MultiProductMultiStep</a>(</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">const</span> std::vector&lt;Time&gt;&amp; rateTimes)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    : rateTimes_(rateTimes) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ql/errors.hpp&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;ql/models/marketmodels/products/multiproductmultistep.hpp&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a4ecee3067847d704130ae0dbe973e835">   26</a></span>&#160;    <a class="code" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a4ecee3067847d704130ae0dbe973e835">MultiProductMultiStep::MultiProductMultiStep</a>(std::vector&lt;Time&gt; rateTimes)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    : rateTimes_(std::move(rateTimes)) {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        QL_REQUIRE(<a class="code" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a7c5eaa190a38d0d5e7e28ce0a5dafc6f">rateTimes_</a>.size()&gt;1,</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                   <span class="stringliteral">&quot;Rate times must contain at least two values&quot;</span>);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n = <a class="code" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a7c5eaa190a38d0d5e7e28ce0a5dafc6f">rateTimes_</a>.size()-1;</div>
@@ -122,11 +123,11 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                          relevanceRates);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a7d9ba7619a08e47149e4e83edad1f517">   42</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="../../de/dd0/class_quant_lib_1_1_evolution_description.html">EvolutionDescription</a>&amp; <a class="code" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a7d9ba7619a08e47149e4e83edad1f517">MultiProductMultiStep::evolution</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a8ed01b196c210ab280774504bb77b357">   42</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="../../de/dd0/class_quant_lib_1_1_evolution_description.html">EvolutionDescription</a>&amp; <a class="code" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a8ed01b196c210ab280774504bb77b357">MultiProductMultiStep::evolution</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#aa5fabad6baffe7913d7edf93e4017faa">evolution_</a>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a19e03c253ef2bdcfe5ffc8e8b976b92d">   46</a></span>&#160;    std::vector&lt;Size&gt; <a class="code" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a19e03c253ef2bdcfe5ffc8e8b976b92d">MultiProductMultiStep::suggestedNumeraires</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a1465f045625ae3e4edf2c190459c51d4">   46</a></span>&#160;    std::vector&lt;Size&gt; <a class="code" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a1465f045625ae3e4edf2c190459c51d4">MultiProductMultiStep::suggestedNumeraires</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n = <a class="code" href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a7c5eaa190a38d0d5e7e28ce0a5dafc6f">rateTimes_</a>.size()-1;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::vector&lt;Size&gt; numeraires(n);</div>
@@ -138,14 +139,14 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_multi_product_multi_step_html_a8646c435d8d2ae90f0b7fbb459701486"><div class="ttname"><a href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a8646c435d8d2ae90f0b7fbb459701486">QuantLib::MultiProductMultiStep::MultiProductMultiStep</a></div><div class="ttdeci">MultiProductMultiStep(const std::vector&lt; Time &gt; &amp;rateTimes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d0f/multiproductmultistep_8cpp_source.html#l00025">multiproductmultistep.cpp:25</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_multi_product_multi_step_html_a8ed01b196c210ab280774504bb77b357"><div class="ttname"><a href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a8ed01b196c210ab280774504bb77b357">QuantLib::MultiProductMultiStep::evolution</a></div><div class="ttdeci">const EvolutionDescription &amp; evolution() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d0f/multiproductmultistep_8cpp_source.html#l00042">multiproductmultistep.cpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_multi_product_multi_step_html_aa5fabad6baffe7913d7edf93e4017faa"><div class="ttname"><a href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#aa5fabad6baffe7913d7edf93e4017faa">QuantLib::MultiProductMultiStep::evolution_</a></div><div class="ttdeci">EvolutionDescription evolution_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db3/multiproductmultistep_8hpp_source.html#l00044">multiproductmultistep.hpp:44</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_multi_product_multi_step_html_a7d9ba7619a08e47149e4e83edad1f517"><div class="ttname"><a href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a7d9ba7619a08e47149e4e83edad1f517">QuantLib::MultiProductMultiStep::evolution</a></div><div class="ttdeci">const EvolutionDescription &amp; evolution() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d0f/multiproductmultistep_8cpp_source.html#l00042">multiproductmultistep.cpp:42</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_multi_product_multi_step_html_a4ecee3067847d704130ae0dbe973e835"><div class="ttname"><a href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a4ecee3067847d704130ae0dbe973e835">QuantLib::MultiProductMultiStep::MultiProductMultiStep</a></div><div class="ttdeci">MultiProductMultiStep(std::vector&lt; Time &gt; rateTimes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d0f/multiproductmultistep_8cpp_source.html#l00026">multiproductmultistep.cpp:26</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_multi_product_multi_step_html_a7c5eaa190a38d0d5e7e28ce0a5dafc6f"><div class="ttname"><a href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a7c5eaa190a38d0d5e7e28ce0a5dafc6f">QuantLib::MultiProductMultiStep::rateTimes_</a></div><div class="ttdeci">std::vector&lt; Time &gt; rateTimes_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db3/multiproductmultistep_8hpp_source.html#l00043">multiproductmultistep.hpp:43</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_multi_product_multi_step_html_a19e03c253ef2bdcfe5ffc8e8b976b92d"><div class="ttname"><a href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a19e03c253ef2bdcfe5ffc8e8b976b92d">QuantLib::MultiProductMultiStep::suggestedNumeraires</a></div><div class="ttdeci">std::vector&lt; Size &gt; suggestedNumeraires() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d0f/multiproductmultistep_8cpp_source.html#l00046">multiproductmultistep.cpp:46</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_evolution_description_html"><div class="ttname"><a href="../../de/dd0/class_quant_lib_1_1_evolution_description.html">QuantLib::EvolutionDescription</a></div><div class="ttdoc">Market-model evolution description.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df1/evolutiondescription_8hpp_source.html#l00054">evolutiondescription.hpp:54</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_multi_product_multi_step_html_a1465f045625ae3e4edf2c190459c51d4"><div class="ttname"><a href="../../d4/d84/class_quant_lib_1_1_multi_product_multi_step.html#a1465f045625ae3e4edf2c190459c51d4">QuantLib::MultiProductMultiStep::suggestedNumeraires</a></div><div class="ttdeci">std::vector&lt; Size &gt; suggestedNumeraires() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d0f/multiproductmultistep_8cpp_source.html#l00046">multiproductmultistep.cpp:46</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

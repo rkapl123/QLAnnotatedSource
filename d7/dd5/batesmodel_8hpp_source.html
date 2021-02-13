@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/models/equity/batesmodel.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -118,7 +119,7 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d7/d0e/class_quant_lib_1_1_bates_model.html#a48c08d33f44bbcf1116a2e8750feddf1">   49</a></span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d7/d0e/class_quant_lib_1_1_bates_model.html#a48c08d33f44bbcf1116a2e8750feddf1">lambda</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d7/db6/class_quant_lib_1_1_calibrated_model.html#a8d6cb3b36a2e282c440aad042035196a">arguments_</a>[7](0.0); }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/d0e/class_quant_lib_1_1_bates_model.html#a4d8a7e8e132cf1dd8d1d9eac02f2bfae">generateArguments</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/d0e/class_quant_lib_1_1_bates_model.html#a75f94e794eec91194cba08e629bfe745">generateArguments</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
@@ -168,6 +169,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_bates_det_jump_model_html_acb2ae9ef455c50106250ccbcf7665669"><div class="ttname"><a href="../../db/d36/class_quant_lib_1_1_bates_det_jump_model.html#acb2ae9ef455c50106250ccbcf7665669">QuantLib::BatesDetJumpModel::kappaLambda</a></div><div class="ttdeci">Real kappaLambda() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd5/batesmodel_8hpp_source.html#l00062">batesmodel.hpp:62</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bates_model_html_a56f0decb969032953e1a9b4ae32fed4b"><div class="ttname"><a href="../../d7/d0e/class_quant_lib_1_1_bates_model.html#a56f0decb969032953e1a9b4ae32fed4b">QuantLib::BatesModel::BatesModel</a></div><div class="ttdeci">BatesModel(const ext::shared_ptr&lt; BatesProcess &gt; &amp;process)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d51/batesmodel_8cpp_source.html#l00024">batesmodel.cpp:24</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bates_double_exp_model_html_a646000619222a5dc86fe2f4b6e2e9577"><div class="ttname"><a href="../../d8/d8d/class_quant_lib_1_1_bates_double_exp_model.html#a646000619222a5dc86fe2f4b6e2e9577">QuantLib::BatesDoubleExpModel::BatesDoubleExpModel</a></div><div class="ttdeci">BatesDoubleExpModel(const ext::shared_ptr&lt; HestonProcess &gt; &amp;process, Real lambda=0.1, Real nuUp=0.1, Real nuDown=0.1, Real p=0.5)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d51/batesmodel_8cpp_source.html#l00059">batesmodel.cpp:59</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bates_model_html_a75f94e794eec91194cba08e629bfe745"><div class="ttname"><a href="../../d7/d0e/class_quant_lib_1_1_bates_model.html#a75f94e794eec91194cba08e629bfe745">QuantLib::BatesModel::generateArguments</a></div><div class="ttdeci">void generateArguments() override</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d51/batesmodel_8cpp_source.html#l00038">batesmodel.cpp:38</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_heston_model_html"><div class="ttname"><a href="../../d6/d68/class_quant_lib_1_1_heston_model.html">QuantLib::HestonModel</a></div><div class="ttdoc">Heston model for the stochastic volatility of an asset.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd1/hestonmodel_8hpp_source.html#l00042">hestonmodel.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bates_double_exp_model_html_a3f80eb91941193b7427ec4c5974b8f6b"><div class="ttname"><a href="../../d8/d8d/class_quant_lib_1_1_bates_double_exp_model.html#a3f80eb91941193b7427ec4c5974b8f6b">QuantLib::BatesDoubleExpModel::nuDown</a></div><div class="ttdeci">Real nuDown() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd5/batesmodel_8hpp_source.html#l00074">batesmodel.hpp:74</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bates_model_html"><div class="ttname"><a href="../../d7/d0e/class_quant_lib_1_1_bates_model.html">QuantLib::BatesModel</a></div><div class="ttdoc">Bates stochastic-volatility model.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd5/batesmodel_8hpp_source.html#l00043">batesmodel.hpp:43</a></div></div>
@@ -181,7 +183,6 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_bates_double_exp_det_jump_model_html_a7c37be6db2903b2bd28766997af2b0f6"><div class="ttname"><a href="../../de/d69/class_quant_lib_1_1_bates_double_exp_det_jump_model.html#a7c37be6db2903b2bd28766997af2b0f6">QuantLib::BatesDoubleExpDetJumpModel::thetaLambda</a></div><div class="ttdeci">Real thetaLambda() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd5/batesmodel_8hpp_source.html#l00088">batesmodel.hpp:88</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bates_double_exp_det_jump_model_html_a7b563a3295cb68282f0f21cd1b810fcf"><div class="ttname"><a href="../../de/d69/class_quant_lib_1_1_bates_double_exp_det_jump_model.html#a7b563a3295cb68282f0f21cd1b810fcf">QuantLib::BatesDoubleExpDetJumpModel::BatesDoubleExpDetJumpModel</a></div><div class="ttdeci">BatesDoubleExpDetJumpModel(const ext::shared_ptr&lt; HestonProcess &gt; &amp;process, Real lambda=0.1, Real nuUp=0.1, Real nuDown=0.1, Real p=0.5, Real kappaLambda=1.0, Real thetaLambda=0.1)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d51/batesmodel_8cpp_source.html#l00073">batesmodel.cpp:73</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bates_model_html_a4d8a7e8e132cf1dd8d1d9eac02f2bfae"><div class="ttname"><a href="../../d7/d0e/class_quant_lib_1_1_bates_model.html#a4d8a7e8e132cf1dd8d1d9eac02f2bfae">QuantLib::BatesModel::generateArguments</a></div><div class="ttdeci">void generateArguments()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d51/batesmodel_8cpp_source.html#l00038">batesmodel.cpp:38</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bates_double_exp_model_html"><div class="ttname"><a href="../../d8/d8d/class_quant_lib_1_1_bates_double_exp_model.html">QuantLib::BatesDoubleExpModel</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd5/batesmodel_8hpp_source.html#l00067">batesmodel.hpp:67</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bates_double_exp_det_jump_model_html"><div class="ttname"><a href="../../de/d69/class_quant_lib_1_1_bates_double_exp_det_jump_model.html">QuantLib::BatesDoubleExpDetJumpModel</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd5/batesmodel_8hpp_source.html#l00080">batesmodel.hpp:80</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bates_det_jump_model_html_ae2520d4229b0c637dabc87663c92982d"><div class="ttname"><a href="../../db/d36/class_quant_lib_1_1_bates_det_jump_model.html#ae2520d4229b0c637dabc87663c92982d">QuantLib::BatesDetJumpModel::BatesDetJumpModel</a></div><div class="ttdeci">BatesDetJumpModel(const ext::shared_ptr&lt; BatesProcess &gt; &amp;process, Real kappaLambda=1.0, Real thetaLambda=0.1)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d51/batesmodel_8cpp_source.html#l00046">batesmodel.cpp:46</a></div></div>

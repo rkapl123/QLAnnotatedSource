@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/utilities/observablevalue.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -149,7 +150,7 @@ $(function() {
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="../../dc/d9e/class_quant_lib_1_1_observable_value.html">ObservableValue&lt;T&gt;</a>&amp;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="../../dc/d9e/class_quant_lib_1_1_observable_value.html#a8df11cf784dbdc9fe0910d9fdc35c754">   86</a></span>&#160;    <a class="code" href="../../dc/d9e/class_quant_lib_1_1_observable_value.html#aceb7a715070cd34af75b73d97a8b6f7e">ObservableValue&lt;T&gt;::operator=</a>(<span class="keyword">const</span> <a class="code" href="../../dc/d9e/class_quant_lib_1_1_observable_value.html">ObservableValue&lt;T&gt;</a>&amp; t) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="../../dc/d9e/class_quant_lib_1_1_observable_value.html#a8df11cf784dbdc9fe0910d9fdc35c754">   86</a></span>&#160;    <a class="code" href="../../dc/d9e/class_quant_lib_1_1_observable_value.html#aceb7a715070cd34af75b73d97a8b6f7e">ObservableValue&lt;T&gt;::operator=</a>(<span class="keyword">const</span> <a class="code" href="../../dc/d9e/class_quant_lib_1_1_observable_value.html">ObservableValue&lt;T&gt;</a>&amp; t) { <span class="comment">// NOLINT(bugprone-unhandled-self-assignment)</span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        value_ = t.value_;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        observable_-&gt;notifyObservers();</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>

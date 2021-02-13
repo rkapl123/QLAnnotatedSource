@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/methods/finitedifferences/operators/fdmlinearop.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -113,11 +114,11 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html">   34</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html">FdmLinearOp</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#a683f6e911f21420fe0ff4609055a8c41">   36</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> <a class="code" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#a683f6e911f21420fe0ff4609055a8c41">array_type</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#ae6077ba76975d5efe5188a597db1c27f">   37</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#ae6077ba76975d5efe5188a597db1c27f">~FdmLinearOp</a>() { }</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#adbd8c74d39db458bcb26da7d42d0039d">   38</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;array_type&gt;</a> <a class="code" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#adbd8c74d39db458bcb26da7d42d0039d">apply</a>(<span class="keyword">const</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">array_type</a>&amp; r) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#af881d592e94610e11c6a71fecae0d9c8">   37</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#af881d592e94610e11c6a71fecae0d9c8">~FdmLinearOp</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#adbd8c74d39db458bcb26da7d42d0039d">   38</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d3/dee/class_t.html">Disposable&lt;array_type&gt;</a> <a class="code" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#adbd8c74d39db458bcb26da7d42d0039d">apply</a>(<span class="keyword">const</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">array_type</a>&amp; r) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#if !defined(QL_NO_UBLAS_SUPPORT)</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#acd4b0bdfafbfcddcc30f7410187114a3">   41</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;SparseMatrix&gt;</a> <a class="code" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#acd4b0bdfafbfcddcc30f7410187114a3">toMatrix</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#acd4b0bdfafbfcddcc30f7410187114a3">   41</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d3/dee/class_t.html">Disposable&lt;SparseMatrix&gt;</a> <a class="code" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#acd4b0bdfafbfcddcc30f7410187114a3">toMatrix</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    };</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
@@ -128,10 +129,10 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_linear_op_html_acd4b0bdfafbfcddcc30f7410187114a3"><div class="ttname"><a href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#acd4b0bdfafbfcddcc30f7410187114a3">QuantLib::FdmLinearOp::toMatrix</a></div><div class="ttdeci">virtual Disposable&lt; SparseMatrix &gt; toMatrix() const =0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_linear_op_html_adbd8c74d39db458bcb26da7d42d0039d"><div class="ttname"><a href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#adbd8c74d39db458bcb26da7d42d0039d">QuantLib::FdmLinearOp::apply</a></div><div class="ttdeci">virtual Disposable&lt; array_type &gt; apply(const array_type &amp;r) const =0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00053">array.hpp:53</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html">QuantLib::Disposable</a></div><div class="ttdoc">generic disposable object with move semantics</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00064">disposable.hpp:64</a></div></div>
+<div class="ttc" id="aclass_t_html"><div class="ttname"><a href="../../d3/dee/class_t.html">T</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_fdm_linear_op_html_af881d592e94610e11c6a71fecae0d9c8"><div class="ttname"><a href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#af881d592e94610e11c6a71fecae0d9c8">QuantLib::FdmLinearOp::~FdmLinearOp</a></div><div class="ttdeci">virtual ~FdmLinearOp()=default</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_linear_op_html_a683f6e911f21420fe0ff4609055a8c41"><div class="ttname"><a href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#a683f6e911f21420fe0ff4609055a8c41">QuantLib::FdmLinearOp::array_type</a></div><div class="ttdeci">Array array_type</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/fdmlinearop_8hpp_source.html#l00036">fdmlinearop.hpp:36</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_fdm_linear_op_html_ae6077ba76975d5efe5188a597db1c27f"><div class="ttname"><a href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#ae6077ba76975d5efe5188a597db1c27f">QuantLib::FdmLinearOp::~FdmLinearOp</a></div><div class="ttdeci">virtual ~FdmLinearOp()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/fdmlinearop_8hpp_source.html#l00037">fdmlinearop.hpp:37</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

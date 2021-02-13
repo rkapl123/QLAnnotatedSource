@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/experimental/exoticoptions/mchimalayaengine.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -102,15 +103,15 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ql/experimental/exoticoptions/mchimalayaengine.hpp&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;ql/payoff.hpp&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#a5fc159f6ba29024e4f01473a453e86dc">   25</a></span>&#160;    <a class="code" href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#a5fc159f6ba29024e4f01473a453e86dc">HimalayaMultiPathPricer::HimalayaMultiPathPricer</a>(</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                      <span class="keyword">const</span> ext::shared_ptr&lt;Payoff&gt;&amp; payoff,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                      <a class="code" href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">DiscountFactor</a> discount)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    : payoff_(payoff), discount_(discount) {}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#aee3e6f10278e1d69fc123bb15d95f633">   26</a></span>&#160;    <a class="code" href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#aee3e6f10278e1d69fc123bb15d95f633">HimalayaMultiPathPricer::HimalayaMultiPathPricer</a>(ext::shared_ptr&lt;Payoff&gt; payoff,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                                     <a class="code" href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">DiscountFactor</a> discount)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    : payoff_(std::move(payoff)), discount_(discount) {}</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#abdc4aa372630db744c7e8935aec2550c">   30</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#abdc4aa372630db744c7e8935aec2550c">HimalayaMultiPathPricer::operator()</a>(<span class="keyword">const</span> <a class="code" href="../../de/de3/class_quant_lib_1_1_multi_path.html">MultiPath</a>&amp; multiPath)<span class="keyword"></span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#ac1a111f47d0a649a505caf0740e57d11">   30</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#ac1a111f47d0a649a505caf0740e57d11">HimalayaMultiPathPricer::operator()</a>(<span class="keyword">const</span> <a class="code" href="../../de/de3/class_quant_lib_1_1_multi_path.html">MultiPath</a>&amp; multiPath)<span class="keyword"></span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">                                                                      const </span>{</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> numAssets = multiPath.<a class="code" href="../../de/de3/class_quant_lib_1_1_multi_path.html#ac4af02a4ea508430f0649412ce7f4d85">assetNumber</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> numNodes = multiPath.<a class="code" href="../../de/de3/class_quant_lib_1_1_multi_path.html#a78d1b407e5d5c56cf5ec5a7cc49a27f9">pathSize</a>();</div>
@@ -146,17 +147,17 @@ $(function() {
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_himalaya_multi_path_pricer_html_a5fc159f6ba29024e4f01473a453e86dc"><div class="ttname"><a href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#a5fc159f6ba29024e4f01473a453e86dc">QuantLib::HimalayaMultiPathPricer::HimalayaMultiPathPricer</a></div><div class="ttdeci">HimalayaMultiPathPricer(const ext::shared_ptr&lt; Payoff &gt; &amp;payoff, DiscountFactor discount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d86/mchimalayaengine_8cpp_source.html#l00025">mchimalayaengine.cpp:25</a></div></div>
 <div class="ttc" id="agroup__limit_macros_html_ga8a6736b7bfef354a1fc507317d49117a"><div class="ttname"><a href="../../d3/d8f/group__limit_macros.html#ga8a6736b7bfef354a1fc507317d49117a">QL_MIN_REAL</a></div><div class="ttdeci">#define QL_MIN_REAL</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/qldefines_8hpp_source.html#l00175">qldefines.hpp:175</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_multi_path_html"><div class="ttname"><a href="../../de/de3/class_quant_lib_1_1_multi_path.html">QuantLib::MultiPath</a></div><div class="ttdoc">Correlated multiple asset paths.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df5/multipath_8hpp_source.html#l00038">multipath.hpp:38</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_himalaya_multi_path_pricer_html_abdc4aa372630db744c7e8935aec2550c"><div class="ttname"><a href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#abdc4aa372630db744c7e8935aec2550c">QuantLib::HimalayaMultiPathPricer::operator()</a></div><div class="ttdeci">Real operator()(const MultiPath &amp;multiPath) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d86/mchimalayaengine_8cpp_source.html#l00030">mchimalayaengine.cpp:30</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_multi_path_html_a78d1b407e5d5c56cf5ec5a7cc49a27f9"><div class="ttname"><a href="../../de/de3/class_quant_lib_1_1_multi_path.html#a78d1b407e5d5c56cf5ec5a7cc49a27f9">QuantLib::MultiPath::pathSize</a></div><div class="ttdeci">Size pathSize() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df5/multipath_8hpp_source.html#l00047">multipath.hpp:47</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_himalaya_multi_path_pricer_html_ac1a111f47d0a649a505caf0740e57d11"><div class="ttname"><a href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#ac1a111f47d0a649a505caf0740e57d11">QuantLib::HimalayaMultiPathPricer::operator()</a></div><div class="ttdeci">Real operator()(const MultiPath &amp;multiPath) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d86/mchimalayaengine_8cpp_source.html#l00030">mchimalayaengine.cpp:30</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_multi_path_html"><div class="ttname"><a href="../../de/de3/class_quant_lib_1_1_multi_path.html">QuantLib::MultiPath</a></div><div class="ttdoc">Correlated multiple asset paths.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df5/multipath_8hpp_source.html#l00039">multipath.hpp:39</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_multi_path_html_a78d1b407e5d5c56cf5ec5a7cc49a27f9"><div class="ttname"><a href="../../de/de3/class_quant_lib_1_1_multi_path.html#a78d1b407e5d5c56cf5ec5a7cc49a27f9">QuantLib::MultiPath::pathSize</a></div><div class="ttdeci">Size pathSize() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df5/multipath_8hpp_source.html#l00048">multipath.hpp:48</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_himalaya_multi_path_pricer_html_aee3e6f10278e1d69fc123bb15d95f633"><div class="ttname"><a href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#aee3e6f10278e1d69fc123bb15d95f633">QuantLib::HimalayaMultiPathPricer::HimalayaMultiPathPricer</a></div><div class="ttdeci">HimalayaMultiPathPricer(ext::shared_ptr&lt; Payoff &gt; payoff, DiscountFactor discount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d86/mchimalayaengine_8cpp_source.html#l00026">mchimalayaengine.cpp:26</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_himalaya_multi_path_pricer_html_a03a7940acbfe70e2d64da8e1692e20b3"><div class="ttname"><a href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#a03a7940acbfe70e2d64da8e1692e20b3">QuantLib::HimalayaMultiPathPricer::discount_</a></div><div class="ttdeci">DiscountFactor discount_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d30/mchimalayaengine_8hpp_source.html#l00121">mchimalayaengine.hpp:121</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_himalaya_multi_path_pricer_html_a03a7940acbfe70e2d64da8e1692e20b3"><div class="ttname"><a href="../../d7/d8c/class_quant_lib_1_1_himalaya_multi_path_pricer.html#a03a7940acbfe70e2d64da8e1692e20b3">QuantLib::HimalayaMultiPathPricer::discount_</a></div><div class="ttdeci">DiscountFactor discount_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d30/mchimalayaengine_8hpp_source.html#l00122">mchimalayaengine.hpp:122</a></div></div>
 <div class="ttc" id="agroup__types_html_ga642a971a0bcbbd2fb26c35e1a06e5761"><div class="ttname"><a href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">QuantLib::DiscountFactor</a></div><div class="ttdeci">Real DiscountFactor</div><div class="ttdoc">discount factor between dates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00066">types.hpp:66</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_multi_path_html_ac4af02a4ea508430f0649412ce7f4d85"><div class="ttname"><a href="../../de/de3/class_quant_lib_1_1_multi_path.html#ac4af02a4ea508430f0649412ce7f4d85">QuantLib::MultiPath::assetNumber</a></div><div class="ttdeci">Size assetNumber() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df5/multipath_8hpp_source.html#l00046">multipath.hpp:46</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_multi_path_html_ac4af02a4ea508430f0649412ce7f4d85"><div class="ttname"><a href="../../de/de3/class_quant_lib_1_1_multi_path.html#ac4af02a4ea508430f0649412ce7f4d85">QuantLib::MultiPath::assetNumber</a></div><div class="ttdeci">Size assetNumber() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df5/multipath_8hpp_source.html#l00047">multipath.hpp:47</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

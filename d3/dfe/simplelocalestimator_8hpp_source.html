@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/models/volatility/simplelocalestimator.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -116,35 +117,34 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html#a7f45f02ee06c173a5926ac70f23f3d3b">   40</a></span>&#160;        <a class="code" href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html#a7f45f02ee06c173a5926ac70f23f3d3b">SimpleLocalEstimator</a>(<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> y) :</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html#a685ec69bc8fa930e820390e5d34b06f1">yearFraction_</a>(y) {}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries&lt;Volatility&gt;</a></div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html#a2ff585a7a780ab4d7275a408e86b4642">   43</a></span>&#160;        <a class="code" href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html#a2ff585a7a780ab4d7275a408e86b4642">calculate</a>(<span class="keyword">const</span> <a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries&lt;Real&gt;</a> &amp;quoteSeries) {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries&lt;Volatility&gt;</a> retval;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries&lt;Real&gt;::const_iterator</a> prev, next, cur, start;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            start = quoteSeries.<a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a29305669b60ca1680752e2fc3592ba99">begin</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            ++start;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">for</span> (cur = start; cur != quoteSeries.<a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html#accf9a4bd0c34d4a5f6a7dab66ea10cdc">end</a>(); ++cur) {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                prev = cur; --prev;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                retval[cur-&gt;first] =</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    std::fabs(std::log(cur-&gt;second/prev-&gt;second))/</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    std::sqrt(<a class="code" href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html#a685ec69bc8fa930e820390e5d34b06f1">yearFraction_</a>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span> retval;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    };</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html#a046907a711cf0a49fa96461ec13f1a1b">   42</a></span>&#160;        <a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries&lt;Volatility&gt;</a> <a class="code" href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html#a046907a711cf0a49fa96461ec13f1a1b">calculate</a>(<span class="keyword">const</span> <a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries&lt;Real&gt;</a>&amp; quoteSeries)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries&lt;Volatility&gt;</a> retval;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries&lt;Real&gt;::const_iterator</a> prev, next, cur, start;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            start = quoteSeries.<a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a29305669b60ca1680752e2fc3592ba99">begin</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            ++start;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">for</span> (cur = start; cur != quoteSeries.<a class="code" href="../../d2/d05/class_quant_lib_1_1_time_series.html#accf9a4bd0c34d4a5f6a7dab66ea10cdc">end</a>(); ++cur) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                prev = cur; --prev;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                retval[cur-&gt;first] =</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    std::fabs(std::log(cur-&gt;second/prev-&gt;second))/</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    std::sqrt(<a class="code" href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html#a685ec69bc8fa930e820390e5d34b06f1">yearFraction_</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">return</span> retval;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    };</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_time_series_html_a29305669b60ca1680752e2fc3592ba99"><div class="ttname"><a href="../../d2/d05/class_quant_lib_1_1_time_series.html#a29305669b60ca1680752e2fc3592ba99">QuantLib::TimeSeries::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db6/timeseries_8hpp_source.html#l00162">timeseries.hpp:162</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simple_local_estimator_html_a685ec69bc8fa930e820390e5d34b06f1"><div class="ttname"><a href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html#a685ec69bc8fa930e820390e5d34b06f1">QuantLib::SimpleLocalEstimator::yearFraction_</a></div><div class="ttdeci">Real yearFraction_</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dfe/simplelocalestimator_8hpp_source.html#l00038">simplelocalestimator.hpp:38</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simple_local_estimator_html"><div class="ttname"><a href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html">QuantLib::SimpleLocalEstimator</a></div><div class="ttdoc">Local-estimator volatility model.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dfe/simplelocalestimator_8hpp_source.html#l00035">simplelocalestimator.hpp:36</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_time_series_html_accf9a4bd0c34d4a5f6a7dab66ea10cdc"><div class="ttname"><a href="../../d2/d05/class_quant_lib_1_1_time_series.html#accf9a4bd0c34d4a5f6a7dab66ea10cdc">QuantLib::TimeSeries::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db6/timeseries_8hpp_source.html#l00163">timeseries.hpp:163</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simple_local_estimator_html_a7f45f02ee06c173a5926ac70f23f3d3b"><div class="ttname"><a href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html#a7f45f02ee06c173a5926ac70f23f3d3b">QuantLib::SimpleLocalEstimator::SimpleLocalEstimator</a></div><div class="ttdeci">SimpleLocalEstimator(Real y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dfe/simplelocalestimator_8hpp_source.html#l00040">simplelocalestimator.hpp:40</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_simple_local_estimator_html_a2ff585a7a780ab4d7275a408e86b4642"><div class="ttname"><a href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html#a2ff585a7a780ab4d7275a408e86b4642">QuantLib::SimpleLocalEstimator::calculate</a></div><div class="ttdeci">TimeSeries&lt; Volatility &gt; calculate(const TimeSeries&lt; Real &gt; &amp;quoteSeries)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dfe/simplelocalestimator_8hpp_source.html#l00043">simplelocalestimator.hpp:43</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_time_series_html"><div class="ttname"><a href="../../d2/d05/class_quant_lib_1_1_time_series.html">QuantLib::TimeSeries</a></div><div class="ttdoc">Container for historical data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db6/timeseries_8hpp_source.html#l00050">timeseries.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_simple_local_estimator_html_a046907a711cf0a49fa96461ec13f1a1b"><div class="ttname"><a href="../../da/d9f/class_quant_lib_1_1_simple_local_estimator.html#a046907a711cf0a49fa96461ec13f1a1b">QuantLib::SimpleLocalEstimator::calculate</a></div><div class="ttdeci">TimeSeries&lt; Volatility &gt; calculate(const TimeSeries&lt; Real &gt; &amp;quoteSeries) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dfe/simplelocalestimator_8hpp_source.html#l00042">simplelocalestimator.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_local_volatility_estimator_html"><div class="ttname"><a href="../../d7/db3/class_quant_lib_1_1_local_volatility_estimator.html">QuantLib::LocalVolatilityEstimator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dbd/volatilitymodel_8hpp_source.html#l00034">volatilitymodel.hpp:34</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: GaussianLHPLossModel Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -173,18 +174,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5ab96db2d670e327477834a8dfdc8313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d27d455120d8a4aa5d496814f5e0d73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a2d27d455120d8a4aa5d496814f5e0d73">GaussianLHPLossModel</a> (const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;correlQuote, const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;recoveries)</td></tr>
 <tr class="separator:a2d27d455120d8a4aa5d496814f5e0d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5c54df7ed3b930268c8d7752c101725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
-<tr class="separator:ac5c54df7ed3b930268c8d7752c101725"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab39687a9a4ba5a0daae12c443d7f8ee6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ab39687a9a4ba5a0daae12c443d7f8ee6">expectedTrancheLoss</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d) const</td></tr>
-<tr class="separator:ab39687a9a4ba5a0daae12c443d7f8ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e0292b9c7c9fe33fa3e8a0dfc0332fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a4e0292b9c7c9fe33fa3e8a0dfc0332fe">probOverLoss</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> remainingLossFraction) const</td></tr>
-<tr class="separator:a4e0292b9c7c9fe33fa3e8a0dfc0332fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1342bb3a6f99d2fca9a047cef8744686"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a1342bb3a6f99d2fca9a047cef8744686">expectedShortfall</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gad9817a6a21dfcb91429f0152c99d6313">Probability</a> perctl) const</td></tr>
-<tr class="memdesc:a1342bb3a6f99d2fca9a047cef8744686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ESF as an absolute amount (rather than a fraction)  <a href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a1342bb3a6f99d2fca9a047cef8744686">More...</a><br /></td></tr>
-<tr class="separator:a1342bb3a6f99d2fca9a047cef8744686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d3dd77a7c95ccc54fac4a15b8946298"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a9d3dd77a7c95ccc54fac4a15b8946298">percentile</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> perctl) const</td></tr>
-<tr class="memdesc:a9d3dd77a7c95ccc54fac4a15b8946298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value at Risk given a default loss percentile.  <a href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a9d3dd77a7c95ccc54fac4a15b8946298">More...</a><br /></td></tr>
-<tr class="separator:a9d3dd77a7c95ccc54fac4a15b8946298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44137bb65de2396875934e48a6ee5099"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
+<tr class="separator:a44137bb65de2396875934e48a6ee5099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada6e256cf967559d9499fa9c9cddd31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#aada6e256cf967559d9499fa9c9cddd31">expectedTrancheLoss</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d) const override</td></tr>
+<tr class="separator:aada6e256cf967559d9499fa9c9cddd31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9be863425e15a316dc63b343107a9cfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a9be863425e15a316dc63b343107a9cfe">probOverLoss</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> remainingLossFraction) const override</td></tr>
+<tr class="separator:a9be863425e15a316dc63b343107a9cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1480327617845d4f5512c19df3cdc72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ab1480327617845d4f5512c19df3cdc72">expectedShortfall</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gad9817a6a21dfcb91429f0152c99d6313">Probability</a> perctl) const override</td></tr>
+<tr class="memdesc:ab1480327617845d4f5512c19df3cdc72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ESF as an absolute amount (rather than a fraction)  <a href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ab1480327617845d4f5512c19df3cdc72">More...</a><br /></td></tr>
+<tr class="separator:ab1480327617845d4f5512c19df3cdc72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a432317f1d29f9d1dc701f03b91614225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a432317f1d29f9d1dc701f03b91614225">percentile</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> perctl) const override</td></tr>
+<tr class="memdesc:a432317f1d29f9d1dc701f03b91614225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value at Risk given a default loss percentile.  <a href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a432317f1d29f9d1dc701f03b91614225">More...</a><br /></td></tr>
+<tr class="separator:a432317f1d29f9d1dc701f03b91614225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2227a7ba1f2b6ac736805f070e2ac2be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gad9817a6a21dfcb91429f0152c99d6313">Probability</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a2227a7ba1f2b6ac736805f070e2ac2be">averageProb</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d) const</td></tr>
 <tr class="separator:a2227a7ba1f2b6ac736805f070e2ac2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93c3c4e6b65a0482f8c18918ed83ef9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a93c3c4e6b65a0482f8c18918ed83ef9a">averageRecovery</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d) const</td></tr>
@@ -196,13 +197,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a522aacdd0f2408fe5e46527a6db999b4">operator=</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
 <tr class="separator:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f0b266a5d1e6ed41027d3e8c8d7ff1f inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a5f0b266a5d1e6ed41027d3e8c8d7ff1f">~Observable</a> ()</td></tr>
-<tr class="separator:a5f0b266a5d1e6ed41027d3e8c8d7ff1f inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a99f4333cda953ce3bfdc958ccea5fbf9">~Observable</a> ()=default</td></tr>
+<tr class="separator:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a> ()</td></tr>
 <tr class="separator:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_latent_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_latent_model')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d0/d82/class_quant_lib_1_1_latent_model.html">LatentModel&lt; GaussianCopulaPolicy &gt;</a></td></tr>
-<tr class="memitem:ac5c54df7ed3b930268c8d7752c101725 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_quant_lib_1_1_latent_model.html#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
-<tr class="separator:ac5c54df7ed3b930268c8d7752c101725 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_quant_lib_1_1_latent_model.html#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
+<tr class="separator:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acce0ab2cacc475b2434f24c65c91685a inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_quant_lib_1_1_latent_model.html#acce0ab2cacc475b2434f24c65c91685a">size</a> () const</td></tr>
 <tr class="separator:acce0ab2cacc475b2434f24c65c91685a inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56abc887c13cbde93385f6875e849541 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_quant_lib_1_1_latent_model.html#a56abc887c13cbde93385f6875e849541">numFactors</a> () const</td></tr>
@@ -243,7 +244,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a36e205d1cabb02b58e65e4f1ee08658f inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd5b1879390c62bbddd5f61deb20b49e inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_quant_lib_1_1_latent_model.html#acd5b1879390c62bbddd5f61deb20b49e">inverseCumulativeZ</a> (<a class="el" href="../../d6/d59/group__types.html#gad9817a6a21dfcb91429f0152c99d6313">Probability</a> p) const</td></tr>
 <tr class="separator:acd5b1879390c62bbddd5f61deb20b49e inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b0482da26b94fcd714869c802efd590 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable</a>&lt; std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_quant_lib_1_1_latent_model.html#a2b0482da26b94fcd714869c802efd590">allFactorCumulInverter</a> (const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;probs) const</td></tr>
+<tr class="memitem:a2b0482da26b94fcd714869c802efd590 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a>&lt; std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_quant_lib_1_1_latent_model.html#a2b0482da26b94fcd714869c802efd590">allFactorCumulInverter</a> (const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;probs) const</td></tr>
 <tr class="separator:a2b0482da26b94fcd714869c802efd590 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dd0aa599a5b42688ff1ca2bd4cf9d3f inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_quant_lib_1_1_latent_model.html#a0dd0aa599a5b42688ff1ca2bd4cf9d3f">latentVarValue</a> (const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;allFactors, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iVar) const</td></tr>
 <tr class="separator:a0dd0aa599a5b42688ff1ca2bd4cf9d3f inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -251,11 +252,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6d107efc12437354987e3537fc1cbe62 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada44c6f03858c0d5f260c1815cc22246 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_quant_lib_1_1_latent_model.html#ada44c6f03858c0d5f260c1815cc22246">integratedExpectedValue</a> (const ext::function&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;v1)&gt; &amp;f) const</td></tr>
 <tr class="separator:ada44c6f03858c0d5f260c1815cc22246 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5a4f1b3cf4b5973b5362998c89a82a3 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable</a>&lt; std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_quant_lib_1_1_latent_model.html#ac5a4f1b3cf4b5973b5362998c89a82a3">integratedExpectedValue</a> (const ext::function&lt; <a class="el" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable</a>&lt; std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &gt;(const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;v1)&gt; &amp;f) const</td></tr>
+<tr class="memitem:ac5a4f1b3cf4b5973b5362998c89a82a3 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a>&lt; std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/class_quant_lib_1_1_latent_model.html#ac5a4f1b3cf4b5973b5362998c89a82a3">integratedExpectedValue</a> (const ext::function&lt; <a class="el" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a>&lt; std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &gt;(const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;v1)&gt; &amp;f) const</td></tr>
 <tr class="separator:ac5a4f1b3cf4b5973b5362998c89a82a3 inherit pub_methods_class_quant_lib_1_1_latent_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
-<tr class="memitem:abbd00a8000bd3ee5cd7e35aeb436f937 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#abbd00a8000bd3ee5cd7e35aeb436f937">Observer</a> ()</td></tr>
-<tr class="separator:abbd00a8000bd3ee5cd7e35aeb436f937 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a52ef9232283da6f842e4574afeb854a0">Observer</a> ()=default</td></tr>
+<tr class="separator:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#af6a9d3ca0b7f388f3b7ccb1eccf11f63">Observer</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
 <tr class="separator:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6810b3645967da11d5f5d4804d37bacc inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a6810b3645967da11d5f5d4804d37bacc">operator=</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
@@ -277,24 +278,24 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a3e0181435a77c5f91fdaf6ff8c428280"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a3e0181435a77c5f91fdaf6ff8c428280">percentilePortfolioLossFraction</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> perctl) const</td></tr>
 <tr class="separator:a3e0181435a77c5f91fdaf6ff8c428280"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a133a222c8c8093c78bda8f07787ca1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a5a133a222c8c8093c78bda8f07787ca1">expectedRecovery</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iName, const <a class="el" href="../../d8/daa/class_quant_lib_1_1_default_prob_key.html">DefaultProbKey</a> &amp;ik) const</td></tr>
-<tr class="separator:a5a133a222c8c8093c78bda8f07787ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5bef08f02a64dc265292d4d7ae3d75f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ad5bef08f02a64dc265292d4d7ae3d75f">expectedRecovery</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iName, const <a class="el" href="../../d8/daa/class_quant_lib_1_1_default_prob_key.html">DefaultProbKey</a> &amp;ik) const override</td></tr>
+<tr class="separator:ad5bef08f02a64dc265292d4d7ae3d75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_quant_lib_1_1_default_loss_model"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_quant_lib_1_1_default_loss_model')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html">DefaultLossModel</a></td></tr>
-<tr class="memitem:a95a02e1165c4aaa234dc10ce70f7feb7 inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a95a02e1165c4aaa234dc10ce70f7feb7">DefaultLossModel</a> ()</td></tr>
-<tr class="separator:a95a02e1165c4aaa234dc10ce70f7feb7 inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a508c8a0f27bae4596a400bc49dacb18f inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable</a>&lt; std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a508c8a0f27bae4596a400bc49dacb18f">splitVaRLevel</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> loss) const</td></tr>
+<tr class="memitem:a9593cf07f8917468789a87c92557fbd6 inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a9593cf07f8917468789a87c92557fbd6">DefaultLossModel</a> ()=default</td></tr>
+<tr class="separator:a9593cf07f8917468789a87c92557fbd6 inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a508c8a0f27bae4596a400bc49dacb18f inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a>&lt; std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a508c8a0f27bae4596a400bc49dacb18f">splitVaRLevel</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> loss) const</td></tr>
 <tr class="memdesc:a508c8a0f27bae4596a400bc49dacb18f inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associated VaR fraction to each counterparty.  <a href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a508c8a0f27bae4596a400bc49dacb18f">More...</a><br /></td></tr>
 <tr class="separator:a508c8a0f27bae4596a400bc49dacb18f inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bc8439ac6ee1b586c13b155aec854ca inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable</a>&lt; std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a4bc8439ac6ee1b586c13b155aec854ca">splitESFLevel</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> loss) const</td></tr>
+<tr class="memitem:a4bc8439ac6ee1b586c13b155aec854ca inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a>&lt; std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a4bc8439ac6ee1b586c13b155aec854ca">splitESFLevel</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> loss) const</td></tr>
 <tr class="memdesc:a4bc8439ac6ee1b586c13b155aec854ca inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associated ESF fraction to each counterparty.  <a href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a4bc8439ac6ee1b586c13b155aec854ca">More...</a><br /></td></tr>
 <tr class="separator:a4bc8439ac6ee1b586c13b155aec854ca inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a408906c996ac91cc92d64aa78bb9c8fe inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable</a>&lt; std::map&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>, <a class="el" href="../../d6/d59/group__types.html#gad9817a6a21dfcb91429f0152c99d6313">Probability</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a408906c996ac91cc92d64aa78bb9c8fe">lossDistribution</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;) const</td></tr>
+<tr class="memitem:a408906c996ac91cc92d64aa78bb9c8fe inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a>&lt; std::map&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>, <a class="el" href="../../d6/d59/group__types.html#gad9817a6a21dfcb91429f0152c99d6313">Probability</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a408906c996ac91cc92d64aa78bb9c8fe">lossDistribution</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;) const</td></tr>
 <tr class="memdesc:a408906c996ac91cc92d64aa78bb9c8fe inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full loss distribution.  <a href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a408906c996ac91cc92d64aa78bb9c8fe">More...</a><br /></td></tr>
 <tr class="separator:a408906c996ac91cc92d64aa78bb9c8fe inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe2bdfc1ec60b66231f6f548ce090206 inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#abe2bdfc1ec60b66231f6f548ce090206">densityTrancheLoss</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> lossFraction) const</td></tr>
 <tr class="memdesc:abe2bdfc1ec60b66231f6f548ce090206 inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Probability density of a given loss fraction of the basket notional.  <a href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#abe2bdfc1ec60b66231f6f548ce090206">More...</a><br /></td></tr>
 <tr class="separator:abe2bdfc1ec60b66231f6f548ce090206 inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5654a8f873835331fd216c9102ff24de inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable</a>&lt; std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gad9817a6a21dfcb91429f0152c99d6313">Probability</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a5654a8f873835331fd216c9102ff24de">probsBeingNthEvent</a> (<a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d) const</td></tr>
+<tr class="memitem:a5654a8f873835331fd216c9102ff24de inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a>&lt; std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gad9817a6a21dfcb91429f0152c99d6313">Probability</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a5654a8f873835331fd216c9102ff24de">probsBeingNthEvent</a> (<a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d) const</td></tr>
 <tr class="separator:a5654a8f873835331fd216c9102ff24de inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bdf74219aced9c21262e8b0c0dbe306 inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a0bdf74219aced9c21262e8b0c0dbe306">defaultCorrelation</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iName, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> jName) const</td></tr>
 <tr class="memdesc:a0bdf74219aced9c21262e8b0c0dbe306 inherit pro_methods_class_quant_lib_1_1_default_loss_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pearsons' default probability correlation.  <a href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a0bdf74219aced9c21262e8b0c0dbe306">More...</a><br /></td></tr>
@@ -307,9 +308,9 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:ac02f79fbb2f12fe064a2531709e3a113"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ac02f79fbb2f12fe064a2531709e3a113">resetModel</a> ()</td></tr>
-<tr class="memdesc:ac02f79fbb2f12fe064a2531709e3a113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete models do now any updates/inits they need on basket reset.  <a href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ac02f79fbb2f12fe064a2531709e3a113">More...</a><br /></td></tr>
-<tr class="separator:ac02f79fbb2f12fe064a2531709e3a113"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d52de916f52a01b5ed70715a069d22b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a9d52de916f52a01b5ed70715a069d22b">resetModel</a> () override</td></tr>
+<tr class="memdesc:a9d52de916f52a01b5ed70715a069d22b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete models do now any updates/inits they need on basket reset.  <a href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a9d52de916f52a01b5ed70715a069d22b">More...</a><br /></td></tr>
+<tr class="separator:a9d52de916f52a01b5ed70715a069d22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60357e199bb9e1249f299676054a7b1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a60357e199bb9e1249f299676054a7b1f">expectedTrancheLossImpl</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> remainingNot, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> prob, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> averageRR, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> attachLimit, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> detachLimit) const</td></tr>
 <tr class="separator:a60357e199bb9e1249f299676054a7b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -488,8 +489,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac5c54df7ed3b930268c8d7752c101725"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5c54df7ed3b930268c8d7752c101725">&#9670;&nbsp;</a></span>update()</h2>
+<a id="a44137bb65de2396875934e48a6ee5099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44137bb65de2396875934e48a6ee5099">&#9670;&nbsp;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -506,7 +507,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -518,8 +519,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac02f79fbb2f12fe064a2531709e3a113"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac02f79fbb2f12fe064a2531709e3a113">&#9670;&nbsp;</a></span>resetModel()</h2>
+<a id="a9d52de916f52a01b5ed70715a069d22b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d52de916f52a01b5ed70715a069d22b">&#9670;&nbsp;</a></span>resetModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -536,7 +537,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -545,7 +546,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a44ae97f46e6e0d8a7dcd9168e30240bc">DefaultLossModel</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00087">87</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
 
 </div>
 </div>
@@ -631,15 +632,15 @@ Additional Inherited Members</h2></td></tr>
 <div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a60357e199bb9e1249f299676054a7b1f_icgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a60357e199bb9e1249f299676054a7b1f_icgraph" alt=""/></div>
 <map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a60357e199bb9e1249f299676054a7b1f_icgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a60357e199bb9e1249f299676054a7b1f_icgraph">
 <area shape="rect" title=" " alt="" coords="203,31,376,57"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a1342bb3a6f99d2fca9a047cef8744686" title="Returns the ESF as an absolute amount (rather than a fraction)" alt="" coords="19,5,141,32"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ab39687a9a4ba5a0daae12c443d7f8ee6" title=" " alt="" coords="5,56,155,83"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ab1480327617845d4f5512c19df3cdc72" title="Returns the ESF as an absolute amount (rather than a fraction)" alt="" coords="19,5,141,32"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#aada6e256cf967559d9499fa9c9cddd31" title=" " alt="" coords="5,56,155,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ab39687a9a4ba5a0daae12c443d7f8ee6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab39687a9a4ba5a0daae12c443d7f8ee6">&#9670;&nbsp;</a></span>expectedTrancheLoss()</h2>
+<a id="aada6e256cf967559d9499fa9c9cddd31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada6e256cf967559d9499fa9c9cddd31">&#9670;&nbsp;</a></span>expectedTrancheLoss()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -657,21 +658,21 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a4a13a448c6d75377f2a8c7ec3f6bf2bf">DefaultLossModel</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00097">97</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00098">98</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_ab39687a9a4ba5a0daae12c443d7f8ee6_cgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_ab39687a9a4ba5a0daae12c443d7f8ee6_cgraph" alt=""/></div>
-<map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_ab39687a9a4ba5a0daae12c443d7f8ee6_cgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_ab39687a9a4ba5a0daae12c443d7f8ee6_cgraph">
+<div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_aada6e256cf967559d9499fa9c9cddd31_cgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_aada6e256cf967559d9499fa9c9cddd31_cgraph" alt=""/></div>
+<map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_aada6e256cf967559d9499fa9c9cddd31_cgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_aada6e256cf967559d9499fa9c9cddd31_cgraph">
 <area shape="rect" title=" " alt="" coords="5,56,155,83"/>
 <area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a2227a7ba1f2b6ac736805f070e2ac2be" title=" " alt="" coords="243,5,336,32"/>
 <area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a93c3c4e6b65a0482f8c18918ed83ef9a" title=" " alt="" coords="230,56,349,83"/>
@@ -686,8 +687,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a4e0292b9c7c9fe33fa3e8a0dfc0332fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e0292b9c7c9fe33fa3e8a0dfc0332fe">&#9670;&nbsp;</a></span>probOverLoss()</h2>
+<a id="a9be863425e15a316dc63b343107a9cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be863425e15a316dc63b343107a9cfe">&#9670;&nbsp;</a></span>probOverLoss()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -715,7 +716,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -729,8 +730,8 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a4e0292b9c7c9fe33fa3e8a0dfc0332fe_cgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a4e0292b9c7c9fe33fa3e8a0dfc0332fe_cgraph" alt=""/></div>
-<map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a4e0292b9c7c9fe33fa3e8a0dfc0332fe_cgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a4e0292b9c7c9fe33fa3e8a0dfc0332fe_cgraph">
+<div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a9be863425e15a316dc63b343107a9cfe_cgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a9be863425e15a316dc63b343107a9cfe_cgraph" alt=""/></div>
+<map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a9be863425e15a316dc63b343107a9cfe_cgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a9be863425e15a316dc63b343107a9cfe_cgraph">
 <area shape="rect" title=" " alt="" coords="5,56,107,83"/>
 <area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a2227a7ba1f2b6ac736805f070e2ac2be" title=" " alt="" coords="201,5,294,32"/>
 <area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a93c3c4e6b65a0482f8c18918ed83ef9a" title=" " alt="" coords="188,56,307,83"/>
@@ -746,17 +747,17 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a4e0292b9c7c9fe33fa3e8a0dfc0332fe_icgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a4e0292b9c7c9fe33fa3e8a0dfc0332fe_icgraph" alt=""/></div>
-<map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a4e0292b9c7c9fe33fa3e8a0dfc0332fe_icgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a4e0292b9c7c9fe33fa3e8a0dfc0332fe_icgraph">
+<div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a9be863425e15a316dc63b343107a9cfe_icgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a9be863425e15a316dc63b343107a9cfe_icgraph" alt=""/></div>
+<map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a9be863425e15a316dc63b343107a9cfe_icgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a9be863425e15a316dc63b343107a9cfe_icgraph">
 <area shape="rect" title=" " alt="" coords="176,5,277,32"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a1342bb3a6f99d2fca9a047cef8744686" title="Returns the ESF as an absolute amount (rather than a fraction)" alt="" coords="5,5,128,32"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ab1480327617845d4f5512c19df3cdc72" title="Returns the ESF as an absolute amount (rather than a fraction)" alt="" coords="5,5,128,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a1342bb3a6f99d2fca9a047cef8744686"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1342bb3a6f99d2fca9a047cef8744686">&#9670;&nbsp;</a></span>expectedShortfall()</h2>
+<a id="ab1480327617845d4f5512c19df3cdc72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1480327617845d4f5512c19df3cdc72">&#9670;&nbsp;</a></span>expectedShortfall()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -784,7 +785,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -799,14 +800,14 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a1342bb3a6f99d2fca9a047cef8744686_cgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a1342bb3a6f99d2fca9a047cef8744686_cgraph" alt=""/></div>
-<map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a1342bb3a6f99d2fca9a047cef8744686_cgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a1342bb3a6f99d2fca9a047cef8744686_cgraph">
+<div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_ab1480327617845d4f5512c19df3cdc72_cgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_ab1480327617845d4f5512c19df3cdc72_cgraph" alt=""/></div>
+<map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_ab1480327617845d4f5512c19df3cdc72_cgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_ab1480327617845d4f5512c19df3cdc72_cgraph">
 <area shape="rect" title="Returns the ESF as an absolute amount (rather than a fraction)" alt="" coords="5,107,128,133"/>
 <area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a2227a7ba1f2b6ac736805f070e2ac2be" title=" " alt="" coords="470,107,563,133"/>
 <area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a93c3c4e6b65a0482f8c18918ed83ef9a" title=" " alt="" coords="457,157,576,184"/>
 <area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a60357e199bb9e1249f299676054a7b1f" title=" " alt="" coords="189,5,363,32"/>
 <area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a3e0181435a77c5f91fdaf6ff8c428280" title=" " alt="" coords="176,56,376,83"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a4e0292b9c7c9fe33fa3e8a0dfc0332fe" title=" " alt="" coords="225,107,327,133"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a9be863425e15a316dc63b343107a9cfe" title=" " alt="" coords="225,107,327,133"/>
 <area shape="rect" href="../../d7/d02/class_quant_lib_1_1_inverse_cumulative_normal.html#adf56cbfabafe9c6bbf4366412f9ea7d5" title=" " alt="" coords="424,41,609,82"/>
 <area shape="rect" href="../../d7/d02/class_quant_lib_1_1_inverse_cumulative_normal.html#a09dc853062a80ceda83c492049f9a946" title=" " alt="" coords="657,41,843,82"/>
 <area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#a605b00167a137e3a0b87f0b13f479fda" title=" " alt="" coords="891,48,1053,75"/>
@@ -877,15 +878,15 @@ Additional Inherited Members</h2></td></tr>
 <div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a3e0181435a77c5f91fdaf6ff8c428280_icgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a3e0181435a77c5f91fdaf6ff8c428280_icgraph" alt=""/></div>
 <map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a3e0181435a77c5f91fdaf6ff8c428280_icgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a3e0181435a77c5f91fdaf6ff8c428280_icgraph">
 <area shape="rect" title=" " alt="" coords="176,31,376,57"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a1342bb3a6f99d2fca9a047cef8744686" title="Returns the ESF as an absolute amount (rather than a fraction)" alt="" coords="5,5,128,32"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a9d3dd77a7c95ccc54fac4a15b8946298" title="Value at Risk given a default loss percentile." alt="" coords="27,56,106,83"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ab1480327617845d4f5512c19df3cdc72" title="Returns the ESF as an absolute amount (rather than a fraction)" alt="" coords="5,5,128,32"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a432317f1d29f9d1dc701f03b91614225" title="Value at Risk given a default loss percentile." alt="" coords="27,56,106,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a5a133a222c8c8093c78bda8f07787ca1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a133a222c8c8093c78bda8f07787ca1">&#9670;&nbsp;</a></span>expectedRecovery()</h2>
+<a id="ad5bef08f02a64dc265292d4d7ae3d75f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5bef08f02a64dc265292d4d7ae3d75f">&#9670;&nbsp;</a></span>expectedRecovery()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -919,7 +920,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -927,12 +928,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a9a424b4c46a2d345a8b92184ac7ebbf3">DefaultLossModel</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00135">135</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00136">136</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a9d3dd77a7c95ccc54fac4a15b8946298"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d3dd77a7c95ccc54fac4a15b8946298">&#9670;&nbsp;</a></span>percentile()</h2>
+<a id="a432317f1d29f9d1dc701f03b91614225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a432317f1d29f9d1dc701f03b91614225">&#9670;&nbsp;</a></span>percentile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -960,7 +961,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -969,14 +970,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../df/db4/class_quant_lib_1_1_default_loss_model.html#a9dbb5964035a7434b2e4edc638430577">DefaultLossModel</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00142">142</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-12-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a9d3dd77a7c95ccc54fac4a15b8946298_cgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a9d3dd77a7c95ccc54fac4a15b8946298_cgraph" alt=""/></div>
-<map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a9d3dd77a7c95ccc54fac4a15b8946298_cgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a9d3dd77a7c95ccc54fac4a15b8946298_cgraph">
+<div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a432317f1d29f9d1dc701f03b91614225_cgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a432317f1d29f9d1dc701f03b91614225_cgraph" alt=""/></div>
+<map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a432317f1d29f9d1dc701f03b91614225_cgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a432317f1d29f9d1dc701f03b91614225_cgraph">
 <area shape="rect" title="Value at Risk given a default loss percentile." alt="" coords="5,56,84,83"/>
 <area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a3e0181435a77c5f91fdaf6ff8c428280" title=" " alt="" coords="132,56,332,83"/>
 <area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a2227a7ba1f2b6ac736805f070e2ac2be" title=" " alt="" coords="426,5,519,32"/>
@@ -1007,7 +1008,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00153">153</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -1016,11 +1017,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a2227a7ba1f2b6ac736805f070e2ac2be_icgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a2227a7ba1f2b6ac736805f070e2ac2be_icgraph" alt=""/></div>
 <map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a2227a7ba1f2b6ac736805f070e2ac2be_icgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a2227a7ba1f2b6ac736805f070e2ac2be_icgraph">
 <area shape="rect" title=" " alt="" coords="424,61,517,88"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a1342bb3a6f99d2fca9a047cef8744686" title="Returns the ESF as an absolute amount (rather than a fraction)" alt="" coords="5,87,128,113"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ab39687a9a4ba5a0daae12c443d7f8ee6" title=" " alt="" coords="201,36,351,63"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ab1480327617845d4f5512c19df3cdc72" title="Returns the ESF as an absolute amount (rather than a fraction)" alt="" coords="5,87,128,113"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#aada6e256cf967559d9499fa9c9cddd31" title=" " alt="" coords="201,36,351,63"/>
 <area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a3e0181435a77c5f91fdaf6ff8c428280" title=" " alt="" coords="176,137,376,164"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a4e0292b9c7c9fe33fa3e8a0dfc0332fe" title=" " alt="" coords="225,87,327,113"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a9d3dd77a7c95ccc54fac4a15b8946298" title="Value at Risk given a default loss percentile." alt="" coords="27,137,106,164"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a9be863425e15a316dc63b343107a9cfe" title=" " alt="" coords="225,87,327,113"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a432317f1d29f9d1dc701f03b91614225" title="Value at Risk given a default loss percentile." alt="" coords="27,137,106,164"/>
 </map>
 </div>
 
@@ -1042,7 +1043,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00172">172</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00171">171</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
 <div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
@@ -1051,11 +1052,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="center"><img src="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a93c3c4e6b65a0482f8c18918ed83ef9a_icgraph.png" border="0" usemap="#ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a93c3c4e6b65a0482f8c18918ed83ef9a_icgraph" alt=""/></div>
 <map name="d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a93c3c4e6b65a0482f8c18918ed83ef9a_icgraph" id="ad8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model_a93c3c4e6b65a0482f8c18918ed83ef9a_icgraph">
 <area shape="rect" title=" " alt="" coords="424,61,543,87"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a1342bb3a6f99d2fca9a047cef8744686" title="Returns the ESF as an absolute amount (rather than a fraction)" alt="" coords="5,86,128,113"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ab39687a9a4ba5a0daae12c443d7f8ee6" title=" " alt="" coords="201,35,351,62"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#ab1480327617845d4f5512c19df3cdc72" title="Returns the ESF as an absolute amount (rather than a fraction)" alt="" coords="5,86,128,113"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#aada6e256cf967559d9499fa9c9cddd31" title=" " alt="" coords="201,35,351,62"/>
 <area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a3e0181435a77c5f91fdaf6ff8c428280" title=" " alt="" coords="176,137,376,163"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a4e0292b9c7c9fe33fa3e8a0dfc0332fe" title=" " alt="" coords="225,86,327,113"/>
-<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a9d3dd77a7c95ccc54fac4a15b8946298" title="Value at Risk given a default loss percentile." alt="" coords="27,137,106,163"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a9be863425e15a316dc63b343107a9cfe" title=" " alt="" coords="225,86,327,113"/>
+<area shape="rect" href="../../d8/d94/class_quant_lib_1_1_gaussian_l_h_p_loss_model.html#a432317f1d29f9d1dc701f03b91614225" title="Value at Risk given a default loss percentile." alt="" coords="27,137,106,163"/>
 </map>
 </div>
 
@@ -1082,7 +1083,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00194">194</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00193">193</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
 
 </div>
 </div>
@@ -1106,7 +1107,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00196">196</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00195">195</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
 
 </div>
 </div>
@@ -1130,7 +1131,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00197">197</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00196">196</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
 
 </div>
 </div>
@@ -1154,7 +1155,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00209">209</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00208">208</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
 
 </div>
 </div>
@@ -1178,7 +1179,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00210">210</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00209">209</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
 
 </div>
 </div>
@@ -1204,7 +1205,7 @@ Additional Inherited Members</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= </div>
 <div class="line">        CumulativeNormalDistribution()</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00211">211</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html#l00210">210</a> of file <a class="el" href="../../da/d62/gaussianlhplossmodel_8hpp_source.html">gaussianlhplossmodel.hpp</a>.</p>
 
 </div>
 </div>

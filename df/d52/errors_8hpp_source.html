@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/errors.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -120,74 +121,76 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;              <span class="keywordtype">long</span> line,</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;              <span class="keyword">const</span> std::string&amp; functionName,</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;              <span class="keyword">const</span> std::string&amp; message = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../da/d81/class_quant_lib_1_1_error.html#a9e90ca50dff9f67db785f712731faa43">   51</a></span>&#160;        <a class="code" href="../../da/d81/class_quant_lib_1_1_error.html#a9e90ca50dff9f67db785f712731faa43">~Error</a>() throw() {}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="../../da/d81/class_quant_lib_1_1_error.html#a8d4b96162e93e11e5816d83702578af8">what</a>() <span class="keyword">const</span> throw ();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      private:</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../da/d81/class_quant_lib_1_1_error.html#a52c18cf0b8d616381c452d979a567d73">   55</a></span>&#160;        ext::shared_ptr&lt;std::<span class="keywordtype">string</span>&gt; <a class="code" href="../../da/d81/class_quant_lib_1_1_error.html#a52c18cf0b8d616381c452d979a567d73">message_</a>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    };</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/* Fix C4127: conditional expression is constant when wrapping macros</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">   with do { ... } while(false); on MSVC</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#define MULTILINE_MACRO_BEGIN do {</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#if defined(BOOST_MSVC) &amp;&amp; BOOST_MSVC &gt;= 1500</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">/* __pragma is available from VC++9 */</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">    #define MULTILINE_MACRO_END \</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">        __pragma(warning(push)) \</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">        __pragma(warning(disable:4127)) \</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">        } while(false) \</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">        __pragma(warning(pop))</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">    #define MULTILINE_MACRO_END } while(false)</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#define QL_FAIL(message) \</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">MULTILINE_MACRO_BEGIN \</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">    std::ostringstream _ql_msg_stream; \</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">    _ql_msg_stream &lt;&lt; message; \</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">    throw QuantLib::Error(__FILE__,__LINE__, \</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">                          BOOST_CURRENT_FUNCTION,_ql_msg_stream.str()); \</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">MULTILINE_MACRO_END</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#define QL_ASSERT(condition,message) \</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">if (!(condition)) { \</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">    std::ostringstream _ql_msg_stream; \</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">    _ql_msg_stream &lt;&lt; message; \</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">    throw QuantLib::Error(__FILE__,__LINE__, \</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">                          BOOST_CURRENT_FUNCTION,_ql_msg_stream.str()); \</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor"> } else </span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#define QL_REQUIRE(condition,message) \</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">if (!(condition)) { \</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">    std::ostringstream _ql_msg_stream; \</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">    _ql_msg_stream &lt;&lt; message; \</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">    throw QuantLib::Error(__FILE__,__LINE__, \</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">                          BOOST_CURRENT_FUNCTION,_ql_msg_stream.str()); \</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor"> } else </span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#define QL_ENSURE(condition,message) \</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">if (!(condition)) { \</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">    std::ostringstream _ql_msg_stream; \</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">    _ql_msg_stream &lt;&lt; message; \</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">    throw QuantLib::Error(__FILE__,__LINE__, \</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">                          BOOST_CURRENT_FUNCTION,_ql_msg_stream.str()); \</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor"> } else </span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">        #ifdef QL_PATCH_MSVC_2013</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        ~<a class="code" href="../../da/d81/class_quant_lib_1_1_error.html">Error</a>() <span class="keywordflow">throw</span>() <span class="keyword">override</span> {}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="../../da/d81/class_quant_lib_1_1_error.html#a884afade2d98361da8b22f200dd1ccb5">what</a>() <span class="keyword">const</span> QL_NOEXCEPT <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../da/d81/class_quant_lib_1_1_error.html#a52c18cf0b8d616381c452d979a567d73">   58</a></span>&#160;        ext::shared_ptr&lt;std::string&gt; <a class="code" href="../../da/d81/class_quant_lib_1_1_error.html#a52c18cf0b8d616381c452d979a567d73">message_</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    };</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/* Fix C4127: conditional expression is constant when wrapping macros</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">   with do { ... } while(false); on MSVC</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#define MULTILINE_MACRO_BEGIN do {</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#if defined(BOOST_MSVC)</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">    #define MULTILINE_MACRO_END \</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">        __pragma(warning(push)) \</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">        __pragma(warning(disable:4127)) \</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">        } while(false) \</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">        __pragma(warning(pop))</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">    #define MULTILINE_MACRO_END } while(false)</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#define QL_FAIL(message) \</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">MULTILINE_MACRO_BEGIN \</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">    std::ostringstream _ql_msg_stream; \</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">    _ql_msg_stream &lt;&lt; message; \</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">    throw QuantLib::Error(__FILE__,__LINE__, \</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">                          BOOST_CURRENT_FUNCTION,_ql_msg_stream.str()); \</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">MULTILINE_MACRO_END</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#define QL_ASSERT(condition,message) \</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">if (!(condition)) { \</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">    std::ostringstream _ql_msg_stream; \</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">    _ql_msg_stream &lt;&lt; message; \</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">    throw QuantLib::Error(__FILE__,__LINE__, \</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">                          BOOST_CURRENT_FUNCTION,_ql_msg_stream.str()); \</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor"> } else </span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#define QL_REQUIRE(condition,message) \</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">if (!(condition)) { \</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">    std::ostringstream _ql_msg_stream; \</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">    _ql_msg_stream &lt;&lt; message; \</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">    throw QuantLib::Error(__FILE__,__LINE__, \</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">                          BOOST_CURRENT_FUNCTION,_ql_msg_stream.str()); \</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor"> } else </span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#define QL_ENSURE(condition,message) \</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">if (!(condition)) { \</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">    std::ostringstream _ql_msg_stream; \</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">    _ql_msg_stream &lt;&lt; message; \</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">    throw QuantLib::Error(__FILE__,__LINE__, \</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">                          BOOST_CURRENT_FUNCTION,_ql_msg_stream.str()); \</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor"> } else </span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_error_html_a52c18cf0b8d616381c452d979a567d73"><div class="ttname"><a href="../../da/d81/class_quant_lib_1_1_error.html#a52c18cf0b8d616381c452d979a567d73">QuantLib::Error::message_</a></div><div class="ttdeci">ext::shared_ptr&lt; std::string &gt; message_</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00055">errors.hpp:55</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_error_html_a8d4b96162e93e11e5816d83702578af8"><div class="ttname"><a href="../../da/d81/class_quant_lib_1_1_error.html#a8d4b96162e93e11e5816d83702578af8">QuantLib::Error::what</a></div><div class="ttdeci">const char * what() const</div><div class="ttdoc">returns the error message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d71/errors_8cpp_source.html#l00100">errors.cpp:100</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_error_html_a52c18cf0b8d616381c452d979a567d73"><div class="ttname"><a href="../../da/d81/class_quant_lib_1_1_error.html#a52c18cf0b8d616381c452d979a567d73">QuantLib::Error::message_</a></div><div class="ttdeci">ext::shared_ptr&lt; std::string &gt; message_</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00058">errors.hpp:58</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_error_html_a884afade2d98361da8b22f200dd1ccb5"><div class="ttname"><a href="../../da/d81/class_quant_lib_1_1_error.html#a884afade2d98361da8b22f200dd1ccb5">QuantLib::Error::what</a></div><div class="ttdeci">const char * what() const QL_NOEXCEPT override</div><div class="ttdoc">returns the error message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d71/errors_8cpp_source.html#l00100">errors.cpp:100</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_error_html_a9e90ca50dff9f67db785f712731faa43"><div class="ttname"><a href="../../da/d81/class_quant_lib_1_1_error.html#a9e90ca50dff9f67db785f712731faa43">QuantLib::Error::~Error</a></div><div class="ttdeci">~Error()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00051">errors.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_error_html_a55f022485ff175b831875b9a8b39a600"><div class="ttname"><a href="../../da/d81/class_quant_lib_1_1_error.html#a55f022485ff175b831875b9a8b39a600">QuantLib::Error::Error</a></div><div class="ttdeci">Error(const std::string &amp;file, long line, const std::string &amp;functionName, const std::string &amp;message=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d71/errors_8cpp_source.html#l00093">errors.cpp:93</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_error_html"><div class="ttname"><a href="../../da/d81/class_quant_lib_1_1_error.html">QuantLib::Error</a></div><div class="ttdoc">Base error class.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00039">errors.hpp:39</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->

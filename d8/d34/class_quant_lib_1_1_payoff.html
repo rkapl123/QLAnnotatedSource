@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: Payoff Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -145,8 +146,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6e5057c430de1f2920b50de1c36b402d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d34/class_quant_lib_1_1_payoff.html#a6e5057c430de1f2920b50de1c36b402d">~Payoff</a> ()</td></tr>
-<tr class="separator:a6e5057c430de1f2920b50de1c36b402d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182532de19f3dc05cdef8da7a1105782"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d34/class_quant_lib_1_1_payoff.html#a182532de19f3dc05cdef8da7a1105782">~Payoff</a> ()=default</td></tr>
+<tr class="separator:a182532de19f3dc05cdef8da7a1105782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Payoff interface</div></td></tr>
 <tr class="memitem:a7f04e718c6856c4d3d77a496b6acad0d"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d34/class_quant_lib_1_1_payoff.html#a7f04e718c6856c4d3d77a496b6acad0d">name</a> () const =0</td></tr>
 <tr class="separator:a7f04e718c6856c4d3d77a496b6acad0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,8 +197,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a6e5057c430de1f2920b50de1c36b402d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e5057c430de1f2920b50de1c36b402d">&#9670;&nbsp;</a></span>~Payoff()</h2>
+<a id="a182532de19f3dc05cdef8da7a1105782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a182532de19f3dc05cdef8da7a1105782">&#9670;&nbsp;</a></span>~Payoff()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,12 +215,10 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../df/db3/payoff_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../df/db3/payoff_8hpp_source.html">payoff.hpp</a>.</p>
 
 </div>
 </div>
@@ -246,9 +245,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000121">Warning:</a></b></dt><dd>This method is used for output and comparison between payoffs. It is <b>not</b> meant to be used for writing switch-on-type code. </dd></dl>
+<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000124">Warning:</a></b></dt><dd>This method is used for output and comparison between payoffs. It is <b>not</b> meant to be used for writing switch-on-type code. </dd></dl>
 
-<p>Implemented in <a class="el" href="../../d6/d49/class_quant_lib_1_1_vanilla_forward_payoff.html#a1d89c28bd42ba9a52da008bb69367171">VanillaForwardPayoff</a>, <a class="el" href="../../d5/da0/class_quant_lib_1_1_sticky_min_payoff.html#a1d89c28bd42ba9a52da008bb69367171">StickyMinPayoff</a>, <a class="el" href="../../d8/d3a/class_quant_lib_1_1_sticky_max_payoff.html#a1d89c28bd42ba9a52da008bb69367171">StickyMaxPayoff</a>, <a class="el" href="../../d9/d4b/class_quant_lib_1_1_ratchet_min_payoff.html#a1d89c28bd42ba9a52da008bb69367171">RatchetMinPayoff</a>, <a class="el" href="../../df/dc9/class_quant_lib_1_1_ratchet_max_payoff.html#a1d89c28bd42ba9a52da008bb69367171">RatchetMaxPayoff</a>, <a class="el" href="../../d7/d72/class_quant_lib_1_1_sticky_payoff.html#a1d89c28bd42ba9a52da008bb69367171">StickyPayoff</a>, <a class="el" href="../../d9/d01/class_quant_lib_1_1_ratchet_payoff.html#a1d89c28bd42ba9a52da008bb69367171">RatchetPayoff</a>, <a class="el" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a1d89c28bd42ba9a52da008bb69367171">DoubleStickyRatchetPayoff</a>, <a class="el" href="../../d2/d2f/class_quant_lib_1_1_super_share_payoff.html#a1d89c28bd42ba9a52da008bb69367171">SuperSharePayoff</a>, <a class="el" href="../../d2/dcd/class_quant_lib_1_1_super_fund_payoff.html#a1d89c28bd42ba9a52da008bb69367171">SuperFundPayoff</a>, <a class="el" href="../../da/d1b/class_quant_lib_1_1_gap_payoff.html#a1d89c28bd42ba9a52da008bb69367171">GapPayoff</a>, <a class="el" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html#a1d89c28bd42ba9a52da008bb69367171">CashOrNothingPayoff</a>, <a class="el" href="../../db/de4/class_quant_lib_1_1_asset_or_nothing_payoff.html#a1d89c28bd42ba9a52da008bb69367171">AssetOrNothingPayoff</a>, <a class="el" href="../../d0/d0f/class_quant_lib_1_1_percentage_strike_payoff.html#a1d89c28bd42ba9a52da008bb69367171">PercentageStrikePayoff</a>, <a class="el" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html#a1d89c28bd42ba9a52da008bb69367171">PlainVanillaPayoff</a>, <a class="el" href="../../d1/d3a/class_quant_lib_1_1_floating_type_payoff.html#a1d89c28bd42ba9a52da008bb69367171">FloatingTypePayoff</a>, <a class="el" href="../../dc/d10/class_quant_lib_1_1_null_payoff.html#a1d89c28bd42ba9a52da008bb69367171">NullPayoff</a>, <a class="el" href="../../da/da8/class_quant_lib_1_1_forward_type_payoff.html#a1d89c28bd42ba9a52da008bb69367171">ForwardTypePayoff</a>, and <a class="el" href="../../d9/dad/class_quant_lib_1_1_basket_payoff.html#a1d89c28bd42ba9a52da008bb69367171">BasketPayoff</a>.</p>
+<p>Implemented in <a class="el" href="../../d6/d49/class_quant_lib_1_1_vanilla_forward_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">VanillaForwardPayoff</a>, <a class="el" href="../../d5/da0/class_quant_lib_1_1_sticky_min_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">StickyMinPayoff</a>, <a class="el" href="../../d8/d3a/class_quant_lib_1_1_sticky_max_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">StickyMaxPayoff</a>, <a class="el" href="../../d9/d4b/class_quant_lib_1_1_ratchet_min_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">RatchetMinPayoff</a>, <a class="el" href="../../df/dc9/class_quant_lib_1_1_ratchet_max_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">RatchetMaxPayoff</a>, <a class="el" href="../../d7/d72/class_quant_lib_1_1_sticky_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">StickyPayoff</a>, <a class="el" href="../../d9/d01/class_quant_lib_1_1_ratchet_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">RatchetPayoff</a>, <a class="el" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">DoubleStickyRatchetPayoff</a>, <a class="el" href="../../d2/d2f/class_quant_lib_1_1_super_share_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">SuperSharePayoff</a>, <a class="el" href="../../d2/dcd/class_quant_lib_1_1_super_fund_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">SuperFundPayoff</a>, <a class="el" href="../../da/d1b/class_quant_lib_1_1_gap_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">GapPayoff</a>, <a class="el" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">CashOrNothingPayoff</a>, <a class="el" href="../../db/de4/class_quant_lib_1_1_asset_or_nothing_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">AssetOrNothingPayoff</a>, <a class="el" href="../../d0/d0f/class_quant_lib_1_1_percentage_strike_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">PercentageStrikePayoff</a>, <a class="el" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">PlainVanillaPayoff</a>, <a class="el" href="../../d1/d3a/class_quant_lib_1_1_floating_type_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">FloatingTypePayoff</a>, <a class="el" href="../../dc/d10/class_quant_lib_1_1_null_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">NullPayoff</a>, <a class="el" href="../../da/da8/class_quant_lib_1_1_forward_type_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">ForwardTypePayoff</a>, and <a class="el" href="../../d9/dad/class_quant_lib_1_1_basket_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">BasketPayoff</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -257,11 +256,11 @@ Public Member Functions</h2></td></tr>
 <div class="center"><img src="../../d8/d34/class_quant_lib_1_1_payoff_a7f04e718c6856c4d3d77a496b6acad0d_icgraph.png" border="0" usemap="#ad8/d34/class_quant_lib_1_1_payoff_a7f04e718c6856c4d3d77a496b6acad0d_icgraph" alt=""/></div>
 <map name="d8/d34/class_quant_lib_1_1_payoff_a7f04e718c6856c4d3d77a496b6acad0d_icgraph" id="ad8/d34/class_quant_lib_1_1_payoff_a7f04e718c6856c4d3d77a496b6acad0d_icgraph">
 <area shape="rect" title=" " alt="" coords="689,78,744,105"/>
-<area shape="rect" href="../../d5/d8d/class_quant_lib_1_1_type_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5" title=" " alt="" coords="495,71,641,112"/>
-<area shape="rect" href="../../d1/d0d/class_quant_lib_1_1_striked_type_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5" title=" " alt="" coords="260,71,447,112"/>
-<area shape="rect" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5" title=" " alt="" coords="5,5,212,47"/>
-<area shape="rect" href="../../da/d1b/class_quant_lib_1_1_gap_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5" title=" " alt="" coords="37,71,180,112"/>
-<area shape="rect" href="../../d2/d2f/class_quant_lib_1_1_super_share_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5" title=" " alt="" coords="15,136,202,177"/>
+<area shape="rect" href="../../d5/d8d/class_quant_lib_1_1_type_payoff.html#a4afd83de1a474668783156572e06247b" title=" " alt="" coords="495,71,641,112"/>
+<area shape="rect" href="../../d1/d0d/class_quant_lib_1_1_striked_type_payoff.html#a4afd83de1a474668783156572e06247b" title=" " alt="" coords="260,71,447,112"/>
+<area shape="rect" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html#a4afd83de1a474668783156572e06247b" title=" " alt="" coords="5,5,212,47"/>
+<area shape="rect" href="../../da/d1b/class_quant_lib_1_1_gap_payoff.html#a4afd83de1a474668783156572e06247b" title=" " alt="" coords="37,71,180,112"/>
+<area shape="rect" href="../../d2/d2f/class_quant_lib_1_1_super_share_payoff.html#a4afd83de1a474668783156572e06247b" title=" " alt="" coords="15,136,202,177"/>
 </map>
 </div>
 
@@ -290,7 +289,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5">DoubleStickyRatchetPayoff</a>, <a class="el" href="../../d2/d2f/class_quant_lib_1_1_super_share_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5">SuperSharePayoff</a>, <a class="el" href="../../da/d1b/class_quant_lib_1_1_gap_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5">GapPayoff</a>, <a class="el" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5">CashOrNothingPayoff</a>, <a class="el" href="../../d1/d0d/class_quant_lib_1_1_striked_type_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5">StrikedTypePayoff</a>, <a class="el" href="../../d5/d8d/class_quant_lib_1_1_type_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5">TypePayoff</a>, <a class="el" href="../../dc/d10/class_quant_lib_1_1_null_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5">NullPayoff</a>, <a class="el" href="../../da/da8/class_quant_lib_1_1_forward_type_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5">ForwardTypePayoff</a>, and <a class="el" href="../../d9/dad/class_quant_lib_1_1_basket_payoff.html#a07ffe70037e0a16554c868bcdd8f83b5">BasketPayoff</a>.</p>
+<p>Implemented in <a class="el" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a4afd83de1a474668783156572e06247b">DoubleStickyRatchetPayoff</a>, <a class="el" href="../../d2/d2f/class_quant_lib_1_1_super_share_payoff.html#a4afd83de1a474668783156572e06247b">SuperSharePayoff</a>, <a class="el" href="../../da/d1b/class_quant_lib_1_1_gap_payoff.html#a4afd83de1a474668783156572e06247b">GapPayoff</a>, <a class="el" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html#a4afd83de1a474668783156572e06247b">CashOrNothingPayoff</a>, <a class="el" href="../../d1/d0d/class_quant_lib_1_1_striked_type_payoff.html#a4afd83de1a474668783156572e06247b">StrikedTypePayoff</a>, <a class="el" href="../../d5/d8d/class_quant_lib_1_1_type_payoff.html#a4afd83de1a474668783156572e06247b">TypePayoff</a>, <a class="el" href="../../dc/d10/class_quant_lib_1_1_null_payoff.html#a4afd83de1a474668783156572e06247b">NullPayoff</a>, <a class="el" href="../../da/da8/class_quant_lib_1_1_forward_type_payoff.html#a4afd83de1a474668783156572e06247b">ForwardTypePayoff</a>, and <a class="el" href="../../d9/dad/class_quant_lib_1_1_basket_payoff.html#a4afd83de1a474668783156572e06247b">BasketPayoff</a>.</p>
 
 </div>
 </div>
@@ -318,7 +317,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d6/d49/class_quant_lib_1_1_vanilla_forward_payoff.html#a87c0e550bbefd59755c7e75e631bcc30">VanillaForwardPayoff</a>, <a class="el" href="../../d2/d2f/class_quant_lib_1_1_super_share_payoff.html#a87c0e550bbefd59755c7e75e631bcc30">SuperSharePayoff</a>, <a class="el" href="../../d2/dcd/class_quant_lib_1_1_super_fund_payoff.html#a87c0e550bbefd59755c7e75e631bcc30">SuperFundPayoff</a>, <a class="el" href="../../da/d1b/class_quant_lib_1_1_gap_payoff.html#a87c0e550bbefd59755c7e75e631bcc30">GapPayoff</a>, <a class="el" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html#a87c0e550bbefd59755c7e75e631bcc30">CashOrNothingPayoff</a>, <a class="el" href="../../db/de4/class_quant_lib_1_1_asset_or_nothing_payoff.html#a87c0e550bbefd59755c7e75e631bcc30">AssetOrNothingPayoff</a>, <a class="el" href="../../d0/d0f/class_quant_lib_1_1_percentage_strike_payoff.html#a87c0e550bbefd59755c7e75e631bcc30">PercentageStrikePayoff</a>, <a class="el" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html#a87c0e550bbefd59755c7e75e631bcc30">PlainVanillaPayoff</a>, <a class="el" href="../../d1/d3a/class_quant_lib_1_1_floating_type_payoff.html#a87c0e550bbefd59755c7e75e631bcc30">FloatingTypePayoff</a>, <a class="el" href="../../dc/d10/class_quant_lib_1_1_null_payoff.html#a87c0e550bbefd59755c7e75e631bcc30">NullPayoff</a>, <a class="el" href="../../da/da8/class_quant_lib_1_1_forward_type_payoff.html#a87c0e550bbefd59755c7e75e631bcc30">ForwardTypePayoff</a>, <a class="el" href="../../d9/dad/class_quant_lib_1_1_basket_payoff.html#a87c0e550bbefd59755c7e75e631bcc30">BasketPayoff</a>, and <a class="el" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a7d5eb56af681abb7bff33230536d69bf">DoubleStickyRatchetPayoff</a>.</p>
+<p>Implemented in <a class="el" href="../../d6/d49/class_quant_lib_1_1_vanilla_forward_payoff.html#a3e55762546d74f093a7246f3eb5d481c">VanillaForwardPayoff</a>, <a class="el" href="../../d2/d2f/class_quant_lib_1_1_super_share_payoff.html#a3e55762546d74f093a7246f3eb5d481c">SuperSharePayoff</a>, <a class="el" href="../../d2/dcd/class_quant_lib_1_1_super_fund_payoff.html#a3e55762546d74f093a7246f3eb5d481c">SuperFundPayoff</a>, <a class="el" href="../../da/d1b/class_quant_lib_1_1_gap_payoff.html#a3e55762546d74f093a7246f3eb5d481c">GapPayoff</a>, <a class="el" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html#a3e55762546d74f093a7246f3eb5d481c">CashOrNothingPayoff</a>, <a class="el" href="../../db/de4/class_quant_lib_1_1_asset_or_nothing_payoff.html#a3e55762546d74f093a7246f3eb5d481c">AssetOrNothingPayoff</a>, <a class="el" href="../../d0/d0f/class_quant_lib_1_1_percentage_strike_payoff.html#a3e55762546d74f093a7246f3eb5d481c">PercentageStrikePayoff</a>, <a class="el" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html#a3e55762546d74f093a7246f3eb5d481c">PlainVanillaPayoff</a>, <a class="el" href="../../d1/d3a/class_quant_lib_1_1_floating_type_payoff.html#a3e55762546d74f093a7246f3eb5d481c">FloatingTypePayoff</a>, <a class="el" href="../../dc/d10/class_quant_lib_1_1_null_payoff.html#a3e55762546d74f093a7246f3eb5d481c">NullPayoff</a>, <a class="el" href="../../da/da8/class_quant_lib_1_1_forward_type_payoff.html#a3e55762546d74f093a7246f3eb5d481c">ForwardTypePayoff</a>, <a class="el" href="../../d9/dad/class_quant_lib_1_1_basket_payoff.html#a3e55762546d74f093a7246f3eb5d481c">BasketPayoff</a>, and <a class="el" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#adc02a7382718463faa8f990889bc0514">DoubleStickyRatchetPayoff</a>.</p>
 
 </div>
 </div>
@@ -346,7 +345,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../d6/d49/class_quant_lib_1_1_vanilla_forward_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">VanillaForwardPayoff</a>, <a class="el" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">DoubleStickyRatchetPayoff</a>, <a class="el" href="../../d2/d2f/class_quant_lib_1_1_super_share_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">SuperSharePayoff</a>, <a class="el" href="../../d2/dcd/class_quant_lib_1_1_super_fund_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">SuperFundPayoff</a>, <a class="el" href="../../da/d1b/class_quant_lib_1_1_gap_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">GapPayoff</a>, <a class="el" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">CashOrNothingPayoff</a>, <a class="el" href="../../db/de4/class_quant_lib_1_1_asset_or_nothing_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">AssetOrNothingPayoff</a>, <a class="el" href="../../d0/d0f/class_quant_lib_1_1_percentage_strike_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">PercentageStrikePayoff</a>, <a class="el" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">PlainVanillaPayoff</a>, <a class="el" href="../../d1/d3a/class_quant_lib_1_1_floating_type_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">FloatingTypePayoff</a>, and <a class="el" href="../../dc/d10/class_quant_lib_1_1_null_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">NullPayoff</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d6/d49/class_quant_lib_1_1_vanilla_forward_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d">VanillaForwardPayoff</a>, <a class="el" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d">DoubleStickyRatchetPayoff</a>, <a class="el" href="../../d2/d2f/class_quant_lib_1_1_super_share_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d">SuperSharePayoff</a>, <a class="el" href="../../d2/dcd/class_quant_lib_1_1_super_fund_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d">SuperFundPayoff</a>, <a class="el" href="../../da/d1b/class_quant_lib_1_1_gap_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d">GapPayoff</a>, <a class="el" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d">CashOrNothingPayoff</a>, <a class="el" href="../../db/de4/class_quant_lib_1_1_asset_or_nothing_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d">AssetOrNothingPayoff</a>, <a class="el" href="../../d0/d0f/class_quant_lib_1_1_percentage_strike_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d">PercentageStrikePayoff</a>, <a class="el" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d">PlainVanillaPayoff</a>, <a class="el" href="../../d1/d3a/class_quant_lib_1_1_floating_type_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d">FloatingTypePayoff</a>, and <a class="el" href="../../dc/d10/class_quant_lib_1_1_null_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d">NullPayoff</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/db3/payoff_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../df/db3/payoff_8hpp_source.html">payoff.hpp</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -368,17 +367,17 @@ Public Member Functions</h2></td></tr>
 <div class="center"><img src="../../d8/d34/class_quant_lib_1_1_payoff_a1d7eaf2f5dccce1c7781b54d64ba4a07_icgraph.png" border="0" usemap="#ad8/d34/class_quant_lib_1_1_payoff_a1d7eaf2f5dccce1c7781b54d64ba4a07_icgraph" alt=""/></div>
 <map name="d8/d34/class_quant_lib_1_1_payoff_a1d7eaf2f5dccce1c7781b54d64ba4a07_icgraph" id="ad8/d34/class_quant_lib_1_1_payoff_a1d7eaf2f5dccce1c7781b54d64ba4a07_icgraph">
 <area shape="rect" title=" " alt="" coords="260,339,321,366"/>
-<area shape="rect" href="../../dc/d10/class_quant_lib_1_1_null_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07" title=" " alt="" coords="39,5,179,47"/>
-<area shape="rect" href="../../d1/d3a/class_quant_lib_1_1_floating_type_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07" title=" " alt="" coords="13,71,205,112"/>
-<area shape="rect" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07" title=" " alt="" coords="15,136,202,177"/>
-<area shape="rect" href="../../d0/d0f/class_quant_lib_1_1_percentage_strike_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07" title=" " alt="" coords="17,201,200,243"/>
-<area shape="rect" href="../../db/de4/class_quant_lib_1_1_asset_or_nothing_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07" title=" " alt="" coords="21,267,196,308"/>
-<area shape="rect" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07" title=" " alt="" coords="5,332,212,373"/>
-<area shape="rect" href="../../da/d1b/class_quant_lib_1_1_gap_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07" title=" " alt="" coords="37,397,180,439"/>
-<area shape="rect" href="../../d2/dcd/class_quant_lib_1_1_super_fund_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07" title=" " alt="" coords="18,463,199,504"/>
-<area shape="rect" href="../../d2/d2f/class_quant_lib_1_1_super_share_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07" title=" " alt="" coords="15,528,202,569"/>
-<area shape="rect" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07" title=" " alt="" coords="7,593,211,635"/>
-<area shape="rect" href="../../d6/d49/class_quant_lib_1_1_vanilla_forward_payoff.html#a1d7eaf2f5dccce1c7781b54d64ba4a07" title=" " alt="" coords="25,659,192,700"/>
+<area shape="rect" href="../../dc/d10/class_quant_lib_1_1_null_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d" title=" " alt="" coords="39,5,179,47"/>
+<area shape="rect" href="../../d1/d3a/class_quant_lib_1_1_floating_type_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d" title=" " alt="" coords="13,71,205,112"/>
+<area shape="rect" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d" title=" " alt="" coords="15,136,202,177"/>
+<area shape="rect" href="../../d0/d0f/class_quant_lib_1_1_percentage_strike_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d" title=" " alt="" coords="17,201,200,243"/>
+<area shape="rect" href="../../db/de4/class_quant_lib_1_1_asset_or_nothing_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d" title=" " alt="" coords="21,267,196,308"/>
+<area shape="rect" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d" title=" " alt="" coords="5,332,212,373"/>
+<area shape="rect" href="../../da/d1b/class_quant_lib_1_1_gap_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d" title=" " alt="" coords="37,397,180,439"/>
+<area shape="rect" href="../../d2/dcd/class_quant_lib_1_1_super_fund_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d" title=" " alt="" coords="18,463,199,504"/>
+<area shape="rect" href="../../d2/d2f/class_quant_lib_1_1_super_share_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d" title=" " alt="" coords="15,528,202,569"/>
+<area shape="rect" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d" title=" " alt="" coords="7,593,211,635"/>
+<area shape="rect" href="../../d6/d49/class_quant_lib_1_1_vanilla_forward_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d" title=" " alt="" coords="25,659,192,700"/>
 </map>
 </div>
 

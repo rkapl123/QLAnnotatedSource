@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: SquareRootAndersen Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -121,20 +122,20 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af430590f474daf10e714401cfde97440"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#af430590f474daf10e714401cfde97440">SquareRootAndersen</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> meanLevel, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> reversionSpeed, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> volVar, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> v0, const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;evolutionTimes, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#af39cdac72a14ae54ca665f43a171b9de">numberSubSteps_</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> w1, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> w2, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> cutPoint=1.5)</td></tr>
 <tr class="separator:af430590f474daf10e714401cfde97440"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fa5ff75882f53d24d134514e5c19ede"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a7fa5ff75882f53d24d134514e5c19ede">variatesPerStep</a> ()</td></tr>
-<tr class="separator:a7fa5ff75882f53d24d134514e5c19ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9173dea91e591ae0967d2a1c4cf146f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#ae9173dea91e591ae0967d2a1c4cf146f">numberSteps</a> ()</td></tr>
-<tr class="separator:ae9173dea91e591ae0967d2a1c4cf146f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa873f1f75bada339d8c9e9c016ed8b66"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#aa873f1f75bada339d8c9e9c016ed8b66">nextPath</a> ()</td></tr>
-<tr class="separator:aa873f1f75bada339d8c9e9c016ed8b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe2aeef7a3c77d45bc4db83370224e6b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#abe2aeef7a3c77d45bc4db83370224e6b">nextstep</a> (const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;variates)</td></tr>
-<tr class="separator:abe2aeef7a3c77d45bc4db83370224e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4ba4cb5ee9f4de4223db95fda65ec33"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#ae4ba4cb5ee9f4de4223db95fda65ec33">stepSd</a> () const</td></tr>
-<tr class="separator:ae4ba4cb5ee9f4de4223db95fda65ec33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b32c80208ba8b2196f2f14e506c1717"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a2b32c80208ba8b2196f2f14e506c1717">stateVariables</a> () const</td></tr>
-<tr class="separator:a2b32c80208ba8b2196f2f14e506c1717"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb7eebdcad97c1d3982205a035ad2bb7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#afb7eebdcad97c1d3982205a035ad2bb7">numberStateVariables</a> () const</td></tr>
-<tr class="separator:afb7eebdcad97c1d3982205a035ad2bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a706e74319f49e0c44ce9efad0436b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a5a706e74319f49e0c44ce9efad0436b3">variatesPerStep</a> () override</td></tr>
+<tr class="separator:a5a706e74319f49e0c44ce9efad0436b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea06bf5a4d42b69599dbdff6a2288d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a9ea06bf5a4d42b69599dbdff6a2288d6">numberSteps</a> () override</td></tr>
+<tr class="separator:a9ea06bf5a4d42b69599dbdff6a2288d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08e03137806afd59cfe7912641d4066"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#af08e03137806afd59cfe7912641d4066">nextPath</a> () override</td></tr>
+<tr class="separator:af08e03137806afd59cfe7912641d4066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb80f7ff4a974a946d2a1c179917518c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#aeb80f7ff4a974a946d2a1c179917518c">nextstep</a> (const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;variates) override</td></tr>
+<tr class="separator:aeb80f7ff4a974a946d2a1c179917518c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce92c9d0cef9bb2dcd4b4c93462bd86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#adce92c9d0cef9bb2dcd4b4c93462bd86">stepSd</a> () const override</td></tr>
+<tr class="separator:adce92c9d0cef9bb2dcd4b4c93462bd86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7aaba13ce7d021aa5538883b650de07"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#ae7aaba13ce7d021aa5538883b650de07">stateVariables</a> () const override</td></tr>
+<tr class="separator:ae7aaba13ce7d021aa5538883b650de07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bbe60d49421b62afbde919b1fb82ee7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a1bbe60d49421b62afbde919b1fb82ee7">numberStateVariables</a> () const override</td></tr>
+<tr class="separator:a1bbe60d49421b62afbde919b1fb82ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_market_model_vol_process"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_market_model_vol_process')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d7/d42/class_quant_lib_1_1_market_model_vol_process.html">MarketModelVolProcess</a></td></tr>
 <tr class="memitem:a61d017960d55f63ae47efe0cafdef517 inherit pub_methods_class_quant_lib_1_1_market_model_vol_process"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d42/class_quant_lib_1_1_market_model_vol_process.html#a61d017960d55f63ae47efe0cafdef517">MarketModelVolProcess</a> ()</td></tr>
 <tr class="separator:a61d017960d55f63ae47efe0cafdef517 inherit pub_methods_class_quant_lib_1_1_market_model_vol_process"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,8 +259,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7fa5ff75882f53d24d134514e5c19ede"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fa5ff75882f53d24d134514e5c19ede">&#9670;&nbsp;</a></span>variatesPerStep()</h2>
+<a id="a5a706e74319f49e0c44ce9efad0436b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a706e74319f49e0c44ce9efad0436b3">&#9670;&nbsp;</a></span>variatesPerStep()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -276,7 +277,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -287,8 +288,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae9173dea91e591ae0967d2a1c4cf146f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9173dea91e591ae0967d2a1c4cf146f">&#9670;&nbsp;</a></span>numberSteps()</h2>
+<a id="a9ea06bf5a4d42b69599dbdff6a2288d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea06bf5a4d42b69599dbdff6a2288d6">&#9670;&nbsp;</a></span>numberSteps()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,7 +306,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -316,8 +317,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aa873f1f75bada339d8c9e9c016ed8b66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa873f1f75bada339d8c9e9c016ed8b66">&#9670;&nbsp;</a></span>nextPath()</h2>
+<a id="af08e03137806afd59cfe7912641d4066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af08e03137806afd59cfe7912641d4066">&#9670;&nbsp;</a></span>nextPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,7 +335,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -345,8 +346,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abe2aeef7a3c77d45bc4db83370224e6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe2aeef7a3c77d45bc4db83370224e6b">&#9670;&nbsp;</a></span>nextstep()</h2>
+<a id="aeb80f7ff4a974a946d2a1c179917518c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb80f7ff4a974a946d2a1c179917518c">&#9670;&nbsp;</a></span>nextstep()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,7 +365,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -377,8 +378,8 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d0/d10/class_quant_lib_1_1_square_root_andersen_abe2aeef7a3c77d45bc4db83370224e6b_cgraph.png" border="0" usemap="#ad0/d10/class_quant_lib_1_1_square_root_andersen_abe2aeef7a3c77d45bc4db83370224e6b_cgraph" alt=""/></div>
-<map name="d0/d10/class_quant_lib_1_1_square_root_andersen_abe2aeef7a3c77d45bc4db83370224e6b_cgraph" id="ad0/d10/class_quant_lib_1_1_square_root_andersen_abe2aeef7a3c77d45bc4db83370224e6b_cgraph">
+<div class="center"><img src="../../d0/d10/class_quant_lib_1_1_square_root_andersen_aeb80f7ff4a974a946d2a1c179917518c_cgraph.png" border="0" usemap="#ad0/d10/class_quant_lib_1_1_square_root_andersen_aeb80f7ff4a974a946d2a1c179917518c_cgraph" alt=""/></div>
+<map name="d0/d10/class_quant_lib_1_1_square_root_andersen_aeb80f7ff4a974a946d2a1c179917518c_cgraph" id="ad0/d10/class_quant_lib_1_1_square_root_andersen_aeb80f7ff4a974a946d2a1c179917518c_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,77,32"/>
 <area shape="rect" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a556f65df522c6382c53665089d2a8de7" title=" " alt="" coords="125,5,237,32"/>
 </map>
@@ -386,8 +387,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae4ba4cb5ee9f4de4223db95fda65ec33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4ba4cb5ee9f4de4223db95fda65ec33">&#9670;&nbsp;</a></span>stepSd()</h2>
+<a id="adce92c9d0cef9bb2dcd4b4c93462bd86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adce92c9d0cef9bb2dcd4b4c93462bd86">&#9670;&nbsp;</a></span>stepSd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -404,7 +405,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -415,8 +416,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2b32c80208ba8b2196f2f14e506c1717"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b32c80208ba8b2196f2f14e506c1717">&#9670;&nbsp;</a></span>stateVariables()</h2>
+<a id="ae7aaba13ce7d021aa5538883b650de07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7aaba13ce7d021aa5538883b650de07">&#9670;&nbsp;</a></span>stateVariables()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -433,7 +434,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -444,8 +445,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afb7eebdcad97c1d3982205a035ad2bb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb7eebdcad97c1d3982205a035ad2bb7">&#9670;&nbsp;</a></span>numberStateVariables()</h2>
+<a id="a1bbe60d49421b62afbde919b1fb82ee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bbe60d49421b62afbde919b1fb82ee7">&#9670;&nbsp;</a></span>numberStateVariables()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -462,7 +463,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -522,7 +523,7 @@ Private Attributes</h2></td></tr>
 <div class="center"><img src="../../d0/d10/class_quant_lib_1_1_square_root_andersen_a556f65df522c6382c53665089d2a8de7_icgraph.png" border="0" usemap="#ad0/d10/class_quant_lib_1_1_square_root_andersen_a556f65df522c6382c53665089d2a8de7_icgraph" alt=""/></div>
 <map name="d0/d10/class_quant_lib_1_1_square_root_andersen_a556f65df522c6382c53665089d2a8de7_icgraph" id="ad0/d10/class_quant_lib_1_1_square_root_andersen_a556f65df522c6382c53665089d2a8de7_icgraph">
 <area shape="rect" title=" " alt="" coords="125,5,237,32"/>
-<area shape="rect" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#abe2aeef7a3c77d45bc4db83370224e6b" title=" " alt="" coords="5,5,77,32"/>
+<area shape="rect" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#aeb80f7ff4a974a946d2a1c179917518c" title=" " alt="" coords="5,5,77,32"/>
 </map>
 </div>
 

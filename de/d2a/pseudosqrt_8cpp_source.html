@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/math/matrixutilities/pseudosqrt.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -102,76 +103,76 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;ql/math/matrixutilities/pseudosqrt.hpp&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;ql/math/comparison.hpp&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;ql/math/matrixutilities/choleskydecomposition.hpp&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;ql/math/matrixutilities/symmetricschurdecomposition.hpp&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;ql/math/comparison.hpp&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;ql/math/matrixutilities/pseudosqrt.hpp&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;ql/math/matrixutilities/symmetricschurdecomposition.hpp&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;ql/math/optimization/conjugategradient.hpp&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;ql/math/optimization/problem.hpp&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;ql/math/optimization/constraint.hpp&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">namespace </span>{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">        #if defined(QL_EXTRA_SAFETY_CHECKS)</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> checkSymmetry(<span class="keyword">const</span> Matrix&amp; matrix) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> size = matrix.rows();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            QL_REQUIRE(size == matrix.columns(),</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                       <span class="stringliteral">&quot;non square matrix: &quot;</span> &lt;&lt; size &lt;&lt; <span class="stringliteral">&quot; rows, &quot;</span> &lt;&lt;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                       matrix.columns() &lt;&lt; <span class="stringliteral">&quot; columns&quot;</span>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;size; ++i)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j=0; j&lt;i; ++j)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    QL_REQUIRE(<a class="code" href="../../d5/d7b/namespace_quant_lib.html#ab94b3fc7463188bf4d30e82d4692ad3a">close</a>(matrix[i][j], matrix[j][i]),</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                               <span class="stringliteral">&quot;non symmetric matrix: &quot;</span> &lt;&lt;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                               <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;][&quot;</span> &lt;&lt; j &lt;&lt; <span class="stringliteral">&quot;]=&quot;</span> &lt;&lt; matrix[i][j] &lt;&lt;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                               <span class="stringliteral">&quot;, [&quot;</span> &lt;&lt; j &lt;&lt; <span class="stringliteral">&quot;][&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;]=&quot;</span> &lt;&lt; matrix[j][i]);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> normalizePseudoRoot(<span class="keyword">const</span> Matrix&amp; matrix,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                 Matrix&amp; pseudo) {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> size = matrix.rows();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            QL_REQUIRE(size == pseudo.rows(),</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                       <span class="stringliteral">&quot;matrix/pseudo mismatch: matrix rows are &quot;</span> &lt;&lt; size &lt;&lt;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                       <span class="stringliteral">&quot; while pseudo rows are &quot;</span> &lt;&lt; pseudo.columns());</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> pseudoCols = pseudo.columns();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="comment">// row normalization</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;size; ++i) {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> norm = 0.0;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j=0; j&lt;pseudoCols; ++j)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    norm += pseudo[i][j]*pseudo[i][j];</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">if</span> (norm&gt;0.0) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> normAdj = std::sqrt(matrix[i][i]/norm);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j=0; j&lt;pseudoCols; ++j)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                        pseudo[i][j] *= normAdj;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;ql/math/optimization/constraint.hpp&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;ql/math/optimization/problem.hpp&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">namespace </span>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">        #if defined(QL_EXTRA_SAFETY_CHECKS)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> checkSymmetry(<span class="keyword">const</span> Matrix&amp; matrix) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> size = matrix.rows();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            QL_REQUIRE(size == matrix.columns(),</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                       <span class="stringliteral">&quot;non square matrix: &quot;</span> &lt;&lt; size &lt;&lt; <span class="stringliteral">&quot; rows, &quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                       matrix.columns() &lt;&lt; <span class="stringliteral">&quot; columns&quot;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;size; ++i)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j=0; j&lt;i; ++j)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    QL_REQUIRE(<a class="code" href="../../d5/d7b/namespace_quant_lib.html#ab94b3fc7463188bf4d30e82d4692ad3a">close</a>(matrix[i][j], matrix[j][i]),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                               <span class="stringliteral">&quot;non symmetric matrix: &quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                               <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;][&quot;</span> &lt;&lt; j &lt;&lt; <span class="stringliteral">&quot;]=&quot;</span> &lt;&lt; matrix[i][j] &lt;&lt;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                               <span class="stringliteral">&quot;, [&quot;</span> &lt;&lt; j &lt;&lt; <span class="stringliteral">&quot;][&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;]=&quot;</span> &lt;&lt; matrix[j][i]);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> normalizePseudoRoot(<span class="keyword">const</span> Matrix&amp; matrix,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                 Matrix&amp; pseudo) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> size = matrix.rows();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            QL_REQUIRE(size == pseudo.rows(),</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                       <span class="stringliteral">&quot;matrix/pseudo mismatch: matrix rows are &quot;</span> &lt;&lt; size &lt;&lt;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                       <span class="stringliteral">&quot; while pseudo rows are &quot;</span> &lt;&lt; pseudo.columns());</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> pseudoCols = pseudo.columns();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="comment">// row normalization</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;size; ++i) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> norm = 0.0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j=0; j&lt;pseudoCols; ++j)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    norm += pseudo[i][j]*pseudo[i][j];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">if</span> (norm&gt;0.0) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> normAdj = std::sqrt(matrix[i][i]/norm);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j=0; j&lt;pseudoCols; ++j)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        pseudo[i][j] *= normAdj;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">//cost function for hypersphere and lower-diagonal algorithm</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">class </span>HypersphereCostFunction : <span class="keyword">public</span> CostFunction {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;          <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> size_;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordtype">bool</span> lowerDiagonal_;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            Matrix targetMatrix_;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            Array targetVariance_;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keyword">mutable</span> Matrix currentRoot_, tempMatrix_, currentMatrix_;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            HypersphereCostFunction(<span class="keyword">const</span> Matrix&amp; targetMatrix,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                    <span class="keyword">const</span> Array&amp; targetVariance,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                    <span class="keywordtype">bool</span> lowerDiagonal)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            : size_(targetMatrix.rows()), lowerDiagonal_(lowerDiagonal),</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;              targetMatrix_(targetMatrix), targetVariance_(targetVariance),</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;              currentRoot_(size_, size_), tempMatrix_(size_, size_),</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;              currentMatrix_(size_, size_) {}</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            Disposable&lt;Array&gt; values(<span class="keyword">const</span> Array&amp;)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">//cost function for hypersphere and lower-diagonal algorithm</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">class </span>HypersphereCostFunction : <span class="keyword">public</span> CostFunction {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;          <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> size_;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordtype">bool</span> lowerDiagonal_;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            Matrix targetMatrix_;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            Array targetVariance_;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keyword">mutable</span> Matrix currentRoot_, tempMatrix_, currentMatrix_;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;          <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            HypersphereCostFunction(<span class="keyword">const</span> Matrix&amp; targetMatrix,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                    Array targetVariance,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                    <span class="keywordtype">bool</span> lowerDiagonal)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            : size_(targetMatrix.rows()), lowerDiagonal_(lowerDiagonal),</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;              targetMatrix_(targetMatrix), targetVariance_(std::move(targetVariance)),</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;              currentRoot_(size_, size_), tempMatrix_(size_, size_), currentMatrix_(size_, size_) {}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            Disposable&lt;Array&gt; values(<span class="keyword">const</span> Array&amp;)<span class="keyword"> const override </span>{</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                QL_FAIL(<span class="stringliteral">&quot;values method not implemented&quot;</span>);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> value(<span class="keyword">const</span> Array&amp; x)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> value(<span class="keyword">const</span> Array&amp; x)<span class="keyword"> const override </span>{</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i,j,k;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                std::fill(currentRoot_.begin(), currentRoot_.end(), 1.0);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">if</span> (lowerDiagonal_) {</div>
@@ -428,7 +429,7 @@ $(function() {
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    }</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a5ebc3f53caa16883e66f350c9a0b5cad">  348</a></span>&#160;    <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;Matrix&gt;</a> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a5ebc3f53caa16883e66f350c9a0b5cad">pseudoSqrt</a>(<span class="keyword">const</span> <a class="code" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a>&amp; matrix, <a class="code" href="../../d5/dec/struct_quant_lib_1_1_salvaging_algorithm.html#a1d1cfd8ffb84e947f82999c682b666a7">SalvagingAlgorithm::Type</a> sa) {</div>
+<div class="line"><a name="l00348"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a5ebc3f53caa16883e66f350c9a0b5cad">  348</a></span>&#160;    <a class="code" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable&lt;Matrix&gt;</a> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a5ebc3f53caa16883e66f350c9a0b5cad">pseudoSqrt</a>(<span class="keyword">const</span> <a class="code" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a>&amp; matrix, <a class="code" href="../../d5/dec/struct_quant_lib_1_1_salvaging_algorithm.html#a1d1cfd8ffb84e947f82999c682b666a7">SalvagingAlgorithm::Type</a> sa) {</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> size = matrix.<a class="code" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a74da223ed3bde38f5e9f6822f6cacfbe">rows</a>();</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="preprocessor">        #if defined(QL_EXTRA_SAFETY_CHECKS)</span></div>
@@ -508,7 +509,7 @@ $(function() {
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    }</div>
 <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
-<div class="line"><a name="l00428"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a92126d63e4a34b00a1c080e4b1eba167">  428</a></span>&#160;    <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;Matrix&gt;</a> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a92126d63e4a34b00a1c080e4b1eba167">rankReducedSqrt</a>(<span class="keyword">const</span> <a class="code" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a>&amp; matrix,</div>
+<div class="line"><a name="l00428"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a92126d63e4a34b00a1c080e4b1eba167">  428</a></span>&#160;    <a class="code" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable&lt;Matrix&gt;</a> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a92126d63e4a34b00a1c080e4b1eba167">rankReducedSqrt</a>(<span class="keyword">const</span> <a class="code" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a>&amp; matrix,</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                                       <a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> maxRank,</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                                       <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> componentRetainedPercentage,</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;                                       <a class="code" href="../../d5/dec/struct_quant_lib_1_1_salvaging_algorithm.html#a1d1cfd8ffb84e947f82999c682b666a7">SalvagingAlgorithm::Type</a> sa) {</div>
@@ -590,26 +591,26 @@ $(function() {
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    }</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_array_html_af820f57a2b80308855934b525a082765"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#af820f57a2b80308855934b525a082765">QuantLib::Array::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00436">array.hpp:436</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_array_html_af820f57a2b80308855934b525a082765"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#af820f57a2b80308855934b525a082765">QuantLib::Array::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00458">array.hpp:458</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a70ee0959244f8b62d85f2a3d61a29a10"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a70ee0959244f8b62d85f2a3d61a29a10">QuantLib::CholeskyDecomposition</a></div><div class="ttdeci">Disposable&lt; Matrix &gt; CholeskyDecomposition(const Matrix &amp;S, bool flexible)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d62/choleskydecomposition_8cpp_source.html#l00026">choleskydecomposition.cpp:26</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_salvaging_algorithm_html_a1d1cfd8ffb84e947f82999c682b666a7ac9d3e887722f2bc482bcca9d41c512af"><div class="ttname"><a href="../../d5/dec/struct_quant_lib_1_1_salvaging_algorithm.html#a1d1cfd8ffb84e947f82999c682b666a7ac9d3e887722f2bc482bcca9d41c512af">QuantLib::SalvagingAlgorithm::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd2/pseudosqrt_8hpp_source.html#l00033">pseudosqrt.hpp:33</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a92126d63e4a34b00a1c080e4b1eba167"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a92126d63e4a34b00a1c080e4b1eba167">QuantLib::rankReducedSqrt</a></div><div class="ttdeci">Disposable&lt; Matrix &gt; rankReducedSqrt(const Matrix &amp;matrix, Size maxRank, Real componentRetainedPercentage, SalvagingAlgorithm::Type sa)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2a/pseudosqrt_8cpp_source.html#l00428">pseudosqrt.cpp:428</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_symmetric_schur_decomposition_html_a5a59f34407b17515e8082bf187271148"><div class="ttname"><a href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#a5a59f34407b17515e8082bf187271148">QuantLib::SymmetricSchurDecomposition::eigenvalues</a></div><div class="ttdeci">const Array &amp; eigenvalues() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/symmetricschurdecomposition_8hpp_source.html#l00054">symmetricschurdecomposition.hpp:54</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a86a771d47cf764c4ef43aab250442fda"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a86a771d47cf764c4ef43aab250442fda">QuantLib::Matrix::columns</a></div><div class="ttdeci">Size columns() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00463">matrix.hpp:463</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a86a771d47cf764c4ef43aab250442fda"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a86a771d47cf764c4ef43aab250442fda">QuantLib::Matrix::columns</a></div><div class="ttdeci">Size columns() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00481">matrix.hpp:481</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_salvaging_algorithm_html_a1d1cfd8ffb84e947f82999c682b666a7af2e65f0848a7d6c4d5056284da2bb9a5"><div class="ttname"><a href="../../d5/dec/struct_quant_lib_1_1_salvaging_algorithm.html#a1d1cfd8ffb84e947f82999c682b666a7af2e65f0848a7d6c4d5056284da2bb9a5">QuantLib::SalvagingAlgorithm::Spectral</a></div><div class="ttdeci">@ Spectral</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd2/pseudosqrt_8hpp_source.html#l00033">pseudosqrt.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00053">array.hpp:53</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a74da223ed3bde38f5e9f6822f6cacfbe"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a74da223ed3bde38f5e9f6822f6cacfbe">QuantLib::Matrix::rows</a></div><div class="ttdeci">Size rows() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00459">matrix.hpp:459</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a74da223ed3bde38f5e9f6822f6cacfbe"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a74da223ed3bde38f5e9f6822f6cacfbe">QuantLib::Matrix::rows</a></div><div class="ttdeci">Size rows() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00477">matrix.hpp:477</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_salvaging_algorithm_html_a1d1cfd8ffb84e947f82999c682b666a7af4e61a4d8deccf62472a49e4fc152c79"><div class="ttname"><a href="../../d5/dec/struct_quant_lib_1_1_salvaging_algorithm.html#a1d1cfd8ffb84e947f82999c682b666a7af4e61a4d8deccf62472a49e4fc152c79">QuantLib::SalvagingAlgorithm::LowerDiagonal</a></div><div class="ttdeci">@ LowerDiagonal</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd2/pseudosqrt_8hpp_source.html#l00033">pseudosqrt.hpp:33</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_salvaging_algorithm_html_a1d1cfd8ffb84e947f82999c682b666a7a54f7c6cb990bf6fc143cc2d797a961c3"><div class="ttname"><a href="../../d5/dec/struct_quant_lib_1_1_salvaging_algorithm.html#a1d1cfd8ffb84e947f82999c682b666a7a54f7c6cb990bf6fc143cc2d797a961c3">QuantLib::SalvagingAlgorithm::Higham</a></div><div class="ttdeci">@ Higham</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd2/pseudosqrt_8hpp_source.html#l00033">pseudosqrt.hpp:33</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_aab56fb6f79c404afbf5fedf756b41bc1"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">QuantLib::Disposable</a></div><div class="ttdeci">T Disposable</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00034">disposable.hpp:34</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_salvaging_algorithm_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../d5/dec/struct_quant_lib_1_1_salvaging_algorithm.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::SalvagingAlgorithm::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd2/pseudosqrt_8hpp_source.html#l00033">pseudosqrt.hpp:33</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_salvaging_algorithm_html_a1d1cfd8ffb84e947f82999c682b666a7a64774f5807b917f4c4259bc4f652d92e"><div class="ttname"><a href="../../d5/dec/struct_quant_lib_1_1_salvaging_algorithm.html#a1d1cfd8ffb84e947f82999c682b666a7a64774f5807b917f4c4259bc4f652d92e">QuantLib::SalvagingAlgorithm::Hypersphere</a></div><div class="ttdeci">@ Hypersphere</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd2/pseudosqrt_8hpp_source.html#l00033">pseudosqrt.hpp:33</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html">QuantLib::Disposable</a></div><div class="ttdoc">generic disposable object with move semantics</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00064">disposable.hpp:64</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a5ebc3f53caa16883e66f350c9a0b5cad"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a5ebc3f53caa16883e66f350c9a0b5cad">QuantLib::pseudoSqrt</a></div><div class="ttdeci">Disposable&lt; Matrix &gt; pseudoSqrt(const Matrix &amp;matrix, SalvagingAlgorithm::Type sa)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2a/pseudosqrt_8cpp_source.html#l00348">pseudosqrt.cpp:348</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_ab94b3fc7463188bf4d30e82d4692ad3a"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ab94b3fc7463188bf4d30e82d4692ad3a">QuantLib::close</a></div><div class="ttdeci">bool close(const Quantity &amp;m1, const Quantity &amp;m2, Size n)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dbf/quantity_8cpp_source.html#l00163">quantity.cpp:163</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_array_html_a8edb38fc95e912ca47338586b47c5607"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#a8edb38fc95e912ca47338586b47c5607">QuantLib::Array::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00444">array.hpp:444</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_array_html_a8edb38fc95e912ca47338586b47c5607"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#a8edb38fc95e912ca47338586b47c5607">QuantLib::Array::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00466">array.hpp:466</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_matrix_html"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html">QuantLib::Matrix</a></div><div class="ttdoc">Matrix used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00039">matrix.hpp:39</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html_a35d79a4e7c13ea3387784f61efccf111"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a35d79a4e7c13ea3387784f61efccf111">QuantLib::transpose</a></div><div class="ttdeci">Disposable&lt; Matrix &gt; transpose(const Matrix &amp;m)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00568">matrix.hpp:568</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_a35d79a4e7c13ea3387784f61efccf111"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a35d79a4e7c13ea3387784f61efccf111">QuantLib::transpose</a></div><div class="ttdeci">Disposable&lt; Matrix &gt; transpose(const Matrix &amp;m)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00586">matrix.hpp:586</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_symmetric_schur_decomposition_html_a19a7dbcd8a79286ea89be1861a1d78b9"><div class="ttname"><a href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#a19a7dbcd8a79286ea89be1861a1d78b9">QuantLib::SymmetricSchurDecomposition::eigenvectors</a></div><div class="ttdeci">const Matrix &amp; eigenvectors() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/symmetricschurdecomposition_8hpp_source.html#l00055">symmetricschurdecomposition.hpp:55</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_symmetric_schur_decomposition_html"><div class="ttname"><a href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html">QuantLib::SymmetricSchurDecomposition</a></div><div class="ttdoc">symmetric threshold Jacobi algorithm.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/symmetricschurdecomposition_8hpp_source.html#l00050">symmetricschurdecomposition.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/methods/finitedifferences/utilities/fdmaffinemodelswapinnervalue.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -107,7 +108,7 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d1/d9d/class_quant_lib_1_1_fdm_affine_model_swap_inner_value.html#aa001add721846307727f9768e160f656">   30</a></span>&#160;    <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;Array&gt;</a> <a class="code" href="../../d1/d9d/class_quant_lib_1_1_fdm_affine_model_swap_inner_value.html#a3ad8661b8a4a7b9e22d413092a075f66">FdmAffineModelSwapInnerValue&lt;HullWhite&gt;::getState</a>(</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d1/d9d/class_quant_lib_1_1_fdm_affine_model_swap_inner_value.html#aa001add721846307727f9768e160f656">   30</a></span>&#160;    <a class="code" href="../../d3/dee/class_t.html">Disposable&lt;Array&gt;</a> <a class="code" href="../../d1/d9d/class_quant_lib_1_1_fdm_affine_model_swap_inner_value.html#a3ad8661b8a4a7b9e22d413092a075f66">FdmAffineModelSwapInnerValue&lt;HullWhite&gt;::getState</a>(</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">const</span> ext::shared_ptr&lt;HullWhite&gt;&amp; model, <a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t,</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../df/d11/class_quant_lib_1_1_fdm_linear_op_iterator.html">FdmLinearOpIterator</a>&amp; iter)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
@@ -117,7 +118,7 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d1/d9d/class_quant_lib_1_1_fdm_affine_model_swap_inner_value.html#a00e08b404e9e587fc743a32d364dc47e">   40</a></span>&#160;    <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;Array&gt;</a> <a class="code" href="../../d1/d9d/class_quant_lib_1_1_fdm_affine_model_swap_inner_value.html#a3ad8661b8a4a7b9e22d413092a075f66">FdmAffineModelSwapInnerValue&lt;G2&gt;::getState</a>(</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d1/d9d/class_quant_lib_1_1_fdm_affine_model_swap_inner_value.html#a00e08b404e9e587fc743a32d364dc47e">   40</a></span>&#160;    <a class="code" href="../../d3/dee/class_t.html">Disposable&lt;Array&gt;</a> <a class="code" href="../../d1/d9d/class_quant_lib_1_1_fdm_affine_model_swap_inner_value.html#a3ad8661b8a4a7b9e22d413092a075f66">FdmAffineModelSwapInnerValue&lt;G2&gt;::getState</a>(</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">const</span> ext::shared_ptr&lt;G2&gt;&amp;, <a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a>,</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../df/d11/class_quant_lib_1_1_fdm_linear_op_iterator.html">FdmLinearOpIterator</a>&amp; iter)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
@@ -131,11 +132,11 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00053">array.hpp:53</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html">QuantLib::Disposable</a></div><div class="ttdoc">generic disposable object with move semantics</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00064">disposable.hpp:64</a></div></div>
+<div class="ttc" id="aclass_t_html"><div class="ttname"><a href="../../d3/dee/class_t.html">T</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_affine_model_swap_inner_value_html_a3ad8661b8a4a7b9e22d413092a075f66"><div class="ttname"><a href="../../d1/d9d/class_quant_lib_1_1_fdm_affine_model_swap_inner_value.html#a3ad8661b8a4a7b9e22d413092a075f66">QuantLib::FdmAffineModelSwapInnerValue::getState</a></div><div class="ttdeci">Disposable&lt; Array &gt; getState(const ext::shared_ptr&lt; ModelType &gt; &amp;model, Time t, const FdmLinearOpIterator &amp;iter) const</div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_fdm_linear_op_iterator_html"><div class="ttname"><a href="../../df/d11/class_quant_lib_1_1_fdm_linear_op_iterator.html">QuantLib::FdmLinearOpIterator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/fdmlinearopiterator_8hpp_source.html#l00036">fdmlinearopiterator.hpp:36</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_fdm_linear_op_iterator_html"><div class="ttname"><a href="../../df/d11/class_quant_lib_1_1_fdm_linear_op_iterator.html">QuantLib::FdmLinearOpIterator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbe/fdmlinearopiterator_8hpp_source.html#l00037">fdmlinearopiterator.hpp:37</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

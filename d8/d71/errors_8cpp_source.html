@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/errors.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -180,18 +181,15 @@ $(function() {
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                      format(file, line, <span class="keyword">function</span>, message));</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="../../da/d81/class_quant_lib_1_1_error.html#a8d4b96162e93e11e5816d83702578af8">  100</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="../../da/d81/class_quant_lib_1_1_error.html#a8d4b96162e93e11e5816d83702578af8">Error::what</a>() <span class="keyword">const</span> throw () {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d81/class_quant_lib_1_1_error.html#a52c18cf0b8d616381c452d979a567d73">message_</a>-&gt;c_str();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="../../da/d81/class_quant_lib_1_1_error.html#a884afade2d98361da8b22f200dd1ccb5">  100</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="../../da/d81/class_quant_lib_1_1_error.html#a884afade2d98361da8b22f200dd1ccb5">Error::what</a>() const QL_NOEXCEPT { <span class="keywordflow">return</span> <a class="code" href="../../da/d81/class_quant_lib_1_1_error.html#a52c18cf0b8d616381c452d979a567d73">message_</a>-&gt;c_str(); }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_error_html_a52c18cf0b8d616381c452d979a567d73"><div class="ttname"><a href="../../da/d81/class_quant_lib_1_1_error.html#a52c18cf0b8d616381c452d979a567d73">QuantLib::Error::message_</a></div><div class="ttdeci">ext::shared_ptr&lt; std::string &gt; message_</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00055">errors.hpp:55</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_error_html_a52c18cf0b8d616381c452d979a567d73"><div class="ttname"><a href="../../da/d81/class_quant_lib_1_1_error.html#a52c18cf0b8d616381c452d979a567d73">QuantLib::Error::message_</a></div><div class="ttdeci">ext::shared_ptr&lt; std::string &gt; message_</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00058">errors.hpp:58</a></div></div>
 <div class="ttc" id="anamespaceboost_html"><div class="ttname"><a href="../../d4/da9/namespaceboost.html">boost</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d71/errors_8cpp_source.html#l00070">errors.cpp:70</a></div></div>
 <div class="ttc" id="anamespaceboost_html_afbd4a259de77230355c3c2de9ce6d6c9"><div class="ttname"><a href="../../d4/da9/namespaceboost.html#afbd4a259de77230355c3c2de9ce6d6c9">boost::assertion_failed_msg</a></div><div class="ttdeci">void assertion_failed_msg(char const *expr, char const *msg, char const *function, char const *file, long line)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d71/errors_8cpp_source.html#l00080">errors.cpp:80</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_error_html_a8d4b96162e93e11e5816d83702578af8"><div class="ttname"><a href="../../da/d81/class_quant_lib_1_1_error.html#a8d4b96162e93e11e5816d83702578af8">QuantLib::Error::what</a></div><div class="ttdeci">const char * what() const</div><div class="ttdoc">returns the error message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d71/errors_8cpp_source.html#l00100">errors.cpp:100</a></div></div>
 <div class="ttc" id="anamespaceboost_html_a6ea615b0e29a9b35870fb8662f0e1291"><div class="ttname"><a href="../../d4/da9/namespaceboost.html#a6ea615b0e29a9b35870fb8662f0e1291">boost::assertion_failed</a></div><div class="ttdeci">void assertion_failed(char const *expr, char const *function, char const *file, long line)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d71/errors_8cpp_source.html#l00073">errors.cpp:73</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_error_html_a884afade2d98361da8b22f200dd1ccb5"><div class="ttname"><a href="../../da/d81/class_quant_lib_1_1_error.html#a884afade2d98361da8b22f200dd1ccb5">QuantLib::Error::what</a></div><div class="ttdeci">const char * what() const QL_NOEXCEPT override</div><div class="ttdoc">returns the error message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d71/errors_8cpp_source.html#l00100">errors.cpp:100</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_error_html_a55f022485ff175b831875b9a8b39a600"><div class="ttname"><a href="../../da/d81/class_quant_lib_1_1_error.html#a55f022485ff175b831875b9a8b39a600">QuantLib::Error::Error</a></div><div class="ttdeci">Error(const std::string &amp;file, long line, const std::string &amp;functionName, const std::string &amp;message=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d71/errors_8cpp_source.html#l00093">errors.cpp:93</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->

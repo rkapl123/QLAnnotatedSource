@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/legacy/libormarketmodels/lmcorrmodel.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -120,7 +121,7 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d2/d29/class_quant_lib_1_1_lm_correlation_model.html#a3e8b19db5efa5a0d03ade53f615bca80">   40</a></span>&#160;    <a class="code" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable&lt;Matrix&gt;</a> <a class="code" href="../../d2/d29/class_quant_lib_1_1_lm_correlation_model.html#a3e8b19db5efa5a0d03ade53f615bca80">LmCorrelationModel::pseudoSqrt</a>(</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d2/d29/class_quant_lib_1_1_lm_correlation_model.html#a3e8b19db5efa5a0d03ade53f615bca80">   40</a></span>&#160;    <a class="code" href="../../d3/dee/class_t.html">Disposable&lt;Matrix&gt;</a> <a class="code" href="../../d2/d29/class_quant_lib_1_1_lm_correlation_model.html#a3e8b19db5efa5a0d03ade53f615bca80">LmCorrelationModel::pseudoSqrt</a>(</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t, <span class="keyword">const</span> <a class="code" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; x)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a5ebc3f53caa16883e66f350c9a0b5cad">QuantLib::pseudoSqrt</a>(this-&gt;<a class="code" href="../../d2/d29/class_quant_lib_1_1_lm_correlation_model.html#a6ffd4397b3f271a1f2983b7bd9c8663f">correlation</a>(t, x),</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                    <a class="code" href="../../d5/dec/struct_quant_lib_1_1_salvaging_algorithm.html#a1d1cfd8ffb84e947f82999c682b666a7af2e65f0848a7d6c4d5056284da2bb9a5">SalvagingAlgorithm::Spectral</a>);</div>
@@ -155,8 +156,8 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_lm_correlation_model_html_acce0ab2cacc475b2434f24c65c91685a"><div class="ttname"><a href="../../d2/d29/class_quant_lib_1_1_lm_correlation_model.html#acce0ab2cacc475b2434f24c65c91685a">QuantLib::LmCorrelationModel::size</a></div><div class="ttdeci">virtual Size size() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d13/lmcorrmodel_8cpp_source.html#l00028">lmcorrmodel.cpp:28</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00053">array.hpp:53</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_lm_correlation_model_html_a88bf4673a29cef102cf58706906dc001"><div class="ttname"><a href="../../d2/d29/class_quant_lib_1_1_lm_correlation_model.html#a88bf4673a29cef102cf58706906dc001">QuantLib::LmCorrelationModel::generateArguments</a></div><div class="ttdeci">virtual void generateArguments()=0</div></div>
+<div class="ttc" id="aclass_t_html"><div class="ttname"><a href="../../d3/dee/class_t.html">T</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_lm_correlation_model_html_a80d7c2dfc8a2fa937425f38ce5cacd41"><div class="ttname"><a href="../../d2/d29/class_quant_lib_1_1_lm_correlation_model.html#a80d7c2dfc8a2fa937425f38ce5cacd41">QuantLib::LmCorrelationModel::factors</a></div><div class="ttdeci">virtual Size factors() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d13/lmcorrmodel_8cpp_source.html#l00032">lmcorrmodel.cpp:32</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_disposable_html"><div class="ttname"><a href="../../d2/d3b/class_quant_lib_1_1_disposable.html">QuantLib::Disposable</a></div><div class="ttdoc">generic disposable object with move semantics</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/disposable_8hpp_source.html#l00064">disposable.hpp:64</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_lm_correlation_model_html_a33f96278202a2a747629a4821baaba8b"><div class="ttname"><a href="../../d2/d29/class_quant_lib_1_1_lm_correlation_model.html#a33f96278202a2a747629a4821baaba8b">QuantLib::LmCorrelationModel::isTimeIndependent</a></div><div class="ttdeci">virtual bool isTimeIndependent() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d13/lmcorrmodel_8cpp_source.html#l00036">lmcorrmodel.cpp:36</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a5ebc3f53caa16883e66f350c9a0b5cad"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a5ebc3f53caa16883e66f350c9a0b5cad">QuantLib::pseudoSqrt</a></div><div class="ttdeci">Disposable&lt; Matrix &gt; pseudoSqrt(const Matrix &amp;matrix, SalvagingAlgorithm::Type sa)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2a/pseudosqrt_8cpp_source.html#l00348">pseudosqrt.cpp:348</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>

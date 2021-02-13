@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/models/marketmodels/models/piecewiseconstantvariance.hpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -115,7 +116,7 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html">   33</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html">PiecewiseConstantVariance</a> {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#a22503e6f07e55d69923990e0e04f69df">   35</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#a22503e6f07e55d69923990e0e04f69df">~PiecewiseConstantVariance</a>() {}</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#af9a07c1cd1e5db0584f94537d01cfccc">   35</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#af9a07c1cd1e5db0584f94537d01cfccc">~PiecewiseConstantVariance</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#a6c587ac472de0f60115142785ec16b20">   36</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> std::vector&lt;Real&gt;&amp; <a class="code" href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#a6c587ac472de0f60115142785ec16b20">variances</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#ae471076c554be51097fe2a1531f6da05">   37</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> std::vector&lt;Volatility&gt;&amp; <a class="code" href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#ae471076c554be51097fe2a1531f6da05">volatilities</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#acd4ae9bccce0ae4579e3c97df63654e5">   38</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> std::vector&lt;Time&gt;&amp; <a class="code" href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#acd4ae9bccce0ae4579e3c97df63654e5">rateTimes</a>() <span class="keyword">const</span> = 0;</div>
@@ -132,6 +133,7 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_piecewise_constant_variance_html_af9a07c1cd1e5db0584f94537d01cfccc"><div class="ttname"><a href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#af9a07c1cd1e5db0584f94537d01cfccc">QuantLib::PiecewiseConstantVariance::~PiecewiseConstantVariance</a></div><div class="ttdeci">virtual ~PiecewiseConstantVariance()=default</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_piecewise_constant_variance_html"><div class="ttname"><a href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html">QuantLib::PiecewiseConstantVariance</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d60/piecewiseconstantvariance_8hpp_source.html#l00033">piecewiseconstantvariance.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_piecewise_constant_variance_html_a81ff83ce90b6630ec27363afc0db8f89"><div class="ttname"><a href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#a81ff83ce90b6630ec27363afc0db8f89">QuantLib::PiecewiseConstantVariance::totalVolatility</a></div><div class="ttdeci">Volatility totalVolatility(Size i) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dac/piecewiseconstantvariance_8cpp_source.html#l00047">piecewiseconstantvariance.cpp:47</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_piecewise_constant_variance_html_a7462e58c60897dda340b3f931fe4b0b9"><div class="ttname"><a href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#a7462e58c60897dda340b3f931fe4b0b9">QuantLib::PiecewiseConstantVariance::variance</a></div><div class="ttdeci">Real variance(Size i) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dac/piecewiseconstantvariance_8cpp_source.html#l00028">piecewiseconstantvariance.cpp:28</a></div></div>
@@ -140,7 +142,6 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_piecewise_constant_variance_html_acd4ae9bccce0ae4579e3c97df63654e5"><div class="ttname"><a href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#acd4ae9bccce0ae4579e3c97df63654e5">QuantLib::PiecewiseConstantVariance::rateTimes</a></div><div class="ttdeci">virtual const std::vector&lt; Time &gt; &amp; rateTimes() const =0</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_piecewise_constant_variance_html_a6c587ac472de0f60115142785ec16b20"><div class="ttname"><a href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#a6c587ac472de0f60115142785ec16b20">QuantLib::PiecewiseConstantVariance::variances</a></div><div class="ttdeci">virtual const std::vector&lt; Real &gt; &amp; variances() const =0</div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_piecewise_constant_variance_html_a22503e6f07e55d69923990e0e04f69df"><div class="ttname"><a href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#a22503e6f07e55d69923990e0e04f69df">QuantLib::PiecewiseConstantVariance::~PiecewiseConstantVariance</a></div><div class="ttdeci">virtual ~PiecewiseConstantVariance()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d60/piecewiseconstantvariance_8hpp_source.html#l00035">piecewiseconstantvariance.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_piecewise_constant_variance_html_a776cb4ec54f6972508b0c8980ee780f5"><div class="ttname"><a href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html#a776cb4ec54f6972508b0c8980ee780f5">QuantLib::PiecewiseConstantVariance::volatility</a></div><div class="ttdeci">Volatility volatility(Size i) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dac/piecewiseconstantvariance_8cpp_source.html#l00034">piecewiseconstantvariance.cpp:34</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>

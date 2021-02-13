@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: ql/termstructures/volatility/spreadedsmilesection.cpp Source File</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -100,20 +101,20 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ql/termstructures/volatility/spreadedsmilesection.hpp&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;ql/quote.hpp&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#aa9aaf493e2f72aa96369cf3468e2faa9">   25</a></span>&#160;    <a class="code" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#aa9aaf493e2f72aa96369cf3468e2faa9">SpreadedSmileSection::SpreadedSmileSection</a>(</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                    <span class="keyword">const</span> ext::shared_ptr&lt;SmileSection&gt;&amp; underlyingSection,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                    <span class="keyword">const</span> <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>&amp; spread)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    : underlyingSection_(underlyingSection), spread_(spread) {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a4f3a66557f3b1c9c10ddfd2079e74481">underlyingSection_</a>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a0f282e91dbd00752acbc31e5d6a94174">spread_</a>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ql/quote.hpp&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;ql/termstructures/volatility/spreadedsmilesection.hpp&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a428c7ac017e86a8daa4ec0f0dd35f010">   26</a></span>&#160;    <a class="code" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a428c7ac017e86a8daa4ec0f0dd35f010">SpreadedSmileSection::SpreadedSmileSection</a>(ext::shared_ptr&lt;SmileSection&gt; underlyingSection,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                               <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> spread)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    : underlyingSection_(std::move(underlyingSection)), spread_(std::move(spread)) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a4f3a66557f3b1c9c10ddfd2079e74481">underlyingSection_</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a0f282e91dbd00752acbc31e5d6a94174">spread_</a>);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#aacaca3444ad1975ef739aa2bc999243f">   33</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> <a class="code" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#aacaca3444ad1975ef739aa2bc999243f">SpreadedSmileSection::volatilityImpl</a>(<a class="code" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a91edb067d586cd4f5470202d1ced2798">   33</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> <a class="code" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a91edb067d586cd4f5470202d1ced2798">SpreadedSmileSection::volatilityImpl</a>(<a class="code" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a4f3a66557f3b1c9c10ddfd2079e74481">underlyingSection_</a>-&gt;volatility(k) + <a class="code" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a0f282e91dbd00752acbc31e5d6a94174">spread_</a>-&gt;value();</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
@@ -122,9 +123,9 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_observer_html_aa6ade205ed506bf712da2704f80a73a0"><div class="ttname"><a href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">QuantLib::Observer::registerWith</a></div><div class="ttdeci">std::pair&lt; iterator, bool &gt; registerWith(const ext::shared_ptr&lt; Observable &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00211">observable.hpp:211</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_spreaded_smile_section_html_aa9aaf493e2f72aa96369cf3468e2faa9"><div class="ttname"><a href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#aa9aaf493e2f72aa96369cf3468e2faa9">QuantLib::SpreadedSmileSection::SpreadedSmileSection</a></div><div class="ttdeci">SpreadedSmileSection(const ext::shared_ptr&lt; SmileSection &gt; &amp;, const Handle&lt; Quote &gt; &amp;spread)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1e/spreadedsmilesection_8cpp_source.html#l00025">spreadedsmilesection.cpp:25</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_spreaded_smile_section_html_aacaca3444ad1975ef739aa2bc999243f"><div class="ttname"><a href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#aacaca3444ad1975ef739aa2bc999243f">QuantLib::SpreadedSmileSection::volatilityImpl</a></div><div class="ttdeci">Volatility volatilityImpl(Rate strike) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1e/spreadedsmilesection_8cpp_source.html#l00033">spreadedsmilesection.cpp:33</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_spreaded_smile_section_html_a91edb067d586cd4f5470202d1ced2798"><div class="ttname"><a href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a91edb067d586cd4f5470202d1ced2798">QuantLib::SpreadedSmileSection::volatilityImpl</a></div><div class="ttdeci">Volatility volatilityImpl(Rate strike) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1e/spreadedsmilesection_8cpp_source.html#l00033">spreadedsmilesection.cpp:33</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_spreaded_smile_section_html_a428c7ac017e86a8daa4ec0f0dd35f010"><div class="ttname"><a href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a428c7ac017e86a8daa4ec0f0dd35f010">QuantLib::SpreadedSmileSection::SpreadedSmileSection</a></div><div class="ttdeci">SpreadedSmileSection(ext::shared_ptr&lt; SmileSection &gt;, Handle&lt; Quote &gt; spread)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1e/spreadedsmilesection_8cpp_source.html#l00026">spreadedsmilesection.cpp:26</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_spreaded_smile_section_html_a0f282e91dbd00752acbc31e5d6a94174"><div class="ttname"><a href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a0f282e91dbd00752acbc31e5d6a94174">QuantLib::SpreadedSmileSection::spread_</a></div><div class="ttdeci">const Handle&lt; Quote &gt; spread_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/spreadedsmilesection_8hpp_source.html#l00058">spreadedsmilesection.hpp:58</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_spreaded_smile_section_html_a4f3a66557f3b1c9c10ddfd2079e74481"><div class="ttname"><a href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a4f3a66557f3b1c9c10ddfd2079e74481">QuantLib::SpreadedSmileSection::underlyingSection_</a></div><div class="ttdeci">const ext::shared_ptr&lt; SmileSection &gt; underlyingSection_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/spreadedsmilesection_8hpp_source.html#l00057">spreadedsmilesection.hpp:57</a></div></div>

@@ -5,8 +5,9 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>QuantLib: Lattice Class Reference</title>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,11 +30,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.20</div>
+   <div id="projectnumber">Fully annotated sources - version 1.21</div>
    </div>
   </td>
  </tr>
@@ -130,10 +131,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa11e1abb76c37d91d43b0e0fd132f9c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db1/class_quant_lib_1_1_lattice.html#aa11e1abb76c37d91d43b0e0fd132f9c4">Lattice</a> (const <a class="el" href="../../df/dff/class_quant_lib_1_1_time_grid.html">TimeGrid</a> &amp;<a class="el" href="../../d5/db1/class_quant_lib_1_1_lattice.html#ab1b4f3ee63c7fc18845e10236dd5df8d">timeGrid</a>)</td></tr>
-<tr class="separator:aa11e1abb76c37d91d43b0e0fd132f9c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3254b8af4162c70d213eb9153fe8dc8d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db1/class_quant_lib_1_1_lattice.html#a3254b8af4162c70d213eb9153fe8dc8d">~Lattice</a> ()</td></tr>
-<tr class="separator:a3254b8af4162c70d213eb9153fe8dc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea787a7e70037a45affbbf631a7881ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db1/class_quant_lib_1_1_lattice.html#aea787a7e70037a45affbbf631a7881ff">Lattice</a> (<a class="el" href="../../df/dff/class_quant_lib_1_1_time_grid.html">TimeGrid</a> <a class="el" href="../../d5/db1/class_quant_lib_1_1_lattice.html#ab1b4f3ee63c7fc18845e10236dd5df8d">timeGrid</a>)</td></tr>
+<tr class="separator:aea787a7e70037a45affbbf631a7881ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbefb7afb2f56e51d1deb33fd9bcd20f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db1/class_quant_lib_1_1_lattice.html#abbefb7afb2f56e51d1deb33fd9bcd20f">~Lattice</a> ()=default</td></tr>
+<tr class="separator:abbefb7afb2f56e51d1deb33fd9bcd20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Inspectors</div></td></tr>
 <tr class="memitem:ab1b4f3ee63c7fc18845e10236dd5df8d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../df/dff/class_quant_lib_1_1_time_grid.html">TimeGrid</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db1/class_quant_lib_1_1_lattice.html#ab1b4f3ee63c7fc18845e10236dd5df8d">timeGrid</a> () const</td></tr>
 <tr class="separator:ab1b4f3ee63c7fc18845e10236dd5df8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,16 +155,16 @@ Numerical method interface</h2></td></tr>
 <tr class="memitem:a0fe7a4c02a090391b474654cf43ddb56"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db1/class_quant_lib_1_1_lattice.html#a0fe7a4c02a090391b474654cf43ddb56">presentValue</a> (<a class="el" href="../../d5/d5d/class_quant_lib_1_1_discretized_asset.html">DiscretizedAsset</a> &amp;) const =0</td></tr>
 <tr class="memdesc:a0fe7a4c02a090391b474654cf43ddb56"><td class="mdescLeft">&#160;</td><td class="mdescRight">computes the present value of an asset.  <a href="../../d5/db1/class_quant_lib_1_1_lattice.html#a0fe7a4c02a090391b474654cf43ddb56">More...</a><br /></td></tr>
 <tr class="separator:a0fe7a4c02a090391b474654cf43ddb56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85dadec35b0b9775e93b8c0d826447ba"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable</a>&lt; <a class="el" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db1/class_quant_lib_1_1_lattice.html#a85dadec35b0b9775e93b8c0d826447ba">grid</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a>) const =0</td></tr>
+<tr class="memitem:a85dadec35b0b9775e93b8c0d826447ba"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a>&lt; <a class="el" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db1/class_quant_lib_1_1_lattice.html#a85dadec35b0b9775e93b8c0d826447ba">grid</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a>) const =0</td></tr>
 <tr class="separator:a85dadec35b0b9775e93b8c0d826447ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Lattice (tree, finite-differences) base class </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html">numericalmethod.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html">numericalmethod.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa11e1abb76c37d91d43b0e0fd132f9c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa11e1abb76c37d91d43b0e0fd132f9c4">&#9670;&nbsp;</a></span>Lattice()</h2>
+<a id="aea787a7e70037a45affbbf631a7881ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea787a7e70037a45affbbf631a7881ff">&#9670;&nbsp;</a></span>Lattice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,7 +175,7 @@ Numerical method interface</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../d5/db1/class_quant_lib_1_1_lattice.html">Lattice</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../df/dff/class_quant_lib_1_1_time_grid.html">TimeGrid</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../df/dff/class_quant_lib_1_1_time_grid.html">TimeGrid</a>&#160;</td>
           <td class="paramname"><em>timeGrid</em></td><td>)</td>
           <td></td>
         </tr>
@@ -186,12 +187,12 @@ Numerical method interface</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html">numericalmethod.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html">numericalmethod.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a3254b8af4162c70d213eb9153fe8dc8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3254b8af4162c70d213eb9153fe8dc8d">&#9670;&nbsp;</a></span>~Lattice()</h2>
+<a id="abbefb7afb2f56e51d1deb33fd9bcd20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbefb7afb2f56e51d1deb33fd9bcd20f">&#9670;&nbsp;</a></span>~Lattice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,12 +209,10 @@ Numerical method interface</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html">numericalmethod.hpp</a>.</p>
 
 </div>
 </div>
@@ -233,7 +232,7 @@ Numerical method interface</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html">numericalmethod.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html">numericalmethod.hpp</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -242,10 +241,10 @@ Numerical method interface</h2></td></tr>
 <div class="center"><img src="../../d5/db1/class_quant_lib_1_1_lattice_ab1b4f3ee63c7fc18845e10236dd5df8d_icgraph.png" border="0" usemap="#ad5/db1/class_quant_lib_1_1_lattice_ab1b4f3ee63c7fc18845e10236dd5df8d_icgraph" alt=""/></div>
 <map name="d5/db1/class_quant_lib_1_1_lattice_ab1b4f3ee63c7fc18845e10236dd5df8d_icgraph" id="ad5/db1/class_quant_lib_1_1_lattice_ab1b4f3ee63c7fc18845e10236dd5df8d_icgraph">
 <area shape="rect" title=" " alt="" coords="257,111,328,138"/>
-<area shape="rect" href="../../db/dde/class_quant_lib_1_1_one_factor_model_1_1_short_rate_tree.html#a73bc09d6705ec3485214893757e15e5e" title="Tree build&#45;up + numerical fitting to term&#45;structure." alt="" coords="5,5,209,47"/>
+<area shape="rect" href="../../db/dde/class_quant_lib_1_1_one_factor_model_1_1_short_rate_tree.html#a253bdc257ea37016e968f6c0114cbfbc" title="Tree build&#45;up + numerical fitting to term&#45;structure." alt="" coords="5,5,209,47"/>
 <area shape="rect" href="../../db/dde/class_quant_lib_1_1_one_factor_model_1_1_short_rate_tree.html#a75d97ad32f727ac89968a585df35384d" title=" " alt="" coords="18,71,197,112"/>
 <area shape="rect" href="../../d7/d4e/class_quant_lib_1_1_two_factor_model_1_1_short_rate_tree.html#a75d97ad32f727ac89968a585df35384d" title=" " alt="" coords="19,136,196,177"/>
-<area shape="rect" href="../../d8/dc6/class_quant_lib_1_1_tree_lattice1_d.html#adb690da9ffa7bb9e77f2d30a4b032157" title=" " alt="" coords="26,202,189,258"/>
+<area shape="rect" href="../../d8/dc6/class_quant_lib_1_1_tree_lattice1_d.html#a2415553deee4f45f97f1ef6a1e0e8c0d" title=" " alt="" coords="26,202,189,258"/>
 </map>
 </div>
 
@@ -287,7 +286,7 @@ Numerical method interface</h2></td></tr>
 
 <p>initialize an asset at the given time. </p>
 
-<p>Implemented in <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#aadecec230a2b57534911ed193bffdb5b">TreeLattice&lt; Impl &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#aadecec230a2b57534911ed193bffdb5b">TreeLattice&lt; OneFactorModel::ShortRateTree &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#aadecec230a2b57534911ed193bffdb5b">TreeLattice&lt; TwoFactorModel::ShortRateTree &gt;</a>, and <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#aadecec230a2b57534911ed193bffdb5b">TreeLattice&lt; BlackScholesLattice&lt; T &gt; &gt;</a>.</p>
+<p>Implemented in <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a74112b59227382310e3705ee8e99ec84">TreeLattice&lt; Impl &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a74112b59227382310e3705ee8e99ec84">TreeLattice&lt; OneFactorModel::ShortRateTree &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a74112b59227382310e3705ee8e99ec84">TreeLattice&lt; TwoFactorModel::ShortRateTree &gt;</a>, and <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a74112b59227382310e3705ee8e99ec84">TreeLattice&lt; BlackScholesLattice&lt; T &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -326,7 +325,7 @@ Numerical method interface</h2></td></tr>
 </div><div class="memdoc">
 <p>Roll back an asset until the given time, performing any needed adjustment. </p>
 
-<p>Implemented in <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a76086cb813dfb54bedee9ccac8946988">TreeLattice&lt; Impl &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a76086cb813dfb54bedee9ccac8946988">TreeLattice&lt; OneFactorModel::ShortRateTree &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a76086cb813dfb54bedee9ccac8946988">TreeLattice&lt; TwoFactorModel::ShortRateTree &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a76086cb813dfb54bedee9ccac8946988">TreeLattice&lt; BlackScholesLattice&lt; T &gt; &gt;</a>, and <a class="el" href="../../d7/d44/class_quant_lib_1_1_tsiveriotis_fernandes_lattice.html#a76086cb813dfb54bedee9ccac8946988">TsiveriotisFernandesLattice&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a7281e1ff3f5014fbdd522560538e0422">TreeLattice&lt; Impl &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a7281e1ff3f5014fbdd522560538e0422">TreeLattice&lt; OneFactorModel::ShortRateTree &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a7281e1ff3f5014fbdd522560538e0422">TreeLattice&lt; TwoFactorModel::ShortRateTree &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a7281e1ff3f5014fbdd522560538e0422">TreeLattice&lt; BlackScholesLattice&lt; T &gt; &gt;</a>, and <a class="el" href="../../d7/d44/class_quant_lib_1_1_tsiveriotis_fernandes_lattice.html#a7281e1ff3f5014fbdd522560538e0422">TsiveriotisFernandesLattice&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -364,12 +363,12 @@ Numerical method interface</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Roll back an asset until the given time, but do not perform the final adjustment.</p>
-<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000116">Warning:</a></b></dt><dd>In version 0.3.7 and earlier, this method was called rollAlmostBack method and performed pre-adjustment. This is no longer true; when migrating your code, you'll have to replace calls such as: </dd></dl>
+<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000119">Warning:</a></b></dt><dd>In version 0.3.7 and earlier, this method was called rollAlmostBack method and performed pre-adjustment. This is no longer true; when migrating your code, you'll have to replace calls such as: </dd></dl>
 <div class="fragment"><div class="line">method-&gt;rollAlmostBack(asset,t);</div>
 </div><!-- fragment --><p> with the two statements: </p><div class="fragment"><div class="line">method-&gt;partialRollback(asset,t);</div>
 <div class="line">asset-&gt;preAdjustValues();</div>
 </div><!-- fragment --> 
-<p>Implemented in <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#ab295d7d0092f6d1fc6a43b74f21afd2c">TreeLattice&lt; Impl &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#ab295d7d0092f6d1fc6a43b74f21afd2c">TreeLattice&lt; OneFactorModel::ShortRateTree &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#ab295d7d0092f6d1fc6a43b74f21afd2c">TreeLattice&lt; TwoFactorModel::ShortRateTree &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#ab295d7d0092f6d1fc6a43b74f21afd2c">TreeLattice&lt; BlackScholesLattice&lt; T &gt; &gt;</a>, and <a class="el" href="../../d7/d44/class_quant_lib_1_1_tsiveriotis_fernandes_lattice.html#ab295d7d0092f6d1fc6a43b74f21afd2c">TsiveriotisFernandesLattice&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a43f93829d572548dd6213df828ea7154">TreeLattice&lt; Impl &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a43f93829d572548dd6213df828ea7154">TreeLattice&lt; OneFactorModel::ShortRateTree &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a43f93829d572548dd6213df828ea7154">TreeLattice&lt; TwoFactorModel::ShortRateTree &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a43f93829d572548dd6213df828ea7154">TreeLattice&lt; BlackScholesLattice&lt; T &gt; &gt;</a>, and <a class="el" href="../../d7/d44/class_quant_lib_1_1_tsiveriotis_fernandes_lattice.html#a43f93829d572548dd6213df828ea7154">TsiveriotisFernandesLattice&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -399,7 +398,7 @@ Numerical method interface</h2></td></tr>
 
 <p>computes the present value of an asset. </p>
 
-<p>Implemented in <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#ad3c902f7e755ead81aa81e843571d7f2">TreeLattice&lt; Impl &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#ad3c902f7e755ead81aa81e843571d7f2">TreeLattice&lt; OneFactorModel::ShortRateTree &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#ad3c902f7e755ead81aa81e843571d7f2">TreeLattice&lt; TwoFactorModel::ShortRateTree &gt;</a>, and <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#ad3c902f7e755ead81aa81e843571d7f2">TreeLattice&lt; BlackScholesLattice&lt; T &gt; &gt;</a>.</p>
+<p>Implemented in <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a0139801119c19cd0ff56d0030f32aec6">TreeLattice&lt; Impl &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a0139801119c19cd0ff56d0030f32aec6">TreeLattice&lt; OneFactorModel::ShortRateTree &gt;</a>, <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a0139801119c19cd0ff56d0030f32aec6">TreeLattice&lt; TwoFactorModel::ShortRateTree &gt;</a>, and <a class="el" href="../../de/d10/class_quant_lib_1_1_tree_lattice.html#a0139801119c19cd0ff56d0030f32aec6">TreeLattice&lt; BlackScholesLattice&lt; T &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -413,7 +412,7 @@ Numerical method interface</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="../../d2/d3b/class_quant_lib_1_1_disposable.html">Disposable</a>&lt;<a class="el" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&gt; grid </td>
+          <td class="memname">virtual <a class="el" href="../../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1">Disposable</a>&lt;<a class="el" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&gt; grid </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a>&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -427,7 +426,7 @@ Numerical method interface</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d1/d44/class_quant_lib_1_1_tree_lattice2_d.html#af6796fbe0767aa5f4a6f8817190a9d30">TreeLattice2D&lt; Impl, T &gt;</a>, <a class="el" href="../../d1/d44/class_quant_lib_1_1_tree_lattice2_d.html#af6796fbe0767aa5f4a6f8817190a9d30">TreeLattice2D&lt; TwoFactorModel::ShortRateTree, TrinomialTree &gt;</a>, <a class="el" href="../../d8/dc6/class_quant_lib_1_1_tree_lattice1_d.html#adb690da9ffa7bb9e77f2d30a4b032157">TreeLattice1D&lt; Impl &gt;</a>, <a class="el" href="../../d8/dc6/class_quant_lib_1_1_tree_lattice1_d.html#adb690da9ffa7bb9e77f2d30a4b032157">TreeLattice1D&lt; OneFactorModel::ShortRateTree &gt;</a>, and <a class="el" href="../../d8/dc6/class_quant_lib_1_1_tree_lattice1_d.html#adb690da9ffa7bb9e77f2d30a4b032157">TreeLattice1D&lt; BlackScholesLattice&lt; T &gt; &gt;</a>.</p>
+<p>Implemented in <a class="el" href="../../d1/d44/class_quant_lib_1_1_tree_lattice2_d.html#a89d9354bff86a897edf296c635885ef0">TreeLattice2D&lt; Impl, T &gt;</a>, <a class="el" href="../../d1/d44/class_quant_lib_1_1_tree_lattice2_d.html#a89d9354bff86a897edf296c635885ef0">TreeLattice2D&lt; TwoFactorModel::ShortRateTree, TrinomialTree &gt;</a>, <a class="el" href="../../d8/dc6/class_quant_lib_1_1_tree_lattice1_d.html#a2415553deee4f45f97f1ef6a1e0e8c0d">TreeLattice1D&lt; Impl &gt;</a>, <a class="el" href="../../d8/dc6/class_quant_lib_1_1_tree_lattice1_d.html#a2415553deee4f45f97f1ef6a1e0e8c0d">TreeLattice1D&lt; OneFactorModel::ShortRateTree &gt;</a>, and <a class="el" href="../../d8/dc6/class_quant_lib_1_1_tree_lattice1_d.html#a2415553deee4f45f97f1ef6a1e0e8c0d">TreeLattice1D&lt; BlackScholesLattice&lt; T &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -452,7 +451,7 @@ Numerical method interface</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html#l00094">94</a> of file <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html">numericalmethod.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html#l00095">95</a> of file <a class="el" href="../../d8/d72/numericalmethod_8hpp_source.html">numericalmethod.hpp</a>.</p>
 
 </div>
 </div>
