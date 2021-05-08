@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -524,6 +524,7 @@ $(function() {
 , <a class="el" href="de/df1/class_quant_lib_1_1_make_yo_y_inflation_cap_floor.html#a2e082f77756283be8b03f6168c4a37d3">MakeYoYInflationCapFloor</a>
 , <a class="el" href="d4/dd2/class_quant_lib_1_1_range_accrual_leg.html#affe7512dd36a9cd45f3cdd1d7094943b">RangeAccrualLeg</a>
 , <a class="el" href="df/d55/class_quant_lib_1_1_risky_floating_bond.html#affe7512dd36a9cd45f3cdd1d7094943b">RiskyFloatingBond</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#affe7512dd36a9cd45f3cdd1d7094943b">SubPeriodsLeg</a>
 , <a class="el" href="d1/d80/class_quant_lib_1_1_swaption_helper.html#a420bbafe69666b1e4f32849486f042dc">SwaptionHelper</a>
 , <a class="el" href="de/dc7/class_quant_lib_1_1_yo_y_inflation_cap_floor_engine.html#a2e082f77756283be8b03f6168c4a37d3">YoYInflationCapFloorEngine</a>
 , <a class="el" href="d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html#a2e082f77756283be8b03f6168c4a37d3">yoyInflationLeg</a>
@@ -930,7 +931,6 @@ $(function() {
 , <a class="el" href="de/db2/class_quant_lib_1_1_fdm_ndim_solver.html#a1a5680106af428c3896552f9911bddd6">FdmNdimSolver&lt; N &gt;</a>
 , <a class="el" href="d9/dd3/class_quant_lib_1_1_libor_forward_model_process.html#a110e0feaca889be53ce4194ad6389ead">LiborForwardModelProcess</a>
 , <a class="el" href="d5/d73/class_quant_lib_1_1_range_accrual_pricer.html#a1a5680106af428c3896552f9911bddd6">RangeAccrualPricer</a>
-, <a class="el" href="d3/de2/class_quant_lib_1_1_sub_periods_pricer.html#a1a5680106af428c3896552f9911bddd6">SubPeriodsPricer</a>
 </li>
 <li>initJacobian_
 : <a class="el" href="dd/d57/class_quant_lib_1_1_levenberg_marquardt.html#a5acaba9312f7326c4e7aa01cb949b101">LevenbergMarquardt</a>
@@ -957,6 +957,7 @@ $(function() {
 <li>innerValue()
 : <a class="el" href="d1/d9d/class_quant_lib_1_1_fdm_affine_model_swap_inner_value.html#a02d65938289e9bfa6b816689522158a5">FdmAffineModelSwapInnerValue&lt; ModelType &gt;</a>
 , <a class="el" href="d8/d6f/class_quant_lib_1_1_fdm_cell_averaging_inner_value.html#acadeba685a98a656117b0da6f53f2186">FdmCellAveragingInnerValue</a>
+, <a class="el" href="d2/d06/class_quant_lib_1_1_fdm_escrowed_log_inner_value_calculator.html#a02d65938289e9bfa6b816689522158a5">FdmEscrowedLogInnerValueCalculator</a>
 , <a class="el" href="db/d8f/class_quant_lib_1_1_fdm_exp_ext_o_u_inner_value_calculator.html#a02d65938289e9bfa6b816689522158a5">FdmExpExtOUInnerValueCalculator</a>
 , <a class="el" href="df/d18/class_quant_lib_1_1_fdm_ext_o_u_jump_model_inner_value.html#a02d65938289e9bfa6b816689522158a5">FdmExtOUJumpModelInnerValue</a>
 , <a class="el" href="de/d18/class_quant_lib_1_1_fdm_inner_value_calculator.html#abf190c44cd8a17439c5121804d753e60">FdmInnerValueCalculator</a>
@@ -1085,6 +1086,9 @@ $(function() {
 </li>
 <li>integratedExpectedValue()
 : <a class="el" href="d0/d82/class_quant_lib_1_1_latent_model.html#ada44c6f03858c0d5f260c1815cc22246">LatentModel&lt; copulaPolicyImpl &gt;</a>
+</li>
+<li>integratedExpectedValueV()
+: <a class="el" href="d0/d82/class_quant_lib_1_1_latent_model.html#aa7a949426362d456ed674b01c32d7caa">LatentModel&lt; copulaPolicyImpl &gt;</a>
 </li>
 <li>integratedVariance()
 : <a class="el" href="d3/dc5/class_quant_lib_1_1_lm_const_wrapper_volatility_model.html#ab38ed8719ee58412e997035668062c73">LmConstWrapperVolatilityModel</a>
@@ -1220,7 +1224,7 @@ $(function() {
 : <a class="el" href="d7/d31/class_quant_lib_1_1_fixed_rate_coupon.html#a03efe4ae75db95a030b7fbe83d54a7aa">FixedRateCoupon</a>
 </li>
 <li>InterestRate()
-: <a class="el" href="d8/d93/class_quant_lib_1_1_interest_rate.html#aa302b38a9a595c752fb01fcb473e2924">InterestRate</a>
+: <a class="el" href="d8/d93/class_quant_lib_1_1_interest_rate.html#a80958bad006bf684a8c9ca06465af583">InterestRate</a>
 </li>
 <li>InterestRateIndex()
 : <a class="el" href="d3/de8/class_quant_lib_1_1_interest_rate_index.html#aa1b6afe709e0791de06c5b84e4a9eed4">InterestRateIndex</a>
@@ -1287,7 +1291,7 @@ $(function() {
 : <a class="el" href="dd/d68/class_quant_lib_1_1_inflation_index.html#a2a2ae12e77e0ac75d12813f693958b4a">InflationIndex</a>
 </li>
 <li>InterpolatedAffineHazardRateCurve()
-: <a class="el" href="dc/da7/class_quant_lib_1_1_interpolated_affine_hazard_rate_curve.html#a11d400897a99f22e8b5d0a8f2db66791">InterpolatedAffineHazardRateCurve&lt; Interpolator &gt;</a>
+: <a class="el" href="dc/da7/class_quant_lib_1_1_interpolated_affine_hazard_rate_curve.html#aa5888acf77cb3998287057f97ea0280f">InterpolatedAffineHazardRateCurve&lt; Interpolator &gt;</a>
 </li>
 <li>InterpolatedCPICapFloorTermPriceSurface()
 : <a class="el" href="dd/d4e/class_quant_lib_1_1_interpolated_c_p_i_cap_floor_term_price_surface.html#a8334d5a83e4b970ae5e8c3fe7fd97afc">InterpolatedCPICapFloorTermPriceSurface&lt; Interpolator2D &gt;</a>
@@ -1299,7 +1303,7 @@ $(function() {
 : <a class="el" href="d5/de3/class_quant_lib_1_1_interpolated_default_density_curve.html#a8c0c81b5218c6878a761a8b61b3847ee">InterpolatedDefaultDensityCurve&lt; Interpolator &gt;</a>
 </li>
 <li>InterpolatedDiscountCurve()
-: <a class="el" href="d4/dd2/class_quant_lib_1_1_interpolated_discount_curve.html#a8fe1a1d910b193a5dada793d5f07bc90">InterpolatedDiscountCurve&lt; Interpolator &gt;</a>
+: <a class="el" href="d4/dd2/class_quant_lib_1_1_interpolated_discount_curve.html#a6113b500cd6d2ee2ea94e277c047b36a">InterpolatedDiscountCurve&lt; Interpolator &gt;</a>
 </li>
 <li>InterpolatedForwardCurve()
 : <a class="el" href="dc/d57/class_quant_lib_1_1_interpolated_forward_curve.html#a412ee31d3796ca98b65003ad7de2a5b3">InterpolatedForwardCurve&lt; Interpolator &gt;</a>
@@ -1311,13 +1315,13 @@ $(function() {
 : <a class="el" href="d2/d0b/class_quant_lib_1_1_interpolated_piecewise_zero_spreaded_term_structure.html#ae7bc174a3b67769e0908552cefe31b4b">InterpolatedPiecewiseZeroSpreadedTermStructure&lt; Interpolator &gt;</a>
 </li>
 <li>InterpolatedSimpleZeroCurve()
-: <a class="el" href="d3/dc8/class_quant_lib_1_1_interpolated_simple_zero_curve.html#a8bb9f6f01a2466e96d6c50579c631317">InterpolatedSimpleZeroCurve&lt; Interpolator &gt;</a>
+: <a class="el" href="d3/dc8/class_quant_lib_1_1_interpolated_simple_zero_curve.html#a00282ca129c3aa6bb7aa1100a38144ce">InterpolatedSimpleZeroCurve&lt; Interpolator &gt;</a>
 </li>
 <li>InterpolatedSmileSection()
-: <a class="el" href="dd/d01/class_quant_lib_1_1_interpolated_smile_section.html#a4ae947fdb7964f035887c753947585ec">InterpolatedSmileSection&lt; Interpolator &gt;</a>
+: <a class="el" href="dd/d01/class_quant_lib_1_1_interpolated_smile_section.html#a4a2598054f6f1d41936352c8585ecd7b">InterpolatedSmileSection&lt; Interpolator &gt;</a>
 </li>
 <li>InterpolatedSurvivalProbabilityCurve()
-: <a class="el" href="d3/dc9/class_quant_lib_1_1_interpolated_survival_probability_curve.html#a7410a4d7f86d0d8705a5a30b2817efd0">InterpolatedSurvivalProbabilityCurve&lt; Interpolator &gt;</a>
+: <a class="el" href="d3/dc9/class_quant_lib_1_1_interpolated_survival_probability_curve.html#a3b797b4f0da5b05d2506443aa8572cc5">InterpolatedSurvivalProbabilityCurve&lt; Interpolator &gt;</a>
 </li>
 <li>interpolatedVariances()
 : <a class="el" href="d7/d6b/class_quant_lib_1_1_volatility_interpolation_specifier.html#aa025e5f03559b83db8d4c2b0594dd6be">VolatilityInterpolationSpecifier</a>
@@ -1336,7 +1340,7 @@ $(function() {
 : <a class="el" href="d3/d83/class_quant_lib_1_1_interpolated_yo_y_optionlet_volatility_curve.html#a53651200f8692b9acd84eb3a1579784c">InterpolatedYoYOptionletVolatilityCurve&lt; Interpolator1D &gt;</a>
 </li>
 <li>InterpolatedZeroCurve()
-: <a class="el" href="d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#aca4cbc34c6114843f9b9bac0d06c2846">InterpolatedZeroCurve&lt; Interpolator &gt;</a>
+: <a class="el" href="d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a12cd28ded880657f012a62362c49aba4">InterpolatedZeroCurve&lt; Interpolator &gt;</a>
 </li>
 <li>InterpolatedZeroInflationCurve()
 : <a class="el" href="d7/d3f/class_quant_lib_1_1_interpolated_zero_inflation_curve.html#afe75f4f50a5cf03e42cf28cdb5701055">InterpolatedZeroInflationCurve&lt; Interpolator &gt;</a>
@@ -1532,7 +1536,7 @@ $(function() {
 : <a class="el" href="de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html#a94c3ceb8818a466b6bd20dcb49d2665f">InverseCumulativeRng&lt; RNG, IC &gt;</a>
 </li>
 <li>InverseCumulativeRsg()
-: <a class="el" href="d2/d45/class_quant_lib_1_1_inverse_cumulative_rsg.html#a0104cb9b835efe77fcbc3f44aef09092">InverseCumulativeRsg&lt; USG, IC &gt;</a>
+: <a class="el" href="d2/d45/class_quant_lib_1_1_inverse_cumulative_rsg.html#a647d6cdf29ef0b54feb599eca38f27ae">InverseCumulativeRsg&lt; USG, IC &gt;</a>
 </li>
 <li>InverseCumulativeStudent()
 : <a class="el" href="d8/d2d/class_quant_lib_1_1_inverse_cumulative_student.html#a4f10e6a2b86412632d0b563b756b9bb3">InverseCumulativeStudent</a>
@@ -1833,6 +1837,7 @@ $(function() {
 , <a class="el" href="d9/d97/class_quant_lib_1_1_nonstandard_swaption.html#a34523db1515ba7190d517dc4c483c293">NonstandardSwaption</a>
 , <a class="el" href="d1/dfc/class_quant_lib_1_1_nth_to_default.html#a34523db1515ba7190d517dc4c483c293">NthToDefault</a>
 , <a class="el" href="d3/da6/class_quant_lib_1_1_one_asset_option.html#a34523db1515ba7190d517dc4c483c293">OneAssetOption</a>
+, <a class="el" href="d6/dae/class_quant_lib_1_1_overnight_index_future.html#a34523db1515ba7190d517dc4c483c293">OvernightIndexFuture</a>
 , <a class="el" href="df/d63/class_quant_lib_1_1_path_multi_asset_option.html#a34523db1515ba7190d517dc4c483c293">PathMultiAssetOption</a>
 , <a class="el" href="dd/d55/class_quant_lib_1_1_risky_asset_swap.html#a34523db1515ba7190d517dc4c483c293">RiskyAssetSwap</a>
 , <a class="el" href="d6/d23/class_quant_lib_1_1_risky_asset_swap_option.html#a34523db1515ba7190d517dc4c483c293">RiskyAssetSwapOption</a>

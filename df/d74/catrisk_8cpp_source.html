@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -194,7 +194,7 @@ $(function() {
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> eventDate = <a class="code" href="../../d5/d7a/class_quant_lib_1_1_cat_simulation.html#a00bb50f040d4417abd9180e4427db385">start_</a> + <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a8f13561bdf9354d38c3d149c745b5c5d">days</a>*<a class="code" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">Days</a>;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">if</span>(eventDate&lt;=<a class="code" href="../../d5/d7a/class_quant_lib_1_1_cat_simulation.html#a1af50efee94834c37453eb7073bacb47">end_</a>)</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                path.push_back(std::pair&lt;Date, Real&gt; (eventDate, <a class="code" href="../../de/d99/class_quant_lib_1_1_beta_risk_simulation.html#a5db4cd80d08c917a6c5dd24b235d6bab">generateBeta</a>()));</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                path.emplace_back(eventDate, <a class="code" href="../../de/d99/class_quant_lib_1_1_beta_risk_simulation.html#a5db4cd80d08c917a6c5dd24b235d6bab">generateBeta</a>());</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            eventFraction = <a class="code" href="../../de/d99/class_quant_lib_1_1_beta_risk_simulation.html#a9a67502c459e64074e42bae9f3d1b52d">exponential_</a>();</div>

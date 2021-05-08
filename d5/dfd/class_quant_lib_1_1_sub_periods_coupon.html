@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -86,7 +86,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">ql/experimental/coupons/subperiodcoupons.hpp</a>&gt;</code></p>
+<p>sub-periods coupon  
+ <a href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html">ql/cashflows/subperiodcoupon.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for SubPeriodsCoupon:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -94,7 +97,7 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d4/df2/class_quant_lib_1_1_sub_periods_coupon__inherit__graph.png" border="0" usemap="#a_sub_periods_coupon_inherit__map" alt="Inheritance graph"/></div>
 <map name="_sub_periods_coupon_inherit__map" id="a_sub_periods_coupon_inherit__map">
-<area shape="rect" title=" " alt="" coords="99,2143,267,2440"/>
+<area shape="rect" title="sub&#45;periods coupon" alt="" coords="106,2143,259,2455"/>
 <area shape="rect" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html" title="base floating&#45;rate coupon class" alt="" coords="91,1416,274,2095"/>
 <area shape="rect" href="../../de/d94/class_quant_lib_1_1_coupon.html" title="coupon accruing over a fixed period" alt="" coords="5,748,165,1368"/>
 <area shape="rect" href="../../d9/dde/class_quant_lib_1_1_cash_flow.html" title="Base class for cash flows." alt="" coords="15,447,156,700"/>
@@ -110,56 +113,58 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../db/daf/class_quant_lib_1_1_sub_periods_coupon__coll__graph.png" border="0" usemap="#a_sub_periods_coupon_coll__map" alt="Collaboration graph"/></div>
 <map name="_sub_periods_coupon_coll__map" id="a_sub_periods_coupon_coll__map">
-<area shape="rect" title=" " alt="" coords="458,3409,626,3604"/>
-<area shape="rect" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html" title="base floating&#45;rate coupon class" alt="" coords="816,2771,998,3347"/>
-<area shape="rect" href="../../de/d94/class_quant_lib_1_1_coupon.html" title="coupon accruing over a fixed period" alt="" coords="651,2176,811,2679"/>
-<area shape="rect" href="../../d9/dde/class_quant_lib_1_1_cash_flow.html" title="Base class for cash flows." alt="" coords="679,1449,820,1703"/>
-<area shape="rect" href="../../d2/d6c/class_quant_lib_1_1_event.html" title="Base class for event." alt="" coords="692,899,808,1064"/>
-<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="676,684,823,849"/>
-<area shape="rect" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html" title="global repository for run&#45;time library settings" alt="" coords="604,456,799,621"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title=" " alt="" coords="384,287,596,379"/>
-<area shape="rect" title=" " alt="" coords="452,5,546,83"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title="Basic support for the singleton pattern." alt="" coords="506,132,612,224"/>
-<area shape="rect" title=" " alt="" coords="620,294,808,371"/>
-<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="934,294,981,371"/>
-<area shape="rect" title=" " alt="" coords="823,493,991,585"/>
-<area shape="rect" title=" " alt="" coords="375,1537,455,1615"/>
-<area shape="rect" title=" " alt="" coords="26,2389,164,2466"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="480,1127,654,2025"/>
-<area shape="rect" title=" " alt="" coords="189,2389,356,2466"/>
-<area shape="rect" title=" " alt="" coords="522,943,612,1020"/>
-<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="1221,2323,1404,2532"/>
-<area shape="rect" title=" " alt="" coords="1217,1530,1408,1622"/>
-<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html" title="day counter class" alt="" coords="855,2323,970,2532"/>
-<area shape="rect" title=" " alt="" coords="844,1530,991,1622"/>
-<area shape="rect" title=" " alt="" coords="1050,2381,1196,2473"/>
-<area shape="rect" title=" " alt="" coords="1428,2381,1621,2473"/>
-<area shape="rect" title=" " alt="" coords="1645,2389,1748,2466"/>
-<area shape="rect" title="STL class." alt="" coords="86,1537,173,1615"/>
-<area shape="rect" title=" " alt="" coords="110,943,149,1020"/>
-<area shape="rect" title=" " alt="" coords="1022,3020,1080,3097"/>
-<area shape="rect" title=" " alt="" coords="1104,3013,1251,3105"/>
+<area shape="rect" title="sub&#45;periods coupon" alt="" coords="297,3380,450,3619"/>
+<area shape="rect" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html" title="base floating&#45;rate coupon class" alt="" coords="837,2741,1019,3317"/>
+<area shape="rect" href="../../de/d94/class_quant_lib_1_1_coupon.html" title="coupon accruing over a fixed period" alt="" coords="615,2176,775,2679"/>
+<area shape="rect" href="../../d9/dde/class_quant_lib_1_1_cash_flow.html" title="Base class for cash flows." alt="" coords="637,1449,779,1703"/>
+<area shape="rect" href="../../d2/d6c/class_quant_lib_1_1_event.html" title="Base class for event." alt="" coords="650,899,766,1064"/>
+<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="635,684,781,849"/>
+<area shape="rect" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html" title="global repository for run&#45;time library settings" alt="" coords="563,456,757,621"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title=" " alt="" coords="342,287,554,379"/>
+<area shape="rect" title=" " alt="" coords="410,5,505,83"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title="Basic support for the singleton pattern." alt="" coords="464,132,571,224"/>
+<area shape="rect" title=" " alt="" coords="578,294,766,371"/>
+<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="893,294,939,371"/>
+<area shape="rect" title=" " alt="" coords="781,493,949,585"/>
+<area shape="rect" title=" " alt="" coords="333,1537,413,1615"/>
+<area shape="rect" title=" " alt="" coords="5,2389,144,2466"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="438,1127,613,2025"/>
+<area shape="rect" title=" " alt="" coords="169,2389,335,2466"/>
+<area shape="rect" title=" " alt="" coords="481,943,570,1020"/>
+<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="1190,2323,1373,2532"/>
+<area shape="rect" title=" " alt="" coords="1186,1530,1377,1622"/>
+<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html" title="day counter class" alt="" coords="819,2323,933,2532"/>
+<area shape="rect" title=" " alt="" coords="803,1530,949,1622"/>
+<area shape="rect" title=" " alt="" coords="1019,2381,1165,2473"/>
+<area shape="rect" title=" " alt="" coords="1397,2381,1590,2473"/>
+<area shape="rect" title=" " alt="" coords="1614,2389,1717,2466"/>
+<area shape="rect" title="STL class." alt="" coords="39,1537,126,1615"/>
+<area shape="rect" title=" " alt="" coords="63,943,102,1020"/>
+<area shape="rect" title=" " alt="" coords="1043,2991,1101,3068"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c23de6c51d023eed7a550a466bc549b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a3c23de6c51d023eed7a550a466bc549b">SubPeriodsCoupon</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;paymentDate, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../de/d94/class_quant_lib_1_1_coupon.html#a8eee3d3767fab185a6f78d6b406618f5">nominal</a>, const ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; &amp;<a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#ada8ad079609c99c824b6566db8deca3d">index</a>, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;startDate, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;endDate, <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a3827f28c6ec62cd6e7ce8d6065c0f09b">fixingDays</a>, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;<a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a94fc547efda67580a0ae559769b5fc71">dayCounter</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a78f208a97efd10cf54cdf25431be64cf">gearing</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> couponSpread, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a395f9cf875077599a53957c007ce7207">rateSpread</a>, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;refPeriodStart, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;refPeriodEnd)</td></tr>
-<tr class="separator:a3c23de6c51d023eed7a550a466bc549b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b2a6946acabd0a2099ba65cb6772a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a97b2a6946acabd0a2099ba65cb6772a7">SubPeriodsCoupon</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;paymentDate, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../de/d94/class_quant_lib_1_1_coupon.html#a8eee3d3767fab185a6f78d6b406618f5">nominal</a>, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;startDate, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;endDate, <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a3827f28c6ec62cd6e7ce8d6065c0f09b">fixingDays</a>, const ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; &amp;<a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#ada8ad079609c99c824b6566db8deca3d">index</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a78f208a97efd10cf54cdf25431be64cf">gearing</a>=1.0, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> couponSpread=0.0, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a395f9cf875077599a53957c007ce7207">rateSpread</a>=0.0, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;refPeriodStart=<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(), const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;refPeriodEnd=<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(), const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;<a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a94fc547efda67580a0ae559769b5fc71">dayCounter</a>=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>(), const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../de/d94/class_quant_lib_1_1_coupon.html#a868b243ee1bfc57150fcc75d24241379">exCouponDate</a>=<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>())</td></tr>
+<tr class="separator:a97b2a6946acabd0a2099ba65cb6772a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Inspectors</div></td></tr>
+<tr class="memitem:a4906cd7b6e916398659bcb9fda7e3167"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a4906cd7b6e916398659bcb9fda7e3167">fixingDates</a> () const</td></tr>
+<tr class="memdesc:a4906cd7b6e916398659bcb9fda7e3167"><td class="mdescLeft">&#160;</td><td class="mdescRight">fixing dates for the rates to be compounded  <a href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a4906cd7b6e916398659bcb9fda7e3167">More...</a><br /></td></tr>
+<tr class="separator:a4906cd7b6e916398659bcb9fda7e3167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a1a509b4b2dec2b864f1477fd13c21"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a55a1a509b4b2dec2b864f1477fd13c21">dt</a> () const</td></tr>
+<tr class="memdesc:a55a1a509b4b2dec2b864f1477fd13c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">accrual (compounding) periods  <a href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a55a1a509b4b2dec2b864f1477fd13c21">More...</a><br /></td></tr>
+<tr class="separator:a55a1a509b4b2dec2b864f1477fd13c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16c48f7774f18d63c3273ae9960be878"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a16c48f7774f18d63c3273ae9960be878">valueDates</a> () const</td></tr>
+<tr class="memdesc:a16c48f7774f18d63c3273ae9960be878"><td class="mdescLeft">&#160;</td><td class="mdescRight">value dates for the rates to be compounded  <a href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a16c48f7774f18d63c3273ae9960be878">More...</a><br /></td></tr>
+<tr class="separator:a16c48f7774f18d63c3273ae9960be878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a395f9cf875077599a53957c007ce7207"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a395f9cf875077599a53957c007ce7207">rateSpread</a> () const</td></tr>
+<tr class="memdesc:a395f9cf875077599a53957c007ce7207"><td class="mdescLeft">&#160;</td><td class="mdescRight">rate spread  <a href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a395f9cf875077599a53957c007ce7207">More...</a><br /></td></tr>
 <tr class="separator:a395f9cf875077599a53957c007ce7207"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0626925a19e1916e43db55d4646b169b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a0626925a19e1916e43db55d4646b169b">startTime</a> () const</td></tr>
-<tr class="separator:a0626925a19e1916e43db55d4646b169b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88923eca1425bf13c9886b25917fd667"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a88923eca1425bf13c9886b25917fd667">endTime</a> () const</td></tr>
-<tr class="separator:a88923eca1425bf13c9886b25917fd667"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5af5a5b9a1c959c80ab0bcbb263fbddf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a5af5a5b9a1c959c80ab0bcbb263fbddf">observations</a> () const</td></tr>
-<tr class="separator:a5af5a5b9a1c959c80ab0bcbb263fbddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf880ff7b631ac94ec108a8d3aa7765"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#afcf880ff7b631ac94ec108a8d3aa7765">observationDates</a> () const</td></tr>
-<tr class="separator:afcf880ff7b631ac94ec108a8d3aa7765"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ea3093b6a6671f68604de175040ed1e"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a8ea3093b6a6671f68604de175040ed1e">observationTimes</a> () const</td></tr>
-<tr class="separator:a8ea3093b6a6671f68604de175040ed1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f199fd7550b0bf55ef123705dad9cd4"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a7f199fd7550b0bf55ef123705dad9cd4">observationsSchedule</a> () const</td></tr>
-<tr class="separator:a7f199fd7550b0bf55ef123705dad9cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">FloatingRateCoupon interface</div></td></tr>
+<tr class="memitem:af535c37d29395800f6afe4ed0e525c4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#af535c37d29395800f6afe4ed0e525c4d">fixingDate</a> () const override</td></tr>
+<tr class="memdesc:af535c37d29395800f6afe4ed0e525c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">the date when the coupon is fully determined  <a href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#af535c37d29395800f6afe4ed0e525c4d">More...</a><br /></td></tr>
+<tr class="separator:af535c37d29395800f6afe4ed0e525c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_floating_rate_coupon"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_floating_rate_coupon')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html">FloatingRateCoupon</a></td></tr>
 <tr class="memitem:a2f344fe85fa230c13679f493d7ae5211 inherit pub_methods_class_quant_lib_1_1_floating_rate_coupon"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a2f344fe85fa230c13679f493d7ae5211">FloatingRateCoupon</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;paymentDate, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../de/d94/class_quant_lib_1_1_coupon.html#a8eee3d3767fab185a6f78d6b406618f5">nominal</a>, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;startDate, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;endDate, <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a3827f28c6ec62cd6e7ce8d6065c0f09b">fixingDays</a>, const ext::shared_ptr&lt; <a class="el" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html">InterestRateIndex</a> &gt; &amp;<a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#ada8ad079609c99c824b6566db8deca3d">index</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a78f208a97efd10cf54cdf25431be64cf">gearing</a>=1.0, <a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> <a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#af2b1ac06508be31b34a28d76091c0e3f">spread</a>=0.0, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;refPeriodStart=<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(), const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;refPeriodEnd=<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(), <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> <a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a94fc547efda67580a0ae559769b5fc71">dayCounter</a>=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>(), <a class="el" href="../../d9/db9/classbool.html">bool</a> <a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#af9b1c50cf9122d3e77a624fe2b17988c">isInArrears</a>=false, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../de/d94/class_quant_lib_1_1_coupon.html#a868b243ee1bfc57150fcc75d24241379">exCouponDate</a>=<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>())</td></tr>
 <tr class="separator:a2f344fe85fa230c13679f493d7ae5211 inherit pub_methods_class_quant_lib_1_1_floating_rate_coupon"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,9 +188,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3827f28c6ec62cd6e7ce8d6065c0f09b inherit pub_methods_class_quant_lib_1_1_floating_rate_coupon"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a3827f28c6ec62cd6e7ce8d6065c0f09b">fixingDays</a> () const</td></tr>
 <tr class="memdesc:a3827f28c6ec62cd6e7ce8d6065c0f09b inherit pub_methods_class_quant_lib_1_1_floating_rate_coupon"><td class="mdescLeft">&#160;</td><td class="mdescRight">fixing days  <a href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a3827f28c6ec62cd6e7ce8d6065c0f09b">More...</a><br /></td></tr>
 <tr class="separator:a3827f28c6ec62cd6e7ce8d6065c0f09b inherit pub_methods_class_quant_lib_1_1_floating_rate_coupon"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e1764cdfb463035dfea94da6500bf84 inherit pub_methods_class_quant_lib_1_1_floating_rate_coupon"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a0e1764cdfb463035dfea94da6500bf84">fixingDate</a> () const</td></tr>
-<tr class="memdesc:a0e1764cdfb463035dfea94da6500bf84 inherit pub_methods_class_quant_lib_1_1_floating_rate_coupon"><td class="mdescLeft">&#160;</td><td class="mdescRight">fixing date  <a href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a0e1764cdfb463035dfea94da6500bf84">More...</a><br /></td></tr>
-<tr class="separator:a0e1764cdfb463035dfea94da6500bf84 inherit pub_methods_class_quant_lib_1_1_floating_rate_coupon"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78f208a97efd10cf54cdf25431be64cf inherit pub_methods_class_quant_lib_1_1_floating_rate_coupon"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a78f208a97efd10cf54cdf25431be64cf">gearing</a> () const</td></tr>
 <tr class="memdesc:a78f208a97efd10cf54cdf25431be64cf inherit pub_methods_class_quant_lib_1_1_floating_rate_coupon"><td class="mdescLeft">&#160;</td><td class="mdescRight">index gearing, i.e. multiplicative coefficient for the index  <a href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a78f208a97efd10cf54cdf25431be64cf">More...</a><br /></td></tr>
 <tr class="separator:a78f208a97efd10cf54cdf25431be64cf inherit pub_methods_class_quant_lib_1_1_floating_rate_coupon"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -289,18 +291,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Visitability</h2></td></tr>
-<tr class="memitem:a6b4dfb2aef0717c1cc3b47544c5c6f1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a6b4dfb2aef0717c1cc3b47544c5c6f1f">startTime_</a></td></tr>
-<tr class="separator:a6b4dfb2aef0717c1cc3b47544c5c6f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b07582d94c76dac428b440ab88c6339"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a0b07582d94c76dac428b440ab88c6339">endTime_</a></td></tr>
-<tr class="separator:a0b07582d94c76dac428b440ab88c6339"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91d996104441e6dca0e443589225fa33"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a91d996104441e6dca0e443589225fa33">observationsSchedule_</a></td></tr>
-<tr class="separator:a91d996104441e6dca0e443589225fa33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36045fdd53fbd0603ce4860e6e95f780"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a36045fdd53fbd0603ce4860e6e95f780">observationDates_</a></td></tr>
-<tr class="separator:a36045fdd53fbd0603ce4860e6e95f780"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c2145cfda3466bf375b7d1917a15bcf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a0c2145cfda3466bf375b7d1917a15bcf">observationTimes_</a></td></tr>
-<tr class="separator:a0c2145cfda3466bf375b7d1917a15bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2d4e5d738e1d20ccf4242ceb027eca4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#ab2d4e5d738e1d20ccf4242ceb027eca4">observations_</a></td></tr>
-<tr class="separator:ab2d4e5d738e1d20ccf4242ceb027eca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa73b8b675cd4c690343f64b4be74c784"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#aa73b8b675cd4c690343f64b4be74c784">valueDates_</a></td></tr>
+<tr class="separator:aa73b8b675cd4c690343f64b4be74c784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385ec624b35f431becf19c48a3698e07"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a385ec624b35f431becf19c48a3698e07">fixingDates_</a></td></tr>
+<tr class="separator:a385ec624b35f431becf19c48a3698e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bedbbacb0b82a55c579510cee137603"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a9bedbbacb0b82a55c579510cee137603">n_</a></td></tr>
+<tr class="separator:a9bedbbacb0b82a55c579510cee137603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4469cea4b7a580aa23f08c62603745"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a2d4469cea4b7a580aa23f08c62603745">dt_</a></td></tr>
+<tr class="separator:a2d4469cea4b7a580aa23f08c62603745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd5ae8789c15be21658f206e48b2c428"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#afd5ae8789c15be21658f206e48b2c428">rateSpread_</a></td></tr>
 <tr class="separator:afd5ae8789c15be21658f206e48b2c428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fcc1b62510947fbc30b2952fff63c2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">accept</a> (<a class="el" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a> &amp;) override</td></tr>
@@ -351,11 +349,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:abc04d8e2a149167ccd377f55a5ff276c inherit pro_attribs_class_quant_lib_1_1_coupon"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
+<div class="textblock"><p>sub-periods coupon </p>
+<p>Coupon paying the interest, depending on the averaging convention, due to possible multiple fixing resets in one accrual period. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html#l00042">42</a> of file <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html">subperiodcoupon.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3c23de6c51d023eed7a550a466bc549b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c23de6c51d023eed7a550a466bc549b">&#9670;&nbsp;</a></span>SubPeriodsCoupon()</h2>
+<a id="a97b2a6946acabd0a2099ba65cb6772a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97b2a6946acabd0a2099ba65cb6772a7">&#9670;&nbsp;</a></span>SubPeriodsCoupon()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -371,12 +371,6 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td>
           <td class="paramname"><em>nominal</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -399,38 +393,50 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;&#160;</td>
-          <td class="paramname"><em>dayCounter</em>, </td>
+          <td class="paramtype">const ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td>
-          <td class="paramname"><em>gearing</em>, </td>
+          <td class="paramname"><em>gearing</em> = <code>1.0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td>
-          <td class="paramname"><em>couponSpread</em>, </td>
+          <td class="paramname"><em>couponSpread</em> = <code>0.0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td>
-          <td class="paramname"><em>rateSpread</em>, </td>
+          <td class="paramname"><em>rateSpread</em> = <code>0.0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;&#160;</td>
-          <td class="paramname"><em>refPeriodStart</em>, </td>
+          <td class="paramname"><em>refPeriodStart</em> = <code><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;&#160;</td>
-          <td class="paramname"><em>refPeriodEnd</em>&#160;</td>
+          <td class="paramname"><em>refPeriodEnd</em> = <code><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;&#160;</td>
+          <td class="paramname"><em>dayCounter</em> = <code><a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;&#160;</td>
+          <td class="paramname"><em>exCouponDate</em> = <code><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -440,24 +446,117 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dda/subperiodcoupons_8cpp_source.html#l00029">29</a> of file <a class="el" href="../../da/dda/subperiodcoupons_8cpp_source.html">subperiodcoupons.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d07/subperiodcoupon_8cpp_source.html#l00030">30</a> of file <a class="el" href="../../df/d07/subperiodcoupon_8cpp_source.html">subperiodcoupon.cpp</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a3c23de6c51d023eed7a550a466bc549b_cgraph.png" border="0" usemap="#ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a3c23de6c51d023eed7a550a466bc549b_cgraph" alt=""/></div>
-<map name="d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a3c23de6c51d023eed7a550a466bc549b_cgraph" id="ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a3c23de6c51d023eed7a550a466bc549b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,78,139,105"/>
-<area shape="rect" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a94fc547efda67580a0ae559769b5fc71" title="day counter for accrual calculation" alt="" coords="187,5,385,47"/>
-<area shape="rect" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#ada8ad079609c99c824b6566db8deca3d" title="floating index" alt="" coords="187,71,385,112"/>
-<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="211,136,361,177"/>
+<div class="center"><img src="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a97b2a6946acabd0a2099ba65cb6772a7_cgraph.png" border="0" usemap="#ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a97b2a6946acabd0a2099ba65cb6772a7_cgraph" alt=""/></div>
+<map name="d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a97b2a6946acabd0a2099ba65cb6772a7_cgraph" id="ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a97b2a6946acabd0a2099ba65cb6772a7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,303,139,330"/>
+<area shape="rect" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html#a3da5ae0e0cb83672e205fd9fcc64b42c" title=" " alt="" coords="202,5,370,47"/>
+<area shape="rect" href="../../d5/d5b/class_quant_lib_1_1_schedule.html#a61bd806d4dda74252ab0a5b2bcbe4d81" title=" " alt="" coords="218,71,354,112"/>
+<area shape="rect" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html#aa5fb54527a267e78da1e8d6ef6df5b09" title=" " alt="" coords="202,136,370,177"/>
+<area shape="rect" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html#aa4e47e7d352c7772d613c0ed964804fb" title=" " alt="" coords="202,201,370,243"/>
+<area shape="rect" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#ada8ad079609c99c824b6566db8deca3d" title="floating index" alt="" coords="187,267,385,308"/>
+<area shape="rect" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html#a7b1713f25412ed69bc6ba7c2a7dca182" title=" " alt="" coords="193,333,379,359"/>
+<area shape="rect" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html#afe306f10182e2a6dc9b44082879e5aaf" title=" " alt="" coords="202,384,370,425"/>
+<area shape="rect" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html#a07ce0e5967872214e9afdc5cd7bcd984" title=" " alt="" coords="202,449,370,491"/>
+<area shape="rect" href="../../df/d0c/class_quant_lib_1_1_make_schedule.html#a80dd026edd470f9928903009ada55ffa" title=" " alt="" coords="202,515,370,556"/>
+<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="211,580,361,621"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4906cd7b6e916398659bcb9fda7e3167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4906cd7b6e916398659bcb9fda7e3167">&#9670;&nbsp;</a></span>fixingDates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&gt;&amp; fixingDates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fixing dates for the rates to be compounded </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html#l00070">70</a> of file <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html">subperiodcoupon.hpp</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a4906cd7b6e916398659bcb9fda7e3167_icgraph.png" border="0" usemap="#ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a4906cd7b6e916398659bcb9fda7e3167_icgraph" alt=""/></div>
+<map name="d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a4906cd7b6e916398659bcb9fda7e3167_icgraph" id="ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a4906cd7b6e916398659bcb9fda7e3167_icgraph">
+<area shape="rect" title="fixing dates for the rates to be compounded" alt="" coords="236,13,323,39"/>
+<area shape="rect" href="../../d3/de2/class_quant_lib_1_1_sub_periods_pricer.html#a361a695d83794fb684583c6c7044bc7e" title=" " alt="" coords="5,5,188,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a55a1a509b4b2dec2b864f1477fd13c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55a1a509b4b2dec2b864f1477fd13c21">&#9670;&nbsp;</a></span>dt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a>&gt;&amp; dt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>accrual (compounding) periods </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html#l00072">72</a> of file <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html">subperiodcoupon.hpp</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a55a1a509b4b2dec2b864f1477fd13c21_icgraph.png" border="0" usemap="#ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a55a1a509b4b2dec2b864f1477fd13c21_icgraph" alt=""/></div>
+<map name="d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a55a1a509b4b2dec2b864f1477fd13c21_icgraph" id="ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a55a1a509b4b2dec2b864f1477fd13c21_icgraph">
+<area shape="rect" title="accrual (compounding) periods" alt="" coords="252,46,291,73"/>
+<area shape="rect" href="../../d7/db6/class_quant_lib_1_1_averaging_rate_pricer.html#af9a5cd9890254425b81a118b1f6afbda" title=" " alt="" coords="5,5,204,47"/>
+<area shape="rect" href="../../d6/de1/class_quant_lib_1_1_compounding_rate_pricer.html#af9a5cd9890254425b81a118b1f6afbda" title=" " alt="" coords="11,71,199,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a16c48f7774f18d63c3273ae9960be878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16c48f7774f18d63c3273ae9960be878">&#9670;&nbsp;</a></span>valueDates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&gt;&amp; valueDates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>value dates for the rates to be compounded </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html#l00074">74</a> of file <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html">subperiodcoupon.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a395f9cf875077599a53957c007ce7207"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a395f9cf875077599a53957c007ce7207">&#9670;&nbsp;</a></span>rateSpread()</h2>
 
@@ -473,187 +572,51 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00063">63</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a395f9cf875077599a53957c007ce7207_icgraph.png" border="0" usemap="#ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a395f9cf875077599a53957c007ce7207_icgraph" alt=""/></div>
-<map name="d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a395f9cf875077599a53957c007ce7207_icgraph" id="ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a395f9cf875077599a53957c007ce7207_icgraph">
-<area shape="rect" title=" " alt="" coords="236,13,321,39"/>
-<area shape="rect" href="../../d3/de2/class_quant_lib_1_1_sub_periods_pricer.html#a361a695d83794fb684583c6c7044bc7e" title=" " alt="" coords="5,5,188,47"/>
-</map>
-</div>
+<p>rate spread </p>
 
-</div>
-</div>
-<a id="a0626925a19e1916e43db55d4646b169b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0626925a19e1916e43db55d4646b169b">&#9670;&nbsp;</a></span>startTime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> startTime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a0626925a19e1916e43db55d4646b169b_icgraph.png" border="0" usemap="#ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a0626925a19e1916e43db55d4646b169b_icgraph" alt=""/></div>
-<map name="d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a0626925a19e1916e43db55d4646b169b_icgraph" id="ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a0626925a19e1916e43db55d4646b169b_icgraph">
-<area shape="rect" title=" " alt="" coords="236,13,312,39"/>
-<area shape="rect" href="../../d3/de2/class_quant_lib_1_1_sub_periods_pricer.html#a361a695d83794fb684583c6c7044bc7e" title=" " alt="" coords="5,5,188,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a88923eca1425bf13c9886b25917fd667"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88923eca1425bf13c9886b25917fd667">&#9670;&nbsp;</a></span>endTime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> endTime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00066">66</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html#l00076">76</a> of file <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html">subperiodcoupon.hpp</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a88923eca1425bf13c9886b25917fd667_icgraph.png" border="0" usemap="#ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a88923eca1425bf13c9886b25917fd667_icgraph" alt=""/></div>
-<map name="d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a88923eca1425bf13c9886b25917fd667_icgraph" id="ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a88923eca1425bf13c9886b25917fd667_icgraph">
-<area shape="rect" title=" " alt="" coords="236,13,307,39"/>
+<div class="center"><img src="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a395f9cf875077599a53957c007ce7207_icgraph.png" border="0" usemap="#ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a395f9cf875077599a53957c007ce7207_icgraph" alt=""/></div>
+<map name="d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a395f9cf875077599a53957c007ce7207_icgraph" id="ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a395f9cf875077599a53957c007ce7207_icgraph">
+<area shape="rect" title="rate spread" alt="" coords="236,13,321,39"/>
 <area shape="rect" href="../../d3/de2/class_quant_lib_1_1_sub_periods_pricer.html#a361a695d83794fb684583c6c7044bc7e" title=" " alt="" coords="5,5,188,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a5af5a5b9a1c959c80ab0bcbb263fbddf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5af5a5b9a1c959c80ab0bcbb263fbddf">&#9670;&nbsp;</a></span>observations()</h2>
+<a id="af535c37d29395800f6afe4ed0e525c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af535c37d29395800f6afe4ed0e525c4d">&#9670;&nbsp;</a></span>fixingDate()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> observations </td>
+          <td class="memname"><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> fixingDate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a5af5a5b9a1c959c80ab0bcbb263fbddf_icgraph.png" border="0" usemap="#ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a5af5a5b9a1c959c80ab0bcbb263fbddf_icgraph" alt=""/></div>
-<map name="d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a5af5a5b9a1c959c80ab0bcbb263fbddf_icgraph" id="ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a5af5a5b9a1c959c80ab0bcbb263fbddf_icgraph">
-<area shape="rect" title=" " alt="" coords="236,13,331,39"/>
-<area shape="rect" href="../../d3/de2/class_quant_lib_1_1_sub_periods_pricer.html#a361a695d83794fb684583c6c7044bc7e" title=" " alt="" coords="5,5,188,47"/>
-</map>
-</div>
+<p>the date when the coupon is fully determined </p>
 
-</div>
-</div>
-<a id="afcf880ff7b631ac94ec108a8d3aa7765"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcf880ff7b631ac94ec108a8d3aa7765">&#9670;&nbsp;</a></span>observationDates()</h2>
+<p>Reimplemented from <a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a0e1764cdfb463035dfea94da6500bf84">FloatingRateCoupon</a>.</p>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::vector&lt;<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&gt;&amp; observationDates </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00068">68</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a8ea3093b6a6671f68604de175040ed1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ea3093b6a6671f68604de175040ed1e">&#9670;&nbsp;</a></span>observationTimes()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::vector&lt;<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&gt;&amp; observationTimes </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a8ea3093b6a6671f68604de175040ed1e_icgraph.png" border="0" usemap="#ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a8ea3093b6a6671f68604de175040ed1e_icgraph" alt=""/></div>
-<map name="d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a8ea3093b6a6671f68604de175040ed1e_icgraph" id="ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a8ea3093b6a6671f68604de175040ed1e_icgraph">
-<area shape="rect" title=" " alt="" coords="236,13,359,39"/>
-<area shape="rect" href="../../d3/de2/class_quant_lib_1_1_sub_periods_pricer.html#a361a695d83794fb684583c6c7044bc7e" title=" " alt="" coords="5,5,188,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a7f199fd7550b0bf55ef123705dad9cd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f199fd7550b0bf55ef123705dad9cd4">&#9670;&nbsp;</a></span>observationsSchedule()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ext::shared_ptr&lt;<a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a>&gt; observationsSchedule </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00075">75</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a7f199fd7550b0bf55ef123705dad9cd4_icgraph.png" border="0" usemap="#ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a7f199fd7550b0bf55ef123705dad9cd4_icgraph" alt=""/></div>
-<map name="d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a7f199fd7550b0bf55ef123705dad9cd4_icgraph" id="ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a7f199fd7550b0bf55ef123705dad9cd4_icgraph">
-<area shape="rect" title=" " alt="" coords="236,13,384,39"/>
-<area shape="rect" href="../../d3/de2/class_quant_lib_1_1_sub_periods_pricer.html#a361a695d83794fb684583c6c7044bc7e" title=" " alt="" coords="5,5,188,47"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html#l00081">81</a> of file <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html">subperiodcoupon.hpp</a>.</p>
 
 </div>
 </div>
@@ -683,12 +646,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">FloatingRateCoupon</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/dda/subperiodcoupons_8cpp_source.html#l00071">71</a> of file <a class="el" href="../../da/dda/subperiodcoupons_8cpp_source.html">subperiodcoupons.cpp</a>.</p>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../df/d07/subperiodcoupon_8cpp_source.html#l00075">75</a> of file <a class="el" href="../../df/d07/subperiodcoupon_8cpp_source.html">subperiodcoupon.cpp</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a6fcc1b62510947fbc30b2952fff63c2d_cgraph.png" border="0" usemap="#ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a6fcc1b62510947fbc30b2952fff63c2d_cgraph" alt=""/></div>
 <map name="d5/dfd/class_quant_lib_1_1_sub_periods_coupon_a6fcc1b62510947fbc30b2952fff63c2d_cgraph" id="ad5/dfd/class_quant_lib_1_1_sub_periods_coupon_a6fcc1b62510947fbc30b2952fff63c2d_cgraph">
 <area shape="rect" title=" " alt="" coords="5,179,67,205"/>
@@ -703,8 +666,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a6b4dfb2aef0717c1cc3b47544c5c6f1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b4dfb2aef0717c1cc3b47544c5c6f1f">&#9670;&nbsp;</a></span>startTime_</h2>
+<a id="aa73b8b675cd4c690343f64b4be74c784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa73b8b675cd4c690343f64b4be74c784">&#9670;&nbsp;</a></span>valueDates_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -713,7 +676,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> startTime_</td>
+          <td class="memname">std::vector&lt;<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&gt; valueDates_</td>
         </tr>
       </table>
   </td>
@@ -723,12 +686,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00083">83</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html">subperiodcoupon.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a0b07582d94c76dac428b440ab88c6339"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b07582d94c76dac428b440ab88c6339">&#9670;&nbsp;</a></span>endTime_</h2>
+<a id="a385ec624b35f431becf19c48a3698e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a385ec624b35f431becf19c48a3698e07">&#9670;&nbsp;</a></span>fixingDates_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -737,7 +700,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> endTime_</td>
+          <td class="memname">std::vector&lt;<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&gt; fixingDates_</td>
         </tr>
       </table>
   </td>
@@ -747,12 +710,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00084">84</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html">subperiodcoupon.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a91d996104441e6dca0e443589225fa33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91d996104441e6dca0e443589225fa33">&#9670;&nbsp;</a></span>observationsSchedule_</h2>
+<a id="a9bedbbacb0b82a55c579510cee137603"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bedbbacb0b82a55c579510cee137603">&#9670;&nbsp;</a></span>n_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -761,7 +724,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ext::shared_ptr&lt;<a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a>&gt; observationsSchedule_</td>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n_</td>
         </tr>
       </table>
   </td>
@@ -771,12 +734,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00086">86</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html#l00089">89</a> of file <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html">subperiodcoupon.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a36045fdd53fbd0603ce4860e6e95f780"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36045fdd53fbd0603ce4860e6e95f780">&#9670;&nbsp;</a></span>observationDates_</h2>
+<a id="a2d4469cea4b7a580aa23f08c62603745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4469cea4b7a580aa23f08c62603745">&#9670;&nbsp;</a></span>dt_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -785,7 +748,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&gt; observationDates_</td>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a>&gt; dt_</td>
         </tr>
       </table>
   </td>
@@ -795,55 +758,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00087">87</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a0c2145cfda3466bf375b7d1917a15bcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c2145cfda3466bf375b7d1917a15bcf">&#9670;&nbsp;</a></span>observationTimes_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&gt; observationTimes_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ab2d4e5d738e1d20ccf4242ceb027eca4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2d4e5d738e1d20ccf4242ceb027eca4">&#9670;&nbsp;</a></span>observations_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> observations_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00090">90</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html#l00090">90</a> of file <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html">subperiodcoupon.hpp</a>.</p>
 
 </div>
 </div>
@@ -867,7 +782,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../db/df1/subperiodcoupons_8hpp_source.html">subperiodcoupons.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../d4/d34/subperiodcoupon_8hpp_source.html">subperiodcoupon.hpp</a>.</p>
 
 </div>
 </div>

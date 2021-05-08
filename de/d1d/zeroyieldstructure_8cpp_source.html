@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -126,36 +126,17 @@ $(function() {
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; jumpDates)</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    : <a class="code" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a>(settlementDays, cal, dc, jumps, jumpDates) {}</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#if defined(__GNUC__)</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#pragma GCC diagnostic push</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#pragma clang diagnostic push</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#if defined(QL_PATCH_MSVC)</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#pragma warning(push)</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#pragma warning(disable:4996)</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d4/d3f/class_quant_lib_1_1_zero_yield_structure.html#a17afc37d3dd1a6e11778cd43287805cd">   58</a></span>&#160;    <a class="code" href="../../d4/d3f/class_quant_lib_1_1_zero_yield_structure.html#a5276ef3744f1ee1bfd2c86d5f567be77">ZeroYieldStructure::ZeroYieldStructure</a>(</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                    <span class="keyword">const</span> <a class="code" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&amp; dc,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;<a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> &gt;&amp; jumps,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; jumpDates)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    : <a class="code" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a>(dc, jumps, jumpDates) {}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#if defined(QL_PATCH_MSVC)</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#pragma warning(pop)</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#pragma clang diagnostic pop</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#if defined(__GNUC__)</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#pragma GCC diagnostic pop</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    QL_DEPRECATED_DISABLE_WARNING</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d4/d3f/class_quant_lib_1_1_zero_yield_structure.html#abdf9879edc64c5f8e536e253e85f4b9f">   47</a></span>&#160;    <a class="code" href="../../d4/d3f/class_quant_lib_1_1_zero_yield_structure.html#a5276ef3744f1ee1bfd2c86d5f567be77">ZeroYieldStructure::ZeroYieldStructure</a>(</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                    <span class="keyword">const</span> <a class="code" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&amp; dc,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;<a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> &gt;&amp; jumps,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; jumpDates)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    : <a class="code" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a>(dc, jumps, jumpDates) {}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    QL_DEPRECATED_ENABLE_WARNING</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_yield_term_structure_html"><div class="ttname"><a href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">QuantLib::YieldTermStructure</a></div><div class="ttdoc">Interest-rate term structure.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d89/yieldtermstructure_8hpp_source.html#l00044">yieldtermstructure.hpp:44</a></div></div>

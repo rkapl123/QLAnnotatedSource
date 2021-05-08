@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -159,17 +159,16 @@ $(function() {
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="../../dc/d25/class_quant_lib_1_1_pool.html#a515375af09ee2904aff7f7e817ad20dc">   77</a></span>&#160;    <a class="code" href="../../d3/dee/class_t.html">Disposable&lt;std::vector&lt;DefaultProbKey&gt;</a> &gt; <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#a515375af09ee2904aff7f7e817ad20dc">Pool::defaultKeys</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">using namespace </span>ext::placeholders;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        std::vector&lt;DefaultProbKey&gt; <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#a515375af09ee2904aff7f7e817ad20dc">defaultKeys</a>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::transform(<a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#ae714ca023146dc617d9cd4a8880d55e3">defaultKeys_</a>.begin(), <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#ae714ca023146dc617d9cd4a8880d55e3">defaultKeys_</a>.end(),</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            std::back_inserter(<a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#a515375af09ee2904aff7f7e817ad20dc">defaultKeys</a>), ext::bind(</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;              &amp;std::map&lt;std::string, DefaultProbKey&gt;::value_type::second, _1));</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#a515375af09ee2904aff7f7e817ad20dc">defaultKeys</a>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        std::vector&lt;DefaultProbKey&gt; <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#a515375af09ee2904aff7f7e817ad20dc">defaultKeys</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#a515375af09ee2904aff7f7e817ad20dc">defaultKeys</a>.reserve(<a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#ae714ca023146dc617d9cd4a8880d55e3">defaultKeys_</a>.size());</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp; i : <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#ae714ca023146dc617d9cd4a8880d55e3">defaultKeys_</a>)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#a515375af09ee2904aff7f7e817ad20dc">defaultKeys</a>.push_back(i.second);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../dc/d25/class_quant_lib_1_1_pool.html#a515375af09ee2904aff7f7e817ad20dc">defaultKeys</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_issuer_html"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html">QuantLib::Issuer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1e/issuer_8hpp_source.html#l00040">issuer.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pool_html_aa911ba3ef90e0b3179e0a8dc10586424"><div class="ttname"><a href="../../dc/d25/class_quant_lib_1_1_pool.html#aa911ba3ef90e0b3179e0a8dc10586424">QuantLib::Pool::has</a></div><div class="ttdeci">bool has(const std::string &amp;name) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/pool_8cpp_source.html#l00040">pool.cpp:40</a></div></div>

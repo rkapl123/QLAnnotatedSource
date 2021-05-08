@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -113,20 +113,16 @@ $(function() {
 <div class="line"><span class="preprocessor">#include &lt;ql/time/daycounters/actual365fixed.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;ql/time/calendars/target.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;ql/currencies/europe.hpp&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;boost/assign/std/vector.hpp&gt;</span></div>
-<div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span>std;</div>
 <div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a>;</div>
-<div class="line"><span class="keyword">using namespace </span>boost::assign;</div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#if defined(QL_ENABLE_SESSIONS)</span></div>
 <div class="line"><span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line">    <a class="code" href="../../d5/d7b/namespace_quant_lib.html#afc1fa6a25515be394cb534495d704c1d">ThreadKey</a> sessionId() { <span class="keywordflow">return</span> 0; }</div>
+<div class="line">    <a class="code" href="../../d5/d7b/namespace_quant_lib.html#afc1fa6a25515be394cb534495d704c1d">ThreadKey</a> sessionId() { <span class="keywordflow">return</span> {}; }</div>
 <div class="line">}</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"> </div>
@@ -148,29 +144,26 @@ $(function() {
 <div class="line"><span class="comment">                        SET UP BASKET PORTFOLIO</span></div>
 <div class="line"><span class="comment">        -------------------------------------------------------------- */</span></div>
 <div class="line">        <span class="comment">// build curves and issuers into a basket of ten names</span></div>
-<div class="line">        std::vector&lt;Real&gt; hazardRates;</div>
-<div class="line">        hazardRates += </div>
-<div class="line">        <span class="comment">//  0.01, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9;        </span></div>
-<div class="line">            0.001, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09;        </div>
-<div class="line">        <span class="comment">//  0.01,  0.01,  0.01,  0.01, 0.01,  0.01,  0.01,  0.01,  0.01,  0.01;        </span></div>
+<div class="line">        std::vector&lt;Real&gt; hazardRates = {</div>
+<div class="line">            0.001, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09</div>
+<div class="line">        };</div>
 <div class="line">        std::vector&lt;std::string&gt; names;</div>
 <div class="line">        <span class="keywordflow">for</span>(<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;hazardRates.size(); i++)</div>
-<div class="line">            names.push_back(std::string(<span class="stringliteral">&quot;Acme&quot;</span>) + </div>
-<div class="line">                boost::lexical_cast&lt;std::string&gt;(i));</div>
+<div class="line">            names.push_back(std::string(<span class="stringliteral">&quot;Acme&quot;</span>) + std::to_string(i));</div>
 <div class="line">        std::vector&lt;Handle&lt;DefaultProbabilityTermStructure&gt; &gt; defTS;</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">double</span>&amp; hazardRate : hazardRates) {</div>
-<div class="line">            defTS.push_back(<a name="_a5"></a><a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;DefaultProbabilityTermStructure&gt;</a>(</div>
-<div class="line">                ext::make_shared&lt;FlatHazardRate&gt;(0, <a class="code" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>(), hazardRate, <a name="_a6"></a><a class="code" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>())));</div>
+<div class="line">            defTS.emplace_back(</div>
+<div class="line">                ext::make_shared&lt;FlatHazardRate&gt;(0, <a class="code" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>(), hazardRate, <a name="_a5"></a><a class="code" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>()));</div>
 <div class="line">            defTS.back()-&gt;enableExtrapolation();</div>
 <div class="line">        }</div>
 <div class="line">        std::vector&lt;Issuer&gt; issuers;</div>
 <div class="line">        <span class="keywordflow">for</span>(<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;hazardRates.size(); i++) {</div>
 <div class="line">            std::vector&lt;QuantLib::Issuer::key_curve_pair&gt; curves(1, </div>
-<div class="line">                std::make_pair(<a name="_a7"></a><a class="code" href="../../d1/d6c/class_quant_lib_1_1_north_america_corp_default_key.html">NorthAmericaCorpDefaultKey</a>(</div>
-<div class="line">                    <a name="_a8"></a><a class="code" href="../../db/d0b/class_quant_lib_1_1_e_u_r_currency.html">EURCurrency</a>(), <a name="a9"></a><a class="code" href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dca58f8d6688b98d67fda81d5f4b61a24e9">QuantLib::SeniorSec</a>,</div>
-<div class="line">                    <a name="_a10"></a><a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(), 1. <span class="comment">// amount threshold</span></div>
+<div class="line">                std::make_pair(<a name="_a6"></a><a class="code" href="../../d1/d6c/class_quant_lib_1_1_north_america_corp_default_key.html">NorthAmericaCorpDefaultKey</a>(</div>
+<div class="line">                    <a name="_a7"></a><a class="code" href="../../db/d0b/class_quant_lib_1_1_e_u_r_currency.html">EURCurrency</a>(), <a name="a8"></a><a class="code" href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dca58f8d6688b98d67fda81d5f4b61a24e9">QuantLib::SeniorSec</a>,</div>
+<div class="line">                    <a name="_a9"></a><a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(), 1. <span class="comment">// amount threshold</span></div>
 <div class="line">                    ), defTS[i]));</div>
-<div class="line">            issuers.push_back(<a name="_a11"></a><a class="code" href="../../dd/dda/class_quant_lib_1_1_issuer.html">Issuer</a>(curves));</div>
+<div class="line">            issuers.emplace_back(curves);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        ext::shared_ptr&lt;Pool&gt; thePool = ext::make_shared&lt;Pool&gt;();</div>
@@ -193,8 +186,8 @@ $(function() {
 <div class="line">        std::vector&lt;Real&gt; recoveries(hazardRates.size(), 0.4);</div>
 <div class="line"> </div>
 <div class="line">        <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> calcDate(<a class="code" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>().advance(Settings::instance().evaluationDate(), </div>
-<div class="line">            <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(60, <a name="a12"></a><a class="code" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54">Months</a>)));</div>
-<div class="line">        <a name="a13"></a><a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> factorValue = 0.05;</div>
+<div class="line">            <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(60, <a name="a10"></a><a class="code" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54">Months</a>)));</div>
+<div class="line">        <a name="a11"></a><a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> factorValue = 0.05;</div>
 <div class="line">        std::vector&lt;std::vector&lt;Real&gt; &gt; fctrsWeights(hazardRates.size(), </div>
 <div class="line">            std::vector&lt;Real&gt;(1, std::sqrt(factorValue)));</div>
 <div class="line"> </div>
@@ -223,8 +216,8 @@ $(function() {
 <div class="line"><span class="preprocessor">        #endif</span></div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// --- T Binomial model --------------------</span></div>
-<div class="line">        <a name="_a14"></a><a class="code" href="../../d1/d6a/struct_quant_lib_1_1_t_copula_policy_1_1init_traits.html">TCopulaPolicy::initTraits</a> initT;</div>
-<div class="line">        initT.<a name="a15"></a><a class="code" href="../../d1/d6a/struct_quant_lib_1_1_t_copula_policy_1_1init_traits.html#a61eb2a998ccf63ce7a01b3a2b2e91789">tOrders</a> = std::vector&lt;Integer&gt;(2, 3);</div>
+<div class="line">        <a name="_a12"></a><a class="code" href="../../d1/d6a/struct_quant_lib_1_1_t_copula_policy_1_1init_traits.html">TCopulaPolicy::initTraits</a> initT;</div>
+<div class="line">        initT.<a name="a13"></a><a class="code" href="../../d1/d6a/struct_quant_lib_1_1_t_copula_policy_1_1init_traits.html#a61eb2a998ccf63ce7a01b3a2b2e91789">tOrders</a> = std::vector&lt;Integer&gt;(2, 3);</div>
 <div class="line">        ext::shared_ptr&lt;TConstantLossLM&gt; ktTLossLM(</div>
 <div class="line">            ext::make_shared&lt;TConstantLossLM&gt;(fctrsWeights, </div>
 <div class="line">            recoveries, </div>
@@ -261,9 +254,9 @@ $(function() {
 <div class="line">        <span class="comment">// Size numCoresUsed = 4;</span></div>
 <div class="line">        <span class="comment">// Sobol, many cores</span></div>
 <div class="line">        ext::shared_ptr&lt;DefaultLossModel&gt; rdlmG(</div>
-<div class="line">            ext::make_shared&lt;<a name="_a16"></a><a class="code" href="../../de/dc2/class_quant_lib_1_1_random_default_l_m.html">RandomDefaultLM</a>&lt;<a name="_a17"></a><a class="code" href="../../dc/df8/struct_quant_lib_1_1_gaussian_copula_policy.html">GaussianCopulaPolicy</a>, </div>
-<div class="line">            <a name="_a18"></a><a class="code" href="../../dc/d7a/class_quant_lib_1_1_random_sequence_generator.html">RandomSequenceGenerator</a>&lt;</div>
-<div class="line">                <a name="_a19"></a><a class="code" href="../../d3/d24/class_quant_lib_1_1_box_muller_gaussian_rng.html">BoxMullerGaussianRng&lt;MersenneTwisterUniformRng&gt;</a> &gt; &gt; &gt;(gLM, </div>
+<div class="line">            ext::make_shared&lt;<a name="_a14"></a><a class="code" href="../../de/dc2/class_quant_lib_1_1_random_default_l_m.html">RandomDefaultLM</a>&lt;<a name="_a15"></a><a class="code" href="../../dc/df8/struct_quant_lib_1_1_gaussian_copula_policy.html">GaussianCopulaPolicy</a>, </div>
+<div class="line">            <a name="_a16"></a><a class="code" href="../../dc/d7a/class_quant_lib_1_1_random_sequence_generator.html">RandomSequenceGenerator</a>&lt;</div>
+<div class="line">                <a name="_a17"></a><a class="code" href="../../d3/d24/class_quant_lib_1_1_box_muller_gaussian_rng.html">BoxMullerGaussianRng&lt;MersenneTwisterUniformRng&gt;</a> &gt; &gt; &gt;(gLM, </div>
 <div class="line">                    recoveries, numSimulations, 1.e-6, 2863311530UL));</div>
 <div class="line">        <span class="comment">//ext::shared_ptr&lt;DefaultLossModel&gt; rdlmG(</span></div>
 <div class="line">        <span class="comment">//    ext::make_shared&lt;RandomDefaultLM&lt;GaussianCopulaPolicy&gt; &gt;(gLM, </span></div>
@@ -277,9 +270,9 @@ $(function() {
 <div class="line">        <span class="comment">// --- StudentT Random model ---------------------</span></div>
 <div class="line">        <span class="comment">// Sobol, many cores</span></div>
 <div class="line">        ext::shared_ptr&lt;DefaultLossModel&gt; rdlmT(</div>
-<div class="line">            ext::make_shared&lt;<a class="code" href="../../de/dc2/class_quant_lib_1_1_random_default_l_m.html">RandomDefaultLM</a>&lt;<a name="_a20"></a><a class="code" href="../../de/d52/class_quant_lib_1_1_t_copula_policy.html">TCopulaPolicy</a>, </div>
+<div class="line">            ext::make_shared&lt;<a class="code" href="../../de/dc2/class_quant_lib_1_1_random_default_l_m.html">RandomDefaultLM</a>&lt;<a name="_a18"></a><a class="code" href="../../de/d52/class_quant_lib_1_1_t_copula_policy.html">TCopulaPolicy</a>, </div>
 <div class="line">            <a class="code" href="../../dc/d7a/class_quant_lib_1_1_random_sequence_generator.html">RandomSequenceGenerator</a>&lt;</div>
-<div class="line">                <a name="_a21"></a><a class="code" href="../../d2/d63/class_quant_lib_1_1_polar_student_t_rng.html">PolarStudentTRng&lt;MersenneTwisterUniformRng&gt;</a> &gt; &gt; &gt;(ktTLossLM, </div>
+<div class="line">                <a name="_a19"></a><a class="code" href="../../d2/d63/class_quant_lib_1_1_polar_student_t_rng.html">PolarStudentTRng&lt;MersenneTwisterUniformRng&gt;</a> &gt; &gt; &gt;(ktTLossLM, </div>
 <div class="line">                    recoveries, numSimulations, 1.e-6, 2863311530UL));</div>
 <div class="line">        <span class="comment">//ext::shared_ptr&lt;DefaultLossModel&gt; rdlmT(</span></div>
 <div class="line">        <span class="comment">//    ext::make_shared&lt;RandomDefaultLM&lt;TCopulaPolicy&gt; &gt;(ktTLossLM, </span></div>
@@ -295,7 +288,7 @@ $(function() {
 <div class="line">        std::vector&lt;std::vector&lt;Real&gt; &gt; fctrsWeightsRR(2 * hazardRates.size(), </div>
 <div class="line">            std::vector&lt;Real&gt;(1, std::sqrt(factorValue)));</div>
 <div class="line">        <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> modelA = 2.2;</div>
-<div class="line">        ext::shared_ptr&lt;GaussianSpotLossLM&gt; sptLG(<span class="keyword">new</span> <a name="_a22"></a><a class="code" href="../../db/dd3/class_quant_lib_1_1_spot_recovery_latent_model.html">GaussianSpotLossLM</a>(</div>
+<div class="line">        ext::shared_ptr&lt;GaussianSpotLossLM&gt; sptLG(<span class="keyword">new</span> <a name="_a20"></a><a class="code" href="../../db/dd3/class_quant_lib_1_1_spot_recovery_latent_model.html">GaussianSpotLossLM</a>(</div>
 <div class="line">            fctrsWeightsRR, recoveries, modelA,</div>
 <div class="line">            LatentModelIntegrationType::GaussianQuadrature,</div>
 <div class="line">            <a class="code" href="../../dc/df8/struct_quant_lib_1_1_gaussian_copula_policy.html#a3f16e8bbc40e0cc318f5c5080ae9223e">GaussianCopulaPolicy::initTraits</a>()));</div>
@@ -308,7 +301,7 @@ $(function() {
 <div class="line">        <span class="comment">// Gaussian random joint default model:</span></div>
 <div class="line">        <span class="comment">// Sobol, many cores</span></div>
 <div class="line">        ext::shared_ptr&lt;DefaultLossModel&gt; rdLlmG(</div>
-<div class="line">            ext::make_shared&lt;<a name="_a23"></a><a class="code" href="../../d8/d9a/class_quant_lib_1_1_random_loss_l_m.html">RandomLossLM&lt;GaussianCopulaPolicy&gt;</a> &gt;(sptLG, </div>
+<div class="line">            ext::make_shared&lt;<a name="_a21"></a><a class="code" href="../../d8/d9a/class_quant_lib_1_1_random_loss_l_m.html">RandomLossLM&lt;GaussianCopulaPolicy&gt;</a> &gt;(sptLG, </div>
 <div class="line">                numSimulations, 1.e-6, 2863311530UL));</div>
 <div class="line">        theBskt-&gt;setLossModel(rdLlmG);</div>
 <div class="line"> </div>
@@ -328,8 +321,8 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Base Correlation model set up to test cocherence with base LHP model</span></div>
 <div class="line">        std::vector&lt;Period&gt; bcTenors;</div>
-<div class="line">        bcTenors.push_back(<a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(1, <a name="a24"></a><a class="code" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d">Years</a>));</div>
-<div class="line">        bcTenors.push_back(<a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(5, <a class="code" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d">Years</a>));</div>
+<div class="line">        bcTenors.emplace_back(1, <a name="a22"></a><a class="code" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d">Years</a>);</div>
+<div class="line">        bcTenors.emplace_back(5, <a class="code" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d">Years</a>);</div>
 <div class="line">        std::vector&lt;Real&gt; bcLossPercentages;</div>
 <div class="line">        bcLossPercentages.push_back(0.03);</div>
 <div class="line">        bcLossPercentages.push_back(0.12);</div>
@@ -337,34 +330,34 @@ $(function() {
 <div class="line">        <span class="comment">// </span></div>
 <div class="line">        std::vector&lt;Handle&lt;Quote&gt; &gt; corr1Y;</div>
 <div class="line">        <span class="comment">// 3%</span></div>
-<div class="line">        corr1Y.push_back(<a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(ext::shared_ptr&lt;Quote&gt;(</div>
-<div class="line">            <span class="keyword">new</span> <a name="_a25"></a><a class="code" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(fctrsWeights[0][0] * fctrsWeights[0][0]))));</div>
+<div class="line">        corr1Y.emplace_back(</div>
+<div class="line">            ext::shared_ptr&lt;Quote&gt;(<span class="keyword">new</span> <a name="_a23"></a><a class="code" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(fctrsWeights[0][0] * fctrsWeights[0][0])));</div>
 <div class="line">        <span class="comment">// 12%</span></div>
-<div class="line">        corr1Y.push_back(<a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(ext::shared_ptr&lt;Quote&gt;(</div>
-<div class="line">            <span class="keyword">new</span> <a class="code" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(fctrsWeights[0][0] * fctrsWeights[0][0]))));</div>
+<div class="line">        corr1Y.emplace_back(</div>
+<div class="line">            ext::shared_ptr&lt;Quote&gt;(<span class="keyword">new</span> <a class="code" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(fctrsWeights[0][0] * fctrsWeights[0][0])));</div>
 <div class="line">        correls.push_back(corr1Y);</div>
 <div class="line">        std::vector&lt;Handle&lt;Quote&gt; &gt; corr2Y;</div>
 <div class="line">        <span class="comment">// 3%</span></div>
-<div class="line">        corr2Y.push_back(<a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(ext::shared_ptr&lt;Quote&gt;(</div>
-<div class="line">            <span class="keyword">new</span> <a class="code" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(fctrsWeights[0][0] * fctrsWeights[0][0]))));</div>
+<div class="line">        corr2Y.emplace_back(</div>
+<div class="line">            ext::shared_ptr&lt;Quote&gt;(<span class="keyword">new</span> <a class="code" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(fctrsWeights[0][0] * fctrsWeights[0][0])));</div>
 <div class="line">        <span class="comment">// 12%</span></div>
-<div class="line">        corr2Y.push_back(<a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(ext::shared_ptr&lt;Quote&gt;(</div>
-<div class="line">            <span class="keyword">new</span> <a class="code" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(fctrsWeights[0][0] * fctrsWeights[0][0]))));</div>
+<div class="line">        corr2Y.emplace_back(</div>
+<div class="line">            ext::shared_ptr&lt;Quote&gt;(<span class="keyword">new</span> <a class="code" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(fctrsWeights[0][0] * fctrsWeights[0][0])));</div>
 <div class="line">        correls.push_back(corr2Y);</div>
 <div class="line">        ext::shared_ptr&lt;BaseCorrelationTermStructure&lt;BilinearInterpolation&gt; &gt; </div>
 <div class="line">          correlSurface(</div>
-<div class="line">            <span class="keyword">new</span> <a name="_a26"></a><a class="code" href="../../dd/d8d/class_quant_lib_1_1_base_correlation_term_structure.html">BaseCorrelationTermStructure&lt;BilinearInterpolation&gt;</a>(</div>
+<div class="line">            <span class="keyword">new</span> <a name="_a24"></a><a class="code" href="../../dd/d8d/class_quant_lib_1_1_base_correlation_term_structure.html">BaseCorrelationTermStructure&lt;BilinearInterpolation&gt;</a>(</div>
 <div class="line">                <span class="comment">// first one would do, all should be the same.</span></div>
 <div class="line">                defTS[0]-&gt;settlementDays(),</div>
 <div class="line">                defTS[0]-&gt;calendar(),</div>
-<div class="line">                <a name="a27"></a><a class="code" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547">Unadjusted</a>,</div>
+<div class="line">                <a name="a25"></a><a class="code" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547">Unadjusted</a>,</div>
 <div class="line">                bcTenors,</div>
 <div class="line">                bcLossPercentages,</div>
 <div class="line">                correls,</div>
 <div class="line">                <a class="code" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>()</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
-<div class="line">        <a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;BaseCorrelationTermStructure&lt;BilinearInterpolation&gt;</a> &gt; </div>
+<div class="line">        <a name="_a26"></a><a class="code" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;BaseCorrelationTermStructure&lt;BilinearInterpolation&gt;</a> &gt; </div>
 <div class="line">            correlHandle(correlSurface);</div>
 <div class="line">        ext::shared_ptr&lt;DefaultLossModel&gt; bcLMG_LHP_Bilin(</div>
 <div class="line">            ext::make_shared&lt;GaussianLHPFlatBCLM&gt;(correlHandle, recoveries,</div>
@@ -390,12 +383,11 @@ $(function() {
 <div class="line"> </div>
 </div><!-- fragment --> </div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_issuer_html"><div class="ttname"><a href="../../dd/dda/class_quant_lib_1_1_issuer.html">QuantLib::Issuer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1e/issuer_8hpp_source.html#l00040">issuer.hpp:40</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_afc1fa6a25515be394cb534495d704c1d"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#afc1fa6a25515be394cb534495d704c1d">QuantLib::ThreadKey</a></div><div class="ttdeci">Integer ThreadKey</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/singleton_8hpp_source.html#l00094">singleton.hpp:94</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d">QuantLib::Years</a></div><div class="ttdeci">@ Years</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00040">timeunit.hpp:40</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_t_copula_policy_1_1init_traits_html_a61eb2a998ccf63ce7a01b3a2b2e91789"><div class="ttname"><a href="../../d1/d6a/struct_quant_lib_1_1_t_copula_policy_1_1init_traits.html#a61eb2a998ccf63ce7a01b3a2b2e91789">QuantLib::TCopulaPolicy::initTraits::tOrders</a></div><div class="ttdeci">std::vector&lt; Integer &gt; tOrders</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddd/tcopulapolicy_8hpp_source.html#l00051">tcopulapolicy.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_base_correlation_term_structure_html"><div class="ttname"><a href="../../dd/d8d/class_quant_lib_1_1_base_correlation_term_structure.html">QuantLib::BaseCorrelationTermStructure</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d45/basecorrelationstructure_8hpp_source.html#l00051">basecorrelationstructure.hpp:51</a></div></div>
-<div class="ttc" id="astruct_quant_lib_1_1_gaussian_copula_policy_html_a3f16e8bbc40e0cc318f5c5080ae9223e"><div class="ttname"><a href="../../dc/df8/struct_quant_lib_1_1_gaussian_copula_policy.html#a3f16e8bbc40e0cc318f5c5080ae9223e">QuantLib::GaussianCopulaPolicy::initTraits</a></div><div class="ttdeci">int initTraits</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/gaussiancopulapolicy_8hpp_source.html#l00039">gaussiancopulapolicy.hpp:39</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_gaussian_copula_policy_html_a3f16e8bbc40e0cc318f5c5080ae9223e"><div class="ttname"><a href="../../dc/df8/struct_quant_lib_1_1_gaussian_copula_policy.html#a3f16e8bbc40e0cc318f5c5080ae9223e">QuantLib::GaussianCopulaPolicy::initTraits</a></div><div class="ttdeci">int initTraits</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/gaussiancopulapolicy_8hpp_source.html#l00038">gaussiancopulapolicy.hpp:38</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547">QuantLib::Unadjusted</a></div><div class="ttdeci">@ Unadjusted</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00058">businessdayconvention.hpp:58</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_random_loss_l_m_html"><div class="ttname"><a href="../../d8/d9a/class_quant_lib_1_1_random_loss_l_m.html">QuantLib::RandomLossLM</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d1f/randomlosslatentmodel_8hpp_source.html#l00071">randomlosslatentmodel.hpp:72</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual365_fixed_html"><div class="ttname"><a href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">QuantLib::Actual365Fixed</a></div><div class="ttdoc">Actual/365 (Fixed) day count convention.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbf/actual365fixed_8hpp_source.html#l00045">actual365fixed.hpp:45</a></div></div>
@@ -414,7 +406,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_spot_recovery_latent_model_html"><div class="ttname"><a href="../../db/dd3/class_quant_lib_1_1_spot_recovery_latent_model.html">QuantLib::SpotRecoveryLatentModel</a></div><div class="ttdoc">Random spot recovery rate latent variable portfolio model.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d24/spotlosslatentmodel_8hpp_source.html#l00042">spotlosslatentmodel.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_e_u_r_currency_html"><div class="ttname"><a href="../../db/d0b/class_quant_lib_1_1_e_u_r_currency.html">QuantLib::EURCurrency</a></div><div class="ttdoc">European Euro.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d00/europe_8hpp_source.html#l00111">europe.hpp:111</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="astruct_quant_lib_1_1_gaussian_copula_policy_html"><div class="ttname"><a href="../../dc/df8/struct_quant_lib_1_1_gaussian_copula_policy.html">QuantLib::GaussianCopulaPolicy</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/gaussiancopulapolicy_8hpp_source.html#l00037">gaussiancopulapolicy.hpp:37</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_gaussian_copula_policy_html"><div class="ttname"><a href="../../dc/df8/struct_quant_lib_1_1_gaussian_copula_policy.html">QuantLib::GaussianCopulaPolicy</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/gaussiancopulapolicy_8hpp_source.html#l00036">gaussiancopulapolicy.hpp:36</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_box_muller_gaussian_rng_html"><div class="ttname"><a href="../../d3/d24/class_quant_lib_1_1_box_muller_gaussian_rng.html">QuantLib::BoxMullerGaussianRng</a></div><div class="ttdoc">Gaussian random number generator.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d90/boxmullergaussianrng_8hpp_source.html#l00044">boxmullergaussianrng.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simple_quote_html"><div class="ttname"><a href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">QuantLib::SimpleQuote</a></div><div class="ttdoc">market element returning a stored value</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d17/simplequote_8hpp_source.html#l00033">simplequote.hpp:33</a></div></div>

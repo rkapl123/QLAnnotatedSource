@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -109,45 +109,49 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;ql/time/date.hpp&gt;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">namespace </span>io {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> <a class="code" href="../../d4/d6d/namespace_quant_lib_1_1io.html#a185fbb33691556c565a047ba68dc999e">to_integer</a>(<span class="keyword">const</span> std::string&amp;);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d6/d96/class_quant_lib_1_1_period_parser.html">   41</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d6/d96/class_quant_lib_1_1_period_parser.html">PeriodParser</a> {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> <a class="code" href="../../d6/d96/class_quant_lib_1_1_period_parser.html#ac4a22773b9b3d77a98e738f2e0ae2000">parse</a>(<span class="keyword">const</span> std::string&amp; str);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> <a class="code" href="../../d6/d96/class_quant_lib_1_1_period_parser.html#aca9cbbc142bcf9e685d15d3a5ebb7694">parseOnePeriod</a>(<span class="keyword">const</span> std::string&amp; str);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    };</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">namespace </span>io {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        QL_DEPRECATED</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d4/d6d/namespace_quant_lib_1_1io.html#a37d9f5a1b3d5876f9dc7474b88b80e18">   42</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> <a class="code" href="../../d4/d6d/namespace_quant_lib_1_1io.html#a37d9f5a1b3d5876f9dc7474b88b80e18">to_integer</a>(<span class="keyword">const</span> std::string&amp; s) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">return</span> std::stoi(s);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d9/d55/class_quant_lib_1_1_date_parser.html">   48</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d9/d55/class_quant_lib_1_1_date_parser.html">DateParser</a> {</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d6/d96/class_quant_lib_1_1_period_parser.html">   48</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d6/d96/class_quant_lib_1_1_period_parser.html">PeriodParser</a> {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code" href="../../d9/d55/class_quant_lib_1_1_date_parser.html#afbcce5d5795910ee4650251e6931afcc">parseFormatted</a>(<span class="keyword">const</span> std::string&amp; str,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                   <span class="keyword">const</span> std::string&amp; fmt);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code" href="../../d9/d55/class_quant_lib_1_1_date_parser.html#a37acc45fad5d36bc6b6a1dec84e9ddf7">parseISO</a>(<span class="keyword">const</span> std::string&amp; str);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    };</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> <a class="code" href="../../d6/d96/class_quant_lib_1_1_period_parser.html#ac4a22773b9b3d77a98e738f2e0ae2000">parse</a>(<span class="keyword">const</span> std::string&amp; str);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> <a class="code" href="../../d6/d96/class_quant_lib_1_1_period_parser.html#aca9cbbc142bcf9e685d15d3a5ebb7694">parseOnePeriod</a>(<span class="keyword">const</span> std::string&amp; str);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../d9/d55/class_quant_lib_1_1_date_parser.html">   55</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d9/d55/class_quant_lib_1_1_date_parser.html">DateParser</a> {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code" href="../../d9/d55/class_quant_lib_1_1_date_parser.html#afbcce5d5795910ee4650251e6931afcc">parseFormatted</a>(<span class="keyword">const</span> std::string&amp; str,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                   <span class="keyword">const</span> std::string&amp; fmt);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code" href="../../d9/d55/class_quant_lib_1_1_date_parser.html#a37acc45fad5d36bc6b6a1dec84e9ddf7">parseISO</a>(<span class="keyword">const</span> std::string&amp; str);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    };</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_quant_lib_1_1_period_parser_html_ac4a22773b9b3d77a98e738f2e0ae2000"><div class="ttname"><a href="../../d6/d96/class_quant_lib_1_1_period_parser.html#ac4a22773b9b3d77a98e738f2e0ae2000">QuantLib::PeriodParser::parse</a></div><div class="ttdeci">static Period parse(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/dataparsers_8cpp_source.html#l00061">dataparsers.cpp:61</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_period_parser_html"><div class="ttname"><a href="../../d6/d96/class_quant_lib_1_1_period_parser.html">QuantLib::PeriodParser</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d71/dataparsers_8hpp_source.html#l00041">dataparsers.hpp:41</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_period_parser_html_ac4a22773b9b3d77a98e738f2e0ae2000"><div class="ttname"><a href="../../d6/d96/class_quant_lib_1_1_period_parser.html#ac4a22773b9b3d77a98e738f2e0ae2000">QuantLib::PeriodParser::parse</a></div><div class="ttdeci">static Period parse(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/dataparsers_8cpp_source.html#l00047">dataparsers.cpp:47</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_period_parser_html"><div class="ttname"><a href="../../d6/d96/class_quant_lib_1_1_period_parser.html">QuantLib::PeriodParser</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d71/dataparsers_8hpp_source.html#l00048">dataparsers.hpp:48</a></div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_period_parser_html_aca9cbbc142bcf9e685d15d3a5ebb7694"><div class="ttname"><a href="../../d6/d96/class_quant_lib_1_1_period_parser.html#aca9cbbc142bcf9e685d15d3a5ebb7694">QuantLib::PeriodParser::parseOnePeriod</a></div><div class="ttdeci">static Period parseOnePeriod(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/dataparsers_8cpp_source.html#l00084">dataparsers.cpp:84</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_date_parser_html_a37acc45fad5d36bc6b6a1dec84e9ddf7"><div class="ttname"><a href="../../d9/d55/class_quant_lib_1_1_date_parser.html#a37acc45fad5d36bc6b6a1dec84e9ddf7">QuantLib::DateParser::parseISO</a></div><div class="ttdeci">static Date parseISO(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/dataparsers_8cpp_source.html#l00127">dataparsers.cpp:127</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_date_parser_html"><div class="ttname"><a href="../../d9/d55/class_quant_lib_1_1_date_parser.html">QuantLib::DateParser</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d71/dataparsers_8hpp_source.html#l00048">dataparsers.hpp:48</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_period_parser_html_aca9cbbc142bcf9e685d15d3a5ebb7694"><div class="ttname"><a href="../../d6/d96/class_quant_lib_1_1_period_parser.html#aca9cbbc142bcf9e685d15d3a5ebb7694">QuantLib::PeriodParser::parseOnePeriod</a></div><div class="ttdeci">static Period parseOnePeriod(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/dataparsers_8cpp_source.html#l00070">dataparsers.cpp:70</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_1_1io_html_a37d9f5a1b3d5876f9dc7474b88b80e18"><div class="ttname"><a href="../../d4/d6d/namespace_quant_lib_1_1io.html#a37d9f5a1b3d5876f9dc7474b88b80e18">QuantLib::io::to_integer</a></div><div class="ttdeci">QL_DEPRECATED Integer to_integer(const std::string &amp;s)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d71/dataparsers_8hpp_source.html#l00042">dataparsers.hpp:42</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_date_parser_html_a37acc45fad5d36bc6b6a1dec84e9ddf7"><div class="ttname"><a href="../../d9/d55/class_quant_lib_1_1_date_parser.html#a37acc45fad5d36bc6b6a1dec84e9ddf7">QuantLib::DateParser::parseISO</a></div><div class="ttdeci">static Date parseISO(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/dataparsers_8cpp_source.html#l00113">dataparsers.cpp:113</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_date_parser_html"><div class="ttname"><a href="../../d9/d55/class_quant_lib_1_1_date_parser.html">QuantLib::DateParser</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d71/dataparsers_8hpp_source.html#l00055">dataparsers.hpp:55</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_date_parser_html_afbcce5d5795910ee4650251e6931afcc"><div class="ttname"><a href="../../d9/d55/class_quant_lib_1_1_date_parser.html#afbcce5d5795910ee4650251e6931afcc">QuantLib::DateParser::parseFormatted</a></div><div class="ttdeci">static Date parseFormatted(const std::string &amp;str, const std::string &amp;fmt)</div><div class="ttdoc">Parses a string in a used-defined format.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/dataparsers_8cpp_source.html#l00111">dataparsers.cpp:111</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_date_parser_html_afbcce5d5795910ee4650251e6931afcc"><div class="ttname"><a href="../../d9/d55/class_quant_lib_1_1_date_parser.html#afbcce5d5795910ee4650251e6931afcc">QuantLib::DateParser::parseFormatted</a></div><div class="ttdeci">static Date parseFormatted(const std::string &amp;str, const std::string &amp;fmt)</div><div class="ttdoc">Parses a string in a used-defined format.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/dataparsers_8cpp_source.html#l00097">dataparsers.cpp:97</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_1_1io_html_a185fbb33691556c565a047ba68dc999e"><div class="ttname"><a href="../../d4/d6d/namespace_quant_lib_1_1io.html#a185fbb33691556c565a047ba68dc999e">QuantLib::io::to_integer</a></div><div class="ttdeci">Integer to_integer(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db6/dataparsers_8cpp_source.html#l00051">dataparsers.cpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

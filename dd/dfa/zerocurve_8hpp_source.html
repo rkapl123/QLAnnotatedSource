@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -276,136 +276,117 @@ $(function() {
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    : ZeroYieldStructure(settlementDays, calendar, dayCounter, jumps, jumpDates),</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      InterpolatedCurve&lt;<a class="code" href="../../d3/dee/class_t.html">T</a>&gt;(interpolator) {}</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="preprocessor">#if defined(__GNUC__)</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#pragma GCC diagnostic push</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span></div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="preprocessor">#pragma clang diagnostic push</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="preprocessor">#if defined(QL_PATCH_MSVC)</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#pragma warning(push)</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="preprocessor">#pragma warning(disable:4996)</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    QL_DEPRECATED_DISABLE_WARNING</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#aca4cbc34c6114843f9b9bac0d06c2846">InterpolatedZeroCurve&lt;T&gt;::InterpolatedZeroCurve</a>(</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                                    <span class="keyword">const</span> DayCounter&amp; dayCounter,</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Handle&lt;Quote&gt; &gt;&amp; jumps,</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; jumpDates,</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                                    <span class="keyword">const</span> <a class="code" href="../../d3/dee/class_t.html">T</a>&amp; interpolator)</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    : ZeroYieldStructure(dayCounter, jumps, jumpDates),</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      InterpolatedCurve&lt;<a class="code" href="../../d3/dee/class_t.html">T</a>&gt;(interpolator) {}</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    QL_DEPRECATED_ENABLE_WARNING</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#aca4cbc34c6114843f9b9bac0d06c2846">InterpolatedZeroCurve&lt;T&gt;::InterpolatedZeroCurve</a>(</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                                    <span class="keyword">const</span> DayCounter&amp; dayCounter,</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Handle&lt;Quote&gt; &gt;&amp; jumps,</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; jumpDates,</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                                    <span class="keyword">const</span> <a class="code" href="../../d3/dee/class_t.html">T</a>&amp; interpolator)</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    : ZeroYieldStructure(dayCounter, jumps, jumpDates),</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      InterpolatedCurve&lt;<a class="code" href="../../d3/dee/class_t.html">T</a>&gt;(interpolator) {}</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor">#if defined(QL_PATCH_MSVC)</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="preprocessor">#pragma warning(pop)</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="preprocessor">#pragma clang diagnostic pop</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#if defined(__GNUC__)</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="preprocessor">#pragma GCC diagnostic pop</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#aca4cbc34c6114843f9b9bac0d06c2846">InterpolatedZeroCurve&lt;T&gt;::InterpolatedZeroCurve</a>(</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; dates,</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Rate&gt;&amp; yields,</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                                    <span class="keyword">const</span> DayCounter&amp; dayCounter,</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                                    <span class="keyword">const</span> Calendar&amp; calendar,</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Handle&lt;Quote&gt; &gt;&amp; jumps,</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; jumpDates,</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                                    <span class="keyword">const</span> <a class="code" href="../../d3/dee/class_t.html">T</a>&amp; interpolator,</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                                    <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">Compounding</a> compounding,</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                                    <a class="code" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> frequency)</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    : ZeroYieldStructure(dates.at(0), calendar, dayCounter, jumps, jumpDates),</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      InterpolatedCurve&lt;<a class="code" href="../../d3/dee/class_t.html">T</a>&gt;(std::vector&lt;<a class="code" href="../../d6/d2c/class_time.html">Time</a>&gt;(), yields, interpolator),</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      dates_(dates)</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a5ee94aa5408dcc7957c9b9f0a8a2d83e">initialize</a>(compounding,frequency);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#aca4cbc34c6114843f9b9bac0d06c2846">InterpolatedZeroCurve&lt;T&gt;::InterpolatedZeroCurve</a>(</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                                               <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; dates,</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                                               <span class="keyword">const</span> std::vector&lt;Rate&gt;&amp; yields,</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                                               <span class="keyword">const</span> DayCounter&amp; dayCounter,</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                                               <span class="keyword">const</span> Calendar&amp; calendar,</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                                               <span class="keyword">const</span> <a class="code" href="../../d3/dee/class_t.html">T</a>&amp; interpolator,</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                                               <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">Compounding</a> compounding,</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                                               <a class="code" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> frequency)</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    : ZeroYieldStructure(dates.at(0), calendar, dayCounter),</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      InterpolatedCurve&lt;<a class="code" href="../../d3/dee/class_t.html">T</a>&gt;(std::vector&lt;<a class="code" href="../../d6/d2c/class_time.html">Time</a>&gt;(), yields, interpolator),</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      dates_(dates)</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    {</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a5ee94aa5408dcc7957c9b9f0a8a2d83e">initialize</a>(compounding,frequency);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#aca4cbc34c6114843f9b9bac0d06c2846">InterpolatedZeroCurve&lt;T&gt;::InterpolatedZeroCurve</a>(</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                                               <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; dates,</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                                               <span class="keyword">const</span> std::vector&lt;Rate&gt;&amp; yields,</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                                               <span class="keyword">const</span> DayCounter&amp; dayCounter,</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                                               <span class="keyword">const</span> <a class="code" href="../../d3/dee/class_t.html">T</a>&amp; interpolator,</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                                               <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">Compounding</a> compounding,</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                                               <a class="code" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> frequency)</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    : ZeroYieldStructure(dates.at(0), Calendar(), dayCounter),</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      InterpolatedCurve&lt;<a class="code" href="../../d3/dee/class_t.html">T</a>&gt;(std::vector&lt;<a class="code" href="../../d6/d2c/class_time.html">Time</a>&gt;(), yields, interpolator),</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      dates_(dates)</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a5ee94aa5408dcc7957c9b9f0a8a2d83e">initialize</a>(compounding,frequency);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a5ee94aa5408dcc7957c9b9f0a8a2d83e">  295</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a5ee94aa5408dcc7957c9b9f0a8a2d83e">InterpolatedZeroCurve&lt;T&gt;::initialize</a>(<span class="keyword">const</span> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">Compounding</a>&amp; compounding, </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                                              <span class="keyword">const</span> <a class="code" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a>&amp; frequency)</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        QL_REQUIRE(dates_.size() &gt;= T::requiredPoints,</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                   <span class="stringliteral">&quot;not enough input dates given&quot;</span>);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        QL_REQUIRE(this-&gt;data_.size() == dates_.size(),</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                   <span class="stringliteral">&quot;dates/data count mismatch&quot;</span>);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        this-&gt;times_.resize(dates_.size());</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        this-&gt;times_[0] = 0.0;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">if</span> (compounding != <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a6cb140948cbeedb9f7182dd4027e5e37">Continuous</a>) {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="comment">// We also have to convert the first rate.</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="comment">// The first time is 0.0, so we can&#39;t use it.</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="comment">// We fall back to about one day.</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> dt = 1.0/365;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <a class="code" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html">InterestRate</a> r(this-&gt;data_[0], dayCounter(), compounding, frequency);</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            this-&gt;data_[0] = r.equivalentRate(<a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a6cb140948cbeedb9f7182dd4027e5e37">Continuous</a>, <a class="code" href="../../d1/d37/group__datetime.html#gga6d41db8ba0ea90d22df35889df452adaad7764a2ea2518891555bd395faffb4da">NoFrequency</a>, dt);</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        }</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=1; i&lt;dates_.size(); ++i) {</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            QL_REQUIRE(dates_[i] &gt; dates_[i-1],</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                       <span class="stringliteral">&quot;invalid date (&quot;</span> &lt;&lt; dates_[i] &lt;&lt; <span class="stringliteral">&quot;, vs &quot;</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                       &lt;&lt; dates_[i-1] &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            this-&gt;times_[i] = dayCounter().<a class="code" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8">yearFraction</a>(dates_[0], dates_[i]);</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            QL_REQUIRE(!<a class="code" href="../../d5/d7b/namespace_quant_lib.html#ab94b3fc7463188bf4d30e82d4692ad3a">close</a>(this-&gt;times_[i],this-&gt;times_[i-1]),</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                       <span class="stringliteral">&quot;two dates correspond to the same time &quot;</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                       <span class="stringliteral">&quot;under this curve&#39;s day count convention&quot;</span>);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="comment">// adjusting zero rates to match continuous compounding</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <span class="keywordflow">if</span> (compounding != <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a6cb140948cbeedb9f7182dd4027e5e37">Continuous</a>)</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                <a class="code" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html">InterestRate</a> r(this-&gt;data_[i], dayCounter(), compounding, frequency);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                this-&gt;data_[i] = r.equivalentRate(<a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a6cb140948cbeedb9f7182dd4027e5e37">Continuous</a>, <a class="code" href="../../d1/d37/group__datetime.html#gga6d41db8ba0ea90d22df35889df452adaad7764a2ea2518891555bd395faffb4da">NoFrequency</a>, this-&gt;times_[i]);</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            }</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        }</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        this-&gt;interpolation_ =</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            this-&gt;interpolator_.interpolate(this-&gt;times_.begin(),</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                                            this-&gt;times_.end(),</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                                            this-&gt;data_.begin());</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        this-&gt;interpolation_.update();</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;}</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; dates,</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Rate&gt;&amp; yields,</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                                    <span class="keyword">const</span> DayCounter&amp; dayCounter,</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                                    <span class="keyword">const</span> Calendar&amp; calendar,</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Handle&lt;Quote&gt; &gt;&amp; jumps,</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                                    <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; jumpDates,</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                                    <span class="keyword">const</span> <a class="code" href="../../d3/dee/class_t.html">T</a>&amp; interpolator,</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                                    <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">Compounding</a> compounding,</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                                    <a class="code" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> frequency)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    : ZeroYieldStructure(dates.at(0), calendar, dayCounter, jumps, jumpDates),</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      InterpolatedCurve&lt;<a class="code" href="../../d3/dee/class_t.html">T</a>&gt;(std::vector&lt;<a class="code" href="../../d6/d2c/class_time.html">Time</a>&gt;(), yields, interpolator),</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      dates_(dates)</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a5ee94aa5408dcc7957c9b9f0a8a2d83e">initialize</a>(compounding,frequency);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#aca4cbc34c6114843f9b9bac0d06c2846">InterpolatedZeroCurve&lt;T&gt;::InterpolatedZeroCurve</a>(</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                                               <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; dates,</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                                               <span class="keyword">const</span> std::vector&lt;Rate&gt;&amp; yields,</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                                               <span class="keyword">const</span> DayCounter&amp; dayCounter,</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                                               <span class="keyword">const</span> Calendar&amp; calendar,</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                                               <span class="keyword">const</span> <a class="code" href="../../d3/dee/class_t.html">T</a>&amp; interpolator,</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                                               <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">Compounding</a> compounding,</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                                               <a class="code" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> frequency)</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    : ZeroYieldStructure(dates.at(0), calendar, dayCounter),</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      InterpolatedCurve&lt;<a class="code" href="../../d3/dee/class_t.html">T</a>&gt;(std::vector&lt;<a class="code" href="../../d6/d2c/class_time.html">Time</a>&gt;(), yields, interpolator),</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      dates_(dates)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a5ee94aa5408dcc7957c9b9f0a8a2d83e">initialize</a>(compounding,frequency);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#aca4cbc34c6114843f9b9bac0d06c2846">InterpolatedZeroCurve&lt;T&gt;::InterpolatedZeroCurve</a>(</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                                               <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; dates,</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                                               <span class="keyword">const</span> std::vector&lt;Rate&gt;&amp; yields,</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                                               <span class="keyword">const</span> DayCounter&amp; dayCounter,</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                                               <span class="keyword">const</span> <a class="code" href="../../d3/dee/class_t.html">T</a>&amp; interpolator,</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                                               <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">Compounding</a> compounding,</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                                               <a class="code" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> frequency)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    : ZeroYieldStructure(dates.at(0), Calendar(), dayCounter),</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      InterpolatedCurve&lt;<a class="code" href="../../d3/dee/class_t.html">T</a>&gt;(std::vector&lt;<a class="code" href="../../d6/d2c/class_time.html">Time</a>&gt;(), yields, interpolator),</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      dates_(dates)</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a5ee94aa5408dcc7957c9b9f0a8a2d83e">initialize</a>(compounding,frequency);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00276"></a><span class="lineno"><a class="line" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a5ee94aa5408dcc7957c9b9f0a8a2d83e">  276</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a5ee94aa5408dcc7957c9b9f0a8a2d83e">InterpolatedZeroCurve&lt;T&gt;::initialize</a>(<span class="keyword">const</span> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">Compounding</a>&amp; compounding, </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                                              <span class="keyword">const</span> <a class="code" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a>&amp; frequency)</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        QL_REQUIRE(dates_.size() &gt;= T::requiredPoints,</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                   <span class="stringliteral">&quot;not enough input dates given&quot;</span>);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        QL_REQUIRE(this-&gt;data_.size() == dates_.size(),</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                   <span class="stringliteral">&quot;dates/data count mismatch&quot;</span>);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        this-&gt;times_.resize(dates_.size());</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        this-&gt;times_[0] = 0.0;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="keywordflow">if</span> (compounding != <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a6cb140948cbeedb9f7182dd4027e5e37">Continuous</a>) {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="comment">// We also have to convert the first rate.</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            <span class="comment">// The first time is 0.0, so we can&#39;t use it.</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="comment">// We fall back to about one day.</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            <a class="code" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> dt = 1.0/365;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <a class="code" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html">InterestRate</a> r(this-&gt;data_[0], dayCounter(), compounding, frequency);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            this-&gt;data_[0] = r.equivalentRate(<a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a6cb140948cbeedb9f7182dd4027e5e37">Continuous</a>, <a class="code" href="../../d1/d37/group__datetime.html#gga6d41db8ba0ea90d22df35889df452adaad7764a2ea2518891555bd395faffb4da">NoFrequency</a>, dt);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=1; i&lt;dates_.size(); ++i) {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            QL_REQUIRE(dates_[i] &gt; dates_[i-1],</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                       <span class="stringliteral">&quot;invalid date (&quot;</span> &lt;&lt; dates_[i] &lt;&lt; <span class="stringliteral">&quot;, vs &quot;</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                       &lt;&lt; dates_[i-1] &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            this-&gt;times_[i] = dayCounter().<a class="code" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8">yearFraction</a>(dates_[0], dates_[i]);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            QL_REQUIRE(!<a class="code" href="../../d5/d7b/namespace_quant_lib.html#ab94b3fc7463188bf4d30e82d4692ad3a">close</a>(this-&gt;times_[i],this-&gt;times_[i-1]),</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                       <span class="stringliteral">&quot;two dates correspond to the same time &quot;</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                       <span class="stringliteral">&quot;under this curve&#39;s day count convention&quot;</span>);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="comment">// adjusting zero rates to match continuous compounding</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="keywordflow">if</span> (compounding != <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a6cb140948cbeedb9f7182dd4027e5e37">Continuous</a>)</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                <a class="code" href="../../d8/d93/class_quant_lib_1_1_interest_rate.html">InterestRate</a> r(this-&gt;data_[i], dayCounter(), compounding, frequency);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                this-&gt;data_[i] = r.equivalentRate(<a class="code" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a6cb140948cbeedb9f7182dd4027e5e37">Continuous</a>, <a class="code" href="../../d1/d37/group__datetime.html#gga6d41db8ba0ea90d22df35889df452adaad7764a2ea2518891555bd395faffb4da">NoFrequency</a>, this-&gt;times_[i]);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        this-&gt;interpolation_ =</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            this-&gt;interpolator_.interpolate(this-&gt;times_.begin(),</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                                            this-&gt;times_.end(),</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                                            this-&gt;data_.begin());</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        this-&gt;interpolation_.update();</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;}</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_quant_lib_html_a2779d04b4839fd386b5c85bbb96aaf73"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">QuantLib::Compounding</a></div><div class="ttdeci">Compounding</div><div class="ttdoc">Interest rate coumpounding rule.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d28/compounding_8hpp_source.html#l00032">compounding.hpp:32</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
@@ -436,7 +417,7 @@ $(function() {
 <div class="ttc" id="anamespace_quant_lib_html_ab94b3fc7463188bf4d30e82d4692ad3a"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ab94b3fc7463188bf4d30e82d4692ad3a">QuantLib::close</a></div><div class="ttdeci">bool close(const Quantity &amp;m1, const Quantity &amp;m2, Size n)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dbf/quantity_8cpp_source.html#l00163">quantity.cpp:163</a></div></div>
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_interpolated_zero_curve_html_a3a811478d9ed334bda6909f157c0c4ea"><div class="ttname"><a href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a3a811478d9ed334bda6909f157c0c4ea">QuantLib::InterpolatedZeroCurve::InterpolatedZeroCurve</a></div><div class="ttdeci">InterpolatedZeroCurve(const Date &amp;referenceDate, const DayCounter &amp;, const std::vector&lt; Handle&lt; Quote &gt; &gt; &amp;jumps=std::vector&lt; Handle&lt; Quote &gt; &gt;(), const std::vector&lt; Date &gt; &amp;jumpDates=std::vector&lt; Date &gt;(), const Interpolator &amp;interpolator=Interpolator())</div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_interpolated_zero_curve_html_a5ee94aa5408dcc7957c9b9f0a8a2d83e"><div class="ttname"><a href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a5ee94aa5408dcc7957c9b9f0a8a2d83e">QuantLib::InterpolatedZeroCurve::initialize</a></div><div class="ttdeci">void initialize(const Compounding &amp;compounding, const Frequency &amp;frequency)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dfa/zerocurve_8hpp_source.html#l00295">zerocurve.hpp:295</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_interpolated_zero_curve_html_a5ee94aa5408dcc7957c9b9f0a8a2d83e"><div class="ttname"><a href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a5ee94aa5408dcc7957c9b9f0a8a2d83e">QuantLib::InterpolatedZeroCurve::initialize</a></div><div class="ttdeci">void initialize(const Compounding &amp;compounding, const Frequency &amp;frequency)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dfa/zerocurve_8hpp_source.html#l00276">zerocurve.hpp:276</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_interpolated_zero_curve_html_aca4cbc34c6114843f9b9bac0d06c2846"><div class="ttname"><a href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#aca4cbc34c6114843f9b9bac0d06c2846">QuantLib::InterpolatedZeroCurve::InterpolatedZeroCurve</a></div><div class="ttdeci">InterpolatedZeroCurve(const std::vector&lt; Date &gt; &amp;dates, const std::vector&lt; Rate &gt; &amp;yields, const DayCounter &amp;dayCounter, const Calendar &amp;calendar=Calendar(), const std::vector&lt; Handle&lt; Quote &gt; &gt; &amp;jumps=std::vector&lt; Handle&lt; Quote &gt; &gt;(), const std::vector&lt; Date &gt; &amp;jumpDates=std::vector&lt; Date &gt;(), const Interpolator &amp;interpolator=Interpolator(), Compounding compounding=Continuous, Frequency frequency=Annual)</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_interpolated_zero_curve_html_a698613eb44def90895a914f1f0da1f80"><div class="ttname"><a href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html#a698613eb44def90895a914f1f0da1f80">QuantLib::InterpolatedZeroCurve::zeroRates</a></div><div class="ttdeci">const std::vector&lt; Rate &gt; &amp; zeroRates() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dfa/zerocurve_8hpp_source.html#l00155">zerocurve.hpp:155</a></div></div>

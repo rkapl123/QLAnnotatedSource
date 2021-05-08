@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -237,7 +237,7 @@ $(function() {
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                }</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            } <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                skippedDates.push_back(currentDate);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                skippedDatesErrorMessage.push_back(e.what());</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                skippedDatesErrorMessage.emplace_back(e.what());</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            }</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
@@ -252,7 +252,7 @@ $(function() {
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                }</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            } <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                failedDates.push_back(currentDate);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                failedDatesErrorMessage.push_back(e.what());</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                failedDatesErrorMessage.emplace_back(e.what());</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            }</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
@@ -380,7 +380,7 @@ $(function() {
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html_ac659821443d7196fa1a4abd73e9e6301"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ac659821443d7196fa1a4abd73e9e6301">QuantLib::swap</a></div><div class="ttdeci">void swap(Array &amp;v, Array &amp;w)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00673">array.hpp:673</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_ac659821443d7196fa1a4abd73e9e6301"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ac659821443d7196fa1a4abd73e9e6301">QuantLib::swap</a></div><div class="ttdeci">void swap(Array &amp;v, Array &amp;w)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00680">array.hpp:680</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_swap_rate_helper_html"><div class="ttname"><a href="../../dd/df9/class_quant_lib_1_1_swap_rate_helper.html">QuantLib::SwapRateHelper</a></div><div class="ttdoc">Rate helper for bootstrapping over swap rates.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/ratehelpers_8hpp_source.html#l00260">ratehelpers.hpp:260</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_historical_forward_rates_analysis_html_a8ab7522975753180cc756a5f6ce90bb4"><div class="ttname"><a href="../../dd/d73/class_quant_lib_1_1_historical_forward_rates_analysis.html#a8ab7522975753180cc756a5f6ce90bb4">QuantLib::HistoricalForwardRatesAnalysis::~HistoricalForwardRatesAnalysis</a></div><div class="ttdeci">virtual ~HistoricalForwardRatesAnalysis()=default</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_historical_forward_rates_analysis_impl_html_ad8936fd9c1c14e9c15dc239fb300f912"><div class="ttname"><a href="../../d6/db9/class_quant_lib_1_1_historical_forward_rates_analysis_impl.html#ad8936fd9c1c14e9c15dc239fb300f912">QuantLib::HistoricalForwardRatesAnalysisImpl::failedDatesErrorMessage_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; failedDatesErrorMessage_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d90/historicalforwardratesanalysis_8hpp_source.html#l00236">historicalforwardratesanalysis.hpp:236</a></div></div>

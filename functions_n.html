@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -104,12 +104,14 @@ $(function() {
 <li>n7
 : <a class="el" href="dc/df4/class_quant_lib_1_1_tabulated_gauss_legendre.html#a5e8048c3414c3d87798ffa1a62c2f4f3">TabulatedGaussLegendre</a>
 </li>
+<li>n_
+: <a class="el" href="da/de7/class_quant_lib_1_1_analytic_compound_option_engine.html#a540e9cbeb6f359c08db4a6a6293ce229">AnalyticCompoundOptionEngine</a>
+</li>
 <li>N_
 : <a class="el" href="da/de7/class_quant_lib_1_1_analytic_compound_option_engine.html#aed5386b77a66fa6e59bf16349d69e70d">AnalyticCompoundOptionEngine</a>
 </li>
 <li>n_
-: <a class="el" href="da/de7/class_quant_lib_1_1_analytic_compound_option_engine.html#a540e9cbeb6f359c08db4a6a6293ce229">AnalyticCompoundOptionEngine</a>
-, <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#a9bedbbacb0b82a55c579510cee137603">Array</a>
+: <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#a9bedbbacb0b82a55c579510cee137603">Array</a>
 , <a class="el" href="d3/dcc/class_quant_lib_1_1_binomial_distribution.html#ab045fb029116c7ba3b737aa0460b8966">BinomialDistribution</a>
 , <a class="el" href="de/d8f/class_quant_lib_1_1_binomial_probability_of_at_least_n_events.html#ae68b32adf588e61ef5472f52a16098d3">BinomialProbabilityOfAtLeastNEvents</a>
 , <a class="el" href="df/de0/class_quant_lib_1_1_bivariate_cumulative_student_distribution.html#a8270a52ff6c38572ccad4812b4c9b1b2">BivariateCumulativeStudentDistribution</a>
@@ -173,6 +175,7 @@ $(function() {
 , <a class="el" href="d9/d05/class_quant_lib_1_1_richardson_extrapolation.html#a8211bd18233500408d314a38e4ed8c63">RichardsonExtrapolation</a>
 , <a class="el" href="dd/d7c/class_quant_lib_1_1_simulated_annealing.html#ae7498ef3fa9e3da5bc35ee3bd6e71a5d">SimulatedAnnealing&lt; RNG &gt;</a>
 , <a class="el" href="dc/d74/class_quant_lib_1_1_student_distribution.html#ae7498ef3fa9e3da5bc35ee3bd6e71a5d">StudentDistribution</a>
+, <a class="el" href="d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a9bedbbacb0b82a55c579510cee137603">SubPeriodsCoupon</a>
 , <a class="el" href="d4/ddc/class_quant_lib_1_1_s_v_d.html#ae7498ef3fa9e3da5bc35ee3bd6e71a5d">SVD</a>
 , <a class="el" href="dc/df4/class_quant_lib_1_1_tabulated_gauss_legendre.html#a9bedbbacb0b82a55c579510cee137603">TabulatedGaussLegendre</a>
 , <a class="el" href="de/d10/class_quant_lib_1_1_tree_lattice.html#a9bedbbacb0b82a55c579510cee137603">TreeLattice&lt; Impl &gt;</a>
@@ -441,7 +444,7 @@ $(function() {
 , <a class="el" href="da/d94/class_quant_lib_1_1_lecuyer_uniform_rng.html#ac67f917d65ee79e53d05a88eb7cea7f4">LecuyerUniformRng</a>
 , <a class="el" href="dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a1dd1acca2b223c8da6c27cad720cfc7d">MersenneTwisterUniformRng</a>
 , <a class="el" href="da/d95/class_quant_lib_1_1_multi_path_generator.html#a6660f759e522af8273984616d188ff47">MultiPathGenerator&lt; GSG &gt;</a>
-, <a class="el" href="de/df5/class_quant_lib_1_1_path_generator.html#aad8d18d23ee244a608c36d69e4dfc21c">PathGenerator&lt; GSG &gt;</a>
+, <a class="el" href="de/df5/class_quant_lib_1_1_path_generator.html#a5eab98b4a866f1806dcd863fc5303bfe">PathGenerator&lt; GSG &gt;</a>
 , <a class="el" href="d2/d63/class_quant_lib_1_1_polar_student_t_rng.html#ab4a0f9431863aa7348f8b20f88580379">PolarStudentTRng&lt; URNG &gt;</a>
 , <a class="el" href="d5/dc4/class_quant_lib_1_1_ranlux3_uniform_rng.html#a1dd1acca2b223c8da6c27cad720cfc7d">Ranlux3UniformRng</a>
 , <a class="el" href="df/d4d/class_quant_lib_1_1_ranlux4_uniform_rng.html#a1dd1acca2b223c8da6c27cad720cfc7d">Ranlux4UniformRng</a>
@@ -616,6 +619,9 @@ $(function() {
 </li>
 <li>nFactors_
 : <a class="el" href="d0/d82/class_quant_lib_1_1_latent_model.html#ad8639907820775808810c8a525d5bdd8">LatentModel&lt; copulaPolicyImpl &gt;</a>
+</li>
+<li>NGNCurrency()
+: <a class="el" href="db/d9d/class_quant_lib_1_1_n_g_n_currency.html#af426a7da312f266e8d140cea7fc99e6f">NGNCurrency</a>
 </li>
 <li>nGridPoints_
 : <a class="el" href="d7/dbb/class_quant_lib_1_1_andreasen_huge_volatility_interpl.html#ad3c7a0b3aca71f5106ced4dc73a5be7e">AndreasenHugeVolatilityInterpl</a>
@@ -844,7 +850,7 @@ $(function() {
 : <a class="el" href="d6/dfa/class_quant_lib_1_1_asset_swap.html#ac567f42e3c257401c47f8a0dd3980e2f">AssetSwap</a>
 </li>
 <li>NonstandardSwap()
-: <a class="el" href="db/d27/class_quant_lib_1_1_nonstandard_swap.html#a052c59406074cfb81326b7e44c520fd1">NonstandardSwap</a>
+: <a class="el" href="db/d27/class_quant_lib_1_1_nonstandard_swap.html#ac86a8c6141f32412897ed61a89e08812">NonstandardSwap</a>
 </li>
 <li>NonstandardSwaption()
 : <a class="el" href="d9/d97/class_quant_lib_1_1_nonstandard_swaption.html#a435fc4391198bb656923f6af16d1704e">NonstandardSwaption</a>
@@ -913,7 +919,7 @@ $(function() {
 : <a class="el" href="d1/dc3/class_quant_lib_1_1_synthetic_c_d_o.html#a073a310f1983dc8713afe8267c33c230">SyntheticCDO</a>
 </li>
 <li>normalVolatility()
-: <a class="el" href="d4/dee/class_quant_lib_1_1_zabr_model.html#a93c0639fd72e48266a7c2d435e6a5a65">ZabrModel</a>
+: <a class="el" href="d4/dee/class_quant_lib_1_1_zabr_model.html#a34b2fe25625feaaa26d22b2826f7a4e4">ZabrModel</a>
 </li>
 <li>normalVolatilityHelper()
 : <a class="el" href="d4/dee/class_quant_lib_1_1_zabr_model.html#ad2ea3d60f1cc6c64ae46bcaeb2a918fb">ZabrModel</a>
@@ -1028,6 +1034,7 @@ $(function() {
 , <a class="el" href="d2/dd0/class_quant_lib_1_1_recursive_loss_model.html#a6bbb9ef180bf5ecb750bbb9a698708c7">RecursiveLossModel&lt; copulaPolicy &gt;</a>
 , <a class="el" href="d2/da5/class_quant_lib_1_1_risky_fixed_bond.html#a6bbb9ef180bf5ecb750bbb9a698708c7">RiskyFixedBond</a>
 , <a class="el" href="df/d55/class_quant_lib_1_1_risky_floating_bond.html#a6bbb9ef180bf5ecb750bbb9a698708c7">RiskyFloatingBond</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#a6bbb9ef180bf5ecb750bbb9a698708c7">SubPeriodsLeg</a>
 , <a class="el" href="d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html#a6bbb9ef180bf5ecb750bbb9a698708c7">yoyInflationLeg</a>
 </li>
 <li>notionalSchedule_
@@ -1515,7 +1522,7 @@ $(function() {
 : <a class="el" href="d9/d6c/class_quant_lib_1_1_exponential_splines_fitting.html#a45fad46130424a11a9a492c7779744e8">ExponentialSplinesFitting</a>
 </li>
 <li>numeraire()
-: <a class="el" href="dc/d04/class_quant_lib_1_1_gaussian1d_model.html#ac4d5ea453b5840f85e2755d403487a7b">Gaussian1dModel</a>
+: <a class="el" href="dc/d04/class_quant_lib_1_1_gaussian1d_model.html#a5c3a09650cad7822eca59b07bc27592f">Gaussian1dModel</a>
 , <a class="el" href="da/d97/class_quant_lib_1_1_hybrid_heston_hull_white_process.html#abab5eeb93fb77ec609711c393145b9ed">HybridHestonHullWhiteProcess</a>
 , <a class="el" href="de/d83/class_quant_lib_1_1_joint_stochastic_process.html#a68b5a72cfb3db8ddefaf8cf04cc3ab65">JointStochasticProcess</a>
 </li>
@@ -1579,7 +1586,7 @@ $(function() {
 , <a class="el" href="df/d22/class_quant_lib_1_1_proxy_greek_engine.html#ac02019c3e5395ae9a13d95e65733c56d">ProxyGreekEngine</a>
 </li>
 <li>numeraireTime()
-: <a class="el" href="db/dd8/class_quant_lib_1_1_gsr.html#a538fba95876f46be4f18aed02e0473b4">Gsr</a>
+: <a class="el" href="db/dd8/class_quant_lib_1_1_gsr.html#a96b740cd47562a124be14a0005ece637">Gsr</a>
 , <a class="el" href="d6/dca/class_quant_lib_1_1_markov_functional.html#a2e5a0a5ecf6b57ae310f14fe67623a92">MarkovFunctional</a>
 </li>
 <li>numeraireTime_
@@ -1589,7 +1596,7 @@ $(function() {
 : <a class="el" href="d0/d67/struct_quant_lib_1_1_currency_1_1_data.html#a65e8398eacd4ac202862763b4874c3b7">Currency::Data</a>
 </li>
 <li>NumericalDifferentiation()
-: <a class="el" href="d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a0bad960024d8f80ad76403394b66b4b0">NumericalDifferentiation</a>
+: <a class="el" href="d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#aaf554536f8040f4b8956ec0aa7e6b31b">NumericalDifferentiation</a>
 </li>
 <li>NumericalFix
 : <a class="el" href="d3/dfb/class_quant_lib_1_1_isda_cds_engine.html#a3ca95a9bd2310b8a8d386f73229933c4">IsdaCdsEngine</a>

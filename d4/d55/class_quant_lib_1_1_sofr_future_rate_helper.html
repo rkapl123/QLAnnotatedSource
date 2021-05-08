@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -89,7 +89,7 @@ $(function() {
 <p>RateHelper for bootstrapping over CME SOFR futures.  
  <a href="../../d4/d55/class_quant_lib_1_1_sofr_future_rate_helper.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d5/d57/overnightindexfutureratehelper_8hpp_source.html">ql/experimental/futures/overnightindexfutureratehelper.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d5/d57/overnightindexfutureratehelper_8hpp_source.html">ql/termstructures/yield/overnightindexfutureratehelper.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for SofrFutureRateHelper:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -140,13 +140,13 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9e0a05e8803f0682d2c2763cd4e4916c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d55/class_quant_lib_1_1_sofr_future_rate_helper.html#a9e0a05e8803f0682d2c2763cd4e4916c">SofrFutureRateHelper</a> (const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;price, <a class="el" href="../../d1/d37/group__datetime.html#gae34b763987dcf60c6c619d327b8c9dbb">Month</a> referenceMonth, <a class="el" href="../../d1/d37/group__datetime.html#ga84dee895910074cbc7d936c86c1abf3d">Year</a> referenceYear, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> referenceFreq, const ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt; &amp;overnightIndex, const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;<a class="el" href="../../d6/d91/class_quant_lib_1_1_overnight_index_future_rate_helper.html#acbfd2dbb610c4fa6b47b6c143633bdff">convexityAdjustment</a>=<a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt;(), <a class="el" href="../../dc/dab/struct_quant_lib_1_1_overnight_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">OvernightAveraging::Type</a> averagingMethod=<a class="el" href="../../dc/dab/struct_quant_lib_1_1_overnight_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">OvernightAveraging::Compound</a>)</td></tr>
-<tr class="separator:a9e0a05e8803f0682d2c2763cd4e4916c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d3ea5ad73535bf5c19d8e4fe442dd4b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d55/class_quant_lib_1_1_sofr_future_rate_helper.html#a6d3ea5ad73535bf5c19d8e4fe442dd4b">SofrFutureRateHelper</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> price, <a class="el" href="../../d1/d37/group__datetime.html#gae34b763987dcf60c6c619d327b8c9dbb">Month</a> referenceMonth, <a class="el" href="../../d1/d37/group__datetime.html#ga84dee895910074cbc7d936c86c1abf3d">Year</a> referenceYear, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> referenceFreq, const ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt; &amp;overnightIndex, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d6/d91/class_quant_lib_1_1_overnight_index_future_rate_helper.html#acbfd2dbb610c4fa6b47b6c143633bdff">convexityAdjustment</a>=0, <a class="el" href="../../dc/dab/struct_quant_lib_1_1_overnight_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">OvernightAveraging::Type</a> averagingMethod=<a class="el" href="../../dc/dab/struct_quant_lib_1_1_overnight_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">OvernightAveraging::Compound</a>)</td></tr>
-<tr class="separator:a6d3ea5ad73535bf5c19d8e4fe442dd4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849c84283f9dba5c1955957ddec6842f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d55/class_quant_lib_1_1_sofr_future_rate_helper.html#a849c84283f9dba5c1955957ddec6842f">SofrFutureRateHelper</a> (const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;price, <a class="el" href="../../d1/d37/group__datetime.html#gae34b763987dcf60c6c619d327b8c9dbb">Month</a> referenceMonth, <a class="el" href="../../d1/d37/group__datetime.html#ga84dee895910074cbc7d936c86c1abf3d">Year</a> referenceYear, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> referenceFreq, const ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt; &amp;overnightIndex, const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;<a class="el" href="../../d6/d91/class_quant_lib_1_1_overnight_index_future_rate_helper.html#acbfd2dbb610c4fa6b47b6c143633bdff">convexityAdjustment</a>=<a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt;(), <a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a> averagingMethod=<a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">RateAveraging::Compound</a>)</td></tr>
+<tr class="separator:a849c84283f9dba5c1955957ddec6842f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e49080488f60235083c2ab569d17677"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d55/class_quant_lib_1_1_sofr_future_rate_helper.html#a5e49080488f60235083c2ab569d17677">SofrFutureRateHelper</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> price, <a class="el" href="../../d1/d37/group__datetime.html#gae34b763987dcf60c6c619d327b8c9dbb">Month</a> referenceMonth, <a class="el" href="../../d1/d37/group__datetime.html#ga84dee895910074cbc7d936c86c1abf3d">Year</a> referenceYear, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> referenceFreq, const ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt; &amp;overnightIndex, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d6/d91/class_quant_lib_1_1_overnight_index_future_rate_helper.html#acbfd2dbb610c4fa6b47b6c143633bdff">convexityAdjustment</a>=0, <a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a> averagingMethod=<a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">RateAveraging::Compound</a>)</td></tr>
+<tr class="separator:a5e49080488f60235083c2ab569d17677"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_overnight_index_future_rate_helper"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_overnight_index_future_rate_helper')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d6/d91/class_quant_lib_1_1_overnight_index_future_rate_helper.html">OvernightIndexFutureRateHelper</a></td></tr>
-<tr class="memitem:a4c4e883cf06937d7ca9ac28f4a54e8cf inherit pub_methods_class_quant_lib_1_1_overnight_index_future_rate_helper"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d91/class_quant_lib_1_1_overnight_index_future_rate_helper.html#a4c4e883cf06937d7ca9ac28f4a54e8cf">OvernightIndexFutureRateHelper</a> (const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;price, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;valueDate, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#aac5552a21a8f6cef232e50d4834dd6e7">maturityDate</a>, const ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt; &amp;overnightIndex, const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;<a class="el" href="../../d6/d91/class_quant_lib_1_1_overnight_index_future_rate_helper.html#acbfd2dbb610c4fa6b47b6c143633bdff">convexityAdjustment</a>=<a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt;(), <a class="el" href="../../dc/dab/struct_quant_lib_1_1_overnight_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">OvernightAveraging::Type</a> averagingMethod=<a class="el" href="../../dc/dab/struct_quant_lib_1_1_overnight_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">OvernightAveraging::Compound</a>)</td></tr>
-<tr class="separator:a4c4e883cf06937d7ca9ac28f4a54e8cf inherit pub_methods_class_quant_lib_1_1_overnight_index_future_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc0017af5947c7608d43f00a69a67062 inherit pub_methods_class_quant_lib_1_1_overnight_index_future_rate_helper"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d91/class_quant_lib_1_1_overnight_index_future_rate_helper.html#afc0017af5947c7608d43f00a69a67062">OvernightIndexFutureRateHelper</a> (const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;price, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;valueDate, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#aac5552a21a8f6cef232e50d4834dd6e7">maturityDate</a>, const ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt; &amp;overnightIndex, const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;<a class="el" href="../../d6/d91/class_quant_lib_1_1_overnight_index_future_rate_helper.html#acbfd2dbb610c4fa6b47b6c143633bdff">convexityAdjustment</a>=<a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt;(), <a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a> averagingMethod=<a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">RateAveraging::Compound</a>)</td></tr>
+<tr class="separator:afc0017af5947c7608d43f00a69a67062 inherit pub_methods_class_quant_lib_1_1_overnight_index_future_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5f37fe136acee4d7bfd196bcf8bb315 inherit pub_methods_class_quant_lib_1_1_overnight_index_future_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d91/class_quant_lib_1_1_overnight_index_future_rate_helper.html#ab5f37fe136acee4d7bfd196bcf8bb315">impliedQuote</a> () const override</td></tr>
 <tr class="separator:ab5f37fe136acee4d7bfd196bcf8bb315 inherit pub_methods_class_quant_lib_1_1_overnight_index_future_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11bcb6e45e2bf87e14a6d6132d2e84bb inherit pub_methods_class_quant_lib_1_1_overnight_index_future_rate_helper"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d91/class_quant_lib_1_1_overnight_index_future_rate_helper.html#a11bcb6e45e2bf87e14a6d6132d2e84bb">setTermStructure</a> (<a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> *) override</td></tr>
@@ -247,8 +247,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d57/overnightindexfutureratehelper_8hpp_source.html#l00068">68</a> of file <a class="el" href="../../d5/d57/overnightindexfutureratehelper_8hpp_source.html">overnightindexfutureratehelper.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9e0a05e8803f0682d2c2763cd4e4916c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e0a05e8803f0682d2c2763cd4e4916c">&#9670;&nbsp;</a></span>SofrFutureRateHelper() <span class="overload">[1/2]</span></h2>
+<a id="a849c84283f9dba5c1955957ddec6842f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a849c84283f9dba5c1955957ddec6842f">&#9670;&nbsp;</a></span>SofrFutureRateHelper() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,8 +292,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dab/struct_quant_lib_1_1_overnight_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">OvernightAveraging::Type</a>&#160;</td>
-          <td class="paramname"><em>averagingMethod</em> = <code><a class="el" href="../../dc/dab/struct_quant_lib_1_1_overnight_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">OvernightAveraging::Compound</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a>&#160;</td>
+          <td class="paramname"><em>averagingMethod</em> = <code><a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">RateAveraging::Compound</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -303,12 +303,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/dee/overnightindexfutureratehelper_8cpp_source.html#l00093">93</a> of file <a class="el" href="../../d2/dee/overnightindexfutureratehelper_8cpp_source.html">overnightindexfutureratehelper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/dee/overnightindexfutureratehelper_8cpp_source.html#l00095">95</a> of file <a class="el" href="../../d2/dee/overnightindexfutureratehelper_8cpp_source.html">overnightindexfutureratehelper.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a6d3ea5ad73535bf5c19d8e4fe442dd4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d3ea5ad73535bf5c19d8e4fe442dd4b">&#9670;&nbsp;</a></span>SofrFutureRateHelper() <span class="overload">[2/2]</span></h2>
+<a id="a5e49080488f60235083c2ab569d17677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e49080488f60235083c2ab569d17677">&#9670;&nbsp;</a></span>SofrFutureRateHelper() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,8 +352,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dab/struct_quant_lib_1_1_overnight_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">OvernightAveraging::Type</a>&#160;</td>
-          <td class="paramname"><em>averagingMethod</em> = <code><a class="el" href="../../dc/dab/struct_quant_lib_1_1_overnight_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">OvernightAveraging::Compound</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a>&#160;</td>
+          <td class="paramname"><em>averagingMethod</em> = <code><a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">RateAveraging::Compound</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -363,7 +363,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/dee/overnightindexfutureratehelper_8cpp_source.html#l00116">116</a> of file <a class="el" href="../../d2/dee/overnightindexfutureratehelper_8cpp_source.html">overnightindexfutureratehelper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/dee/overnightindexfutureratehelper_8cpp_source.html#l00118">118</a> of file <a class="el" href="../../d2/dee/overnightindexfutureratehelper_8cpp_source.html">overnightindexfutureratehelper.cpp</a>.</p>
 
 </div>
 </div>

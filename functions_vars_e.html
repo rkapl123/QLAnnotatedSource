@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -223,8 +223,6 @@ $(function() {
 <li>endTime_
 : <a class="el" href="d6/d21/class_quant_lib_1_1_range_accrual_floaters_coupon.html#a0b07582d94c76dac428b440ab88c6339">RangeAccrualFloatersCoupon</a>
 , <a class="el" href="d5/d73/class_quant_lib_1_1_range_accrual_pricer.html#a0b07582d94c76dac428b440ab88c6339">RangeAccrualPricer</a>
-, <a class="el" href="d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a0b07582d94c76dac428b440ab88c6339">SubPeriodsCoupon</a>
-, <a class="el" href="d3/de2/class_quant_lib_1_1_sub_periods_pricer.html#a0b07582d94c76dac428b440ab88c6339">SubPeriodsPricer</a>
 </li>
 <li>endTimes_
 : <a class="el" href="dc/ded/class_quant_lib_1_1detail_1_1_hull_white_cap_floor_pricer.html#a93cf51d5f36c6055582b0ef5136f0f37">HullWhiteCapFloorPricer</a>
@@ -351,6 +349,10 @@ $(function() {
 </li>
 <li>erx
 : <a class="el" href="df/d88/class_quant_lib_1_1_error_function.html#adcd22ed323d93f0829dab0c7273ecfed">ErrorFunction</a>
+</li>
+<li>escrowedDividendAdj_
+: <a class="el" href="d2/d06/class_quant_lib_1_1_fdm_escrowed_log_inner_value_calculator.html#a9bf963e52b682321b67ff1373032c870">FdmEscrowedLogInnerValueCalculator</a>
+, <a class="el" href="d3/ded/class_quant_lib_1_1_fdm_shout_log_inner_value_calculator.html#a9bf963e52b682321b67ff1373032c870">FdmShoutLogInnerValueCalculator</a>
 </li>
 <li>eta2_
 : <a class="el" href="d2/d8e/class_quant_lib_1_1detail_1_1_convex_monotone2_helper.html#a33dda0ada1f04345f99cc390579c128e">ConvexMonotone2Helper</a>
@@ -515,12 +517,14 @@ $(function() {
 , <a class="el" href="d0/d35/class_quant_lib_1_1_c_p_i_leg.html#a1f026341764d11c81a4aaa3d93660d50">CPILeg</a>
 , <a class="el" href="d4/d17/class_quant_lib_1_1_fixed_rate_leg.html#a1f026341764d11c81a4aaa3d93660d50">FixedRateLeg</a>
 , <a class="el" href="df/da2/class_quant_lib_1_1_ibor_leg.html#a1f026341764d11c81a4aaa3d93660d50">IborLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#a1f026341764d11c81a4aaa3d93660d50">SubPeriodsLeg</a>
 </li>
 <li>exCouponCalendar_
 : <a class="el" href="d6/d41/class_quant_lib_1_1_cms_leg.html#ac4098ed244ff963b710ffddda4eeb9c5">CmsLeg</a>
 , <a class="el" href="d0/d35/class_quant_lib_1_1_c_p_i_leg.html#ac4098ed244ff963b710ffddda4eeb9c5">CPILeg</a>
 , <a class="el" href="d4/d17/class_quant_lib_1_1_fixed_rate_leg.html#ac4098ed244ff963b710ffddda4eeb9c5">FixedRateLeg</a>
 , <a class="el" href="df/da2/class_quant_lib_1_1_ibor_leg.html#ac4098ed244ff963b710ffddda4eeb9c5">IborLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#ac4098ed244ff963b710ffddda4eeb9c5">SubPeriodsLeg</a>
 </li>
 <li>exCouponDate_
 : <a class="el" href="de/d94/class_quant_lib_1_1_coupon.html#a3eb8b1d39c60893c7fea3654f963f201">Coupon</a>
@@ -530,12 +534,14 @@ $(function() {
 , <a class="el" href="d0/d35/class_quant_lib_1_1_c_p_i_leg.html#aad9ac732bd14e197b5118bf8247e56c8">CPILeg</a>
 , <a class="el" href="d4/d17/class_quant_lib_1_1_fixed_rate_leg.html#aad9ac732bd14e197b5118bf8247e56c8">FixedRateLeg</a>
 , <a class="el" href="df/da2/class_quant_lib_1_1_ibor_leg.html#aad9ac732bd14e197b5118bf8247e56c8">IborLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#aad9ac732bd14e197b5118bf8247e56c8">SubPeriodsLeg</a>
 </li>
 <li>exCouponPeriod_
 : <a class="el" href="d6/d41/class_quant_lib_1_1_cms_leg.html#ac33433b4946bb1329568d9409bb8389a">CmsLeg</a>
 , <a class="el" href="d0/d35/class_quant_lib_1_1_c_p_i_leg.html#ac33433b4946bb1329568d9409bb8389a">CPILeg</a>
 , <a class="el" href="d4/d17/class_quant_lib_1_1_fixed_rate_leg.html#ac33433b4946bb1329568d9409bb8389a">FixedRateLeg</a>
 , <a class="el" href="df/da2/class_quant_lib_1_1_ibor_leg.html#ac33433b4946bb1329568d9409bb8389a">IborLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#ac33433b4946bb1329568d9409bb8389a">SubPeriodsLeg</a>
 </li>
 <li>exercise
 : <a class="el" href="d9/d01/class_quant_lib_1_1_option_1_1arguments.html#a55d2401c8468ecbd8463c1ca1b7f07a6">Option::arguments</a>

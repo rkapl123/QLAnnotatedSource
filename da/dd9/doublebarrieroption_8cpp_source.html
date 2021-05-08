@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -105,7 +105,7 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;ql/experimental/barrieroption/analyticdoublebarrierengine.hpp&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;ql/instruments/impliedvolatility.hpp&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;ql/exercise.hpp&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;boost/scoped_ptr.hpp&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
@@ -149,7 +149,7 @@ $(function() {
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="../../dc/d7c/class_quant_lib_1_1detail_1_1_implied_volatility_helper.html#a35066e32613e0aa4926970a819e0d445">detail::ImpliedVolatilityHelper::clone</a>(process, volQuote);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// engines are built-in for the time being</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        boost::scoped_ptr&lt;PricingEngine&gt; <a class="code" href="../../da/def/class_quant_lib_1_1_double_barrier_option_1_1engine.html">engine</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::unique_ptr&lt;PricingEngine&gt; <a class="code" href="../../da/def/class_quant_lib_1_1_double_barrier_option_1_1engine.html">engine</a>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="../../d2/df1/class_quant_lib_1_1_option.html#aae101ab74e26649c0b2791e4e66f7b5a">exercise_</a>-&gt;type()) {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;          <span class="keywordflow">case</span> <a class="code" href="../../dd/db4/class_quant_lib_1_1_exercise.html#a1d1cfd8ffb84e947f82999c682b666a7a44fbacd0de93fa25f6ca3b44e0c426c2">Exercise::European</a>:</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="../../da/def/class_quant_lib_1_1_double_barrier_option_1_1engine.html">engine</a>.<a class="code" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html#aebfcdbbd0fe4efbff10b180be50ca6bc">reset</a>(<span class="keyword">new</span> <a class="code" href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html">AnalyticDoubleBarrierEngine</a>(newProcess));</div>

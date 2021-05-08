@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -227,7 +227,7 @@ $(function() {
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
 <div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="../../de/d5a/class_quant_lib_1_1_general_statistics.html#a3a1d26bb85ab23c2a935d09081c946fd">  223</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../de/d5a/class_quant_lib_1_1_general_statistics.html#a3a1d26bb85ab23c2a935d09081c946fd">GeneralStatistics::add</a>(<a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> value, <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> weight) {</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        QL_REQUIRE(weight&gt;=0.0, <span class="stringliteral">&quot;negative weight not allowed&quot;</span>);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <a class="code" href="../../de/d5a/class_quant_lib_1_1_general_statistics.html#a3aaec9e307c55c0feab51b7802d3ba14">samples_</a>.push_back(std::make_pair(value,weight));</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <a class="code" href="../../de/d5a/class_quant_lib_1_1_general_statistics.html#a3aaec9e307c55c0feab51b7802d3ba14">samples_</a>.emplace_back(value, weight);</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <a class="code" href="../../de/d5a/class_quant_lib_1_1_general_statistics.html#aed753975ae900455b0cd59b63bf34458">sorted_</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    }</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>

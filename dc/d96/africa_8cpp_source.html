@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -123,8 +123,24 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../d3/dd4/class_quant_lib_1_1_currency.html#ae5bf3e19b58a51ff5183190c53999eae">data_</a> = zarData;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// Nigerian Naira</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">/* ISO-4217 code -&gt; NGN</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">     * Corresponding code Number -&gt; 566</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">     * The NGN ISO code has a currency exponent of 2 ( i.e subdivided into 100 kobo), 100k = 1NGN.</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../db/d9d/class_quant_lib_1_1_n_g_n_currency.html#af426a7da312f266e8d140cea7fc99e6f">   47</a></span>&#160;    <a class="code" href="../../db/d9d/class_quant_lib_1_1_n_g_n_currency.html#af426a7da312f266e8d140cea7fc99e6f">NGNCurrency::NGNCurrency</a>() {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">static</span> ext::shared_ptr&lt;Data&gt; ngnData(</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">new</span> <a class="code" href="../../d0/d67/struct_quant_lib_1_1_currency_1_1_data.html">Data</a>(<span class="stringliteral">&quot;Nigerian Naira&quot;</span>, <span class="stringliteral">&quot;NGN&quot;</span>, 566,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                     <span class="stringliteral">&quot;N&quot;</span>, <span class="stringliteral">&quot;K&quot;</span>, 100,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                     <a class="code" href="../../d7/da0/class_quant_lib_1_1_rounding.html">Rounding</a>(),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                     <span class="stringliteral">&quot;%3% %1N.2f&quot;</span>));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="../../d3/dd4/class_quant_lib_1_1_currency.html#ae5bf3e19b58a51ff5183190c53999eae">data_</a> = ngnData;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_quant_lib_1_1_n_g_n_currency_html_af426a7da312f266e8d140cea7fc99e6f"><div class="ttname"><a href="../../db/d9d/class_quant_lib_1_1_n_g_n_currency.html#af426a7da312f266e8d140cea7fc99e6f">QuantLib::NGNCurrency::NGNCurrency</a></div><div class="ttdeci">NGNCurrency()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d96/africa_8cpp_source.html#l00047">africa.cpp:47</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_z_a_r_currency_html_ac0040e7de3a8fb02f7ff32ad7608aab2"><div class="ttname"><a href="../../da/d1f/class_quant_lib_1_1_z_a_r_currency.html#ac0040e7de3a8fb02f7ff32ad7608aab2">QuantLib::ZARCurrency::ZARCurrency</a></div><div class="ttdeci">ZARCurrency()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d96/africa_8cpp_source.html#l00033">africa.cpp:33</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_currency_1_1_data_html"><div class="ttname"><a href="../../d0/d67/struct_quant_lib_1_1_currency_1_1_data.html">QuantLib::Currency::Data</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5f/currency_8hpp_source.html#l00080">currency.hpp:80</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_rounding_html"><div class="ttname"><a href="../../d7/da0/class_quant_lib_1_1_rounding.html">QuantLib::Rounding</a></div><div class="ttdoc">basic rounding class</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db3/rounding_8hpp_source.html#l00035">rounding.hpp:35</a></div></div>

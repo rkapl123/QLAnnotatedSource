@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -252,6 +252,7 @@ $(function() {
 , <a class="el" href="d4/dd2/class_quant_lib_1_1_range_accrual_leg.html#a070ed82c6cab5f05e2874979f4193388">RangeAccrualLeg</a>
 , <a class="el" href="d2/da5/class_quant_lib_1_1_risky_fixed_bond.html#a070ed82c6cab5f05e2874979f4193388">RiskyFixedBond</a>
 , <a class="el" href="df/d55/class_quant_lib_1_1_risky_floating_bond.html#a070ed82c6cab5f05e2874979f4193388">RiskyFloatingBond</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#a070ed82c6cab5f05e2874979f4193388">SubPeriodsLeg</a>
 , <a class="el" href="d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html#a070ed82c6cab5f05e2874979f4193388">yoyInflationLeg</a>
 </li>
 <li>scheme_
@@ -906,7 +907,6 @@ $(function() {
 , <a class="el" href="d2/d53/class_quant_lib_1_1_spreaded_optionlet_volatility.html#a0f282e91dbd00752acbc31e5d6a94174">SpreadedOptionletVolatility</a>
 , <a class="el" href="d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a0f282e91dbd00752acbc31e5d6a94174">SpreadedSmileSection</a>
 , <a class="el" href="d7/d20/class_quant_lib_1_1_spreaded_swaption_volatility.html#a0f282e91dbd00752acbc31e5d6a94174">SpreadedSwaptionVolatility</a>
-, <a class="el" href="d3/de2/class_quant_lib_1_1_sub_periods_pricer.html#aa6db15cb8f4db71dbdd282eb1a4a9bcd">SubPeriodsPricer</a>
 , <a class="el" href="dd/df9/class_quant_lib_1_1_swap_rate_helper.html#a5caa3200880208842845075caebdb6e1">SwapRateHelper</a>
 , <a class="el" href="d1/d14/class_quant_lib_1_1_vanilla_swap.html#aa6db15cb8f4db71dbdd282eb1a4a9bcd">VanillaSwap</a>
 , <a class="el" href="d9/d5e/class_quant_lib_1_1_year_on_year_inflation_swap.html#aa6db15cb8f4db71dbdd282eb1a4a9bcd">YearOnYearInflationSwap</a>
@@ -926,7 +926,6 @@ $(function() {
 , <a class="el" href="de/d5f/class_quant_lib_1_1_linear_tsr_pricer.html#a13e8e0bbdf635458d4b3b32fc3d2a817">LinearTsrPricer</a>
 , <a class="el" href="dc/d84/class_quant_lib_1_1_lognormal_cms_spread_pricer.html#a13e8e0bbdf635458d4b3b32fc3d2a817">LognormalCmsSpreadPricer</a>
 , <a class="el" href="d5/d73/class_quant_lib_1_1_range_accrual_pricer.html#a13e8e0bbdf635458d4b3b32fc3d2a817">RangeAccrualPricer</a>
-, <a class="el" href="d3/de2/class_quant_lib_1_1_sub_periods_pricer.html#a13e8e0bbdf635458d4b3b32fc3d2a817">SubPeriodsPricer</a>
 </li>
 <li>spreadOfFixing_
 : <a class="el" href="df/d9e/class_quant_lib_1_1_multi_step_ratchet.html#a864ddee4085241c41fbb46146da0150e">MultiStepRatchet</a>
@@ -1051,8 +1050,6 @@ $(function() {
 <li>startTime_
 : <a class="el" href="d6/d21/class_quant_lib_1_1_range_accrual_floaters_coupon.html#a6b4dfb2aef0717c1cc3b47544c5c6f1f">RangeAccrualFloatersCoupon</a>
 , <a class="el" href="d5/d73/class_quant_lib_1_1_range_accrual_pricer.html#a6b4dfb2aef0717c1cc3b47544c5c6f1f">RangeAccrualPricer</a>
-, <a class="el" href="d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a6b4dfb2aef0717c1cc3b47544c5c6f1f">SubPeriodsCoupon</a>
-, <a class="el" href="d3/de2/class_quant_lib_1_1_sub_periods_pricer.html#a6b4dfb2aef0717c1cc3b47544c5c6f1f">SubPeriodsPricer</a>
 </li>
 <li>startTimeBase_
 : <a class="el" href="df/d81/class_quant_lib_1_1_tenor_optionlet_v_t_s_1_1_tenor_optionlet_smile_section.html#ac7c6393fd5f80af7f30e2db549001d18">TenorOptionletVTS::TenorOptionletSmileSection</a>
@@ -1329,6 +1326,9 @@ $(function() {
 </li>
 <li>stripper1_
 : <a class="el" href="d2/dae/class_quant_lib_1_1_optionlet_stripper2.html#a2dbaff0e3bf7700020e2a7da7818a40b">OptionletStripper2</a>
+</li>
+<li>subPeriodFixings_
+: <a class="el" href="d3/de2/class_quant_lib_1_1_sub_periods_pricer.html#a1453af6b4a895323bcb1e09c8e8fb621">SubPeriodsPricer</a>
 </li>
 <li>subStep_
 : <a class="el" href="d0/d10/class_quant_lib_1_1_square_root_andersen.html#aa66aa849f6624f3fb0765ae7265120a0">SquareRootAndersen</a>

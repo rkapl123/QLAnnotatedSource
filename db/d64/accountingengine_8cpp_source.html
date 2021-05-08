@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -128,7 +128,7 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">const</span> std::vector&lt;Rate&gt;&amp; rateTimes = <a class="code" href="../../df/d13/class_quant_lib_1_1_accounting_engine.html#afe1ca2a0498e17face86d6cac6f38ec0">product_</a>-&gt;evolution().rateTimes();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="../../df/d13/class_quant_lib_1_1_accounting_engine.html#a5aa2331136e0d40b661fe092ed262978">discounters_</a>.reserve(cashFlowTimes.size());</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">double</span> cashFlowTime : cashFlowTimes)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="../../df/d13/class_quant_lib_1_1_accounting_engine.html#a5aa2331136e0d40b661fe092ed262978">discounters_</a>.push_back(<a class="code" href="../../dc/d20/class_quant_lib_1_1_market_model_discounter.html">MarketModelDiscounter</a>(cashFlowTime, rateTimes));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="../../df/d13/class_quant_lib_1_1_accounting_engine.html#a5aa2331136e0d40b661fe092ed262978">discounters_</a>.emplace_back(cashFlowTime, rateTimes);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../df/d13/class_quant_lib_1_1_accounting_engine.html#acd3d9209e3d55da84002ce0d9e20f127">   50</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../df/d13/class_quant_lib_1_1_accounting_engine.html#acd3d9209e3d55da84002ce0d9e20f127">AccountingEngine::singlePathValues</a>(std::vector&lt;Real&gt;&amp; values) {</div>

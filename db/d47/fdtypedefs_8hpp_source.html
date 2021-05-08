@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -119,43 +119,24 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a1a481730b77798735b31d2a815a5d242">   43</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="../../dc/dda/class_quant_lib_1_1_step_condition.html">StepCondition&lt;Array&gt;</a> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a1a481730b77798735b31d2a815a5d242">StandardStepCondition</a>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#if defined(__GNUC__)</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#pragma GCC diagnostic push</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#pragma clang diagnostic push</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#if defined(QL_PATCH_MSVC)</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#pragma warning(push)</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#pragma warning(disable:4996)</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    QL_DEPRECATED_DISABLE_WARNING</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    QL_DEPRECATED</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a3b0fa3f5af20bdd1f1b043850f88b259">   51</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="../../d6/d2b/class_quant_lib_1_1_curve_dependent_step_condition.html">CurveDependentStepCondition&lt;Array&gt;</a> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#a3b0fa3f5af20bdd1f1b043850f88b259">StandardCurveDependentStepCondition</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    QL_DEPRECATED_ENABLE_WARNING</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    QL_DEPRECATED</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#affa840b594bad2615a1da7160c6ab5c1">   62</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="../../d6/d2b/class_quant_lib_1_1_curve_dependent_step_condition.html">CurveDependentStepCondition&lt;Array&gt;</a> <a class="code" href="../../d5/d7b/namespace_quant_lib.html#affa840b594bad2615a1da7160c6ab5c1">StandardCurveDependentStepCondition</a>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#if defined(QL_PATCH_MSVC)</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#pragma warning(pop)</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#pragma clang diagnostic pop</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#if defined(__GNUC__)</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#pragma GCC diagnostic pop</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_quant_lib_html_a3d465a4eaa8e7a5bacebee4c6aeba2a7"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a3d465a4eaa8e7a5bacebee4c6aeba2a7">QuantLib::StandardFiniteDifferenceModel</a></div><div class="ttdeci">FiniteDifferenceModel&lt; CrankNicolson&lt; TridiagonalOperator &gt; &gt; StandardFiniteDifferenceModel</div><div class="ttdoc">default choice for finite-difference model</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d47/fdtypedefs_8hpp_source.html#l00035">fdtypedefs.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_curve_dependent_step_condition_html"><div class="ttname"><a href="../../d6/d2b/class_quant_lib_1_1_curve_dependent_step_condition.html">QuantLib::CurveDependentStepCondition</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0a/stepcondition_8hpp_source.html#l00049">stepcondition.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_step_condition_html"><div class="ttname"><a href="../../dc/dda/class_quant_lib_1_1_step_condition.html">QuantLib::StepCondition&lt; Array &gt;</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_a3b0fa3f5af20bdd1f1b043850f88b259"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a3b0fa3f5af20bdd1f1b043850f88b259">QuantLib::StandardCurveDependentStepCondition</a></div><div class="ttdeci">QL_DEPRECATED_DISABLE_WARNING QL_DEPRECATED typedef CurveDependentStepCondition&lt; Array &gt; StandardCurveDependentStepCondition</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d47/fdtypedefs_8hpp_source.html#l00051">fdtypedefs.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_parallel_evolver_html"><div class="ttname"><a href="../../d1/d40/class_quant_lib_1_1_parallel_evolver.html">QuantLib::ParallelEvolver</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de0/parallelevolver_8hpp_source.html#l00084">parallelevolver.hpp:84</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_crank_nicolson_html"><div class="ttname"><a href="../../d6/d49/class_quant_lib_1_1_crank_nicolson.html">QuantLib::CrankNicolson</a></div><div class="ttdoc">Crank-Nicolson scheme for finite difference methods.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dbb/cranknicolson_8hpp_source.html#l00067">cranknicolson.hpp:67</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html_affa840b594bad2615a1da7160c6ab5c1"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#affa840b594bad2615a1da7160c6ab5c1">QuantLib::StandardCurveDependentStepCondition</a></div><div class="ttdeci">QL_DEPRECATED typedef CurveDependentStepCondition&lt; Array &gt; StandardCurveDependentStepCondition</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d47/fdtypedefs_8hpp_source.html#l00062">fdtypedefs.hpp:62</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a6a3cd732084183774302d3d65a2162f1"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a6a3cd732084183774302d3d65a2162f1">QuantLib::StandardSystemFiniteDifferenceModel</a></div><div class="ttdeci">FiniteDifferenceModel&lt; ParallelEvolver&lt; CrankNicolson&lt; TridiagonalOperator &gt; &gt; &gt; StandardSystemFiniteDifferenceModel</div><div class="ttdoc">default choice for parallel finite-difference model</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d47/fdtypedefs_8hpp_source.html#l00040">fdtypedefs.hpp:40</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a1a481730b77798735b31d2a815a5d242"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a1a481730b77798735b31d2a815a5d242">QuantLib::StandardStepCondition</a></div><div class="ttdeci">StepCondition&lt; Array &gt; StandardStepCondition</div><div class="ttdoc">default choice for step condition</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d47/fdtypedefs_8hpp_source.html#l00043">fdtypedefs.hpp:43</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_finite_difference_model_html"><div class="ttname"><a href="../../dc/d6d/class_quant_lib_1_1_finite_difference_model.html">QuantLib::FiniteDifferenceModel</a></div><div class="ttdoc">Generic finite difference model.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8c/finitedifferencemodel_8hpp_source.html#l00037">finitedifferencemodel.hpp:37</a></div></div>

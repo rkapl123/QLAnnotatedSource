@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="../../QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -108,7 +108,7 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../de/dff/class_quant_lib_1_1_notional_path.html#ac393cc3f798ea5b650fd35a03f2d2a78">   24</a></span>&#160;    <a class="code" href="../../de/dff/class_quant_lib_1_1_notional_path.html#ac393cc3f798ea5b650fd35a03f2d2a78">NotionalPath::NotionalPath</a>()</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> previous = 1.0;<span class="comment">//full notional at the beginning</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="../../de/dff/class_quant_lib_1_1_notional_path.html#aefcff2889dd73281a97363df3b038e7e">notionalRate_</a>.push_back(std::pair&lt;Date, Real&gt;(<a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(), previous));</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="../../de/dff/class_quant_lib_1_1_notional_path.html#aefcff2889dd73281a97363df3b038e7e">notionalRate_</a>.emplace_back(<a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(), previous);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../de/dff/class_quant_lib_1_1_notional_path.html#a827a98521a9641091b94f12f7262dd48">   30</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="code" href="../../de/dff/class_quant_lib_1_1_notional_path.html#a827a98521a9641091b94f12f7262dd48">NotionalPath::notionalRate</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; date)<span class="keyword"> const</span></div>
@@ -124,7 +124,7 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../de/dff/class_quant_lib_1_1_notional_path.html#a8256b49a47c7fe4689b236d0ef4b3f7b">   42</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../de/dff/class_quant_lib_1_1_notional_path.html#a8256b49a47c7fe4689b236d0ef4b3f7b">NotionalPath::addReduction</a>(<span class="keyword">const</span> <a class="code" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;date, <a class="code" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> newRate) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="../../de/dff/class_quant_lib_1_1_notional_path.html#aefcff2889dd73281a97363df3b038e7e">notionalRate_</a>.push_back(std::pair&lt;Date, Real&gt;(date, newRate));</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="../../de/dff/class_quant_lib_1_1_notional_path.html#aefcff2889dd73281a97363df3b038e7e">notionalRate_</a>.emplace_back(date, newRate);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../de/dff/class_quant_lib_1_1_notional_path.html#aff0ee1c433982a16061952a1030132c5">   46</a></span>&#160;    <a class="code" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code" href="../../de/dff/class_quant_lib_1_1_notional_path.html#aff0ee1c433982a16061952a1030132c5">NotionalPath::loss</a>() {</div>

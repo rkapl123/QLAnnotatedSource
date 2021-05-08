@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -305,8 +305,9 @@ $(function() {
 : <a class="el" href="de/df1/class_quant_lib_1_1_make_yo_y_inflation_cap_floor.html#aaef6bbc663e3594ad7c16c1316fa4531">MakeYoYInflationCapFloor</a>
 </li>
 <li>withAveragingMethod()
-: <a class="el" href="dc/dd0/class_quant_lib_1_1_make_o_i_s.html#a9dca15e8fc4e6eae74b68ac4f607f43e">MakeOIS</a>
-, <a class="el" href="d3/df2/class_quant_lib_1_1_overnight_leg.html#aa66a69f93a63a92c87a573981eaa0d34">OvernightLeg</a>
+: <a class="el" href="dc/dd0/class_quant_lib_1_1_make_o_i_s.html#ac463293df6624dda406e35225a6baa8a">MakeOIS</a>
+, <a class="el" href="d3/df2/class_quant_lib_1_1_overnight_leg.html#a90573123b9de16a7a5ec1461234e0bbc">OvernightLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#a08154b409fce62b46eec5f4461ae8ae3">SubPeriodsLeg</a>
 </li>
 <li>withBasisSystem()
 : <a class="el" href="dc/dad/class_quant_lib_1_1_make_m_c_american_basket_engine.html#ac57803ffdcd8ae844a1229753f8a1a4e">MakeMCAmericanBasketEngine&lt; RNG &gt;</a>
@@ -425,6 +426,9 @@ $(function() {
 <li>withCouponRates()
 : <a class="el" href="d4/d17/class_quant_lib_1_1_fixed_rate_leg.html#a95d45e04d25c040bec6731b39d70f933">FixedRateLeg</a>
 </li>
+<li>withCouponSpreads()
+: <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#ad03e34be29c5b414e511c856df6af4a2">SubPeriodsLeg</a>
+</li>
 <li>withCouponTenor()
 : <a class="el" href="d6/d31/class_quant_lib_1_1_make_credit_default_swap.html#a13afd8ff6e8e79e157b41c54db8b28f0">MakeCreditDefaultSwap</a>
 </li>
@@ -481,6 +485,7 @@ $(function() {
 , <a class="el" href="d0/d35/class_quant_lib_1_1_c_p_i_leg.html#a674d655b37bd86e357c32203eaeb0f06">CPILeg</a>
 , <a class="el" href="d4/d17/class_quant_lib_1_1_fixed_rate_leg.html#afb9b8eb9619e294352ecc17183a719e5">FixedRateLeg</a>
 , <a class="el" href="df/da2/class_quant_lib_1_1_ibor_leg.html#ad5fd3233aa3f40f1182449694b863256">IborLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#a0aa5986cae24344b053f4838f527cb86">SubPeriodsLeg</a>
 </li>
 <li>withExerciseDate()
 : <a class="el" href="d0/db5/class_quant_lib_1_1_make_swaption.html#a1666d854df50e3903d367ff4ed2d27b7">MakeSwaption</a>
@@ -545,6 +550,7 @@ $(function() {
 , <a class="el" href="df/da2/class_quant_lib_1_1_ibor_leg.html#aece989ee88fd730812e71d2c05b35115">IborLeg</a>
 , <a class="el" href="de/df1/class_quant_lib_1_1_make_yo_y_inflation_cap_floor.html#a49ba5e3f4328333989a6aa903b94bb92">MakeYoYInflationCapFloor</a>
 , <a class="el" href="d4/dd2/class_quant_lib_1_1_range_accrual_leg.html#a3dd09f3e62e699cd577c692ff69fa94d">RangeAccrualLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#ae1e096908e673d679bd8feda6d24bdd2">SubPeriodsLeg</a>
 , <a class="el" href="d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html#af3032ebf81fa361419bdf37d9e24bc74">yoyInflationLeg</a>
 </li>
 <li>withFloatingLegCalendar()
@@ -612,6 +618,7 @@ $(function() {
 , <a class="el" href="df/da2/class_quant_lib_1_1_ibor_leg.html#ab67b6f9a75f518d15797a645303d897a">IborLeg</a>
 , <a class="el" href="d3/df2/class_quant_lib_1_1_overnight_leg.html#a234861a9076434f039721a0d21bad917">OvernightLeg</a>
 , <a class="el" href="d4/dd2/class_quant_lib_1_1_range_accrual_leg.html#a1c08ab8912c4bbc8b9e7cd63a79be5fc">RangeAccrualLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#adccfb1e1c79602b57829af22afda8dbd">SubPeriodsLeg</a>
 , <a class="el" href="d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html#a3fa0b271b9f9ef0ef01e4b840f07334a">yoyInflationLeg</a>
 </li>
 <li>withIllegalLocalVolOverwrite()
@@ -703,7 +710,7 @@ $(function() {
 : <a class="el" href="d3/d0c/class_quant_lib_1_1_average_b_m_a_leg.html#a86e8b4bc231f156b8e8e4ece4caad01b">AverageBMALeg</a>
 , <a class="el" href="d6/d41/class_quant_lib_1_1_cms_leg.html#abd49ca46656aab34a458586fbc8ef448">CmsLeg</a>
 , <a class="el" href="dd/d9c/class_quant_lib_1_1_cms_spread_leg.html#afd6b61702e5a4f9d55c51a03c601388d">CmsSpreadLeg</a>
-, <a class="el" href="d0/d35/class_quant_lib_1_1_c_p_i_leg.html#a12851a28500c9339a80647f2c86e94c0">CPILeg</a>
+, <a class="el" href="d0/d35/class_quant_lib_1_1_c_p_i_leg.html#a0507c46361d7d5c8f983e47f4d36f476">CPILeg</a>
 , <a class="el" href="d4/d68/class_quant_lib_1_1_digital_cms_leg.html#adcb94ad8e72536dacf595a1a5c61037a">DigitalCmsLeg</a>
 , <a class="el" href="d7/d64/class_quant_lib_1_1_digital_cms_spread_leg.html#a9bb9ebb171d21e6f5ecf8b425de7df0f">DigitalCmsSpreadLeg</a>
 , <a class="el" href="dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#a651039fce0d0077ebf4a633069bb5af1">DigitalIborLeg</a>
@@ -711,7 +718,8 @@ $(function() {
 , <a class="el" href="df/da2/class_quant_lib_1_1_ibor_leg.html#af936a6cd81657ad0692ec64da0b0705f">IborLeg</a>
 , <a class="el" href="d3/df2/class_quant_lib_1_1_overnight_leg.html#a76d5a0b8245957af75d54ea81319327f">OvernightLeg</a>
 , <a class="el" href="d4/dd2/class_quant_lib_1_1_range_accrual_leg.html#a96f10edc3fd5e31d7040b71bf2d1fe91">RangeAccrualLeg</a>
-, <a class="el" href="d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html#a31afff2ccfbd52b6333575ee40c23504">yoyInflationLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#a64af97f7fd7044d7b4311ad28a8e6a37">SubPeriodsLeg</a>
+, <a class="el" href="d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html#a548d55375b335d65c0039ed2f28fbe28">yoyInflationLeg</a>
 </li>
 <li>withObservationConvention()
 : <a class="el" href="d4/dd2/class_quant_lib_1_1_range_accrual_leg.html#a20341c08292ce3e022d3acca612135a3">RangeAccrualLeg</a>
@@ -749,6 +757,7 @@ $(function() {
 , <a class="el" href="de/df1/class_quant_lib_1_1_make_yo_y_inflation_cap_floor.html#aad14818cda3c6677702367d6b5fa75f1">MakeYoYInflationCapFloor</a>
 , <a class="el" href="d3/df2/class_quant_lib_1_1_overnight_leg.html#a49ca80b4e072cd77db089d6f39765dbf">OvernightLeg</a>
 , <a class="el" href="d4/dd2/class_quant_lib_1_1_range_accrual_leg.html#ab2546dcaa89d6fc1d7e656a89017f1e7">RangeAccrualLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#af611252a257ea2fcc3ac68190d8191fb">SubPeriodsLeg</a>
 , <a class="el" href="d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html#a2a7bfe6996c7e5edb890e0877a52be46">yoyInflationLeg</a>
 </li>
 <li>withPaymentCalendar()
@@ -757,6 +766,7 @@ $(function() {
 , <a class="el" href="df/da2/class_quant_lib_1_1_ibor_leg.html#a1edb66616088266222bcf5a6fa6d50fb">IborLeg</a>
 , <a class="el" href="dc/dd0/class_quant_lib_1_1_make_o_i_s.html#a957523a7e756337faf34c0fc26287595">MakeOIS</a>
 , <a class="el" href="d3/df2/class_quant_lib_1_1_overnight_leg.html#a39c0df8a8416c841b9c80e56a0719f60">OvernightLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#afa578974251068fbb52d3cc52d9ca942">SubPeriodsLeg</a>
 </li>
 <li>withPaymentDayCounter()
 : <a class="el" href="d3/d0c/class_quant_lib_1_1_average_b_m_a_leg.html#a784e7ff8d768d48d85a141f0a478523d">AverageBMALeg</a>
@@ -770,6 +780,7 @@ $(function() {
 , <a class="el" href="de/df1/class_quant_lib_1_1_make_yo_y_inflation_cap_floor.html#aa034a33ba21f56fbbbb2e6393da3f610">MakeYoYInflationCapFloor</a>
 , <a class="el" href="d3/df2/class_quant_lib_1_1_overnight_leg.html#a940b5db4d2f43f82767ec190189d8f41">OvernightLeg</a>
 , <a class="el" href="d4/dd2/class_quant_lib_1_1_range_accrual_leg.html#a11e05066fbc1e8e77e9c95bbec9092c7">RangeAccrualLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#af73134a6af0187f9739774e397a6444e">SubPeriodsLeg</a>
 , <a class="el" href="d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html#a7bd51a0a7da6c232fa3bcc70045d501d">yoyInflationLeg</a>
 </li>
 <li>withPaymentFrequency()
@@ -780,6 +791,7 @@ $(function() {
 , <a class="el" href="df/da2/class_quant_lib_1_1_ibor_leg.html#a089c8fcbd4bafb1431720782fa6cbb46">IborLeg</a>
 , <a class="el" href="dc/dd0/class_quant_lib_1_1_make_o_i_s.html#a5ad93b71162a22c48245e8345ad9088b">MakeOIS</a>
 , <a class="el" href="d3/df2/class_quant_lib_1_1_overnight_leg.html#ae2239b75cd3991f5aa0187c9838e3de4">OvernightLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#a2eece31c7ab7df7bb756bc6b30733912">SubPeriodsLeg</a>
 </li>
 <li>withPolynomialOrder()
 : <a class="el" href="dc/dad/class_quant_lib_1_1_make_m_c_american_basket_engine.html#a9da74ae5f2b4f9b74a24ea300878e31a">MakeMCAmericanBasketEngine&lt; RNG &gt;</a>
@@ -791,7 +803,7 @@ $(function() {
 : <a class="el" href="df/d4f/class_quant_lib_1_1_differential_evolution_1_1_configuration.html#ae391e87f5be5b651f2fd53ae00696aca">DifferentialEvolution::Configuration</a>
 </li>
 <li>withPriceThreshold()
-: <a class="el" href="d2/d79/struct_quant_lib_1_1_linear_tsr_pricer_1_1_settings.html#ac408f28b0d7c6815048d80520ee6272c">LinearTsrPricer::Settings</a>
+: <a class="el" href="d2/d79/struct_quant_lib_1_1_linear_tsr_pricer_1_1_settings.html#af43e637d32d5903641a683acb03efae8">LinearTsrPricer::Settings</a>
 </li>
 <li>withPricingEngine()
 : <a class="el" href="d6/dc1/class_quant_lib_1_1_make_arithmetic_average_o_i_s.html#ab8adce5ad97fc676d53b108608239297">MakeArithmeticAverageOIS</a>
@@ -809,13 +821,13 @@ $(function() {
 </li>
 <li>withPutPayoffs()
 : <a class="el" href="d4/d68/class_quant_lib_1_1_digital_cms_leg.html#a3e0e3afcbee28d333e16a453d8eb6ee9">DigitalCmsLeg</a>
-, <a class="el" href="d7/d64/class_quant_lib_1_1_digital_cms_spread_leg.html#aeb9572bcac8487da95c033862242f495">DigitalCmsSpreadLeg</a>
+, <a class="el" href="d7/d64/class_quant_lib_1_1_digital_cms_spread_leg.html#a3465ca99b16fa74060287cd35bd95da7">DigitalCmsSpreadLeg</a>
 , <a class="el" href="dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#ac5b8de31beeb3550ccf1da95472a3cf4">DigitalIborLeg</a>
 </li>
 <li>withPutStrikes()
-: <a class="el" href="d4/d68/class_quant_lib_1_1_digital_cms_leg.html#ae97a32ab33ac4183beb73f9372daafb6">DigitalCmsLeg</a>
+: <a class="el" href="d4/d68/class_quant_lib_1_1_digital_cms_leg.html#a2bc585be768ea5e55e77980dea262acf">DigitalCmsLeg</a>
 , <a class="el" href="d7/d64/class_quant_lib_1_1_digital_cms_spread_leg.html#a393d5d8793b21b3590dfefadaee4f7ed">DigitalCmsSpreadLeg</a>
-, <a class="el" href="dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#a9ba2aebc989f6cf46b6a12eedaf1eae3">DigitalIborLeg</a>
+, <a class="el" href="dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#a33f538ae911acf0f757f696aa281fa31">DigitalIborLeg</a>
 </li>
 <li>withQuantoHelper()
 : <a class="el" href="d3/d30/class_quant_lib_1_1_make_fd_black_scholes_vanilla_engine.html#a82395f4c54cbc5d3fe4ab07be7f1b1fd">MakeFdBlackScholesVanillaEngine</a>
@@ -824,6 +836,9 @@ $(function() {
 </li>
 <li>withRateBound()
 : <a class="el" href="d2/d79/struct_quant_lib_1_1_linear_tsr_pricer_1_1_settings.html#a14f2086a276c92c3b49b856dbde66261">LinearTsrPricer::Settings</a>
+</li>
+<li>withRateSpreads()
+: <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#aabcc0ece07653643b9758324b7cfc10a">SubPeriodsLeg</a>
 </li>
 <li>withReplication()
 : <a class="el" href="d4/d68/class_quant_lib_1_1_digital_cms_leg.html#acce2835c8bd0001416709d7609fc8be6">DigitalCmsLeg</a>
@@ -922,16 +937,16 @@ $(function() {
 </li>
 <li>withSpreads()
 : <a class="el" href="d3/d0c/class_quant_lib_1_1_average_b_m_a_leg.html#a40e1ebd317e2aba99938cc901b425e58">AverageBMALeg</a>
-, <a class="el" href="d6/d41/class_quant_lib_1_1_cms_leg.html#a6e50137e9e884e98a80284b611b8eef6">CmsLeg</a>
-, <a class="el" href="dd/d9c/class_quant_lib_1_1_cms_spread_leg.html#a2037608fcf715e539667e6e777dc1f0c">CmsSpreadLeg</a>
+, <a class="el" href="d6/d41/class_quant_lib_1_1_cms_leg.html#a79ff84db0de39180d0a38d991c23c00d">CmsLeg</a>
+, <a class="el" href="dd/d9c/class_quant_lib_1_1_cms_spread_leg.html#a055706335a256e74b5281ed9c0c5a85c">CmsSpreadLeg</a>
 , <a class="el" href="d0/d35/class_quant_lib_1_1_c_p_i_leg.html#a9e7c1cf6587d2a3259861cd71d5643e1">CPILeg</a>
 , <a class="el" href="d4/d68/class_quant_lib_1_1_digital_cms_leg.html#a314afa77dfb0734c681d735cc6f41a63">DigitalCmsLeg</a>
-, <a class="el" href="d7/d64/class_quant_lib_1_1_digital_cms_spread_leg.html#a4d472a218affed6b7f23b3562054a11f">DigitalCmsSpreadLeg</a>
+, <a class="el" href="d7/d64/class_quant_lib_1_1_digital_cms_spread_leg.html#a2062df7daddb1b930f7bcefa9b5b6406">DigitalCmsSpreadLeg</a>
 , <a class="el" href="dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#a64988c0c9381c201490320959653e183">DigitalIborLeg</a>
-, <a class="el" href="df/da2/class_quant_lib_1_1_ibor_leg.html#a1f850fbc12f1c1ce733bf72d86b7810b">IborLeg</a>
-, <a class="el" href="d3/df2/class_quant_lib_1_1_overnight_leg.html#ab50b03d0baf7f47b428193e3ec73a91b">OvernightLeg</a>
-, <a class="el" href="d4/dd2/class_quant_lib_1_1_range_accrual_leg.html#af79f9bd554d511e8a44c09bb7ea5b665">RangeAccrualLeg</a>
-, <a class="el" href="d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html#a116da5b05a9aee4668b9c8f830cf7c94">yoyInflationLeg</a>
+, <a class="el" href="df/da2/class_quant_lib_1_1_ibor_leg.html#a02c6f0b2279d4454d7add63fff50a609">IborLeg</a>
+, <a class="el" href="d3/df2/class_quant_lib_1_1_overnight_leg.html#aa77bb1c75494cf628344a3dd1324de03">OvernightLeg</a>
+, <a class="el" href="d4/dd2/class_quant_lib_1_1_range_accrual_leg.html#a0676dd7b4caa93a667fe780484bcba83">RangeAccrualLeg</a>
+, <a class="el" href="d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html#ad7c3f4b508e1b4e0dd3df84a094282b3">yoyInflationLeg</a>
 </li>
 <li>withSteps()
 : <a class="el" href="dc/dad/class_quant_lib_1_1_make_m_c_american_basket_engine.html#affc8611ebc4a7048c6bd6622a2a58c15">MakeMCAmericanBasketEngine&lt; RNG &gt;</a>
@@ -1030,7 +1045,7 @@ $(function() {
 : <a class="el" href="d4/dd2/class_quant_lib_1_1_range_accrual_leg.html#a9781fa3b16e42f2bf12f07bc035ce42b">RangeAccrualLeg</a>
 </li>
 <li>withVegaRatio()
-: <a class="el" href="d2/d79/struct_quant_lib_1_1_linear_tsr_pricer_1_1_settings.html#ab29f8174d1343d53c41cdd72195e6c12">LinearTsrPricer::Settings</a>
+: <a class="el" href="d2/d79/struct_quant_lib_1_1_linear_tsr_pricer_1_1_settings.html#a652c89e2f07dcad6c25548645b3a0513">LinearTsrPricer::Settings</a>
 </li>
 <li>withVGrid()
 : <a class="el" href="d0/de2/class_quant_lib_1_1_make_fd_heston_vanilla_engine.html#acdddc99934b4936e41c7054652b1e42f">MakeFdHestonVanillaEngine</a>

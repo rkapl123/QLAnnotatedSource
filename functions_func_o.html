@@ -34,7 +34,7 @@
    <div id="projectname"><a href="http://quantlib.org">
        <img alt="QuantLib" src="QL-title.jpg"></a>
    <div id="projectbrief">A free/open-source library for quantitative finance</div>
-   <div id="projectnumber">Fully annotated sources - version 1.21</div>
+   <div id="projectnumber">Fully annotated sources - version 1.22</div>
    </div>
   </td>
  </tr>
@@ -100,7 +100,6 @@ $(function() {
 </li>
 <li>observationDates()
 : <a class="el" href="d6/d21/class_quant_lib_1_1_range_accrual_floaters_coupon.html#afcf880ff7b631ac94ec108a8d3aa7765">RangeAccrualFloatersCoupon</a>
-, <a class="el" href="d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#afcf880ff7b631ac94ec108a8d3aa7765">SubPeriodsCoupon</a>
 </li>
 <li>observationInterpolation()
 : <a class="el" href="da/dc6/class_quant_lib_1_1_c_p_i_bond.html#a4db110b42e8de3c208c95d37f31f0a16">CPIBond</a>
@@ -119,19 +118,14 @@ $(function() {
 , <a class="el" href="d7/ddf/class_quant_lib_1_1_yo_y_optionlet_volatility_surface.html#a5cc774c59635dbe397d13db0a8d3852b">YoYOptionletVolatilitySurface</a>
 , <a class="el" href="d4/d56/class_quant_lib_1_1_zero_coupon_inflation_swap.html#a889297000bf532621599d453601070ff">ZeroCouponInflationSwap</a>
 </li>
-<li>observations()
-: <a class="el" href="d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a5af5a5b9a1c959c80ab0bcbb263fbddf">SubPeriodsCoupon</a>
-</li>
 <li>observationsNo()
 : <a class="el" href="d6/d21/class_quant_lib_1_1_range_accrual_floaters_coupon.html#ab82b4d9e2a0929fe2bf5afae5d139fa9">RangeAccrualFloatersCoupon</a>
 </li>
 <li>observationsSchedule()
 : <a class="el" href="d6/d21/class_quant_lib_1_1_range_accrual_floaters_coupon.html#a7f199fd7550b0bf55ef123705dad9cd4">RangeAccrualFloatersCoupon</a>
-, <a class="el" href="d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a7f199fd7550b0bf55ef123705dad9cd4">SubPeriodsCoupon</a>
 </li>
 <li>observationTimes()
 : <a class="el" href="d6/d21/class_quant_lib_1_1_range_accrual_floaters_coupon.html#a8ea3093b6a6671f68604de175040ed1e">RangeAccrualFloatersCoupon</a>
-, <a class="el" href="d5/dfd/class_quant_lib_1_1_sub_periods_coupon.html#a8ea3093b6a6671f68604de175040ed1e">SubPeriodsCoupon</a>
 </li>
 <li>Observer()
 : <a class="el" href="de/dfe/class_quant_lib_1_1_observer.html#a52ef9232283da6f842e4574afeb854a0">Observer</a>
@@ -149,7 +143,7 @@ $(function() {
 : <a class="el" href="d1/dcc/class_quant_lib_1_1_numerical_differentiation.html#a82a2b4190644fff486f2905965d8a000">NumericalDifferentiation</a>
 </li>
 <li>OISRateHelper()
-: <a class="el" href="dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a84661da2babcb5530959ceed06fc7749">OISRateHelper</a>
+: <a class="el" href="dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a36add1d19e00bedda4924aa2ec73b5fb">OISRateHelper</a>
 </li>
 <li>omega()
 : <a class="el" href="d3/d8d/class_quant_lib_1_1_analytic_discrete_geometric_average_price_asian_heston_engine.html#a2523cae395e364e23b642c0c84fd0056">AnalyticDiscreteGeometricAveragePriceAsianHestonEngine</a>
@@ -305,6 +299,7 @@ $(function() {
 , <a class="el" href="d3/df2/class_quant_lib_1_1_overnight_leg.html#aa1fc7cb438a65f99804501057f9e3997">OvernightLeg</a>
 , <a class="el" href="d4/dd2/class_quant_lib_1_1_range_accrual_leg.html#aa1fc7cb438a65f99804501057f9e3997">RangeAccrualLeg</a>
 , <a class="el" href="dd/d97/class_quant_lib_1_1_stripped_capped_floored_coupon_leg.html#aa1fc7cb438a65f99804501057f9e3997">StrippedCappedFlooredCouponLeg</a>
+, <a class="el" href="d0/dd4/class_quant_lib_1_1_sub_periods_leg.html#aa1fc7cb438a65f99804501057f9e3997">SubPeriodsLeg</a>
 , <a class="el" href="d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html#aa1fc7cb438a65f99804501057f9e3997">yoyInflationLeg</a>
 </li>
 <li>operator OvernightIndexedSwap()
@@ -567,20 +562,20 @@ $(function() {
 : <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#ab47ab933565293fc2efd5bd2de4530e4">Array</a>
 , <a class="el" href="d6/d34/class_quant_lib_1_1_clone.html#a09eda862da843825d1849dd63af36a2a">Clone&lt; T &gt;</a>
 , <a class="el" href="dc/dac/class_quant_lib_1_1_handle.html#a145f9b2671581dfccf585a2e19c5bbea">Handle&lt; T &gt;</a>
-, <a class="el" href="dd/db6/class_quant_lib_1_1_matrix.html#a59f5d426bdf004ad93fa962fc7cbe385">Matrix</a>
-, <a class="el" href="d2/d26/class_quant_lib_1_1_money.html#a2827c6a704bb2f426e5c49a826949304">Money</a>
-, <a class="el" href="df/dfa/class_quant_lib_1_1_period.html#ae9caddf04a150ae3bab5c97d5a4d48ff">Period</a>
-, <a class="el" href="d1/d7c/class_quant_lib_1_1_quantity.html#aad1cad04d3e9719f8335cbb8af7c9d45">Quantity</a>
+, <a class="el" href="dd/db6/class_quant_lib_1_1_matrix.html#a5fd624f86387e8fffe348a747a73f28d">Matrix</a>
+, <a class="el" href="d2/d26/class_quant_lib_1_1_money.html#aab8bfd679e42b4d3393e3580188018aa">Money</a>
+, <a class="el" href="df/dfa/class_quant_lib_1_1_period.html#a180303cf15f77ffa79f9b538d9d53585">Period</a>
+, <a class="el" href="d1/d7c/class_quant_lib_1_1_quantity.html#a9d5ba8f98f7b4996e5e9ed2e57ac24cc">Quantity</a>
 </li>
 <li>operator*=()
-: <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#a05ef6ee15af6898cb248f4ea6fdcccfb">Array</a>
+: <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#aae5fb5462d34ef1fefb3fc385b9931ac">Array</a>
 , <a class="el" href="dd/db6/class_quant_lib_1_1_matrix.html#aea9e9cac1393ed48c61c9658e3572c34">Matrix</a>
 , <a class="el" href="d2/d26/class_quant_lib_1_1_money.html#a3c9b2690f1b8248331fb66fecf4e6bef">Money</a>
 , <a class="el" href="d1/d7c/class_quant_lib_1_1_quantity.html#ac6ab8a2eb848a6b503bc4b5af339b3a8">Quantity</a>
 </li>
 <li>operator+()
-: <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#a1a8985c473e2b0cf390d220a32e4e66e">Array</a>
-, <a class="el" href="db/d60/class_quant_lib_1_1_date.html#a598412704357c8e6b91abfee93360169">Date</a>
+: <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#ac1296befd9957793e43e61cbb3d9e50c">Array</a>
+, <a class="el" href="db/d60/class_quant_lib_1_1_date.html#a957b820deca0af88eb74fc3a88d83958">Date</a>
 , <a class="el" href="dd/db6/class_quant_lib_1_1_matrix.html#ac0eba9bb1045cc58c806c4e86c246331">Matrix</a>
 , <a class="el" href="d2/d26/class_quant_lib_1_1_money.html#ad7a761333ec81ffaa13464837366f5d7">Money</a>
 , <a class="el" href="df/dfa/class_quant_lib_1_1_period.html#a90976f7bfed01855ca09c29295fe6f75">Period</a>
@@ -591,7 +586,7 @@ $(function() {
 , <a class="el" href="df/d11/class_quant_lib_1_1_fdm_linear_op_iterator.html#a00f008b80917746917b874d00abd02a9">FdmLinearOpIterator</a>
 </li>
 <li>operator+=()
-: <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#aaf8170f73062b0a3832e77a41aefc4c0">Array</a>
+: <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#a8091afec68ddbbfa98cec1d4fa2e1ccf">Array</a>
 , <a class="el" href="db/d60/class_quant_lib_1_1_date.html#a5e4a1ff168b431e1ceaf65f3fd7b1674">Date</a>
 , <a class="el" href="dd/db6/class_quant_lib_1_1_matrix.html#af9e9ef3ae7410799e5d1ac6b6d74dc68">Matrix</a>
 , <a class="el" href="d2/d26/class_quant_lib_1_1_money.html#a3b6aad2c70a3f7611c3590fb81a8442a">Money</a>
@@ -604,15 +599,15 @@ $(function() {
 , <a class="el" href="d1/ddf/class_quant_lib_1_1initializers_1_1_matrix_proxy.html#a49d760433033b8850fa57be8ed7f9188">MatrixProxy</a>
 </li>
 <li>operator-()
-: <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#aca1721d76d92537c7bd87ac6ce60e2ce">Array</a>
+: <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#a6f8fcb3e7b42f3db9907a0f185a9a1af">Array</a>
 , <a class="el" href="db/d60/class_quant_lib_1_1_date.html#a4e1a397fddc7476b0db152bc682854c2">Date</a>
 , <a class="el" href="dd/db6/class_quant_lib_1_1_matrix.html#a9e487c70c0d5d812575f22581853850d">Matrix</a>
 , <a class="el" href="d2/d26/class_quant_lib_1_1_money.html#a4a130afeac5bc99d0a00e6005dd2fce0">Money</a>
 , <a class="el" href="df/dfa/class_quant_lib_1_1_period.html#a5fd528466f1b41de52d892efff387880">Period</a>
-, <a class="el" href="d1/d7c/class_quant_lib_1_1_quantity.html#ad78fa7a2b2c87df291ea92b30b4ab21e">Quantity</a>
+, <a class="el" href="d1/d7c/class_quant_lib_1_1_quantity.html#a79df7d23b844e0789c33d46a2602363c">Quantity</a>
 </li>
 <li>operator--()
-: <a class="el" href="db/d60/class_quant_lib_1_1_date.html#a78b83c183e6a9574e583d59fafa438aa">Date</a>
+: <a class="el" href="db/d60/class_quant_lib_1_1_date.html#a382393929522ea82108942354ca727f7">Date</a>
 </li>
 <li>operator-=()
 : <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#a72af77851512699e33fc47cdb99c3da5">Array</a>
@@ -635,7 +630,7 @@ $(function() {
 , <a class="el" href="d1/d7c/class_quant_lib_1_1_quantity.html#a3509a450371b66d3cb796cc446679724">Quantity</a>
 </li>
 <li>operator/=()
-: <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#ac591f7aac915dfb4d89451130dc84aa7">Array</a>
+: <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#a7287f3aed815dbfef5125bc52869e6f3">Array</a>
 , <a class="el" href="dd/db6/class_quant_lib_1_1_matrix.html#a1560f8a2756a34d48eadac60ecb72c9e">Matrix</a>
 , <a class="el" href="d2/d26/class_quant_lib_1_1_money.html#ac9dd98528eebd18e42868b0297f3fcd1">Money</a>
 , <a class="el" href="df/dfa/class_quant_lib_1_1_period.html#a214050602b2186fb721b5d442fbe8e12">Period</a>
@@ -678,9 +673,9 @@ $(function() {
 </li>
 <li>operator=()
 : <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#a2d4e739b16bc654f126ac537aaefa61f">Array</a>
-, <a class="el" href="d6/d34/class_quant_lib_1_1_clone.html#aa52d913278b3efe66aff563e3c1991ad">Clone&lt; T &gt;</a>
+, <a class="el" href="d6/d34/class_quant_lib_1_1_clone.html#a8713ec3c9eef33a95824ad29481cdc48">Clone&lt; T &gt;</a>
 , <a class="el" href="dc/d62/class_quant_lib_1_1_interpolated_curve.html#a05f5195d566a3ab81f70a8e67001934c">InterpolatedCurve&lt; Interpolator &gt;</a>
-, <a class="el" href="dd/db6/class_quant_lib_1_1_matrix.html#a69998d7cc5e52203aba65b16fe6a1fd1">Matrix</a>
+, <a class="el" href="dd/db6/class_quant_lib_1_1_matrix.html#abe73cd0177a33a456bb5ab08b1855344">Matrix</a>
 , <a class="el" href="d2/d95/class_quant_lib_1_1_nine_point_linear_op.html#a8be355b928ebef8e47de4f1781013ff8">NinePointLinearOp</a>
 , <a class="el" href="d5/de0/class_quant_lib_1_1_observable.html#a522aacdd0f2408fe5e46527a6db999b4">Observable</a>
 , <a class="el" href="dc/d9e/class_quant_lib_1_1_observable_value.html#aceb7a715070cd34af75b73d97a8b6f7e">ObservableValue&lt; T &gt;</a>
@@ -691,8 +686,8 @@ $(function() {
 , <a class="el" href="db/d4d/class_quant_lib_1_1_sampler_ring_gaussian.html#a8fd48d0163c64ff20353799c76da4a40">SamplerRingGaussian</a>
 , <a class="el" href="dc/d96/class_quant_lib_1_1_settings_1_1_date_proxy.html#aaf78ee52156a673b7976b07f9160ea0c">Settings::DateProxy</a>
 , <a class="el" href="d8/d7d/class_quant_lib_1_1_swaption_vol_cube1x_1_1_cube.html#a42587883b1f03ae0c5fb5bf7d1f9352e">SwaptionVolCube1x&lt; Model &gt;::Cube</a>
-, <a class="el" href="db/d06/class_quant_lib_1_1_tridiagonal_operator.html#ae5095c16edf2c8621ada0279bdef5997">TridiagonalOperator</a>
-, <a class="el" href="d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html#a814a4843a5b3cf94ab12abf3a37fa893">TripleBandLinearOp</a>
+, <a class="el" href="db/d06/class_quant_lib_1_1_tridiagonal_operator.html#ad4c5f1240f51a88511e3d40d9c7b71c1">TridiagonalOperator</a>
+, <a class="el" href="d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html#abb9699f308bdc82171b5d3e9e4c28766">TripleBandLinearOp</a>
 </li>
 <li>operator==()
 : <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#a2a7d55fc29c231614614cc2b94eb6071">Array</a>
@@ -724,23 +719,23 @@ $(function() {
 , <a class="el" href="d1/d7c/class_quant_lib_1_1_quantity.html#a5cfb1d15f4c1a39611a6ceada7e76dac">Quantity</a>
 </li>
 <li>operator[]()
-: <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#ab978bc0b0b90ffae681951aa03640f00">Array</a>
+: <a class="el" href="d0/d7c/class_quant_lib_1_1_array.html#a600a614ec154609063e1c1a4f5be259e">Array</a>
 , <a class="el" href="d2/d4a/class_quant_lib_1_1_boundary_condition_set.html#a707a7f12105cb339c6dc516f83a27e64">BoundaryConditionSet&lt; bc_set &gt;</a>
 , <a class="el" href="de/d32/struct_quant_lib_1_1detail_1_1_data_3_01std_1_1vector_3_01_real_01_4_00_01_empty_arg_01_4.html#a0c0f534988334ef6a6b56f0626287a95">Data&lt; std::vector&lt; Real &gt;, EmptyArg &gt;</a>
 , <a class="el" href="d2/d91/struct_quant_lib_1_1detail_1_1_data_table.html#addd02e0e0400c40ea52323f690e4cb3a">DataTable&lt; X &gt;</a>
-, <a class="el" href="db/df2/struct_quant_lib_1_1detail_1_1_data_table_3_01_real_01_4.html#acc625e48a9453662b5a742ce32b2c7ef">DataTable&lt; Real &gt;</a>
-, <a class="el" href="dd/d64/struct_quant_lib_1_1detail_1_1_point.html#a4d701e68df9f6218bb6ffafaafbfbd7e">Point&lt; X, Y &gt;</a>
-, <a class="el" href="db/db6/struct_quant_lib_1_1detail_1_1_point_3_01base__data__table_00_01_empty_res_01_4.html#acc625e48a9453662b5a742ce32b2c7ef">Point&lt; base_data_table, EmptyRes &gt;</a>
+, <a class="el" href="db/df2/struct_quant_lib_1_1detail_1_1_data_table_3_01_real_01_4.html#a0c0f534988334ef6a6b56f0626287a95">DataTable&lt; Real &gt;</a>
+, <a class="el" href="dd/d64/struct_quant_lib_1_1detail_1_1_point.html#aab8e3cd5ca1b2e78f2a8cef2ddcbf3ef">Point&lt; X, Y &gt;</a>
+, <a class="el" href="db/db6/struct_quant_lib_1_1detail_1_1_point_3_01base__data__table_00_01_empty_res_01_4.html#a0c0f534988334ef6a6b56f0626287a95">Point&lt; base_data_table, EmptyRes &gt;</a>
 , <a class="el" href="d7/d0e/struct_quant_lib_1_1detail_1_1_point_3_01_real_00_01_empty_arg_01_4.html#aab8e3cd5ca1b2e78f2a8cef2ddcbf3ef">Point&lt; Real, EmptyArg &gt;</a>
-, <a class="el" href="d6/d8f/struct_quant_lib_1_1detail_1_1_point_3_01_real_00_01_empty_res_01_4.html#aab8e3cd5ca1b2e78f2a8cef2ddcbf3ef">Point&lt; Real, EmptyRes &gt;</a>
+, <a class="el" href="d6/d8f/struct_quant_lib_1_1detail_1_1_point_3_01_real_00_01_empty_res_01_4.html#a698d4fbae4e64a0f1dbc5de43217caa5">Point&lt; Real, EmptyRes &gt;</a>
 , <a class="el" href="d4/d8e/struct_quant_lib_1_1detail_1_1_point_3_01_size_00_01_empty_dim_01_4.html#aab8e3cd5ca1b2e78f2a8cef2ddcbf3ef">Point&lt; Size, EmptyDim &gt;</a>
 , <a class="el" href="d7/d63/class_quant_lib_1_1_lexicographical_view.html#a20b182f3ebd58c72b9d7ec207efde1bc">LexicographicalView&lt; RandomAccessIterator &gt;</a>
-, <a class="el" href="dd/db6/class_quant_lib_1_1_matrix.html#abe8a2be18f9ad4c8d4a776ca57f0d149">Matrix</a>
-, <a class="el" href="de/de3/class_quant_lib_1_1_multi_path.html#a794e83596e13fc0cff8a60d4f96a9792">MultiPath</a>
+, <a class="el" href="dd/db6/class_quant_lib_1_1_matrix.html#aa81ad20c93d236084fa25efd9ca92337">Matrix</a>
+, <a class="el" href="de/de3/class_quant_lib_1_1_multi_path.html#a35879d49cea90bec6e3021a08bca343e">MultiPath</a>
 , <a class="el" href="d6/d60/class_quant_lib_1_1_path.html#ad48914273a747fc8afa128f06839d46f">Path</a>
 , <a class="el" href="d5/d5b/class_quant_lib_1_1_schedule.html#aa64c947e73d72bfd68eecf742e411431">Schedule</a>
 , <a class="el" href="df/dff/class_quant_lib_1_1_time_grid.html#a3c6aca8227656ddfa7acf009af0d4e42">TimeGrid</a>
-, <a class="el" href="d2/d05/class_quant_lib_1_1_time_series.html#a3f62282db5196704781ec6e5caa6c48f">TimeSeries&lt; T, Container &gt;</a>
+, <a class="el" href="d2/d05/class_quant_lib_1_1_time_series.html#adae28d88ca2705eabe42cb4849606293">TimeSeries&lt; T, Container &gt;</a>
 </li>
 <li>optimalControlVariate()
 : <a class="el" href="d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#afe7f862a6014a2d6be27c94b0d971f48">AnalyticHestonEngine</a>
@@ -850,7 +845,7 @@ $(function() {
 , <a class="el" href="df/d8b/class_quant_lib_1_1_stripped_optionlet_base.html#a1801f1f75695fa6dc762f21cdc20fed9">StrippedOptionletBase</a>
 </li>
 <li>OptionletVolatilityStructure()
-: <a class="el" href="d9/dfc/class_quant_lib_1_1_optionlet_volatility_structure.html#abc005ed912019fd298bb68e36ba6b531">OptionletVolatilityStructure</a>
+: <a class="el" href="d9/dfc/class_quant_lib_1_1_optionlet_volatility_structure.html#aac8c7b91f00da54ac59aed3bdb766beb">OptionletVolatilityStructure</a>
 </li>
 <li>optionPrice()
 : <a class="el" href="d7/dbb/class_quant_lib_1_1_andreasen_huge_volatility_interpl.html#af5ed9cc45164a8926ecb3fa05a9a064d">AndreasenHugeVolatilityInterpl</a>
@@ -860,7 +855,7 @@ $(function() {
 , <a class="el" href="de/dc2/class_quant_lib_1_1_no_arb_sabr_model.html#a8f356338e3e3c38ae5f595dae51d50b1">NoArbSabrModel</a>
 , <a class="el" href="dd/dcf/class_quant_lib_1_1_no_arb_sabr_smile_section.html#ab8b8fca3c3cb2721c0e5d09cf51fc872">NoArbSabrSmileSection</a>
 , <a class="el" href="d9/db6/class_quant_lib_1_1_smile_section.html#ae8a12e51e1937bfab19966d0d38c6600">SmileSection</a>
-, <a class="el" href="dc/de7/class_quant_lib_1_1_zabr_smile_section.html#a6a42cc023b0e9bc478306ddd17aafca2">ZabrSmileSection&lt; Evaluation &gt;</a>
+, <a class="el" href="dc/de7/class_quant_lib_1_1_zabr_smile_section.html#ab8b8fca3c3cb2721c0e5d09cf51fc872">ZabrSmileSection&lt; Evaluation &gt;</a>
 </li>
 <li>optionTenors()
 : <a class="el" href="d6/d4e/class_quant_lib_1_1_abcd_atm_vol_curve.html#a799b5429aaa1a34bc840c8dcbb02aa58">AbcdAtmVolCurve</a>
@@ -907,7 +902,7 @@ $(function() {
 : <a class="el" href="dd/db8/class_quant_lib_1_1_orthogonal_projections.html#a2bc4e08445c6ad8b09eff827e1984e24">OrthogonalProjections</a>
 </li>
 <li>outerProduct()
-: <a class="el" href="dd/db6/class_quant_lib_1_1_matrix.html#a30cc235798876a57b09e1338e8db34ea">Matrix</a>
+: <a class="el" href="dd/db6/class_quant_lib_1_1_matrix.html#a72610cea5fb83ff91bde7fcf8c2ee94a">Matrix</a>
 </li>
 <li>output_size()
 : <a class="el" href="da/d45/class_quant_lib_1_1_fast_fourier_transform.html#a6bd598964819008db5f70a646ad21c13">FastFourierTransform</a>
@@ -929,19 +924,19 @@ $(function() {
 , <a class="el" href="d2/d7c/class_quant_lib_1_1_overnight_indexed_swap_index.html#a1aeba5ab6ba924a373c0a31faad4aed7">OvernightIndexedSwapIndex</a>
 </li>
 <li>OvernightIndexedCoupon()
-: <a class="el" href="d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#a9837be54271ea374430cfe3afbd0c5d8">OvernightIndexedCoupon</a>
+: <a class="el" href="d8/de0/class_quant_lib_1_1_overnight_indexed_coupon.html#a401d3fe1123b5bc3dca4f33d98d18aab">OvernightIndexedCoupon</a>
 </li>
 <li>OvernightIndexedSwap()
-: <a class="el" href="d5/d34/class_quant_lib_1_1_overnight_indexed_swap.html#ad6563c4916e3921fb17c97b533294262">OvernightIndexedSwap</a>
+: <a class="el" href="d5/d34/class_quant_lib_1_1_overnight_indexed_swap.html#a60c9e9deab6dbfc5573012750da8b5f3">OvernightIndexedSwap</a>
 </li>
 <li>OvernightIndexedSwapIndex()
-: <a class="el" href="d2/d7c/class_quant_lib_1_1_overnight_indexed_swap_index.html#ab3e9305247fa4b47cd1f6eb97b9d83cb">OvernightIndexedSwapIndex</a>
+: <a class="el" href="d2/d7c/class_quant_lib_1_1_overnight_indexed_swap_index.html#abd3a3a805eb514602ba8999e4aef7651">OvernightIndexedSwapIndex</a>
 </li>
 <li>OvernightIndexFuture()
-: <a class="el" href="d6/dae/class_quant_lib_1_1_overnight_index_future.html#acaa0c1c9c81ff2c7244750a9bb0324f1">OvernightIndexFuture</a>
+: <a class="el" href="d6/dae/class_quant_lib_1_1_overnight_index_future.html#ab83180304b54b6aed57941a015ceb5ef">OvernightIndexFuture</a>
 </li>
 <li>OvernightIndexFutureRateHelper()
-: <a class="el" href="d6/d91/class_quant_lib_1_1_overnight_index_future_rate_helper.html#a4c4e883cf06937d7ca9ac28f4a54e8cf">OvernightIndexFutureRateHelper</a>
+: <a class="el" href="d6/d91/class_quant_lib_1_1_overnight_index_future_rate_helper.html#afc0017af5947c7608d43f00a69a67062">OvernightIndexFutureRateHelper</a>
 </li>
 <li>overnightLeg()
 : <a class="el" href="da/d5c/class_quant_lib_1_1_arithmetic_average_o_i_s.html#afaedc6556998dec377a02206ca8f1959">ArithmeticAverageOIS</a>
