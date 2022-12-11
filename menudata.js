@@ -198,8 +198,5 @@ var menudata={children:[
 {text:"p",url:"functions_rela.html#index_p"},
 {text:"q",url:"functions_rela.html#index_q"},
 {text:"r",url:"functions_rela.html#index_r"},
-{text:"s",url:"functions_rela.html#index_s"},
-{text:"t",url:"functions_rela.html#index_t"},
-{text:"v",url:"functions_rela.html#index_v"},
-{text:"z",url:"functions_rela.html#index_z"}]}]}]},
+{text:"s",url:"functions_rela.html#index_s"}]}]}]},
 {text:"Examples",url:"examples.html"}]}
