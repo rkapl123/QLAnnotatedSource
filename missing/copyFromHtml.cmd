@@ -17,6 +17,8 @@ rd ..\df /S /Q
 rd ..\search /S /Q
 del ..\*.* /Q
 xcopy C:\dev\QuantLib\Docs\html\ .. /S
+copy /Y C:\dev\QuantLib\Contributors.txt .. 
+copy /Y C:\dev\QuantLib\LICENSE.TXT .. 
 xcopy ..\missing\*.md .. /S
 xcopy ..\missing\*.yml .. /S
 pause
