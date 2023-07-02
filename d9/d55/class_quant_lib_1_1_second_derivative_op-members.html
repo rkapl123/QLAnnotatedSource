@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.28</div>
+   <div id="projectnumber">Fully annotated sources - version 1.30</div>
    </div>
   </td>
  </tr>
@@ -108,7 +108,7 @@ $(function() {
   <tr class="odd"><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html#ad214286995fa9082f2b866730f24259d">reverseIndex_</a></td><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html">TripleBandLinearOp</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../df/d31/class_quant_lib_1_1_second_derivative_op.html#ac57bd966334cbd9cc344acb777f59a09">SecondDerivativeOp</a>(Size direction, const ext::shared_ptr&lt; FdmMesher &gt; &amp;mesher)</td><td class="entry"><a class="el" href="../../df/d31/class_quant_lib_1_1_second_derivative_op.html">SecondDerivativeOp</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html#a32fe558c225f57a2d0bbdd979f66da0c">solve_splitting</a>(const Array &amp;r, Real a, Real b=1.0) const</td><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html">TripleBandLinearOp</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html#ac58acdb9da28bd0608d8996a51d99242">swap</a>(TripleBandLinearOp &amp;m)</td><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html">TripleBandLinearOp</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html#a135ec034bf3d166d87fe73c7fc634ed0">swap</a>(TripleBandLinearOp &amp;m) noexcept</td><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html">TripleBandLinearOp</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html#a272c736cb574fc6a4f27f5e063e8eb4c">toMatrix</a>() const override</td><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html">TripleBandLinearOp</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html#a3734ffb5b3cfccdf6511a0d9a569d060">TripleBandLinearOp</a>(Size direction, const ext::shared_ptr&lt; FdmMesher &gt; &amp;mesher)</td><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html">TripleBandLinearOp</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html#a11bab5c39534effd2a44c4e4d509e37d">TripleBandLinearOp</a>(const TripleBandLinearOp &amp;m)</td><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html">TripleBandLinearOp</a></td><td class="entry"></td></tr>
@@ -116,6 +116,7 @@ $(function() {
   <tr class="odd"><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html#adf68dd3ce9a8309dd39691646ddd744a">TripleBandLinearOp</a>()=default</td><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html">TripleBandLinearOp</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html#a5333738215fb150b02c741cc4c90f7de">upper_</a></td><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html">TripleBandLinearOp</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html#af881d592e94610e11c6a71fecae0d9c8">~FdmLinearOp</a>()=default</td><td class="entry"><a class="el" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html">FdmLinearOp</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html#a55810a52a88014c286356bdec679d966">~TripleBandLinearOp</a>() override=default</td><td class="entry"><a class="el" href="../../d4/dcf/class_quant_lib_1_1_triple_band_linear_op.html">TripleBandLinearOp</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

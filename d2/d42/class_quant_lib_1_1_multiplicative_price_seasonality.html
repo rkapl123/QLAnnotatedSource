@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.28</div>
+   <div id="projectnumber">Fully annotated sources - version 1.30</div>
    </div>
   </td>
  </tr>
@@ -176,7 +176,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p >Multiplicative seasonality in the price index (CPI/RPI/HICP/etc). </p>
 <p >Stationary multiplicative seasonality in CPI/RPI/HICP (i.e. in price) implies that zero inflation swap rates are affected, but that year-on-year inflation swap rates show no effect. Of course, if the seasonality in CPI/RPI/HICP is non-stationary then both swap rates will be affected.</p>
 <p >Factors must be in multiples of the minimum required for one year, e.g. 12 for monthly, and these factors are reused for as long as is required, i.e. they wrap around. So, for example, if 24 factors are given this repeats every two years. True stationary seasonality can be obtained by giving the same number of factors as the frequency dictates e.g. 12 for monthly seasonality.</p>
-<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000165">Warning:</a></b></dt><dd>Multi-year seasonality (i.e. non-stationary) is fragile: the user <b>must</b> ensure that corrections at whole years before and after the inflation term structure base date are the same. Otherwise there can be an inconsistency with quoted rates. This is enforced if the frequency is lower than daily. This is not enforced for daily seasonality because this will always be inconsistent due to weekends, holidays, leap years, etc. If you use multi-year daily seasonality it is up to you to check.</dd></dl>
+<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000164">Warning:</a></b></dt><dd>Multi-year seasonality (i.e. non-stationary) is fragile: the user <b>must</b> ensure that corrections at whole years before and after the inflation term structure base date are the same. Otherwise there can be an inconsistency with quoted rates. This is enforced if the frequency is lower than daily. This is not enforced for daily seasonality because this will always be inconsistent due to weekends, holidays, leap years, etc. If you use multi-year daily seasonality it is up to you to check.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Factors are normalized relative to their appropriate reference dates. For zero inflation this is the inflation curve true base date: since you have a fixing for that date the seasonality factor must be one. For YoY inflation the reference is always one year earlier.</dd></dl>
 <p><a class="el" href="../../d3/dfe/class_quant_lib_1_1_seasonality.html" title="A transformation of an existing inflation swap rate.">Seasonality</a> is treated as piecewise constant, hence it works correctly with uninterpolated indices if the seasonality correction factor frequency is the same as the index frequency (or less). </p>
 
@@ -239,7 +239,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00089">89</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00091">91</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -324,7 +324,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00095">95</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00097">97</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -378,7 +378,7 @@ Private Attributes</h2></td></tr>
 
 <p>inspectors </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00107">107</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00110">110</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -424,7 +424,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00111">111</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00114">114</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -471,7 +471,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00115">115</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00118">118</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -523,7 +523,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d4/df0/class_quant_lib_1_1_kerkhof_seasonality.html#a2a8a287b7fc198306e44c326978dceb9">KerkhofSeasonality</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00142">142</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00145">145</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -607,7 +607,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="../../d3/dfe/class_quant_lib_1_1_seasonality.html#a054a9e84145ef46ec60b1226b29e33ec">Seasonality</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00120">120</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00123">123</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -683,7 +683,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="../../d3/dfe/class_quant_lib_1_1_seasonality.html#afb15d9d72f3e1ffe21f4689dc411fde5">Seasonality</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00133">133</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00136">136</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -744,7 +744,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../d3/dfe/class_quant_lib_1_1_seasonality.html#a7fc2f37d9488abe409d111730d8465ad">Seasonality</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00062">62</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00064">64</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -880,7 +880,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d4/df0/class_quant_lib_1_1_kerkhof_seasonality.html#a2500ab7dde9c8c30e5bb725b06e2e4f0">KerkhofSeasonality</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00188">188</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d33/seasonality_8cpp_source.html#l00191">191</a> of file <a class="el" href="../../d9/d33/seasonality_8cpp_source.html">seasonality.cpp</a>.</p>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">

@@ -8,10 +8,11 @@ var searchData=
   ['defaulteventset_5',['DefaultEventSet',['../d5/d7b/namespace_quant_lib.html#a06687e05cc69907f8d868cf0f15e4e6d',1,'QuantLib']]],
   ['defaultprobabilityhelper_6',['DefaultProbabilityHelper',['../d5/d7b/namespace_quant_lib.html#a3ba2ddef23fb364651c7020b19392d1b',1,'QuantLib']]],
   ['defaultsimevent_7',['defaultSimEvent',['../de/dc2/class_quant_lib_1_1_random_default_l_m.html#a7ae83dfcf8e7e57f4fb1c75441507184',1,'QuantLib::RandomDefaultLM::defaultSimEvent()'],['../d8/d9a/class_quant_lib_1_1_random_loss_l_m.html#a7991339e5a18d9d2f894b27677cd8f98',1,'QuantLib::RandomLossLM::defaultSimEvent()']]],
-  ['dimensions_8',['dimensions',['../d6/d23/class_quant_lib_1_1detail_1_1base__cubic__splint.html#aa9c30a74d2ffcf6540a56edb0eb1b0c7',1,'QuantLib::detail::base_cubic_splint::dimensions()'],['../d4/d2c/class_quant_lib_1_1detail_1_1n__cubic__splint.html#a4a40386dad3dd1a5090c757d9a35ccff',1,'QuantLib::detail::n_cubic_splint::dimensions()'],['../d5/dee/class_quant_lib_1_1_multi_cubic_spline.html#a212b7ae9248cc51f5df6690ac9aab14e',1,'QuantLib::MultiCubicSpline::dimensions()']]],
-  ['discountcurve_9',['DiscountCurve',['../dd/dca/group__yieldtermstructures.html#ga4e538c822f698ad1c21bbe52deb30d29',1,'QuantLib']]],
-  ['discountfactor_10',['DiscountFactor',['../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761',1,'QuantLib']]],
-  ['disposable_11',['Disposable',['../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1',1,'QuantLib']]],
-  ['dividendschedule_12',['DividendSchedule',['../d5/d7b/namespace_quant_lib.html#a2cbf2c853a5cc3fc7f8bbcedf51c859e',1,'QuantLib']]],
-  ['downside_5faccumulator_5fset_13',['downside_accumulator_set',['../dd/d82/class_quant_lib_1_1_incremental_statistics.html#a4d526fdad1033de7ef367b858eb0d672',1,'QuantLib::IncrementalStatistics']]]
+  ['difference_5ftype_8',['difference_type',['../db/d57/class_quant_lib_1_1step__iterator.html#ad050e8e82b0962bb9ebd0e7c23b436ac',1,'QuantLib::step_iterator']]],
+  ['dimensions_9',['dimensions',['../d6/d23/class_quant_lib_1_1detail_1_1base__cubic__splint.html#aa9c30a74d2ffcf6540a56edb0eb1b0c7',1,'QuantLib::detail::base_cubic_splint::dimensions()'],['../d4/d2c/class_quant_lib_1_1detail_1_1n__cubic__splint.html#a4a40386dad3dd1a5090c757d9a35ccff',1,'QuantLib::detail::n_cubic_splint::dimensions()'],['../d5/dee/class_quant_lib_1_1_multi_cubic_spline.html#a212b7ae9248cc51f5df6690ac9aab14e',1,'QuantLib::MultiCubicSpline::dimensions()']]],
+  ['discountcurve_10',['DiscountCurve',['../dd/dca/group__yieldtermstructures.html#ga4e538c822f698ad1c21bbe52deb30d29',1,'QuantLib']]],
+  ['discountfactor_11',['DiscountFactor',['../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761',1,'QuantLib']]],
+  ['disposable_12',['Disposable',['../d5/d7b/namespace_quant_lib.html#aab56fb6f79c404afbf5fedf756b41bc1',1,'QuantLib']]],
+  ['dividendschedule_13',['DividendSchedule',['../d5/d7b/namespace_quant_lib.html#a2cbf2c853a5cc3fc7f8bbcedf51c859e',1,'QuantLib']]],
+  ['downside_5faccumulator_5fset_14',['downside_accumulator_set',['../dd/d82/class_quant_lib_1_1_incremental_statistics.html#a4d526fdad1033de7ef367b858eb0d672',1,'QuantLib::IncrementalStatistics']]]
 ];

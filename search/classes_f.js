@@ -86,7 +86,7 @@ var searchData=
   ['pricingperiod_83',['PricingPeriod',['../d1/df3/class_quant_lib_1_1_pricing_period.html',1,'QuantLib']]],
   ['primenumbers_84',['PrimeNumbers',['../d4/d71/class_quant_lib_1_1_prime_numbers.html',1,'QuantLib']]],
   ['privateconstraint_85',['PrivateConstraint',['../d4/d62/class_quant_lib_1_1_calibrated_model_1_1_private_constraint.html',1,'QuantLib::CalibratedModel']]],
-  ['privateobserver_86',['PrivateObserver',['../db/d05/class_quant_lib_1_1_swaption_vol_cube1x_1_1_private_observer.html',1,'QuantLib::SwaptionVolCube1x']]],
+  ['privateobserver_86',['PrivateObserver',['../d4/d62/class_quant_lib_1_1_xabr_swaption_volatility_cube_1_1_private_observer.html',1,'QuantLib::XabrSwaptionVolatilityCube']]],
   ['probabilityalwaysdownhill_87',['ProbabilityAlwaysDownhill',['../d3/d3e/struct_quant_lib_1_1_probability_always_downhill.html',1,'QuantLib']]],
   ['probabilityboltzmann_88',['ProbabilityBoltzmann',['../da/d39/class_quant_lib_1_1_probability_boltzmann.html',1,'QuantLib']]],
   ['probabilityboltzmanndownhill_89',['ProbabilityBoltzmannDownhill',['../df/d67/class_quant_lib_1_1_probability_boltzmann_downhill.html',1,'QuantLib']]],

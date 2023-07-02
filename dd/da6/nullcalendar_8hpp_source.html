@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.28</div>
+   <div id="projectnumber">Fully annotated sources - version 1.30</div>
    </div>
   </td>
  </tr>
@@ -117,7 +117,7 @@ $(function() {
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../da/d77/class_quant_lib_1_1_null_calendar.html">   38</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/d77/class_quant_lib_1_1_null_calendar.html">NullCalendar</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> {</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d8/d2b/class_quant_lib_1_1_null_calendar_1_1_impl.html">   40</a></span>        <span class="keyword">class </span><a class="code hl_class" href="../../d8/d2b/class_quant_lib_1_1_null_calendar_1_1_impl.html">Impl</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d5/df3/class_quant_lib_1_1_calendar_1_1_impl.html">Calendar::Impl</a> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d8/d2b/class_quant_lib_1_1_null_calendar_1_1_impl.html">   40</a></span>        <span class="keyword">class </span><a class="code hl_class" href="../../d8/d2b/class_quant_lib_1_1_null_calendar_1_1_impl.html">Impl</a> final : <span class="keyword">public</span> <a class="code hl_class" href="../../d5/df3/class_quant_lib_1_1_calendar_1_1_impl.html">Calendar::Impl</a> {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>          <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d8/d2b/class_quant_lib_1_1_null_calendar_1_1_impl.html#aa4f4ba750a08765e64da2d0bd473944a">   42</a></span>            std::string <a class="code hl_function" href="../../d8/d2b/class_quant_lib_1_1_null_calendar_1_1_impl.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Null&quot;</span>; }</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d8/d2b/class_quant_lib_1_1_null_calendar_1_1_impl.html#aee0ba13e0bc268abef5d4c73c343e4e9">   43</a></span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d8/d2b/class_quant_lib_1_1_null_calendar_1_1_impl.html#aee0ba13e0bc268abef5d4c73c343e4e9">isWeekend</a>(<a class="code hl_enumeration" href="../../d1/d37/group__datetime.html#gaec3d5ec6653b2c392d449500b8f5cb3a">Weekday</a>)<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
@@ -144,7 +144,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_null_calendar_html"><div class="ttname"><a href="../../da/d77/class_quant_lib_1_1_null_calendar.html">QuantLib::NullCalendar</a></div><div class="ttdoc">Calendar for reproducing theoretical calculations.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/da6/nullcalendar_8hpp_source.html#l00038">nullcalendar.hpp:38</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_null_calendar_html_aa3fc5e89acab53d97a14e634472e6cb2"><div class="ttname"><a href="../../da/d77/class_quant_lib_1_1_null_calendar.html#aa3fc5e89acab53d97a14e634472e6cb2">QuantLib::NullCalendar::NullCalendar</a></div><div class="ttdeci">NullCalendar()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/da6/nullcalendar_8hpp_source.html#l00047">nullcalendar.hpp:47</a></div></div>
 <div class="ttc" id="agroup__datetime_html_gaec3d5ec6653b2c392d449500b8f5cb3a"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaec3d5ec6653b2c392d449500b8f5cb3a">QuantLib::Weekday</a></div><div class="ttdeci">Weekday</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db6/weekday_8hpp_source.html#l00041">weekday.hpp:41</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

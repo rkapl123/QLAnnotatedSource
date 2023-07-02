@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.28</div>
+   <div id="projectnumber">Fully annotated sources - version 1.30</div>
    </div>
   </td>
  </tr>
@@ -180,7 +180,7 @@ $(function() {
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                &lt;&lt; <a class="code hl_function" href="../../d9/dee/class_quant_lib_1_1_g_b_s_m_r_n_d_calculator.html#a16f13b03740728c6395e0919463bf810">cdf</a>(lower, t) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d9/dee/class_quant_lib_1_1_g_b_s_m_r_n_d_calculator.html#a16f13b03740728c6395e0919463bf810">cdf</a>(upper, t) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../df/dc5/class_quant_lib_1_1_brent.html">Brent</a>().<a class="code hl_function" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a706af4c4d308b619825b6ee05b21e678">solve</a>(</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            [&amp;](<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> _k){ <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/dee/class_quant_lib_1_1_g_b_s_m_r_n_d_calculator.html#a16f13b03740728c6395e0919463bf810">cdf</a>(_k, t) - q; },</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            [&amp;](<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> _k) -&gt; <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> { <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/dee/class_quant_lib_1_1_g_b_s_m_r_n_d_calculator.html#a16f13b03740728c6395e0919463bf810">cdf</a>(_k, t) - q; },</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            1e-10, 0.5*(lower+upper), lower, upper);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
@@ -202,7 +202,7 @@ $(function() {
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga642a971a0bcbbd2fb26c35e1a06e5761"><div class="ttname"><a href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">QuantLib::DiscountFactor</a></div><div class="ttdeci">Real DiscountFactor</div><div class="ttdoc">discount factor between dates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00066">types.hpp:66</a></div></div>
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

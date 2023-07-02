@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.28</div>
+   <div id="projectnumber">Fully annotated sources - version 1.30</div>
    </div>
   </td>
  </tr>
@@ -89,9 +89,12 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d6/d8f/class_quant_lib_1_1_fd_black_scholes_vanilla_engine-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">FdBlackScholesVanillaEngine Class Reference</div></div>
+  <div class="headertitle"><div class="title">FdBlackScholesVanillaEngine Class Reference<div class="ingroups"><a class="el" href="../../de/dd4/group__engines.html">Pricing engines</a> &raquo; <a class="el" href="../../d8/d84/group__vanillaengines.html">Vanilla option engines</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Finite-differences Black Scholes vanilla option engine.  
+ <a href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">ql/pricingengines/vanilla/fdblackscholesvanillaengine.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -101,13 +104,13 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d4/d60/class_quant_lib_1_1_fd_black_scholes_vanilla_engine__inherit__graph.png" border="0" usemap="#a_fd_black_scholes_vanilla_engine_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_fd_black_scholes_vanilla_engine_inherit__map" id="a_fd_black_scholes_vanilla_engine_inherit__map">
-<area shape="rect" title=" " alt="" coords="25,1037,243,1253"/>
-<area shape="rect" href="../../d8/de7/class_quant_lib_1_1_dividend_vanilla_option_1_1engine.html" title="Dividend&#45;vanilla&#45;option engine base class" alt="" coords="102,948,166,988"/>
-<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title=" " alt="" coords="22,741,246,899"/>
-<area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="233,285,369,399"/>
-<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="95,507,282,649"/>
+<area shape="rect" title="Finite&#45;differences Black Scholes vanilla option engine." alt="" coords="25,1008,243,1283"/>
+<area shape="rect" href="../../d8/de7/class_quant_lib_1_1_dividend_vanilla_option_1_1engine.html" title=" " alt="" coords="102,919,166,959"/>
+<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title=" " alt="" coords="22,712,246,869"/>
+<area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="233,271,369,384"/>
+<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="95,477,282,620"/>
 <area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="227,5,374,177"/>
-<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="5,227,188,457"/>
+<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="5,227,188,428"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -117,41 +120,41 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d4/df4/class_quant_lib_1_1_fd_black_scholes_vanilla_engine__coll__graph.png" border="0" usemap="#a_fd_black_scholes_vanilla_engine_coll__map" alt="Collaboration graph"/></div>
 <map name="a_fd_black_scholes_vanilla_engine_coll__map" id="a_fd_black_scholes_vanilla_engine_coll__map">
-<area shape="rect" title=" " alt="" coords="703,1897,926,1981"/>
-<area shape="rect" href="../../d8/de7/class_quant_lib_1_1_dividend_vanilla_option_1_1engine.html" title="Dividend&#45;vanilla&#45;option engine base class" alt="" coords="349,1685,413,1725"/>
-<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title=" " alt="" coords="332,1399,556,1527"/>
-<area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="593,1017,729,1131"/>
-<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="399,1193,585,1307"/>
-<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="584,797,731,940"/>
-<area shape="rect" title=" " alt="" coords="365,431,493,471"/>
-<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="215,137,398,324"/>
-<area shape="rect" title=" " alt="" coords="517,431,709,471"/>
-<area shape="rect" title=" " alt="" coords="229,5,384,75"/>
-<area shape="rect" title=" " alt="" coords="408,20,475,60"/>
-<area shape="rect" title=" " alt="" coords="5,13,205,67"/>
-<area shape="rect" title=" " alt="" coords="441,211,519,251"/>
-<area shape="rect" title=" " alt="" coords="553,20,591,60"/>
-<area shape="rect" title=" " alt="" coords="543,211,684,251"/>
-<area shape="rect" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html" title="global repository for run&#45;time library settings" alt="" coords="560,592,755,735"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title=" " alt="" coords="733,387,949,515"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title="Basic support for the singleton pattern." alt="" coords="763,167,919,295"/>
-<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="204,431,255,471"/>
-<area shape="rect" href="../../d1/db4/class_quant_lib_1_1_dividend_vanilla_option_1_1arguments.html" title="Arguments for dividend vanilla option calculation" alt="" coords="743,1215,852,1285"/>
-<area shape="rect" title=" " alt="" coords="754,1054,841,1094"/>
-<area shape="rect" title=" " alt="" coords="865,1047,1002,1101"/>
-<area shape="rect" title=" " alt="" coords="935,849,1094,889"/>
-<area shape="rect" title=" " alt="" coords="820,849,911,889"/>
-<area shape="rect" title=" " alt="" coords="846,643,885,683"/>
-<area shape="rect" href="../../d2/db9/class_dividend_vanilla_option_1_1results.html" title=" " alt="" coords="309,1230,374,1270"/>
-<area shape="rect" title=" " alt="" coords="329,1054,447,1094"/>
-<area shape="rect" title=" " alt="" coords="471,1054,569,1094"/>
-<area shape="rect" title=" " alt="" coords="438,1677,677,1732"/>
-<area shape="rect" title=" " alt="" coords="701,1685,789,1725"/>
-<area shape="rect" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html" title=" " alt="" coords="814,1604,973,1805"/>
-<area shape="rect" title=" " alt="" coords="789,1443,953,1483"/>
-<area shape="rect" title=" " alt="" coords="977,1443,1065,1483"/>
-<area shape="rect" title=" " alt="" coords="1198,1677,1349,1732"/>
-<area shape="rect" title=" " alt="" coords="1373,1685,1547,1725"/>
+<area shape="rect" title="Finite&#45;differences Black Scholes vanilla option engine." alt="" coords="1053,2157,1275,2271"/>
+<area shape="rect" href="../../d8/de7/class_quant_lib_1_1_dividend_vanilla_option_1_1engine.html" title=" " alt="" coords="476,1945,540,1985"/>
+<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title=" " alt="" coords="204,1659,428,1787"/>
+<area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="181,1248,317,1361"/>
+<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="321,1453,508,1567"/>
+<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="171,1028,317,1171"/>
+<area shape="rect" title=" " alt="" coords="120,654,248,694"/>
+<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="231,353,414,540"/>
+<area shape="rect" title=" " alt="" coords="377,654,569,694"/>
+<area shape="rect" title=" " alt="" coords="227,236,418,291"/>
+<area shape="rect" title=" " alt="" coords="35,108,210,148"/>
+<area shape="rect" title=" " alt="" coords="285,108,427,148"/>
+<area shape="rect" title=" " alt="" coords="273,5,311,45"/>
+<area shape="rect" title=" " alt="" coords="189,172,267,212"/>
+<area shape="rect" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html" title="global repository for run&#45;time library settings" alt="" coords="377,823,572,965"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title=" " alt="" coords="593,603,809,745"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title="Basic support for the singleton pattern." alt="" coords="623,375,779,518"/>
+<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="5,654,56,694"/>
+<area shape="rect" href="../../d1/db4/class_quant_lib_1_1_dividend_vanilla_option_1_1arguments.html" title=" " alt="" coords="645,1475,755,1545"/>
+<area shape="rect" title=" " alt="" coords="657,1285,743,1325"/>
+<area shape="rect" title=" " alt="" coords="767,1277,905,1332"/>
+<area shape="rect" title=" " alt="" coords="695,1079,854,1119"/>
+<area shape="rect" title=" " alt="" coords="879,1079,969,1119"/>
+<area shape="rect" title=" " alt="" coords="905,874,943,914"/>
+<area shape="rect" href="../../d2/db9/class_dividend_vanilla_option_1_1results.html" title=" " alt="" coords="174,1490,239,1530"/>
+<area shape="rect" title=" " alt="" coords="392,1285,509,1325"/>
+<area shape="rect" title=" " alt="" coords="533,1285,632,1325"/>
+<area shape="rect" title=" " alt="" coords="870,1937,1109,1992"/>
+<area shape="rect" title=" " alt="" coords="1133,1945,1195,1985"/>
+<area shape="rect" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html" title=" " alt="" coords="1219,1864,1378,2065"/>
+<area shape="rect" title=" " alt="" coords="1291,1703,1455,1743"/>
+<area shape="rect" title=" " alt="" coords="1179,1703,1267,1743"/>
+<area shape="rect" title=" " alt="" coords="1402,1945,1486,1985"/>
+<area shape="rect" title=" " alt="" coords="1523,1937,1674,1992"/>
+<area shape="rect" title=" " alt="" coords="1699,1945,1837,1985"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -161,13 +164,20 @@ Public Types</h2></td></tr>
 , <a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488fa80f2333fa3f8d67d75d1a4ba223f548f">Escrowed</a>
  }</td></tr>
 <tr class="separator:a265b05c8941a2c819dc954dea654488f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
+<tr class="memitem:ae98429250f6997df7b87f4b37454609e inherit pub_types_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">typedef set_type::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#ae98429250f6997df7b87f4b37454609e">iterator</a></td></tr>
+<tr class="separator:ae98429250f6997df7b87f4b37454609e inherit pub_types_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aefda0be997136c8491348054e40130dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#aefda0be997136c8491348054e40130dd">FdBlackScholesVanillaEngine</a> (ext::shared_ptr&lt; <a class="el" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html">GeneralizedBlackScholesProcess</a> &gt;, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> tGrid=100, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> xGrid=100, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> dampingSteps=0, const <a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html">FdmSchemeDesc</a> &amp;schemeDesc=<a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html#a32f598284076d00a9f80fd8020fea4c9">FdmSchemeDesc::Douglas</a>(), <a class="el" href="../../d9/db9/classbool.html">bool</a> localVol=false, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> illegalLocalVolOverwrite=-<a class="el" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null</a>&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt;(), <a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488f">CashDividendModel</a> cashDividendModel=<a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488fa395dea9a8704c1a1ed0224f6fb4e88b1">Spot</a>)</td></tr>
 <tr class="separator:aefda0be997136c8491348054e40130dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed6588a8ae6cc14bb6e97b3943859a04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#aed6588a8ae6cc14bb6e97b3943859a04">FdBlackScholesVanillaEngine</a> (ext::shared_ptr&lt; <a class="el" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html">GeneralizedBlackScholesProcess</a> &gt;, <a class="el" href="../../d5/d7b/namespace_quant_lib.html#a2cbf2c853a5cc3fc7f8bbcedf51c859e">DividendSchedule</a> dividends, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> tGrid=100, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> xGrid=100, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> dampingSteps=0, const <a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html">FdmSchemeDesc</a> &amp;schemeDesc=<a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html#a32f598284076d00a9f80fd8020fea4c9">FdmSchemeDesc::Douglas</a>(), <a class="el" href="../../d9/db9/classbool.html">bool</a> localVol=false, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> illegalLocalVolOverwrite=-<a class="el" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null</a>&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt;(), <a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488f">CashDividendModel</a> cashDividendModel=<a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488fa395dea9a8704c1a1ed0224f6fb4e88b1">Spot</a>)</td></tr>
+<tr class="separator:aed6588a8ae6cc14bb6e97b3943859a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d63a644a054843c4f0c1058b9f51900"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a7d63a644a054843c4f0c1058b9f51900">FdBlackScholesVanillaEngine</a> (ext::shared_ptr&lt; <a class="el" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html">GeneralizedBlackScholesProcess</a> &gt;, ext::shared_ptr&lt; <a class="el" href="../../dc/d8a/class_quant_lib_1_1_fdm_quanto_helper.html">FdmQuantoHelper</a> &gt; quantoHelper, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> tGrid=100, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> xGrid=100, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> dampingSteps=0, const <a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html">FdmSchemeDesc</a> &amp;schemeDesc=<a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html#a32f598284076d00a9f80fd8020fea4c9">FdmSchemeDesc::Douglas</a>(), <a class="el" href="../../d9/db9/classbool.html">bool</a> localVol=false, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> illegalLocalVolOverwrite=-<a class="el" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null</a>&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt;(), <a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488f">CashDividendModel</a> cashDividendModel=<a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488fa395dea9a8704c1a1ed0224f6fb4e88b1">Spot</a>)</td></tr>
 <tr class="separator:a7d63a644a054843c4f0c1058b9f51900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae046e8af1353c01d9770ad82dd4e9613"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#ae046e8af1353c01d9770ad82dd4e9613">FdBlackScholesVanillaEngine</a> (ext::shared_ptr&lt; <a class="el" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html">GeneralizedBlackScholesProcess</a> &gt;, <a class="el" href="../../d5/d7b/namespace_quant_lib.html#a2cbf2c853a5cc3fc7f8bbcedf51c859e">DividendSchedule</a> dividends, ext::shared_ptr&lt; <a class="el" href="../../dc/d8a/class_quant_lib_1_1_fdm_quanto_helper.html">FdmQuantoHelper</a> &gt; quantoHelper, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> tGrid=100, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> xGrid=100, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> dampingSteps=0, const <a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html">FdmSchemeDesc</a> &amp;schemeDesc=<a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html#a32f598284076d00a9f80fd8020fea4c9">FdmSchemeDesc::Douglas</a>(), <a class="el" href="../../d9/db9/classbool.html">bool</a> localVol=false, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> illegalLocalVolOverwrite=-<a class="el" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null</a>&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt;(), <a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488f">CashDividendModel</a> cashDividendModel=<a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488fa395dea9a8704c1a1ed0224f6fb4e88b1">Spot</a>)</td></tr>
+<tr class="separator:ae046e8af1353c01d9770ad82dd4e9613"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61eb1a24e5329ccc296715a40dc3a19a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a> () const override</td></tr>
 <tr class="separator:a61eb1a24e5329ccc296715a40dc3a19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_generic_engine"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_generic_engine')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html">GenericEngine&lt; DividendVanillaOption::arguments, DividendVanillaOption::results &gt;</a></td></tr>
@@ -202,15 +212,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a> ()</td></tr>
 <tr class="separator:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
-<tr class="memitem:a5f6acf17d66c89c9156a0e62cdc1b7f8 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">QL_DEPRECATED_ENABLE_WARNING&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a5f6acf17d66c89c9156a0e62cdc1b7f8">Observer</a> ()=default</td></tr>
-<tr class="separator:a5f6acf17d66c89c9156a0e62cdc1b7f8 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a52ef9232283da6f842e4574afeb854a0">Observer</a> ()=default</td></tr>
+<tr class="separator:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#af6a9d3ca0b7f388f3b7ccb1eccf11f63">Observer</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
 <tr class="separator:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6810b3645967da11d5f5d4804d37bacc inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a6810b3645967da11d5f5d4804d37bacc">operator=</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
 <tr class="separator:a6810b3645967da11d5f5d4804d37bacc inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cb58450d0039d83b21363773e589615 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a0cb58450d0039d83b21363773e589615">~Observer</a> ()</td></tr>
 <tr class="separator:a0cb58450d0039d83b21363773e589615 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6ade205ed506bf712da2704f80a73a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a9c1c39d3d73d67cae2d3cc3eb25a6fc7">iterator</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a> (const ext::shared_ptr&lt; <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &gt; &amp;)</td></tr>
+<tr class="memitem:aa6ade205ed506bf712da2704f80a73a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#ae98429250f6997df7b87f4b37454609e">iterator</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a> (const ext::shared_ptr&lt; <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &gt; &amp;)</td></tr>
 <tr class="separator:aa6ade205ed506bf712da2704f80a73a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51d57eb97a3a57312a47bda29235f182 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a51d57eb97a3a57312a47bda29235f182">registerWithObservables</a> (const ext::shared_ptr&lt; <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &gt; &amp;)</td></tr>
 <tr class="separator:a51d57eb97a3a57312a47bda29235f182 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -225,32 +235,31 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aa750d0c36d4484e89aa5295c1bedc8d3"><td class="memItemLeft" align="right" valign="top">const ext::shared_ptr&lt; <a class="el" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html">GeneralizedBlackScholesProcess</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#aa750d0c36d4484e89aa5295c1bedc8d3">process_</a></td></tr>
-<tr class="separator:aa750d0c36d4484e89aa5295c1bedc8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad46ffe4bcb481097bf9a434bc053bb8e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#ad46ffe4bcb481097bf9a434bc053bb8e">tGrid_</a></td></tr>
-<tr class="separator:ad46ffe4bcb481097bf9a434bc053bb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfc22ddaf906fc702e68b7847294a28e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#adfc22ddaf906fc702e68b7847294a28e">xGrid_</a></td></tr>
-<tr class="separator:adfc22ddaf906fc702e68b7847294a28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bd15e30372a37068d0a0b867a4c1f15"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a6bd15e30372a37068d0a0b867a4c1f15">dampingSteps_</a></td></tr>
-<tr class="separator:a6bd15e30372a37068d0a0b867a4c1f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9e30171ffc2739afd5871127b27ee81"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html">FdmSchemeDesc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#af9e30171ffc2739afd5871127b27ee81">schemeDesc_</a></td></tr>
-<tr class="separator:af9e30171ffc2739afd5871127b27ee81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18d4d9334fdfbd5b9f515cb382a278b8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a18d4d9334fdfbd5b9f515cb382a278b8">localVol_</a></td></tr>
-<tr class="separator:a18d4d9334fdfbd5b9f515cb382a278b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff1b9e5e66f10d47518609e153448d55"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#aff1b9e5e66f10d47518609e153448d55">illegalLocalVolOverwrite_</a></td></tr>
-<tr class="separator:aff1b9e5e66f10d47518609e153448d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a604b51d57fc5271840bbc5e0f67df075"><td class="memItemLeft" align="right" valign="top">const ext::shared_ptr&lt; <a class="el" href="../../dc/d8a/class_quant_lib_1_1_fdm_quanto_helper.html">FdmQuantoHelper</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a604b51d57fc5271840bbc5e0f67df075">quantoHelper_</a></td></tr>
-<tr class="separator:a604b51d57fc5271840bbc5e0f67df075"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7312a06f03c0a3109ebf56742dcb745"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488f">CashDividendModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#ad7312a06f03c0a3109ebf56742dcb745">cashDividendModel_</a></td></tr>
-<tr class="separator:ad7312a06f03c0a3109ebf56742dcb745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7eeb4421e8f1769148f3aaca0624b20"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html">GeneralizedBlackScholesProcess</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a></td></tr>
+<tr class="separator:ac7eeb4421e8f1769148f3aaca0624b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab30617bf36bfc9a09b3e2a7dc1594a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d7b/namespace_quant_lib.html#a2cbf2c853a5cc3fc7f8bbcedf51c859e">DividendSchedule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#abab30617bf36bfc9a09b3e2a7dc1594a">dividends_</a></td></tr>
+<tr class="separator:abab30617bf36bfc9a09b3e2a7dc1594a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e806e9b92093657894eb258ff0e94c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a66e806e9b92093657894eb258ff0e94c">explicitDividends_</a></td></tr>
+<tr class="separator:a66e806e9b92093657894eb258ff0e94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a91ac3588e4edd769751b71e6fae733"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a2a91ac3588e4edd769751b71e6fae733">tGrid_</a></td></tr>
+<tr class="separator:a2a91ac3588e4edd769751b71e6fae733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bc6be61f02824ba7087df5462b9d6c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a5bc6be61f02824ba7087df5462b9d6c4">xGrid_</a></td></tr>
+<tr class="separator:a5bc6be61f02824ba7087df5462b9d6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f1e8f294263e8e52f8f8e6c15a892b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#af4f1e8f294263e8e52f8f8e6c15a892b">dampingSteps_</a></td></tr>
+<tr class="separator:af4f1e8f294263e8e52f8f8e6c15a892b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ce88b7e9e6fac0b6d15acfe7c019c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html">FdmSchemeDesc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a38ce88b7e9e6fac0b6d15acfe7c019c6">schemeDesc_</a></td></tr>
+<tr class="separator:a38ce88b7e9e6fac0b6d15acfe7c019c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae29cacc04c1ba6bbf9bcfbbb7137c50c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#ae29cacc04c1ba6bbf9bcfbbb7137c50c">localVol_</a></td></tr>
+<tr class="separator:ae29cacc04c1ba6bbf9bcfbbb7137c50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343e0c086d5271293ea67d1c8c96f434"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a343e0c086d5271293ea67d1c8c96f434">illegalLocalVolOverwrite_</a></td></tr>
+<tr class="separator:a343e0c086d5271293ea67d1c8c96f434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd0a958323ea33fbf471f62d4360081e"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../dc/d8a/class_quant_lib_1_1_fdm_quanto_helper.html">FdmQuantoHelper</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#acd0a958323ea33fbf471f62d4360081e">quantoHelper_</a></td></tr>
+<tr class="separator:acd0a958323ea33fbf471f62d4360081e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe35e14193ce26eaf88f5913ccb045b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488f">CashDividendModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#afe35e14193ce26eaf88f5913ccb045b0">cashDividendModel_</a></td></tr>
+<tr class="separator:afe35e14193ce26eaf88f5913ccb045b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_attribs_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
-<tr class="memitem:a460be9983010f6c71e68d745c24cb60a inherit pub_attribs_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">QL_DEPRECATED typedef boost::unordered_set&lt; ext::shared_ptr&lt; <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a460be9983010f6c71e68d745c24cb60a">set_type</a></td></tr>
-<tr class="separator:a460be9983010f6c71e68d745c24cb60a inherit pub_attribs_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c1c39d3d73d67cae2d3cc3eb25a6fc7 inherit pub_attribs_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">QL_DEPRECATED_DISABLE_WARNING typedef set_type::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a9c1c39d3d73d67cae2d3cc3eb25a6fc7">iterator</a></td></tr>
-<tr class="separator:a9c1c39d3d73d67cae2d3cc3eb25a6fc7 inherit pub_attribs_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_quant_lib_1_1_generic_engine"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_quant_lib_1_1_generic_engine')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html">GenericEngine&lt; DividendVanillaOption::arguments, DividendVanillaOption::results &gt;</a></td></tr>
 <tr class="memitem:afee5e1b26214353757b120d9f5ad2169 inherit pro_attribs_class_quant_lib_1_1_generic_engine"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/db4/class_quant_lib_1_1_dividend_vanilla_option_1_1arguments.html">DividendVanillaOption::arguments</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html#afee5e1b26214353757b120d9f5ad2169">arguments_</a></td></tr>
 <tr class="separator:afee5e1b26214353757b120d9f5ad2169 inherit pro_attribs_class_quant_lib_1_1_generic_engine"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,8 +267,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac34e18c69939ed8140f8cccc00ace941 inherit pro_attribs_class_quant_lib_1_1_generic_engine"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
+<div class="textblock"><p >Finite-differences Black Scholes vanilla option engine. </p>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000143">Tests:</a></b></dt><dd>the correctness of the returned value is tested by reproducing results available in web/literature and comparison with Black pricing. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00047">47</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a265b05c8941a2c819dc954dea654488f" name="a265b05c8941a2c819dc954dea654488f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a265b05c8941a2c819dc954dea654488f">&#9670;&#160;</a></span>CashDividendModel</h2>
@@ -277,13 +288,13 @@ Additional Inherited Members</h2></td></tr>
 <tr><td class="fieldname"><a id="a265b05c8941a2c819dc954dea654488fa80f2333fa3f8d67d75d1a4ba223f548f" name="a265b05c8941a2c819dc954dea654488fa80f2333fa3f8d67d75d1a4ba223f548f"></a>Escrowed&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00050">50</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aefda0be997136c8491348054e40130dd" name="aefda0be997136c8491348054e40130dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefda0be997136c8491348054e40130dd">&#9670;&#160;</a></span>FdBlackScholesVanillaEngine() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aefda0be997136c8491348054e40130dd">&#9670;&#160;</a></span>FdBlackScholesVanillaEngine() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,8 +378,91 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="aed6588a8ae6cc14bb6e97b3943859a04" name="aed6588a8ae6cc14bb6e97b3943859a04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed6588a8ae6cc14bb6e97b3943859a04">&#9670;&#160;</a></span>FdBlackScholesVanillaEngine() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html">FdBlackScholesVanillaEngine</a> </td>
+          <td>(</td>
+          <td class="paramtype">ext::shared_ptr&lt; <a class="el" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html">GeneralizedBlackScholesProcess</a> &gt;&#160;</td>
+          <td class="paramname"><em>process</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d7b/namespace_quant_lib.html#a2cbf2c853a5cc3fc7f8bbcedf51c859e">DividendSchedule</a>&#160;</td>
+          <td class="paramname"><em>dividends</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td>
+          <td class="paramname"><em>tGrid</em> = <code>100</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td>
+          <td class="paramname"><em>xGrid</em> = <code>100</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td>
+          <td class="paramname"><em>dampingSteps</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html">FdmSchemeDesc</a> &amp;&#160;</td>
+          <td class="paramname"><em>schemeDesc</em> = <code><a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html#a32f598284076d00a9f80fd8020fea4c9">FdmSchemeDesc::Douglas</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td>
+          <td class="paramname"><em>localVol</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td>
+          <td class="paramname"><em>illegalLocalVolOverwrite</em> = <code>-<a class="el" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null</a>&lt;<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&gt;()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488f">CashDividendModel</a>&#160;</td>
+          <td class="paramname"><em>cashDividendModel</em> = <code><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488fa395dea9a8704c1a1ed0224f6fb4e88b1">Spot</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d60/fdblackscholesvanillaengine_8cpp_source.html#l00052">52</a> of file <a class="el" href="../../d7/d60/fdblackscholesvanillaengine_8cpp_source.html">fdblackscholesvanillaengine.cpp</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_aed6588a8ae6cc14bb6e97b3943859a04_cgraph.png" border="0" usemap="#ad4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_aed6588a8ae6cc14bb6e97b3943859a04_cgraph" alt=""/></div>
+<map name="ad4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_aed6588a8ae6cc14bb6e97b3943859a04_cgraph" id="ad4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_aed6588a8ae6cc14bb6e97b3943859a04_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,201,38"/>
+<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0" title=" " alt="" coords="249,5,383,45"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a7d63a644a054843c4f0c1058b9f51900" name="a7d63a644a054843c4f0c1058b9f51900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d63a644a054843c4f0c1058b9f51900">&#9670;&#160;</a></span>FdBlackScholesVanillaEngine() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d63a644a054843c4f0c1058b9f51900">&#9670;&#160;</a></span>FdBlackScholesVanillaEngine() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -435,14 +529,103 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d60/fdblackscholesvanillaengine_8cpp_source.html#l00053">53</a> of file <a class="el" href="../../d7/d60/fdblackscholesvanillaengine_8cpp_source.html">fdblackscholesvanillaengine.cpp</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../d7/d60/fdblackscholesvanillaengine_8cpp_source.html#l00069">69</a> of file <a class="el" href="../../d7/d60/fdblackscholesvanillaengine_8cpp_source.html">fdblackscholesvanillaengine.cpp</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_a7d63a644a054843c4f0c1058b9f51900_cgraph.png" border="0" usemap="#ad4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_a7d63a644a054843c4f0c1058b9f51900_cgraph" alt=""/></div>
 <map name="ad4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_a7d63a644a054843c4f0c1058b9f51900_cgraph" id="ad4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_a7d63a644a054843c4f0c1058b9f51900_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,201,38"/>
+<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0" title=" " alt="" coords="249,5,383,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae046e8af1353c01d9770ad82dd4e9613" name="ae046e8af1353c01d9770ad82dd4e9613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae046e8af1353c01d9770ad82dd4e9613">&#9670;&#160;</a></span>FdBlackScholesVanillaEngine() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html">FdBlackScholesVanillaEngine</a> </td>
+          <td>(</td>
+          <td class="paramtype">ext::shared_ptr&lt; <a class="el" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html">GeneralizedBlackScholesProcess</a> &gt;&#160;</td>
+          <td class="paramname"><em>process</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d7b/namespace_quant_lib.html#a2cbf2c853a5cc3fc7f8bbcedf51c859e">DividendSchedule</a>&#160;</td>
+          <td class="paramname"><em>dividends</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ext::shared_ptr&lt; <a class="el" href="../../dc/d8a/class_quant_lib_1_1_fdm_quanto_helper.html">FdmQuantoHelper</a> &gt;&#160;</td>
+          <td class="paramname"><em>quantoHelper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td>
+          <td class="paramname"><em>tGrid</em> = <code>100</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td>
+          <td class="paramname"><em>xGrid</em> = <code>100</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td>
+          <td class="paramname"><em>dampingSteps</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html">FdmSchemeDesc</a> &amp;&#160;</td>
+          <td class="paramname"><em>schemeDesc</em> = <code><a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html#a32f598284076d00a9f80fd8020fea4c9">FdmSchemeDesc::Douglas</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td>
+          <td class="paramname"><em>localVol</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td>
+          <td class="paramname"><em>illegalLocalVolOverwrite</em> = <code>-<a class="el" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null</a>&lt;<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&gt;()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488f">CashDividendModel</a>&#160;</td>
+          <td class="paramname"><em>cashDividendModel</em> = <code><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488fa395dea9a8704c1a1ed0224f6fb4e88b1">Spot</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d60/fdblackscholesvanillaengine_8cpp_source.html#l00088">88</a> of file <a class="el" href="../../d7/d60/fdblackscholesvanillaengine_8cpp_source.html">fdblackscholesvanillaengine.cpp</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_ae046e8af1353c01d9770ad82dd4e9613_cgraph.png" border="0" usemap="#ad4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_ae046e8af1353c01d9770ad82dd4e9613_cgraph" alt=""/></div>
+<map name="ad4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_ae046e8af1353c01d9770ad82dd4e9613_cgraph" id="ad4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_ae046e8af1353c01d9770ad82dd4e9613_cgraph">
 <area shape="rect" title=" " alt="" coords="5,13,201,38"/>
 <area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0" title=" " alt="" coords="249,5,383,45"/>
 </map>
@@ -476,12 +659,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html#a6b564cec9dfa3d4397000b9f3b7a43f6">PricingEngine</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d60/fdblackscholesvanillaengine_8cpp_source.html#l00072">72</a> of file <a class="el" href="../../d7/d60/fdblackscholesvanillaengine_8cpp_source.html">fdblackscholesvanillaengine.cpp</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../d7/d60/fdblackscholesvanillaengine_8cpp_source.html#l00109">109</a> of file <a class="el" href="../../d7/d60/fdblackscholesvanillaengine_8cpp_source.html">fdblackscholesvanillaengine.cpp</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph.png" border="0" usemap="#ad4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph" alt=""/></div>
 <map name="ad4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph" id="ad4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph">
 <area shape="rect" title=" " alt="" coords="5,45,80,70"/>
@@ -494,8 +677,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa750d0c36d4484e89aa5295c1bedc8d3" name="aa750d0c36d4484e89aa5295c1bedc8d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa750d0c36d4484e89aa5295c1bedc8d3">&#9670;&#160;</a></span>process_</h2>
+<a id="ac7eeb4421e8f1769148f3aaca0624b20" name="ac7eeb4421e8f1769148f3aaca0624b20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7eeb4421e8f1769148f3aaca0624b20">&#9670;&#160;</a></span>process_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -504,7 +687,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const ext::shared_ptr&lt;<a class="el" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html">GeneralizedBlackScholesProcess</a>&gt; process_</td>
+          <td class="memname">ext::shared_ptr&lt;<a class="el" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html">GeneralizedBlackScholesProcess</a>&gt; process_</td>
         </tr>
       </table>
   </td>
@@ -514,12 +697,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00074">74</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00099">99</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ad46ffe4bcb481097bf9a434bc053bb8e" name="ad46ffe4bcb481097bf9a434bc053bb8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad46ffe4bcb481097bf9a434bc053bb8e">&#9670;&#160;</a></span>tGrid_</h2>
+<a id="abab30617bf36bfc9a09b3e2a7dc1594a" name="abab30617bf36bfc9a09b3e2a7dc1594a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abab30617bf36bfc9a09b3e2a7dc1594a">&#9670;&#160;</a></span>dividends_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -528,7 +711,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> tGrid_</td>
+          <td class="memname"><a class="el" href="../../d5/d7b/namespace_quant_lib.html#a2cbf2c853a5cc3fc7f8bbcedf51c859e">DividendSchedule</a> dividends_</td>
         </tr>
       </table>
   </td>
@@ -538,12 +721,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00075">75</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00100">100</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
 
 </div>
 </div>
-<a id="adfc22ddaf906fc702e68b7847294a28e" name="adfc22ddaf906fc702e68b7847294a28e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfc22ddaf906fc702e68b7847294a28e">&#9670;&#160;</a></span>xGrid_</h2>
+<a id="a66e806e9b92093657894eb258ff0e94c" name="a66e806e9b92093657894eb258ff0e94c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e806e9b92093657894eb258ff0e94c">&#9670;&#160;</a></span>explicitDividends_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -552,7 +735,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> xGrid_</td>
+          <td class="memname"><a class="el" href="../../d9/db9/classbool.html">bool</a> explicitDividends_</td>
         </tr>
       </table>
   </td>
@@ -562,12 +745,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00075">75</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00101">101</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a6bd15e30372a37068d0a0b867a4c1f15" name="a6bd15e30372a37068d0a0b867a4c1f15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bd15e30372a37068d0a0b867a4c1f15">&#9670;&#160;</a></span>dampingSteps_</h2>
+<a id="a2a91ac3588e4edd769751b71e6fae733" name="a2a91ac3588e4edd769751b71e6fae733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a91ac3588e4edd769751b71e6fae733">&#9670;&#160;</a></span>tGrid_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -576,7 +759,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> dampingSteps_</td>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> tGrid_</td>
         </tr>
       </table>
   </td>
@@ -586,12 +769,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00075">75</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00102">102</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
 
 </div>
 </div>
-<a id="af9e30171ffc2739afd5871127b27ee81" name="af9e30171ffc2739afd5871127b27ee81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9e30171ffc2739afd5871127b27ee81">&#9670;&#160;</a></span>schemeDesc_</h2>
+<a id="a5bc6be61f02824ba7087df5462b9d6c4" name="a5bc6be61f02824ba7087df5462b9d6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bc6be61f02824ba7087df5462b9d6c4">&#9670;&#160;</a></span>xGrid_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -600,7 +783,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html">FdmSchemeDesc</a> schemeDesc_</td>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> xGrid_</td>
         </tr>
       </table>
   </td>
@@ -610,12 +793,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00076">76</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00102">102</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a18d4d9334fdfbd5b9f515cb382a278b8" name="a18d4d9334fdfbd5b9f515cb382a278b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18d4d9334fdfbd5b9f515cb382a278b8">&#9670;&#160;</a></span>localVol_</h2>
+<a id="af4f1e8f294263e8e52f8f8e6c15a892b" name="af4f1e8f294263e8e52f8f8e6c15a892b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f1e8f294263e8e52f8f8e6c15a892b">&#9670;&#160;</a></span>dampingSteps_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -624,7 +807,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../d9/db9/classbool.html">bool</a> localVol_</td>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> dampingSteps_</td>
         </tr>
       </table>
   </td>
@@ -634,12 +817,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00077">77</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00102">102</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aff1b9e5e66f10d47518609e153448d55" name="aff1b9e5e66f10d47518609e153448d55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff1b9e5e66f10d47518609e153448d55">&#9670;&#160;</a></span>illegalLocalVolOverwrite_</h2>
+<a id="a38ce88b7e9e6fac0b6d15acfe7c019c6" name="a38ce88b7e9e6fac0b6d15acfe7c019c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38ce88b7e9e6fac0b6d15acfe7c019c6">&#9670;&#160;</a></span>schemeDesc_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -648,7 +831,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> illegalLocalVolOverwrite_</td>
+          <td class="memname"><a class="el" href="../../d8/d76/struct_quant_lib_1_1_fdm_scheme_desc.html">FdmSchemeDesc</a> schemeDesc_</td>
         </tr>
       </table>
   </td>
@@ -658,12 +841,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00078">78</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00103">103</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a604b51d57fc5271840bbc5e0f67df075" name="a604b51d57fc5271840bbc5e0f67df075"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a604b51d57fc5271840bbc5e0f67df075">&#9670;&#160;</a></span>quantoHelper_</h2>
+<a id="ae29cacc04c1ba6bbf9bcfbbb7137c50c" name="ae29cacc04c1ba6bbf9bcfbbb7137c50c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae29cacc04c1ba6bbf9bcfbbb7137c50c">&#9670;&#160;</a></span>localVol_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -672,7 +855,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const ext::shared_ptr&lt;<a class="el" href="../../dc/d8a/class_quant_lib_1_1_fdm_quanto_helper.html">FdmQuantoHelper</a>&gt; quantoHelper_</td>
+          <td class="memname"><a class="el" href="../../d9/db9/classbool.html">bool</a> localVol_</td>
         </tr>
       </table>
   </td>
@@ -682,12 +865,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00079">79</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00104">104</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ad7312a06f03c0a3109ebf56742dcb745" name="ad7312a06f03c0a3109ebf56742dcb745"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7312a06f03c0a3109ebf56742dcb745">&#9670;&#160;</a></span>cashDividendModel_</h2>
+<a id="a343e0c086d5271293ea67d1c8c96f434" name="a343e0c086d5271293ea67d1c8c96f434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a343e0c086d5271293ea67d1c8c96f434">&#9670;&#160;</a></span>illegalLocalVolOverwrite_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -696,7 +879,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488f">CashDividendModel</a> cashDividendModel_</td>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> illegalLocalVolOverwrite_</td>
         </tr>
       </table>
   </td>
@@ -706,7 +889,55 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00105">105</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acd0a958323ea33fbf471f62d4360081e" name="acd0a958323ea33fbf471f62d4360081e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd0a958323ea33fbf471f62d4360081e">&#9670;&#160;</a></span>quantoHelper_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ext::shared_ptr&lt;<a class="el" href="../../dc/d8a/class_quant_lib_1_1_fdm_quanto_helper.html">FdmQuantoHelper</a>&gt; quantoHelper_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00106">106</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="afe35e14193ce26eaf88f5913ccb045b0" name="afe35e14193ce26eaf88f5913ccb045b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe35e14193ce26eaf88f5913ccb045b0">&#9670;&#160;</a></span>cashDividendModel_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/ddf/class_quant_lib_1_1_fd_black_scholes_vanilla_engine.html#a265b05c8941a2c819dc954dea654488f">CashDividendModel</a> cashDividendModel_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html#l00107">107</a> of file <a class="el" href="../../dd/d53/fdblackscholesvanillaengine_8hpp_source.html">fdblackscholesvanillaengine.hpp</a>.</p>
 
 </div>
 </div>

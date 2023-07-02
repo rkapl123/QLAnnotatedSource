@@ -13,6 +13,7 @@ var searchData=
   ['biginteger_10',['BigInteger',['../d6/d59/group__types.html#ga4f0ecbbf99e41b6d69cd54871d5d2b9e',1,'QuantLib']]],
   ['bignatural_11',['BigNatural',['../d5/d7b/namespace_quant_lib.html#ae3df3f13e67885465f4e359b3bffa4e6',1,'QuantLib']]],
   ['bivariatecumulativenormaldistribution_12',['BivariateCumulativeNormalDistribution',['../d5/d7b/namespace_quant_lib.html#a634ad503143adf6d910cdec1629452da',1,'QuantLib']]],
-  ['bootstrap_5ftype_13',['bootstrap_type',['../dd/d5c/class_quant_lib_1_1_piecewise_default_curve.html#aff3045576121996aa49197100581737a',1,'QuantLib::PiecewiseDefaultCurve::bootstrap_type()'],['../dd/db4/class_quant_lib_1_1_piecewise_yield_curve.html#aff3045576121996aa49197100581737a',1,'QuantLib::PiecewiseYieldCurve::bootstrap_type()']]],
-  ['bsmtermoperator_14',['BSMTermOperator',['../da/d08/group__findiff.html#ga99062cef45cec7825cfdf7b0f8e1344c',1,'QuantLib']]]
+  ['blackvanillaoptionpricer_13',['BlackVanillaOptionPricer',['../d5/d7b/namespace_quant_lib.html#a5b0bac4963f2e7563af60d9fbe22162b',1,'QuantLib']]],
+  ['bootstrap_5ftype_14',['bootstrap_type',['../dd/d5c/class_quant_lib_1_1_piecewise_default_curve.html#aff3045576121996aa49197100581737a',1,'QuantLib::PiecewiseDefaultCurve::bootstrap_type()'],['../dd/db4/class_quant_lib_1_1_piecewise_yield_curve.html#aff3045576121996aa49197100581737a',1,'QuantLib::PiecewiseYieldCurve::bootstrap_type()']]],
+  ['bsmtermoperator_15',['BSMTermOperator',['../da/d08/group__findiff.html#ga99062cef45cec7825cfdf7b0f8e1344c',1,'QuantLib']]]
 ];

@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.28</div>
+   <div id="projectnumber">Fully annotated sources - version 1.30</div>
    </div>
   </td>
  </tr>
@@ -85,6 +85,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../d0/d42/class_quant_lib_1_1_interpolated_curve-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">InterpolatedCurve&lt; Interpolator &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -101,23 +102,23 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../dd/dae/class_quant_lib_1_1_interpolated_curve__inherit__graph.png" border="0" usemap="#a_interpolated_curve_3_01_interpolator_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_interpolated_curve_3_01_interpolator_01_4_inherit__map" id="a_interpolated_curve_3_01_interpolator_01_4_inherit__map">
-<area shape="rect" title="Helper class to build interpolated term structures." alt="" coords="1135,5,1281,339"/>
-<area shape="rect" href="../../d3/d83/class_quant_lib_1_1_interpolated_yo_y_optionlet_volatility_curve.html" title=" " alt="" coords="556,1385,748,1807"/>
-<area shape="rect" href="../../dc/da7/class_quant_lib_1_1_interpolated_affine_hazard_rate_curve.html" title=" " alt="" coords="105,401,303,852"/>
-<area shape="rect" href="../../d5/de3/class_quant_lib_1_1_interpolated_default_density_curve.html" title="DefaultProbabilityTermStructure based on interpolation of default densities." alt="" coords="327,431,518,823"/>
-<area shape="rect" href="../../d4/dd2/class_quant_lib_1_1_interpolated_discount_curve.html" title="YieldTermStructure based on interpolation of discount factors." alt="" coords="542,482,741,771"/>
-<area shape="rect" href="../../dc/d57/class_quant_lib_1_1_interpolated_forward_curve.html" title="YieldTermStructure based on interpolation of forward rates." alt="" coords="765,475,958,779"/>
-<area shape="rect" href="../../d9/d0e/class_quant_lib_1_1_interpolated_hazard_rate_curve.html" title="DefaultProbabilityTermStructure based on interpolation of hazard rates." alt="" coords="982,475,1197,779"/>
-<area shape="rect" href="../../d3/dc8/class_quant_lib_1_1_interpolated_simple_zero_curve.html" title="YieldTermStructure based on interpolation of zero rates." alt="" coords="1221,482,1433,771"/>
-<area shape="rect" href="../../d3/dc9/class_quant_lib_1_1_interpolated_survival_probability_curve.html" title="DefaultProbabilityTermStructure based on interpolation of survival probabilities." alt="" coords="1457,431,1668,823"/>
-<area shape="rect" href="../../d6/d7b/class_quant_lib_1_1_interpolated_yo_y_inflation_curve.html" title="Inflation term structure based on interpolated year&#45;on&#45;year rates." alt="" coords="1692,453,1868,801"/>
-<area shape="rect" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html" title="YieldTermStructure based on interpolation of zero rates." alt="" coords="1893,482,2065,771"/>
-<area shape="rect" href="../../d7/d3f/class_quant_lib_1_1_interpolated_zero_inflation_curve.html" title="Inflation term structure based on the interpolation of zero rates." alt="" coords="2089,423,2265,830"/>
-<area shape="rect" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html" title=" " alt="" coords="2289,460,2436,793"/>
-<area shape="rect" href="../../d1/d3b/class_quant_lib_1_1_piecewise_yo_y_optionlet_volatility_curve.html" title="Piecewise year&#45;on&#45;year inflation volatility term structure." alt="" coords="539,1856,765,2248"/>
-<area shape="rect" href="../../de/def/class_quant_lib_1_1_piecewise_yo_y_inflation_curve.html" title="Piecewise year&#45;on&#45;year inflation term structure." alt="" coords="1676,916,1884,1308"/>
-<area shape="rect" href="../../de/d56/class_quant_lib_1_1_piecewise_zero_inflation_curve.html" title="Piecewise zero&#45;inflation term structure." alt="" coords="2027,901,2235,1323"/>
-<area shape="rect" href="../../d3/d83/class_quant_lib_1_1_interpolated_yo_y_optionlet_volatility_curve.html" title="Interpolated flat smile surface." alt="" coords="2259,901,2467,1323"/>
+<area shape="rect" title="Helper class to build interpolated term structures." alt="" coords="1128,5,1283,412"/>
+<area shape="rect" href="../../d3/d83/class_quant_lib_1_1_interpolated_yo_y_optionlet_volatility_curve.html" title=" " alt="" coords="555,1459,747,1880"/>
+<area shape="rect" href="../../dc/da7/class_quant_lib_1_1_interpolated_affine_hazard_rate_curve.html" title=" " alt="" coords="103,475,300,925"/>
+<area shape="rect" href="../../d5/de3/class_quant_lib_1_1_interpolated_default_density_curve.html" title="DefaultProbabilityTermStructure based on interpolation of default densities." alt="" coords="325,504,515,896"/>
+<area shape="rect" href="../../d4/dd2/class_quant_lib_1_1_interpolated_discount_curve.html" title="YieldTermStructure based on interpolation of discount factors." alt="" coords="539,555,738,845"/>
+<area shape="rect" href="../../dc/d57/class_quant_lib_1_1_interpolated_forward_curve.html" title="YieldTermStructure based on interpolation of forward rates." alt="" coords="762,548,955,852"/>
+<area shape="rect" href="../../d9/d0e/class_quant_lib_1_1_interpolated_hazard_rate_curve.html" title="DefaultProbabilityTermStructure based on interpolation of hazard rates." alt="" coords="979,548,1194,852"/>
+<area shape="rect" href="../../d3/dc8/class_quant_lib_1_1_interpolated_simple_zero_curve.html" title="YieldTermStructure based on interpolation of zero rates." alt="" coords="1218,555,1430,845"/>
+<area shape="rect" href="../../d3/dc9/class_quant_lib_1_1_interpolated_survival_probability_curve.html" title="DefaultProbabilityTermStructure based on interpolation of survival probabilities." alt="" coords="1455,504,1665,896"/>
+<area shape="rect" href="../../d6/d7b/class_quant_lib_1_1_interpolated_yo_y_inflation_curve.html" title="Inflation term structure based on interpolated year&#45;on&#45;year rates." alt="" coords="1689,526,1865,874"/>
+<area shape="rect" href="../../d1/d87/class_quant_lib_1_1_interpolated_zero_curve.html" title="YieldTermStructure based on interpolation of zero rates." alt="" coords="1890,555,2062,845"/>
+<area shape="rect" href="../../d7/d3f/class_quant_lib_1_1_interpolated_zero_inflation_curve.html" title="Inflation term structure based on the interpolation of zero rates." alt="" coords="2087,526,2263,874"/>
+<area shape="rect" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html" title=" " alt="" coords="2287,497,2441,903"/>
+<area shape="rect" href="../../d1/d3b/class_quant_lib_1_1_piecewise_yo_y_optionlet_volatility_curve.html" title="Piecewise year&#45;on&#45;year inflation volatility term structure." alt="" coords="537,1929,764,2321"/>
+<area shape="rect" href="../../de/def/class_quant_lib_1_1_piecewise_yo_y_inflation_curve.html" title="Piecewise year&#45;on&#45;year inflation term structure." alt="" coords="1673,989,1881,1381"/>
+<area shape="rect" href="../../de/d56/class_quant_lib_1_1_piecewise_zero_inflation_curve.html" title="Piecewise zero&#45;inflation term structure." alt="" coords="2028,989,2236,1381"/>
+<area shape="rect" href="../../d3/d83/class_quant_lib_1_1_interpolated_yo_y_optionlet_volatility_curve.html" title="Interpolated flat smile surface." alt="" coords="2260,975,2468,1396"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -127,7 +128,7 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../dd/d5c/class_quant_lib_1_1_interpolated_curve__coll__graph.png" border="0" usemap="#a_interpolated_curve_3_01_interpolator_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="a_interpolated_curve_3_01_interpolator_01_4_coll__map" id="a_interpolated_curve_3_01_interpolator_01_4_coll__map">
-<area shape="rect" title="Helper class to build interpolated term structures." alt="" coords="418,1267,565,1527"/>
+<area shape="rect" title="Helper class to build interpolated term structures." alt="" coords="414,1267,569,1600"/>
 <area shape="rect" title=" " alt="" coords="73,746,185,786"/>
 <area shape="rect" title=" " alt="" coords="5,159,60,199"/>
 <area shape="rect" title=" " alt="" coords="115,159,206,199"/>
@@ -145,13 +146,18 @@ $(function() {
 </map>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1e03f70024e10dba61e2c3100da380ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#a1e03f70024e10dba61e2c3100da380ee">~InterpolatedCurve</a> ()=default</td></tr>
+<tr class="separator:a1e03f70024e10dba61e2c3100da380ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Building</div></td></tr>
 <tr class="memitem:a49114015c2923fe7a62297cb8bdad7c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#a49114015c2923fe7a62297cb8bdad7c7">InterpolatedCurve</a> (std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> &gt; times, std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; data, const Interpolator &amp;i=Interpolator())</td></tr>
 <tr class="separator:a49114015c2923fe7a62297cb8bdad7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af65ba2657e570befd6d47b554d41be2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#af65ba2657e570befd6d47b554d41be2c">InterpolatedCurve</a> (const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> &gt; &amp;times, const Interpolator &amp;i=Interpolator())</td></tr>
-<tr class="separator:af65ba2657e570befd6d47b554d41be2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86ef4b010f9f6bbb434b782008c2bcb5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#a86ef4b010f9f6bbb434b782008c2bcb5">InterpolatedCurve</a> (std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> &gt; times, const Interpolator &amp;i=Interpolator())</td></tr>
+<tr class="separator:a86ef4b010f9f6bbb434b782008c2bcb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fce8f7f7406e558c914ada1f040b2d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#a3fce8f7f7406e558c914ada1f040b2d9">InterpolatedCurve</a> (<a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n, const Interpolator &amp;i=Interpolator())</td></tr>
 <tr class="separator:a3fce8f7f7406e558c914ada1f040b2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f1a36b149b457570e7fe01bc5b6370f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#a1f1a36b149b457570e7fe01bc5b6370f">InterpolatedCurve</a> (const Interpolator &amp;i=Interpolator())</td></tr>
@@ -161,6 +167,11 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ad09da2c682c289e3568976b51ca4b27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbcf73dd81edb57874a9a2dde8b0d955"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html">InterpolatedCurve</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#adbcf73dd81edb57874a9a2dde8b0d955">operator=</a> (const <a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html">InterpolatedCurve</a> &amp;c)</td></tr>
 <tr class="separator:adbcf73dd81edb57874a9a2dde8b0d955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Moving</div></td></tr>
+<tr class="memitem:a7ebe89590c74c8976bb0f1861cfb5e06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#a7ebe89590c74c8976bb0f1861cfb5e06">InterpolatedCurve</a> (<a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html">InterpolatedCurve</a> &amp;&amp;c) noexcept</td></tr>
+<tr class="separator:a7ebe89590c74c8976bb0f1861cfb5e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af628a2295613cac58162ed3f125b4047"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html">InterpolatedCurve</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#af628a2295613cac58162ed3f125b4047">operator=</a> (<a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html">InterpolatedCurve</a> &amp;&amp;c) noexcept</td></tr>
+<tr class="separator:af628a2295613cac58162ed3f125b4047"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Utilities</h2></td></tr>
 <tr class="memitem:a63b1ac1fe6074fcd9789119e547d4812"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#a63b1ac1fe6074fcd9789119e547d4812">times_</a></td></tr>
@@ -185,8 +196,33 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a1e03f70024e10dba61e2c3100da380ee" name="a1e03f70024e10dba61e2c3100da380ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e03f70024e10dba61e2c3100da380ee">&#9670;&#160;</a></span>~InterpolatedCurve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html">InterpolatedCurve</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a49114015c2923fe7a62297cb8bdad7c7" name="a49114015c2923fe7a62297cb8bdad7c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49114015c2923fe7a62297cb8bdad7c7">&#9670;&#160;</a></span>InterpolatedCurve() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a49114015c2923fe7a62297cb8bdad7c7">&#9670;&#160;</a></span>InterpolatedCurve() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,12 +261,12 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00045">45</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
 
 </div>
 </div>
-<a id="af65ba2657e570befd6d47b554d41be2c" name="af65ba2657e570befd6d47b554d41be2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af65ba2657e570befd6d47b554d41be2c">&#9670;&#160;</a></span>InterpolatedCurve() <span class="overload">[2/5]</span></h2>
+<a id="a86ef4b010f9f6bbb434b782008c2bcb5" name="a86ef4b010f9f6bbb434b782008c2bcb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86ef4b010f9f6bbb434b782008c2bcb5">&#9670;&#160;</a></span>InterpolatedCurve() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -241,7 +277,7 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
         <tr>
           <td class="memname"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html">InterpolatedCurve</a> </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> &gt;&#160;</td>
           <td class="paramname"><em>times</em>, </td>
         </tr>
         <tr>
@@ -263,12 +299,12 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00050">50</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00053">53</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a3fce8f7f7406e558c914ada1f040b2d9" name="a3fce8f7f7406e558c914ada1f040b2d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fce8f7f7406e558c914ada1f040b2d9">&#9670;&#160;</a></span>InterpolatedCurve() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fce8f7f7406e558c914ada1f040b2d9">&#9670;&#160;</a></span>InterpolatedCurve() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,12 +337,12 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00057">57</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a1f1a36b149b457570e7fe01bc5b6370f" name="a1f1a36b149b457570e7fe01bc5b6370f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f1a36b149b457570e7fe01bc5b6370f">&#9670;&#160;</a></span>InterpolatedCurve() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f1a36b149b457570e7fe01bc5b6370f">&#9670;&#160;</a></span>InterpolatedCurve() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,12 +365,12 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00058">58</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
 
 </div>
 </div>
 <a id="ad09da2c682c289e3568976b51ca4b27c" name="ad09da2c682c289e3568976b51ca4b27c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad09da2c682c289e3568976b51ca4b27c">&#9670;&#160;</a></span>InterpolatedCurve() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad09da2c682c289e3568976b51ca4b27c">&#9670;&#160;</a></span>InterpolatedCurve() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -357,7 +393,7 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00064">64</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -372,9 +408,48 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 
 </div>
 </div>
+<a id="a7ebe89590c74c8976bb0f1861cfb5e06" name="a7ebe89590c74c8976bb0f1861cfb5e06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ebe89590c74c8976bb0f1861cfb5e06">&#9670;&#160;</a></span>InterpolatedCurve() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html">InterpolatedCurve</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html">InterpolatedCurve</a>&lt; Interpolator &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00083">83</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../dc/d62/class_quant_lib_1_1_interpolated_curve_a7ebe89590c74c8976bb0f1861cfb5e06_cgraph.png" border="0" usemap="#adc/d62/class_quant_lib_1_1_interpolated_curve_a7ebe89590c74c8976bb0f1861cfb5e06_cgraph" alt=""/></div>
+<map name="adc/d62/class_quant_lib_1_1_interpolated_curve_a7ebe89590c74c8976bb0f1861cfb5e06_cgraph" id="adc/d62/class_quant_lib_1_1_interpolated_curve_a7ebe89590c74c8976bb0f1861cfb5e06_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,127,31"/>
+<area shape="rect" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#a7964d9db3a9cdeab3d13d99e7feff1fe" title=" " alt="" coords="175,5,299,31"/>
+</map>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="adbcf73dd81edb57874a9a2dde8b0d955" name="adbcf73dd81edb57874a9a2dde8b0d955"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbcf73dd81edb57874a9a2dde8b0d955">&#9670;&#160;</a></span>operator=()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adbcf73dd81edb57874a9a2dde8b0d955">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -397,14 +472,53 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00069">69</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00072">72</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../dc/d62/class_quant_lib_1_1_interpolated_curve_adbcf73dd81edb57874a9a2dde8b0d955_cgraph.png" border="0" usemap="#adc/d62/class_quant_lib_1_1_interpolated_curve_adbcf73dd81edb57874a9a2dde8b0d955_cgraph" alt=""/></div>
 <map name="adc/d62/class_quant_lib_1_1_interpolated_curve_adbcf73dd81edb57874a9a2dde8b0d955_cgraph" id="adc/d62/class_quant_lib_1_1_interpolated_curve_adbcf73dd81edb57874a9a2dde8b0d955_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,83,31"/>
+<area shape="rect" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#a7964d9db3a9cdeab3d13d99e7feff1fe" title=" " alt="" coords="131,5,255,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af628a2295613cac58162ed3f125b4047" name="af628a2295613cac58162ed3f125b4047"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af628a2295613cac58162ed3f125b4047">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html">InterpolatedCurve</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html">InterpolatedCurve</a>&lt; Interpolator &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../dc/d62/class_quant_lib_1_1_interpolated_curve_af628a2295613cac58162ed3f125b4047_cgraph.png" border="0" usemap="#adc/d62/class_quant_lib_1_1_interpolated_curve_af628a2295613cac58162ed3f125b4047_cgraph" alt=""/></div>
+<map name="adc/d62/class_quant_lib_1_1_interpolated_curve_af628a2295613cac58162ed3f125b4047_cgraph" id="adc/d62/class_quant_lib_1_1_interpolated_curve_af628a2295613cac58162ed3f125b4047_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,83,31"/>
 <area shape="rect" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#a7964d9db3a9cdeab3d13d99e7feff1fe" title=" " alt="" coords="131,5,255,31"/>
 </map>
@@ -452,12 +566,12 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00099">99</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../dc/d62/class_quant_lib_1_1_interpolated_curve_a73f1e8f5da7a99220614e73ee1804507_cgraph.png" border="0" usemap="#adc/d62/class_quant_lib_1_1_interpolated_curve_a73f1e8f5da7a99220614e73ee1804507_cgraph" alt=""/></div>
 <map name="adc/d62/class_quant_lib_1_1_interpolated_curve_a73f1e8f5da7a99220614e73ee1804507_cgraph" id="adc/d62/class_quant_lib_1_1_interpolated_curve_a73f1e8f5da7a99220614e73ee1804507_cgraph">
 <area shape="rect" title=" " alt="" coords="5,35,95,60"/>
@@ -465,16 +579,16 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 <area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="143,55,293,95"/>
 </map>
 </div>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../dc/d62/class_quant_lib_1_1_interpolated_curve_a73f1e8f5da7a99220614e73ee1804507_icgraph.png" border="0" usemap="#adc/d62/class_quant_lib_1_1_interpolated_curve_a73f1e8f5da7a99220614e73ee1804507_icgraph" alt=""/></div>
 <map name="adc/d62/class_quant_lib_1_1_interpolated_curve_a73f1e8f5da7a99220614e73ee1804507_icgraph" id="adc/d62/class_quant_lib_1_1_interpolated_curve_a73f1e8f5da7a99220614e73ee1804507_icgraph">
 <area shape="rect" title=" " alt="" coords="252,60,341,85"/>
 <area shape="rect" href="../../d6/d7b/class_quant_lib_1_1_interpolated_yo_y_inflation_curve.html#adb99b8d7e35690bffc02cadc3fb2202d" title=" " alt="" coords="13,5,196,60"/>
-<area shape="rect" href="../../d7/d3f/class_quant_lib_1_1_interpolated_zero_inflation_curve.html#afe75f4f50a5cf03e42cf28cdb5701055" title=" " alt="" coords="5,84,204,139"/>
+<area shape="rect" href="../../d7/d3f/class_quant_lib_1_1_interpolated_zero_inflation_curve.html#afc6d6b07d3aacd4f7317e8711f236d76" title=" " alt="" coords="5,84,204,139"/>
 </map>
 </div>
 
@@ -503,18 +617,18 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00097">97</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00116">116</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../dc/d62/class_quant_lib_1_1_interpolated_curve_a7964d9db3a9cdeab3d13d99e7feff1fe_icgraph.png" border="0" usemap="#adc/d62/class_quant_lib_1_1_interpolated_curve_a7964d9db3a9cdeab3d13d99e7feff1fe_icgraph" alt=""/></div>
 <map name="adc/d62/class_quant_lib_1_1_interpolated_curve_a7964d9db3a9cdeab3d13d99e7feff1fe_icgraph" id="adc/d62/class_quant_lib_1_1_interpolated_curve_a7964d9db3a9cdeab3d13d99e7feff1fe_icgraph">
 <area shape="rect" title=" " alt="" coords="252,109,376,135"/>
 <area shape="rect" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#ad09da2c682c289e3568976b51ca4b27c" title=" " alt="" coords="44,5,165,31"/>
 <area shape="rect" href="../../d6/d7b/class_quant_lib_1_1_interpolated_yo_y_inflation_curve.html#adb99b8d7e35690bffc02cadc3fb2202d" title=" " alt="" coords="13,55,196,109"/>
-<area shape="rect" href="../../d7/d3f/class_quant_lib_1_1_interpolated_zero_inflation_curve.html#afe75f4f50a5cf03e42cf28cdb5701055" title=" " alt="" coords="5,133,204,188"/>
+<area shape="rect" href="../../d7/d3f/class_quant_lib_1_1_interpolated_zero_inflation_curve.html#afc6d6b07d3aacd4f7317e8711f236d76" title=" " alt="" coords="5,133,204,188"/>
 <area shape="rect" href="../../dc/d62/class_quant_lib_1_1_interpolated_curve.html#adbcf73dd81edb57874a9a2dde8b0d955" title=" " alt="" coords="66,212,143,237"/>
 </map>
 </div>
@@ -542,7 +656,7 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00104">104</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00123">123</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
 
 </div>
 </div>
@@ -566,7 +680,7 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00105">105</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00124">124</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
 
 </div>
 </div>
@@ -590,7 +704,7 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00106">106</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
 
 </div>
 </div>
@@ -614,7 +728,7 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00107">107</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00126">126</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
 
 </div>
 </div>
@@ -638,7 +752,7 @@ class QuantLib::InterpolatedCurve&lt; Interpolator &gt;</div><p >Helper class to
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00117">117</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html#l00136">136</a> of file <a class="el" href="../../dd/d58/interpolatedcurve_8hpp_source.html">interpolatedcurve.hpp</a>.</p>
 
 </div>
 </div>

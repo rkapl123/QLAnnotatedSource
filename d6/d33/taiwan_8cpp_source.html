@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.28</div>
+   <div id="projectnumber">Fully annotated sources - version 1.30</div>
    </div>
   </td>
  </tr>
@@ -431,16 +431,113 @@ $(function() {
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        }</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    }</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>}</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        <span class="keywordflow">if</span> (y == 2020) {</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            <span class="keywordflow">if</span> (<span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                (d == 23 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba281d1802d56d988c72678e156b6ddf86">January</a>)</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                <span class="comment">// Lunar New Year</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                || (d &gt;= 24 &amp;&amp; d &lt;= 29 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba281d1802d56d988c72678e156b6ddf86">January</a>)</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                || (d == 2 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba7e3e0601c1013d30d66192a042b65ffb">April</a>)</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                || (d == 3 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba7e3e0601c1013d30d66192a042b65ffb">April</a>)</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                <span class="comment">// Dragon Boat Festival</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                || (d == 25 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbbaa00f035b8f40661118c16e2af3e61176">June</a>)</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                || (d == 26 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbbaa00f035b8f40661118c16e2af3e61176">June</a>)</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                <span class="comment">// Mid-Autumn Festival</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                || (d == 1 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba8e8c7d515e22b7c7d882ae4c97584c14">October</a>)</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>                || (d == 2 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba8e8c7d515e22b7c7d882ae4c97584c14">October</a>)</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                || (d == 9 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba8e8c7d515e22b7c7d882ae4c97584c14">October</a>)</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                )</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        }</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>        <span class="keywordflow">if</span> (y == 2021) {</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>            <span class="comment">// Tomb Sweeping Day falls on Sunday</span></div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>            <span class="keywordflow">if</span> (<span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                (d == 10 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba6955cfa22656682967e5e750b9ccd3f7">February</a>)</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                <span class="comment">// Lunar New Year</span></div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>                || (d &gt;= 11 &amp;&amp; d &lt;= 16 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba6955cfa22656682967e5e750b9ccd3f7">February</a>)</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>                || (d == 1 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba6514826513b9cfb1bf828001f1a8f246">March</a>)</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                <span class="comment">// Children&#39;s Day</span></div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                || (d == 2 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba7e3e0601c1013d30d66192a042b65ffb">April</a>)</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                || (d == 5 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba7e3e0601c1013d30d66192a042b65ffb">April</a>)</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                || (d == 30 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba7e3e0601c1013d30d66192a042b65ffb">April</a>)</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                <span class="comment">// Dragon Boat Festival</span></div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                || (d == 14 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbbaa00f035b8f40661118c16e2af3e61176">June</a>)</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                || (d == 20 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbbaf5dc1d3f398ac54dfac9985fb9fbe47d">September</a>)</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>                <span class="comment">// Mid-Autumn Festival</span></div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>                || (d == 21 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbbaf5dc1d3f398ac54dfac9985fb9fbe47d">September</a>)</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>                || (d == 11 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba8e8c7d515e22b7c7d882ae4c97584c14">October</a>)</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                || (d == 31 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba052079db4e9ba50ce30643ff650486a2">December</a>)</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>                )</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>        }</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span> </div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>        <span class="keywordflow">if</span> (y == 2022) {</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>            <span class="comment">// Mid-Autumn Festival falls on Saturday</span></div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>            <span class="keywordflow">if</span> ( <span class="comment">// Lunar New Year</span></div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>                ((d == 31 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba281d1802d56d988c72678e156b6ddf86">January</a>) || (d &lt;= 4 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba6955cfa22656682967e5e750b9ccd3f7">February</a>))</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                <span class="comment">// Children&#39;s Day</span></div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                || (d == 4 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba7e3e0601c1013d30d66192a042b65ffb">April</a>)</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>                <span class="comment">// Tomb Sweeping Day</span></div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>                || (d == 5 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba7e3e0601c1013d30d66192a042b65ffb">April</a>)</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>                || (d == 2 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba56032654a15262d69e8be7d42a7ab381">May</a>)</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>                <span class="comment">// Dragon Boat Festival</span></div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>                || (d == 3 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbbaa00f035b8f40661118c16e2af3e61176">June</a>)</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                || (d == 9 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbbaf5dc1d3f398ac54dfac9985fb9fbe47d">September</a>)</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                )</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>        }</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span> </div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>        <span class="keywordflow">if</span> (y == 2023) {</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>            <span class="keywordflow">if</span> (<span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>                (d == 2 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba281d1802d56d988c72678e156b6ddf86">January</a>)</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>                || (d == 20 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba281d1802d56d988c72678e156b6ddf86">January</a>)</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>                <span class="comment">// Lunar New Year</span></div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>                || (d &gt;= 21 &amp;&amp; d &lt;= 24 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba281d1802d56d988c72678e156b6ddf86">January</a>)</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>                || (d &gt;= 25 &amp;&amp; d &lt;= 27 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba281d1802d56d988c72678e156b6ddf86">January</a>)</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>                || (d == 27 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba6955cfa22656682967e5e750b9ccd3f7">February</a>)</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>                || (d == 3 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba7e3e0601c1013d30d66192a042b65ffb">April</a>)</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>                <span class="comment">// Children&#39;s Day</span></div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>                || (d == 4 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba7e3e0601c1013d30d66192a042b65ffb">April</a>)</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>                <span class="comment">// Tomb Sweeping Day</span></div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>                || (d == 5 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba7e3e0601c1013d30d66192a042b65ffb">April</a>)</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>                <span class="comment">// Dragon Boat Festival</span></div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>                || (d == 22 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbbaa00f035b8f40661118c16e2af3e61176">June</a>)</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>                || (d == 23 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbbaa00f035b8f40661118c16e2af3e61176">June</a>)</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>                <span class="comment">// Mid-Autumn Festival</span></div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>                || (d == 29 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbbaf5dc1d3f398ac54dfac9985fb9fbe47d">September</a>)</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>                <span class="comment">// adjusted holiday</span></div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>                || (d == 9 &amp;&amp; m == <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba8e8c7d515e22b7c7d882ae4c97584c14">October</a>)</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>                )</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>        }</div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span> </div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>    }</div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span> </div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>}</div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html_a0cbab16a5cffa780446754d6a71d8ea1"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html#a0cbab16a5cffa780446754d6a71d8ea1">QuantLib::Calendar::isWeekend</a></div><div class="ttdeci">bool isWeekend(Weekday w) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00255">calendar.hpp:255</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html_ac29a938cdc70db8abcde7a84fe62f9b4"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html#ac29a938cdc70db8abcde7a84fe62f9b4">QuantLib::Calendar::impl_</a></div><div class="ttdeci">ext::shared_ptr&lt; Impl &gt; impl_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00072">calendar.hpp:72</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_date_html_a14547dc7eae7e255d783514b585615a6"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6">QuantLib::Date::month</a></div><div class="ttdeci">Month month() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da2/date_8cpp_source.html#l00074">date.cpp:74</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_date_html_a17308ee299bd08b69af405dc93cef73d"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d">QuantLib::Date::year</a></div><div class="ttdeci">Year year() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da2/date_8cpp_source.html#l00085">date.cpp:85</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_date_html_a14547dc7eae7e255d783514b585615a6"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6">QuantLib::Date::month</a></div><div class="ttdeci">Month month() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da2/date_8cpp_source.html#l00082">date.cpp:82</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_date_html_a17308ee299bd08b69af405dc93cef73d"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d">QuantLib::Date::year</a></div><div class="ttdeci">Year year() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da2/date_8cpp_source.html#l00093">date.cpp:93</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html_a266e04a4f334209d10294ba8ed0c271d"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d">QuantLib::Date::dayOfMonth</a></div><div class="ttdeci">Day dayOfMonth() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00400">date.hpp:400</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html_a8beb14a6b168772900b48e3161b4c0e6"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#a8beb14a6b168772900b48e3161b4c0e6">QuantLib::Date::weekday</a></div><div class="ttdeci">Weekday weekday() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00395">date.hpp:395</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_taiwan_1_1_tsec_impl_html"><div class="ttname"><a href="../../d1/dde/class_quant_lib_1_1_taiwan_1_1_tsec_impl.html">QuantLib::Taiwan::TsecImpl</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d97/taiwan_8hpp_source.html#l00057">taiwan.hpp:57</a></div></div>
@@ -463,7 +560,7 @@ $(function() {
 <div class="ttc" id="agroup__datetime_html_ggae34b763987dcf60c6c619d327b8c9dbbaf5dc1d3f398ac54dfac9985fb9fbe47d"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbbaf5dc1d3f398ac54dfac9985fb9fbe47d">QuantLib::September</a></div><div class="ttdeci">@ September</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00065">date.hpp:65</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaec3d5ec6653b2c392d449500b8f5cb3aa50f766951431e13654ab869ef85e162c"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaec3d5ec6653b2c392d449500b8f5cb3aa50f766951431e13654ab869ef85e162c">QuantLib::Sunday</a></div><div class="ttdeci">@ Sunday</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db6/weekday_8hpp_source.html#l00041">weekday.hpp:41</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaec3d5ec6653b2c392d449500b8f5cb3aa5a996d296d81b9b8bd3b9201afa4c547"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaec3d5ec6653b2c392d449500b8f5cb3aa5a996d296d81b9b8bd3b9201afa4c547">QuantLib::Saturday</a></div><div class="ttdeci">@ Saturday</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db6/weekday_8hpp_source.html#l00047">weekday.hpp:47</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

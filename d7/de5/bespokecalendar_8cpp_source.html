@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.28</div>
+   <div id="projectnumber">Fully annotated sources - version 1.30</div>
    </div>
   </td>
  </tr>
@@ -119,7 +119,7 @@ $(function() {
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d1/dc6/class_quant_lib_1_1_bespoke_calendar_1_1_impl.html#aee0ba13e0bc268abef5d4c73c343e4e9">   32</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d1/dc6/class_quant_lib_1_1_bespoke_calendar_1_1_impl.html#aee0ba13e0bc268abef5d4c73c343e4e9">BespokeCalendar::Impl::isWeekend</a>(<a class="code hl_enumeration" href="../../d1/d37/group__datetime.html#gaec3d5ec6653b2c392d449500b8f5cb3a">Weekday</a> w)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">return</span> (weekend_.find(w) != weekend_.end());</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">return</span> (weekend_mask_ &amp; (1 &lt;&lt; w)) != 0;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d1/dc6/class_quant_lib_1_1_bespoke_calendar_1_1_impl.html#a0850bb5ce5d116ab4bd209e4e608e06f">   36</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d1/dc6/class_quant_lib_1_1_bespoke_calendar_1_1_impl.html#a0850bb5ce5d116ab4bd209e4e608e06f">BespokeCalendar::Impl::isBusinessDay</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; date)<span class="keyword"> const </span>{</div>
@@ -127,7 +127,7 @@ $(function() {
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d1/dc6/class_quant_lib_1_1_bespoke_calendar_1_1_impl.html#a4fd5f300b4e29a8d91452121d64ca6e3">   40</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc6/class_quant_lib_1_1_bespoke_calendar_1_1_impl.html#a4fd5f300b4e29a8d91452121d64ca6e3">BespokeCalendar::Impl::addWeekend</a>(<a class="code hl_enumeration" href="../../d1/d37/group__datetime.html#gaec3d5ec6653b2c392d449500b8f5cb3a">Weekday</a> w) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        weekend_.insert(w);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        weekend_mask_ |= (1 &lt;&lt; w);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
@@ -157,7 +157,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html_a8beb14a6b168772900b48e3161b4c0e6"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#a8beb14a6b168772900b48e3161b4c0e6">QuantLib::Date::weekday</a></div><div class="ttdeci">Weekday weekday() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00395">date.hpp:395</a></div></div>
 <div class="ttc" id="agroup__datetime_html_gaec3d5ec6653b2c392d449500b8f5cb3a"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaec3d5ec6653b2c392d449500b8f5cb3a">QuantLib::Weekday</a></div><div class="ttdeci">Weekday</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db6/weekday_8hpp_source.html#l00041">weekday.hpp:41</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9a/cashflow_8cpp_source.html#l00025">cashflow.cpp:25</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

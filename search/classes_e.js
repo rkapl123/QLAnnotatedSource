@@ -5,7 +5,7 @@ var searchData=
   ['observablesettings_2',['ObservableSettings',['../d3/d71/class_quant_lib_1_1_observable_settings.html',1,'QuantLib']]],
   ['observablevalue_3',['ObservableValue',['../dc/d9e/class_quant_lib_1_1_observable_value.html',1,'QuantLib']]],
   ['observablevalue_3c_20date_20_3e_4',['ObservableValue&lt; Date &gt;',['../dc/d9e/class_quant_lib_1_1_observable_value.html',1,'QuantLib']]],
-  ['observablevalue_3c_20timeseries_3c_20real_20_3e_20_3e_5',['ObservableValue&lt; TimeSeries&lt; Real &gt; &gt;',['../dc/d9e/class_quant_lib_1_1_observable_value.html',1,'QuantLib']]],
+  ['observablevalue_3c_20quantlib_3a_3atimeseries_3c_20real_20_3e_20_3e_5',['ObservableValue&lt; QuantLib::TimeSeries&lt; Real &gt; &gt;',['../dc/d9e/class_quant_lib_1_1_observable_value.html',1,'QuantLib']]],
   ['observer_6',['Observer',['../de/dfe/class_quant_lib_1_1_observer.html',1,'QuantLib']]],
   ['odefctwrapper_7',['OdeFctWrapper',['../d3/dda/struct_quant_lib_1_1detail_1_1_ode_fct_wrapper.html',1,'QuantLib::detail']]],
   ['oisratehelper_8',['OISRateHelper',['../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html',1,'QuantLib']]],
