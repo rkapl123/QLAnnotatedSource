@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['g_5f_0',['g_',['../d1/da7/class_quant_lib_1_1_normal_c_l_v_model.html#a740f6d565b85b112d5be897f7cc1bed1',1,'QuantLib::NormalCLVModel::g_()'],['../d6/d8c/class_quant_lib_1_1_square_root_c_l_v_model.html#a740f6d565b85b112d5be897f7cc1bed1',1,'QuantLib::SquareRootCLVModel::g_()'],['../d3/dd4/class_quant_lib_1_1composed__function.html#ad5c68d78a2de915774c6fa4a05d7d79c',1,'QuantLib::composed_function::g_()'],['../dc/de0/class_quant_lib_1_1binary__compose3__function.html#ad5c68d78a2de915774c6fa4a05d7d79c',1,'QuantLib::binary_compose3_function::g_()'],['../d1/d8a/class_quant_lib_1_1_log_normal_fwd_rate_ipc.html#aed970e68f9cad140742ea547e6ad530f',1,'QuantLib::LogNormalFwdRateIpc::g_()']]],
+  ['g_5f_0',['g_',['../d1/da7/class_quant_lib_1_1_normal_c_l_v_model.html#a740f6d565b85b112d5be897f7cc1bed1',1,'QuantLib::NormalCLVModel::g_()'],['../d6/d8c/class_quant_lib_1_1_square_root_c_l_v_model.html#a740f6d565b85b112d5be897f7cc1bed1',1,'QuantLib::SquareRootCLVModel::g_()'],['../d1/d8a/class_quant_lib_1_1_log_normal_fwd_rate_ipc.html#aed970e68f9cad140742ea547e6ad530f',1,'QuantLib::LogNormalFwdRateIpc::g_()']]],
   ['gamma_1',['gamma',['../da/d25/class_quant_lib_1_1_greeks.html#aeb695f823ca39262c951705759792d22',1,'QuantLib::Greeks']]],
   ['gamma1_2',['gamma1',['../de/d19/class_quant_lib_1_1_margrabe_option_1_1results.html#a7e2dabd72cd24f0dbd090b020598c5c8',1,'QuantLib::MargrabeOption::results']]],
   ['gamma1_5f_3',['gamma1_',['../d2/d4e/class_quant_lib_1_1_margrabe_option.html#afe55cd8ceea28f1591b76aa731d61592',1,'QuantLib::MargrabeOption']]],

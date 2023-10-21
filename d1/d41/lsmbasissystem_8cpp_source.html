@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.30</div>
+   <div id="projectnumber">Fully annotated sources - version 1.32</div>
    </div>
   </td>
  </tr>
@@ -249,7 +249,7 @@ $(function() {
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        VF_A ret;</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="comment">// 0-th order term</span></div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        VF_R term(dim, pathBasis[0]);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        ret.push_back(MultiDimFct(term));</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        ret.emplace_back(MultiDimFct(term));</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="comment">// start with all 0 tuple</span></div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        VV tuples(1, std::vector&lt;Size&gt;(dim));</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="comment">// add multi-factor terms</span></div>
@@ -260,7 +260,7 @@ $(function() {
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; tuple : tuples) {</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> k=0; k&lt;dim; ++k)</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                    term[k] = pathBasis[tuple[k]];</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                ret.push_back(MultiDimFct(term));</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                ret.emplace_back(MultiDimFct(term));</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            }</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        }</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">return</span> ret;</div>

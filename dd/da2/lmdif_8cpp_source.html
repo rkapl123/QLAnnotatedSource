@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.30</div>
+   <div id="projectnumber">Fully annotated sources - version 1.32</div>
    </div>
   </td>
  </tr>
@@ -1464,9 +1464,9 @@ $(function() {
 <div class="line"><a id="l01375" name="l01375"></a><span class="lineno"> 1375</span><span class="comment">*    calculate the jacobian matrix.</span></div>
 <div class="line"><a id="l01376" name="l01376"></a><span class="lineno"> 1376</span><span class="comment">*/</span></div>
 <div class="line"><a id="l01377" name="l01377"></a><span class="lineno"> 1377</span>iflag = 2;</div>
-<div class="line"><a id="l01378" name="l01378"></a><span class="lineno"> 1378</span><span class="keywordflow">if</span> (jacFcn == QL_NULL_FUNCTION) <span class="comment">// use user supplied jacobian calculation</span></div>
+<div class="line"><a id="l01378" name="l01378"></a><span class="lineno"> 1378</span><span class="keywordflow">if</span> (!jacFcn)</div>
 <div class="line"><a id="l01379" name="l01379"></a><span class="lineno"> 1379</span>    <a class="code hl_function" href="../../dd/d38/namespace_quant_lib_1_1_m_i_n_p_a_c_k.html#a4ec51c4f90c7f37d57334befd3bcafe2">fdjac2</a>(m,n,x,fvec,fjac,ldfjac,&amp;iflag,epsfcn,wa4, fcn);</div>
-<div class="line"><a id="l01380" name="l01380"></a><span class="lineno"> 1380</span><span class="keywordflow">else</span></div>
+<div class="line"><a id="l01380" name="l01380"></a><span class="lineno"> 1380</span><span class="keywordflow">else</span> <span class="comment">// use user supplied jacobian calculation</span></div>
 <div class="line"><a id="l01381" name="l01381"></a><span class="lineno"> 1381</span>    jacFcn(m,n,x,fjac,&amp;iflag);</div>
 <div class="line"><a id="l01382" name="l01382"></a><span class="lineno"> 1382</span>*nfev += n;</div>
 <div class="line"><a id="l01383" name="l01383"></a><span class="lineno"> 1383</span><span class="keywordflow">if</span>(iflag &lt; 0)</div>

@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.30</div>
+   <div id="projectnumber">Fully annotated sources - version 1.32</div>
    </div>
   </td>
  </tr>
@@ -176,7 +176,7 @@ $(function() {
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                    atmVol = sec-&gt;volatility(atmStrike);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> shift = sec-&gt;shift();</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                helper = ext::shared_ptr&lt;SwaptionHelper&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d1/d80/class_quant_lib_1_1_swaption_helper.html">SwaptionHelper</a>(</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                helper = ext::make_shared&lt;SwaptionHelper&gt;(</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    expiry, <a class="code hl_function" href="../../d6/d27/class_quant_lib_1_1_basket_generating_engine.html#aa470fcfb987c38ccd5700e0749096947">underlyingLastDate</a>(),</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                    <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(ext::make_shared&lt;SimpleQuote&gt;(atmVol)),</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    standardSwapBase-&gt;iborIndex(),</div>
@@ -187,7 +187,7 @@ $(function() {
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                        ? standardSwapBase-&gt;discountingTermStructure()</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                        : standardSwapBase-&gt;forwardingTermStructure(),</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                    <a class="code hl_enumvalue" href="../../d6/dc1/class_quant_lib_1_1_black_calibration_helper.html#a34370195c7123743b79df0fbedd9e033aaf604e0665fd047d7badbdaf88ddfc61">BlackCalibrationHelper::RelativePriceError</a>, <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(), 1.0,</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                    swaptionVolatility-&gt;volatilityType() ,shift));</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                    swaptionVolatility-&gt;volatilityType() ,shift);</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            }</div>
@@ -304,7 +304,7 @@ $(function() {
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> vol = sec-&gt;volatility(solution[2]);</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                helper = ext::shared_ptr&lt;SwaptionHelper&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d1/d80/class_quant_lib_1_1_swaption_helper.html">SwaptionHelper</a>(</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                helper = ext::make_shared&lt;SwaptionHelper&gt;(</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                    expiry, matPeriod,</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                    <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(ext::make_shared&lt;SimpleQuote&gt;(</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                                      vol)),</div>
@@ -316,7 +316,7 @@ $(function() {
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                        ? standardSwapBase-&gt;discountingTermStructure()</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                        : standardSwapBase-&gt;forwardingTermStructure(),</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                    <a class="code hl_enumvalue" href="../../d6/dc1/class_quant_lib_1_1_black_calibration_helper.html#a34370195c7123743b79df0fbedd9e033aaf604e0665fd047d7badbdaf88ddfc61">BlackCalibrationHelper::RelativePriceError</a>, solution[2],</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                    fabs(solution[0]), swaptionVolatility-&gt;volatilityType(), shift));</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                    fabs(solution[0]), swaptionVolatility-&gt;volatilityType(), shift);</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            }</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
@@ -363,7 +363,6 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_problem_html_a2e7e40f812998bd83ca3ad7389e8f57a"><div class="ttname"><a href="../../d4/de4/class_quant_lib_1_1_problem.html#a2e7e40f812998bd83ca3ad7389e8f57a">QuantLib::Problem::currentValue</a></div><div class="ttdeci">const Array &amp; currentValue() const</div><div class="ttdoc">current value of the local minimum</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d37/problem_8hpp_source.html#l00081">problem.hpp:81</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_settings_html_a95055e9410ed0465a5f30d3ffc90c1d3"><div class="ttname"><a href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3">QuantLib::Settings::evaluationDate</a></div><div class="ttdeci">DateProxy &amp; evaluationDate()</div><div class="ttdoc">the date at which pricing is to be performed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0f/settings_8hpp_source.html#l00147">settings.hpp:147</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_singleton_html_ab7455b7e1235d292c444095842349291"><div class="ttname"><a href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">QuantLib::Singleton&lt; Settings &gt;::instance</a></div><div class="ttdeci">static Settings &amp; instance()</div><div class="ttdoc">access to the unique instance</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/singleton_8hpp_source.html#l00068">singleton.hpp:104</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_swaption_helper_html"><div class="ttname"><a href="../../d1/d80/class_quant_lib_1_1_swaption_helper.html">QuantLib::SwaptionHelper</a></div><div class="ttdoc">calibration helper for ATM swaption</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6d/swaptionhelper_8hpp_source.html#l00036">swaptionhelper.hpp:36</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54">QuantLib::Months</a></div><div class="ttdeci">@ Months</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00039">timeunit.hpp:39</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d">QuantLib::Years</a></div><div class="ttdeci">@ Years</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00040">timeunit.hpp:40</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>

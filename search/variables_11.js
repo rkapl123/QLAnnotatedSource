@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['q1_0',['Q1',['../da/dd8/class_quant_lib_1_1_margrabe_option_1_1arguments.html#a1ee402a368ee389be22c93da1113095d',1,'QuantLib::MargrabeOption::arguments']]],
-  ['q1_1',['q1',['../da/d94/class_quant_lib_1_1_lecuyer_uniform_rng.html#a9a6f8e39ea72420c2dbb304c98bb2503',1,'QuantLib::LecuyerUniformRng']]],
+  ['q1_0',['q1',['../da/d94/class_quant_lib_1_1_lecuyer_uniform_rng.html#a9a6f8e39ea72420c2dbb304c98bb2503',1,'QuantLib::LecuyerUniformRng']]],
+  ['q1_1',['Q1',['../da/dd8/class_quant_lib_1_1_margrabe_option_1_1arguments.html#a1ee402a368ee389be22c93da1113095d',1,'QuantLib::MargrabeOption::arguments']]],
   ['q1_5f_2',['Q1_',['../d2/d4e/class_quant_lib_1_1_margrabe_option.html#a8b2b2530472149462c7740380f3e29c1',1,'QuantLib::MargrabeOption']]],
-  ['q2_3',['q2',['../da/d94/class_quant_lib_1_1_lecuyer_uniform_rng.html#ad41b8aefdaea08d69f8d898b40d1eea6',1,'QuantLib::LecuyerUniformRng']]],
-  ['q2_4',['Q2',['../da/dd8/class_quant_lib_1_1_margrabe_option_1_1arguments.html#aa3e7521fcaaa405952b83f4da3133f11',1,'QuantLib::MargrabeOption::arguments']]],
+  ['q2_3',['Q2',['../da/dd8/class_quant_lib_1_1_margrabe_option_1_1arguments.html#aa3e7521fcaaa405952b83f4da3133f11',1,'QuantLib::MargrabeOption::arguments']]],
+  ['q2_4',['q2',['../da/d94/class_quant_lib_1_1_lecuyer_uniform_rng.html#ad41b8aefdaea08d69f8d898b40d1eea6',1,'QuantLib::LecuyerUniformRng']]],
   ['q2_5f_5',['Q2_',['../d2/d4e/class_quant_lib_1_1_margrabe_option.html#a8d252c7ee29534ede59e9459fd2485de',1,'QuantLib::MargrabeOption']]],
   ['q_5f_6',['q_',['../d1/d13/class_quant_lib_1_1_g_function_factory_1_1_g_function_standard.html#a299aabd470616f61db8312a843db6030',1,'QuantLib::GFunctionFactory::GFunctionStandard::q_()'],['../df/dd5/class_quant_lib_1_1detail_1_1_qd_plus_add_on_value.html#af1e3dcb2b0229380b251bd05da237c97',1,'QuantLib::detail::QdPlusAddOnValue::q_()']]],
   ['q_5fz_5f_7',['q_z_',['../df/dd5/class_quant_lib_1_1detail_1_1_qd_plus_add_on_value.html#a979a306f44066db03f537fb46f38541b',1,'QuantLib::detail::QdPlusAddOnValue']]],

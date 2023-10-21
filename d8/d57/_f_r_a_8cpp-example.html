@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.30</div>
+   <div id="projectnumber">Fully annotated sources - version 1.32</div>
    </div>
   </td>
  </tr>
@@ -118,17 +118,16 @@ $(function() {
 <div class="line"><span class="comment">         *********************/</span></div>
 <div class="line"> </div>
 <div class="line">        <a id="_a0" name="_a0"></a><a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;YieldTermStructure&gt;</a> euriborTermStructure;</div>
-<div class="line">        ext::shared_ptr&lt;IborIndex&gt; euribor3m(</div>
-<div class="line">                                       <span class="keyword">new</span> <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../d5/d08/class_quant_lib_1_1_euribor3_m.html">Euribor3M</a>(euriborTermStructure));</div>
+<div class="line">        <span class="keyword">auto</span> euribor3m = ext::make_shared&lt;Euribor3M&gt;(euriborTermStructure);</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a2" name="_a2"></a><a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> todaysDate = <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(23, May, 2006);</div>
+<div class="line">        <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> todaysDate = <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(23, May, 2006);</div>
 <div class="line">        Settings::instance().evaluationDate() = todaysDate;</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a3" name="_a3"></a><a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> calendar = euribor3m-&gt;fixingCalendar();</div>
+<div class="line">        <a id="_a2" name="_a2"></a><a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> calendar = euribor3m-&gt;fixingCalendar();</div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> fixingDays = euribor3m-&gt;fixingDays();</div>
-<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> settlementDate = calendar.<a id="a4" name="a4"></a><a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(todaysDate, fixingDays, Days);</div>
+<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> settlementDate = calendar.<a id="a3" name="a3"></a><a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(todaysDate, fixingDays, Days);</div>
 <div class="line"> </div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Today: &quot;</span> &lt;&lt; todaysDate.<a id="a5" name="a5"></a><a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#a8beb14a6b168772900b48e3161b4c0e6">weekday</a>()</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Today: &quot;</span> &lt;&lt; todaysDate.<a id="a4" name="a4"></a><a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#a8beb14a6b168772900b48e3161b4c0e6">weekday</a>()</div>
 <div class="line">                  &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; todaysDate &lt;&lt; std::endl;</div>
 <div class="line"> </div>
 <div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Settlement date: &quot;</span> &lt;&lt; settlementDate.<a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#a8beb14a6b168772900b48e3161b4c0e6">weekday</a>()</div>
@@ -154,18 +153,13 @@ $(function() {
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// FRAs</span></div>
-<div class="line">        ext::shared_ptr&lt;SimpleQuote&gt; fra1x4Rate(</div>
-<div class="line">                                      <span class="keyword">new</span> <a id="_a6" name="_a6"></a><a class="code hl_class" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(threeMonthFraQuote[1]));</div>
-<div class="line">        ext::shared_ptr&lt;SimpleQuote&gt; fra2x5Rate(</div>
-<div class="line">                                      <span class="keyword">new</span> <a class="code hl_class" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(threeMonthFraQuote[2]));</div>
-<div class="line">        ext::shared_ptr&lt;SimpleQuote&gt; fra3x6Rate(</div>
-<div class="line">                                      <span class="keyword">new</span> <a class="code hl_class" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(threeMonthFraQuote[3]));</div>
-<div class="line">        ext::shared_ptr&lt;SimpleQuote&gt; fra6x9Rate(</div>
-<div class="line">                                      <span class="keyword">new</span> <a class="code hl_class" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(threeMonthFraQuote[6]));</div>
-<div class="line">        ext::shared_ptr&lt;SimpleQuote&gt; fra9x12Rate(</div>
-<div class="line">                                      <span class="keyword">new</span> <a class="code hl_class" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(threeMonthFraQuote[9]));</div>
+<div class="line">        <span class="keyword">auto</span> fra1x4Rate = ext::make_shared&lt;SimpleQuote&gt;(threeMonthFraQuote[1]);</div>
+<div class="line">        <span class="keyword">auto</span> fra2x5Rate = ext::make_shared&lt;SimpleQuote&gt;(threeMonthFraQuote[2]);</div>
+<div class="line">        <span class="keyword">auto</span> fra3x6Rate = ext::make_shared&lt;SimpleQuote&gt;(threeMonthFraQuote[3]);</div>
+<div class="line">        <span class="keyword">auto</span> fra6x9Rate = ext::make_shared&lt;SimpleQuote&gt;(threeMonthFraQuote[6]);</div>
+<div class="line">        <span class="keyword">auto</span> fra9x12Rate = ext::make_shared&lt;SimpleQuote&gt;(threeMonthFraQuote[9]);</div>
 <div class="line"> </div>
-<div class="line">        <a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;Quote&gt;</a> h1x4;  h1x4.<a id="a7" name="a7"></a><a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#af8149d5b913673dd152973e46cad15c4">linkTo</a>(fra1x4Rate);</div>
+<div class="line">        <a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;Quote&gt;</a> h1x4;  h1x4.<a id="a5" name="a5"></a><a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#af8149d5b913673dd152973e46cad15c4">linkTo</a>(fra1x4Rate);</div>
 <div class="line">        <a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;Quote&gt;</a> h2x5;  h2x5.<a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#af8149d5b913673dd152973e46cad15c4">linkTo</a>(fra2x5Rate);</div>
 <div class="line">        <a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;Quote&gt;</a> h3x6;  h3x6.<a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#af8149d5b913673dd152973e46cad15c4">linkTo</a>(fra3x6Rate);</div>
 <div class="line">        <a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;Quote&gt;</a> h6x9;  h6x9.<a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#af8149d5b913673dd152973e46cad15c4">linkTo</a>(fra6x9Rate);</div>
@@ -180,34 +174,29 @@ $(function() {
 <div class="line">        <span class="comment">// relinkable handles which could be relinked to some other</span></div>
 <div class="line">        <span class="comment">// data source later.</span></div>
 <div class="line"> </div>
-<div class="line">        <a id="_a8" name="_a8"></a><a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> fraDayCounter = euribor3m-&gt;dayCounter();</div>
+<div class="line">        <a id="_a6" name="_a6"></a><a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> fraDayCounter = euribor3m-&gt;dayCounter();</div>
 <div class="line">        <a class="code hl_enumeration" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> convention = euribor3m-&gt;businessDayConvention();</div>
 <div class="line">        <span class="keywordtype">bool</span> endOfMonth = euribor3m-&gt;endOfMonth();</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;RateHelper&gt; fra1x4(</div>
-<div class="line">                           <span class="keyword">new</span> <a id="_a9" name="_a9"></a><a class="code hl_class" href="../../d3/df2/class_quant_lib_1_1_fra_rate_helper.html">FraRateHelper</a>(h1x4, 1, 4,</div>
+<div class="line">        <span class="keyword">auto</span> fra1x4 = ext::make_shared&lt;FraRateHelper&gt;(h1x4, 1, 4,</div>
 <div class="line">                                             fixingDays, calendar, convention,</div>
-<div class="line">                                             endOfMonth, fraDayCounter));</div>
+<div class="line">                                             endOfMonth, fraDayCounter);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;RateHelper&gt; fra2x5(</div>
-<div class="line">                           <span class="keyword">new</span> <a class="code hl_class" href="../../d3/df2/class_quant_lib_1_1_fra_rate_helper.html">FraRateHelper</a>(h2x5, 2, 5,</div>
+<div class="line">        <span class="keyword">auto</span> fra2x5 = ext::make_shared&lt;FraRateHelper&gt;(h2x5, 2, 5,</div>
 <div class="line">                                             fixingDays, calendar, convention,</div>
-<div class="line">                                             endOfMonth, fraDayCounter));</div>
+<div class="line">                                             endOfMonth, fraDayCounter);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;RateHelper&gt; fra3x6(</div>
-<div class="line">                           <span class="keyword">new</span> <a class="code hl_class" href="../../d3/df2/class_quant_lib_1_1_fra_rate_helper.html">FraRateHelper</a>(h3x6, 3, 6,</div>
+<div class="line">        <span class="keyword">auto</span> fra3x6 = ext::make_shared&lt;FraRateHelper&gt;(h3x6, 3, 6,</div>
 <div class="line">                                             fixingDays, calendar, convention,</div>
-<div class="line">                                             endOfMonth, fraDayCounter));</div>
+<div class="line">                                             endOfMonth, fraDayCounter);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;RateHelper&gt; fra6x9(</div>
-<div class="line">                           <span class="keyword">new</span> <a class="code hl_class" href="../../d3/df2/class_quant_lib_1_1_fra_rate_helper.html">FraRateHelper</a>(h6x9, 6, 9,</div>
+<div class="line">        <span class="keyword">auto</span> fra6x9 = ext::make_shared&lt;FraRateHelper&gt;(h6x9, 6, 9,</div>
 <div class="line">                                             fixingDays, calendar, convention,</div>
-<div class="line">                                             endOfMonth, fraDayCounter));</div>
+<div class="line">                                             endOfMonth, fraDayCounter);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;RateHelper&gt; fra9x12(</div>
-<div class="line">                           <span class="keyword">new</span> <a class="code hl_class" href="../../d3/df2/class_quant_lib_1_1_fra_rate_helper.html">FraRateHelper</a>(h9x12, 9, 12,</div>
+<div class="line">        <span class="keyword">auto</span> fra9x12 = ext::make_shared&lt;FraRateHelper&gt;(h9x12, 9, 12,</div>
 <div class="line">                                             fixingDays, calendar, convention,</div>
-<div class="line">                                             endOfMonth, fraDayCounter));</div>
+<div class="line">                                             endOfMonth, fraDayCounter);</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"><span class="comment">        /*********************</span></div>
@@ -217,10 +206,10 @@ $(function() {
 <div class="line">        <span class="comment">// Any DayCounter would be fine.</span></div>
 <div class="line">        <span class="comment">// ActualActual::ISDA ensures that 30 years is 30.0</span></div>
 <div class="line">        <a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> termStructureDayCounter =</div>
-<div class="line">            <a id="_a10" name="_a10"></a><a class="code hl_class" href="../../de/dee/class_quant_lib_1_1_actual_actual.html">ActualActual</a>(ActualActual::ISDA);</div>
+<div class="line">            <a id="_a7" name="_a7"></a><a class="code hl_class" href="../../de/dee/class_quant_lib_1_1_actual_actual.html">ActualActual</a>(ActualActual::ISDA);</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// A FRA curve</span></div>
-<div class="line">        std::vector&lt;ext::shared_ptr&lt;RateHelper&gt; &gt; fraInstruments;</div>
+<div class="line">        std::vector&lt;ext::shared_ptr&lt;RateHelper&gt;&gt; fraInstruments;</div>
 <div class="line"> </div>
 <div class="line">        fraInstruments.push_back(fra1x4);</div>
 <div class="line">        fraInstruments.push_back(fra2x5);</div>
@@ -228,10 +217,9 @@ $(function() {
 <div class="line">        fraInstruments.push_back(fra6x9);</div>
 <div class="line">        fraInstruments.push_back(fra9x12);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;YieldTermStructure&gt; fraTermStructure(</div>
-<div class="line">                     <span class="keyword">new</span> <a id="_a11" name="_a11"></a><a class="code hl_class" href="../../dd/db4/class_quant_lib_1_1_piecewise_yield_curve.html">PiecewiseYieldCurve&lt;Discount,LogLinear&gt;</a>(</div>
+<div class="line">        <span class="keyword">auto</span> fraTermStructure = ext::make_shared&lt;PiecewiseYieldCurve&lt;Discount, LogLinear&gt;&gt;(</div>
 <div class="line">                                         settlementDate, fraInstruments,</div>
-<div class="line">                                         termStructureDayCounter));</div>
+<div class="line">                                         termStructureDayCounter);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">        /***********************</span></div>
 <div class="line"><span class="comment">         ***  construct FRA&#39;s ***</span></div>
@@ -254,13 +242,13 @@ $(function() {
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i;</div>
 <div class="line">        <span class="keywordflow">for</span> (i=0; i&lt;LENGTH(monthsToStart); i++) {</div>
 <div class="line"> </div>
-<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> fraValueDate = fraCalendar.<a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(</div>
+<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> fraValueDate = fraCalendar.<a id="a8" name="a8"></a><a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#ab0c0b9fa2fb896f33b526ee8b53af48d">advance</a>(</div>
 <div class="line">                                       settlementDate,monthsToStart[i],Months,</div>
 <div class="line">                                       fraBusinessDayConvention);</div>
 <div class="line"> </div>
 <div class="line">            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> fraStrikeRate = threeMonthFraQuote[monthsToStart[i]];</div>
 <div class="line"> </div>
-<div class="line">            <a id="_a12" name="_a12"></a><a class="code hl_class" href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html">ForwardRateAgreement</a> myFRA(euribor3m, fraValueDate,</div>
+<div class="line">            <a id="_a9" name="_a9"></a><a class="code hl_class" href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html">ForwardRateAgreement</a> myFRA(euribor3m, fraValueDate,</div>
 <div class="line">                                       fraFwdType,fraStrikeRate,</div>
 <div class="line">                                       fraNotional);</div>
 <div class="line"> </div>
@@ -271,16 +259,16 @@ $(function() {
 <div class="line">                 &lt;&lt; io::rate(fraStrikeRate)</div>
 <div class="line">                 &lt;&lt; endl;</div>
 <div class="line">            cout &lt;&lt; <span class="stringliteral">&quot;FRA 3m forward rate: &quot;</span></div>
-<div class="line">                 &lt;&lt; myFRA.<a id="a13" name="a13"></a><a class="code hl_function" href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html#af83c055c629943801ac2df90d61a6d98">forwardRate</a>()</div>
+<div class="line">                 &lt;&lt; myFRA.<a id="a10" name="a10"></a><a class="code hl_function" href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html#af83c055c629943801ac2df90d61a6d98">forwardRate</a>()</div>
 <div class="line">                 &lt;&lt; endl;</div>
 <div class="line">            cout &lt;&lt; <span class="stringliteral">&quot;FRA market quote: &quot;</span></div>
 <div class="line">                 &lt;&lt; io::rate(threeMonthFraQuote[monthsToStart[i]])</div>
 <div class="line">                 &lt;&lt; endl;</div>
 <div class="line">            cout &lt;&lt; <span class="stringliteral">&quot;FRA amount [should be zero]: &quot;</span></div>
-<div class="line">                 &lt;&lt; myFRA.<a id="a14" name="a14"></a><a class="code hl_function" href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html#aebd2894f0f18274fd9a79140833c5e96">amount</a>()</div>
+<div class="line">                 &lt;&lt; myFRA.<a id="a11" name="a11"></a><a class="code hl_function" href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html#aebd2894f0f18274fd9a79140833c5e96">amount</a>()</div>
 <div class="line">                 &lt;&lt; endl;</div>
 <div class="line">            cout &lt;&lt; <span class="stringliteral">&quot;FRA NPV [should be zero]: &quot;</span></div>
-<div class="line">                 &lt;&lt; myFRA.<a id="a15" name="a15"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">NPV</a>()</div>
+<div class="line">                 &lt;&lt; myFRA.<a id="a12" name="a12"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">NPV</a>()</div>
 <div class="line">                 &lt;&lt; endl</div>
 <div class="line">                 &lt;&lt; endl;</div>
 <div class="line"> </div>
@@ -312,7 +300,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">for</span> (i=0; i&lt;LENGTH(monthsToStart); i++) {</div>
 <div class="line"> </div>
-<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> fraValueDate = fraCalendar.<a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(</div>
+<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> fraValueDate = fraCalendar.<a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#ab0c0b9fa2fb896f33b526ee8b53af48d">advance</a>(</div>
 <div class="line">                                       settlementDate,monthsToStart[i],Months,</div>
 <div class="line">                                       fraBusinessDayConvention);</div>
 <div class="line"> </div>
@@ -360,17 +348,14 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html_ab3fc4d2c4ba5243c3f5d51dcb3077ceb"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">QuantLib::Calendar::advance</a></div><div class="ttdeci">Date advance(const Date &amp;, Integer n, TimeUnit unit, BusinessDayConvention convention=Following, bool endOfMonth=false) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d2e/calendar_8cpp_source.html#l00130">calendar.cpp:130</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html_a8beb14a6b168772900b48e3161b4c0e6"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#a8beb14a6b168772900b48e3161b4c0e6">QuantLib::Date::weekday</a></div><div class="ttdeci">Weekday weekday() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00395">date.hpp:395</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_date_html_ab0c0b9fa2fb896f33b526ee8b53af48d"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#ab0c0b9fa2fb896f33b526ee8b53af48d">QuantLib::Date::advance</a></div><div class="ttdeci">static Date advance(const Date &amp;d, Integer units, TimeUnit)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da2/date_8cpp_source.html#l00139">date.cpp:139</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_day_counter_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html">QuantLib::DayCounter</a></div><div class="ttdoc">day counter class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00044">daycounter.hpp:44</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_euribor3_m_html"><div class="ttname"><a href="../../d5/d08/class_quant_lib_1_1_euribor3_m.html">QuantLib::Euribor3M</a></div><div class="ttdoc">3-months Euribor index</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/euribor_8hpp_source.html#l00095">euribor.hpp:95</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_forward_rate_agreement_html"><div class="ttname"><a href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html">QuantLib::ForwardRateAgreement</a></div><div class="ttdoc">Forward rate agreement (FRA) class</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df8/forwardrateagreement_8hpp_source.html#l00066">forwardrateagreement.hpp:66</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_forward_rate_agreement_html_aebd2894f0f18274fd9a79140833c5e96"><div class="ttname"><a href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html#aebd2894f0f18274fd9a79140833c5e96">QuantLib::ForwardRateAgreement::amount</a></div><div class="ttdeci">Real amount() const</div><div class="ttdoc">The payoff on the value date.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d43/forwardrateagreement_8cpp_source.html#l00096">forwardrateagreement.cpp:96</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_forward_rate_agreement_html_af83c055c629943801ac2df90d61a6d98"><div class="ttname"><a href="../../d9/d45/class_quant_lib_1_1_forward_rate_agreement.html#af83c055c629943801ac2df90d61a6d98">QuantLib::ForwardRateAgreement::forwardRate</a></div><div class="ttdeci">InterestRate forwardRate() const</div><div class="ttdoc">Returns the relevant forward rate associated with the FRA term.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d43/forwardrateagreement_8cpp_source.html#l00101">forwardrateagreement.cpp:101</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_fra_rate_helper_html"><div class="ttname"><a href="../../d3/df2/class_quant_lib_1_1_fra_rate_helper.html">QuantLib::FraRateHelper</a></div><div class="ttdoc">Rate helper for bootstrapping over FRA rates.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/ratehelpers_8hpp_source.html#l00151">ratehelpers.hpp:151</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_instrument_html_a4f791921f063f3ea19bd6efa9ceb4892"><div class="ttname"><a href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">QuantLib::Instrument::NPV</a></div><div class="ttdeci">Real NPV() const</div><div class="ttdoc">returns the net present value of the instrument.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da7/instrument_8hpp_source.html#l00184">instrument.hpp:184</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_piecewise_yield_curve_html"><div class="ttname"><a href="../../dd/db4/class_quant_lib_1_1_piecewise_yield_curve.html">QuantLib::PiecewiseYieldCurve</a></div><div class="ttdoc">Piecewise yield term structure.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d9f/piecewiseyieldcurve_8hpp_source.html#l00062">piecewiseyieldcurve.hpp:64</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_instrument_html_a4f791921f063f3ea19bd6efa9ceb4892"><div class="ttname"><a href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">QuantLib::Instrument::NPV</a></div><div class="ttdeci">Real NPV() const</div><div class="ttdoc">returns the net present value of the instrument.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da7/instrument_8hpp_source.html#l00167">instrument.hpp:167</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_relinkable_handle_html"><div class="ttname"><a href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">QuantLib::RelinkableHandle</a></div><div class="ttdoc">Relinkable handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00112">handle.hpp:112</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_relinkable_handle_html_af8149d5b913673dd152973e46cad15c4"><div class="ttname"><a href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#af8149d5b913673dd152973e46cad15c4">QuantLib::RelinkableHandle::linkTo</a></div><div class="ttdeci">void linkTo(const ext::shared_ptr&lt; T &gt; &amp;, bool registerAsObserver=true)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00187">handle.hpp:187</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_simple_quote_html"><div class="ttname"><a href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">QuantLib::SimpleQuote</a></div><div class="ttdoc">market element returning a stored value</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d17/simplequote_8hpp_source.html#l00033">simplequote.hpp:33</a></div></div>
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>

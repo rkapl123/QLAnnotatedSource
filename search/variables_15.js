@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['u_5f_0',['U_',['../d7/d3e/class_quant_lib_1_1_sparse_i_l_u_preconditioner.html#a44425dae63056d289bd417041e16599e',1,'QuantLib::SparseILUPreconditioner::U_()'],['../d4/ddc/class_quant_lib_1_1_s_v_d.html#a7cd915b9f75b17cbcbc4c6e3dcaf31af',1,'QuantLib::SVD::U_()']]],
-  ['u_5f_1',['u_',['../de/df8/class_quant_lib_1_1constant.html#a1595f1eed6e7358f3b73ff9e86e9b26f',1,'QuantLib::constant::u_()'],['../db/da2/class_quant_lib_1_1_gauss_laguerre_trigonometric_base.html#a437886189f86f3677d1c42b1fee12487',1,'QuantLib::GaussLaguerreTrigonometricBase::u_()']]],
+  ['u_5f_0',['u_',['../db/da2/class_quant_lib_1_1_gauss_laguerre_trigonometric_base.html#a437886189f86f3677d1c42b1fee12487',1,'QuantLib::GaussLaguerreTrigonometricBase']]],
+  ['u_5f_1',['U_',['../d7/d3e/class_quant_lib_1_1_sparse_i_l_u_preconditioner.html#a44425dae63056d289bd417041e16599e',1,'QuantLib::SparseILUPreconditioner::U_()'],['../d4/ddc/class_quant_lib_1_1_s_v_d.html#a7cd915b9f75b17cbcbc4c6e3dcaf31af',1,'QuantLib::SVD::U_()']]],
   ['ubands_5f_2',['uBands_',['../d7/d3e/class_quant_lib_1_1_sparse_i_l_u_preconditioner.html#abefd8384ce2abe2eafd1eb33a7dec18a',1,'QuantLib::SparseILUPreconditioner']]],
   ['ufr_5f_3',['ufr_',['../dc/dbf/class_quant_lib_1_1_ultimate_forward_term_structure.html#ac8797c4c4e72d8b2240b550656e386b0',1,'QuantLib::UltimateForwardTermStructure']]],
   ['ugrid_5f_4',['uGrid_',['../de/d1d/class_quant_lib_1_1_fd_kluge_ext_o_u_spread_engine.html#a584dd84d74cc5ac2acfdc17385b41b8c',1,'QuantLib::FdKlugeExtOUSpreadEngine']]],

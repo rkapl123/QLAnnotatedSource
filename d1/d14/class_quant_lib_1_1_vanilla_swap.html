@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.30</div>
+   <div id="projectnumber">Fully annotated sources - version 1.32</div>
    </div>
   </td>
  </tr>
@@ -85,14 +85,14 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="../../d4/d88/class_quant_lib_1_1_vanilla_swap-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">VanillaSwap Class Reference<div class="ingroups"><a class="el" href="../../d7/d45/group__instruments.html">Financial instruments</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Plain-vanilla swap: fix vs floating leg.  
+<p>Plain-vanilla swap: fix vs ibor leg.  
  <a href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">ql/instruments/vanillaswap.hpp</a>&gt;</code></p>
@@ -103,11 +103,12 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../da/dbe/class_quant_lib_1_1_vanilla_swap__inherit__graph.png" border="0" usemap="#a_vanilla_swap_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_vanilla_swap_inherit__map" id="a_vanilla_swap_inherit__map">
-<area shape="rect" title="Plain&#45;vanilla swap: fix vs floating leg." alt="" coords="96,1780,251,2495"/>
-<area shape="rect" href="../../dc/d54/class_quant_lib_1_1_swap.html" title="Interest rate swap." alt="" coords="104,1164,243,1732"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html" title="Abstract instrument class." alt="" coords="96,563,251,1116"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html" title="Framework for calculation on demand and result caching." alt="" coords="75,255,271,515"/>
-<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="5,20,152,192"/>
+<area shape="rect" title="Plain&#45;vanilla swap: fix vs ibor leg." alt="" coords="84,2763,263,2832"/>
+<area shape="rect" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html" title="Fixed vs floating swap." alt="" coords="83,1853,263,2715"/>
+<area shape="rect" href="../../dc/d54/class_quant_lib_1_1_swap.html" title="Interest rate swap." alt="" coords="104,1208,243,1805"/>
+<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html" title="Abstract instrument class." alt="" coords="96,607,251,1160"/>
+<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html" title="Framework for calculation on demand and result caching." alt="" coords="75,255,271,559"/>
+<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="5,13,152,199"/>
 <area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="177,5,359,207"/>
 </map>
 </div>
@@ -118,101 +119,112 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d16/class_quant_lib_1_1_vanilla_swap__coll__graph.png" border="0" usemap="#a_vanilla_swap_coll__map" alt="Collaboration graph"/></div>
 <map name="a_vanilla_swap_coll__map" id="a_vanilla_swap_coll__map">
-<area shape="rect" title="Plain&#45;vanilla swap: fix vs floating leg." alt="" coords="1486,3917,1640,4456"/>
-<area shape="rect" href="../../dc/d54/class_quant_lib_1_1_swap.html" title="Interest rate swap." alt="" coords="434,3155,572,3620"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html" title="Abstract instrument class." alt="" coords="1155,2333,1310,2740"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html" title="Framework for calculation on demand and result caching." alt="" coords="1188,1629,1384,1831"/>
-<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="1094,1072,1240,1215"/>
-<area shape="rect" title=" " alt="" coords="1215,654,1343,694"/>
-<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="1188,353,1370,540"/>
-<area shape="rect" title=" " alt="" coords="999,654,1191,694"/>
-<area shape="rect" title=" " alt="" coords="1184,236,1374,291"/>
-<area shape="rect" title=" " alt="" coords="1194,108,1369,148"/>
-<area shape="rect" title=" " alt="" coords="1026,108,1167,148"/>
-<area shape="rect" title=" " alt="" coords="1077,5,1116,45"/>
-<area shape="rect" title=" " alt="" coords="1428,172,1506,212"/>
-<area shape="rect" title=" " alt="" coords="946,1123,1044,1163"/>
-<area shape="rect" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html" title="global repository for run&#45;time library settings" alt="" coords="924,823,1119,965"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title=" " alt="" coords="759,603,975,745"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title="Basic support for the singleton pattern." alt="" coords="789,375,945,518"/>
-<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="1367,654,1418,694"/>
-<area shape="rect" title=" " alt="" coords="828,2517,936,2557"/>
-<area shape="rect" title=" " alt="" coords="733,1710,817,1750"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="1465,1292,1640,2168"/>
-<area shape="rect" href="../../d5/d5b/class_quant_lib_1_1_schedule.html" title="Payment schedule." alt="" coords="1559,2935,1762,3840"/>
-<area shape="rect" title=" " alt="" coords="960,2517,1131,2557"/>
-<area shape="rect" title=" " alt="" coords="1511,1123,1604,1163"/>
-<area shape="rect" title=" " alt="" coords="1016,1703,1163,1757"/>
-<area shape="rect" title=" " alt="" coords="698,1123,756,1163"/>
-<area shape="rect" title=" " alt="" coords="446,874,592,914"/>
-<area shape="rect" title=" " alt="" coords="874,1123,921,1163"/>
-<area shape="rect" title=" " alt="" coords="617,874,656,914"/>
-<area shape="rect" title=" " alt="" coords="468,1710,559,1750"/>
-<area shape="rect" title=" " alt="" coords="841,1703,992,1757"/>
-<area shape="rect" title=" " alt="" coords="253,2517,358,2557"/>
-<area shape="rect" title=" " alt="" coords="382,2517,493,2557"/>
-<area shape="rect" title=" " alt="" coords="517,2517,689,2557"/>
-<area shape="rect" title=" " alt="" coords="86,1710,138,1750"/>
-<area shape="rect" title=" " alt="" coords="594,1710,708,1750"/>
-<area shape="rect" title=" " alt="" coords="1480,3367,1534,3407"/>
-<area shape="rect" title=" " alt="" coords="1477,2509,1612,2564"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html" title="calendar class" alt="" coords="1787,2245,2022,2828"/>
-<area shape="rect" title=" " alt="" coords="1829,1703,1980,1757"/>
-<area shape="rect" title=" " alt="" coords="2502,2517,2669,2557"/>
-<area shape="rect" title=" " alt="" coords="2046,2517,2280,2557"/>
-<area shape="rect" title=" " alt="" coords="2304,2509,2478,2564"/>
-<area shape="rect" title=" " alt="" coords="1334,2517,1453,2557"/>
-<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html" title="day counter class" alt="" coords="2696,3294,2812,3481"/>
-<area shape="rect" title=" " alt="" coords="2693,2509,2844,2564"/>
-<area shape="rect" title=" " alt="" coords="2836,3360,2986,3415"/>
+<area shape="rect" title="Plain&#45;vanilla swap: fix vs ibor leg." alt="" coords="2049,4289,2227,4359"/>
+<area shape="rect" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html" title="Fixed vs floating swap." alt="" coords="2048,3599,2228,4240"/>
+<area shape="rect" href="../../dc/d54/class_quant_lib_1_1_swap.html" title="Interest rate swap." alt="" coords="719,2821,858,3316"/>
+<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html" title="Abstract instrument class." alt="" coords="598,2015,753,2421"/>
+<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html" title="Framework for calculation on demand and result caching." alt="" coords="175,1289,371,1534"/>
+<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="310,695,457,867"/>
+<area shape="rect" title=" " alt="" coords="319,592,447,632"/>
+<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="187,343,369,529"/>
+<area shape="rect" title=" " alt="" coords="207,225,349,280"/>
+<area shape="rect" title=" " alt="" coords="172,108,347,148"/>
+<area shape="rect" title=" " alt="" coords="425,108,502,148"/>
+<area shape="rect" title=" " alt="" coords="520,5,559,45"/>
+<area shape="rect" title=" " alt="" coords="570,761,669,801"/>
+<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="1350,761,1401,801"/>
+<area shape="rect" title=" " alt="" coords="1331,2198,1439,2238"/>
+<area shape="rect" title=" " alt="" coords="395,1391,479,1431"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="2220,973,2395,1849"/>
+<area shape="rect" href="../../d5/d5b/class_quant_lib_1_1_schedule.html" title="Payment schedule." alt="" coords="2037,2616,2239,3521"/>
+<area shape="rect" title=" " alt="" coords="2222,2198,2393,2238"/>
+<area shape="rect" title=" " alt="" coords="2261,761,2354,801"/>
+<area shape="rect" title=" " alt="" coords="678,1384,825,1439"/>
+<area shape="rect" title=" " alt="" coords="719,761,778,801"/>
+<area shape="rect" title=" " alt="" coords="675,592,822,632"/>
+<area shape="rect" title=" " alt="" coords="803,761,849,801"/>
+<area shape="rect" title=" " alt="" coords="967,592,1005,632"/>
+<area shape="rect" title=" " alt="" coords="1081,1391,1171,1431"/>
+<area shape="rect" title=" " alt="" coords="503,1384,653,1439"/>
+<area shape="rect" title=" " alt="" coords="1032,2198,1137,2238"/>
+<area shape="rect" title=" " alt="" coords="424,2198,535,2238"/>
+<area shape="rect" title=" " alt="" coords="796,2198,968,2238"/>
+<area shape="rect" title=" " alt="" coords="99,1391,151,1431"/>
+<area shape="rect" title=" " alt="" coords="849,1391,963,1431"/>
+<area shape="rect" title=" " alt="" coords="2832,3049,2887,3089"/>
+<area shape="rect" title=" " alt="" coords="1463,2191,1597,2245"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html" title="calendar class" alt="" coords="2567,1927,2802,2509"/>
+<area shape="rect" title=" " alt="" coords="2609,1384,2760,1439"/>
+<area shape="rect" title=" " alt="" coords="2827,2198,2993,2238"/>
+<area shape="rect" title=" " alt="" coords="1622,2198,1857,2238"/>
+<area shape="rect" title=" " alt="" coords="1881,2191,2054,2245"/>
+<area shape="rect" title=" " alt="" coords="2079,2198,2197,2238"/>
+<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html" title="day counter class" alt="" coords="2911,2975,3027,3162"/>
+<area shape="rect" title=" " alt="" coords="3017,2191,3168,2245"/>
+<area shape="rect" title=" " alt="" coords="3051,3041,3201,3096"/>
 </map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d18/class_quant_lib_1_1_vanilla_swap_1_1arguments.html">arguments</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arguments for simple swap calculation  <a href="../../d8/d18/class_quant_lib_1_1_vanilla_swap_1_1arguments.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4f/class_quant_lib_1_1_vanilla_swap_1_1engine.html">engine</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d96/class_quant_lib_1_1_vanilla_swap_1_1results.html">results</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Results from simple swap calculation  <a href="../../da/d96/class_quant_lib_1_1_vanilla_swap_1_1results.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afd42bc22382be7b036666f034945a76f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#afd42bc22382be7b036666f034945a76f">VanillaSwap</a> (<a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> <a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a7eba997f6dc7f9634f41ead3e4401d70">type</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a8eee3d3767fab185a6f78d6b406618f5">nominal</a>, <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> <a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a3ebc266a5832e5b9e41bae67aefb9f86">fixedSchedule</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a096b54e037e7623ae978c61c8f6c42ba">fixedRate</a>, <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> <a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a2bb41967ad8893c182d4895ef67b2293">fixedDayCount</a>, <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> floatSchedule, ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; <a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a7ed9a5fd3bb32e6d559f4c596c361161">iborIndex</a>, <a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> <a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#af2b1ac06508be31b34a28d76091c0e3f">spread</a>, <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> <a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#aa8b4cee39101de66dd9a4b5c3ce83df8">floatingDayCount</a>, ext::optional&lt; <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> &gt; <a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a382b71a0946d63934d35492ea2acc187">paymentConvention</a>=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a>, ext::optional&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt; useIndexedCoupons=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a>)</td></tr>
+<tr class="memitem:afd42bc22382be7b036666f034945a76f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#afd42bc22382be7b036666f034945a76f">VanillaSwap</a> (<a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a7eba997f6dc7f9634f41ead3e4401d70">type</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a8eee3d3767fab185a6f78d6b406618f5">nominal</a>, <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a3ebc266a5832e5b9e41bae67aefb9f86">fixedSchedule</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a096b54e037e7623ae978c61c8f6c42ba">fixedRate</a>, <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a2bb41967ad8893c182d4895ef67b2293">fixedDayCount</a>, <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> floatSchedule, ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a7ed9a5fd3bb32e6d559f4c596c361161">iborIndex</a>, <a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#af2b1ac06508be31b34a28d76091c0e3f">spread</a>, <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#aa8b4cee39101de66dd9a4b5c3ce83df8">floatingDayCount</a>, ext::optional&lt; <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> &gt; <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a382b71a0946d63934d35492ea2acc187">paymentConvention</a>=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a>, ext::optional&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt; useIndexedCoupons=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a>)</td></tr>
 <tr class="separator:afd42bc22382be7b036666f034945a76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Inspectors</div></td></tr>
-<tr class="memitem:a7eba997f6dc7f9634f41ead3e4401d70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a7eba997f6dc7f9634f41ead3e4401d70">type</a> () const</td></tr>
-<tr class="separator:a7eba997f6dc7f9634f41ead3e4401d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eee3d3767fab185a6f78d6b406618f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a8eee3d3767fab185a6f78d6b406618f5">nominal</a> () const</td></tr>
-<tr class="separator:a8eee3d3767fab185a6f78d6b406618f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ebc266a5832e5b9e41bae67aefb9f86"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a3ebc266a5832e5b9e41bae67aefb9f86">fixedSchedule</a> () const</td></tr>
-<tr class="separator:a3ebc266a5832e5b9e41bae67aefb9f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a096b54e037e7623ae978c61c8f6c42ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a096b54e037e7623ae978c61c8f6c42ba">fixedRate</a> () const</td></tr>
-<tr class="separator:a096b54e037e7623ae978c61c8f6c42ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bb41967ad8893c182d4895ef67b2293"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a2bb41967ad8893c182d4895ef67b2293">fixedDayCount</a> () const</td></tr>
-<tr class="separator:a2bb41967ad8893c182d4895ef67b2293"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c2b939c3a51a1a3bdf86ba0848f76cc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a4c2b939c3a51a1a3bdf86ba0848f76cc">floatingSchedule</a> () const</td></tr>
-<tr class="separator:a4c2b939c3a51a1a3bdf86ba0848f76cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ed9a5fd3bb32e6d559f4c596c361161"><td class="memItemLeft" align="right" valign="top">const ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a7ed9a5fd3bb32e6d559f4c596c361161">iborIndex</a> () const</td></tr>
-<tr class="separator:a7ed9a5fd3bb32e6d559f4c596c361161"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2b1ac06508be31b34a28d76091c0e3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#af2b1ac06508be31b34a28d76091c0e3f">spread</a> () const</td></tr>
-<tr class="separator:af2b1ac06508be31b34a28d76091c0e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8b4cee39101de66dd9a4b5c3ce83df8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#aa8b4cee39101de66dd9a4b5c3ce83df8">floatingDayCount</a> () const</td></tr>
-<tr class="separator:aa8b4cee39101de66dd9a4b5c3ce83df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a382b71a0946d63934d35492ea2acc187"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a382b71a0946d63934d35492ea2acc187">paymentConvention</a> () const</td></tr>
-<tr class="separator:a382b71a0946d63934d35492ea2acc187"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2e65a671f5cf5339b5d951ec498c6d2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#ac2e65a671f5cf5339b5d951ec498c6d2">fixedLeg</a> () const</td></tr>
-<tr class="separator:ac2e65a671f5cf5339b5d951ec498c6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a452482c4dd98a2f6ad2b3d8e60580d27"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a452482c4dd98a2f6ad2b3d8e60580d27">floatingLeg</a> () const</td></tr>
-<tr class="separator:a452482c4dd98a2f6ad2b3d8e60580d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html">FixedVsFloatingSwap</a></td></tr>
+<tr class="memitem:a3ae3cfd414e0c4793d14e764aadb0def inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a3ae3cfd414e0c4793d14e764aadb0def">FixedVsFloatingSwap</a> (<a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a7eba997f6dc7f9634f41ead3e4401d70">type</a>, std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a2e030c00c8fd5dffb3d45187279daa61">fixedNominals</a>, <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a3ebc266a5832e5b9e41bae67aefb9f86">fixedSchedule</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a096b54e037e7623ae978c61c8f6c42ba">fixedRate</a>, <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a2bb41967ad8893c182d4895ef67b2293">fixedDayCount</a>, std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#aa10685fca4e915f835f8e644384815cc">floatingNominals</a>, <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a4c2b939c3a51a1a3bdf86ba0848f76cc">floatingSchedule</a>, ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a7ed9a5fd3bb32e6d559f4c596c361161">iborIndex</a>, <a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#af2b1ac06508be31b34a28d76091c0e3f">spread</a>, <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#aa8b4cee39101de66dd9a4b5c3ce83df8">floatingDayCount</a>, ext::optional&lt; <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> &gt; <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a382b71a0946d63934d35492ea2acc187">paymentConvention</a>=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a>, <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> paymentLag=0, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;paymentCalendar=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>())</td></tr>
+<tr class="separator:a3ae3cfd414e0c4793d14e764aadb0def inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eba997f6dc7f9634f41ead3e4401d70 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a7eba997f6dc7f9634f41ead3e4401d70">type</a> () const</td></tr>
+<tr class="separator:a7eba997f6dc7f9634f41ead3e4401d70 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eee3d3767fab185a6f78d6b406618f5 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a8eee3d3767fab185a6f78d6b406618f5">nominal</a> () const</td></tr>
+<tr class="separator:a8eee3d3767fab185a6f78d6b406618f5 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b8d0ddfa51a82b24487ca9e98da840 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a89b8d0ddfa51a82b24487ca9e98da840">nominals</a> () const</td></tr>
+<tr class="separator:a89b8d0ddfa51a82b24487ca9e98da840 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e030c00c8fd5dffb3d45187279daa61 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a2e030c00c8fd5dffb3d45187279daa61">fixedNominals</a> () const</td></tr>
+<tr class="separator:a2e030c00c8fd5dffb3d45187279daa61 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ebc266a5832e5b9e41bae67aefb9f86 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a3ebc266a5832e5b9e41bae67aefb9f86">fixedSchedule</a> () const</td></tr>
+<tr class="separator:a3ebc266a5832e5b9e41bae67aefb9f86 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a096b54e037e7623ae978c61c8f6c42ba inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a096b54e037e7623ae978c61c8f6c42ba">fixedRate</a> () const</td></tr>
+<tr class="separator:a096b54e037e7623ae978c61c8f6c42ba inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb41967ad8893c182d4895ef67b2293 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a2bb41967ad8893c182d4895ef67b2293">fixedDayCount</a> () const</td></tr>
+<tr class="separator:a2bb41967ad8893c182d4895ef67b2293 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10685fca4e915f835f8e644384815cc inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#aa10685fca4e915f835f8e644384815cc">floatingNominals</a> () const</td></tr>
+<tr class="separator:aa10685fca4e915f835f8e644384815cc inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c2b939c3a51a1a3bdf86ba0848f76cc inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a4c2b939c3a51a1a3bdf86ba0848f76cc">floatingSchedule</a> () const</td></tr>
+<tr class="separator:a4c2b939c3a51a1a3bdf86ba0848f76cc inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed9a5fd3bb32e6d559f4c596c361161 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top">const ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a7ed9a5fd3bb32e6d559f4c596c361161">iborIndex</a> () const</td></tr>
+<tr class="separator:a7ed9a5fd3bb32e6d559f4c596c361161 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b1ac06508be31b34a28d76091c0e3f inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#af2b1ac06508be31b34a28d76091c0e3f">spread</a> () const</td></tr>
+<tr class="separator:af2b1ac06508be31b34a28d76091c0e3f inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8b4cee39101de66dd9a4b5c3ce83df8 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#aa8b4cee39101de66dd9a4b5c3ce83df8">floatingDayCount</a> () const</td></tr>
+<tr class="separator:aa8b4cee39101de66dd9a4b5c3ce83df8 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382b71a0946d63934d35492ea2acc187 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a382b71a0946d63934d35492ea2acc187">paymentConvention</a> () const</td></tr>
+<tr class="separator:a382b71a0946d63934d35492ea2acc187 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2e65a671f5cf5339b5d951ec498c6d2 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#ac2e65a671f5cf5339b5d951ec498c6d2">fixedLeg</a> () const</td></tr>
+<tr class="separator:ac2e65a671f5cf5339b5d951ec498c6d2 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a452482c4dd98a2f6ad2b3d8e60580d27 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a452482c4dd98a2f6ad2b3d8e60580d27">floatingLeg</a> () const</td></tr>
+<tr class="separator:a452482c4dd98a2f6ad2b3d8e60580d27 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9920734539e372bb658caf26c9e63f29 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a9920734539e372bb658caf26c9e63f29">fixedLegBPS</a> () const</td></tr>
+<tr class="separator:a9920734539e372bb658caf26c9e63f29 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9798c67c5eb41e5a66ec74a3c585bd4 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#ae9798c67c5eb41e5a66ec74a3c585bd4">fixedLegNPV</a> () const</td></tr>
+<tr class="separator:ae9798c67c5eb41e5a66ec74a3c585bd4 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f51236eb6ee854f56be4097d4eed153 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a2f51236eb6ee854f56be4097d4eed153">fairRate</a> () const</td></tr>
+<tr class="separator:a2f51236eb6ee854f56be4097d4eed153 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57487a30f418c9db5374e7c48419a0ae inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a57487a30f418c9db5374e7c48419a0ae">floatingLegBPS</a> () const</td></tr>
+<tr class="separator:a57487a30f418c9db5374e7c48419a0ae inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc94c6b703196449e3699871ab1690ec inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#acc94c6b703196449e3699871ab1690ec">floatingLegNPV</a> () const</td></tr>
+<tr class="separator:acc94c6b703196449e3699871ab1690ec inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a540021030088610c9e0b0bf50f240f58 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a540021030088610c9e0b0bf50f240f58">fairSpread</a> () const</td></tr>
+<tr class="separator:a540021030088610c9e0b0bf50f240f58 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ff2e4e855a2e93ff2658d0908044d0 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#aa9ff2e4e855a2e93ff2658d0908044d0">setupArguments</a> (<a class="el" href="../../d7/d14/class_quant_lib_1_1_pricing_engine_1_1arguments.html">PricingEngine::arguments</a> *args) const override</td></tr>
+<tr class="separator:aa9ff2e4e855a2e93ff2658d0908044d0 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f7bbb6440966f75189fac0562b6a67 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#ad0f7bbb6440966f75189fac0562b6a67">fetchResults</a> (const <a class="el" href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">PricingEngine::results</a> *) const override</td></tr>
+<tr class="separator:ad0f7bbb6440966f75189fac0562b6a67 inherit pub_methods_class_quant_lib_1_1_fixed_vs_floating_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_swap"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_swap')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html">Swap</a></td></tr>
 <tr class="memitem:a492a6d8c60085fa069c57c5229489167 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a492a6d8c60085fa069c57c5229489167">deepUpdate</a> () override</td></tr>
 <tr class="separator:a492a6d8c60085fa069c57c5229489167 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3197ae267918fe2cd65e8637dc3bf2a5 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a3197ae267918fe2cd65e8637dc3bf2a5">numberOfLegs</a> () const</td></tr>
 <tr class="separator:a3197ae267918fe2cd65e8637dc3bf2a5 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20efbcf159501e9a290625d4f790bb1a inherit pub_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a20efbcf159501e9a290625d4f790bb1a">legs</a> () const</td></tr>
+<tr class="separator:a20efbcf159501e9a290625d4f790bb1a inherit pub_methods_class_quant_lib_1_1_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5198685f035540b00da90cac03455300 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a5198685f035540b00da90cac03455300">startDate</a> () const</td></tr>
 <tr class="separator:a5198685f035540b00da90cac03455300 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac5552a21a8f6cef232e50d4834dd6e7 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#aac5552a21a8f6cef232e50d4834dd6e7">maturityDate</a> () const</td></tr>
@@ -234,9 +246,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a34523db1515ba7190d517dc4c483c293 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a34523db1515ba7190d517dc4c483c293">isExpired</a> () const override</td></tr>
 <tr class="memdesc:a34523db1515ba7190d517dc4c483c293 inherit pub_methods_class_quant_lib_1_1_swap"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether the instrument might have value greater than zero.  <a href="../../dc/d54/class_quant_lib_1_1_swap.html#a34523db1515ba7190d517dc4c483c293">More...</a><br /></td></tr>
 <tr class="separator:a34523db1515ba7190d517dc4c483c293 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29d098166c6f2ed9f3810fdc6001add3 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a29d098166c6f2ed9f3810fdc6001add3">setupArguments</a> (<a class="el" href="../../d7/d14/class_quant_lib_1_1_pricing_engine_1_1arguments.html">PricingEngine::arguments</a> *) const override</td></tr>
+<tr class="separator:a29d098166c6f2ed9f3810fdc6001add3 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f7bbb6440966f75189fac0562b6a67 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#ad0f7bbb6440966f75189fac0562b6a67">fetchResults</a> (const <a class="el" href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">PricingEngine::results</a> *) const override</td></tr>
+<tr class="separator:ad0f7bbb6440966f75189fac0562b6a67 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7e28d70b1366663707f7554205b887b inherit pub_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#aa7e28d70b1366663707f7554205b887b">Swap</a> (const <a class="el" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a> &amp;firstLeg, const <a class="el" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a> &amp;secondLeg)</td></tr>
 <tr class="separator:aa7e28d70b1366663707f7554205b887b inherit pub_methods_class_quant_lib_1_1_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84d17705f422bce5e74d0a4ca0f6df34 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a84d17705f422bce5e74d0a4ca0f6df34">Swap</a> (const std::vector&lt; <a class="el" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a> &gt; &amp;legs, const std::vector&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt; &amp;<a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#aee5e86b5c4dbf1a0c97fe5af21026820">payer</a>)</td></tr>
+<tr class="memitem:a84d17705f422bce5e74d0a4ca0f6df34 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a84d17705f422bce5e74d0a4ca0f6df34">Swap</a> (const std::vector&lt; <a class="el" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a> &gt; &amp;<a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a20efbcf159501e9a290625d4f790bb1a">legs</a>, const std::vector&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt; &amp;<a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#aee5e86b5c4dbf1a0c97fe5af21026820">payer</a>)</td></tr>
 <tr class="separator:a84d17705f422bce5e74d0a4ca0f6df34 inherit pub_methods_class_quant_lib_1_1_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_instrument"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_instrument')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d9/d65/class_quant_lib_1_1_instrument.html">Instrument</a></td></tr>
 <tr class="memitem:af24aea89eec21b1caba7216b01bcb018 inherit pub_methods_class_quant_lib_1_1_instrument"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d65/class_quant_lib_1_1_instrument.html#af24aea89eec21b1caba7216b01bcb018">Instrument</a> ()</td></tr>
@@ -261,10 +277,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae58e4c75062c7f3f4dedbd744f9a379f inherit pub_methods_class_quant_lib_1_1_instrument"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the pricing engine to be used.  <a href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">More...</a><br /></td></tr>
 <tr class="separator:ae58e4c75062c7f3f4dedbd744f9a379f inherit pub_methods_class_quant_lib_1_1_instrument"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_lazy_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_lazy_object')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html">LazyObject</a></td></tr>
+<tr class="memitem:a6badf169db619841c91a27420cbdf142 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a6badf169db619841c91a27420cbdf142">LazyObject</a> ()</td></tr>
+<tr class="separator:a6badf169db619841c91a27420cbdf142 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea7196dd7d298381de7f460e46652842 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#aea7196dd7d298381de7f460e46652842">~LazyObject</a> () override=default</td></tr>
 <tr class="separator:aea7196dd7d298381de7f460e46652842 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
 <tr class="separator:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd67152220756423ea944b5dd0b5f1a inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a5cd67152220756423ea944b5dd0b5f1a">isCalculated</a> () const</td></tr>
+<tr class="separator:a5cd67152220756423ea944b5dd0b5f1a inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3660c80fd1e55d3fddc804a0d7a94fee inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a3660c80fd1e55d3fddc804a0d7a94fee">forwardFirstNotificationOnly</a> ()</td></tr>
 <tr class="separator:a3660c80fd1e55d3fddc804a0d7a94fee inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ee394ca135f85485023ce3dc037149c inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a2ee394ca135f85485023ce3dc037149c">alwaysForwardNotifications</a> ()</td></tr>
@@ -282,6 +302,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a522aacdd0f2408fe5e46527a6db999b4">operator=</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
 <tr class="separator:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c84088bdd3ac6402298298ee8b0d904 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a8c84088bdd3ac6402298298ee8b0d904">Observable</a> (<a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a8c84088bdd3ac6402298298ee8b0d904 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a238982d700aae8ec199087af2af967c1 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a238982d700aae8ec199087af2af967c1">operator=</a> (<a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a238982d700aae8ec199087af2af967c1 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a99f4333cda953ce3bfdc958ccea5fbf9">~Observable</a> ()=default</td></tr>
 <tr class="separator:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a> ()</td></tr>
@@ -308,49 +332,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d53f9669c128dadc74a5d044a7c8e68 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a3d53f9669c128dadc74a5d044a7c8e68">deepUpdate</a> ()</td></tr>
 <tr class="separator:a3d53f9669c128dadc74a5d044a7c8e68 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">Results</h2></td></tr>
-<tr class="memitem:ae96b07c06ceff094f476fd92cbe89e10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#ae96b07c06ceff094f476fd92cbe89e10">type_</a></td></tr>
-<tr class="separator:ae96b07c06ceff094f476fd92cbe89e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0313ad2f0ebbcc7085afb5650bd11b76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a0313ad2f0ebbcc7085afb5650bd11b76">nominal_</a></td></tr>
-<tr class="separator:a0313ad2f0ebbcc7085afb5650bd11b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cac1393ff1d3224ff1cac0cb392cecf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a7cac1393ff1d3224ff1cac0cb392cecf">fixedSchedule_</a></td></tr>
-<tr class="separator:a7cac1393ff1d3224ff1cac0cb392cecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35f1722ae3128f5c12e6df0709b7d09d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a35f1722ae3128f5c12e6df0709b7d09d">fixedRate_</a></td></tr>
-<tr class="separator:a35f1722ae3128f5c12e6df0709b7d09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a417ce99525ff934e161e933d540c0409"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a417ce99525ff934e161e933d540c0409">fixedDayCount_</a></td></tr>
-<tr class="separator:a417ce99525ff934e161e933d540c0409"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36ed495d7409f5614e2ce8296e885b19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a36ed495d7409f5614e2ce8296e885b19">floatingSchedule_</a></td></tr>
-<tr class="separator:a36ed495d7409f5614e2ce8296e885b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d73b916d9852e2366fa73be8ab72f99"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a5d73b916d9852e2366fa73be8ab72f99">iborIndex_</a></td></tr>
-<tr class="separator:a5d73b916d9852e2366fa73be8ab72f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6db15cb8f4db71dbdd282eb1a4a9bcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#aa6db15cb8f4db71dbdd282eb1a4a9bcd">spread_</a></td></tr>
-<tr class="separator:aa6db15cb8f4db71dbdd282eb1a4a9bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a288c435645e72151e75ee05e61b89370"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a288c435645e72151e75ee05e61b89370">floatingDayCount_</a></td></tr>
-<tr class="separator:a288c435645e72151e75ee05e61b89370"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0c2ba6da16ec8c201da972e61b08334"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#ab0c2ba6da16ec8c201da972e61b08334">paymentConvention_</a></td></tr>
-<tr class="separator:ab0c2ba6da16ec8c201da972e61b08334"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe098d2fe72aba947e592db7309a60fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#abe098d2fe72aba947e592db7309a60fd">fairRate_</a></td></tr>
-<tr class="separator:abe098d2fe72aba947e592db7309a60fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a492c911c409c868717797a52dda59333"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a492c911c409c868717797a52dda59333">fairSpread_</a></td></tr>
-<tr class="separator:a492c911c409c868717797a52dda59333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9920734539e372bb658caf26c9e63f29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a9920734539e372bb658caf26c9e63f29">fixedLegBPS</a> () const</td></tr>
-<tr class="separator:a9920734539e372bb658caf26c9e63f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9798c67c5eb41e5a66ec74a3c585bd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#ae9798c67c5eb41e5a66ec74a3c585bd4">fixedLegNPV</a> () const</td></tr>
-<tr class="separator:ae9798c67c5eb41e5a66ec74a3c585bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f51236eb6ee854f56be4097d4eed153"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a2f51236eb6ee854f56be4097d4eed153">fairRate</a> () const</td></tr>
-<tr class="separator:a2f51236eb6ee854f56be4097d4eed153"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57487a30f418c9db5374e7c48419a0ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a57487a30f418c9db5374e7c48419a0ae">floatingLegBPS</a> () const</td></tr>
-<tr class="separator:a57487a30f418c9db5374e7c48419a0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc94c6b703196449e3699871ab1690ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#acc94c6b703196449e3699871ab1690ec">floatingLegNPV</a> () const</td></tr>
-<tr class="separator:acc94c6b703196449e3699871ab1690ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a540021030088610c9e0b0bf50f240f58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a540021030088610c9e0b0bf50f240f58">fairSpread</a> () const</td></tr>
-<tr class="separator:a540021030088610c9e0b0bf50f240f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9ff2e4e855a2e93ff2658d0908044d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#aa9ff2e4e855a2e93ff2658d0908044d0">setupArguments</a> (<a class="el" href="../../d7/d14/class_quant_lib_1_1_pricing_engine_1_1arguments.html">PricingEngine::arguments</a> *args) const override</td></tr>
-<tr class="separator:aa9ff2e4e855a2e93ff2658d0908044d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0f7bbb6440966f75189fac0562b6a67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#ad0f7bbb6440966f75189fac0562b6a67">fetchResults</a> (const <a class="el" href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">PricingEngine::results</a> *) const override</td></tr>
-<tr class="separator:ad0f7bbb6440966f75189fac0562b6a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9853d2deac18759fe4e1a4b186767d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#ac9853d2deac18759fe4e1a4b186767d3">setupExpired</a> () const override</td></tr>
-<tr class="separator:ac9853d2deac18759fe4e1a4b186767d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a1bdffcce489767a23969057ea58a300d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a1bdffcce489767a23969057ea58a300d">setupFloatingArguments</a> (<a class="el" href="../../d9/dba/class_quant_lib_1_1_fixed_vs_floating_swap_1_1arguments.html">arguments</a> *args) const override</td></tr>
+<tr class="separator:a1bdffcce489767a23969057ea58a300d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -363,7 +348,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ae98429250f6997df7b87f4b37454609e inherit pub_types_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">typedef set_type::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#ae98429250f6997df7b87f4b37454609e">iterator</a></td></tr>
 <tr class="separator:ae98429250f6997df7b87f4b37454609e inherit pub_types_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_quant_lib_1_1_swap"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_quant_lib_1_1_swap')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html">Swap</a></td></tr>
-<tr class="memitem:a428a8c0a5cb2912604b351462b52e228 inherit pro_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a428a8c0a5cb2912604b351462b52e228">Swap</a> (<a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> legs)</td></tr>
+<tr class="memitem:ac9853d2deac18759fe4e1a4b186767d3 inherit pro_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#ac9853d2deac18759fe4e1a4b186767d3">setupExpired</a> () const override</td></tr>
+<tr class="separator:ac9853d2deac18759fe4e1a4b186767d3 inherit pro_methods_class_quant_lib_1_1_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a428a8c0a5cb2912604b351462b52e228 inherit pro_methods_class_quant_lib_1_1_swap"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a428a8c0a5cb2912604b351462b52e228">Swap</a> (<a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a20efbcf159501e9a290625d4f790bb1a">legs</a>)</td></tr>
 <tr class="separator:a428a8c0a5cb2912604b351462b52e228 inherit pro_methods_class_quant_lib_1_1_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_quant_lib_1_1_instrument"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_quant_lib_1_1_instrument')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d9/d65/class_quant_lib_1_1_instrument.html">Instrument</a></td></tr>
 <tr class="memitem:a61eb1a24e5329ccc296715a40dc3a19a inherit pro_methods_class_quant_lib_1_1_instrument"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a> () const override</td></tr>
@@ -402,14 +389,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:abcf8c3b096b3eea8688019abe7180471 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72e3e9b2ee0ed5ab8aa688b9422d8138 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a72e3e9b2ee0ed5ab8aa688b9422d8138">frozen_</a> = false</td></tr>
 <tr class="separator:a72e3e9b2ee0ed5ab8aa688b9422d8138 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52b368dcda2c9e791f5a8fc63de3c510 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a52b368dcda2c9e791f5a8fc63de3c510">alwaysForward_</a> = true</td></tr>
+<tr class="memitem:a52b368dcda2c9e791f5a8fc63de3c510 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a52b368dcda2c9e791f5a8fc63de3c510">alwaysForward_</a></td></tr>
 <tr class="separator:a52b368dcda2c9e791f5a8fc63de3c510 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Plain-vanilla swap: fix vs floating leg. </p>
+<div class="textblock"><p >Plain-vanilla swap: fix vs ibor leg. </p>
 <p >If no payment convention is passed, the convention of the floating-rate schedule is used.</p>
 <dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000078">Warning:</a></b></dt><dd>if <code>Settings::includeReferenceDateCashFlows()</code> is set to <code>true</code>, payments occurring at the settlement date of the swap might be included in the NPV and therefore affect the fair-rate and fair-spread calculation. This might not be what you want.</dd></dl>
-<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000031">Tests:</a></b></dt><dd><ul>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000028">Tests:</a></b></dt><dd><ul>
 <li>the correctness of the returned value is tested by checking that the price of a swap paying the fair fixed rate is null.</li>
 <li>the correctness of the returned value is tested by checking that the price of a swap receiving the fair floating-rate spread is null.</li>
 <li>the correctness of the returned value is tested by checking that the price of a swap decreases with the paid fixed rate.</li>
@@ -417,7 +404,7 @@ Additional Inherited Members</h2></td></tr>
 <li>the correctness of the returned value is tested by checking it against a known good value. </li>
 </ul>
 </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d9/dd4/_bermudan_swaption_8cpp-example.html#_a14">BermudanSwaption.cpp</a>, <a class="el" href="../../d2/de1/_gaussian1d_models_8cpp-example.html#_a8">Gaussian1dModels.cpp</a>, and <a class="el" href="../../da/ddd/_multicurve_bootstrapping_8cpp-example.html#_a18">MulticurveBootstrapping.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d2/de1/_gaussian1d_models_8cpp-example.html#_a8">Gaussian1dModels.cpp</a>, and <a class="el" href="../../da/ddd/_multicurve_bootstrapping_8cpp-example.html#_a15">MulticurveBootstrapping.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
@@ -502,7 +489,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html#l00035">35</a> of file <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html">vanillaswap.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html#l00030">30</a> of file <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html">vanillaswap.cpp</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -510,519 +497,16 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_afd42bc22382be7b036666f034945a76f_cgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_afd42bc22382be7b036666f034945a76f_cgraph" alt=""/></div>
 <map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_afd42bc22382be7b036666f034945a76f_cgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_afd42bc22382be7b036666f034945a76f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,319,99,345"/>
-<area shape="rect" href="../../d5/d5b/class_quant_lib_1_1_schedule.html#adb162cdfeed00aeb62b8cac19f5d0948" title=" " alt="" coords="148,5,316,45"/>
-<area shape="rect" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a382b71a0946d63934d35492ea2acc187" title=" " alt="" coords="165,70,299,95"/>
-<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0" title=" " alt="" coords="165,120,299,160"/>
-<area shape="rect" href="../../d4/d17/class_quant_lib_1_1_fixed_rate_leg.html#a95d45e04d25c040bec6731b39d70f933" title=" " alt="" coords="151,184,313,224"/>
-<area shape="rect" href="../../df/da2/class_quant_lib_1_1_ibor_leg.html#aeae163493ebc28533d44f68cb6a1af2a" title=" " alt="" coords="161,248,303,288"/>
-<area shape="rect" href="../../df/da2/class_quant_lib_1_1_ibor_leg.html#aafdba05892180e3cf4b4b45e76cb75b2" title=" " alt="" coords="166,312,298,352"/>
-<area shape="rect" href="../../d4/d17/class_quant_lib_1_1_fixed_rate_leg.html#a15f131185bbaf11571fcddf1e1cd3fb0" title=" " alt="" coords="151,376,313,416"/>
-<area shape="rect" href="../../d4/d17/class_quant_lib_1_1_fixed_rate_leg.html#a6c623c68c99278cc89d999cb6b18ff31" title=" " alt="" coords="147,440,317,480"/>
-<area shape="rect" href="../../df/da2/class_quant_lib_1_1_ibor_leg.html#a387f4310897a637d49ff5e6138d9596e" title=" " alt="" coords="151,504,313,544"/>
-<area shape="rect" href="../../df/da2/class_quant_lib_1_1_ibor_leg.html#a8f50e5f41aba03dea11cb40d8171ab03" title=" " alt="" coords="149,568,315,608"/>
-<area shape="rect" href="../../df/da2/class_quant_lib_1_1_ibor_leg.html#a02c6f0b2279d4454d7add63fff50a609" title=" " alt="" coords="166,632,298,672"/>
+<area shape="rect" title=" " alt="" coords="5,13,99,38"/>
+<area shape="rect" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a8eee3d3767fab185a6f78d6b406618f5" title=" " alt="" coords="147,5,323,45"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7eba997f6dc7f9634f41ead3e4401d70" name="a7eba997f6dc7f9634f41ead3e4401d70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7eba997f6dc7f9634f41ead3e4401d70">&#9670;&#160;</a></span>type()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Swap::Type</a> type </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00167">167</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a8eee3d3767fab185a6f78d6b406618f5" name="a8eee3d3767fab185a6f78d6b406618f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8eee3d3767fab185a6f78d6b406618f5">&#9670;&#160;</a></span>nominal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> nominal </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00171">171</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a3ebc266a5832e5b9e41bae67aefb9f86" name="a3ebc266a5832e5b9e41bae67aefb9f86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ebc266a5832e5b9e41bae67aefb9f86">&#9670;&#160;</a></span>fixedSchedule()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> &amp; fixedSchedule </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00175">175</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a096b54e037e7623ae978c61c8f6c42ba" name="a096b54e037e7623ae978c61c8f6c42ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a096b54e037e7623ae978c61c8f6c42ba">&#9670;&#160;</a></span>fixedRate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> fixedRate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00179">179</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a2bb41967ad8893c182d4895ef67b2293" name="a2bb41967ad8893c182d4895ef67b2293"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bb41967ad8893c182d4895ef67b2293">&#9670;&#160;</a></span>fixedDayCount()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp; fixedDayCount </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00183">183</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a4c2b939c3a51a1a3bdf86ba0848f76cc" name="a4c2b939c3a51a1a3bdf86ba0848f76cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c2b939c3a51a1a3bdf86ba0848f76cc">&#9670;&#160;</a></span>floatingSchedule()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> &amp; floatingSchedule </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00187">187</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a7ed9a5fd3bb32e6d559f4c596c361161" name="a7ed9a5fd3bb32e6d559f4c596c361161"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ed9a5fd3bb32e6d559f4c596c361161">&#9670;&#160;</a></span>iborIndex()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const ext::shared_ptr&lt; <a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> &gt; &amp; iborIndex </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00191">191</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="af2b1ac06508be31b34a28d76091c0e3f" name="af2b1ac06508be31b34a28d76091c0e3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2b1ac06508be31b34a28d76091c0e3f">&#9670;&#160;</a></span>spread()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> spread </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00195">195</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="aa8b4cee39101de66dd9a4b5c3ce83df8" name="aa8b4cee39101de66dd9a4b5c3ce83df8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8b4cee39101de66dd9a4b5c3ce83df8">&#9670;&#160;</a></span>floatingDayCount()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp; floatingDayCount </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00199">199</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a382b71a0946d63934d35492ea2acc187" name="a382b71a0946d63934d35492ea2acc187"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a382b71a0946d63934d35492ea2acc187">&#9670;&#160;</a></span>paymentConvention()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> paymentConvention </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00203">203</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_a382b71a0946d63934d35492ea2acc187_icgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_a382b71a0946d63934d35492ea2acc187_icgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_a382b71a0946d63934d35492ea2acc187_icgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_a382b71a0946d63934d35492ea2acc187_icgraph">
-<area shape="rect" title=" " alt="" coords="147,5,281,31"/>
-<area shape="rect" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#afd42bc22382be7b036666f034945a76f" title=" " alt="" coords="5,5,99,31"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ac2e65a671f5cf5339b5d951ec498c6d2" name="ac2e65a671f5cf5339b5d951ec498c6d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2e65a671f5cf5339b5d951ec498c6d2">&#9670;&#160;</a></span>fixedLeg()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a> &amp; fixedLeg </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00207">207</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_ac2e65a671f5cf5339b5d951ec498c6d2_icgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_ac2e65a671f5cf5339b5d951ec498c6d2_icgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_ac2e65a671f5cf5339b5d951ec498c6d2_icgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_ac2e65a671f5cf5339b5d951ec498c6d2_icgraph">
-<area shape="rect" title=" " alt="" coords="171,5,241,31"/>
-<area shape="rect" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#aa9ff2e4e855a2e93ff2658d0908044d0" title=" " alt="" coords="5,5,123,31"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a452482c4dd98a2f6ad2b3d8e60580d27" name="a452482c4dd98a2f6ad2b3d8e60580d27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a452482c4dd98a2f6ad2b3d8e60580d27">&#9670;&#160;</a></span>floatingLeg()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a> &amp; floatingLeg </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00211">211</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_a452482c4dd98a2f6ad2b3d8e60580d27_icgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_a452482c4dd98a2f6ad2b3d8e60580d27_icgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_a452482c4dd98a2f6ad2b3d8e60580d27_icgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_a452482c4dd98a2f6ad2b3d8e60580d27_icgraph">
-<area shape="rect" title=" " alt="" coords="171,5,255,31"/>
-<area shape="rect" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#aa9ff2e4e855a2e93ff2658d0908044d0" title=" " alt="" coords="5,5,123,31"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a9920734539e372bb658caf26c9e63f29" name="a9920734539e372bb658caf26c9e63f29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9920734539e372bb658caf26c9e63f29">&#9670;&#160;</a></span>fixedLegBPS()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> fixedLegBPS </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html#l00151">151</a> of file <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html">vanillaswap.cpp</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_a9920734539e372bb658caf26c9e63f29_cgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_a9920734539e372bb658caf26c9e63f29_cgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_a9920734539e372bb658caf26c9e63f29_cgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_a9920734539e372bb658caf26c9e63f29_cgraph">
-<area shape="rect" title=" " alt="" coords="5,77,103,102"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="151,69,293,109"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="341,5,489,45"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a672af63d5c16d2597399475923d21ad0" title="returns whether the instrument might have value greater than zero." alt="" coords="344,69,487,109"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#aef24082dd24f1330f587e552a7dc4f69" title=" " alt="" coords="344,133,487,173"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a572dbe926524786c64db01e31dba7ab8" title=" " alt="" coords="537,5,685,45"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ae9798c67c5eb41e5a66ec74a3c585bd4" name="ae9798c67c5eb41e5a66ec74a3c585bd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9798c67c5eb41e5a66ec74a3c585bd4">&#9670;&#160;</a></span>fixedLegNPV()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> fixedLegNPV </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html#l00163">163</a> of file <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html">vanillaswap.cpp</a>.</p>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_ae9798c67c5eb41e5a66ec74a3c585bd4_cgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_ae9798c67c5eb41e5a66ec74a3c585bd4_cgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_ae9798c67c5eb41e5a66ec74a3c585bd4_cgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_ae9798c67c5eb41e5a66ec74a3c585bd4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,77,103,102"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="151,69,293,109"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="341,5,489,45"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a672af63d5c16d2597399475923d21ad0" title="returns whether the instrument might have value greater than zero." alt="" coords="344,69,487,109"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#aef24082dd24f1330f587e552a7dc4f69" title=" " alt="" coords="344,133,487,173"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a572dbe926524786c64db01e31dba7ab8" title=" " alt="" coords="537,5,685,45"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a2f51236eb6ee854f56be4097d4eed153" name="a2f51236eb6ee854f56be4097d4eed153"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f51236eb6ee854f56be4097d4eed153">&#9670;&#160;</a></span>fairRate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> fairRate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../da/ddd/_multicurve_bootstrapping_8cpp-example.html#a23">MulticurveBootstrapping.cpp</a>.</dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html#l00139">139</a> of file <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html">vanillaswap.cpp</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_a2f51236eb6ee854f56be4097d4eed153_cgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_a2f51236eb6ee854f56be4097d4eed153_cgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_a2f51236eb6ee854f56be4097d4eed153_cgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_a2f51236eb6ee854f56be4097d4eed153_cgraph">
-<area shape="rect" title=" " alt="" coords="5,77,72,102"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="120,69,263,109"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="311,5,459,45"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a672af63d5c16d2597399475923d21ad0" title="returns whether the instrument might have value greater than zero." alt="" coords="313,69,456,109"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#aef24082dd24f1330f587e552a7dc4f69" title=" " alt="" coords="313,133,456,173"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a572dbe926524786c64db01e31dba7ab8" title=" " alt="" coords="507,5,655,45"/>
-</map>
-</div>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_a2f51236eb6ee854f56be4097d4eed153_icgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_a2f51236eb6ee854f56be4097d4eed153_icgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_a2f51236eb6ee854f56be4097d4eed153_icgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_a2f51236eb6ee854f56be4097d4eed153_icgraph">
-<area shape="rect" title=" " alt="" coords="240,77,307,102"/>
-<area shape="rect" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html#aefb281f642f5265627568100a2f989d6" title=" " alt="" coords="5,5,192,45"/>
-<area shape="rect" href="../../d1/d80/class_quant_lib_1_1_swaption_helper.html#a1127cccc9668a02247dc139d27121708" title=" " alt="" coords="13,69,185,109"/>
-<area shape="rect" href="../../da/d96/class_quant_lib_1_1_vanilla_swap_1_1results.html#aebfcdbbd0fe4efbff10b180be50ca6bc" title=" " alt="" coords="22,133,175,173"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a57487a30f418c9db5374e7c48419a0ae" name="a57487a30f418c9db5374e7c48419a0ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57487a30f418c9db5374e7c48419a0ae">&#9670;&#160;</a></span>floatingLegBPS()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> floatingLegBPS </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html#l00157">157</a> of file <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html">vanillaswap.cpp</a>.</p>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_a57487a30f418c9db5374e7c48419a0ae_cgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_a57487a30f418c9db5374e7c48419a0ae_cgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_a57487a30f418c9db5374e7c48419a0ae_cgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_a57487a30f418c9db5374e7c48419a0ae_cgraph">
-<area shape="rect" title=" " alt="" coords="5,77,116,102"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="164,69,307,109"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="355,5,503,45"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a672af63d5c16d2597399475923d21ad0" title="returns whether the instrument might have value greater than zero." alt="" coords="357,69,500,109"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#aef24082dd24f1330f587e552a7dc4f69" title=" " alt="" coords="357,133,500,173"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a572dbe926524786c64db01e31dba7ab8" title=" " alt="" coords="551,5,699,45"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="acc94c6b703196449e3699871ab1690ec" name="acc94c6b703196449e3699871ab1690ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc94c6b703196449e3699871ab1690ec">&#9670;&#160;</a></span>floatingLegNPV()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> floatingLegNPV </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html#l00169">169</a> of file <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html">vanillaswap.cpp</a>.</p>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_acc94c6b703196449e3699871ab1690ec_cgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_acc94c6b703196449e3699871ab1690ec_cgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_acc94c6b703196449e3699871ab1690ec_cgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_acc94c6b703196449e3699871ab1690ec_cgraph">
-<area shape="rect" title=" " alt="" coords="5,77,116,102"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="164,69,307,109"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="355,5,503,45"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a672af63d5c16d2597399475923d21ad0" title="returns whether the instrument might have value greater than zero." alt="" coords="357,69,500,109"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#aef24082dd24f1330f587e552a7dc4f69" title=" " alt="" coords="357,133,500,173"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a572dbe926524786c64db01e31dba7ab8" title=" " alt="" coords="551,5,699,45"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a540021030088610c9e0b0bf50f240f58" name="a540021030088610c9e0b0bf50f240f58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a540021030088610c9e0b0bf50f240f58">&#9670;&#160;</a></span>fairSpread()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> fairSpread </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../da/ddd/_multicurve_bootstrapping_8cpp-example.html#a22">MulticurveBootstrapping.cpp</a>.</dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html#l00145">145</a> of file <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html">vanillaswap.cpp</a>.</p>
-<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_a540021030088610c9e0b0bf50f240f58_cgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_a540021030088610c9e0b0bf50f240f58_cgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_a540021030088610c9e0b0bf50f240f58_cgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_a540021030088610c9e0b0bf50f240f58_cgraph">
-<area shape="rect" title=" " alt="" coords="5,77,85,102"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="133,69,276,109"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="324,5,472,45"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a672af63d5c16d2597399475923d21ad0" title="returns whether the instrument might have value greater than zero." alt="" coords="327,69,469,109"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#aef24082dd24f1330f587e552a7dc4f69" title=" " alt="" coords="327,133,469,173"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a572dbe926524786c64db01e31dba7ab8" title=" " alt="" coords="520,5,668,45"/>
-</map>
-</div>
-<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_a540021030088610c9e0b0bf50f240f58_icgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_a540021030088610c9e0b0bf50f240f58_icgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_a540021030088610c9e0b0bf50f240f58_icgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_a540021030088610c9e0b0bf50f240f58_icgraph">
-<area shape="rect" title=" " alt="" coords="207,13,287,38"/>
-<area shape="rect" href="../../da/d96/class_quant_lib_1_1_vanilla_swap_1_1results.html#aebfcdbbd0fe4efbff10b180be50ca6bc" title=" " alt="" coords="5,5,159,45"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aa9ff2e4e855a2e93ff2658d0908044d0" name="aa9ff2e4e855a2e93ff2658d0908044d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9ff2e4e855a2e93ff2658d0908044d0">&#9670;&#160;</a></span>setupArguments()</h2>
+<a id="a1bdffcce489767a23969057ea58a300d" name="a1bdffcce489767a23969057ea58a300d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bdffcce489767a23969057ea58a300d">&#9670;&#160;</a></span>setupFloatingArguments()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1031,96 +515,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void setupArguments </td>
+          <td class="memname">void setupFloatingArguments </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d14/class_quant_lib_1_1_pricing_engine_1_1arguments.html">PricingEngine::arguments</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >When a derived argument structure is defined for an instrument, this method should be overridden to fill it. This is mandatory in case a pricing engine is used. </p>
-
-<p>Reimplemented from <a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a29d098166c6f2ed9f3810fdc6001add3">Swap</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html#l00084">84</a> of file <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html">vanillaswap.cpp</a>.</p>
-<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-14-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_aa9ff2e4e855a2e93ff2658d0908044d0_cgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_aa9ff2e4e855a2e93ff2658d0908044d0_cgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_aa9ff2e4e855a2e93ff2658d0908044d0_cgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_aa9ff2e4e855a2e93ff2658d0908044d0_cgraph">
-<area shape="rect" title=" " alt="" coords="5,55,123,80"/>
-<area shape="rect" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#ac2e65a671f5cf5339b5d951ec498c6d2" title=" " alt="" coords="244,5,315,31"/>
-<area shape="rect" href="../../d1/d14/class_quant_lib_1_1_vanilla_swap.html#a452482c4dd98a2f6ad2b3d8e60580d27" title=" " alt="" coords="237,55,321,80"/>
-<area shape="rect" href="../../dc/d54/class_quant_lib_1_1_swap.html#a29d098166c6f2ed9f3810fdc6001add3" title=" " alt="" coords="171,104,388,129"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ad0f7bbb6440966f75189fac0562b6a67" name="ad0f7bbb6440966f75189fac0562b6a67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0f7bbb6440966f75189fac0562b6a67">&#9670;&#160;</a></span>fetchResults()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void fetchResults </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">PricingEngine::results</a> *&#160;</td>
-          <td class="paramname"><em>r</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >When a derived result structure is defined for an instrument, this method should be overridden to read from it. This is mandatory in case a pricing engine is used. </p>
-
-<p>Reimplemented from <a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#ad0f7bbb6440966f75189fac0562b6a67">Swap</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html#l00182">182</a> of file <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html">vanillaswap.cpp</a>.</p>
-<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-15-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_ad0f7bbb6440966f75189fac0562b6a67_cgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_ad0f7bbb6440966f75189fac0562b6a67_cgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_ad0f7bbb6440966f75189fac0562b6a67_cgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_ad0f7bbb6440966f75189fac0562b6a67_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,100,38"/>
-<area shape="rect" href="../../dc/d54/class_quant_lib_1_1_swap.html#ad0f7bbb6440966f75189fac0562b6a67" title=" " alt="" coords="148,13,343,38"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a7992b88ae5ce8f95759515943d0311da" title=" " alt="" coords="391,5,533,45"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ac9853d2deac18759fe4e1a4b186767d3" name="ac9853d2deac18759fe4e1a4b186767d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9853d2deac18759fe4e1a4b186767d3">&#9670;&#160;</a></span>setupExpired()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setupExpired </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d9/dba/class_quant_lib_1_1_fixed_vs_floating_swap_1_1arguments.html">arguments</a> *&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1130,312 +528,21 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >This method must leave the instrument in a consistent state when the expiration condition is met. </p>
 
-<p>Reimplemented from <a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#ac9853d2deac18759fe4e1a4b186767d3">Swap</a>.</p>
+<p>Implements <a class="el" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a502aafe4b8044494fe8ed9e18f854970">FixedVsFloatingSwap</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html#l00175">175</a> of file <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html">vanillaswap.cpp</a>.</p>
-<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-16-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html#l00055">55</a> of file <a class="el" href="../../d9/d36/vanillaswap_8cpp_source.html">vanillaswap.cpp</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-16-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_ac9853d2deac18759fe4e1a4b186767d3_cgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_ac9853d2deac18759fe4e1a4b186767d3_cgraph" alt=""/></div>
-<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_ac9853d2deac18759fe4e1a4b186767d3_cgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_ac9853d2deac18759fe4e1a4b186767d3_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,104,38"/>
-<area shape="rect" href="../../dc/d54/class_quant_lib_1_1_swap.html#ac9853d2deac18759fe4e1a4b186767d3" title=" " alt="" coords="152,13,351,38"/>
-<area shape="rect" href="../../d9/d65/class_quant_lib_1_1_instrument.html#aef24082dd24f1330f587e552a7dc4f69" title=" " alt="" coords="399,5,541,45"/>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d1/d14/class_quant_lib_1_1_vanilla_swap_a1bdffcce489767a23969057ea58a300d_cgraph.png" border="0" usemap="#ad1/d14/class_quant_lib_1_1_vanilla_swap_a1bdffcce489767a23969057ea58a300d_cgraph" alt=""/></div>
+<map name="ad1/d14/class_quant_lib_1_1_vanilla_swap_a1bdffcce489767a23969057ea58a300d_cgraph" id="ad1/d14/class_quant_lib_1_1_vanilla_swap_a1bdffcce489767a23969057ea58a300d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,168,38"/>
+<area shape="rect" href="../../d4/d79/class_quant_lib_1_1_fixed_vs_floating_swap.html#a452482c4dd98a2f6ad2b3d8e60580d27" title=" " alt="" coords="216,5,392,45"/>
 </map>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ae96b07c06ceff094f476fd92cbe89e10" name="ae96b07c06ceff094f476fd92cbe89e10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae96b07c06ceff094f476fd92cbe89e10">&#9670;&#160;</a></span>type_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00117">117</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a0313ad2f0ebbcc7085afb5650bd11b76" name="a0313ad2f0ebbcc7085afb5650bd11b76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0313ad2f0ebbcc7085afb5650bd11b76">&#9670;&#160;</a></span>nominal_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> nominal_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00118">118</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a7cac1393ff1d3224ff1cac0cb392cecf" name="a7cac1393ff1d3224ff1cac0cb392cecf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cac1393ff1d3224ff1cac0cb392cecf">&#9670;&#160;</a></span>fixedSchedule_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> fixedSchedule_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00119">119</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a35f1722ae3128f5c12e6df0709b7d09d" name="a35f1722ae3128f5c12e6df0709b7d09d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35f1722ae3128f5c12e6df0709b7d09d">&#9670;&#160;</a></span>fixedRate_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> fixedRate_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00120">120</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a417ce99525ff934e161e933d540c0409" name="a417ce99525ff934e161e933d540c0409"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a417ce99525ff934e161e933d540c0409">&#9670;&#160;</a></span>fixedDayCount_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> fixedDayCount_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00121">121</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a36ed495d7409f5614e2ce8296e885b19" name="a36ed495d7409f5614e2ce8296e885b19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36ed495d7409f5614e2ce8296e885b19">&#9670;&#160;</a></span>floatingSchedule_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> floatingSchedule_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00122">122</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a5d73b916d9852e2366fa73be8ab72f99" name="a5d73b916d9852e2366fa73be8ab72f99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d73b916d9852e2366fa73be8ab72f99">&#9670;&#160;</a></span>iborIndex_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ext::shared_ptr&lt;<a class="el" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a>&gt; iborIndex_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00123">123</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="aa6db15cb8f4db71dbdd282eb1a4a9bcd" name="aa6db15cb8f4db71dbdd282eb1a4a9bcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6db15cb8f4db71dbdd282eb1a4a9bcd">&#9670;&#160;</a></span>spread_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> spread_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00124">124</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a288c435645e72151e75ee05e61b89370" name="a288c435645e72151e75ee05e61b89370"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a288c435645e72151e75ee05e61b89370">&#9670;&#160;</a></span>floatingDayCount_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> floatingDayCount_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ab0c2ba6da16ec8c201da972e61b08334" name="ab0c2ba6da16ec8c201da972e61b08334"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0c2ba6da16ec8c201da972e61b08334">&#9670;&#160;</a></span>paymentConvention_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> paymentConvention_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00126">126</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="abe098d2fe72aba947e592db7309a60fd" name="abe098d2fe72aba947e592db7309a60fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe098d2fe72aba947e592db7309a60fd">&#9670;&#160;</a></span>fairRate_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> fairRate_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00128">128</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a492c911c409c868717797a52dda59333" name="a492c911c409c868717797a52dda59333"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a492c911c409c868717797a52dda59333">&#9670;&#160;</a></span>fairSpread_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> fairSpread_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html#l00129">129</a> of file <a class="el" href="../../d3/d47/vanillaswap_8hpp_source.html">vanillaswap.hpp</a>.</p>
 
 </div>
 </div>

@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.30</div>
+   <div id="projectnumber">Fully annotated sources - version 1.32</div>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d7/d0a/analyticcomplexchooserengine_8hpp_source.html">ql/experimental/exoticoptions/analyticcomplexchooserengine.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d2/d86/pricingengines_2exotic_2analyticcomplexchooserengine_8hpp_source.html">ql/pricingengines/exotic/analyticcomplexchooserengine.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for AnalyticComplexChooserEngine:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -101,13 +101,13 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d2/d03/class_quant_lib_1_1_analytic_complex_chooser_engine__inherit__graph.png" border="0" usemap="#a_analytic_complex_chooser_engine_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_analytic_complex_chooser_engine_inherit__map" id="a_analytic_complex_chooser_engine_inherit__map">
-<area shape="rect" title=" " alt="" coords="8,1008,239,1268"/>
-<area shape="rect" href="../../dd/d61/class_quant_lib_1_1_complex_chooser_option_1_1engine.html" title=" " alt="" coords="91,919,155,959"/>
-<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title=" " alt="" coords="5,712,241,869"/>
-<area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="266,271,402,384"/>
-<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="117,477,303,620"/>
-<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="261,5,407,177"/>
-<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="35,227,217,428"/>
+<area shape="rect" title=" " alt="" coords="8,1023,239,1268"/>
+<area shape="rect" href="../../dd/d61/class_quant_lib_1_1_complex_chooser_option_1_1engine.html" title="Complex&#45;chooser&#45;option engine base class." alt="" coords="91,933,155,973"/>
+<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title=" " alt="" coords="5,727,241,884"/>
+<area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="266,285,402,399"/>
+<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="117,492,303,635"/>
+<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="261,5,407,192"/>
+<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="35,241,217,443"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -117,34 +117,28 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d1/d29/class_quant_lib_1_1_analytic_complex_chooser_engine__coll__graph.png" border="0" usemap="#a_analytic_complex_chooser_engine_coll__map" alt="Collaboration graph"/></div>
 <map name="a_analytic_complex_chooser_engine_coll__map" id="a_analytic_complex_chooser_engine_coll__map">
-<area shape="rect" title=" " alt="" coords="632,2687,867,2932"/>
-<area shape="rect" href="../../dd/d61/class_quant_lib_1_1_complex_chooser_option_1_1engine.html" title=" " alt="" coords="585,2577,649,2617"/>
-<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title=" " alt="" coords="499,2392,735,2520"/>
-<area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="636,1615,772,1728"/>
-<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="761,2187,948,2300"/>
-<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="837,1028,984,1171"/>
-<area shape="rect" title=" " alt="" coords="847,654,975,694"/>
-<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="982,353,1165,540"/>
-<area shape="rect" title=" " alt="" coords="1111,654,1303,694"/>
-<area shape="rect" title=" " alt="" coords="978,236,1169,291"/>
-<area shape="rect" title=" " alt="" coords="925,108,1099,148"/>
-<area shape="rect" title=" " alt="" coords="1124,108,1265,148"/>
-<area shape="rect" title=" " alt="" coords="962,5,1001,45"/>
-<area shape="rect" title=" " alt="" coords="851,172,928,212"/>
-<area shape="rect" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html" title="global repository for run&#45;time library settings" alt="" coords="1183,823,1377,965"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title=" " alt="" coords="1404,603,1620,745"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title="Basic support for the singleton pattern." alt="" coords="1434,375,1590,518"/>
-<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="1329,654,1380,694"/>
-<area shape="rect" href="../../d0/dfc/class_quant_lib_1_1_complex_chooser_option_1_1arguments.html" title=" " alt="" coords="380,2216,471,2271"/>
-<area shape="rect" title=" " alt="" coords="525,1651,611,1691"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="43,1233,218,2109"/>
-<area shape="rect" title=" " alt="" coords="84,1079,177,1119"/>
-<area shape="rect" title=" " alt="" coords="242,1651,326,1691"/>
-<area shape="rect" title=" " alt="" coords="350,1644,501,1699"/>
-<area shape="rect" href="../../df/d40/class_complex_chooser_option_1_1results.html" title=" " alt="" coords="655,2223,721,2263"/>
-<area shape="rect" title=" " alt="" coords="796,1651,913,1691"/>
-<area shape="rect" title=" " alt="" coords="937,1651,1036,1691"/>
-<area shape="rect" title=" " alt="" coords="674,2569,913,2624"/>
+<area shape="rect" title=" " alt="" coords="743,2383,978,2613"/>
+<area shape="rect" href="../../dd/d61/class_quant_lib_1_1_complex_chooser_option_1_1engine.html" title="Complex&#45;chooser&#45;option engine base class." alt="" coords="697,2273,761,2313"/>
+<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title=" " alt="" coords="611,2088,847,2216"/>
+<area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="598,1311,734,1424"/>
+<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="723,1883,910,1996"/>
+<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="773,695,919,867"/>
+<area shape="rect" title=" " alt="" coords="827,592,955,632"/>
+<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="944,343,1127,529"/>
+<area shape="rect" title=" " alt="" coords="964,225,1107,280"/>
+<area shape="rect" title=" " alt="" coords="991,108,1165,148"/>
+<area shape="rect" title=" " alt="" coords="871,108,949,148"/>
+<area shape="rect" title=" " alt="" coords="891,5,929,45"/>
+<area shape="rect" href="../../d0/dfc/class_quant_lib_1_1_complex_chooser_option_1_1arguments.html" title="Extra arguments for complex chooser option." alt="" coords="286,1912,377,1967"/>
+<area shape="rect" title=" " alt="" coords="288,1347,375,1387"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="399,929,573,1805"/>
+<area shape="rect" title=" " alt="" coords="439,761,533,801"/>
+<area shape="rect" title=" " alt="" coords="5,1347,89,1387"/>
+<area shape="rect" title=" " alt="" coords="113,1340,264,1395"/>
+<area shape="rect" href="../../df/d40/class_complex_chooser_option_1_1results.html" title=" " alt="" coords="941,1919,1007,1959"/>
+<area shape="rect" title=" " alt="" coords="758,1347,875,1387"/>
+<area shape="rect" title=" " alt="" coords="899,1347,998,1387"/>
+<area shape="rect" title=" " alt="" coords="785,2265,1024,2320"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -181,6 +175,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a522aacdd0f2408fe5e46527a6db999b4">operator=</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
 <tr class="separator:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c84088bdd3ac6402298298ee8b0d904 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a8c84088bdd3ac6402298298ee8b0d904">Observable</a> (<a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a8c84088bdd3ac6402298298ee8b0d904 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a238982d700aae8ec199087af2af967c1 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a238982d700aae8ec199087af2af967c1">operator=</a> (<a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a238982d700aae8ec199087af2af967c1 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a99f4333cda953ce3bfdc958ccea5fbf9">~Observable</a> ()=default</td></tr>
 <tr class="separator:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a> ()</td></tr>
@@ -229,10 +227,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a0366f818da7975da8fda8d6fa88c8094"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa23e5e9a5ba069cd1389cca8f331a92a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html">BlackScholesCalculator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a">bsCalculator</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spot, <a class="el" href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7">Option::Type</a> optionType) const</td></tr>
 <tr class="separator:aa23e5e9a5ba069cd1389cca8f331a92a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e4dd2108abf3e2e092a25fd2c705d89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a3e4dd2108abf3e2e092a25fd2c705d89">CriticalValueChooser</a> () const</td></tr>
-<tr class="separator:a3e4dd2108abf3e2e092a25fd2c705d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae71a7f433bc80cb5a11fe415be717a28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ae71a7f433bc80cb5a11fe415be717a28">ComplexChooser</a> () const</td></tr>
-<tr class="separator:ae71a7f433bc80cb5a11fe415be717a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd232583017ef776335c4837c0e6e05b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b">criticalValue</a> () const</td></tr>
+<tr class="separator:afd232583017ef776335c4837c0e6e05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -252,7 +248,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d7/d0a/analyticcomplexchooserengine_8hpp_source.html#l00033">33</a> of file <a class="el" href="../../d7/d0a/analyticcomplexchooserengine_8hpp_source.html">analyticcomplexchooserengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d86/pricingengines_2exotic_2analyticcomplexchooserengine_8hpp_source.html#l00033">33</a> of file <a class="el" href="../../d2/d86/pricingengines_2exotic_2analyticcomplexchooserengine_8hpp_source.html">analyticcomplexchooserengine.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac330ce5e026905e95ef5f5047ecfdefd" name="ac330ce5e026905e95ef5f5047ecfdefd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac330ce5e026905e95ef5f5047ecfdefd">&#9670;&#160;</a></span>AnalyticComplexChooserEngine()</h2>
@@ -328,21 +324,20 @@ Additional Inherited Members</h2></td></tr>
 <div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph" alt=""/></div>
 <map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph">
 <area shape="rect" title=" " alt="" coords="5,215,80,240"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ae71a7f433bc80cb5a11fe415be717a28" title=" " alt="" coords="128,215,249,240"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aafee1a683d1176c61c7550e4d4061618" title=" " alt="" coords="798,5,887,31"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a009ffb066efa390caa4065842e0eadbb" title=" " alt="" coords="791,55,894,80"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a3e4dd2108abf3e2e092a25fd2c705d89" title=" " alt="" coords="297,215,440,240"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#af90cb4a9778854df3b2e63ab08fae094" title=" " alt="" coords="799,104,886,129"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a8c037b918665a91b584f11a03df559fd" title=" " alt="" coords="809,367,877,392"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ade86a9ec611c0494541d62333500574a" title=" " alt="" coords="320,387,417,412"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ab54e54f2455bc8801c7e38cd9a66250f" title=" " alt="" coords="321,436,417,461"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="551,157,645,183"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a397f8534c2b3d08642e5040c40426ab7" title=" " alt="" coords="488,271,708,311"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc" title=" " alt="" coords="511,207,685,247"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#adf9374447e20d7d5f0a37a6ae528be36" title=" " alt="" coords="783,203,902,228"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a0366f818da7975da8fda8d6fa88c8094" title=" " alt="" coords="783,252,903,277"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a2e9db776cf5fa5d35c998747371594a5" title=" " alt="" coords="815,153,870,179"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a1ce2edf271b7df5907ea9a3b100383fe" title=" " alt="" coords="756,302,929,342"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aafee1a683d1176c61c7550e4d4061618" title=" " alt="" coords="583,5,673,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a009ffb066efa390caa4065842e0eadbb" title=" " alt="" coords="577,55,679,80"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b" title=" " alt="" coords="130,215,223,240"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#af90cb4a9778854df3b2e63ab08fae094" title=" " alt="" coords="585,104,671,129"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a8c037b918665a91b584f11a03df559fd" title=" " alt="" coords="594,367,662,392"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ade86a9ec611c0494541d62333500574a" title=" " alt="" coords="128,387,225,412"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ab54e54f2455bc8801c7e38cd9a66250f" title=" " alt="" coords="129,436,225,461"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="336,157,431,183"/>
+<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a397f8534c2b3d08642e5040c40426ab7" title=" " alt="" coords="273,271,493,311"/>
+<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc" title=" " alt="" coords="297,207,470,247"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#adf9374447e20d7d5f0a37a6ae528be36" title=" " alt="" coords="569,203,687,228"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a0366f818da7975da8fda8d6fa88c8094" title=" " alt="" coords="568,252,688,277"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a2e9db776cf5fa5d35c998747371594a5" title=" " alt="" coords="601,153,655,179"/>
+<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a1ce2edf271b7df5907ea9a3b100383fe" title=" " alt="" coords="541,302,715,342"/>
 </map>
 </div>
 
@@ -372,7 +367,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00144">144</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00142">142</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -380,11 +375,10 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a2e9db776cf5fa5d35c998747371594a5_icgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a2e9db776cf5fa5d35c998747371594a5_icgraph" alt=""/></div>
 <map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a2e9db776cf5fa5d35c998747371594a5_icgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a2e9db776cf5fa5d35c998747371594a5_icgraph">
-<area shape="rect" title=" " alt="" coords="631,29,685,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="488,29,583,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a3e4dd2108abf3e2e092a25fd2c705d89" title=" " alt="" coords="297,29,440,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ae71a7f433bc80cb5a11fe415be717a28" title=" " alt="" coords="128,29,249,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,29,80,55"/>
+<area shape="rect" title=" " alt="" coords="412,5,467,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="269,5,364,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b" title=" " alt="" coords="128,5,221,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,5,80,31"/>
 </map>
 </div>
 
@@ -413,7 +407,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00151">151</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00149">149</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -421,11 +415,10 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a009ffb066efa390caa4065842e0eadbb_icgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a009ffb066efa390caa4065842e0eadbb_icgraph" alt=""/></div>
 <map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a009ffb066efa390caa4065842e0eadbb_icgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a009ffb066efa390caa4065842e0eadbb_icgraph">
-<area shape="rect" title=" " alt="" coords="631,31,733,56"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="488,5,583,31"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ae71a7f433bc80cb5a11fe415be717a28" title=" " alt="" coords="128,31,249,56"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a3e4dd2108abf3e2e092a25fd2c705d89" title=" " alt="" coords="297,5,440,31"/>
+<area shape="rect" title=" " alt="" coords="412,31,515,56"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="269,5,364,31"/>
 <area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,31,80,56"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b" title=" " alt="" coords="128,5,221,31"/>
 </map>
 </div>
 
@@ -454,7 +447,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00155">155</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00153">153</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -462,11 +455,10 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_af90cb4a9778854df3b2e63ab08fae094_icgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_af90cb4a9778854df3b2e63ab08fae094_icgraph" alt=""/></div>
 <map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_af90cb4a9778854df3b2e63ab08fae094_icgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_af90cb4a9778854df3b2e63ab08fae094_icgraph">
-<area shape="rect" title=" " alt="" coords="631,31,717,56"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="488,5,583,31"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ae71a7f433bc80cb5a11fe415be717a28" title=" " alt="" coords="128,31,249,56"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a3e4dd2108abf3e2e092a25fd2c705d89" title=" " alt="" coords="297,5,440,31"/>
+<area shape="rect" title=" " alt="" coords="412,31,499,56"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="269,5,364,31"/>
 <area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,31,80,56"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b" title=" " alt="" coords="128,5,221,31"/>
 </map>
 </div>
 
@@ -495,7 +487,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00159">159</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00157">157</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -503,11 +495,10 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_aafee1a683d1176c61c7550e4d4061618_icgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_aafee1a683d1176c61c7550e4d4061618_icgraph" alt=""/></div>
 <map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_aafee1a683d1176c61c7550e4d4061618_icgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_aafee1a683d1176c61c7550e4d4061618_icgraph">
-<area shape="rect" title=" " alt="" coords="631,31,720,56"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="488,5,583,31"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ae71a7f433bc80cb5a11fe415be717a28" title=" " alt="" coords="128,31,249,56"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a3e4dd2108abf3e2e092a25fd2c705d89" title=" " alt="" coords="297,5,440,31"/>
+<area shape="rect" title=" " alt="" coords="412,31,501,56"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="269,5,364,31"/>
 <area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,31,80,56"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b" title=" " alt="" coords="128,5,221,31"/>
 </map>
 </div>
 
@@ -537,7 +528,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00163">163</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00161">161</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -545,11 +536,10 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a8c037b918665a91b584f11a03df559fd_icgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a8c037b918665a91b584f11a03df559fd_icgraph" alt=""/></div>
 <map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a8c037b918665a91b584f11a03df559fd_icgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a8c037b918665a91b584f11a03df559fd_icgraph">
-<area shape="rect" title=" " alt="" coords="631,31,699,56"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="488,5,583,31"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ae71a7f433bc80cb5a11fe415be717a28" title=" " alt="" coords="128,31,249,56"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a3e4dd2108abf3e2e092a25fd2c705d89" title=" " alt="" coords="297,5,440,31"/>
+<area shape="rect" title=" " alt="" coords="412,31,480,56"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="269,5,364,31"/>
 <area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,31,80,56"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b" title=" " alt="" coords="128,5,221,31"/>
 </map>
 </div>
 
@@ -579,7 +569,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00167">167</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00165">165</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -587,9 +577,8 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ade86a9ec611c0494541d62333500574a_icgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ade86a9ec611c0494541d62333500574a_icgraph" alt=""/></div>
 <map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ade86a9ec611c0494541d62333500574a_icgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ade86a9ec611c0494541d62333500574a_icgraph">
-<area shape="rect" title=" " alt="" coords="297,29,395,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ae71a7f433bc80cb5a11fe415be717a28" title=" " alt="" coords="128,29,249,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,29,80,55"/>
+<area shape="rect" title=" " alt="" coords="128,5,225,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,5,80,31"/>
 </map>
 </div>
 
@@ -619,7 +608,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00171">171</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00169">169</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -627,11 +616,10 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_adf9374447e20d7d5f0a37a6ae528be36_icgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_adf9374447e20d7d5f0a37a6ae528be36_icgraph" alt=""/></div>
 <map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_adf9374447e20d7d5f0a37a6ae528be36_icgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_adf9374447e20d7d5f0a37a6ae528be36_icgraph">
-<area shape="rect" title=" " alt="" coords="631,29,749,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="488,29,583,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a3e4dd2108abf3e2e092a25fd2c705d89" title=" " alt="" coords="297,29,440,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ae71a7f433bc80cb5a11fe415be717a28" title=" " alt="" coords="128,29,249,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,29,80,55"/>
+<area shape="rect" title=" " alt="" coords="412,5,531,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="269,5,364,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b" title=" " alt="" coords="128,5,221,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,5,80,31"/>
 </map>
 </div>
 
@@ -661,7 +649,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00175">175</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00173">173</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -669,9 +657,8 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ab54e54f2455bc8801c7e38cd9a66250f_icgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ab54e54f2455bc8801c7e38cd9a66250f_icgraph" alt=""/></div>
 <map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ab54e54f2455bc8801c7e38cd9a66250f_icgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ab54e54f2455bc8801c7e38cd9a66250f_icgraph">
-<area shape="rect" title=" " alt="" coords="297,29,393,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ae71a7f433bc80cb5a11fe415be717a28" title=" " alt="" coords="128,29,249,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,29,80,55"/>
+<area shape="rect" title=" " alt="" coords="128,5,224,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,5,80,31"/>
 </map>
 </div>
 
@@ -701,7 +688,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00179">179</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00177">177</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -709,11 +696,10 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a0366f818da7975da8fda8d6fa88c8094_icgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a0366f818da7975da8fda8d6fa88c8094_icgraph" alt=""/></div>
 <map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a0366f818da7975da8fda8d6fa88c8094_icgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a0366f818da7975da8fda8d6fa88c8094_icgraph">
-<area shape="rect" title=" " alt="" coords="631,29,751,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="488,29,583,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a3e4dd2108abf3e2e092a25fd2c705d89" title=" " alt="" coords="297,29,440,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ae71a7f433bc80cb5a11fe415be717a28" title=" " alt="" coords="128,29,249,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,29,80,55"/>
+<area shape="rect" title=" " alt="" coords="412,5,532,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="269,5,364,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b" title=" " alt="" coords="128,5,221,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,5,80,31"/>
 </map>
 </div>
 
@@ -753,7 +739,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00080">80</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00077">77</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -778,17 +764,16 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_aa23e5e9a5ba069cd1389cca8f331a92a_icgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_aa23e5e9a5ba069cd1389cca8f331a92a_icgraph" alt=""/></div>
 <map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_aa23e5e9a5ba069cd1389cca8f331a92a_icgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_aa23e5e9a5ba069cd1389cca8f331a92a_icgraph">
-<area shape="rect" title=" " alt="" coords="488,29,583,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a3e4dd2108abf3e2e092a25fd2c705d89" title=" " alt="" coords="297,29,440,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ae71a7f433bc80cb5a11fe415be717a28" title=" " alt="" coords="128,29,249,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,29,80,55"/>
+<area shape="rect" title=" " alt="" coords="269,5,364,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b" title=" " alt="" coords="128,5,221,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,5,80,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a3e4dd2108abf3e2e092a25fd2c705d89" name="a3e4dd2108abf3e2e092a25fd2c705d89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e4dd2108abf3e2e092a25fd2c705d89">&#9670;&#160;</a></span>CriticalValueChooser()</h2>
+<a id="afd232583017ef776335c4837c0e6e05b" name="afd232583017ef776335c4837c0e6e05b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd232583017ef776335c4837c0e6e05b">&#9670;&#160;</a></span>criticalValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -797,7 +782,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> CriticalValueChooser </td>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> criticalValue </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -810,26 +795,26 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00110">110</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00108">108</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-15-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a3e4dd2108abf3e2e092a25fd2c705d89_cgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a3e4dd2108abf3e2e092a25fd2c705d89_cgraph" alt=""/></div>
-<map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a3e4dd2108abf3e2e092a25fd2c705d89_cgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a3e4dd2108abf3e2e092a25fd2c705d89_cgraph">
-<area shape="rect" title=" " alt="" coords="5,308,148,333"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="259,177,353,203"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a397f8534c2b3d08642e5040c40426ab7" title=" " alt="" coords="196,301,416,341"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc" title=" " alt="" coords="219,365,393,405"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aafee1a683d1176c61c7550e4d4061618" title=" " alt="" coords="506,5,595,31"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a009ffb066efa390caa4065842e0eadbb" title=" " alt="" coords="499,55,602,80"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#adf9374447e20d7d5f0a37a6ae528be36" title=" " alt="" coords="491,104,610,129"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#af90cb4a9778854df3b2e63ab08fae094" title=" " alt="" coords="507,153,594,179"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a0366f818da7975da8fda8d6fa88c8094" title=" " alt="" coords="491,203,611,228"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a2e9db776cf5fa5d35c998747371594a5" title=" " alt="" coords="523,252,578,277"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a8c037b918665a91b584f11a03df559fd" title=" " alt="" coords="517,301,585,327"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a1ce2edf271b7df5907ea9a3b100383fe" title=" " alt="" coords="464,351,637,391"/>
+<div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_afd232583017ef776335c4837c0e6e05b_cgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_afd232583017ef776335c4837c0e6e05b_cgraph" alt=""/></div>
+<map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_afd232583017ef776335c4837c0e6e05b_cgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_afd232583017ef776335c4837c0e6e05b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,308,99,333"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="209,177,304,203"/>
+<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a397f8534c2b3d08642e5040c40426ab7" title=" " alt="" coords="147,301,367,341"/>
+<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc" title=" " alt="" coords="170,365,343,405"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aafee1a683d1176c61c7550e4d4061618" title=" " alt="" coords="457,5,546,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a009ffb066efa390caa4065842e0eadbb" title=" " alt="" coords="450,55,553,80"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#adf9374447e20d7d5f0a37a6ae528be36" title=" " alt="" coords="442,104,561,129"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#af90cb4a9778854df3b2e63ab08fae094" title=" " alt="" coords="458,153,545,179"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a0366f818da7975da8fda8d6fa88c8094" title=" " alt="" coords="441,203,561,228"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a2e9db776cf5fa5d35c998747371594a5" title=" " alt="" coords="474,252,529,277"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a8c037b918665a91b584f11a03df559fd" title=" " alt="" coords="467,301,535,327"/>
+<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a1ce2edf271b7df5907ea9a3b100383fe" title=" " alt="" coords="415,351,588,391"/>
 </map>
 </div>
 <div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -837,73 +822,10 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-16-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a3e4dd2108abf3e2e092a25fd2c705d89_icgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a3e4dd2108abf3e2e092a25fd2c705d89_icgraph" alt=""/></div>
-<map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a3e4dd2108abf3e2e092a25fd2c705d89_icgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_a3e4dd2108abf3e2e092a25fd2c705d89_icgraph">
-<area shape="rect" title=" " alt="" coords="297,29,440,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ae71a7f433bc80cb5a11fe415be717a28" title=" " alt="" coords="128,29,249,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,29,80,55"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ae71a7f433bc80cb5a11fe415be717a28" name="ae71a7f433bc80cb5a11fe415be717a28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae71a7f433bc80cb5a11fe415be717a28">&#9670;&#160;</a></span>ComplexChooser()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> ComplexChooser </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html#l00042">42</a> of file <a class="el" href="../../d4/df5/analyticcomplexchooserengine_8cpp_source.html">analyticcomplexchooserengine.cpp</a>.</p>
-<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-17-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-17-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ae71a7f433bc80cb5a11fe415be717a28_cgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ae71a7f433bc80cb5a11fe415be717a28_cgraph" alt=""/></div>
-<map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ae71a7f433bc80cb5a11fe415be717a28_cgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ae71a7f433bc80cb5a11fe415be717a28_cgraph">
-<area shape="rect" title=" " alt="" coords="5,215,127,240"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aafee1a683d1176c61c7550e4d4061618" title=" " alt="" coords="675,5,765,31"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a009ffb066efa390caa4065842e0eadbb" title=" " alt="" coords="669,55,771,80"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a3e4dd2108abf3e2e092a25fd2c705d89" title=" " alt="" coords="175,215,317,240"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#af90cb4a9778854df3b2e63ab08fae094" title=" " alt="" coords="677,104,763,129"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a8c037b918665a91b584f11a03df559fd" title=" " alt="" coords="686,367,754,392"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ade86a9ec611c0494541d62333500574a" title=" " alt="" coords="197,387,295,412"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#ab54e54f2455bc8801c7e38cd9a66250f" title=" " alt="" coords="198,436,294,461"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#aa23e5e9a5ba069cd1389cca8f331a92a" title=" " alt="" coords="428,157,523,183"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a397f8534c2b3d08642e5040c40426ab7" title=" " alt="" coords="365,271,585,311"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc" title=" " alt="" coords="389,207,562,247"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#adf9374447e20d7d5f0a37a6ae528be36" title=" " alt="" coords="661,203,779,228"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a0366f818da7975da8fda8d6fa88c8094" title=" " alt="" coords="660,252,780,277"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a2e9db776cf5fa5d35c998747371594a5" title=" " alt="" coords="693,153,747,179"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a1ce2edf271b7df5907ea9a3b100383fe" title=" " alt="" coords="633,302,807,342"/>
-</map>
-</div>
-<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-18-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-18-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ae71a7f433bc80cb5a11fe415be717a28_icgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ae71a7f433bc80cb5a11fe415be717a28_icgraph" alt=""/></div>
-<map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ae71a7f433bc80cb5a11fe415be717a28_icgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_ae71a7f433bc80cb5a11fe415be717a28_icgraph">
-<area shape="rect" title=" " alt="" coords="128,29,249,55"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,29,80,55"/>
+<div class="center"><img src="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_afd232583017ef776335c4837c0e6e05b_icgraph.png" border="0" usemap="#ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_afd232583017ef776335c4837c0e6e05b_icgraph" alt=""/></div>
+<map name="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_afd232583017ef776335c4837c0e6e05b_icgraph" id="ada/de6/class_quant_lib_1_1_analytic_complex_chooser_engine_afd232583017ef776335c4837c0e6e05b_icgraph">
+<area shape="rect" title=" " alt="" coords="128,5,221,31"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,5,80,31"/>
 </map>
 </div>
 
@@ -930,7 +852,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d0a/analyticcomplexchooserengine_8hpp_source.html#l00040">40</a> of file <a class="el" href="../../d7/d0a/analyticcomplexchooserengine_8hpp_source.html">analyticcomplexchooserengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d86/pricingengines_2exotic_2analyticcomplexchooserengine_8hpp_source.html#l00040">40</a> of file <a class="el" href="../../d2/d86/pricingengines_2exotic_2analyticcomplexchooserengine_8hpp_source.html">analyticcomplexchooserengine.hpp</a>.</p>
 
 </div>
 </div>

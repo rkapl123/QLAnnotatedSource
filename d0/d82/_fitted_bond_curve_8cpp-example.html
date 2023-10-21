@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.30</div>
+   <div id="projectnumber">Fully annotated sources - version 1.32</div>
    </div>
   </td>
  </tr>
@@ -155,15 +155,14 @@ $(function() {
 <div class="line">            i = 100.0;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        std::vector&lt; ext::shared_ptr&lt;SimpleQuote&gt; &gt; quote;</div>
+<div class="line">        std::vector&lt; ext::shared_ptr&lt;SimpleQuote&gt;&gt; quote;</div>
 <div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> i : cleanPrice) {</div>
-<div class="line">            ext::shared_ptr&lt;SimpleQuote&gt; cp(<span class="keyword">new</span> <a id="_a4" name="_a4"></a><a class="code hl_class" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>(i));</div>
-<div class="line">            quote.push_back(cp);</div>
+<div class="line">            quote.push_back(ext::make_shared&lt;SimpleQuote&gt;(i));</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a5" name="_a5"></a><a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;Quote&gt;</a> quoteHandle[numberOfBonds];</div>
+<div class="line">        <a id="_a4" name="_a4"></a><a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;Quote&gt;</a> quoteHandle[numberOfBonds];</div>
 <div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;numberOfBonds; i++) {</div>
-<div class="line">            quoteHandle[i].<a id="a6" name="a6"></a><a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#af8149d5b913673dd152973e46cad15c4">linkTo</a>(quote[i]);</div>
+<div class="line">            quoteHandle[i].<a id="a5" name="a5"></a><a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#af8149d5b913673dd152973e46cad15c4">linkTo</a>(quote[i]);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> lengths[] = { 2, 4, 6, 8, 10, 12, 14, 16,</div>
@@ -173,13 +172,13 @@ $(function() {
 <div class="line">                           0.0450, 0.0475, 0.0500, 0.0525, 0.0550 };</div>
 <div class="line"> </div>
 <div class="line">        <a class="code hl_enumeration" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> frequency = <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#gga6d41db8ba0ea90d22df35889df452adaa508b18014c96e2d466c12b39d7f4e426">Annual</a>;</div>
-<div class="line">        <a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc = <a id="_a7" name="_a7"></a><a class="code hl_class" href="../../d5/d98/class_quant_lib_1_1_simple_day_counter.html">SimpleDayCounter</a>();</div>
+<div class="line">        <a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc = <a id="_a6" name="_a6"></a><a class="code hl_class" href="../../d5/d98/class_quant_lib_1_1_simple_day_counter.html">SimpleDayCounter</a>();</div>
 <div class="line">        <a class="code hl_enumeration" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> accrualConvention = <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707">ModifiedFollowing</a>;</div>
 <div class="line">        <a class="code hl_enumeration" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> convention = <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707">ModifiedFollowing</a>;</div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> redemption = 100.0;</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a8" name="_a8"></a><a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> calendar = <a id="_a9" name="_a9"></a><a class="code hl_class" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>();</div>
-<div class="line">        <a id="_a10" name="_a10"></a><a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> today = calendar.<a id="a11" name="a11"></a><a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b">adjust</a>(Date::todaysDate());</div>
+<div class="line">        <a id="_a7" name="_a7"></a><a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> calendar = <a id="_a8" name="_a8"></a><a class="code hl_class" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>();</div>
+<div class="line">        <a id="_a9" name="_a9"></a><a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> today = calendar.<a id="a10" name="a10"></a><a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b">adjust</a>(Date::todaysDate());</div>
 <div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> origToday = today;</div>
 <div class="line">        Settings::instance().evaluationDate() = today;</div>
 <div class="line"> </div>
@@ -188,43 +187,41 @@ $(function() {
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> bondSettlementDays = 0;</div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> curveSettlementDays = 0;</div>
 <div class="line"> </div>
-<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> bondSettlementDate = calendar.<a id="a12" name="a12"></a><a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(today, bondSettlementDays*Days);</div>
+<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> bondSettlementDate = calendar.<a id="a11" name="a11"></a><a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(today, bondSettlementDays*Days);</div>
 <div class="line"> </div>
 <div class="line">        cout &lt;&lt; endl;</div>
 <div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;Today&#39;s date: &quot;</span> &lt;&lt; today &lt;&lt; endl;</div>
 <div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;Bonds&#39; settlement date: &quot;</span> &lt;&lt; bondSettlementDate &lt;&lt; endl;</div>
 <div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;Calculating fit for 15 bonds.....&quot;</span> &lt;&lt; endl &lt;&lt; endl;</div>
 <div class="line"> </div>
-<div class="line">        std::vector&lt;ext::shared_ptr&lt;BondHelper&gt; &gt; instrumentsA;</div>
-<div class="line">        std::vector&lt;ext::shared_ptr&lt;RateHelper&gt; &gt; instrumentsB;</div>
+<div class="line">        std::vector&lt;ext::shared_ptr&lt;BondHelper&gt;&gt; instrumentsA;</div>
+<div class="line">        std::vector&lt;ext::shared_ptr&lt;RateHelper&gt;&gt; instrumentsB;</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j=0; j&lt;LENGTH(lengths); j++) {</div>
 <div class="line"> </div>
 <div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> maturity = calendar.<a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(bondSettlementDate, lengths[j]*Years);</div>
 <div class="line"> </div>
-<div class="line">            <a id="_a13" name="_a13"></a><a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> schedule(bondSettlementDate, maturity, <a id="_a14" name="_a14"></a><a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(frequency),</div>
+<div class="line">            <a id="_a12" name="_a12"></a><a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> schedule(bondSettlementDate, maturity, <a id="_a13" name="_a13"></a><a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(frequency),</div>
 <div class="line">                              calendar, accrualConvention, accrualConvention,</div>
 <div class="line">                              DateGeneration::Backward, <span class="keyword">false</span>);</div>
 <div class="line"> </div>
-<div class="line">            ext::shared_ptr&lt;BondHelper&gt; helperA(</div>
-<div class="line">                     <span class="keyword">new</span> <a id="_a15" name="_a15"></a><a class="code hl_class" href="../../d2/df1/class_quant_lib_1_1_fixed_rate_bond_helper.html">FixedRateBondHelper</a>(quoteHandle[j],</div>
+<div class="line">            <span class="keyword">auto</span> helperA = ext::make_shared&lt;FixedRateBondHelper&gt;(quoteHandle[j],</div>
 <div class="line">                                             bondSettlementDays,</div>
 <div class="line">                                             100.0,</div>
 <div class="line">                                             schedule,</div>
 <div class="line">                                             std::vector&lt;Rate&gt;(1,coupons[j]),</div>
 <div class="line">                                             dc,</div>
 <div class="line">                                             convention,</div>
-<div class="line">                                             redemption));</div>
+<div class="line">                                             redemption);</div>
 <div class="line"> </div>
-<div class="line">            ext::shared_ptr&lt;RateHelper&gt; helperB(</div>
-<div class="line">                     <span class="keyword">new</span> <a class="code hl_class" href="../../d2/df1/class_quant_lib_1_1_fixed_rate_bond_helper.html">FixedRateBondHelper</a>(quoteHandle[j],</div>
+<div class="line">            <span class="keyword">auto</span> helperB = ext::make_shared&lt;FixedRateBondHelper&gt;(quoteHandle[j],</div>
 <div class="line">                                             bondSettlementDays,</div>
 <div class="line">                                             100.0,</div>
 <div class="line">                                             schedule,</div>
 <div class="line">                                             std::vector&lt;Rate&gt;(1, coupons[j]),</div>
 <div class="line">                                             dc,</div>
 <div class="line">                                             convention,</div>
-<div class="line">                                             redemption));</div>
+<div class="line">                                             redemption);</div>
 <div class="line">            instrumentsA.push_back(helperA);</div>
 <div class="line">            instrumentsB.push_back(helperB);</div>
 <div class="line">        }</div>
@@ -234,50 +231,46 @@ $(function() {
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> tolerance = 1.0e-10;</div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> max = 5000;</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;YieldTermStructure&gt; ts0 (</div>
-<div class="line">              <span class="keyword">new</span> <a id="_a16" name="_a16"></a><a class="code hl_class" href="../../dd/db4/class_quant_lib_1_1_piecewise_yield_curve.html">PiecewiseYieldCurve&lt;Discount,LogLinear&gt;</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts0 = ext::make_shared&lt;PiecewiseYieldCurve&lt;Discount, LogLinear&gt;&gt;(curveSettlementDays,</div>
 <div class="line">                                                          calendar,</div>
 <div class="line">                                                          instrumentsB,</div>
-<div class="line">                                                          dc));</div>
+<div class="line">                                                          dc);</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a17" name="_a17"></a><a class="code hl_class" href="../../d9/d6c/class_quant_lib_1_1_exponential_splines_fitting.html">ExponentialSplinesFitting</a> exponentialSplines(constrainAtZero);</div>
+<div class="line">        <a id="_a14" name="_a14"></a><a class="code hl_class" href="../../d9/d6c/class_quant_lib_1_1_exponential_splines_fitting.html">ExponentialSplinesFitting</a> exponentialSplines(constrainAtZero);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts1 (</div>
-<div class="line">                  <span class="keyword">new</span> <a id="_a18" name="_a18"></a><a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts1 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                              calendar,</div>
 <div class="line">                                              instrumentsA,</div>
 <div class="line">                                              dc,</div>
 <div class="line">                                              exponentialSplines,</div>
 <div class="line">                                              tolerance,</div>
-<div class="line">                                              max));</div>
+<div class="line">                                              max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(a) exponential splines&quot;</span>, ts1);</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">        <a id="_a19" name="_a19"></a><a class="code hl_class" href="../../d7/dc0/class_quant_lib_1_1_simple_polynomial_fitting.html">SimplePolynomialFitting</a> simplePolynomial(3, constrainAtZero);</div>
+<div class="line">        <a id="_a15" name="_a15"></a><a class="code hl_class" href="../../d7/dc0/class_quant_lib_1_1_simple_polynomial_fitting.html">SimplePolynomialFitting</a> simplePolynomial(3, constrainAtZero);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts2 (</div>
-<div class="line">                    <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts2 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                calendar,</div>
 <div class="line">                                                instrumentsA,</div>
 <div class="line">                                                dc,</div>
 <div class="line">                                                simplePolynomial,</div>
 <div class="line">                                                tolerance,</div>
-<div class="line">                                                max));</div>
+<div class="line">                                                max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(b) simple polynomial&quot;</span>, ts2);</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">        <a id="_a20" name="_a20"></a><a class="code hl_class" href="../../d2/d95/class_quant_lib_1_1_nelson_siegel_fitting.html">NelsonSiegelFitting</a> nelsonSiegel;</div>
+<div class="line">        <a id="_a16" name="_a16"></a><a class="code hl_class" href="../../d2/d95/class_quant_lib_1_1_nelson_siegel_fitting.html">NelsonSiegelFitting</a> nelsonSiegel;</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts3 (</div>
-<div class="line">                        <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts3 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                    calendar,</div>
 <div class="line">                                                    instrumentsA,</div>
 <div class="line">                                                    dc,</div>
 <div class="line">                                                    nelsonSiegel,</div>
 <div class="line">                                                    tolerance,</div>
-<div class="line">                                                    max));</div>
+<div class="line">                                                    max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(c) Nelson-Siegel&quot;</span>, ts3);</div>
 <div class="line"> </div>
@@ -293,61 +286,57 @@ $(function() {
 <div class="line">            knotVector.push_back(knot);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a21" name="_a21"></a><a class="code hl_class" href="../../d7/da7/class_quant_lib_1_1_cubic_b_splines_fitting.html">CubicBSplinesFitting</a> cubicBSplines(knotVector, constrainAtZero);</div>
+<div class="line">        <a id="_a17" name="_a17"></a><a class="code hl_class" href="../../d7/da7/class_quant_lib_1_1_cubic_b_splines_fitting.html">CubicBSplinesFitting</a> cubicBSplines(knotVector, constrainAtZero);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts4 (</div>
-<div class="line">                       <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts4 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                   calendar,</div>
 <div class="line">                                                   instrumentsA,</div>
 <div class="line">                                                   dc,</div>
 <div class="line">                                                   cubicBSplines,</div>
 <div class="line">                                                   tolerance,</div>
-<div class="line">                                                   max));</div>
+<div class="line">                                                   max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(d) cubic B-splines&quot;</span>, ts4);</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a22" name="_a22"></a><a class="code hl_class" href="../../d8/d5e/class_quant_lib_1_1_svensson_fitting.html">SvenssonFitting</a> svensson;</div>
+<div class="line">        <a id="_a18" name="_a18"></a><a class="code hl_class" href="../../d8/d5e/class_quant_lib_1_1_svensson_fitting.html">SvenssonFitting</a> svensson;</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts5 (</div>
-<div class="line">                        <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts5 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                    calendar,</div>
 <div class="line">                                                    instrumentsA,</div>
 <div class="line">                                                    dc,</div>
 <div class="line">                                                    svensson,</div>
 <div class="line">                                                    tolerance,</div>
-<div class="line">                                                    max));</div>
+<div class="line">                                                    max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(e) Svensson&quot;</span>, ts5);</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a23" name="_a23"></a><a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> discountCurve(</div>
+<div class="line">        <a id="_a19" name="_a19"></a><a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> discountCurve(</div>
 <div class="line">            ext::make_shared&lt;FlatForward&gt;(</div>
 <div class="line">                                    curveSettlementDays, calendar, 0.01, dc));</div>
-<div class="line">        <a id="_a24" name="_a24"></a><a class="code hl_class" href="../../d7/d8e/class_quant_lib_1_1_spread_fitting_method.html">SpreadFittingMethod</a> nelsonSiegelSpread(</div>
+<div class="line">        <a id="_a20" name="_a20"></a><a class="code hl_class" href="../../d7/d8e/class_quant_lib_1_1_spread_fitting_method.html">SpreadFittingMethod</a> nelsonSiegelSpread(</div>
 <div class="line">                                    ext::make_shared&lt;NelsonSiegelFitting&gt;(),</div>
 <div class="line">                                    discountCurve);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts6 (</div>
-<div class="line">                        <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts6 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                    calendar,</div>
 <div class="line">                                                    instrumentsA,</div>
 <div class="line">                                                    dc,</div>
 <div class="line">                                                    nelsonSiegelSpread,</div>
 <div class="line">                                                    tolerance,</div>
-<div class="line">                                                    max));</div>
+<div class="line">                                                    max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(f) Nelson-Siegel spread&quot;</span>, ts6);</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">//Fixed kappa, and 7 coefficients</span></div>
 <div class="line">        <a class="code hl_class" href="../../d9/d6c/class_quant_lib_1_1_exponential_splines_fitting.html">ExponentialSplinesFitting</a> exponentialSplinesFixed(constrainAtZero,7,0.02);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts7(</div>
-<div class="line">                        <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts7 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                    calendar, </div>
 <div class="line">                                                    instrumentsA, </div>
 <div class="line">                                                    dc, </div>
 <div class="line">                                                    exponentialSplinesFixed, </div>
 <div class="line">                                                    tolerance, </div>
-<div class="line">                                                    max));</div>
+<div class="line">                                                    max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(g) exponential splines, fixed kappa&quot;</span>, ts7);</div>
 <div class="line"> </div>
@@ -370,7 +359,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;instrumentsA.size(); i++) {</div>
 <div class="line"> </div>
-<div class="line">            std::vector&lt;ext::shared_ptr&lt;CashFlow&gt; &gt; cfs =</div>
+<div class="line">            std::vector&lt;ext::shared_ptr&lt;CashFlow&gt;&gt; cfs =</div>
 <div class="line">                instrumentsA[i]-&gt;bond()-&gt;cashflows();</div>
 <div class="line"> </div>
 <div class="line">            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> cfSize = instrumentsA[i]-&gt;bond()-&gt;cashflows().size();</div>
@@ -425,9 +414,9 @@ $(function() {
 <div class="line">             &lt;&lt; endl</div>
 <div class="line">             &lt;&lt; endl;</div>
 <div class="line"> </div>
-<div class="line">        today = calendar.<a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(origToday,23,Months,convention);</div>
+<div class="line">        today = calendar.<a id="a21" name="a21"></a><a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#ab0c0b9fa2fb896f33b526ee8b53af48d">advance</a>(origToday,23,Months,convention);</div>
 <div class="line">        Settings::instance().evaluationDate() = today;</div>
-<div class="line">        bondSettlementDate = calendar.<a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(today, bondSettlementDays*Days);</div>
+<div class="line">        bondSettlementDate = calendar.<a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#ab0c0b9fa2fb896f33b526ee8b53af48d">advance</a>(today, bondSettlementDays*Days);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(a) exponential splines&quot;</span>, ts1);</div>
 <div class="line"> </div>
@@ -460,7 +449,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;instrumentsA.size(); i++) {</div>
 <div class="line"> </div>
-<div class="line">            std::vector&lt;ext::shared_ptr&lt;CashFlow&gt; &gt; cfs =</div>
+<div class="line">            std::vector&lt;ext::shared_ptr&lt;CashFlow&gt;&gt; cfs =</div>
 <div class="line">                instrumentsA[i]-&gt;bond()-&gt;cashflows();</div>
 <div class="line"> </div>
 <div class="line">            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> cfSize = instrumentsA[i]-&gt;bond()-&gt;cashflows().size();</div>
@@ -518,93 +507,85 @@ $(function() {
 <div class="line">        instrumentsB.erase(instrumentsB.begin(),</div>
 <div class="line">                           instrumentsB.begin()+1);</div>
 <div class="line"> </div>
-<div class="line">        today = calendar.<a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(origToday,24,Months,convention);</div>
+<div class="line">        today = calendar.<a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#ab0c0b9fa2fb896f33b526ee8b53af48d">advance</a>(origToday,24,Months,convention);</div>
 <div class="line">        Settings::instance().evaluationDate() = today;</div>
-<div class="line">        bondSettlementDate = calendar.<a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(today, bondSettlementDays*Days);</div>
+<div class="line">        bondSettlementDate = calendar.<a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#ab0c0b9fa2fb896f33b526ee8b53af48d">advance</a>(today, bondSettlementDays*Days);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;YieldTermStructure&gt; ts00 (</div>
-<div class="line">              <span class="keyword">new</span> <a class="code hl_class" href="../../dd/db4/class_quant_lib_1_1_piecewise_yield_curve.html">PiecewiseYieldCurve&lt;Discount,LogLinear&gt;</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts00 = ext::make_shared&lt;PiecewiseYieldCurve&lt;Discount, LogLinear&gt;&gt;(curveSettlementDays,</div>
 <div class="line">                                                          calendar,</div>
 <div class="line">                                                          instrumentsB,</div>
-<div class="line">                                                          dc));</div>
+<div class="line">                                                          dc);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts11 (</div>
-<div class="line">                  <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts11 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                              calendar,</div>
 <div class="line">                                              instrumentsA,</div>
 <div class="line">                                              dc,</div>
 <div class="line">                                              exponentialSplines,</div>
 <div class="line">                                              tolerance,</div>
-<div class="line">                                              max));</div>
+<div class="line">                                              max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(a) exponential splines&quot;</span>, ts11);</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts22 (</div>
-<div class="line">                    <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts22 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                calendar,</div>
 <div class="line">                                                instrumentsA,</div>
 <div class="line">                                                dc,</div>
 <div class="line">                                                simplePolynomial,</div>
 <div class="line">                                                tolerance,</div>
-<div class="line">                                                max));</div>
+<div class="line">                                                max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(b) simple polynomial&quot;</span>, ts22);</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts33 (</div>
-<div class="line">                        <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts33 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                    calendar,</div>
 <div class="line">                                                    instrumentsA,</div>
 <div class="line">                                                    dc,</div>
 <div class="line">                                                    nelsonSiegel,</div>
 <div class="line">                                                    tolerance,</div>
-<div class="line">                                                    max));</div>
+<div class="line">                                                    max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(c) Nelson-Siegel&quot;</span>, ts33);</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts44 (</div>
-<div class="line">                       <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts44 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                   calendar,</div>
 <div class="line">                                                   instrumentsA,</div>
 <div class="line">                                                   dc,</div>
 <div class="line">                                                   cubicBSplines,</div>
 <div class="line">                                                   tolerance,</div>
-<div class="line">                                                   max));</div>
+<div class="line">                                                   max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(d) cubic B-splines&quot;</span>, ts44);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts55 (</div>
-<div class="line">                       <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts55 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                   calendar,</div>
 <div class="line">                                                   instrumentsA,</div>
 <div class="line">                                                   dc,</div>
 <div class="line">                                                   svensson,</div>
 <div class="line">                                                   tolerance,</div>
-<div class="line">                                                   max));</div>
+<div class="line">                                                   max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(e) Svensson&quot;</span>, ts55);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts66 (</div>
-<div class="line">                        <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays,</div>
+<div class="line">        <span class="keyword">auto</span> ts66 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                    calendar,</div>
 <div class="line">                                                    instrumentsA,</div>
 <div class="line">                                                    dc,</div>
 <div class="line">                                                    nelsonSiegelSpread,</div>
 <div class="line">                                                    tolerance,</div>
-<div class="line">                                                    max));</div>
+<div class="line">                                                    max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(f) Nelson-Siegel spread&quot;</span>, ts66);</div>
 <div class="line"> </div>
-<div class="line">        ext::shared_ptr&lt;FittedBondDiscountCurve&gt; ts77(</div>
-<div class="line">                        <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">FittedBondDiscountCurve</a>(curveSettlementDays, </div>
+<div class="line">        <span class="keyword">auto</span> ts77 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays, </div>
 <div class="line">                                                    calendar, </div>
 <div class="line">                                                    instrumentsA, </div>
 <div class="line">                                                    dc, </div>
 <div class="line">                                                    exponentialSplinesFixed, </div>
 <div class="line">                                                    tolerance, </div>
-<div class="line">                                                    max));</div>
+<div class="line">                                                    max);</div>
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(g) exponential, fixed kappa&quot;</span>, ts77);</div>
 <div class="line"> </div>
@@ -621,7 +602,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;instrumentsA.size(); i++) {</div>
 <div class="line"> </div>
-<div class="line">            std::vector&lt;ext::shared_ptr&lt;CashFlow&gt; &gt; cfs =</div>
+<div class="line">            std::vector&lt;ext::shared_ptr&lt;CashFlow&gt;&gt; cfs =</div>
 <div class="line">                instrumentsA[i]-&gt;bond()-&gt;cashflows();</div>
 <div class="line"> </div>
 <div class="line">            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> cfSize = instrumentsA[i]-&gt;bond()-&gt;cashflows().size();</div>
@@ -678,7 +659,7 @@ $(function() {
 <div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> k=0; k&lt;LENGTH(lengths)-1; k++) {</div>
 <div class="line"> </div>
 <div class="line">            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> P = instrumentsA[k]-&gt;quote()-&gt;value();</div>
-<div class="line">            <span class="keyword">const</span> <a id="_a25" name="_a25"></a><a class="code hl_class" href="../../d8/d2e/class_quant_lib_1_1_bond.html">Bond</a>&amp; b = *instrumentsA[k]-&gt;bond();</div>
+<div class="line">            <span class="keyword">const</span> <a id="_a22" name="_a22"></a><a class="code hl_class" href="../../d8/d2e/class_quant_lib_1_1_bond.html">Bond</a>&amp; b = *instrumentsA[k]-&gt;bond();</div>
 <div class="line">            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> ytm = BondFunctions::yield(b, P,</div>
 <div class="line">                                            dc, Compounded, frequency,</div>
 <div class="line">                                            today);</div>
@@ -707,7 +688,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;instrumentsA.size(); i++) {</div>
 <div class="line"> </div>
-<div class="line">            std::vector&lt;ext::shared_ptr&lt;CashFlow&gt; &gt; cfs =</div>
+<div class="line">            std::vector&lt;ext::shared_ptr&lt;CashFlow&gt;&gt; cfs =</div>
 <div class="line">                instrumentsA[i]-&gt;bond()-&gt;cashflows();</div>
 <div class="line"> </div>
 <div class="line">            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> cfSize = instrumentsA[i]-&gt;bond()-&gt;cashflows().size();</div>
@@ -770,21 +751,18 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html_ab3fc4d2c4ba5243c3f5d51dcb3077ceb"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">QuantLib::Calendar::advance</a></div><div class="ttdeci">Date advance(const Date &amp;, Integer n, TimeUnit unit, BusinessDayConvention convention=Following, bool endOfMonth=false) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d2e/calendar_8cpp_source.html#l00130">calendar.cpp:130</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_cubic_b_splines_fitting_html"><div class="ttname"><a href="../../d7/da7/class_quant_lib_1_1_cubic_b_splines_fitting.html">QuantLib::CubicBSplinesFitting</a></div><div class="ttdoc">CubicSpline B-splines fitting method.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/nonlinearfittingmethods_8hpp_source.html#l00164">nonlinearfittingmethods.hpp:165</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_date_html_ab0c0b9fa2fb896f33b526ee8b53af48d"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#ab0c0b9fa2fb896f33b526ee8b53af48d">QuantLib::Date::advance</a></div><div class="ttdeci">static Date advance(const Date &amp;d, Integer units, TimeUnit)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da2/date_8cpp_source.html#l00139">date.cpp:139</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_day_counter_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html">QuantLib::DayCounter</a></div><div class="ttdoc">day counter class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00044">daycounter.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_day_counter_html_a28170faaec75755611ff6fc220c1fab8"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8">QuantLib::DayCounter::yearFraction</a></div><div class="ttdeci">Time yearFraction(const Date &amp;, const Date &amp;, const Date &amp;refPeriodStart=Date(), const Date &amp;refPeriodEnd=Date()) const</div><div class="ttdoc">Returns the period between two dates as a fraction of year.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00128">daycounter.hpp:128</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_exponential_splines_fitting_html"><div class="ttname"><a href="../../d9/d6c/class_quant_lib_1_1_exponential_splines_fitting.html">QuantLib::ExponentialSplinesFitting</a></div><div class="ttdoc">Exponential-splines fitting method.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/nonlinearfittingmethods_8hpp_source.html#l00049">nonlinearfittingmethods.hpp:50</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_fitted_bond_discount_curve_html"><div class="ttname"><a href="../../d9/d6d/class_quant_lib_1_1_fitted_bond_discount_curve.html">QuantLib::FittedBondDiscountCurve</a></div><div class="ttdoc">Discount curve fitted to a set of fixed-coupon bonds.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d94/fittedbonddiscountcurve_8hpp_source.html#l00080">fittedbonddiscountcurve.hpp:81</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_fixed_rate_bond_helper_html"><div class="ttname"><a href="../../d2/df1/class_quant_lib_1_1_fixed_rate_bond_helper.html">QuantLib::FixedRateBondHelper</a></div><div class="ttdoc">Fixed-coupon bond helper for curve bootstrap.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dae/bondhelpers_8hpp_source.html#l00075">bondhelpers.hpp:75</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_nelson_siegel_fitting_html"><div class="ttname"><a href="../../d2/d95/class_quant_lib_1_1_nelson_siegel_fitting.html">QuantLib::NelsonSiegelFitting</a></div><div class="ttdoc">Nelson-Siegel fitting method.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/nonlinearfittingmethods_8hpp_source.html#l00093">nonlinearfittingmethods.hpp:94</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_piecewise_yield_curve_html"><div class="ttname"><a href="../../dd/db4/class_quant_lib_1_1_piecewise_yield_curve.html">QuantLib::PiecewiseYieldCurve</a></div><div class="ttdoc">Piecewise yield term structure.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d9f/piecewiseyieldcurve_8hpp_source.html#l00062">piecewiseyieldcurve.hpp:64</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_relinkable_handle_html"><div class="ttname"><a href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">QuantLib::RelinkableHandle</a></div><div class="ttdoc">Relinkable handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00112">handle.hpp:112</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_relinkable_handle_html_af8149d5b913673dd152973e46cad15c4"><div class="ttname"><a href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#af8149d5b913673dd152973e46cad15c4">QuantLib::RelinkableHandle::linkTo</a></div><div class="ttdeci">void linkTo(const ext::shared_ptr&lt; T &gt; &amp;, bool registerAsObserver=true)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00187">handle.hpp:187</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_schedule_html"><div class="ttname"><a href="../../d5/d5b/class_quant_lib_1_1_schedule.html">QuantLib::Schedule</a></div><div class="ttdoc">Payment schedule.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd1/schedule_8hpp_source.html#l00040">schedule.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simple_day_counter_html"><div class="ttname"><a href="../../d5/d98/class_quant_lib_1_1_simple_day_counter.html">QuantLib::SimpleDayCounter</a></div><div class="ttdoc">Simple day counter for reproducing theoretical calculations.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d26/simpledaycounter_8hpp_source.html#l00046">simpledaycounter.hpp:46</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simple_polynomial_fitting_html"><div class="ttname"><a href="../../d7/dc0/class_quant_lib_1_1_simple_polynomial_fitting.html">QuantLib::SimplePolynomialFitting</a></div><div class="ttdoc">Simple polynomial fitting method.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/nonlinearfittingmethods_8hpp_source.html#l00204">nonlinearfittingmethods.hpp:205</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_simple_quote_html"><div class="ttname"><a href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">QuantLib::SimpleQuote</a></div><div class="ttdoc">market element returning a stored value</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d17/simplequote_8hpp_source.html#l00033">simplequote.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_spread_fitting_method_html"><div class="ttname"><a href="../../d7/d8e/class_quant_lib_1_1_spread_fitting_method.html">QuantLib::SpreadFittingMethod</a></div><div class="ttdoc">Spread fitting method helper.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/nonlinearfittingmethods_8hpp_source.html#l00232">nonlinearfittingmethods.hpp:233</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_svensson_fitting_html"><div class="ttname"><a href="../../d8/d5e/class_quant_lib_1_1_svensson_fitting.html">QuantLib::SvenssonFitting</a></div><div class="ttdoc">Svensson Fitting method.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/nonlinearfittingmethods_8hpp_source.html#l00125">nonlinearfittingmethods.hpp:126</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_t_a_r_g_e_t_html"><div class="ttname"><a href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">QuantLib::TARGET</a></div><div class="ttdoc">TARGET calendar</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d69/target_8hpp_source.html#l00050">target.hpp:50</a></div></div>

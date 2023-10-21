@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.30</div>
+   <div id="projectnumber">Fully annotated sources - version 1.32</div>
    </div>
   </td>
  </tr>
@@ -81,8 +81,7 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle"><div class="title">Finite-differences framework</div></div>
 </div><!--header-->
 <div class="contents">
@@ -128,9 +127,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_quant_lib_1_1_mixed_scheme.html">MixedScheme&lt; Operator &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mixed (explicit/implicit) scheme for finite difference methods.  <a href="../../de/de3/class_quant_lib_1_1_mixed_scheme.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6a/class_quant_lib_1_1_step_condition_set.html">StepConditionSet&lt; array_type &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parallel evolver for multiple arrays.  <a href="../../d3/d6a/class_quant_lib_1_1_step_condition_set.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dda/class_quant_lib_1_1_step_condition.html">StepCondition&lt; array_type &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">condition to be applied at every time step  <a href="../../dc/dda/class_quant_lib_1_1_step_condition.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,35 +139,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d06/class_quant_lib_1_1_tridiagonal_operator.html">TridiagonalOperator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base implementation for tridiagonal operator.  <a href="../../db/d06/class_quant_lib_1_1_tridiagonal_operator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ga99062cef45cec7825cfdf7b0f8e1344c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d3/dc7/class_quant_lib_1_1_pde_operator.html">PdeOperator</a>&lt; <a class="el" href="../../dc/de4/class_quant_lib_1_1_pde_b_s_m.html">PdeBSM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d08/group__findiff.html#ga99062cef45cec7825cfdf7b0f8e1344c">BSMTermOperator</a></td></tr>
-<tr class="memdesc:ga99062cef45cec7825cfdf7b0f8e1344c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Black-Scholes-Merton differential operator.  <a href="../../da/d08/group__findiff.html#ga99062cef45cec7825cfdf7b0f8e1344c">More...</a><br /></td></tr>
-<tr class="separator:ga99062cef45cec7825cfdf7b0f8e1344c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >This framework (corresponding to the ql/methods/finitedifferences directory) contains basic building blocks for the numerical solution of partial differential equations by means of finite-difference methods. </p>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="ga99062cef45cec7825cfdf7b0f8e1344c" name="ga99062cef45cec7825cfdf7b0f8e1344c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga99062cef45cec7825cfdf7b0f8e1344c">&#9670;&#160;</a></span>BSMTermOperator</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="../../d3/dc7/class_quant_lib_1_1_pde_operator.html">PdeOperator</a>&lt;<a class="el" href="../../dc/de4/class_quant_lib_1_1_pde_b_s_m.html">PdeBSM</a>&gt; <a class="el" href="../../da/d08/group__findiff.html#ga99062cef45cec7825cfdf7b0f8e1344c">BSMTermOperator</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Black-Scholes-Merton differential operator. </p>
-<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000084">Tests:</a></b></dt><dd>coefficients are tested against constant BSM operator </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../de/dce/bsmtermoperator_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../de/dce/bsmtermoperator_8hpp_source.html">bsmtermoperator.hpp</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

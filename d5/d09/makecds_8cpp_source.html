@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.30</div>
+   <div id="projectnumber">Fully annotated sources - version 1.32</div>
    </div>
   </td>
  </tr>
@@ -160,10 +160,10 @@ $(function() {
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                          <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547">Unadjusted</a>, rule_, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        ext::shared_ptr&lt;CreditDefaultSwap&gt; cds =</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            ext::shared_ptr&lt;CreditDefaultSwap&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d2/de0/class_quant_lib_1_1_credit_default_swap.html">CreditDefaultSwap</a>(</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            ext::make_shared&lt;CreditDefaultSwap&gt;(</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                side_, nominal_, upfrontRate_, couponRate_, schedule, <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18">Following</a>,</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                dayCounter_, <span class="keyword">true</span>, <span class="keyword">true</span>, protectionStart, upfrontDate,</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                ext::shared_ptr&lt;Claim&gt;(), lastPeriodDayCounter_, <span class="keyword">true</span>, tradeDate, cashSettlementDays_));</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                ext::shared_ptr&lt;Claim&gt;(), lastPeriodDayCounter_, <span class="keyword">true</span>, tradeDate, cashSettlementDays_);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        cds-&gt;setPricingEngine(engine_);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span> cds;</div>
@@ -216,8 +216,8 @@ $(function() {
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="../../d6/d31/class_quant_lib_1_1_make_credit_default_swap.html#aa10367154e09049e6eb84b8e6c9c952a">  129</a></span>    <a class="code hl_class" href="../../d6/d31/class_quant_lib_1_1_make_credit_default_swap.html">MakeCreditDefaultSwap</a> &amp;<a class="code hl_function" href="../../d6/d31/class_quant_lib_1_1_make_credit_default_swap.html#aa10367154e09049e6eb84b8e6c9c952a">MakeCreditDefaultSwap::withPricingEngine</a>(</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keyword">const</span> ext::shared_ptr&lt;PricingEngine&gt; &amp;<a class="code hl_class" href="../../d9/d23/classengine.html">engine</a>) {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <a class="code hl_variable" href="../../d6/d31/class_quant_lib_1_1_make_credit_default_swap.html#aa9d7ce6401763605e75b3714481c1057">engine_</a> = <a class="code hl_class" href="../../d9/d23/classengine.html">engine</a>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keyword">const</span> ext::shared_ptr&lt;PricingEngine&gt; &amp;engine) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <a class="code hl_variable" href="../../d6/d31/class_quant_lib_1_1_make_credit_default_swap.html#aa9d7ce6401763605e75b3714481c1057">engine_</a> = engine;</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
@@ -260,7 +260,6 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_settings_html_a95055e9410ed0465a5f30d3ffc90c1d3"><div class="ttname"><a href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3">QuantLib::Settings::evaluationDate</a></div><div class="ttdeci">DateProxy &amp; evaluationDate()</div><div class="ttdoc">the date at which pricing is to be performed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0f/settings_8hpp_source.html#l00147">settings.hpp:147</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_singleton_html_ab7455b7e1235d292c444095842349291"><div class="ttname"><a href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">QuantLib::Singleton&lt; Settings &gt;::instance</a></div><div class="ttdeci">static Settings &amp; instance()</div><div class="ttdoc">access to the unique instance</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/singleton_8hpp_source.html#l00068">singleton.hpp:104</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_weekends_only_html"><div class="ttname"><a href="../../d7/d5c/class_quant_lib_1_1_weekends_only.html">QuantLib::WeekendsOnly</a></div><div class="ttdoc">Weekends-only calendar.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/de9/weekendsonly_8hpp_source.html#l00038">weekendsonly.hpp:38</a></div></div>
-<div class="ttc" id="aclassengine_html"><div class="ttname"><a href="../../d9/d23/classengine.html">engine</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54">QuantLib::Months</a></div><div class="ttdeci">@ Months</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00039">timeunit.hpp:39</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">QuantLib::Days</a></div><div class="ttdeci">@ Days</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00037">timeunit.hpp:37</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547">QuantLib::Unadjusted</a></div><div class="ttdeci">@ Unadjusted</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00058">businessdayconvention.hpp:58</a></div></div>

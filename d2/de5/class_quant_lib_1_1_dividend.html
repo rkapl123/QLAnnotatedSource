@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.30</div>
+   <div id="projectnumber">Fully annotated sources - version 1.32</div>
    </div>
   </td>
  </tr>
@@ -102,12 +102,14 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../dc/de9/class_quant_lib_1_1_dividend__inherit__graph.png" border="0" usemap="#a_dividend_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_dividend_inherit__map" id="a_dividend_inherit__map">
-<area shape="rect" title="Predetermined cash flow." alt="" coords="104,695,200,867"/>
-<area shape="rect" href="../../de/d6a/class_quant_lib_1_1_fixed_dividend.html" title="Predetermined cash flow." alt="" coords="5,959,133,1057"/>
-<area shape="rect" href="../../de/d1c/class_quant_lib_1_1_fractional_dividend.html" title="Predetermined cash flow." alt="" coords="158,915,311,1101"/>
-<area shape="rect" href="../../d9/dde/class_quant_lib_1_1_cash_flow.html" title="Base class for cash flows." alt="" coords="81,416,223,647"/>
-<area shape="rect" href="../../d2/d6c/class_quant_lib_1_1_event.html" title="Base class for event." alt="" coords="94,225,210,368"/>
-<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="79,5,225,177"/>
+<area shape="rect" title="Predetermined cash flow." alt="" coords="120,915,216,1087"/>
+<area shape="rect" href="../../de/d6a/class_quant_lib_1_1_fixed_dividend.html" title="Predetermined cash flow." alt="" coords="21,1179,149,1277"/>
+<area shape="rect" href="../../de/d1c/class_quant_lib_1_1_fractional_dividend.html" title="Predetermined cash flow." alt="" coords="174,1135,327,1321"/>
+<area shape="rect" href="../../d9/dde/class_quant_lib_1_1_cash_flow.html" title="Base class for cash flows." alt="" coords="90,607,246,867"/>
+<area shape="rect" href="../../d2/d6c/class_quant_lib_1_1_event.html" title="Base class for event." alt="" coords="21,335,137,478"/>
+<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="5,13,152,199"/>
+<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html" title="Framework for calculation on demand and result caching." alt="" coords="161,255,357,559"/>
+<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="177,5,359,207"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -117,24 +119,20 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/dbc/class_quant_lib_1_1_dividend__coll__graph.png" border="0" usemap="#a_dividend_coll__map" alt="Collaboration graph"/></div>
 <map name="a_dividend_coll__map" id="a_dividend_coll__map">
-<area shape="rect" title="Predetermined cash flow." alt="" coords="437,2364,533,2521"/>
-<area shape="rect" href="../../d9/dde/class_quant_lib_1_1_cash_flow.html" title="Base class for cash flows." alt="" coords="307,1748,448,1979"/>
-<area shape="rect" href="../../d2/d6c/class_quant_lib_1_1_event.html" title="Base class for event." alt="" coords="319,1220,435,1363"/>
-<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="304,1028,451,1171"/>
-<area shape="rect" title=" " alt="" coords="536,654,664,694"/>
-<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="405,353,587,540"/>
-<area shape="rect" title=" " alt="" coords="320,654,512,694"/>
-<area shape="rect" title=" " alt="" coords="401,236,591,291"/>
-<area shape="rect" title=" " alt="" coords="459,108,634,148"/>
-<area shape="rect" title=" " alt="" coords="293,108,435,148"/>
-<area shape="rect" title=" " alt="" coords="558,5,597,45"/>
-<area shape="rect" title=" " alt="" coords="613,172,691,212"/>
-<area shape="rect" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html" title="global repository for run&#45;time library settings" alt="" coords="143,823,337,965"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title=" " alt="" coords="80,603,296,745"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html" title="Basic support for the singleton pattern." alt="" coords="110,375,266,518"/>
-<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="5,654,56,694"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="473,1425,647,2301"/>
-<area shape="rect" title=" " alt="" coords="513,1271,607,1311"/>
+<area shape="rect" title="Predetermined cash flow." alt="" coords="391,2220,487,2377"/>
+<area shape="rect" href="../../d9/dde/class_quant_lib_1_1_cash_flow.html" title="Base class for cash flows." alt="" coords="249,1589,405,1849"/>
+<area shape="rect" href="../../d2/d6c/class_quant_lib_1_1_event.html" title="Base class for event." alt="" coords="323,1025,439,1167"/>
+<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="258,695,405,867"/>
+<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html" title="Framework for calculation on demand and result caching." alt="" coords="103,973,299,1219"/>
+<area shape="rect" title=" " alt="" coords="233,592,361,632"/>
+<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="67,343,249,529"/>
+<area shape="rect" title=" " alt="" coords="87,225,229,280"/>
+<area shape="rect" title=" " alt="" coords="5,108,180,148"/>
+<area shape="rect" title=" " alt="" coords="231,108,309,148"/>
+<area shape="rect" title=" " alt="" coords="251,5,289,45"/>
+<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="182,761,233,801"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="429,1281,604,2157"/>
+<area shape="rect" title=" " alt="" coords="470,1076,563,1116"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -157,6 +155,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0eceff36ab228de10ce08f52f90de9a4 inherit pub_methods_class_quant_lib_1_1_cash_flow"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dde/class_quant_lib_1_1_cash_flow.html#a0eceff36ab228de10ce08f52f90de9a4">hasOccurred</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;refDate=<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(), ext::optional&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt; includeRefDate=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a>) const override</td></tr>
 <tr class="memdesc:a0eceff36ab228de10ce08f52f90de9a4 inherit pub_methods_class_quant_lib_1_1_cash_flow"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true if an event has already occurred before a date  <a href="../../d9/dde/class_quant_lib_1_1_cash_flow.html#a0eceff36ab228de10ce08f52f90de9a4">More...</a><br /></td></tr>
 <tr class="separator:a0eceff36ab228de10ce08f52f90de9a4 inherit pub_methods_class_quant_lib_1_1_cash_flow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1127cccc9668a02247dc139d27121708 inherit pub_methods_class_quant_lib_1_1_cash_flow"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dde/class_quant_lib_1_1_cash_flow.html#a1127cccc9668a02247dc139d27121708">performCalculations</a> () const override</td></tr>
+<tr class="separator:a1127cccc9668a02247dc139d27121708 inherit pub_methods_class_quant_lib_1_1_cash_flow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15fcde18fca25b74fb500bc23dede555 inherit pub_methods_class_quant_lib_1_1_cash_flow"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dde/class_quant_lib_1_1_cash_flow.html#a15fcde18fca25b74fb500bc23dede555">exCouponDate</a> () const</td></tr>
 <tr class="memdesc:a15fcde18fca25b74fb500bc23dede555 inherit pub_methods_class_quant_lib_1_1_cash_flow"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the date that the cash flow trades exCoupon  <a href="../../d9/dde/class_quant_lib_1_1_cash_flow.html#a15fcde18fca25b74fb500bc23dede555">More...</a><br /></td></tr>
 <tr class="separator:a15fcde18fca25b74fb500bc23dede555 inherit pub_methods_class_quant_lib_1_1_cash_flow"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,16 +173,76 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a522aacdd0f2408fe5e46527a6db999b4">operator=</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
 <tr class="separator:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c84088bdd3ac6402298298ee8b0d904 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a8c84088bdd3ac6402298298ee8b0d904">Observable</a> (<a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a8c84088bdd3ac6402298298ee8b0d904 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a238982d700aae8ec199087af2af967c1 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a238982d700aae8ec199087af2af967c1">operator=</a> (<a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a238982d700aae8ec199087af2af967c1 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a99f4333cda953ce3bfdc958ccea5fbf9">~Observable</a> ()=default</td></tr>
 <tr class="separator:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a> ()</td></tr>
 <tr class="separator:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_quant_lib_1_1_lazy_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_lazy_object')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html">LazyObject</a></td></tr>
+<tr class="memitem:a6badf169db619841c91a27420cbdf142 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a6badf169db619841c91a27420cbdf142">LazyObject</a> ()</td></tr>
+<tr class="separator:a6badf169db619841c91a27420cbdf142 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7196dd7d298381de7f460e46652842 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#aea7196dd7d298381de7f460e46652842">~LazyObject</a> () override=default</td></tr>
+<tr class="separator:aea7196dd7d298381de7f460e46652842 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
+<tr class="separator:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd67152220756423ea944b5dd0b5f1a inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a5cd67152220756423ea944b5dd0b5f1a">isCalculated</a> () const</td></tr>
+<tr class="separator:a5cd67152220756423ea944b5dd0b5f1a inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3660c80fd1e55d3fddc804a0d7a94fee inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a3660c80fd1e55d3fddc804a0d7a94fee">forwardFirstNotificationOnly</a> ()</td></tr>
+<tr class="separator:a3660c80fd1e55d3fddc804a0d7a94fee inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee394ca135f85485023ce3dc037149c inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a2ee394ca135f85485023ce3dc037149c">alwaysForwardNotifications</a> ()</td></tr>
+<tr class="separator:a2ee394ca135f85485023ce3dc037149c inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a467a786be42a2165aa15a26709674547 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a467a786be42a2165aa15a26709674547">recalculate</a> ()</td></tr>
+<tr class="separator:a467a786be42a2165aa15a26709674547 inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8698b462ce90fe56b15ce7a0192d3e inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#abd8698b462ce90fe56b15ce7a0192d3e">freeze</a> ()</td></tr>
+<tr class="separator:abd8698b462ce90fe56b15ce7a0192d3e inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c02da24a82bc72024a8e8d48af0fca inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a26c02da24a82bc72024a8e8d48af0fca">unfreeze</a> ()</td></tr>
+<tr class="separator:a26c02da24a82bc72024a8e8d48af0fca inherit pub_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
+<tr class="memitem:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a52ef9232283da6f842e4574afeb854a0">Observer</a> ()=default</td></tr>
+<tr class="separator:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#af6a9d3ca0b7f388f3b7ccb1eccf11f63">Observer</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
+<tr class="separator:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6810b3645967da11d5f5d4804d37bacc inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a6810b3645967da11d5f5d4804d37bacc">operator=</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
+<tr class="separator:a6810b3645967da11d5f5d4804d37bacc inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cb58450d0039d83b21363773e589615 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a0cb58450d0039d83b21363773e589615">~Observer</a> ()</td></tr>
+<tr class="separator:a0cb58450d0039d83b21363773e589615 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6ade205ed506bf712da2704f80a73a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#ae98429250f6997df7b87f4b37454609e">iterator</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a> (const ext::shared_ptr&lt; <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &gt; &amp;)</td></tr>
+<tr class="separator:aa6ade205ed506bf712da2704f80a73a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51d57eb97a3a57312a47bda29235f182 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a51d57eb97a3a57312a47bda29235f182">registerWithObservables</a> (const ext::shared_ptr&lt; <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &gt; &amp;)</td></tr>
+<tr class="separator:a51d57eb97a3a57312a47bda29235f182 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ce7359ad0f73a54dba555be24855804 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a4ce7359ad0f73a54dba555be24855804">unregisterWith</a> (const ext::shared_ptr&lt; <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &gt; &amp;)</td></tr>
+<tr class="separator:a4ce7359ad0f73a54dba555be24855804 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c19cb502f3b720b99b176ea6cc7e319 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a0c19cb502f3b720b99b176ea6cc7e319">unregisterWithAll</a> ()</td></tr>
+<tr class="separator:a0c19cb502f3b720b99b176ea6cc7e319 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b02345a8a15d3c5ea2844a2253f510 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a99b02345a8a15d3c5ea2844a2253f510">update</a> ()=0</td></tr>
+<tr class="separator:a99b02345a8a15d3c5ea2844a2253f510 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d53f9669c128dadc74a5d044a7c8e68 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a3d53f9669c128dadc74a5d044a7c8e68">deepUpdate</a> ()</td></tr>
+<tr class="separator:a3d53f9669c128dadc74a5d044a7c8e68 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Visitability</h2></td></tr>
 <tr class="memitem:ae66f66b0d2874fc0d466bc1ef6dd2976"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/de5/class_quant_lib_1_1_dividend.html#ae66f66b0d2874fc0d466bc1ef6dd2976">date_</a></td></tr>
 <tr class="separator:ae66f66b0d2874fc0d466bc1ef6dd2976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fcc1b62510947fbc30b2952fff63c2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/de5/class_quant_lib_1_1_dividend.html#a6fcc1b62510947fbc30b2952fff63c2d">accept</a> (<a class="el" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a> &amp;) override</td></tr>
 <tr class="separator:a6fcc1b62510947fbc30b2952fff63c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
+<tr class="memitem:ae98429250f6997df7b87f4b37454609e inherit pub_types_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">typedef set_type::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#ae98429250f6997df7b87f4b37454609e">iterator</a></td></tr>
+<tr class="separator:ae98429250f6997df7b87f4b37454609e inherit pub_types_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_quant_lib_1_1_lazy_object"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_quant_lib_1_1_lazy_object')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html">LazyObject</a></td></tr>
+<tr class="memitem:a082ff96da379d5e17436372ccb3c0972 inherit pro_methods_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a082ff96da379d5e17436372ccb3c0972">calculate</a> () const</td></tr>
+<tr class="separator:a082ff96da379d5e17436372ccb3c0972 inherit pro_methods_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_quant_lib_1_1_lazy_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_quant_lib_1_1_lazy_object')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html">LazyObject</a></td></tr>
+<tr class="memitem:abcf8c3b096b3eea8688019abe7180471 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#abcf8c3b096b3eea8688019abe7180471">calculated_</a> = false</td></tr>
+<tr class="separator:abcf8c3b096b3eea8688019abe7180471 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e3e9b2ee0ed5ab8aa688b9422d8138 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a72e3e9b2ee0ed5ab8aa688b9422d8138">frozen_</a> = false</td></tr>
+<tr class="separator:a72e3e9b2ee0ed5ab8aa688b9422d8138 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b368dcda2c9e791f5a8fc63de3c510 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/class_quant_lib_1_1_lazy_object.html#a52b368dcda2c9e791f5a8fc63de3c510">alwaysForward_</a></td></tr>
+<tr class="separator:a52b368dcda2c9e791f5a8fc63de3c510 inherit pro_attribs_class_quant_lib_1_1_lazy_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Predetermined cash flow. </p>
@@ -270,19 +330,6 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="../../d9/dde/class_quant_lib_1_1_cash_flow.html#a9b47a18fd731fee50de8227ea00f85ca">CashFlow</a>.</p>
 
 <p>Implemented in <a class="el" href="../../de/d6a/class_quant_lib_1_1_fixed_dividend.html#a6ae6aa2462b7305b78f7d58b260d226f">FixedDividend</a>, and <a class="el" href="../../de/d1c/class_quant_lib_1_1_fractional_dividend.html#a6ae6aa2462b7305b78f7d58b260d226f">FractionalDividend</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d2/de5/class_quant_lib_1_1_dividend_a70c7bd9b42c70c09b03573a88b6c6945_icgraph.png" border="0" usemap="#ad2/de5/class_quant_lib_1_1_dividend_a70c7bd9b42c70c09b03573a88b6c6945_icgraph" alt=""/></div>
-<map name="ad2/de5/class_quant_lib_1_1_dividend_a70c7bd9b42c70c09b03573a88b6c6945_icgraph" id="ad2/de5/class_quant_lib_1_1_dividend_a70c7bd9b42c70c09b03573a88b6c6945_icgraph">
-<area shape="rect" title="returns the amount of the cash flow" alt="" coords="240,77,305,102"/>
-<area shape="rect" href="../../d6/da3/class_quant_lib_1_1_f_d_dividend_engine_base.html#aea3daad8d36c75b1bd1690534939575e" title=" " alt="" coords="5,5,192,45"/>
-<area shape="rect" href="../../d3/de5/class_quant_lib_1_1detail_1_1_dividend_adder.html#a3a9a172e68da099a44c298bdbb2761d3" title=" " alt="" coords="14,69,183,109"/>
-<area shape="rect" href="../../dc/db2/class_quant_lib_1_1_f_d_dividend_engine_shift_scale.html#a1a624544897906324519ec0683e47dc9" title=" " alt="" coords="5,133,192,173"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -341,11 +388,11 @@ Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d9/dde/class_quant_lib_1_1_cash_flow.html#a6fcc1b62510947fbc30b2952fff63c2d">CashFlow</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/da5/dividend_8cpp_source.html#l00026">26</a> of file <a class="el" href="../../d6/da5/dividend_8cpp_source.html">dividend.cpp</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d2/de5/class_quant_lib_1_1_dividend_a6fcc1b62510947fbc30b2952fff63c2d_cgraph.png" border="0" usemap="#ad2/de5/class_quant_lib_1_1_dividend_a6fcc1b62510947fbc30b2952fff63c2d_cgraph" alt=""/></div>
 <map name="ad2/de5/class_quant_lib_1_1_dividend_a6fcc1b62510947fbc30b2952fff63c2d_cgraph" id="ad2/de5/class_quant_lib_1_1_dividend_a6fcc1b62510947fbc30b2952fff63c2d_cgraph">
 <area shape="rect" title=" " alt="" coords="5,13,67,38"/>

@@ -6,5 +6,6 @@ var searchData=
   ['xabrswaptionvolatilitycube_3',['XabrSwaptionVolatilityCube',['../d2/dec/class_quant_lib_1_1_xabr_swaption_volatility_cube.html',1,'QuantLib']]],
   ['xetraimpl_4',['XetraImpl',['../d9/db1/class_quant_lib_1_1_germany_1_1_xetra_impl.html',1,'QuantLib::Germany']]],
   ['xofcurrency_5',['XOFCurrency',['../d2/d4c/class_quant_lib_1_1_x_o_f_currency.html',1,'QuantLib']]],
-  ['xrpcurrency_6',['XRPCurrency',['../dd/ddf/class_quant_lib_1_1_x_r_p_currency.html',1,'QuantLib']]]
+  ['xoshiro256starstaruniformrng_6',['Xoshiro256StarStarUniformRng',['../da/d06/class_quant_lib_1_1_xoshiro256_star_star_uniform_rng.html',1,'QuantLib']]],
+  ['xrpcurrency_7',['XRPCurrency',['../dd/ddf/class_quant_lib_1_1_x_r_p_currency.html',1,'QuantLib']]]
 ];

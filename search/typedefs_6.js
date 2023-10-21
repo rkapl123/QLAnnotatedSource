@@ -15,5 +15,5 @@ var searchData=
   ['gaussianspotlosslm_12',['GaussianSpotLossLM',['../d5/d7b/namespace_quant_lib.html#ab19015f1c66b4e9f2306d04500d2532f',1,'QuantLib']]],
   ['gaussianstatistics_13',['GaussianStatistics',['../d5/d7b/namespace_quant_lib.html#ad9913c35bfddbcbab5dea143847dde69',1,'QuantLib']]],
   ['gausslegendreintegrator_14',['GaussLegendreIntegrator',['../d5/d7b/namespace_quant_lib.html#adbb5c7d9a746e9b542d31bb74bbf6ed3',1,'QuantLib']]],
-  ['grid_5ftype_15',['grid_type',['../dc/de4/class_quant_lib_1_1_pde_b_s_m.html#abd43b82aee080b5c9f1d27e60bcf83f2',1,'QuantLib::PdeBSM::grid_type()'],['../d5/db4/class_quant_lib_1_1_pde_short_rate.html#a65ddf9db50c1f72d49311fffd0e7b210',1,'QuantLib::PdeShortRate::grid_type()']]]
+  ['grid_5ftype_15',['grid_type',['../dc/de4/class_quant_lib_1_1_pde_b_s_m.html#abd43b82aee080b5c9f1d27e60bcf83f2',1,'QuantLib::PdeBSM']]]
 ];
