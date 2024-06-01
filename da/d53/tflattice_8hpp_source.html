@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/methods/lattices/tflattice.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/methods/lattices/tflattice.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">tflattice.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../da/d53/tflattice_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2005, 2006 Theo Boafo</span></div>
@@ -106,16 +105,24 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file tflattice.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief Binomial Tsiveriotis-Fernandes tree model</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_lattices_tf_lattice_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_lattices_tf_lattice_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/methods/lattices/bsmlattice.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/pricingengines/bond/discretizedconvertible.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/dfd/bsmlattice_8hpp.html">ql/methods/lattices/bsmlattice.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d7f/discretizedconvertible_8hpp.html">ql/pricingengines/bond/discretizedconvertible.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">    //! Binomial lattice approximating the Tsiveriotis-Fernandes model</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span><span class="comment">    /*! At this time, this lattice only works with the DiscretizedConvertible class.</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        \ingroup lattices</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d7/d44/class_quant_lib_1_1_tsiveriotis_fernandes_lattice.html">   39</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/d44/class_quant_lib_1_1_tsiveriotis_fernandes_lattice.html">TsiveriotisFernandesLattice</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../de/da3/class_quant_lib_1_1_black_scholes_lattice.html">BlackScholesLattice</a>&lt;T&gt; {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="keyword">public</span>:</div>
@@ -154,13 +161,13 @@ $(function() {
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                                             <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> end,</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                                             <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> steps,</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                                             <a class="code hl_typedef" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> creditSpread,</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                                             <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> sigma,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                                             <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> <a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a>,</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                                             <a class="code hl_typedef" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> divYield)</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    : <a class="code hl_class" href="../../de/da3/class_quant_lib_1_1_black_scholes_lattice.html">BlackScholesLattice</a>&lt;T&gt;(tree, riskFreeRate, end, steps),</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    : <a class="code hl_class" href="../../de/da3/class_quant_lib_1_1_black_scholes_lattice.html">BlackScholesLattice</a>&lt;<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>&gt;(tree, riskFreeRate, end, steps),</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      creditSpread_(creditSpread) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        QL_REQUIRE(this-&gt;<a class="code hl_variable" href="../../de/da3/class_quant_lib_1_1_black_scholes_lattice.html#a12eb865f529d1a229999534c74fee43b">pu_</a>&lt;=1.0,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(this-&gt;<a class="code hl_variable" href="../../de/da3/class_quant_lib_1_1_black_scholes_lattice.html#a12eb865f529d1a229999534c74fee43b">pu_</a>&lt;=1.0,</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                   <span class="stringliteral">&quot;probability (&quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="../../de/da3/class_quant_lib_1_1_black_scholes_lattice.html#a12eb865f529d1a229999534c74fee43b">pu_</a> &lt;&lt; <span class="stringliteral">&quot;) higher than one&quot;</span>);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        QL_REQUIRE(this-&gt;<a class="code hl_variable" href="../../de/da3/class_quant_lib_1_1_black_scholes_lattice.html#a12eb865f529d1a229999534c74fee43b">pu_</a>&gt;=0.0,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(this-&gt;<a class="code hl_variable" href="../../de/da3/class_quant_lib_1_1_black_scholes_lattice.html#a12eb865f529d1a229999534c74fee43b">pu_</a>&gt;=0.0,</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                   <span class="stringliteral">&quot;negative (&quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="../../de/da3/class_quant_lib_1_1_black_scholes_lattice.html#a12eb865f529d1a229999534c74fee43b">pu_</a> &lt;&lt; <span class="stringliteral">&quot;) probability&quot;</span>);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
@@ -181,7 +188,7 @@ $(function() {
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="comment">// previous conversion probabilities, ie weighted average</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="comment">// of previous probabilities.</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            newConversionProbability[j] =</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                this-&gt;pd_*conversionProbability[j] +</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                this-&gt;<a class="code hl_variable" href="../../d7/d94/randomdefaultmodel_8cpp.html#a50ade66877e89aa9b7d723ecb6d9d428">pd_</a>*conversionProbability[j] +</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                this-&gt;pu_*conversionProbability[j+1];</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="comment">// Use blended discounting rate</span></div>
@@ -190,7 +197,7 @@ $(function() {
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                (1-newConversionProbability[j])*(this-&gt;riskFreeRate_+creditSpread_);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            newValues[j] =</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                (this-&gt;pd_*values[j]/(1+(spreadAdjustedRate[j]*this-&gt;dt_)))</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                (this-&gt;<a class="code hl_variable" href="../../d7/d94/randomdefaultmodel_8cpp.html#a50ade66877e89aa9b7d723ecb6d9d428">pd_</a>*values[j]/(1+(spreadAdjustedRate[j]*this-&gt;dt_)))</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>              + (this-&gt;pu_*values[j+1]/(1+(spreadAdjustedRate[j+1]*this-&gt;dt_)));</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        }</div>
@@ -213,14 +220,14 @@ $(function() {
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#ab7d80f1774594ee7d9c1309083a44207">close</a>(from,to))</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        QL_REQUIRE(from &gt; to,</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(from &gt; to,</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                   <span class="stringliteral">&quot;cannot roll the asset back to&quot;</span> &lt;&lt; to</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                   &lt;&lt; <span class="stringliteral">&quot; (it is already at t = &quot;</span> &lt;&lt; from &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keyword">auto</span>&amp; convertible = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d8/d5d/class_quant_lib_1_1_discretized_convertible.html">DiscretizedConvertible</a>&amp;<span class="keyword">&gt;</span>(asset);</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keyword">auto</span> iFrom = <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>(this-&gt;t_.index(from));</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keyword">auto</span> iTo = <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>(this-&gt;t_.index(to));</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keyword">auto</span> iFrom = <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>(this-&gt;<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#a931e64f3622c930365c16a9670060cc1">t_</a>.index(from));</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keyword">auto</span> iTo = <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>(this-&gt;<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#a931e64f3622c930365c16a9670060cc1">t_</a>.index(to));</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> i=iFrom-1; i&gt;=iTo; --i) {</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
@@ -233,7 +240,7 @@ $(function() {
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                     convertible.spreadAdjustedRate(), newValues,</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                     newConversionProbability,newSpreadAdjustedRate);</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            convertible.time() = this-&gt;t_[i];</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            convertible.time() = this-&gt;<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#a931e64f3622c930365c16a9670060cc1">t_</a>[i];</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            convertible.values() = newValues;</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            convertible.spreadAdjustedRate() = newSpreadAdjustedRate;</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            convertible.conversionProbability() = newConversionProbability;</div>
@@ -247,6 +254,8 @@ $(function() {
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>}</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aanalyticvariancegammaengine_8cpp_html_a931e64f3622c930365c16a9670060cc1"><div class="ttname"><a href="../../de/d83/analyticvariancegammaengine_8cpp.html#a931e64f3622c930365c16a9670060cc1">t_</a></div><div class="ttdeci">Real t_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d83/analyticvariancegammaengine_8cpp_source.html#l00070">analyticvariancegammaengine.cpp:70</a></div></div>
+<div class="ttc" id="absmlattice_8hpp_html"><div class="ttname"><a href="../../d3/dfd/bsmlattice_8hpp.html">bsmlattice.hpp</a></div><div class="ttdoc">Binomial trees under the BSM model.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00052">array.hpp:52</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_black_scholes_lattice_html"><div class="ttname"><a href="../../de/da3/class_quant_lib_1_1_black_scholes_lattice.html">QuantLib::BlackScholesLattice</a></div><div class="ttdoc">Simple binomial lattice approximating the Black-Scholes model.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dfd/bsmlattice_8hpp_source.html#l00036">bsmlattice.hpp:36</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_black_scholes_lattice_html_a12eb865f529d1a229999534c74fee43b"><div class="ttname"><a href="../../de/da3/class_quant_lib_1_1_black_scholes_lattice.html#a12eb865f529d1a229999534c74fee43b">QuantLib::BlackScholesLattice::pu_</a></div><div class="ttdeci">Real pu_</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dfd/bsmlattice_8hpp_source.html#l00065">bsmlattice.hpp:65</a></div></div>
@@ -262,14 +271,19 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_tsiveriotis_fernandes_lattice_html_a822fc4175802c4cdbc17a1ecab8020f7"><div class="ttname"><a href="../../d7/d44/class_quant_lib_1_1_tsiveriotis_fernandes_lattice.html#a822fc4175802c4cdbc17a1ecab8020f7">QuantLib::TsiveriotisFernandesLattice::stepback</a></div><div class="ttdeci">void stepback(Size i, const Array &amp;values, const Array &amp;conversionProbability, const Array &amp;spreadAdjustedRate, Array &amp;newValues, Array &amp;newConversionProbability, Array &amp;newSpreadAdjustedRate) const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d53/tflattice_8hpp_source.html#l00087">tflattice.hpp:87</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_tsiveriotis_fernandes_lattice_html_ad4bc4f66bf23ba1a38e095e8dab443a0"><div class="ttname"><a href="../../d7/d44/class_quant_lib_1_1_tsiveriotis_fernandes_lattice.html#ad4bc4f66bf23ba1a38e095e8dab443a0">QuantLib::TsiveriotisFernandesLattice::creditSpread_</a></div><div class="ttdeci">Spread creditSpread_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d53/tflattice_8hpp_source.html#l00063">tflattice.hpp:63</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_tsiveriotis_fernandes_lattice_html_af4b3b93b54dd4d25a45d7e3b54f9a0b6"><div class="ttname"><a href="../../d7/d44/class_quant_lib_1_1_tsiveriotis_fernandes_lattice.html#af4b3b93b54dd4d25a45d7e3b54f9a0b6">QuantLib::TsiveriotisFernandesLattice::TsiveriotisFernandesLattice</a></div><div class="ttdeci">TsiveriotisFernandesLattice(const ext::shared_ptr&lt; T &gt; &amp;tree, Rate riskFreeRate, Time end, Size steps, Spread creditSpread, Volatility volatility, Spread divYield)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d53/tflattice_8hpp_source.html#l00070">tflattice.hpp:70</a></div></div>
+<div class="ttc" id="adefaultdensitystructure_8cpp_html_a27c0621a0cfba42bc41a097374ce1c1f"><div class="ttname"><a href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a></div><div class="ttdeci">Time T</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d93/defaultdensitystructure_8cpp_source.html#l00033">defaultdensitystructure.cpp:33</a></div></div>
+<div class="ttc" id="adiscretizedconvertible_8hpp_html"><div class="ttname"><a href="../../d3/d7f/discretizedconvertible_8hpp.html">discretizedconvertible.hpp</a></div><div class="ttdoc">discretized convertible</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
 <div class="ttc" id="agroup__types_html_gae7427f4743503002b0c6eeeefae91a3d"><div class="ttname"><a href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">QuantLib::Spread</a></div><div class="ttdeci">Real Spread</div><div class="ttdoc">spreads on interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00074">types.hpp:74</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="ahestonrndcalculator_8cpp_html_aea6c7215b6d8026ab3ab5189363bbedd"><div class="ttname"><a href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a></div><div class="ttdeci">Real sigma</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3a/hestonrndcalculator_8cpp_source.html#l00036">hestonrndcalculator.cpp:36</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_ab7d80f1774594ee7d9c1309083a44207"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ab7d80f1774594ee7d9c1309083a44207">QuantLib::close</a></div><div class="ttdeci">bool close(const Quantity &amp;m1, const Quantity &amp;m2, Size n)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dbf/quantity_8cpp_source.html#l00163">quantity.cpp:163</a></div></div>
+<div class="ttc" id="arandomdefaultmodel_8cpp_html_a50ade66877e89aa9b7d723ecb6d9d428"><div class="ttname"><a href="../../d7/d94/randomdefaultmodel_8cpp.html#a50ade66877e89aa9b7d723ecb6d9d428">pd_</a></div><div class="ttdeci">Real pd_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d94/randomdefaultmodel_8cpp_source.html#l00044">randomdefaultmodel.cpp:44</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

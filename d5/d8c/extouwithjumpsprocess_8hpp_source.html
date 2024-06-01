@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/processes/extouwithjumpsprocess.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/processes/extouwithjumpsprocess.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">extouwithjumpsprocess.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d5/d8c/extouwithjumpsprocess_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2011 Klaus Spanderen</span></div>
@@ -105,17 +104,46 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file extouwithjumpsprocess.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Ornstein Uhlenbeck process plus exp jumps (Kluge Model)</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_ext_ou_with_jumps_process_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_ext_ou_with_jumps_process_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/stochasticprocess.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/math/distributions/normaldistribution.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d96/stochasticprocess_8hpp.html">ql/stochasticprocess.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/df9/normaldistribution_8hpp.html">ql/math/distributions/normaldistribution.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">class </span>ExtendedOrnsteinUhlenbeckProcess;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    /*! This class describes a Ornstein Uhlenbeck model plus exp jump, </span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        an extension of the Lucia and Schwartz model</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        \f[</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        \begin{array}{rcl}</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        S &amp;=&amp; exp(X_t + Y_t) \\</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">        dX_t  &amp;=&amp; \alpha(\mu(t)-X_t)dt + \sigma dW_t \\</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">        dY_t  &amp;=&amp; -\beta Y_{t-}dt + J_tdN_t \\</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        \omega(J)&amp;=&amp; \eta_u e^{-\eta_u J}</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        \end{array}</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        \f]</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        </span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        \ingroup processes</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment"></span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">    /*! References:</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">        T. Kluge, 2008. Pricing Swing Options and other </span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">        Electricity Derivatives, http://eprints.maths.ox.ac.uk/246/1/kluge.pdf</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        </span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">        B. Hambly, S. Howison, T. Kluge, Modelling spikes and pricing </span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">        swing options in electricity markets,</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">        http://people.maths.ox.ac.uk/hambly/PDF/Papers/elec.pdf</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html">   59</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html">ExtOUWithJumpsProcess</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d7/dc8/class_quant_lib_1_1_stochastic_process.html">StochasticProcess</a> {</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_class" href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html">ExtOUWithJumpsProcess</a>(ext::shared_ptr&lt;ExtendedOrnsteinUhlenbeckProcess&gt; process,</div>
@@ -128,8 +156,8 @@ $(function() {
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_function" href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html#a86ce6ce932125ff08e7d6fe912456984">factors</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> <a class="code hl_function" href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html#ab5392b2167ad3978db6389750c6d13f2">initialValues</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> <a class="code hl_function" href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html#a16f3bb4473f5d58c8e2a2ad6e5916763">drift</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t, <span class="keyword">const</span> <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; x) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_class" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> <a class="code hl_function" href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html#a4befd8aa820f6faafd3c63a45aeef892">diffusion</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t, <span class="keyword">const</span> <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; x) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> <a class="code hl_function" href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html#a16f3bb4473f5d58c8e2a2ad6e5916763">drift</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, <span class="keyword">const</span> <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; x) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_class" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> <a class="code hl_function" href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html#a4befd8aa820f6faafd3c63a45aeef892">diffusion</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, <span class="keyword">const</span> <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; x) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> <a class="code hl_function" href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html#a2a303b4f2c4fdee6946d27c74c2ee2f7">evolve</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t0, <span class="keyword">const</span> <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; x0, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> dt, <span class="keyword">const</span> <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; dw) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        ext::shared_ptr&lt;ExtendedOrnsteinUhlenbeckProcess&gt; <a class="code hl_function" href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html#a49fd0071ee76a2f4e2922ccfb6e1c361">getExtendedOrnsteinUhlenbeckProcess</a>() <span class="keyword">const</span>;</div>
@@ -147,7 +175,7 @@ $(function() {
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00052">array.hpp:52</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_cumulative_normal_distribution_html"><div class="ttname"><a href="../../d5/d47/class_quant_lib_1_1_cumulative_normal_distribution.html">QuantLib::CumulativeNormalDistribution</a></div><div class="ttdoc">Cumulative normal distribution function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/normaldistribution_8hpp_source.html#l00080">normaldistribution.hpp:80</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_cumulative_normal_distribution_html"><div class="ttname"><a href="../../d5/d47/class_quant_lib_1_1_cumulative_normal_distribution.html">QuantLib::CumulativeNormalDistribution</a></div><div class="ttdoc">Cumulative normal distribution function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/normaldistribution_8hpp_source.html#l00068">normaldistribution.hpp:68</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_ext_o_u_with_jumps_process_html"><div class="ttname"><a href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html">QuantLib::ExtOUWithJumpsProcess</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/extouwithjumpsprocess_8hpp_source.html#l00059">extouwithjumpsprocess.hpp:59</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_ext_o_u_with_jumps_process_html_a04691bba4aa890f1cb802b5f4c1c8169"><div class="ttname"><a href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html#a04691bba4aa890f1cb802b5f4c1c8169">QuantLib::ExtOUWithJumpsProcess::ouProcess_</a></div><div class="ttdeci">const ext::shared_ptr&lt; ExtendedOrnsteinUhlenbeckProcess &gt; ouProcess_</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/extouwithjumpsprocess_8hpp_source.html#l00083">extouwithjumpsprocess.hpp:83</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_ext_o_u_with_jumps_process_html_a16f3bb4473f5d58c8e2a2ad6e5916763"><div class="ttname"><a href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html#a16f3bb4473f5d58c8e2a2ad6e5916763">QuantLib::ExtOUWithJumpsProcess::drift</a></div><div class="ttdeci">Array drift(Time t, const Array &amp;x) const override</div><div class="ttdoc">returns the drift part of the equation, i.e.,</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3b/extouwithjumpsprocess_8cpp_source.html#l00068">extouwithjumpsprocess.cpp:68</a></div></div>
@@ -167,10 +195,13 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_ext_o_u_with_jumps_process_html_af1fc88eee476d12a7fe5d010bbb5c8e2"><div class="ttname"><a href="../../da/d52/class_quant_lib_1_1_ext_o_u_with_jumps_process.html#af1fc88eee476d12a7fe5d010bbb5c8e2">QuantLib::ExtOUWithJumpsProcess::cumNormalDist_</a></div><div class="ttdeci">const CumulativeNormalDistribution cumNormalDist_</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/extouwithjumpsprocess_8hpp_source.html#l00085">extouwithjumpsprocess.hpp:85</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_matrix_html"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html">QuantLib::Matrix</a></div><div class="ttdoc">Matrix used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00041">matrix.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_stochastic_process_html"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_stochastic_process.html">QuantLib::StochasticProcess</a></div><div class="ttdoc">multi-dimensional stochastic process class.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d96/stochasticprocess_8hpp_source.html#l00042">stochasticprocess.hpp:42</a></div></div>
+<div class="ttc" id="adefaultprobabilitykey_8cpp_html_a15fc20af123a89cd6f40758e341a4a54"><div class="ttname"><a href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a></div><div class="ttdeci">const DefaultType &amp; t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ddb/defaultprobabilitykey_8cpp_source.html#l00039">defaultprobabilitykey.cpp:39</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="anormaldistribution_8hpp_html"><div class="ttname"><a href="../../d5/df9/normaldistribution_8hpp.html">normaldistribution.hpp</a></div><div class="ttdoc">normal, cumulative and inverse cumulative distributions</div></div>
+<div class="ttc" id="astochasticprocess_8hpp_html"><div class="ttname"><a href="../../de/d96/stochasticprocess_8hpp.html">stochasticprocess.hpp</a></div><div class="ttdoc">stochastic processes</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

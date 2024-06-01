@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/pricingengine.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/pricingengine.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">pricingengine.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d9/dcc/pricingengine_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2002, 2003 Ferdinando Ametrano</span></div>
@@ -107,15 +106,20 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"></span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">/*! \file pricingengine.hpp</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">    \brief Base class for pricing engines</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef quantlib_pricing_engine_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define quantlib_pricing_engine_hpp</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/patterns/observable.hpp&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d5e/observable_8hpp.html">ql/patterns/observable.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html">   34</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html">PricingEngine</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">    //! interface for pricing engines</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html">   34</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html">PricingEngine</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">class </span><a class="code hl_class" href="../../d7/d14/class_quant_lib_1_1_pricing_engine_1_1arguments.html">arguments</a>;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">class </span><a class="code hl_class" href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">results</a>;</div>
@@ -138,8 +142,11 @@ $(function() {
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html#a20dcbdfbd0ec77afc802522bb7e379c1">   54</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html#a20dcbdfbd0ec77afc802522bb7e379c1">reset</a>() = 0;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    };</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment"></span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">    //! template base class for option pricing engines</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment"></span><span class="comment">    /*! Derived engines only need to implement</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">        the &lt;tt&gt;calculate()&lt;/tt&gt; method.</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> ArgumentsType, <span class="keyword">class</span> ResultsType&gt;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html">   63</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html">GenericEngine</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html">PricingEngine</a>,</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                          <span class="keyword">public</span> <a class="code hl_class" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> {</div>
@@ -181,6 +188,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_pricing_engine_html_a9a2a85d4896fb2f40534d13b5be125e2"><div class="ttname"><a href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html#a9a2a85d4896fb2f40534d13b5be125e2">QuantLib::PricingEngine::getArguments</a></div><div class="ttdeci">virtual arguments * getArguments() const =0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pricing_engine_html_a9fd9a2ec16701d63314fcda6db3990bf"><div class="ttname"><a href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html#a9fd9a2ec16701d63314fcda6db3990bf">QuantLib::PricingEngine::~PricingEngine</a></div><div class="ttdeci">~PricingEngine() override=default</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aobservable_8hpp_html"><div class="ttname"><a href="../../de/d5e/observable_8hpp.html">observable.hpp</a></div><div class="ttdoc">observer/observable pattern</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

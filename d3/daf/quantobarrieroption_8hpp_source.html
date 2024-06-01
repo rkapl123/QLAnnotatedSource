@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/instruments/quantobarrieroption.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/instruments/quantobarrieroption.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">quantobarrieroption.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d3/daf/quantobarrieroption_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 Paul Farrington</span></div>
@@ -105,16 +104,21 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file quantobarrieroption.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Quanto version of a barrier option</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_quanto_barrier_option_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_quanto_barrier_option_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/instruments/quantovanillaoption.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/instruments/barrieroption.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/d65/quantovanillaoption_8hpp.html">ql/instruments/quantovanillaoption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/d4a/barrieroption_8hpp.html">ql/instruments/barrieroption.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"></span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    //! Quanto version of a barrier option</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span><span class="comment">    /*! \ingroup instruments */</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d4/d7a/class_quant_lib_1_1_quanto_barrier_option.html">   34</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d4/d7a/class_quant_lib_1_1_quanto_barrier_option.html">QuantoBarrierOption</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d1/da0/class_quant_lib_1_1_barrier_option.html">BarrierOption</a> {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d4/d7a/class_quant_lib_1_1_quanto_barrier_option.html#a8d488e34389fc1365095852ab08a0588">   36</a></span>        <span class="keyword">typedef</span> <a class="code hl_class" href="../../de/d82/class_quant_lib_1_1_barrier_option_1_1arguments.html">BarrierOption::arguments</a> <a class="code hl_typedef" href="../../d4/d7a/class_quant_lib_1_1_quanto_barrier_option.html#a8d488e34389fc1365095852ab08a0588">arguments</a>;</div>
@@ -125,12 +129,14 @@ $(function() {
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> rebate,</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                        <span class="keyword">const</span> ext::shared_ptr&lt;StrikedTypePayoff&gt;&amp; <a class="code hl_function" href="../../d2/df1/class_quant_lib_1_1_option.html#a70351dee10731d13db186bbb3000bbbe">payoff</a>,</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                        <span class="keyword">const</span> ext::shared_ptr&lt;Exercise&gt;&amp; <a class="code hl_function" href="../../d2/df1/class_quant_lib_1_1_option.html#acb6edfcd6438ea017a4da8ce38da9e92">exercise</a></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            );</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d4/d7a/class_quant_lib_1_1_quanto_barrier_option.html#aea1aa1f2c9cc758460b6e80842c964e1">qvega</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            );<span class="comment"></span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        //! \name greeks</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d4/d7a/class_quant_lib_1_1_quanto_barrier_option.html#aea1aa1f2c9cc758460b6e80842c964e1">qvega</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d4/d7a/class_quant_lib_1_1_quanto_barrier_option.html#aa67390cdf4ef26bd5947fba84531f8a9">qrho</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d4/d7a/class_quant_lib_1_1_quanto_barrier_option.html#a302881b49f1297fadd0492f9e7e596be">qlambda</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d7a/class_quant_lib_1_1_quanto_barrier_option.html#ad0f7bbb6440966f75189fac0562b6a67">fetchResults</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">PricingEngine::results</a>*) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d4/d7a/class_quant_lib_1_1_quanto_barrier_option.html#a302881b49f1297fadd0492f9e7e596be">qlambda</a>() <span class="keyword">const</span>;<span class="comment"></span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment"></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d7a/class_quant_lib_1_1_quanto_barrier_option.html#ad0f7bbb6440966f75189fac0562b6a67">fetchResults</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">PricingEngine::results</a>*) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d7a/class_quant_lib_1_1_quanto_barrier_option.html#ac9853d2deac18759fe4e1a4b186767d3">setupExpired</a>() <span class="keyword">const override</span>;</div>
@@ -143,6 +149,7 @@ $(function() {
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="ttc" id="abarrieroption_8hpp_html"><div class="ttname"><a href="../../d8/d4a/barrieroption_8hpp.html">barrieroption.hpp</a></div><div class="ttdoc">Barrier option on a single asset.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_barrier_option_1_1arguments_html"><div class="ttname"><a href="../../de/d82/class_quant_lib_1_1_barrier_option_1_1arguments.html">QuantLib::BarrierOption::arguments</a></div><div class="ttdoc">Arguments for barrier option calculation</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d4a/barrieroption_8hpp_source.html#l00082">barrieroption.hpp:82</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_barrier_option_html"><div class="ttname"><a href="../../d1/da0/class_quant_lib_1_1_barrier_option.html">QuantLib::BarrierOption</a></div><div class="ttdoc">Barrier option on a single asset.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d4a/barrieroption_8hpp_source.html#l00043">barrieroption.hpp:43</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_option_html_a70351dee10731d13db186bbb3000bbbe"><div class="ttname"><a href="../../d2/df1/class_quant_lib_1_1_option.html#a70351dee10731d13db186bbb3000bbbe">QuantLib::Option::payoff</a></div><div class="ttdeci">ext::shared_ptr&lt; Payoff &gt; payoff() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd9/option_8hpp_source.html#l00045">option.hpp:45</a></div></div>
@@ -162,6 +169,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_quanto_option_results_html"><div class="ttname"><a href="../../d1/d48/class_quant_lib_1_1_quanto_option_results.html">QuantLib::QuantoOptionResults</a></div><div class="ttdoc">Results from quanto option calculation</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d65/quantovanillaoption_8hpp_source.html#l00035">quantovanillaoption.hpp:35</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aquantovanillaoption_8hpp_html"><div class="ttname"><a href="../../db/d65/quantovanillaoption_8hpp.html">quantovanillaoption.hpp</a></div><div class="ttdoc">Quanto version of a vanilla option.</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_barrier_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../de/d3f/struct_quant_lib_1_1_barrier.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::Barrier::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dbd/barriertype_8hpp_source.html#l00036">barriertype.hpp:36</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

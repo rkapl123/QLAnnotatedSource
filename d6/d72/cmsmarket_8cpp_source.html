@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/termstructures/volatility/swaption/cmsmarket.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/termstructures/volatility/swaption/cmsmarket.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">cmsmarket.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d6/d72/cmsmarket_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2007 Ferdinando Ametrano</span></div>
@@ -108,13 +107,13 @@ $(function() {
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/cashflows/cashflows.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/indexes/swapindex.hpp&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/instruments/makecms.hpp&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;ql/instruments/swap.hpp&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ql/quotes/simplequote.hpp&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/termstructures/volatility/swaption/cmsmarket.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/termstructures/yieldtermstructure.hpp&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d40/cashflows_8hpp.html">ql/cashflows/cashflows.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d76/swapindex_8hpp.html">ql/indexes/swapindex.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d86/makecms_8hpp.html">ql/instruments/makecms.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d6f/swap_8hpp.html">ql/instruments/swap.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d17/simplequote_8hpp.html">ql/quotes/simplequote.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/dae/cmsmarket_8hpp.html">ql/termstructures/volatility/swaption/cmsmarket.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d89/yieldtermstructure_8hpp.html">ql/termstructures/yieldtermstructure.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">using </span>std::vector;</div>
@@ -149,14 +148,14 @@ $(function() {
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      spotSwaps_(nExercise_, vector&lt;ext::shared_ptr&lt;<a class="code hl_class" href="../../dc/d54/class_quant_lib_1_1_swap.html">Swap</a>&gt; &gt;(nSwapIndexes_)),</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      fwdSwaps_(nExercise_, vector&lt;ext::shared_ptr&lt;<a class="code hl_class" href="../../dc/d54/class_quant_lib_1_1_swap.html">Swap</a>&gt; &gt;(nSwapIndexes_)) {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        QL_REQUIRE(2 * <a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#a088c89924be414a786e1a6c099b417b0">nSwapIndexes_</a> == bidAskSpreads[0].size(),</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(2 * <a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#a088c89924be414a786e1a6c099b417b0">nSwapIndexes_</a> == bidAskSpreads[0].size(),</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                   <span class="stringliteral">&quot;2*nSwapIndexes_ (&quot;</span> &lt;&lt; 2 * <a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#a088c89924be414a786e1a6c099b417b0">nSwapIndexes_</a></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                                       &lt;&lt; <span class="stringliteral">&quot;) != bidAskSpreads columns() (&quot;</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                                       &lt;&lt; bidAskSpreads[0].size() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        QL_REQUIRE(<a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#af87e1635842e22aec5a33cf8f07584a4">nExercise_</a> == bidAskSpreads.size(),</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#af87e1635842e22aec5a33cf8f07584a4">nExercise_</a> == bidAskSpreads.size(),</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                   <span class="stringliteral">&quot;nExercise_ (&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#af87e1635842e22aec5a33cf8f07584a4">nExercise_</a> &lt;&lt; <span class="stringliteral">&quot;) != bidAskSpreads rows() (&quot;</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                                  &lt;&lt; bidAskSpreads.size() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        QL_REQUIRE(<a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#a088c89924be414a786e1a6c099b417b0">nSwapIndexes_</a> == pricers.size(),</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#a088c89924be414a786e1a6c099b417b0">nSwapIndexes_</a> == pricers.size(),</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                   <span class="stringliteral">&quot;nSwapIndexes_ (&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#a088c89924be414a786e1a6c099b417b0">nSwapIndexes_</a> &lt;&lt; <span class="stringliteral">&quot;) != pricers (&quot;</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                                     &lt;&lt; <a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#a3e2c9f2bdc5d8d298cfad373136c9c69">pricers_</a>.size() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
@@ -241,19 +240,19 @@ $(function() {
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        }</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#ab7b98266617e9e11d3e99e165fe9978e">  155</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#ab7b98266617e9e11d3e99e165fe9978e">CmsMarket::reprice</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;SwaptionVolatilityStructure&gt;</a> &amp;v,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#ab7b98266617e9e11d3e99e165fe9978e">  155</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#ab7b98266617e9e11d3e99e165fe9978e">CmsMarket::reprice</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;SwaptionVolatilityStructure&gt;</a> &amp;<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>,</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> meanReversion) {</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> meanReversionQuote(</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            ext::make_shared&lt;SimpleQuote&gt;(meanReversion));</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j = 0; j &lt; <a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#a088c89924be414a786e1a6c099b417b0">nSwapIndexes_</a>; ++j) {</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            <span class="comment">// ??</span></div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <span class="comment">// set new volatility structure and new mean reversion</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#a3e2c9f2bdc5d8d298cfad373136c9c69">pricers_</a>[j]-&gt;setSwaptionVolatility(v);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#a3e2c9f2bdc5d8d298cfad373136c9c69">pricers_</a>[j]-&gt;setSwaptionVolatility(<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>);</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            <span class="keywordflow">if</span> (meanReversion != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>()) {</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                ext::shared_ptr&lt;MeanRevertingPricer&gt; p =</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                    ext::dynamic_pointer_cast&lt;MeanRevertingPricer&gt;(</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                        <a class="code hl_variable" href="../../d0/d7a/class_quant_lib_1_1_cms_market.html#a3e2c9f2bdc5d8d298cfad373136c9c69">pricers_</a>[j]);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                QL_REQUIRE(p != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;mean reverting pricer required at index &quot;</span> &lt;&lt; j);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(p != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;mean reverting pricer required at index &quot;</span> &lt;&lt; j);</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                p-&gt;setMeanReversion(meanReversionQuote);</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            }</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        }</div>
@@ -351,6 +350,7 @@ $(function() {
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    }</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>}</div>
+<div class="ttc" id="acashflows_8hpp_html"><div class="ttname"><a href="../../dd/d40/cashflows_8hpp.html">cashflows.hpp</a></div><div class="ttdoc">Cash-flow analysis functions.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00052">array.hpp:52</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_cash_flows_html_a6abd0bdc90510fb911e656d783caa48f"><div class="ttname"><a href="../../d8/d7d/class_quant_lib_1_1_cash_flows.html#a6abd0bdc90510fb911e656d783caa48f">QuantLib::CashFlows::npv</a></div><div class="ttdeci">static Real npv(const Leg &amp;leg, const YieldTermStructure &amp;discountCurve, bool includeSettlementDateFlows, Date settlementDate=Date(), Date npvDate=Date())</div><div class="ttdoc">NPV of the cash flows.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d4b/cashflows_8cpp_source.html#l00425">cashflows.cpp:425</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_cash_flows_html_ae0836cfbf5a1751b40ef5ebd3d019b53"><div class="ttname"><a href="../../d8/d7d/class_quant_lib_1_1_cash_flows.html#ae0836cfbf5a1751b40ef5ebd3d019b53">QuantLib::CashFlows::bps</a></div><div class="ttdeci">static Real bps(const Leg &amp;leg, const YieldTermStructure &amp;discountCurve, bool includeSettlementDateFlows, Date settlementDate=Date(), Date npvDate=Date())</div><div class="ttdoc">Basis-point sensitivity of the cash flows.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d4b/cashflows_8cpp_source.html#l00450">cashflows.cpp:450</a></div></div>
@@ -400,12 +400,20 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_observer_html_aa6ade205ed506bf712da2704f80a73a0"><div class="ttname"><a href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">QuantLib::Observer::registerWith</a></div><div class="ttdeci">std::pair&lt; iterator, bool &gt; registerWith(const ext::shared_ptr&lt; Observable &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00228">observable.hpp:228</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_swap_html"><div class="ttname"><a href="../../dc/d54/class_quant_lib_1_1_swap.html">QuantLib::Swap</a></div><div class="ttdoc">Interest rate swap.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6f/swap_8hpp_source.html#l00041">swap.hpp:41</a></div></div>
+<div class="ttc" id="acmsmarket_8hpp_html"><div class="ttname"><a href="../../da/dae/cmsmarket_8hpp.html">cmsmarket.hpp</a></div><div class="ttdoc">set of CMS quotes</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d">QuantLib::Years</a></div><div class="ttdeci">@ Years</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00040">timeunit.hpp:40</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="amakecms_8hpp_html"><div class="ttname"><a href="../../dd/d86/makecms_8hpp.html">makecms.hpp</a></div><div class="ttdoc">Helper class to instantiate standard market CMS.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_afd0d2e08465e4b7e928c75416bd8dc4b"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">QuantLib::Leg</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; CashFlow &gt; &gt; Leg</div><div class="ttdoc">Sequence of cash-flows.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0e/cashflow_8hpp_source.html#l00078">cashflow.hpp:78</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="aperturbativebarrieroptionengine_8cpp_html_ac58b0f1581c316228a305f7eb7cce633"><div class="ttname"><a href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a></div><div class="ttdeci">ext::shared_ptr&lt; BlackVolTermStructure &gt; v</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de0/perturbativebarrieroptionengine_8cpp_source.html#l01487">perturbativebarrieroptionengine.cpp:1487</a></div></div>
+<div class="ttc" id="asimplequote_8hpp_html"><div class="ttname"><a href="../../d4/d17/simplequote_8hpp.html">simplequote.hpp</a></div><div class="ttdoc">simple quote class</div></div>
+<div class="ttc" id="aswap_8hpp_html"><div class="ttname"><a href="../../dd/d6f/swap_8hpp.html">swap.hpp</a></div><div class="ttdoc">Interest rate swap.</div></div>
+<div class="ttc" id="aswapindex_8hpp_html"><div class="ttname"><a href="../../d9/d76/swapindex_8hpp.html">swapindex.hpp</a></div><div class="ttdoc">swap-rate indexes</div></div>
+<div class="ttc" id="ayieldtermstructure_8hpp_html"><div class="ttname"><a href="../../dd/d89/yieldtermstructure_8hpp.html">yieldtermstructure.hpp</a></div><div class="ttdoc">Interest-rate term structure.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

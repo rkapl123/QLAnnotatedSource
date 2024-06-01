@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -96,7 +95,7 @@ $(function() {
 <p>Black 1976 calculator class.  
  <a href="../../de/dac/class_quant_lib_1_1_black_calculator.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../df/d90/blackcalculator_8hpp_source.html">ql/pricingengines/blackcalculator.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../df/d90/blackcalculator_8hpp_source.html">blackcalculator.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for BlackCalculator:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -122,7 +121,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a314a748c9c97637b4e7552c7fffe08e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a314a748c9c97637b4e7552c7fffe08e7">BlackCalculator</a> (const ext::shared_ptr&lt; <a class="el" href="../../d1/d0d/class_quant_lib_1_1_striked_type_payoff.html">StrikedTypePayoff</a> &gt; &amp;payoff, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> forward, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> stdDev, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> discount=1.0)</td></tr>
+<tr class="memitem:a314a748c9c97637b4e7552c7fffe08e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a314a748c9c97637b4e7552c7fffe08e7">BlackCalculator</a> (const ext::shared_ptr&lt; <a class="el" href="../../d1/d0d/class_quant_lib_1_1_striked_type_payoff.html">StrikedTypePayoff</a> &gt; &amp;<a class="el" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> forward, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> stdDev, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> discount=1.0)</td></tr>
 <tr class="separator:a314a748c9c97637b4e7552c7fffe08e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2920114426078b8deba090acbfcc90c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a2920114426078b8deba090acbfcc90c3">BlackCalculator</a> (<a class="el" href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7">Option::Type</a> optionType, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> forward, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> stdDev, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> discount=1.0)</td></tr>
 <tr class="separator:a2920114426078b8deba090acbfcc90c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,7 +211,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Black 1976 calculator class. </p>
 <dl class="bug"><dt><b><a class="el" href="../../de/da5/bug.html#_bug000009">Bug:</a></b></dt><dd>When the variance is null, division by zero occur during the calculation of delta, delta forward, gamma, gamma forward, rho, dividend rho, vega, and strike sensitivity. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d8/d8b/_discrete_hedging_8cpp-example.html#_a0">DiscreteHedging.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d8/d8b/_discrete_hedging_8cpp-example.html#_a6">DiscreteHedging.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d90/blackcalculator_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../df/d90/blackcalculator_8hpp_source.html">blackcalculator.hpp</a>.</p>
@@ -340,21 +339,6 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_a95dab8bfe0f864e7ab7d1fca93fdecb0_cgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_a95dab8bfe0f864e7ab7d1fca93fdecb0_cgraph" alt=""/></div>
-<map name="ade/dac/class_quant_lib_1_1_black_calculator_a95dab8bfe0f864e7ab7d1fca93fdecb0_cgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_a95dab8bfe0f864e7ab7d1fca93fdecb0_cgraph">
-<area shape="rect" title=" " alt="" coords="5,80,127,105"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#af7afb7a0e83603b71da76cd8923a07a2" title=" " alt="" coords="175,80,225,105"/>
-<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#ab7d80f1774594ee7d9c1309083a44207" title=" " alt="" coords="273,5,387,31"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a1ce2edf271b7df5907ea9a3b100383fe" title=" " alt="" coords="305,55,355,80"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a57565309e7b2cbfe856209958c63cfa5" title=" " alt="" coords="297,104,363,129"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc" title=" " alt="" coords="305,153,355,179"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -373,67 +357,59 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d8/d8b/_discrete_hedging_8cpp-example.html#a1">DiscreteHedging.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d8/d8b/_discrete_hedging_8cpp-example.html#a7">DiscreteHedging.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html#l00197">197</a> of file <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html">blackcalculator.cpp</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_a72887400b9a4d1ba185b887b84876cdc_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_a72887400b9a4d1ba185b887b84876cdc_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_a72887400b9a4d1ba185b887b84876cdc_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_a72887400b9a4d1ba185b887b84876cdc_icgraph">
-<area shape="rect" title=" " alt="" coords="1397,947,1448,973"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_andreasen_huge_volatility_interpl.html#a8dd9b609db76473b270075231943df6b" title=" " alt="" coords="1111,5,1335,45"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="569,214,735,269"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="817,969,1048,1023"/>
-<area shape="rect" href="../../d5/d06/class_quant_lib_1_1_analytic_discrete_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="817,443,1048,498"/>
-<area shape="rect" href="../../d3/dfb/class_quant_lib_1_1_turnbull_wakeman_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="1129,1332,1316,1372"/>
-<area shape="rect" href="../../de/da6/class_quant_lib_1_1_kirk_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="1150,1396,1295,1436"/>
-<area shape="rect" href="../../dd/d23/class_quant_lib_1_1_analytic_cliquet_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="848,523,1017,563"/>
-<area shape="rect" href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="831,587,1034,627"/>
-<area shape="rect" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="844,1048,1021,1088"/>
-<area shape="rect" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="560,644,744,684"/>
-<area shape="rect" href="../../df/dab/class_quant_lib_1_1_analytic_p_t_d_heston_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="1125,1460,1320,1500"/>
-<area shape="rect" href="../../d4/d34/class_quant_lib_1_1_barone_adesi_whaley_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="549,911,755,951"/>
-<area shape="rect" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="535,1172,769,1212"/>
-<area shape="rect" href="../../dd/dd4/class_quant_lib_1_1_qd_fp_american_engine.html#af3fc09c3389b647b8ef1a00de07a27f1" title=" " alt="" coords="1118,1524,1327,1564"/>
-<area shape="rect" href="../../d8/db4/class_quant_lib_1_1_analytic_heston_engine_1_1_a_p___helper.html#a62f956221ac30afaf88d77b0f8d2601b" title=" " alt="" coords="1096,1588,1349,1628"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b" title=" " alt="" coords="1128,1652,1317,1692"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#ab6f8af630290d3010bc3bfc64304aa03" title=" " alt="" coords="895,394,970,419"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a7c544e51336c33f06b0a9158a3d2705e" title=" " alt="" coords="1163,1717,1283,1742"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a99bc584417a1b563e56644fc626fbbc6" title=" " alt="" coords="538,1301,766,1355"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#ab15a55536aefcbf71bb11eb16d9c8edf" title=" " alt="" coords="1139,358,1306,413"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a1b13e7082b47d7dccb9b9b3891754fb4" title=" " alt="" coords="1139,279,1306,334"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#af563764ee0f97a97d41cada16cfa9264" title=" " alt="" coords="1139,70,1306,125"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#abbc0f184ea4fde079e7ac23c5240cdef" title=" " alt="" coords="1139,149,1306,203"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#afd9ef1f4b9fbb897c5e58b4a02cb1e7e" title=" " alt="" coords="1203,753,1243,778"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#af7afb7a0e83603b71da76cd8923a07a2" title=" " alt="" coords="1197,1175,1248,1201"/>
-<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html#a31e23e6d0e232b5d5d2dfe12f8cbc419" title=" " alt="" coords="1121,1801,1324,1841"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_andreasen_huge_volatility_interpl.html#a1127cccc9668a02247dc139d27121708" title=" " alt="" coords="821,5,1045,45"/>
-<area shape="rect" href="../../dd/d6b/class_quant_lib_1_1_jump_diffusion_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="271,644,474,684"/>
-<area shape="rect" href="../../d6/d02/class_quant_lib_1_1_exponential_fitting_heston_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="839,1581,1026,1621"/>
-<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a5529e23ca823062da04b6856c037a1c4" title=" " alt="" coords="847,1645,1018,1685"/>
-<area shape="rect" href="../../d1/d41/class_quant_lib_1_1_heston_black_vol_surface.html#ac8384ed07427d6f044e03c97f6e77f61" title="Black volatility calculation." alt="" coords="565,1677,739,1717"/>
-<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="567,1613,737,1653"/>
-<area shape="rect" href="../../d1/d41/class_quant_lib_1_1_heston_black_vol_surface.html#ab6d7e53b07ebe1ec8c12ae6e467f2005" title="Black variance calculation." alt="" coords="283,1677,463,1717"/>
-<area shape="rect" href="../../d0/db6/class_quant_lib_1_1_analytic_heston_hull_white_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="283,1613,462,1653"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="843,1709,1023,1749"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a3279751aa21dd6b1bbb01f26d47dc115" title=" " alt="" coords="542,387,762,427"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a6b2f1d95c4a73b96ca35307bce493324" title=" " alt="" coords="259,1269,487,1323"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,1309,211,1349"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a08475155b15976b6aec854b5ccd11012" title=" " alt="" coords="841,279,1024,319"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a0c81528e5444302be62c311ba38c6166" title=" " alt="" coords="841,156,1024,196"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#abba1bf8797f099026e699408878caedc" title=" " alt="" coords="823,803,1043,843"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a95dab8bfe0f864e7ab7d1fca93fdecb0" title=" " alt="" coords="872,1430,993,1455"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a9c2ec50ea41e7af302de7ddd5a8446cf" title=" " alt="" coords="823,1365,1043,1405"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#abba1bf8797f099026e699408878caedc" title=" " alt="" coords="885,1265,980,1290"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a2a88d2657223d46ccddd28c9a0a44520" title=" " alt="" coords="542,1380,762,1420"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#aa1f7cc87f80ba12bea93553ebe143183" title=" " alt="" coords="542,1236,762,1276"/>
-<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="567,1831,737,1871"/>
-<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html#acd198b2cf5de7e3e969ba2253f3d5eb4" title=" " alt="" coords="848,1888,1017,1928"/>
-<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html#aed8ef4f7d3bbb2e941eb4cadc6f3354e" title=" " alt="" coords="848,1773,1017,1813"/>
+<area shape="rect" title=" " alt="" coords="1119,766,1169,791"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_andreasen_huge_volatility_interpl.html#a8dd9b609db76473b270075231943df6b" title=" " alt="" coords="832,5,1056,45"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="289,161,456,215"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="537,574,767,629"/>
+<area shape="rect" href="../../d5/d06/class_quant_lib_1_1_analytic_discrete_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="537,366,767,421"/>
+<area shape="rect" href="../../d3/dfb/class_quant_lib_1_1_turnbull_wakeman_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="851,1044,1037,1084"/>
+<area shape="rect" href="../../de/da6/class_quant_lib_1_1_kirk_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="871,1108,1017,1148"/>
+<area shape="rect" href="../../dd/d23/class_quant_lib_1_1_analytic_cliquet_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="567,445,737,485"/>
+<area shape="rect" href="../../dd/d8f/class_quant_lib_1_1_analytic_performance_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="551,509,753,549"/>
+<area shape="rect" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="563,653,741,693"/>
+<area shape="rect" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="560,861,744,901"/>
+<area shape="rect" href="../../df/dab/class_quant_lib_1_1_analytic_p_t_d_heston_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="847,1172,1041,1212"/>
+<area shape="rect" href="../../d4/d34/class_quant_lib_1_1_barone_adesi_whaley_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="549,925,755,965"/>
+<area shape="rect" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="535,989,769,1029"/>
+<area shape="rect" href="../../dd/dd4/class_quant_lib_1_1_qd_fp_american_engine.html#af3fc09c3389b647b8ef1a00de07a27f1" title=" " alt="" coords="839,1236,1049,1276"/>
+<area shape="rect" href="../../d8/db4/class_quant_lib_1_1_analytic_heston_engine_1_1_a_p___helper.html#a62f956221ac30afaf88d77b0f8d2601b" title=" " alt="" coords="817,1300,1071,1340"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b" title=" " alt="" coords="849,1364,1039,1404"/>
+<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#ab6f8af630290d3010bc3bfc64304aa03" title=" " alt="" coords="907,943,981,969"/>
+<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a7c544e51336c33f06b0a9158a3d2705e" title=" " alt="" coords="884,1429,1004,1454"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a99bc584417a1b563e56644fc626fbbc6" title=" " alt="" coords="538,718,766,773"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#ab15a55536aefcbf71bb11eb16d9c8edf" title=" " alt="" coords="861,199,1027,254"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a1b13e7082b47d7dccb9b9b3891754fb4" title=" " alt="" coords="861,121,1027,175"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#af563764ee0f97a97d41cada16cfa9264" title=" " alt="" coords="861,357,1027,411"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#abbc0f184ea4fde079e7ac23c5240cdef" title=" " alt="" coords="861,278,1027,333"/>
+<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#afd9ef1f4b9fbb897c5e58b4a02cb1e7e" title=" " alt="" coords="924,690,964,715"/>
+<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#af7afb7a0e83603b71da76cd8923a07a2" title=" " alt="" coords="919,791,969,817"/>
+<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html#a31e23e6d0e232b5d5d2dfe12f8cbc419" title=" " alt="" coords="843,1479,1045,1519"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_andreasen_huge_volatility_interpl.html#a1127cccc9668a02247dc139d27121708" title=" " alt="" coords="540,5,764,45"/>
+<area shape="rect" href="../../dd/d6b/class_quant_lib_1_1_jump_diffusion_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="271,861,474,901"/>
+<area shape="rect" href="../../d6/d02/class_quant_lib_1_1_exponential_fitting_heston_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="559,1172,745,1212"/>
+<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a5529e23ca823062da04b6856c037a1c4" title=" " alt="" coords="567,1236,737,1276"/>
+<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#acd9d5b9fe0dbf0d2d11952d5a08b0f95" title=" " alt="" coords="565,1300,739,1340"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="562,1364,742,1404"/>
+<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a3279751aa21dd6b1bbb01f26d47dc115" title=" " alt="" coords="542,1053,762,1093"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a6b2f1d95c4a73b96ca35307bce493324" title=" " alt="" coords="259,750,487,805"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,725,211,765"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a08475155b15976b6aec854b5ccd11012" title=" " alt="" coords="561,168,743,208"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a0c81528e5444302be62c311ba38c6166" title=" " alt="" coords="561,285,743,325"/>
+<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a9c2ec50ea41e7af302de7ddd5a8446cf" title=" " alt="" coords="542,797,762,837"/>
+<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="288,1479,457,1519"/>
+<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html#acd198b2cf5de7e3e969ba2253f3d5eb4" title=" " alt="" coords="567,1479,737,1519"/>
+<area shape="rect" href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html#aed8ef4f7d3bbb2e941eb4cadc6f3354e" title=" " alt="" coords="567,1543,737,1583"/>
 </map>
 </div>
 
@@ -456,11 +432,11 @@ Protected Attributes</h2></td></tr>
 <p >Sensitivity to change in the underlying forward price. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html#l00218">218</a> of file <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html">blackcalculator.cpp</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_ad1aeee7c18b44d616b3c8169ebb9611a_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_ad1aeee7c18b44d616b3c8169ebb9611a_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_ad1aeee7c18b44d616b3c8169ebb9611a_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_ad1aeee7c18b44d616b3c8169ebb9611a_icgraph">
 <area shape="rect" title=" " alt="" coords="539,109,635,134"/>
@@ -502,44 +478,40 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a1ce2edf271b7df5907ea9a3b100383fe">BlackScholesCalculator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html#l00202">202</a> of file <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html">blackcalculator.cpp</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_a1ce2edf271b7df5907ea9a3b100383fe_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_a1ce2edf271b7df5907ea9a3b100383fe_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_a1ce2edf271b7df5907ea9a3b100383fe_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_a1ce2edf271b7df5907ea9a3b100383fe_icgraph">
-<area shape="rect" title=" " alt="" coords="1375,542,1425,567"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="817,208,1048,263"/>
-<area shape="rect" href="../../d5/d06/class_quant_lib_1_1_analytic_discrete_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="1096,723,1327,778"/>
-<area shape="rect" href="../../d3/dfb/class_quant_lib_1_1_turnbull_wakeman_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="1118,802,1305,842"/>
-<area shape="rect" href="../../dd/d23/class_quant_lib_1_1_analytic_cliquet_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="1127,866,1296,906"/>
-<area shape="rect" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="844,288,1021,328"/>
-<area shape="rect" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="560,206,744,246"/>
-<area shape="rect" href="../../d4/d34/class_quant_lib_1_1_barone_adesi_whaley_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="549,354,755,394"/>
-<area shape="rect" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="535,546,769,586"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a397f8534c2b3d08642e5040c40426ab7" title=" " alt="" coords="1101,966,1321,1006"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#ab6f8af630290d3010bc3bfc64304aa03" title=" " alt="" coords="895,107,970,132"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a99bc584417a1b563e56644fc626fbbc6" title=" " alt="" coords="538,632,766,687"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#af7afb7a0e83603b71da76cd8923a07a2" title=" " alt="" coords="1186,479,1237,504"/>
-<area shape="rect" href="../../dd/d6b/class_quant_lib_1_1_jump_diffusion_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="271,206,474,246"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b" title=" " alt="" coords="838,1136,1027,1176"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#ab15a55536aefcbf71bb11eb16d9c8edf" title=" " alt="" coords="849,1056,1016,1111"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a1b13e7082b47d7dccb9b9b3891754fb4" title=" " alt="" coords="849,978,1016,1032"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#af563764ee0f97a97d41cada16cfa9264" title=" " alt="" coords="849,820,1016,875"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#abbc0f184ea4fde079e7ac23c5240cdef" title=" " alt="" coords="849,899,1016,954"/>
-<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="562,1136,742,1176"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a08475155b15976b6aec854b5ccd11012" title=" " alt="" coords="561,985,743,1025"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="289,938,456,992"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a0c81528e5444302be62c311ba38c6166" title=" " alt="" coords="561,906,743,946"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a3279751aa21dd6b1bbb01f26d47dc115" title=" " alt="" coords="542,100,762,140"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a6b2f1d95c4a73b96ca35307bce493324" title=" " alt="" coords="259,666,487,720"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,641,211,681"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a95dab8bfe0f864e7ab7d1fca93fdecb0" title=" " alt="" coords="872,454,993,479"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a9c2ec50ea41e7af302de7ddd5a8446cf" title=" " alt="" coords="823,705,1043,745"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#abba1bf8797f099026e699408878caedc" title=" " alt="" coords="885,503,980,528"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a2a88d2657223d46ccddd28c9a0a44520" title=" " alt="" coords="542,712,762,752"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#aa1f7cc87f80ba12bea93553ebe143183" title=" " alt="" coords="542,482,762,522"/>
+<area shape="rect" title=" " alt="" coords="1096,351,1147,376"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="537,5,767,60"/>
+<area shape="rect" href="../../d5/d06/class_quant_lib_1_1_analytic_discrete_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="817,477,1048,532"/>
+<area shape="rect" href="../../d3/dfb/class_quant_lib_1_1_turnbull_wakeman_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="839,557,1026,597"/>
+<area shape="rect" href="../../dd/d23/class_quant_lib_1_1_analytic_cliquet_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="848,621,1017,661"/>
+<area shape="rect" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="563,85,741,125"/>
+<area shape="rect" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="560,149,744,189"/>
+<area shape="rect" href="../../d4/d34/class_quant_lib_1_1_barone_adesi_whaley_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="549,357,755,397"/>
+<area shape="rect" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="535,421,769,461"/>
+<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a397f8534c2b3d08642e5040c40426ab7" title=" " alt="" coords="823,693,1043,733"/>
+<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#ab6f8af630290d3010bc3bfc64304aa03" title=" " alt="" coords="895,376,970,401"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a99bc584417a1b563e56644fc626fbbc6" title=" " alt="" coords="538,277,766,332"/>
+<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#af7afb7a0e83603b71da76cd8923a07a2" title=" " alt="" coords="907,221,958,247"/>
+<area shape="rect" href="../../dd/d6b/class_quant_lib_1_1_jump_diffusion_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="271,149,474,189"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#afd232583017ef776335c4837c0e6e05b" title=" " alt="" coords="557,549,747,589"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#ab15a55536aefcbf71bb11eb16d9c8edf" title=" " alt="" coords="569,771,735,825"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a1b13e7082b47d7dccb9b9b3891754fb4" title=" " alt="" coords="569,849,735,904"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#af563764ee0f97a97d41cada16cfa9264" title=" " alt="" coords="569,692,735,747"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#abbc0f184ea4fde079e7ac23c5240cdef" title=" " alt="" coords="569,613,735,668"/>
+<area shape="rect" href="../../da/de6/class_quant_lib_1_1_analytic_complex_chooser_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="283,549,463,589"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a08475155b15976b6aec854b5ccd11012" title=" " alt="" coords="281,778,464,818"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="25,731,191,785"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_analytic_holder_extensible_option_engine.html#a0c81528e5444302be62c311ba38c6166" title=" " alt="" coords="281,699,464,739"/>
+<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a3279751aa21dd6b1bbb01f26d47dc115" title=" " alt="" coords="542,485,762,525"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a6b2f1d95c4a73b96ca35307bce493324" title=" " alt="" coords="259,311,487,365"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,286,211,326"/>
+<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a9c2ec50ea41e7af302de7ddd5a8446cf" title=" " alt="" coords="542,213,762,253"/>
 </map>
 </div>
 
@@ -562,11 +534,11 @@ Protected Attributes</h2></td></tr>
 <p >Sensitivity in percent to a percent change in the underlying forward price. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html#l00242">242</a> of file <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html">blackcalculator.cpp</a>.</p>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_a7c544e51336c33f06b0a9158a3d2705e_cgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_a7c544e51336c33f06b0a9158a3d2705e_cgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_a7c544e51336c33f06b0a9158a3d2705e_cgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_a7c544e51336c33f06b0a9158a3d2705e_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,125,56"/>
@@ -605,11 +577,11 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#ab6f8af630290d3010bc3bfc64304aa03">BlackScholesCalculator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html#l00229">229</a> of file <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html">blackcalculator.cpp</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_ab6f8af630290d3010bc3bfc64304aa03_cgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_ab6f8af630290d3010bc3bfc64304aa03_cgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_ab6f8af630290d3010bc3bfc64304aa03_cgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_ab6f8af630290d3010bc3bfc64304aa03_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,80,56"/>
@@ -617,11 +589,11 @@ Protected Attributes</h2></td></tr>
 <area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc" title=" " alt="" coords="128,55,179,80"/>
 </map>
 </div>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_ab6f8af630290d3010bc3bfc64304aa03_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_ab6f8af630290d3010bc3bfc64304aa03_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_ab6f8af630290d3010bc3bfc64304aa03_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_ab6f8af630290d3010bc3bfc64304aa03_icgraph">
 <area shape="rect" title=" " alt="" coords="539,109,613,134"/>
@@ -683,32 +655,28 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a57565309e7b2cbfe856209958c63cfa5">BlackScholesCalculator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html#l00255">255</a> of file <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html">blackcalculator.cpp</a>.</p>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_a57565309e7b2cbfe856209958c63cfa5_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_a57565309e7b2cbfe856209958c63cfa5_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_a57565309e7b2cbfe856209958c63cfa5_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_a57565309e7b2cbfe856209958c63cfa5_icgraph">
-<area shape="rect" title=" " alt="" coords="1375,422,1440,448"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="817,76,1048,130"/>
-<area shape="rect" href="../../d5/d06/class_quant_lib_1_1_analytic_discrete_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="1096,656,1327,710"/>
-<area shape="rect" href="../../d3/dfb/class_quant_lib_1_1_turnbull_wakeman_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="1118,735,1305,775"/>
-<area shape="rect" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="844,155,1021,195"/>
-<area shape="rect" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="560,206,744,246"/>
-<area shape="rect" href="../../d4/d34/class_quant_lib_1_1_barone_adesi_whaley_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="549,270,755,310"/>
-<area shape="rect" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="535,414,769,454"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a99bc584417a1b563e56644fc626fbbc6" title=" " alt="" coords="538,478,766,533"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#aaed679bde0c499002fce41342891b61d" title=" " alt="" coords="1101,799,1321,839"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#af7afb7a0e83603b71da76cd8923a07a2" title=" " alt="" coords="1186,345,1237,370"/>
-<area shape="rect" href="../../dd/d6b/class_quant_lib_1_1_jump_diffusion_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="271,206,474,246"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a6b2f1d95c4a73b96ca35307bce493324" title=" " alt="" coords="259,510,487,565"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,486,211,526"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a95dab8bfe0f864e7ab7d1fca93fdecb0" title=" " alt="" coords="872,321,993,346"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a9c2ec50ea41e7af302de7ddd5a8446cf" title=" " alt="" coords="823,572,1043,612"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#abba1bf8797f099026e699408878caedc" title=" " alt="" coords="885,370,980,396"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a2a88d2657223d46ccddd28c9a0a44520" title=" " alt="" coords="542,572,762,612"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#aa1f7cc87f80ba12bea93553ebe143183" title=" " alt="" coords="542,350,762,390"/>
+<area shape="rect" title=" " alt="" coords="1096,296,1161,321"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="537,5,767,60"/>
+<area shape="rect" href="../../d5/d06/class_quant_lib_1_1_analytic_discrete_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="817,423,1048,477"/>
+<area shape="rect" href="../../d3/dfb/class_quant_lib_1_1_turnbull_wakeman_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="839,502,1026,542"/>
+<area shape="rect" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="563,85,741,125"/>
+<area shape="rect" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="560,149,744,189"/>
+<area shape="rect" href="../../d4/d34/class_quant_lib_1_1_barone_adesi_whaley_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="549,277,755,317"/>
+<area shape="rect" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="535,341,769,381"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a99bc584417a1b563e56644fc626fbbc6" title=" " alt="" coords="538,405,766,460"/>
+<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#aaed679bde0c499002fce41342891b61d" title=" " alt="" coords="823,566,1043,606"/>
+<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#af7afb7a0e83603b71da76cd8923a07a2" title=" " alt="" coords="907,220,958,245"/>
+<area shape="rect" href="../../dd/d6b/class_quant_lib_1_1_jump_diffusion_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="271,149,474,189"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a6b2f1d95c4a73b96ca35307bce493324" title=" " alt="" coords="259,437,487,492"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,413,211,453"/>
+<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a9c2ec50ea41e7af302de7ddd5a8446cf" title=" " alt="" coords="542,213,762,253"/>
 </map>
 </div>
 
@@ -752,11 +720,11 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#af7afb7a0e83603b71da76cd8923a07a2">BlackScholesCalculator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html#l00290">290</a> of file <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html">blackcalculator.cpp</a>.</p>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_af7afb7a0e83603b71da76cd8923a07a2_cgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_af7afb7a0e83603b71da76cd8923a07a2_cgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_af7afb7a0e83603b71da76cd8923a07a2_cgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_af7afb7a0e83603b71da76cd8923a07a2_cgraph">
 <area shape="rect" title=" " alt="" coords="5,80,56,105"/>
@@ -766,28 +734,24 @@ Protected Attributes</h2></td></tr>
 <area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc" title=" " alt="" coords="135,153,186,179"/>
 </map>
 </div>
-<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_af7afb7a0e83603b71da76cd8923a07a2_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_af7afb7a0e83603b71da76cd8923a07a2_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_af7afb7a0e83603b71da76cd8923a07a2_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_af7afb7a0e83603b71da76cd8923a07a2_icgraph">
-<area shape="rect" title=" " alt="" coords="1096,249,1147,275"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a95dab8bfe0f864e7ab7d1fca93fdecb0" title=" " alt="" coords="872,5,993,31"/>
-<area shape="rect" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="817,55,1048,109"/>
-<area shape="rect" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="844,134,1021,174"/>
-<area shape="rect" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="560,161,744,201"/>
-<area shape="rect" href="../../d4/d34/class_quant_lib_1_1_barone_adesi_whaley_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="549,225,755,265"/>
-<area shape="rect" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="535,353,769,393"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a99bc584417a1b563e56644fc626fbbc6" title=" " alt="" coords="538,417,766,472"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a9c2ec50ea41e7af302de7ddd5a8446cf" title=" " alt="" coords="823,477,1043,517"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#abba1bf8797f099026e699408878caedc" title=" " alt="" coords="885,300,980,325"/>
-<area shape="rect" href="../../dd/d6b/class_quant_lib_1_1_jump_diffusion_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="271,161,474,201"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a6b2f1d95c4a73b96ca35307bce493324" title=" " alt="" coords="259,449,487,504"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,425,211,465"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a2a88d2657223d46ccddd28c9a0a44520" title=" " alt="" coords="542,497,762,537"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#aa1f7cc87f80ba12bea93553ebe143183" title=" " alt="" coords="542,289,762,329"/>
+<area shape="rect" title=" " alt="" coords="817,220,868,245"/>
+<area shape="rect" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="537,5,767,60"/>
+<area shape="rect" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="563,85,741,125"/>
+<area shape="rect" href="../../d9/d2d/class_quant_lib_1_1_analytic_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="560,149,744,189"/>
+<area shape="rect" href="../../d4/d34/class_quant_lib_1_1_barone_adesi_whaley_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="549,213,755,253"/>
+<area shape="rect" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="535,277,769,317"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a99bc584417a1b563e56644fc626fbbc6" title=" " alt="" coords="538,341,766,396"/>
+<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#a9c2ec50ea41e7af302de7ddd5a8446cf" title=" " alt="" coords="542,421,762,461"/>
+<area shape="rect" href="../../dd/d6b/class_quant_lib_1_1_jump_diffusion_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="271,149,474,189"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a6b2f1d95c4a73b96ca35307bce493324" title=" " alt="" coords="259,309,487,364"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,350,211,390"/>
 </map>
 </div>
 
@@ -831,26 +795,11 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#abba1bf8797f099026e699408878caedc">BlackScholesCalculator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d90/blackcalculator_8hpp_source.html#l00120">120</a> of file <a class="el" href="../../df/d90/blackcalculator_8hpp_source.html">blackcalculator.hpp</a>.</p>
-<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_abba1bf8797f099026e699408878caedc_cgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_abba1bf8797f099026e699408878caedc_cgraph" alt=""/></div>
-<map name="ade/dac/class_quant_lib_1_1_black_calculator_abba1bf8797f099026e699408878caedc_cgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_abba1bf8797f099026e699408878caedc_cgraph">
-<area shape="rect" title=" " alt="" coords="5,80,100,105"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#af7afb7a0e83603b71da76cd8923a07a2" title=" " alt="" coords="148,80,199,105"/>
-<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#ab7d80f1774594ee7d9c1309083a44207" title=" " alt="" coords="247,5,360,31"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a1ce2edf271b7df5907ea9a3b100383fe" title=" " alt="" coords="278,55,329,80"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a57565309e7b2cbfe856209958c63cfa5" title=" " alt="" coords="271,104,336,129"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc" title=" " alt="" coords="278,153,329,179"/>
-</map>
-</div>
-<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_abba1bf8797f099026e699408878caedc_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_abba1bf8797f099026e699408878caedc_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_abba1bf8797f099026e699408878caedc_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_abba1bf8797f099026e699408878caedc_icgraph">
 <area shape="rect" title=" " alt="" coords="817,141,912,166"/>
@@ -883,15 +832,15 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Sensitivity to volatility. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d8/d8b/_discrete_hedging_8cpp-example.html#a2">DiscreteHedging.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d8/d8b/_discrete_hedging_8cpp-example.html#a8">DiscreteHedging.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html#l00301">301</a> of file <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html">blackcalculator.cpp</a>.</p>
-<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_a27d29dc37488c0e1005fd3df6c1f232e_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_a27d29dc37488c0e1005fd3df6c1f232e_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_a27d29dc37488c0e1005fd3df6c1f232e_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_a27d29dc37488c0e1005fd3df6c1f232e_icgraph">
 <area shape="rect" title=" " alt="" coords="820,317,868,342"/>
@@ -934,25 +883,25 @@ Protected Attributes</h2></td></tr>
 <p >Sensitivity to discounting rate. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html#l00316">316</a> of file <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html">blackcalculator.cpp</a>.</p>
-<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-16-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_afd9ef1f4b9fbb897c5e58b4a02cb1e7e_cgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_afd9ef1f4b9fbb897c5e58b4a02cb1e7e_cgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_afd9ef1f4b9fbb897c5e58b4a02cb1e7e_cgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_afd9ef1f4b9fbb897c5e58b4a02cb1e7e_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,45,31"/>
 <area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc" title=" " alt="" coords="93,5,144,31"/>
 </map>
 </div>
-<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-17-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-17-content" class="dyncontent" style="display:none;">
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_afd9ef1f4b9fbb897c5e58b4a02cb1e7e_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_afd9ef1f4b9fbb897c5e58b4a02cb1e7e_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_afd9ef1f4b9fbb897c5e58b4a02cb1e7e_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_afd9ef1f4b9fbb897c5e58b4a02cb1e7e_icgraph">
-<area shape="rect" title=" " alt="" coords="817,331,857,356"/>
+<area shape="rect" title=" " alt="" coords="817,299,857,324"/>
 <area shape="rect" href="../../de/d90/class_quant_lib_1_1_analytic_continuous_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="537,5,767,60"/>
 <area shape="rect" href="../../d5/d06/class_quant_lib_1_1_analytic_discrete_geometric_average_price_asian_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="537,84,767,139"/>
 <area shape="rect" href="../../dd/d23/class_quant_lib_1_1_analytic_cliquet_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="567,163,737,203"/>
@@ -962,10 +911,9 @@ Protected Attributes</h2></td></tr>
 <area shape="rect" href="../../d4/d34/class_quant_lib_1_1_barone_adesi_whaley_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="549,419,755,459"/>
 <area shape="rect" href="../../d6/db4/class_quant_lib_1_1_ju_quadratic_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="535,483,769,523"/>
 <area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a99bc584417a1b563e56644fc626fbbc6" title=" " alt="" coords="538,548,766,603"/>
-<area shape="rect" href="../../d6/d3b/class_quant_lib_1_1_black_scholes_calculator.html#abba1bf8797f099026e699408878caedc" title=" " alt="" coords="542,627,762,667"/>
 <area shape="rect" href="../../dd/d6b/class_quant_lib_1_1_jump_diffusion_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="271,355,474,395"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a6b2f1d95c4a73b96ca35307bce493324" title=" " alt="" coords="259,516,487,571"/>
-<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,557,211,597"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a6b2f1d95c4a73b96ca35307bce493324" title=" " alt="" coords="259,515,487,569"/>
+<area shape="rect" href="../../dc/d1e/class_quant_lib_1_1_bjerksund_stensland_approximation_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,555,211,595"/>
 </map>
 </div>
 
@@ -989,11 +937,11 @@ Protected Attributes</h2></td></tr>
 <p >Sensitivity to dividend/growth rate. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html#l00328">328</a> of file <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html">blackcalculator.cpp</a>.</p>
-<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-18-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_a1c339da001d997d79326dbc986f1477b_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_a1c339da001d997d79326dbc986f1477b_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_a1c339da001d997d79326dbc986f1477b_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_a1c339da001d997d79326dbc986f1477b_icgraph">
 <area shape="rect" title=" " alt="" coords="817,267,908,292"/>
@@ -1030,11 +978,11 @@ Protected Attributes</h2></td></tr>
 <p >Probability of being in the money in the bond martingale measure, i.e. N(d2). It is a risk-neutral probability, not the real world one. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d90/blackcalculator_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../df/d90/blackcalculator_8hpp_source.html">blackcalculator.hpp</a>.</p>
-<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-19-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_a52f0d80c352ce23b6009d89a828b7824_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_a52f0d80c352ce23b6009d89a828b7824_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_a52f0d80c352ce23b6009d89a828b7824_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_a52f0d80c352ce23b6009d89a828b7824_icgraph">
 <area shape="rect" title=" " alt="" coords="539,77,669,102"/>
@@ -1084,11 +1032,11 @@ Protected Attributes</h2></td></tr>
 <p >Sensitivity to strike. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html#l00341">341</a> of file <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html">blackcalculator.cpp</a>.</p>
-<div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-20-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-20-content" class="dyncontent" style="display:none;">
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_a55b21c7d22a7fdce4611b3b95effc896_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_a55b21c7d22a7fdce4611b3b95effc896_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_a55b21c7d22a7fdce4611b3b95effc896_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_a55b21c7d22a7fdce4611b3b95effc896_icgraph">
 <area shape="rect" title=" " alt="" coords="820,188,933,213"/>
@@ -1163,11 +1111,11 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d90/blackcalculator_8hpp_source.html#l00137">137</a> of file <a class="el" href="../../df/d90/blackcalculator_8hpp_source.html">blackcalculator.hpp</a>.</p>
-<div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-21-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-21-content" class="dyncontent" style="display:none;">
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_ad50765ca99bba93b755d16557de7ad55_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_ad50765ca99bba93b755d16557de7ad55_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_ad50765ca99bba93b755d16557de7ad55_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_ad50765ca99bba93b755d16557de7ad55_icgraph">
 <area shape="rect" title=" " alt="" coords="223,13,269,38"/>
@@ -1202,11 +1150,11 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html#l00065">65</a> of file <a class="el" href="../../da/d5b/blackcalculator_8cpp_source.html">blackcalculator.cpp</a>.</p>
-<div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-22-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-20-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-22-content" class="dyncontent" style="display:none;">
+<div id="dynsection-20-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/dac/class_quant_lib_1_1_black_calculator_a3063bb5f945bd7f3a1454a6c5e64248c_icgraph.png" border="0" usemap="#ade/dac/class_quant_lib_1_1_black_calculator_a3063bb5f945bd7f3a1454a6c5e64248c_icgraph" alt=""/></div>
 <map name="ade/dac/class_quant_lib_1_1_black_calculator_a3063bb5f945bd7f3a1454a6c5e64248c_icgraph" id="ade/dac/class_quant_lib_1_1_black_calculator_a3063bb5f945bd7f3a1454a6c5e64248c_icgraph">
 <area shape="rect" title=" " alt="" coords="273,35,343,60"/>

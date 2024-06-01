@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/credit/riskyassetswap.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/credit/riskyassetswap.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">riskyassetswap.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../df/ddb/riskyassetswap_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008, 2009 Roland Lichters</span></div>
@@ -105,19 +104,24 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file riskyassetswap.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Risky asset-swap instrument</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_risky_asset_swap_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_risky_asset_swap_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/instrument.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/termstructures/defaulttermstructure.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/termstructures/yieldtermstructure.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/termstructures/credit/defaultprobabilityhelpers.hpp&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/time/schedule.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/da7/instrument_8hpp.html">ql/instrument.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d7c/defaulttermstructure_8hpp.html">ql/termstructures/defaulttermstructure.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d89/yieldtermstructure_8hpp.html">ql/termstructures/yieldtermstructure.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d05/defaultprobabilityhelpers_8hpp.html">ql/termstructures/credit/defaultprobabilityhelpers.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/dd1/schedule_8hpp.html">ql/time/schedule.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../dd/d55/class_quant_lib_1_1_risky_asset_swap.html">   36</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dd/d55/class_quant_lib_1_1_risky_asset_swap.html">RiskyAssetSwap</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d9/d65/class_quant_lib_1_1_instrument.html">Instrument</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">    //! Risky asset-swap instrument</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../dd/d55/class_quant_lib_1_1_risky_asset_swap.html">   36</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dd/d55/class_quant_lib_1_1_risky_asset_swap.html">RiskyAssetSwap</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d9/d65/class_quant_lib_1_1_instrument.html">Instrument</a> {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_class" href="../../dd/d55/class_quant_lib_1_1_risky_asset_swap.html">RiskyAssetSwap</a>(<span class="keywordtype">bool</span> <a class="code hl_function" href="../../dd/d55/class_quant_lib_1_1_risky_asset_swap.html#af78236219f97bc285b9612be18858f13">fixedPayer</a>,</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                       <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../dd/d55/class_quant_lib_1_1_risky_asset_swap.html#a8eee3d3767fab185a6f78d6b406618f5">nominal</a>,</div>
@@ -243,7 +247,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_instrument_html"><div class="ttname"><a href="../../d9/d65/class_quant_lib_1_1_instrument.html">QuantLib::Instrument</a></div><div class="ttdoc">Abstract instrument class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da7/instrument_8hpp_source.html#l00044">instrument.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_null_html"><div class="ttname"><a href="../../d0/d7a/class_quant_lib_1_1_null.html">QuantLib::Null</a></div><div class="ttdoc">template class providing a null value for a given type.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5b/null_8hpp_source.html#l00076">null.hpp:76</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_relinkable_handle_html"><div class="ttname"><a href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">QuantLib::RelinkableHandle</a></div><div class="ttdoc">Relinkable handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00112">handle.hpp:112</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_relinkable_handle_html"><div class="ttname"><a href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">QuantLib::RelinkableHandle</a></div><div class="ttdoc">Relinkable handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00117">handle.hpp:117</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_risky_asset_swap_html"><div class="ttname"><a href="../../dd/d55/class_quant_lib_1_1_risky_asset_swap.html">QuantLib::RiskyAssetSwap</a></div><div class="ttdoc">Risky asset-swap instrument.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/ddb/riskyassetswap_8hpp_source.html#l00036">riskyassetswap.hpp:36</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_risky_asset_swap_html_a019ffb02457cfad5e1c975760fabf94d"><div class="ttname"><a href="../../dd/d55/class_quant_lib_1_1_risky_asset_swap.html#a019ffb02457cfad5e1c975760fabf94d">QuantLib::RiskyAssetSwap::riskyBondPrice</a></div><div class="ttdeci">Real riskyBondPrice() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd5/riskyassetswap_8cpp_source.html#l00141">riskyassetswap.cpp:141</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_risky_asset_swap_html_a0313ad2f0ebbcc7085afb5650bd11b76"><div class="ttname"><a href="../../dd/d55/class_quant_lib_1_1_risky_asset_swap.html#a0313ad2f0ebbcc7085afb5650bd11b76">QuantLib::RiskyAssetSwap::nominal_</a></div><div class="ttdeci">Real nominal_</div><div class="ttdef"><b>Definition:</b> <a href="../../df/ddb/riskyassetswap_8hpp_source.html#l00077">riskyassetswap.hpp:77</a></div></div>
@@ -274,11 +278,16 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_risky_asset_swap_html_afa1ea8e6bc0566d1062959082d22dd4a"><div class="ttname"><a href="../../dd/d55/class_quant_lib_1_1_risky_asset_swap.html#afa1ea8e6bc0566d1062959082d22dd4a">QuantLib::RiskyAssetSwap::floatAnnuity_</a></div><div class="ttdeci">Real floatAnnuity_</div><div class="ttdef"><b>Definition:</b> <a href="../../df/ddb/riskyassetswap_8hpp_source.html#l00070">riskyassetswap.hpp:70</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_risky_asset_swap_html_afede98ee249f0d9a977891edf19a1708"><div class="ttname"><a href="../../dd/d55/class_quant_lib_1_1_risky_asset_swap.html#afede98ee249f0d9a977891edf19a1708">QuantLib::RiskyAssetSwap::yieldTS_</a></div><div class="ttdeci">Handle&lt; YieldTermStructure &gt; yieldTS_</div><div class="ttdef"><b>Definition:</b> <a href="../../df/ddb/riskyassetswap_8hpp_source.html#l00082">riskyassetswap.hpp:82</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_schedule_html"><div class="ttname"><a href="../../d5/d5b/class_quant_lib_1_1_schedule.html">QuantLib::Schedule</a></div><div class="ttdoc">Payment schedule.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd1/schedule_8hpp_source.html#l00040">schedule.hpp:40</a></div></div>
+<div class="ttc" id="adefaultprobabilityhelpers_8hpp_html"><div class="ttname"><a href="../../d0/d05/defaultprobabilityhelpers_8hpp.html">defaultprobabilityhelpers.hpp</a></div><div class="ttdoc">bootstrap helpers for default-probability term structures</div></div>
+<div class="ttc" id="adefaulttermstructure_8hpp_html"><div class="ttname"><a href="../../d3/d7c/defaulttermstructure_8hpp.html">defaulttermstructure.hpp</a></div><div class="ttdoc">default-probability term structure</div></div>
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
+<div class="ttc" id="ainstrument_8hpp_html"><div class="ttname"><a href="../../d6/da7/instrument_8hpp.html">instrument.hpp</a></div><div class="ttdoc">Abstract instrument class.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aschedule_8hpp_html"><div class="ttname"><a href="../../d2/dd1/schedule_8hpp.html">schedule.hpp</a></div><div class="ttdoc">date schedule</div></div>
+<div class="ttc" id="ayieldtermstructure_8hpp_html"><div class="ttname"><a href="../../dd/d89/yieldtermstructure_8hpp.html">yieldtermstructure.hpp</a></div><div class="ttdoc">Interest-rate term structure.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

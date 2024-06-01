@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/instruments/stickyratchet.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/instruments/stickyratchet.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">stickyratchet.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../da/d52/stickyratchet_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2007 Marco Bianchetti</span></div>
@@ -106,17 +105,22 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file stickyratchet.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief Payoffs for double nested options of sticky or ratchet type</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_stickyratchet_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_stickyratchet_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/option.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/payoff.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/dd9/option_8hpp.html">ql/option.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/db3/payoff_8hpp.html">ql/payoff.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">class </span>AcyclicVisitor;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">//  initialValues can be a (forward) rate or a coupon/accrualFactor </span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">class </span>AcyclicVisitor;<span class="comment"></span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    //! Intermediate class for single/double sticky/ratchet payoffs.</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span>    <span class="comment">//  initialValues can be a (forward) rate or a coupon/accrualFactor </span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">   36</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">DoubleStickyRatchetPayoff</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d8/d34/class_quant_lib_1_1_payoff.html">Payoff</a> {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a18f246c0b1236a4b7c2ded97b8fa33ed">   38</a></span>        <a class="code hl_function" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a18f246c0b1236a4b7c2ded97b8fa33ed">DoubleStickyRatchetPayoff</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> type1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> type2,</div>
@@ -128,20 +132,23 @@ $(function() {
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>          <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#ac418b2b5f0c54eede482b9d76d425b7a">gearing1_</a>(gearing1), <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a44b648247a153b4790881c9e4214e501">gearing2_</a>(gearing2), <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a988e383316b1ad9bbf01779d6d5507a2">gearing3_</a>(gearing3),</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>          <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a263fdfa7500dd221e5326e864d9a0015">spread1_</a>(spread1), <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#aaa59c1ff658161fa911e029c9f21fa5f">spread2_</a>(spread2), <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a774312451eb16226751af22306790298">spread3_</a>(spread3),</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>          <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a8600ffeada927b9bf1c0b11724bbbafc">initialValue1_</a>(initialValue1), <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a949c24a98ae16d82a431a86f1a55a1a3">initialValue2_</a>(initialValue2), </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>          <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#ac10c63edf709c1a57e00fe717247f4c7">accrualFactor_</a>(accrualFactor) {}</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        std::string <a class="code hl_function" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>          <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#ac10c63edf709c1a57e00fe717247f4c7">accrualFactor_</a>(accrualFactor) {}<span class="comment"></span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">        //! \name Payoff interface</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment"></span>        std::string <a class="code hl_function" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#adc02a7382718463faa8f990889bc0514">operator()</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> forward) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        std::string <a class="code hl_function" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a4afd83de1a474668783156572e06247b">description</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d">accept</a>(<a class="code hl_class" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a6fcc1b62510947fbc30b2952fff63c2d">accept</a>(<a class="code hl_class" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp;) <span class="keyword">override</span>;<span class="comment"></span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment"></span>      <span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#abc8f25f88df7422f6b0b76e2f1c4927c">   56</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#abc8f25f88df7422f6b0b76e2f1c4927c">type1_</a> ,<a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a557463199e12b6b100feb90a5b62ac99">type2_</a>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#ac418b2b5f0c54eede482b9d76d425b7a">   57</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#ac418b2b5f0c54eede482b9d76d425b7a">gearing1_</a>, <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a44b648247a153b4790881c9e4214e501">gearing2_</a>, <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a988e383316b1ad9bbf01779d6d5507a2">gearing3_</a>;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a263fdfa7500dd221e5326e864d9a0015">   58</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a263fdfa7500dd221e5326e864d9a0015">spread1_</a>, <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#aaa59c1ff658161fa911e029c9f21fa5f">spread2_</a>, <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a774312451eb16226751af22306790298">spread3_</a>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#ac10c63edf709c1a57e00fe717247f4c7">   59</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a8600ffeada927b9bf1c0b11724bbbafc">initialValue1_</a>, <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#a949c24a98ae16d82a431a86f1a55a1a3">initialValue2_</a>, <a class="code hl_variable" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html#ac10c63edf709c1a57e00fe717247f4c7">accrualFactor_</a>;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    };</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d9/d01/class_quant_lib_1_1_ratchet_payoff.html">   63</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d9/d01/class_quant_lib_1_1_ratchet_payoff.html">RatchetPayoff</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">DoubleStickyRatchetPayoff</a> {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment"></span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">    //! Ratchet payoff (single option)</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d9/d01/class_quant_lib_1_1_ratchet_payoff.html">   63</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d9/d01/class_quant_lib_1_1_ratchet_payoff.html">RatchetPayoff</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">DoubleStickyRatchetPayoff</a> {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d9/d01/class_quant_lib_1_1_ratchet_payoff.html#a8d7e9114e3db62d389ef1a55539f1f49">   65</a></span>         <a class="code hl_function" href="../../d9/d01/class_quant_lib_1_1_ratchet_payoff.html#a8d7e9114e3db62d389ef1a55539f1f49">RatchetPayoff</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing2,</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                       <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread2,</div>
@@ -150,12 +157,15 @@ $(function() {
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                            gearing1, 0.0, gearing2,</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                            spread1, 0.0, spread2,</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                            initialValue, 0.0, </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                            accrualFactor) {}</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../d9/d01/class_quant_lib_1_1_ratchet_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">   75</a></span>         std::string <a class="code hl_function" href="../../d9/d01/class_quant_lib_1_1_ratchet_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Ratchet&quot;</span>; }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    };    </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../d7/d72/class_quant_lib_1_1_sticky_payoff.html">   80</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/d72/class_quant_lib_1_1_sticky_payoff.html">StickyPayoff</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">DoubleStickyRatchetPayoff</a> {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                            accrualFactor) {}<span class="comment"></span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">        //! \name Payoff interface</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../d9/d01/class_quant_lib_1_1_ratchet_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">   75</a></span><span class="comment"></span>         std::string <a class="code hl_function" href="../../d9/d01/class_quant_lib_1_1_ratchet_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Ratchet&quot;</span>; }<span class="comment"></span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">         //@}</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment"></span>    };    </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment"></span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">    //! Sticky payoff (single option)</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../d7/d72/class_quant_lib_1_1_sticky_payoff.html">   80</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/d72/class_quant_lib_1_1_sticky_payoff.html">StickyPayoff</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">DoubleStickyRatchetPayoff</a> {</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../d7/d72/class_quant_lib_1_1_sticky_payoff.html#aed264b32d65ab611af85d82017ce38d9">   82</a></span>         <a class="code hl_function" href="../../d7/d72/class_quant_lib_1_1_sticky_payoff.html#aed264b32d65ab611af85d82017ce38d9">StickyPayoff</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing2,</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                       <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread2,</div>
@@ -164,12 +174,15 @@ $(function() {
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                            gearing1, 0.0, gearing2,</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                            spread1, 0.0, spread2,</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                            initialValue, 0.0, </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                            accrualFactor) {}</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="../../d7/d72/class_quant_lib_1_1_sticky_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">   92</a></span>         std::string <a class="code hl_function" href="../../d7/d72/class_quant_lib_1_1_sticky_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Sticky&quot;</span>; }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    };</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../df/dc9/class_quant_lib_1_1_ratchet_max_payoff.html">   97</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../df/dc9/class_quant_lib_1_1_ratchet_max_payoff.html">RatchetMaxPayoff</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">DoubleStickyRatchetPayoff</a> {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                            accrualFactor) {}<span class="comment"></span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">        //! \name Payoff interface</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="../../d7/d72/class_quant_lib_1_1_sticky_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">   92</a></span><span class="comment"></span>         std::string <a class="code hl_function" href="../../d7/d72/class_quant_lib_1_1_sticky_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Sticky&quot;</span>; }<span class="comment"></span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">         //@}</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment"></span>    };</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment"></span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">    //! RatchetMax payoff (double option)</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../df/dc9/class_quant_lib_1_1_ratchet_max_payoff.html">   97</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../df/dc9/class_quant_lib_1_1_ratchet_max_payoff.html">RatchetMaxPayoff</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">DoubleStickyRatchetPayoff</a> {</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="../../df/dc9/class_quant_lib_1_1_ratchet_max_payoff.html#aedd2d12c290a495231c91b2e334100e0">   99</a></span>         <a class="code hl_function" href="../../df/dc9/class_quant_lib_1_1_ratchet_max_payoff.html#aedd2d12c290a495231c91b2e334100e0">RatchetMaxPayoff</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing2, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing3,</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread2, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread3,</div>
@@ -179,12 +192,15 @@ $(function() {
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                                    gearing1, gearing2, gearing3,</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                                    spread1, spread2, spread3,</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                                    initialValue1, initialValue2, </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                                    accrualFactor) {}</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="../../df/dc9/class_quant_lib_1_1_ratchet_max_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">  110</a></span>         std::string <a class="code hl_function" href="../../df/dc9/class_quant_lib_1_1_ratchet_max_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;RatchetMax&quot;</span>; }</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    };    </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="../../d9/d4b/class_quant_lib_1_1_ratchet_min_payoff.html">  115</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d9/d4b/class_quant_lib_1_1_ratchet_min_payoff.html">RatchetMinPayoff</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">DoubleStickyRatchetPayoff</a> {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                                    accrualFactor) {}<span class="comment"></span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">        //! \name Payoff interface</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="../../df/dc9/class_quant_lib_1_1_ratchet_max_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">  110</a></span><span class="comment"></span>         std::string <a class="code hl_function" href="../../df/dc9/class_quant_lib_1_1_ratchet_max_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;RatchetMax&quot;</span>; }<span class="comment"></span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">         //@}</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment"></span>    };    </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment"></span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">    //! RatchetMin payoff (double option)</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="../../d9/d4b/class_quant_lib_1_1_ratchet_min_payoff.html">  115</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d9/d4b/class_quant_lib_1_1_ratchet_min_payoff.html">RatchetMinPayoff</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">DoubleStickyRatchetPayoff</a> {</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="../../d9/d4b/class_quant_lib_1_1_ratchet_min_payoff.html#a3a55d7f4ec4c83bcdc8fa9bf646c9695">  117</a></span>         <a class="code hl_function" href="../../d9/d4b/class_quant_lib_1_1_ratchet_min_payoff.html#a3a55d7f4ec4c83bcdc8fa9bf646c9695">RatchetMinPayoff</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing2, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing3,</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread2, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread3,</div>
@@ -194,12 +210,15 @@ $(function() {
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                                    gearing1, gearing2, gearing3,</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                                    spread1, spread2, spread3,</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                                    initialValue1, initialValue2, </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                                    accrualFactor) {}</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="../../d9/d4b/class_quant_lib_1_1_ratchet_min_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">  128</a></span>         std::string <a class="code hl_function" href="../../d9/d4b/class_quant_lib_1_1_ratchet_min_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;RatchetMin&quot;</span>; }</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    };    </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="../../d8/d3a/class_quant_lib_1_1_sticky_max_payoff.html">  133</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d8/d3a/class_quant_lib_1_1_sticky_max_payoff.html">StickyMaxPayoff</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">DoubleStickyRatchetPayoff</a> {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                                    accrualFactor) {}<span class="comment"></span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">        //! \name Payoff interface</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="../../d9/d4b/class_quant_lib_1_1_ratchet_min_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">  128</a></span><span class="comment"></span>         std::string <a class="code hl_function" href="../../d9/d4b/class_quant_lib_1_1_ratchet_min_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;RatchetMin&quot;</span>; }<span class="comment"></span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">         //@}</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment"></span>    };    </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment"></span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">    //! StickyMax payoff (double option)</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="../../d8/d3a/class_quant_lib_1_1_sticky_max_payoff.html">  133</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d8/d3a/class_quant_lib_1_1_sticky_max_payoff.html">StickyMaxPayoff</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">DoubleStickyRatchetPayoff</a> {</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="../../d8/d3a/class_quant_lib_1_1_sticky_max_payoff.html#a0aa87631a2fb41687528d78674ce5aee">  135</a></span>         <a class="code hl_function" href="../../d8/d3a/class_quant_lib_1_1_sticky_max_payoff.html#a0aa87631a2fb41687528d78674ce5aee">StickyMaxPayoff</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing2, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing3,</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread2, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread3,</div>
@@ -209,12 +228,15 @@ $(function() {
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                                    gearing1, gearing2, gearing3,</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                                    spread1, spread2, spread3,</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                                    initialValue1, initialValue2, </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                                    accrualFactor) {}</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="../../d8/d3a/class_quant_lib_1_1_sticky_max_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">  146</a></span>         std::string <a class="code hl_function" href="../../d8/d3a/class_quant_lib_1_1_sticky_max_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;StickyMax&quot;</span>; }</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    };    </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="../../d5/da0/class_quant_lib_1_1_sticky_min_payoff.html">  151</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d5/da0/class_quant_lib_1_1_sticky_min_payoff.html">StickyMinPayoff</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">DoubleStickyRatchetPayoff</a> {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                                    accrualFactor) {}<span class="comment"></span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">        //! \name Payoff interface</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="../../d8/d3a/class_quant_lib_1_1_sticky_max_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">  146</a></span><span class="comment"></span>         std::string <a class="code hl_function" href="../../d8/d3a/class_quant_lib_1_1_sticky_max_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;StickyMax&quot;</span>; }<span class="comment"></span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">         //@}</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment"></span>    };    </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment"></span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">    //! StickyMin payoff (double option)</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="../../d5/da0/class_quant_lib_1_1_sticky_min_payoff.html">  151</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d5/da0/class_quant_lib_1_1_sticky_min_payoff.html">StickyMinPayoff</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d45/class_quant_lib_1_1_double_sticky_ratchet_payoff.html">DoubleStickyRatchetPayoff</a> {</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="../../d5/da0/class_quant_lib_1_1_sticky_min_payoff.html#afb8b5c927451eeef679e6a243a3aac47">  153</a></span>         <a class="code hl_function" href="../../d5/da0/class_quant_lib_1_1_sticky_min_payoff.html#afb8b5c927451eeef679e6a243a3aac47">StickyMinPayoff</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing2, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gearing3,</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread2, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spread3,</div>
@@ -224,62 +246,73 @@ $(function() {
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                                    gearing1, gearing2, gearing3,</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                                    spread1, spread2, spread3,</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                                    initialValue1, initialValue2, </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                                    accrualFactor) {}</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="../../d5/da0/class_quant_lib_1_1_sticky_min_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">  164</a></span>         std::string <a class="code hl_function" href="../../d5/da0/class_quant_lib_1_1_sticky_min_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;StickyMin&quot;</span>; }</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    };    </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                                    accrualFactor) {}<span class="comment"></span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">        //! \name Payoff interface</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="../../d5/da0/class_quant_lib_1_1_sticky_min_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">  164</a></span><span class="comment"></span>         std::string <a class="code hl_function" href="../../d5/da0/class_quant_lib_1_1_sticky_min_payoff.html#aa4f4ba750a08765e64da2d0bd473944a">name</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;StickyMin&quot;</span>; }<span class="comment"></span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">         //@}</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment"></span>    };    </div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment">/*---------------------------------------------------------------------------------</span></div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment">    // Old code for single sticky/ratchet payoffs, </span></div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment">    // superated by DoubleStickyRatchetPayoff class above</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment"></span> </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment">    //  initialValue can be a (forward) rate or a coupon/accrualFactor </span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">    class StickyRatchetPayoff : public Payoff {</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment">      public:</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">        StickyRatchetPayoff(Real type,</span></div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">                            Real gearing1, Real gearing2,</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">                            Real spread1, Real spread2,</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="comment">                            Real initialValue, Real accrualFactor) </span></div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="comment">        : type_(type), gearing1_(gearing1), gearing2_(gearing2), </span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="comment">          spread1_(spread1), spread2_(spread2), initialValue_(initialValue),</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="comment">          accrualFactor_(accrualFactor) {}</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="comment"></span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">        Real operator()(Real forward) const;</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">        std::string description() const;</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment">        virtual void accept(AcyclicVisitor&amp;);</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">      protected:</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment">        Real type_;</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment">        Real gearing1_, gearing2_;</span></div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment">        Real spread1_, spread2_;</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment">        Real initialValue_, accrualFactor_;</span></div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="comment">    };</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment"></span><span class="comment"></span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">    //! Intermediate class for sticky/ratchet payoffs</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment"></span>    //  initialValue can be a (forward) rate or a coupon/accrualFactor </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    class StickyRatchetPayoff : public Payoff {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      public:</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        StickyRatchetPayoff(Real type,</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                            Real gearing1, Real gearing2,</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                            Real spread1, Real spread2,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                            Real initialValue, Real accrualFactor) </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        : type_(type), gearing1_(gearing1), gearing2_(gearing2), </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>          spread1_(spread1), spread2_(spread2), initialValue_(initialValue),</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>          accrualFactor_(accrualFactor) {}<span class="comment"></span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="comment">        //! \name Payoff interface</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment"></span>        Real operator()(Real forward) const;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        std::string description() const;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        virtual void accept(AcyclicVisitor&amp;);<span class="comment"></span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment"></span>      protected:</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        Real type_;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        Real gearing1_, gearing2_;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        Real spread1_, spread2_;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        Real initialValue_, accrualFactor_;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    };</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="comment"></span> </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment">    class RatchetPayoff_2 : public StickyRatchetPayoff {</span></div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">      public:</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment">         RatchetPayoff_2(Real gearing1, Real gearing2,</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment">                       Real spread1, Real spread2,</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="comment">                       Real initialValue, Real accrualFactor)</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="comment">        : StickyRatchetPayoff(-1,</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="comment">                              gearing1, gearing2,</span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="comment">                              spread1, spread2,</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="comment">                              initialValue, accrualFactor) {}</span></div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="comment"></span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="comment">        std::string name() const { return &quot;Ratchet&quot;;}</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="comment">    };</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment">    //! Ratchet_2 payoff</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment"></span>    class RatchetPayoff_2 : public StickyRatchetPayoff {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      public:</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>         RatchetPayoff_2(Real gearing1, Real gearing2,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                       Real spread1, Real spread2,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                       Real initialValue, Real accrualFactor)</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        : StickyRatchetPayoff(-1,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                              gearing1, gearing2,</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                              spread1, spread2,</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                              initialValue, accrualFactor) {}<span class="comment"></span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="comment">        //! \name Payoff interface</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="comment"></span>        std::string name() const { return &quot;Ratchet&quot;;}<span class="comment"></span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="comment"></span>    };</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="comment"></span> </div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="comment">    class StickyPayoff_2 : public StickyRatchetPayoff {</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="comment">      public:</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="comment">         StickyPayoff_2(Real gearing1, Real gearing2,</span></div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="comment">                       Real spread1, Real spread2,</span></div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="comment">                       Real initialValue, Real accrualFactor) </span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="comment">        : StickyRatchetPayoff(+1,</span></div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="comment">                              gearing1, gearing2,</span></div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="comment">                              spread1, spread2,</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="comment">                              initialValue, accrualFactor) {}</span></div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment"></span> </div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment">        std::string name() const { return &quot;Sticky&quot;;}</span></div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="comment">    };</span></div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="comment">-----------------------------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="comment">    //! Sticky_2 payoff</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="comment"></span>    class StickyPayoff_2 : public StickyRatchetPayoff {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>      public:</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>         StickyPayoff_2(Real gearing1, Real gearing2,</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                       Real spread1, Real spread2,</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                       Real initialValue, Real accrualFactor) </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        : StickyRatchetPayoff(+1,</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                              gearing1, gearing2,</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                              spread1, spread2,</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                              initialValue, accrualFactor) {}<span class="comment"></span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="comment">        //! \name Payoff interface</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment"></span>        std::string name() const { return &quot;Sticky&quot;;}<span class="comment"></span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="comment"></span>    };</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>-----------------------------------------------------------------------------*/</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>}</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
@@ -323,6 +356,8 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_sticky_payoff_html_aed264b32d65ab611af85d82017ce38d9"><div class="ttname"><a href="../../d7/d72/class_quant_lib_1_1_sticky_payoff.html#aed264b32d65ab611af85d82017ce38d9">QuantLib::StickyPayoff::StickyPayoff</a></div><div class="ttdeci">StickyPayoff(Real gearing1, Real gearing2, Real spread1, Real spread2, Real initialValue, Real accrualFactor)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d52/stickyratchet_8hpp_source.html#l00082">stickyratchet.hpp:82</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aoption_8hpp_html"><div class="ttname"><a href="../../d0/dd9/option_8hpp.html">option.hpp</a></div><div class="ttdoc">Base option class.</div></div>
+<div class="ttc" id="apayoff_8hpp_html"><div class="ttname"><a href="../../df/db3/payoff_8hpp.html">payoff.hpp</a></div><div class="ttdoc">Option payoff classes.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

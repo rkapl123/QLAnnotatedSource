@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/pricingengines/swaption/discretizedswaption.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/pricingengines/swaption/discretizedswaption.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">discretizedswaption.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d6/d86/discretizedswaption_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2001, 2002, 2003 Sadruddin Rejeb</span></div>
@@ -107,12 +106,16 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"></span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">/*! \file discretizedswaption.hpp</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">    \brief Discretized swaption class</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef quantlib_discretized_swaption_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define quantlib_discretized_swaption_hpp</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/discretizedasset.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/instruments/swaption.hpp&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/de8/discretizedasset_8hpp.html">ql/discretizedasset.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d68/swaption_8hpp.html">ql/instruments/swaption.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
@@ -149,10 +152,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_discretized_swaption_html_a82accf3abead71dcabb1fa5cd9197d90"><div class="ttname"><a href="../../de/d27/class_quant_lib_1_1_discretized_swaption.html#a82accf3abead71dcabb1fa5cd9197d90">QuantLib::DiscretizedSwaption::prepareSwaptionWithSnappedDates</a></div><div class="ttdeci">static void prepareSwaptionWithSnappedDates(const Swaption::arguments &amp;args, const Date &amp;referenceDate, const DayCounter &amp;dayCounter, PricingEngine::arguments &amp;snappedArgs, std::vector&lt; CouponAdjustment &gt; &amp;fixedCouponAdjustments, std::vector&lt; CouponAdjustment &gt; &amp;floatingCouponAdjustments)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d37/discretizedswaption_8cpp_source.html#l00077">discretizedswaption.cpp:77</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_discretized_swaption_html_ae6faa07dce269bafb47623aa26d65ecb"><div class="ttname"><a href="../../de/d27/class_quant_lib_1_1_discretized_swaption.html#ae6faa07dce269bafb47623aa26d65ecb">QuantLib::DiscretizedSwaption::reset</a></div><div class="ttdeci">void reset(Size size) override</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d37/discretizedswaption_8cpp_source.html#l00072">discretizedswaption.cpp:72</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pricing_engine_1_1arguments_html"><div class="ttname"><a href="../../d7/d14/class_quant_lib_1_1_pricing_engine_1_1arguments.html">QuantLib::PricingEngine::arguments</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcc/pricingengine_8hpp_source.html#l00045">pricingengine.hpp:45</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_swaption_1_1arguments_html"><div class="ttname"><a href="../../db/d5d/class_quant_lib_1_1_swaption_1_1arguments.html">QuantLib::Swaption::arguments</a></div><div class="ttdoc">Arguments for swaption calculation</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d68/swaption_8hpp_source.html#l00129">swaption.hpp:130</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_swaption_1_1arguments_html"><div class="ttname"><a href="../../db/d5d/class_quant_lib_1_1_swaption_1_1arguments.html">QuantLib::Swaption::arguments</a></div><div class="ttdoc">Arguments for swaption calculation</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d68/swaption_8hpp_source.html#l00146">swaption.hpp:147</a></div></div>
+<div class="ttc" id="adiscretizedasset_8hpp_html"><div class="ttname"><a href="../../db/de8/discretizedasset_8hpp.html">discretizedasset.hpp</a></div><div class="ttdoc">Discretized asset classes.</div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aswaption_8hpp_html"><div class="ttname"><a href="../../d5/d68/swaption_8hpp.html">swaption.hpp</a></div><div class="ttdoc">Swaption class.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

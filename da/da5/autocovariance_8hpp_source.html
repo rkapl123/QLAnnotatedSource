@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/math/autocovariance.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/math/autocovariance.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">autocovariance.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../da/da5/autocovariance_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2010 Liquidnet Holdings, Inc.</span></div>
@@ -105,12 +104,16 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file autocovariance.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief autocovariance and convolution calculation</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_auto_covariance_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_auto_covariance_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/math/fastfouriertransform.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/math/array.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/ddf/fastfouriertransform_8hpp.html">ql/math/fastfouriertransform.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/db5/array_8hpp.html">ql/math/array.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;complex&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
@@ -146,36 +149,46 @@ $(function() {
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d8/d1e/namespace_quant_lib_1_1detail.html#aae920b41bf5ec0a5c3161561f2d6d8fc">   61</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d8/d1e/namespace_quant_lib_1_1detail.html#aae920b41bf5ec0a5c3161561f2d6d8fc">remove_mean</a>(InputIterator begin, InputIterator end,</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                         OutputIterator out) {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> mean(0.0);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            std::size_t n = 1;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">for</span> (InputIterator it = begin; it != end; ++it, ++n)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                mean = (mean*<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(n-1) + *it)/n;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            std::size_t <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a> = 1;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">for</span> (InputIterator it = begin; it != end; ++it, ++<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                mean = (mean*<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>-1) + *it)/<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            std::transform(begin, end, out, [=](<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x) -&gt; <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> { <span class="keywordflow">return</span> x - mean; });</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">return</span> mean;</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment"></span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">    //! Convolutions of the input sequence.</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment"></span><span class="comment">    /*! Calculates x[0]*x[n]+x[1]*x[n+1]+x[2]*x[n+2]+...</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">        for n = 0,1,...,maxLag via FFT.</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment"></span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">        \pre The size of the output sequence must be maxLag + 1</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ForwardIterator, <span class="keyword">typename</span> OutputIterator&gt;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#ae5e775d474bf37284b4e730d9d78e0cf">   81</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#ae5e775d474bf37284b4e730d9d78e0cf">convolutions</a>(ForwardIterator begin, ForwardIterator end,</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                      OutputIterator out, std::size_t maxLag) {</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keyword">using namespace </span>detail;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        std::size_t nData = std::distance(begin, end);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        QL_REQUIRE(maxLag &lt; nData, <span class="stringliteral">&quot;maxLag must be less than data size&quot;</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(maxLag &lt; nData, <span class="stringliteral">&quot;maxLag must be less than data size&quot;</span>);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keyword">const</span> std::vector&lt;std::complex&lt;Real&gt; &gt;&amp; ft = double_ft(begin, end);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> w = 1.0 / (<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)ft.size();</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">for</span> (std::size_t k = 0; k &lt;= maxLag; ++k)</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            *out++ = ft[k].real() * w;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment"></span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">    //! Unbiased auto-covariances</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment"></span><span class="comment">    /*! Results are calculated via FFT.</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment"></span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">        \pre Input data are supposed to be centered (i.e., zero mean).</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">        \pre The size of the output sequence must be maxLag + 1</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ForwardIterator, <span class="keyword">typename</span> OutputIterator&gt;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#aff12d4f3198b1b93a5c55aea0955ee80">   99</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#aff12d4f3198b1b93a5c55aea0955ee80">autocovariances</a>(ForwardIterator begin, ForwardIterator end,</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                         OutputIterator out, std::size_t maxLag) {</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">using namespace </span>detail;</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        std::size_t nData = std::distance(begin, end);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        QL_REQUIRE(maxLag &lt; nData,</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(maxLag &lt; nData,</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                   <span class="stringliteral">&quot;number of covariances must be less than data size&quot;</span>);</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keyword">const</span> std::vector&lt;std::complex&lt;Real&gt; &gt;&amp; ft = double_ft(begin, end);</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> w1 = 1.0 / (<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)ft.size(), w2 = (<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)nData;</div>
@@ -183,8 +196,16 @@ $(function() {
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            *out++ = ft[k].real() * w1 / w2;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment"></span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">    //! Unbiased auto-covariances</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment"></span><span class="comment">    /*! Results are calculated via FFT.</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment"></span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">        This overload accepts non-centered data, removes the mean and</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">        returns it as a result.  The centered sequence is written back</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">        into the input sequence if the reuse parameter is true.</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment"></span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">        \pre The size of the output sequence must be maxLag + 1</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ForwardIterator, <span class="keyword">typename</span> OutputIterator&gt;</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a30338634a8f7c953a91b39f904ac94d7">  122</a></span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#aff12d4f3198b1b93a5c55aea0955ee80">autocovariances</a>(ForwardIterator begin, ForwardIterator end,</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                         OutputIterator out,</div>
@@ -202,25 +223,40 @@ $(function() {
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">return</span> mean;</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment"></span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">    //! Unbiased auto-correlations.</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment"></span><span class="comment">    /*! Results are calculated via FFT.</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment">        The first element of the output is the unbiased sample variance.</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment"></span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">        \pre Input data are supposed to be centered (i.e., zero mean).</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">        \pre The size of the output sequence must be maxLag + 1</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ForwardIterator, <span class="keyword">typename</span> OutputIterator&gt;</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a9e418532c372d0c7c034185fdaac1596">  147</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#a9e418532c372d0c7c034185fdaac1596">autocorrelations</a>(ForwardIterator begin, ForwardIterator end,</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                          OutputIterator out, std::size_t maxLag) {</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keyword">using namespace </span>detail;</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        std::size_t nData = std::distance(begin, end);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        QL_REQUIRE(maxLag &lt; nData,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(maxLag &lt; nData,</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                   <span class="stringliteral">&quot;number of correlations must be less than data size&quot;</span>);</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keyword">const</span> std::vector&lt;std::complex&lt;Real&gt; &gt;&amp; ft = double_ft(begin, end);</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> w1 = 1.0 / (<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)ft.size(), w2 = (<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)nData;</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> variance = ft[0].real() * w1 / w2;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        *out++ = variance * w2 / (w2-1.0);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../de/df6/fdmhestonvariancemesher_8cpp.html#a3ecadbda01bb88de2021e000794a4891">variance</a> = ft[0].real() * w1 / w2;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        *out++ = <a class="code hl_variable" href="../../de/df6/fdmhestonvariancemesher_8cpp.html#a3ecadbda01bb88de2021e000794a4891">variance</a> * w2 / (w2-1.0);</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        w2 -= 1.0;</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">for</span> (std::size_t k = 1; k &lt;= maxLag; ++k, w2 -= 1.0)</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            *out++ = ft[k].real() * w1 / (variance * w2);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            *out++ = ft[k].real() * w1 / (<a class="code hl_variable" href="../../de/df6/fdmhestonvariancemesher_8cpp.html#a3ecadbda01bb88de2021e000794a4891">variance</a> * w2);</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment"></span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">    //! Unbiased auto-correlations.</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment"></span><span class="comment">    /*! Results are calculated via FFT.</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">        The first element of the output is the unbiased sample variance.</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment"></span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment">        This overload accepts non-centered data, removes the mean and</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment">        returns it as a result.  The centered sequence is written back</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment">        into the input sequence if the reuse parameter is true.</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment"></span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment">        \pre The size of the output sequence must be maxLag + 1</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ForwardIterator, <span class="keyword">typename</span> OutputIterator&gt;</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a1af80163482bc03de57521047e14a535">  173</a></span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#a9e418532c372d0c7c034185fdaac1596">autocorrelations</a>(ForwardIterator begin, ForwardIterator end,</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                          OutputIterator out,</div>
@@ -241,6 +277,8 @@ $(function() {
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>}</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aandreasenhugevolatilityinterpl_8cpp_html_a4c79e7f153710550f0238535048a4d0a"><div class="ttname"><a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a></div><div class="ttdeci">Size n</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp_source.html#l00047">andreasenhugevolatilityinterpl.cpp:47</a></div></div>
+<div class="ttc" id="aarray_8hpp_html"><div class="ttname"><a href="../../d4/db5/array_8hpp.html">array.hpp</a></div><div class="ttdoc">1-D array used in linear algebra.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00052">array.hpp:52</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html_a8edb38fc95e912ca47338586b47c5607"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#a8edb38fc95e912ca47338586b47c5607">QuantLib::Array::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00511">array.hpp:511</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html_af820f57a2b80308855934b525a082765"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#af820f57a2b80308855934b525a082765">QuantLib::Array::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00503">array.hpp:503</a></div></div>
@@ -248,6 +286,9 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_fast_fourier_transform_html_a52f3db7d80c4e276e8aad3336e5e5040"><div class="ttname"><a href="../../da/d45/class_quant_lib_1_1_fast_fourier_transform.html#a52f3db7d80c4e276e8aad3336e5e5040">QuantLib::FastFourierTransform::min_order</a></div><div class="ttdeci">static std::size_t min_order(std::size_t inputSize)</div><div class="ttdoc">the minimum order required for the given input size</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ddf/fastfouriertransform_8hpp_source.html#l00042">fastfouriertransform.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fast_fourier_transform_html_a663fb0167cc4da1c0980ec9bbc4085a8"><div class="ttname"><a href="../../da/d45/class_quant_lib_1_1_fast_fourier_transform.html#a663fb0167cc4da1c0980ec9bbc4085a8">QuantLib::FastFourierTransform::transform</a></div><div class="ttdeci">void transform(InputIterator inBegin, InputIterator inEnd, RandomAccessIterator out) const</div><div class="ttdoc">FFT transform.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ddf/fastfouriertransform_8hpp_source.html#l00066">fastfouriertransform.hpp:66</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fast_fourier_transform_html_a6bd598964819008db5f70a646ad21c13"><div class="ttname"><a href="../../da/d45/class_quant_lib_1_1_fast_fourier_transform.html#a6bd598964819008db5f70a646ad21c13">QuantLib::FastFourierTransform::output_size</a></div><div class="ttdeci">std::size_t output_size() const</div><div class="ttdoc">The required size for the output vector.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ddf/fastfouriertransform_8hpp_source.html#l00059">fastfouriertransform.hpp:59</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="afastfouriertransform_8hpp_html"><div class="ttname"><a href="../../de/ddf/fastfouriertransform_8hpp.html">fastfouriertransform.hpp</a></div><div class="ttdoc">Fast Fourier Transform.</div></div>
+<div class="ttc" id="afdmhestonvariancemesher_8cpp_html_a3ecadbda01bb88de2021e000794a4891"><div class="ttname"><a href="../../de/df6/fdmhestonvariancemesher_8cpp.html#a3ecadbda01bb88de2021e000794a4891">variance</a></div><div class="ttdeci">LinearInterpolation variance</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df6/fdmhestonvariancemesher_8cpp_source.html#l00045">fdmhestonvariancemesher.cpp:45</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_1_1detail_html_a71b80fa6b74ae9617b2a0739c4244855"><div class="ttname"><a href="../../d8/d1e/namespace_quant_lib_1_1detail.html#a71b80fa6b74ae9617b2a0739c4244855">QuantLib::detail::double_ft</a></div><div class="ttdeci">std::vector&lt; std::complex&lt; Real &gt; &gt; double_ft(ForwardIterator begin, ForwardIterator end)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/da5/autocovariance_8hpp_source.html#l00041">autocovariance.hpp:41</a></div></div>

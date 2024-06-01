@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/exercise.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/exercise.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">exercise.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../db/db9/exercise_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2000, 2001, 2002, 2003 RiskMap srl</span></div>
@@ -108,14 +107,14 @@ $(function() {
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/exercise.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/errors.hpp&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d94/exercise_8hpp.html">ql/exercise.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d52/errors_8hpp.html">ql/errors.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../dd/db4/class_quant_lib_1_1_exercise.html#ab0c5a5ba32a3adc8a129ae8b6faf38f2">   28</a></span>    <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_function" href="../../dd/db4/class_quant_lib_1_1_exercise.html#ab0c5a5ba32a3adc8a129ae8b6faf38f2">Exercise::lastDate</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        QL_REQUIRE(!<a class="code hl_variable" href="../../dd/db4/class_quant_lib_1_1_exercise.html#a361b6eadf2fb8b49e1a53073e0f8f11d">dates_</a>.empty(), <span class="stringliteral">&quot;no exercise date given&quot;</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(!<a class="code hl_variable" href="../../dd/db4/class_quant_lib_1_1_exercise.html#a361b6eadf2fb8b49e1a53073e0f8f11d">dates_</a>.empty(), <span class="stringliteral">&quot;no exercise date given&quot;</span>);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dd/db4/class_quant_lib_1_1_exercise.html#a361b6eadf2fb8b49e1a53073e0f8f11d">dates_</a>.back();</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
@@ -123,7 +122,7 @@ $(function() {
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                                       <span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; latest,</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                                       <span class="keywordtype">bool</span> payoffAtExpiry)</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    : <a class="code hl_class" href="../../d6/dd0/class_quant_lib_1_1_early_exercise.html">EarlyExercise</a>(American, payoffAtExpiry) {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        QL_REQUIRE(earliest&lt;=latest,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(earliest&lt;=latest,</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                   <span class="stringliteral">&quot;earliest &gt; latest exercise date&quot;</span>);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_variable" href="../../dd/db4/class_quant_lib_1_1_exercise.html#a361b6eadf2fb8b49e1a53073e0f8f11d">dates_</a> = std::vector&lt;Date&gt;(2);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_variable" href="../../dd/db4/class_quant_lib_1_1_exercise.html#a361b6eadf2fb8b49e1a53073e0f8f11d">dates_</a>[0] = earliest;</div>
@@ -141,7 +140,7 @@ $(function() {
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../d6/d6b/class_quant_lib_1_1_bermudan_exercise.html#a23a2f17d9bae84c1423ab5c423b17205">   52</a></span>    <a class="code hl_function" href="../../d6/d6b/class_quant_lib_1_1_bermudan_exercise.html#a23a2f17d9bae84c1423ab5c423b17205">BermudanExercise::BermudanExercise</a>(<span class="keyword">const</span> std::vector&lt;Date&gt;&amp; dates,</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                       <span class="keywordtype">bool</span> payoffAtExpiry)</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    : <a class="code hl_class" href="../../d6/dd0/class_quant_lib_1_1_early_exercise.html">EarlyExercise</a>(Bermudan, payoffAtExpiry) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        QL_REQUIRE(!<a class="code hl_function" href="../../dd/db4/class_quant_lib_1_1_exercise.html#a53d21e09ca3857d3c49b13b23d1bd65d">dates</a>.empty(), <span class="stringliteral">&quot;no exercise date given&quot;</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(!<a class="code hl_function" href="../../dd/db4/class_quant_lib_1_1_exercise.html#a53d21e09ca3857d3c49b13b23d1bd65d">dates</a>.empty(), <span class="stringliteral">&quot;no exercise date given&quot;</span>);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_variable" href="../../dd/db4/class_quant_lib_1_1_exercise.html#a361b6eadf2fb8b49e1a53073e0f8f11d">dates_</a> = <a class="code hl_function" href="../../dd/db4/class_quant_lib_1_1_exercise.html#a53d21e09ca3857d3c49b13b23d1bd65d">dates</a>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        std::sort(<a class="code hl_variable" href="../../dd/db4/class_quant_lib_1_1_exercise.html#a361b6eadf2fb8b49e1a53073e0f8f11d">dates_</a>.begin(), <a class="code hl_variable" href="../../dd/db4/class_quant_lib_1_1_exercise.html#a361b6eadf2fb8b49e1a53073e0f8f11d">dates_</a>.end());</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
@@ -163,6 +162,9 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_exercise_html_a36ed9704b576e4d02b40eb2fa65c6dec"><div class="ttname"><a href="../../dd/db4/class_quant_lib_1_1_exercise.html#a36ed9704b576e4d02b40eb2fa65c6dec">QuantLib::Exercise::date</a></div><div class="ttdeci">Date date(Size index) const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d94/exercise_8hpp_source.html#l00045">exercise.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_exercise_html_a53d21e09ca3857d3c49b13b23d1bd65d"><div class="ttname"><a href="../../dd/db4/class_quant_lib_1_1_exercise.html#a53d21e09ca3857d3c49b13b23d1bd65d">QuantLib::Exercise::dates</a></div><div class="ttdeci">const std::vector&lt; Date &gt; &amp; dates() const</div><div class="ttdoc">Returns all exercise dates.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d94/exercise_8hpp_source.html#l00048">exercise.hpp:48</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_exercise_html_ab0c5a5ba32a3adc8a129ae8b6faf38f2"><div class="ttname"><a href="../../dd/db4/class_quant_lib_1_1_exercise.html#ab0c5a5ba32a3adc8a129ae8b6faf38f2">QuantLib::Exercise::lastDate</a></div><div class="ttdeci">Date lastDate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db9/exercise_8cpp_source.html#l00028">exercise.cpp:28</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html"><div class="ttname"><a href="../../df/d52/errors_8hpp.html">errors.hpp</a></div><div class="ttdoc">Classes and functions for error handling.</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aexercise_8hpp_html"><div class="ttname"><a href="../../de/d94/exercise_8hpp.html">exercise.hpp</a></div><div class="ttdoc">Option exercise classes and payoff function.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

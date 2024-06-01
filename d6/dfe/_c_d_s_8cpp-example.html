@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -104,30 +103,30 @@ $(function() {
 <div class="line"><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><span class="comment">*/</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;ql/qldefines.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../de/d56/qldefines_8hpp.html">ql/qldefines.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#if !defined(BOOST_ALL_NO_LIB) &amp;&amp; defined(BOOST_MSVC)</span></div>
-<div class="line"><span class="preprocessor">#  include &lt;ql/auto_link.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#  include &lt;<a class="code" href="../../d7/dbf/auto__link_8hpp.html">ql/auto_link.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/cashflows/fixedratecoupon.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/cashflows/iborcoupon.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/instruments/creditdefaultswap.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/indexes/ibor/euribor.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/credit/midpointcdsengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/credit/isdacdsengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/credit/piecewisedefaultcurve.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/credit/defaultprobabilityhelpers.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/credit/flathazardrate.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/yield/flatforward.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/yield/piecewiseyieldcurve.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/yield/ratehelpers.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/math/interpolations/backwardflatinterpolation.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/time/calendars/target.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/time/calendars/weekendsonly.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/time/daycounters/thirty360.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/time/daycounters/actual365fixed.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/time/daycounters/actual360.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/currencies/europe.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/quotes/simplequote.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d2b/fixedratecoupon_8hpp.html">ql/cashflows/fixedratecoupon.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../dc/de6/iborcoupon_8hpp.html">ql/cashflows/iborcoupon.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d33/creditdefaultswap_8hpp.html">ql/instruments/creditdefaultswap.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d59/euribor_8hpp.html">ql/indexes/ibor/euribor.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dfe/midpointcdsengine_8hpp.html">ql/pricingengines/credit/midpointcdsengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d6b/isdacdsengine_8hpp.html">ql/pricingengines/credit/isdacdsengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d3c/piecewisedefaultcurve_8hpp.html">ql/termstructures/credit/piecewisedefaultcurve.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d05/defaultprobabilityhelpers_8hpp.html">ql/termstructures/credit/defaultprobabilityhelpers.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d47/flathazardrate_8hpp.html">ql/termstructures/credit/flathazardrate.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d0e/flatforward_8hpp.html">ql/termstructures/yield/flatforward.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d9f/piecewiseyieldcurve_8hpp.html">ql/termstructures/yield/piecewiseyieldcurve.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d3e/ratehelpers_8hpp.html">ql/termstructures/yield/ratehelpers.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d9f/backwardflatinterpolation_8hpp.html">ql/math/interpolations/backwardflatinterpolation.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d69/target_8hpp.html">ql/time/calendars/target.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../db/de9/weekendsonly_8hpp.html">ql/time/calendars/weekendsonly.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d9/da8/thirty360_8hpp.html">ql/time/daycounters/thirty360.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dbf/actual365fixed_8hpp.html">ql/time/daycounters/actual365fixed.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d2/dbc/actual360_8hpp.html">ql/time/daycounters/actual360.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d00/europe_8hpp.html">ql/currencies/europe.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d17/simplequote_8hpp.html">ql/quotes/simplequote.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
@@ -184,7 +183,7 @@ $(function() {
 <div class="line">    std::vector&lt;ext::shared_ptr&lt;DefaultProbabilityHelper&gt;&gt; instruments;</div>
 <div class="line">    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i = 0; i &lt; 4; i++) {</div>
 <div class="line">        instruments.push_back(ext::make_shared&lt;SpreadCdsHelper&gt;(</div>
-<div class="line">                                <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(ext::make_shared&lt;SimpleQuote&gt;(quoted_spreads[i])),</div>
+<div class="line">                                makeQuoteHandle(quoted_spreads[i]),</div>
 <div class="line">                                tenors[i], settlementDays, calendar, Quarterly, Following,</div>
 <div class="line">                                DateGeneration::TwentiethIMM, <a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>(),</div>
 <div class="line">                                recovery_rate, tsCurve));</div>
@@ -410,10 +409,10 @@ $(function() {
 <div class="line">    <span class="comment">// output rate curve</span></div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;ISDA rate curve: &quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; i : isdaRateHelper) {</div>
-<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> d = i-&gt;latestDate();</div>
-<div class="line">        std::cout &lt;&lt; d &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; setprecision(6) &lt;&lt;</div>
-<div class="line">            rateTs-&gt;zeroRate(d,<a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>(),Continuous).rate() &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt;</div>
-<div class="line">            rateTs-&gt;discount(d) &lt;&lt; std::endl;</div>
+<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a id="a31" name="a31"></a><a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a> = i-&gt;latestDate();</div>
+<div class="line">        std::cout &lt;&lt; <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; setprecision(6) &lt;&lt;</div>
+<div class="line">            rateTs-&gt;zeroRate(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>,<a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>(),Continuous).rate() &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt;</div>
+<div class="line">            rateTs-&gt;discount(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>) &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// build reference credit curve (flat)</span></div>
@@ -453,16 +452,16 @@ $(function() {
 <div class="line">    isdaCdsHelper.push_back(cds5y);</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;DefaultProbabilityTermStructure&gt;</a> defaultTs(ext::make_shared&lt;</div>
-<div class="line">        <a id="_a31" name="_a31"></a><a class="code hl_class" href="../../dd/d5c/class_quant_lib_1_1_piecewise_default_curve.html">PiecewiseDefaultCurve&lt;SurvivalProbability, LogLinear&gt;</a>&gt;(</div>
+<div class="line">        <a id="_a32" name="_a32"></a><a class="code hl_class" href="../../dd/d5c/class_quant_lib_1_1_piecewise_default_curve.html">PiecewiseDefaultCurve&lt;SurvivalProbability, LogLinear&gt;</a>&gt;(</div>
 <div class="line">        0, <a class="code hl_class" href="../../d7/d5c/class_quant_lib_1_1_weekends_only.html">WeekendsOnly</a>(), isdaCdsHelper, <a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>()));</div>
 <div class="line"> </div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;ISDA credit curve: &quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; i : isdaCdsHelper) {</div>
-<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> d = i-&gt;latestDate();</div>
-<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> pd = defaultTs-&gt;defaultProbability(d);</div>
-<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> t = defaultTs-&gt;timeFromReference(d);</div>
-<div class="line">        std::cout &lt;&lt; d &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; pd &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; 1.0 - pd &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt;</div>
-<div class="line">            -std::log(1.0-pd)/t &lt;&lt; std::endl;</div>
+<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a> = i-&gt;latestDate();</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> pd = defaultTs-&gt;defaultProbability(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>);</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a id="a33" name="a33"></a><a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a> = defaultTs-&gt;timeFromReference(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>);</div>
+<div class="line">        std::cout &lt;&lt; <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a> &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; pd &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; 1.0 - pd &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt;</div>
+<div class="line">            -std::log(1.0-pd)/<a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a> &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -544,7 +543,7 @@ $(function() {
 <div class="line">    <span class="comment">// IborCoupon::Settings::instance().usingAtParCoupons() == false</span></div>
 <div class="line">    <span class="comment">// - define it &quot;isda compliant&quot; anyway</span></div>
 <div class="line">    <span class="keyword">auto</span> euribor6m = ext::make_shared&lt;IborIndex&gt;(</div>
-<div class="line">        <span class="stringliteral">&quot;IsdaIbor&quot;</span>, 6 * Months, 2, <a id="_a32" name="_a32"></a><a class="code hl_class" href="../../db/d0b/class_quant_lib_1_1_e_u_r_currency.html">EURCurrency</a>(), <a class="code hl_class" href="../../d7/d5c/class_quant_lib_1_1_weekends_only.html">WeekendsOnly</a>(),</div>
+<div class="line">        <span class="stringliteral">&quot;IsdaIbor&quot;</span>, 6 * Months, 2, <a id="_a34" name="_a34"></a><a class="code hl_class" href="../../db/d0b/class_quant_lib_1_1_e_u_r_currency.html">EURCurrency</a>(), <a class="code hl_class" href="../../d7/d5c/class_quant_lib_1_1_weekends_only.html">WeekendsOnly</a>(),</div>
 <div class="line">        ModifiedFollowing, <span class="keyword">false</span>, actual360);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">auto</span> sw2y = ext::make_shared&lt;SwapRateHelper&gt;(</div>
@@ -672,19 +671,19 @@ $(function() {
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;ISDA yield curve:&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;date;time;zeroyield&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; isdaYieldHelper : isdaYieldHelpers) {</div>
-<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> d = isdaYieldHelper-&gt;latestDate();</div>
-<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> t = isdaYts-&gt;timeFromReference(d);</div>
-<div class="line">        std::cout &lt;&lt; d &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot;;&quot;</span></div>
-<div class="line">                  &lt;&lt; isdaYts-&gt;zeroRate(d, <a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>(), Continuous).rate()</div>
+<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a> = isdaYieldHelper-&gt;latestDate();</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a> = isdaYts-&gt;timeFromReference(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>);</div>
+<div class="line">        std::cout &lt;&lt; <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a> &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a> &lt;&lt; <span class="stringliteral">&quot;;&quot;</span></div>
+<div class="line">                  &lt;&lt; isdaYts-&gt;zeroRate(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>(), Continuous).rate()</div>
 <div class="line">                  &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;ISDA credit curve:&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;date;time;survivalprob&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; isdaCdsHelper : isdaCdsHelpers) {</div>
-<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> d = isdaCdsHelper-&gt;latestDate();</div>
-<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> t = isdaCts-&gt;timeFromReference(d);</div>
-<div class="line">        std::cout &lt;&lt; d &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; isdaCts-&gt;survivalProbability(d)</div>
+<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a> = isdaCdsHelper-&gt;latestDate();</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a> = isdaCts-&gt;timeFromReference(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>);</div>
+<div class="line">        std::cout &lt;&lt; <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a> &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a> &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; isdaCts-&gt;survivalProbability(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>)</div>
 <div class="line">                  &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
@@ -723,6 +722,10 @@ $(function() {
 <div class="line">        <span class="keywordflow">return</span> 1;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
+<div class="ttc" id="aactual360_8hpp_html"><div class="ttname"><a href="../../d2/dbc/actual360_8hpp.html">actual360.hpp</a></div><div class="ttdoc">act/360 day counter</div></div>
+<div class="ttc" id="aactual365fixed_8hpp_html"><div class="ttname"><a href="../../d6/dbf/actual365fixed_8hpp.html">actual365fixed.hpp</a></div><div class="ttdoc">Actual/365 (Fixed) day counter.</div></div>
+<div class="ttc" id="aauto__link_8hpp_html"><div class="ttname"><a href="../../d7/dbf/auto__link_8hpp.html">auto_link.hpp</a></div></div>
+<div class="ttc" id="abackwardflatinterpolation_8hpp_html"><div class="ttname"><a href="../../d9/d9f/backwardflatinterpolation_8hpp.html">backwardflatinterpolation.hpp</a></div><div class="ttdoc">backward-flat interpolation between discrete points</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual360_html"><div class="ttname"><a href="../../dd/d4e/class_quant_lib_1_1_actual360.html">QuantLib::Actual360</a></div><div class="ttdoc">Actual/360 day count convention.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbc/actual360_8hpp_source.html#l00037">actual360.hpp:37</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual365_fixed_html"><div class="ttname"><a href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">QuantLib::Actual365Fixed</a></div><div class="ttdoc">Actual/365 (Fixed) day count convention.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbf/actual365fixed_8hpp_source.html#l00045">actual365fixed.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html">QuantLib::Calendar</a></div><div class="ttdoc">calendar class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00061">calendar.hpp:61</a></div></div>
@@ -757,11 +760,31 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_t_a_r_g_e_t_html"><div class="ttname"><a href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">QuantLib::TARGET</a></div><div class="ttdoc">TARGET calendar</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d69/target_8hpp_source.html#l00050">target.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_thirty360_html"><div class="ttname"><a href="../../d5/d63/class_quant_lib_1_1_thirty360.html">QuantLib::Thirty360</a></div><div class="ttdoc">30/360 day count convention</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da8/thirty360_8hpp_source.html#l00076">thirty360.hpp:76</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_weekends_only_html"><div class="ttname"><a href="../../d7/d5c/class_quant_lib_1_1_weekends_only.html">QuantLib::WeekendsOnly</a></div><div class="ttdoc">Weekends-only calendar.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/de9/weekendsonly_8hpp_source.html#l00038">weekendsonly.hpp:38</a></div></div>
+<div class="ttc" id="acreditdefaultswap_8hpp_html"><div class="ttname"><a href="../../dd/d33/creditdefaultswap_8hpp.html">creditdefaultswap.hpp</a></div><div class="ttdoc">Credit default swap.</div></div>
+<div class="ttc" id="adefaultprobabilityhelpers_8hpp_html"><div class="ttname"><a href="../../d0/d05/defaultprobabilityhelpers_8hpp.html">defaultprobabilityhelpers.hpp</a></div><div class="ttdoc">bootstrap helpers for default-probability term structures</div></div>
+<div class="ttc" id="adefaultprobabilitykey_8cpp_html_a15fc20af123a89cd6f40758e341a4a54"><div class="ttname"><a href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a></div><div class="ttdeci">const DefaultType &amp; t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ddb/defaultprobabilitykey_8cpp_source.html#l00039">defaultprobabilitykey.cpp:39</a></div></div>
+<div class="ttc" id="aeuribor_8hpp_html"><div class="ttname"><a href="../../d3/d59/euribor_8hpp.html">euribor.hpp</a></div><div class="ttdoc">Euribor index</div></div>
+<div class="ttc" id="aeurope_8hpp_html"><div class="ttname"><a href="../../d0/d00/europe_8hpp.html">europe.hpp</a></div><div class="ttdoc">European currencies.</div></div>
+<div class="ttc" id="aexchangeratemanager_8cpp_html_a85641069b0d4478ab8a7356c3bf32ea3"><div class="ttname"><a href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a></div><div class="ttdeci">Date d</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/exchangeratemanager_8cpp_source.html#l00032">exchangeratemanager.cpp:32</a></div></div>
+<div class="ttc" id="afixedratecoupon_8hpp_html"><div class="ttname"><a href="../../d4/d2b/fixedratecoupon_8hpp.html">fixedratecoupon.hpp</a></div><div class="ttdoc">Coupon paying a fixed annual rate.</div></div>
+<div class="ttc" id="aflatforward_8hpp_html"><div class="ttname"><a href="../../d5/d0e/flatforward_8hpp.html">flatforward.hpp</a></div><div class="ttdoc">flat forward rate term structure</div></div>
+<div class="ttc" id="aflathazardrate_8hpp_html"><div class="ttname"><a href="../../d4/d47/flathazardrate_8hpp.html">flathazardrate.hpp</a></div><div class="ttdoc">flat hazard-rate term structure</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="aiborcoupon_8hpp_html"><div class="ttname"><a href="../../dc/de6/iborcoupon_8hpp.html">iborcoupon.hpp</a></div><div class="ttdoc">Coupon paying a Libor-type index.</div></div>
+<div class="ttc" id="aisdacdsengine_8hpp_html"><div class="ttname"><a href="../../d2/d6b/isdacdsengine_8hpp.html">isdacdsengine.hpp</a></div><div class="ttdoc">ISDA engine for credit default swaps.</div></div>
+<div class="ttc" id="amidpointcdsengine_8hpp_html"><div class="ttname"><a href="../../d6/dfe/midpointcdsengine_8hpp.html">midpointcdsengine.hpp</a></div><div class="ttdoc">Mid-point engine for credit default swaps.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="apiecewisedefaultcurve_8hpp_html"><div class="ttname"><a href="../../d5/d3c/piecewisedefaultcurve_8hpp.html">piecewisedefaultcurve.hpp</a></div><div class="ttdoc">piecewise-interpolated default-probability structure</div></div>
+<div class="ttc" id="apiecewiseyieldcurve_8hpp_html"><div class="ttname"><a href="../../d9/d9f/piecewiseyieldcurve_8hpp.html">piecewiseyieldcurve.hpp</a></div><div class="ttdoc">piecewise-interpolated term structure</div></div>
+<div class="ttc" id="aqldefines_8hpp_html"><div class="ttname"><a href="../../de/d56/qldefines_8hpp.html">qldefines.hpp</a></div><div class="ttdoc">Global definitions and compiler switches.</div></div>
+<div class="ttc" id="aratehelpers_8hpp_html"><div class="ttname"><a href="../../d5/d3e/ratehelpers_8hpp.html">ratehelpers.hpp</a></div><div class="ttdoc">deposit, FRA, futures, and various swap rate helpers</div></div>
+<div class="ttc" id="asimplequote_8hpp_html"><div class="ttname"><a href="../../d4/d17/simplequote_8hpp.html">simplequote.hpp</a></div><div class="ttdoc">simple quote class</div></div>
+<div class="ttc" id="atarget_8hpp_html"><div class="ttname"><a href="../../dc/d69/target_8hpp.html">target.hpp</a></div><div class="ttdoc">TARGET calendar.</div></div>
+<div class="ttc" id="athirty360_8hpp_html"><div class="ttname"><a href="../../d9/da8/thirty360_8hpp.html">thirty360.hpp</a></div><div class="ttdoc">30/360 day counters</div></div>
+<div class="ttc" id="aweekendsonly_8hpp_html"><div class="ttname"><a href="../../db/de9/weekendsonly_8hpp.html">weekendsonly.hpp</a></div><div class="ttdoc">Weekends-only calendar.</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

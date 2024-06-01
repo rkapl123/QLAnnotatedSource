@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/math/tcopulapolicy.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/math/tcopulapolicy.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">tcopulapolicy.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d5/d9d/tcopulapolicy_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2014 Jose Aparicio</span></div>
@@ -106,7 +105,7 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/experimental/math/tcopulapolicy.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/ddd/tcopulapolicy_8hpp.html">ql/experimental/math/tcopulapolicy.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;numeric&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
@@ -118,7 +117,7 @@ $(function() {
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> tOrder : vals.<a class="code hl_variable" href="../../d1/d6a/struct_quant_lib_1_1_t_copula_policy_1_1init_traits.html#a61eb2a998ccf63ce7a01b3a2b2e91789">tOrders</a>) {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="comment">// require no T is of order 2 (finite variance)</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            QL_REQUIRE(tOrder &gt; 2, <span class="stringliteral">&quot;Non finite variance T in latent model.&quot;</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(tOrder &gt; 2, <span class="stringliteral">&quot;Non finite variance T in latent model.&quot;</span>);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_variable" href="../../de/d52/class_quant_lib_1_1_t_copula_policy.html#a5f313ae56d87bc9a85bdf3f971a42471">distributions_</a>.emplace_back(tOrder);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="comment">// inverses T variaces used in normalization of the random factors</span></div>
@@ -130,13 +129,13 @@ $(function() {
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; factorWeight : factorWeights) {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="comment">// This ensures the latent model is &#39;canonical&#39;</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            QL_REQUIRE(vals.<a class="code hl_variable" href="../../d1/d6a/struct_quant_lib_1_1_t_copula_policy_1_1init_traits.html#a61eb2a998ccf63ce7a01b3a2b2e91789">tOrders</a>.size() == factorWeight.size() + 1,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(vals.<a class="code hl_variable" href="../../d1/d6a/struct_quant_lib_1_1_t_copula_policy_1_1init_traits.html#a61eb2a998ccf63ce7a01b3a2b2e91789">tOrders</a>.size() == factorWeight.size() + 1,</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                       <span class="comment">// num factors plus one</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                       <span class="stringliteral">&quot;Incompatible number of T functions and number of factors.&quot;</span>);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> factorsNorm = std::inner_product(factorWeight.begin(), factorWeight.end(),</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                                                  factorWeight.begin(), <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(0.));</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            QL_REQUIRE(factorsNorm &lt; 1., </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(factorsNorm &lt; 1., </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="stringliteral">&quot;Non normal random factor combination.&quot;</span>);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> idiosyncFctr = std::sqrt(1.-factorsNorm);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
@@ -155,7 +154,7 @@ $(function() {
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">const</span> std::vector&lt;Real&gt;&amp; probs)<span class="keyword"> const </span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">    </span>{</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">    #if defined(QL_EXTRA_SAFETY_CHECKS)</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        QL_REQUIRE(probs.size()-<a class="code hl_variable" href="../../de/d52/class_quant_lib_1_1_t_copula_policy.html#aeef489fac2b209be1969c2ab533fb14b">latentVarsCumul_</a>.size() </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(probs.size()-<a class="code hl_variable" href="../../de/d52/class_quant_lib_1_1_t_copula_policy.html#aeef489fac2b209be1969c2ab533fb14b">latentVarsCumul_</a>.size() </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            == <a class="code hl_variable" href="../../de/d52/class_quant_lib_1_1_t_copula_policy.html#a5f313ae56d87bc9a85bdf3f971a42471">distributions_</a>.size()-1, </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="stringliteral">&quot;Incompatible sample and latent model sizes&quot;</span>);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    #endif</span></div>
@@ -178,12 +177,14 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_t_copula_policy_html_ac266b3d7766d210f729eab900d18c091"><div class="ttname"><a href="../../de/d52/class_quant_lib_1_1_t_copula_policy.html#ac266b3d7766d210f729eab900d18c091">QuantLib::TCopulaPolicy::varianceFactors_</a></div><div class="ttdeci">std::vector&lt; Real &gt; varianceFactors_</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddd/tcopulapolicy_8hpp_source.html#l00150">tcopulapolicy.hpp:150</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_t_copula_policy_html_aeef489fac2b209be1969c2ab533fb14b"><div class="ttname"><a href="../../de/d52/class_quant_lib_1_1_t_copula_policy.html#aeef489fac2b209be1969c2ab533fb14b">QuantLib::TCopulaPolicy::latentVarsCumul_</a></div><div class="ttdeci">std::vector&lt; CumulativeBehrensFisher &gt; latentVarsCumul_</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddd/tcopulapolicy_8hpp_source.html#l00151">tcopulapolicy.hpp:151</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_t_copula_policy_html_af5bc49828d8828ae0b62b941a8c58971"><div class="ttname"><a href="../../de/d52/class_quant_lib_1_1_t_copula_policy.html#af5bc49828d8828ae0b62b941a8c58971">QuantLib::TCopulaPolicy::latentVarsInverters_</a></div><div class="ttdeci">std::vector&lt; InverseCumulativeBehrensFisher &gt; latentVarsInverters_</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddd/tcopulapolicy_8hpp_source.html#l00152">tcopulapolicy.hpp:152</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gad9817a6a21dfcb91429f0152c99d6313"><div class="ttname"><a href="../../d6/d59/group__types.html#gad9817a6a21dfcb91429f0152c99d6313">QuantLib::Probability</a></div><div class="ttdeci">Real Probability</div><div class="ttdoc">probability</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00082">types.hpp:82</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_t_copula_policy_1_1init_traits_html"><div class="ttname"><a href="../../d1/d6a/struct_quant_lib_1_1_t_copula_policy_1_1init_traits.html">QuantLib::TCopulaPolicy::initTraits</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddd/tcopulapolicy_8hpp_source.html#l00048">tcopulapolicy.hpp:49</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_t_copula_policy_1_1init_traits_html_a61eb2a998ccf63ce7a01b3a2b2e91789"><div class="ttname"><a href="../../d1/d6a/struct_quant_lib_1_1_t_copula_policy_1_1init_traits.html#a61eb2a998ccf63ce7a01b3a2b2e91789">QuantLib::TCopulaPolicy::initTraits::tOrders</a></div><div class="ttdeci">std::vector&lt; Integer &gt; tOrders</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddd/tcopulapolicy_8hpp_source.html#l00050">tcopulapolicy.hpp:50</a></div></div>
+<div class="ttc" id="atcopulapolicy_8hpp_html"><div class="ttname"><a href="../../db/ddd/tcopulapolicy_8hpp.html">tcopulapolicy.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

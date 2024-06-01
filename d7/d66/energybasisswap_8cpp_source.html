@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/commodities/energybasisswap.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/commodities/energybasisswap.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">energybasisswap.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d7/d66/energybasisswap_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 J. Erik Radmall</span></div>
@@ -106,8 +105,8 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/experimental/commodities/commoditysettings.hpp&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/experimental/commodities/energybasisswap.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d39/commoditysettings_8hpp.html">ql/experimental/commodities/commoditysettings.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d54/energybasisswap_8hpp.html">ql/experimental/commodities/energybasisswap.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
@@ -133,7 +132,7 @@ $(function() {
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      basis_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(basis)), payLegTermStructure_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(payLegTermStructure)),</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      receiveLegTermStructure_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(receiveLegTermStructure)),</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      discountTermStructure_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(discountTermStructure)) {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        QL_REQUIRE(!<a class="code hl_variable" href="../../d5/db0/class_quant_lib_1_1_energy_swap.html#a04be82c033154cbd42425fccd71674d0">pricingPeriods_</a>.empty(), <span class="stringliteral">&quot;no payment dates&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(!<a class="code hl_variable" href="../../d5/db0/class_quant_lib_1_1_energy_swap.html#a04be82c033154cbd42425fccd71674d0">pricingPeriods_</a>.empty(), <span class="stringliteral">&quot;no payment dates&quot;</span>);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_function" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code hl_variable" href="../../d7/d8b/class_quant_lib_1_1_energy_basis_swap.html#a5dcd77e84881939724a98a3ace05413d">spreadIndex_</a>);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_function" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code hl_variable" href="../../d7/d8b/class_quant_lib_1_1_energy_basis_swap.html#a3cdb00b3a9e276a034725f862fd4baa0">payIndex_</a>);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_function" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code hl_variable" href="../../d7/d8b/class_quant_lib_1_1_energy_basis_swap.html#ac9aeb767072d2ad5c1c72987e1add134">receiveIndex_</a>);</div>
@@ -145,7 +144,7 @@ $(function() {
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d8b/class_quant_lib_1_1_energy_basis_swap.html#a3cdb00b3a9e276a034725f862fd4baa0">payIndex_</a>-&gt;empty()) {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d8b/class_quant_lib_1_1_energy_basis_swap.html#a3cdb00b3a9e276a034725f862fd4baa0">payIndex_</a>-&gt;forwardCurveEmpty()) {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    QL_FAIL(<span class="stringliteral">&quot;index [&quot;</span> + <a class="code hl_variable" href="../../d7/d8b/class_quant_lib_1_1_energy_basis_swap.html#a3cdb00b3a9e276a034725f862fd4baa0">payIndex_</a>-&gt;name() +</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;index [&quot;</span> + <a class="code hl_variable" href="../../d7/d8b/class_quant_lib_1_1_energy_basis_swap.html#a3cdb00b3a9e276a034725f862fd4baa0">payIndex_</a>-&gt;name() +</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                            <span class="stringliteral">&quot;] does not have any quotes or forward prices&quot;</span>);</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                    <a class="code hl_function" href="../../d9/d5a/class_quant_lib_1_1_commodity.html#ace4b7cdb5b5f131482b80c05f7bc4ddb">addPricingError</a>(<a class="code hl_enumvalue" href="../../d3/dda/struct_quant_lib_1_1_pricing_error.html#a221b779e6bb7b8d40677d7642bfefac5a48f2bb70fceb692a2dedd8cea496c44b">PricingError::Warning</a>,</div>
@@ -157,7 +156,7 @@ $(function() {
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            }</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d8b/class_quant_lib_1_1_energy_basis_swap.html#ac9aeb767072d2ad5c1c72987e1add134">receiveIndex_</a>-&gt;empty()) {</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d8b/class_quant_lib_1_1_energy_basis_swap.html#ac9aeb767072d2ad5c1c72987e1add134">receiveIndex_</a>-&gt;forwardCurveEmpty()) {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    QL_FAIL(<span class="stringliteral">&quot;index [&quot;</span> + <a class="code hl_variable" href="../../d7/d8b/class_quant_lib_1_1_energy_basis_swap.html#ac9aeb767072d2ad5c1c72987e1add134">receiveIndex_</a>-&gt;name() +</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;index [&quot;</span> + <a class="code hl_variable" href="../../d7/d8b/class_quant_lib_1_1_energy_basis_swap.html#ac9aeb767072d2ad5c1c72987e1add134">receiveIndex_</a>-&gt;name() +</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                            <span class="stringliteral">&quot;] does not have any quotes or forward prices&quot;</span>);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    <a class="code hl_function" href="../../d9/d5a/class_quant_lib_1_1_commodity.html#ace4b7cdb5b5f131482b80c05f7bc4ddb">addPricingError</a>(<a class="code hl_enumvalue" href="../../d3/dda/struct_quant_lib_1_1_pricing_error.html#a221b779e6bb7b8d40677d7642bfefac5a48f2bb70fceb692a2dedd8cea496c44b">PricingError::Warning</a>,</div>
@@ -282,11 +281,11 @@ $(function() {
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                        <a class="code hl_function" href="../../d9/d5a/class_quant_lib_1_1_commodity.html#ace4b7cdb5b5f131482b80c05f7bc4ddb">addPricingError</a>(<a class="code hl_enumvalue" href="../../d3/dda/struct_quant_lib_1_1_pricing_error.html#a221b779e6bb7b8d40677d7642bfefac5a48f2bb70fceb692a2dedd8cea496c44b">PricingError::Warning</a>, message.str());</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                    }</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                    QL_REQUIRE(payQuoteValue != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(),</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(payQuoteValue != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(),</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                               <span class="stringliteral">&quot;curve [&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d7/d8b/class_quant_lib_1_1_energy_basis_swap.html#a3cdb00b3a9e276a034725f862fd4baa0">payIndex_</a>-&gt;name() &lt;&lt;</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                               <span class="stringliteral">&quot;] missing value for pricing date: &quot;</span></div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                               &lt;&lt; stepDate);</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                    QL_REQUIRE(receiveQuoteValue != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(),</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(receiveQuoteValue != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(),</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                               <span class="stringliteral">&quot;curve [&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d7/d8b/class_quant_lib_1_1_energy_basis_swap.html#ac9aeb767072d2ad5c1c72987e1add134">receiveIndex_</a>-&gt;name() &lt;&lt;</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                               <span class="stringliteral">&quot;] missing value for pricing date: &quot;</span></div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                               &lt;&lt; stepDate);</div>
@@ -377,7 +376,7 @@ $(function() {
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                <a class="code hl_variable" href="../../d9/d65/class_quant_lib_1_1_instrument.html#abb995b099094913d099029f2fd3936b8">NPV_</a> += dDelta;</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            }</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            QL_REQUIRE(!<a class="code hl_variable" href="../../d5/db0/class_quant_lib_1_1_energy_swap.html#afdd3a562e21bcd5797bca3669ea25d68">paymentCashFlows_</a>.empty(), <span class="stringliteral">&quot;no cashflows&quot;</span>);</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(!<a class="code hl_variable" href="../../d5/db0/class_quant_lib_1_1_energy_swap.html#afdd3a562e21bcd5797bca3669ea25d68">paymentCashFlows_</a>.empty(), <span class="stringliteral">&quot;no cashflows&quot;</span>);</div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            <span class="keywordflow">for</span> (SecondaryCostAmounts::const_iterator i =</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                     <a class="code hl_variable" href="../../d9/d5a/class_quant_lib_1_1_commodity.html#af0c4cfec6bf26d5ea22a7e29395c764c">secondaryCostAmounts_</a>.begin();</div>
@@ -447,6 +446,10 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_settings_html_a95055e9410ed0465a5f30d3ffc90c1d3"><div class="ttname"><a href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3">QuantLib::Settings::evaluationDate</a></div><div class="ttdeci">DateProxy &amp; evaluationDate()</div><div class="ttdoc">the date at which pricing is to be performed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0f/settings_8hpp_source.html#l00147">settings.hpp:147</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_singleton_html_ab7455b7e1235d292c444095842349291"><div class="ttname"><a href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">QuantLib::Singleton&lt; Settings &gt;::instance</a></div><div class="ttdeci">static Settings &amp; instance()</div><div class="ttdoc">access to the unique instance</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/singleton_8hpp_source.html#l00068">singleton.hpp:104</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_unit_of_measure_html"><div class="ttname"><a href="../../df/deb/class_quant_lib_1_1_unit_of_measure.html">QuantLib::UnitOfMeasure</a></div><div class="ttdoc">Unit of measure specification</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/unitofmeasure_8hpp_source.html#l00037">unitofmeasure.hpp:37</a></div></div>
+<div class="ttc" id="acommoditysettings_8hpp_html"><div class="ttname"><a href="../../de/d39/commoditysettings_8hpp.html">commoditysettings.hpp</a></div><div class="ttdoc">commodity settings</div></div>
+<div class="ttc" id="aenergybasisswap_8hpp_html"><div class="ttname"><a href="../../d9/d54/energybasisswap_8hpp.html">energybasisswap.hpp</a></div><div class="ttdoc">Energy basis swap.</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a8efe9cb3e67c8d0585e57b4d53c5d2fe"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a></div><div class="ttdeci">#define QL_FAIL(message)</div><div class="ttdoc">throw an error (possibly with file and line information)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00092">errors.hpp:92</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">QuantLib::Days</a></div><div class="ttdeci">@ Days</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00037">timeunit.hpp:37</a></div></div>
 <div class="ttc" id="agroup__manips_html_gafcc88da4bd66750d565dc3467464c63e"><div class="ttname"><a href="../../dc/da8/group__manips.html#gafcc88da4bd66750d565dc3467464c63e">QuantLib::io::iso_date</a></div><div class="ttdeci">detail::iso_date_holder iso_date(const Date &amp;d)</div><div class="ttdoc">output dates in ISO format (yyyy-mm-dd)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da2/date_8cpp_source.html#l00991">date.cpp:991</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>

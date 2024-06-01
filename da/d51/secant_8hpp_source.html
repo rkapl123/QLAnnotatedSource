@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/math/solvers1d/secant.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/math/solvers1d/secant.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">secant.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../da/d51/secant_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2000, 2001, 2002, 2003 RiskMap srl</span></div>
@@ -105,19 +104,28 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file secant.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief secant 1-D solver</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_solver1d_secant_h</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_solver1d_secant_h</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/math/solver1d.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d9a/solver1d_8hpp.html">ql/math/solver1d.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"></span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">    //! %Secant 1-D solver</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span><span class="comment">    /*! \test the correctness of the returned values is tested by</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">              checking them against known good results.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        \ingroup solvers</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d2/d62/class_quant_lib_1_1_secant.html">   37</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d2/d62/class_quant_lib_1_1_secant.html">Secant</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html">Solver1D</a>&lt;Secant&gt; {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> F&gt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d2/d62/class_quant_lib_1_1_secant.html#adf493e7d8b118d4db940439fae5140e0">   40</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d2/d62/class_quant_lib_1_1_secant.html#adf493e7d8b118d4db940439fae5140e0">solveImpl</a>(<span class="keyword">const</span> F&amp; f,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d2/d62/class_quant_lib_1_1_secant.html#adf493e7d8b118d4db940439fae5140e0">   40</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d2/d62/class_quant_lib_1_1_secant.html#adf493e7d8b118d4db940439fae5140e0">solveImpl</a>(<span class="keyword">const</span> <a class="code hl_variable" href="../../df/dae/sabr_8cpp.html#a161d560c07bf554b44dedfe025362d01">F</a>&amp; <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>,</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                       <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> xAccuracy)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="comment">/* The implementation of the algorithm was inspired by</span></div>
@@ -146,12 +154,12 @@ $(function() {
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                xl = <a class="code hl_variable" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a89fa88b509db30a8647975af216f813e">root_</a>;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                fl = froot;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <a class="code hl_variable" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a89fa88b509db30a8647975af216f813e">root_</a> += dx;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                froot = f(<a class="code hl_variable" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a89fa88b509db30a8647975af216f813e">root_</a>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                froot = <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>(<a class="code hl_variable" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a89fa88b509db30a8647975af216f813e">root_</a>);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                ++<a class="code hl_variable" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a2a155adc5fe7e5242e59c1d9e059f0c9">evaluationNumber_</a>;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="keywordflow">if</span> (std::fabs(dx) &lt; xAccuracy || (<a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#ab7d80f1774594ee7d9c1309083a44207">close</a>(froot, 0.0)))</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a89fa88b509db30a8647975af216f813e">root_</a>;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            QL_FAIL(<span class="stringliteral">&quot;maximum number of function evaluations (&quot;</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;maximum number of function evaluations (&quot;</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    &lt;&lt; <a class="code hl_variable" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#ad1fbba98763c2a0de29a5700ad331942">maxEvaluations_</a> &lt;&lt; <span class="stringliteral">&quot;) exceeded&quot;</span>);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    };</div>
@@ -169,9 +177,13 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_solver1_d_html_ab1a3629c843b1a45743e0b3f4de5e127"><div class="ttname"><a href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#ab1a3629c843b1a45743e0b3f4de5e127">QuantLib::Solver1D&lt; Secant &gt;::fxMax_</a></div><div class="ttdeci">Real fxMax_</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9a/solver1d_8hpp_source.html#l00225">solver1d.hpp:225</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_solver1_d_html_abaa9fa4e15bfef5dff0636efb04b948f"><div class="ttname"><a href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#abaa9fa4e15bfef5dff0636efb04b948f">QuantLib::Solver1D&lt; Secant &gt;::xMax_</a></div><div class="ttdeci">Real xMax_</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9a/solver1d_8hpp_source.html#l00225">solver1d.hpp:225</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_solver1_d_html_ad1fbba98763c2a0de29a5700ad331942"><div class="ttname"><a href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#ad1fbba98763c2a0de29a5700ad331942">QuantLib::Solver1D&lt; Secant &gt;::maxEvaluations_</a></div><div class="ttdeci">Size maxEvaluations_</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d9a/solver1d_8hpp_source.html#l00226">solver1d.hpp:226</a></div></div>
+<div class="ttc" id="adefaultdensitystructure_8cpp_html_ae19b4006a311a298a93a5cd06a7cb0e7"><div class="ttname"><a href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a></div><div class="ttdeci">F f</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d93/defaultdensitystructure_8cpp_source.html#l00032">defaultdensitystructure.cpp:32</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a8efe9cb3e67c8d0585e57b4d53c5d2fe"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a></div><div class="ttdeci">#define QL_FAIL(message)</div><div class="ttdoc">throw an error (possibly with file and line information)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00092">errors.hpp:92</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_ab7d80f1774594ee7d9c1309083a44207"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ab7d80f1774594ee7d9c1309083a44207">QuantLib::close</a></div><div class="ttdeci">bool close(const Quantity &amp;m1, const Quantity &amp;m2, Size n)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dbf/quantity_8cpp_source.html#l00163">quantity.cpp:163</a></div></div>
+<div class="ttc" id="asabr_8cpp_html_a161d560c07bf554b44dedfe025362d01"><div class="ttname"><a href="../../df/dae/sabr_8cpp.html#a161d560c07bf554b44dedfe025362d01">F</a></div><div class="ttdeci">Real F</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dae/sabr_8cpp_source.html#l00200">sabr.cpp:200</a></div></div>
+<div class="ttc" id="asolver1d_8hpp_html"><div class="ttname"><a href="../../d0/d9a/solver1d_8hpp.html">solver1d.hpp</a></div><div class="ttdoc">Abstract 1-D solver class.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

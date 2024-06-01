@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/variancegamma/fftengine.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/variancegamma/fftengine.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">fftengine.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../db/d28/fftengine_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">Copyright (C) 2010 Adrian O&#39; Neill</span></div>
@@ -105,17 +104,34 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file fftengine.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief base class for FFT option pricing engines</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_fft_engine_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_fft_engine_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/instruments/vanillaoption.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/stochasticprocess.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dde/vanillaoption_8hpp.html">ql/instruments/vanillaoption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d96/stochasticprocess_8hpp.html">ql/stochasticprocess.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;complex&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">    //! Base class for FFT pricing engines for European vanilla options</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span><span class="comment">    /*! \ingroup vanillaengines</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">    </span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        The FFT engine calculates the values of all options with the same expiry at the same time.</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        For that reason it is very inefficient to price options individually.  When using this engine</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        you should collect all the options you wish to price in a list and call </span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">        the engine&#39;s precalculate method before calling the NPV method of the option.</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"></span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        References:</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        Carr, P. and D. B. Madan (1998),</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        &quot;Option Valuation using the fast Fourier transform,&quot;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        Journal of Computational Finance, 2, 61-73.</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html">   47</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html">FFTEngine</a> :</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">public</span> VanillaOption::engine {</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keyword">public</span>:</div>
@@ -126,11 +142,11 @@ $(function() {
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a68decc04dca5b20473b563366643c268">precalculate</a>(<span class="keyword">const</span> std::vector&lt;ext::shared_ptr&lt;Instrument&gt; &gt;&amp; optionList);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#aed1850f79702cc4871f25aeeadadec06">   55</a></span>        <span class="keyword">virtual</span> std::unique_ptr&lt;FFTEngine&gt; <a class="code hl_function" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#aed1850f79702cc4871f25aeeadadec06">clone</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a2e40a97a7ca921231245e2cecf7b079b">   57</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a2e40a97a7ca921231245e2cecf7b079b">precalculateExpiry</a>(<a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> d) = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a2e40a97a7ca921231245e2cecf7b079b">   57</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a2e40a97a7ca921231245e2cecf7b079b">precalculateExpiry</a>(<a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>) = 0;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a8def0836bd1b588ca68d165b1e64a52e">   58</a></span>        <span class="keyword">virtual</span> std::complex&lt;Real&gt; <a class="code hl_function" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a8def0836bd1b588ca68d165b1e64a52e">complexFourierTransform</a>(std::complex&lt;Real&gt; u) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#aab455c4c1bfb0d09fc67ea0ce2e72524">   59</a></span>        <span class="keyword">virtual</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#aab455c4c1bfb0d09fc67ea0ce2e72524">discountFactor</a>(<a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> d) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a7898e0007d903e5060c003c8b6221b40">   60</a></span>        <span class="keyword">virtual</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a7898e0007d903e5060c003c8b6221b40">dividendYield</a>(<a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> d) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a5790e50f25b241f5766e504cee67976f">calculateUncached</a>(<span class="keyword">const</span> ext::shared_ptr&lt;StrikedTypePayoff&gt;&amp; payoff,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#aab455c4c1bfb0d09fc67ea0ce2e72524">   59</a></span>        <span class="keyword">virtual</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#aab455c4c1bfb0d09fc67ea0ce2e72524">discountFactor</a>(<a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a7898e0007d903e5060c003c8b6221b40">   60</a></span>        <span class="keyword">virtual</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a7898e0007d903e5060c003c8b6221b40">dividendYield</a>(<a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a5790e50f25b241f5766e504cee67976f">calculateUncached</a>(<span class="keyword">const</span> ext::shared_ptr&lt;StrikedTypePayoff&gt;&amp; <a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>,</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                               <span class="keyword">const</span> ext::shared_ptr&lt;Exercise&gt;&amp; exercise) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a62da55a131bbb15ead4c587038824bca">   64</a></span>        ext::shared_ptr&lt;StochasticProcess1D&gt; <a class="code hl_variable" href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#a62da55a131bbb15ead4c587038824bca">process_</a>;</div>
@@ -163,8 +179,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_f_f_t_engine_html_ae0fe437eb3946d0a7c0a0a25b02586c5"><div class="ttname"><a href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#ae0fe437eb3946d0a7c0a0a25b02586c5">QuantLib::FFTEngine::resultMap_</a></div><div class="ttdeci">ResultMap resultMap_</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d28/fftengine_8hpp_source.html#l00070">fftengine.hpp:70</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_f_f_t_engine_html_aed1850f79702cc4871f25aeeadadec06"><div class="ttname"><a href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#aed1850f79702cc4871f25aeeadadec06">QuantLib::FFTEngine::clone</a></div><div class="ttdeci">virtual std::unique_ptr&lt; FFTEngine &gt; clone() const =0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_f_f_t_engine_html_afe9f927867529ee02bdf18a8b3d9e5d1"><div class="ttname"><a href="../../d7/d88/class_quant_lib_1_1_f_f_t_engine.html#afe9f927867529ee02bdf18a8b3d9e5d1">QuantLib::FFTEngine::ResultMap</a></div><div class="ttdeci">std::map&lt; Date, PayoffResultMap &gt; ResultMap</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d28/fftengine_8hpp_source.html#l00069">fftengine.hpp:69</a></div></div>
+<div class="ttc" id="aexchangeratemanager_8cpp_html_a85641069b0d4478ab8a7356c3bf32ea3"><div class="ttname"><a href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a></div><div class="ttdeci">Date d</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/exchangeratemanager_8cpp_source.html#l00032">exchangeratemanager.cpp:32</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
+<div class="ttc" id="aintegralhestonvarianceoptionengine_8cpp_html_aac80ba3218a14ee2ac65bfc8989a2015"><div class="ttname"><a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a></div><div class="ttdeci">ext::shared_ptr&lt; QuantLib::Payoff &gt; payoff</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp_source.html#l00350">integralhestonvarianceoptionengine.cpp:350</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="astochasticprocess_8hpp_html"><div class="ttname"><a href="../../de/d96/stochasticprocess_8hpp.html">stochasticprocess.hpp</a></div><div class="ttdoc">stochastic processes</div></div>
+<div class="ttc" id="avanillaoption_8hpp_html"><div class="ttname"><a href="../../d6/dde/vanillaoption_8hpp.html">vanillaoption.hpp</a></div><div class="ttdoc">Vanilla option on a single asset.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

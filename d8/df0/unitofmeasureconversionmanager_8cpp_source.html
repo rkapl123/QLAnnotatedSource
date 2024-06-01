@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/commodities/unitofmeasureconversionmanager.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/commodities/unitofmeasureconversionmanager.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">unitofmeasureconversionmanager.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d8/df0/unitofmeasureconversionmanager_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 J. Erik Radmall</span></div>
@@ -107,9 +106,9 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/experimental/commodities/unitofmeasureconversionmanager.hpp&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/experimental/commodities/petroleumunitsofmeasure.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/errors.hpp&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/dd6/unitofmeasureconversionmanager_8hpp.html">ql/experimental/commodities/unitofmeasureconversionmanager.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/d96/petroleumunitsofmeasure_8hpp.html">ql/experimental/commodities/petroleumunitsofmeasure.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d52/errors_8hpp.html">ql/errors.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>;</div>
@@ -246,7 +245,7 @@ $(function() {
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="comment">// that they don&#39;t supersede specific types. We&#39;ll have to</span></div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="comment">// think a bit about this, so no fall-back for the time being.</span></div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        QL_FAIL(<span class="stringliteral">&quot;no direct conversion available from &quot;</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;no direct conversion available from &quot;</span></div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                &lt;&lt; commodityType.<a class="code hl_function" href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a19a22c307846d12f190e071667a2498e">code</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; source.<a class="code hl_function" href="../../df/deb/class_quant_lib_1_1_unit_of_measure.html#a19a22c307846d12f190e071667a2498e">code</a>()</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                &lt;&lt; <span class="stringliteral">&quot; to &quot;</span> &lt;&lt; target.<a class="code hl_function" href="../../df/deb/class_quant_lib_1_1_unit_of_measure.html#a19a22c307846d12f190e071667a2498e">code</a>());</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    }</div>
@@ -289,7 +288,7 @@ $(function() {
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="comment">// if the loop completed, we have no way to return the</span></div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="comment">// requested conversion.</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        QL_FAIL(<span class="stringliteral">&quot;no conversion available for &quot;</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;no conversion available for &quot;</span></div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                &lt;&lt; commodityType.<a class="code hl_function" href="../../d7/d79/class_quant_lib_1_1_commodity_type.html#a19a22c307846d12f190e071667a2498e">code</a>() &lt;&lt; <span class="stringliteral">&quot; from &quot;</span></div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                &lt;&lt; source.<a class="code hl_function" href="../../df/deb/class_quant_lib_1_1_unit_of_measure.html#a19a22c307846d12f190e071667a2498e">code</a>() &lt;&lt; <span class="stringliteral">&quot; to &quot;</span> &lt;&lt; target.<a class="code hl_function" href="../../df/deb/class_quant_lib_1_1_unit_of_measure.html#a19a22c307846d12f190e071667a2498e">code</a>());</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
@@ -322,8 +321,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_unit_of_measure_html_a036aad1482702ddac1ac496480b12bf2"><div class="ttname"><a href="../../df/deb/class_quant_lib_1_1_unit_of_measure.html#a036aad1482702ddac1ac496480b12bf2">QuantLib::UnitOfMeasure::triangulationUnitOfMeasure</a></div><div class="ttdeci">const UnitOfMeasure &amp; triangulationUnitOfMeasure() const</div><div class="ttdoc">unit used for triangulation when required</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/unitofmeasure_8hpp_source.html#l00126">unitofmeasure.hpp:126</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_unit_of_measure_html_a19a22c307846d12f190e071667a2498e"><div class="ttname"><a href="../../df/deb/class_quant_lib_1_1_unit_of_measure.html#a19a22c307846d12f190e071667a2498e">QuantLib::UnitOfMeasure::code</a></div><div class="ttdeci">const std::string &amp; code() const</div><div class="ttdoc">code, e.g, &quot;BBL&quot;, &quot;MT&quot;</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/unitofmeasure_8hpp_source.html#l00109">unitofmeasure.hpp:109</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_unit_of_measure_html_a644718bb2fb240de962dc3c9a1fdf0dc"><div class="ttname"><a href="../../df/deb/class_quant_lib_1_1_unit_of_measure.html#a644718bb2fb240de962dc3c9a1fdf0dc">QuantLib::UnitOfMeasure::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">is this a usable instance?</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/unitofmeasure_8hpp_source.html#l00121">unitofmeasure.hpp:121</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html"><div class="ttname"><a href="../../df/d52/errors_8hpp.html">errors.hpp</a></div><div class="ttdoc">Classes and functions for error handling.</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a8efe9cb3e67c8d0585e57b4d53c5d2fe"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a></div><div class="ttdeci">#define QL_FAIL(message)</div><div class="ttdoc">throw an error (possibly with file and line information)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00092">errors.hpp:92</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="apetroleumunitsofmeasure_8hpp_html"><div class="ttname"><a href="../../da/d96/petroleumunitsofmeasure_8hpp.html">petroleumunitsofmeasure.hpp</a></div><div class="ttdoc">Petroleum units of measure.</div></div>
+<div class="ttc" id="aunitofmeasureconversionmanager_8hpp_html"><div class="ttname"><a href="../../db/dd6/unitofmeasureconversionmanager_8hpp.html">unitofmeasureconversionmanager.hpp</a></div><div class="ttdoc">Unit-of-measure conversion manager.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

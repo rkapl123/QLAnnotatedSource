@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/math/interpolations/forwardflatinterpolation.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/math/interpolations/forwardflatinterpolation.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">forwardflatinterpolation.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../da/d43/forwardflatinterpolation_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2005, 2008 StatPro Italia srl</span></div>
@@ -105,11 +104,15 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file forwardflatinterpolation.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief forward-flat interpolation between discrete points</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_forward_flat_interpolation_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_forward_flat_interpolation_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/math/interpolation.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/d8e/interpolation_8hpp.html">ql/math/interpolation.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
@@ -117,10 +120,15 @@ $(function() {
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">namespace </span>detail {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span> I1, <span class="keyword">class</span> I2&gt; <span class="keyword">class </span>ForwardFlatInterpolationImpl;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">    //! Forward-flat interpolation between discrete points</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"></span><span class="comment">    /*! \ingroup interpolations</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        \warning See the Interpolation class for information about the</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">                 required lifetime of the underlying data.</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../db/dbb/class_quant_lib_1_1_forward_flat_interpolation.html">   41</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../db/dbb/class_quant_lib_1_1_forward_flat_interpolation.html">ForwardFlatInterpolation</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d9/dbc/class_quant_lib_1_1_interpolation.html">Interpolation</a> {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        /*! \pre the \f$ x \f$ values must be sorted. */</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> I1, <span class="keyword">class</span> I2&gt;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../db/dbb/class_quant_lib_1_1_forward_flat_interpolation.html#a79504c62b2abc9f0e6dc21389b38e08f">   45</a></span>        <a class="code hl_function" href="../../db/dbb/class_quant_lib_1_1_forward_flat_interpolation.html#a79504c62b2abc9f0e6dc21389b38e08f">ForwardFlatInterpolation</a>(<span class="keyword">const</span> I1&amp; xBegin, <span class="keyword">const</span> I1&amp; xEnd,</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                                 <span class="keyword">const</span> I2&amp; yBegin) {</div>
@@ -130,8 +138,9 @@ $(function() {
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_variable" href="../../d9/dbc/class_quant_lib_1_1_interpolation.html#ac29a938cdc70db8abcde7a84fe62f9b4">impl_</a>-&gt;update();</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    };</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment"></span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">    //! Forward-flat interpolation factory and traits</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment"></span><span class="comment">    /*! \ingroup interpolations */</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../dd/de9/class_quant_lib_1_1_forward_flat.html">   56</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dd/de9/class_quant_lib_1_1_forward_flat.html">ForwardFlat</a> {</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> I1, <span class="keyword">class</span> I2&gt;</div>
@@ -192,11 +201,11 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_forward_flat_html_aeebdaea19fcf47f8c30382a178283141"><div class="ttname"><a href="../../dd/de9/class_quant_lib_1_1_forward_flat.html#aeebdaea19fcf47f8c30382a178283141">QuantLib::ForwardFlat::interpolate</a></div><div class="ttdeci">Interpolation interpolate(const I1 &amp;xBegin, const I1 &amp;xEnd, const I2 &amp;yBegin) const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d43/forwardflatinterpolation_8hpp_source.html#l00059">forwardflatinterpolation.hpp:59</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_forward_flat_interpolation_html"><div class="ttname"><a href="../../db/dbb/class_quant_lib_1_1_forward_flat_interpolation.html">QuantLib::ForwardFlatInterpolation</a></div><div class="ttdoc">Forward-flat interpolation between discrete points.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d43/forwardflatinterpolation_8hpp_source.html#l00041">forwardflatinterpolation.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_forward_flat_interpolation_html_a79504c62b2abc9f0e6dc21389b38e08f"><div class="ttname"><a href="../../db/dbb/class_quant_lib_1_1_forward_flat_interpolation.html#a79504c62b2abc9f0e6dc21389b38e08f">QuantLib::ForwardFlatInterpolation::ForwardFlatInterpolation</a></div><div class="ttdeci">ForwardFlatInterpolation(const I1 &amp;xBegin, const I1 &amp;xEnd, const I2 &amp;yBegin)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d43/forwardflatinterpolation_8hpp_source.html#l00045">forwardflatinterpolation.hpp:45</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_interpolation_1_1template_impl_html"><div class="ttname"><a href="../../d5/d2c/class_quant_lib_1_1_interpolation_1_1template_impl.html">QuantLib::Interpolation::templateImpl</a></div><div class="ttdoc">basic template implementation</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8e/interpolation_8hpp_source.html#l00088">interpolation.hpp:88</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_interpolation_1_1template_impl_html_a10aaa529bbf849a034c64dd3d6bcfa45"><div class="ttname"><a href="../../d5/d2c/class_quant_lib_1_1_interpolation_1_1template_impl.html#a10aaa529bbf849a034c64dd3d6bcfa45">QuantLib::Interpolation::templateImpl::xBegin_</a></div><div class="ttdeci">I1 xBegin_</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8e/interpolation_8hpp_source.html#l00126">interpolation.hpp:126</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_interpolation_1_1template_impl_html_a967f679d3b8aadafdced1f74c63568ae"><div class="ttname"><a href="../../d5/d2c/class_quant_lib_1_1_interpolation_1_1template_impl.html#a967f679d3b8aadafdced1f74c63568ae">QuantLib::Interpolation::templateImpl::locate</a></div><div class="ttdeci">Size locate(Real x) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8e/interpolation_8hpp_source.html#l00114">interpolation.hpp:114</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_interpolation_1_1template_impl_html_ac3763f3814c4764c20937e50d5211b67"><div class="ttname"><a href="../../d5/d2c/class_quant_lib_1_1_interpolation_1_1template_impl.html#ac3763f3814c4764c20937e50d5211b67">QuantLib::Interpolation::templateImpl::yBegin_</a></div><div class="ttdeci">I2 yBegin_</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8e/interpolation_8hpp_source.html#l00127">interpolation.hpp:127</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_interpolation_1_1template_impl_html_ac93ba6d7e3b57f69e236ed9fe63b5e7b"><div class="ttname"><a href="../../d5/d2c/class_quant_lib_1_1_interpolation_1_1template_impl.html#ac93ba6d7e3b57f69e236ed9fe63b5e7b">QuantLib::Interpolation::templateImpl::templateImpl</a></div><div class="ttdeci">templateImpl(const I1 &amp;xBegin, const I1 &amp;xEnd, const I2 &amp;yBegin, const int requiredPoints=2)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8e/interpolation_8hpp_source.html#l00090">interpolation.hpp:90</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_interpolation_1_1template_impl_html"><div class="ttname"><a href="../../d5/d2c/class_quant_lib_1_1_interpolation_1_1template_impl.html">QuantLib::Interpolation::templateImpl</a></div><div class="ttdoc">basic template implementation</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8e/interpolation_8hpp_source.html#l00076">interpolation.hpp:76</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_interpolation_1_1template_impl_html_a10aaa529bbf849a034c64dd3d6bcfa45"><div class="ttname"><a href="../../d5/d2c/class_quant_lib_1_1_interpolation_1_1template_impl.html#a10aaa529bbf849a034c64dd3d6bcfa45">QuantLib::Interpolation::templateImpl::xBegin_</a></div><div class="ttdeci">I1 xBegin_</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8e/interpolation_8hpp_source.html#l00114">interpolation.hpp:114</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_interpolation_1_1template_impl_html_a967f679d3b8aadafdced1f74c63568ae"><div class="ttname"><a href="../../d5/d2c/class_quant_lib_1_1_interpolation_1_1template_impl.html#a967f679d3b8aadafdced1f74c63568ae">QuantLib::Interpolation::templateImpl::locate</a></div><div class="ttdeci">Size locate(Real x) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8e/interpolation_8hpp_source.html#l00102">interpolation.hpp:102</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_interpolation_1_1template_impl_html_ac3763f3814c4764c20937e50d5211b67"><div class="ttname"><a href="../../d5/d2c/class_quant_lib_1_1_interpolation_1_1template_impl.html#ac3763f3814c4764c20937e50d5211b67">QuantLib::Interpolation::templateImpl::yBegin_</a></div><div class="ttdeci">I2 yBegin_</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8e/interpolation_8hpp_source.html#l00115">interpolation.hpp:115</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_interpolation_1_1template_impl_html_ac93ba6d7e3b57f69e236ed9fe63b5e7b"><div class="ttname"><a href="../../d5/d2c/class_quant_lib_1_1_interpolation_1_1template_impl.html#ac93ba6d7e3b57f69e236ed9fe63b5e7b">QuantLib::Interpolation::templateImpl::templateImpl</a></div><div class="ttdeci">templateImpl(const I1 &amp;xBegin, const I1 &amp;xEnd, const I2 &amp;yBegin, const int requiredPoints=2)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8e/interpolation_8hpp_source.html#l00078">interpolation.hpp:78</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_interpolation_html"><div class="ttname"><a href="../../d9/dbc/class_quant_lib_1_1_interpolation.html">QuantLib::Interpolation</a></div><div class="ttdoc">base class for 1-D interpolations.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8e/interpolation_8hpp_source.html#l00055">interpolation.hpp:55</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_interpolation_html_ac29a938cdc70db8abcde7a84fe62f9b4"><div class="ttname"><a href="../../d9/dbc/class_quant_lib_1_1_interpolation.html#ac29a938cdc70db8abcde7a84fe62f9b4">QuantLib::Interpolation::impl_</a></div><div class="ttdeci">ext::shared_ptr&lt; Impl &gt; impl_</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8e/interpolation_8hpp_source.html#l00072">interpolation.hpp:72</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1detail_1_1_forward_flat_interpolation_impl_html"><div class="ttname"><a href="../../de/dff/class_quant_lib_1_1detail_1_1_forward_flat_interpolation_impl.html">QuantLib::detail::ForwardFlatInterpolationImpl</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d43/forwardflatinterpolation_8hpp_source.html#l00070">forwardflatinterpolation.hpp:71</a></div></div>
@@ -210,6 +219,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1detail_1_1_forward_flat_interpolation_impl_html_ad8775733800d8ebbd982653585f29b22"><div class="ttname"><a href="../../de/dff/class_quant_lib_1_1detail_1_1_forward_flat_interpolation_impl.html#ad8775733800d8ebbd982653585f29b22">QuantLib::detail::ForwardFlatInterpolationImpl::ForwardFlatInterpolationImpl</a></div><div class="ttdeci">ForwardFlatInterpolationImpl(const I1 &amp;xBegin, const I1 &amp;xEnd, const I2 &amp;yBegin)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d43/forwardflatinterpolation_8hpp_source.html#l00073">forwardflatinterpolation.hpp:73</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="ainterpolation_8hpp_html"><div class="ttname"><a href="../../d8/d8e/interpolation_8hpp.html">interpolation.hpp</a></div><div class="ttdoc">base class for 1-D interpolations</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

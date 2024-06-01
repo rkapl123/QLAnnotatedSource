@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/methods/finitedifferences/utilities/fdmhestongreensfct.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/methods/finitedifferences/utilities/fdmhestongreensfct.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">fdmhestongreensfct.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../de/dbb/fdmhestongreensfct_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2014 Klaus Spanderen</span></div>
@@ -105,11 +104,15 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file fdmhestongreensfct.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Heston Fokker-Planck Green&#39;s function</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_fdm_heston_greens_fct_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_fdm_heston_greens_fct_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/methods/finitedifferences/operators/fdmsquarerootfwdop.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d2a/fdmsquarerootfwdop_8hpp.html">ql/methods/finitedifferences/operators/fdmsquarerootfwdop.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
@@ -123,7 +126,7 @@ $(function() {
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                           <a class="code hl_enumeration" href="../../de/d3e/class_quant_lib_1_1_fdm_square_root_fwd_op.html#a761d9cb2770a41ba680eedea3cc0e226">FdmSquareRootFwdOp::TransformationType</a> <a class="code hl_variable" href="../../dd/d41/class_quant_lib_1_1_fdm_heston_greens_fct.html#a90998bd0be0d43b2abb9d0abe7b9a8a1">trafoType_</a>,</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                           <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> l0 = 1.0);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> get(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t, <a class="code hl_enumeration" href="../../dd/d41/class_quant_lib_1_1_fdm_heston_greens_fct.html#a5e41188f16a381c8915a17a22228e691">Algorithm</a> algorithm) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> get(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, <a class="code hl_enumeration" href="../../dd/d41/class_quant_lib_1_1_fdm_heston_greens_fct.html#a5e41188f16a381c8915a17a22228e691">Algorithm</a> algorithm) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../dd/d41/class_quant_lib_1_1_fdm_heston_greens_fct.html#afabc6c75232b979bdc9f52ecd0daf064">   44</a></span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../dd/d41/class_quant_lib_1_1_fdm_heston_greens_fct.html#afabc6c75232b979bdc9f52ecd0daf064">l0_</a>;</div>
@@ -145,6 +148,8 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_heston_greens_fct_html_ae73916f7cfca72c709da0127bd105cf1"><div class="ttname"><a href="../../dd/d41/class_quant_lib_1_1_fdm_heston_greens_fct.html#ae73916f7cfca72c709da0127bd105cf1">QuantLib::FdmHestonGreensFct::process_</a></div><div class="ttdeci">const ext::shared_ptr&lt; HestonProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbb/fdmhestongreensfct_8hpp_source.html#l00046">fdmhestongreensfct.hpp:46</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_heston_greens_fct_html_afabc6c75232b979bdc9f52ecd0daf064"><div class="ttname"><a href="../../dd/d41/class_quant_lib_1_1_fdm_heston_greens_fct.html#afabc6c75232b979bdc9f52ecd0daf064">QuantLib::FdmHestonGreensFct::l0_</a></div><div class="ttdeci">const Real l0_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbb/fdmhestongreensfct_8hpp_source.html#l00044">fdmhestongreensfct.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_square_root_fwd_op_html_a761d9cb2770a41ba680eedea3cc0e226"><div class="ttname"><a href="../../de/d3e/class_quant_lib_1_1_fdm_square_root_fwd_op.html#a761d9cb2770a41ba680eedea3cc0e226">QuantLib::FdmSquareRootFwdOp::TransformationType</a></div><div class="ttdeci">TransformationType</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d2a/fdmsquarerootfwdop_8hpp_source.html#l00038">fdmsquarerootfwdop.hpp:38</a></div></div>
+<div class="ttc" id="adefaultprobabilitykey_8cpp_html_a15fc20af123a89cd6f40758e341a4a54"><div class="ttname"><a href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a></div><div class="ttdeci">const DefaultType &amp; t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ddb/defaultprobabilitykey_8cpp_source.html#l00039">defaultprobabilitykey.cpp:39</a></div></div>
+<div class="ttc" id="afdmsquarerootfwdop_8hpp_html"><div class="ttname"><a href="../../df/d2a/fdmsquarerootfwdop_8hpp.html">fdmsquarerootfwdop.hpp</a></div><div class="ttdoc">Square root linear operator for the Fokker-Planck forward equation.</div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>

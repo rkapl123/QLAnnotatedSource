@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -97,7 +96,7 @@ $(function() {
 <p>Container for historical data.  
  <a href="../../d2/d05/class_quant_lib_1_1_time_series.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d3/db6/timeseries_8hpp_source.html">ql/timeseries.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d3/db6/timeseries_8hpp_source.html">timeseries.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for TimeSeries&lt; T, Container &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -137,7 +136,7 @@ Classes</h2></td></tr>
 Public Types</h2></td></tr>
 <tr class="memitem:a3f309f410cacd8b9af5dd47d20fb559d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a3f309f410cacd8b9af5dd47d20fb559d">key_type</a></td></tr>
 <tr class="separator:a3f309f410cacd8b9af5dd47d20fb559d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a265a253612b46abed17c61b0a5e5ce30"><td class="memItemLeft" align="right" valign="top">typedef T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a265a253612b46abed17c61b0a5e5ce30">value_type</a></td></tr>
+<tr class="memitem:a265a253612b46abed17c61b0a5e5ce30"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a265a253612b46abed17c61b0a5e5ce30">value_type</a></td></tr>
 <tr class="separator:a265a253612b46abed17c61b0a5e5ce30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -164,10 +163,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether the series contains any data  <a href="../../d2/d05/class_quant_lib_1_1_time_series.html#a644718bb2fb240de962dc3c9a1fdf0dc">More...</a><br /></td></tr>
 <tr class="separator:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Historical data access</div></td></tr>
-<tr class="memitem:adae28d88ca2705eabe42cb4849606293"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#adae28d88ca2705eabe42cb4849606293">operator[]</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d) const</td></tr>
+<tr class="memitem:adae28d88ca2705eabe42cb4849606293"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#adae28d88ca2705eabe42cb4849606293">operator[]</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>) const</td></tr>
 <tr class="memdesc:adae28d88ca2705eabe42cb4849606293"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the (possibly null) datum corresponding to the given date  <a href="../../d2/d05/class_quant_lib_1_1_time_series.html#adae28d88ca2705eabe42cb4849606293">More...</a><br /></td></tr>
 <tr class="separator:adae28d88ca2705eabe42cb4849606293"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75a0cb2e90643d997003d068a4f2c81a"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a75a0cb2e90643d997003d068a4f2c81a">operator[]</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d)</td></tr>
+<tr class="memitem:a75a0cb2e90643d997003d068a4f2c81a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a75a0cb2e90643d997003d068a4f2c81a">operator[]</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>)</td></tr>
 <tr class="separator:a75a0cb2e90643d997003d068a4f2c81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -188,7 +187,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a5f93c0aabd08aba5b00ba5df1b7035ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c6cd43cd3d15570eadd7890a83c892a"><td class="memItemLeft" align="right" valign="top">typedef ext::function&lt; <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(const <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5f93c0aabd08aba5b00ba5df1b7035ad">container_value_type</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5c6cd43cd3d15570eadd7890a83c892a">projection_time</a></td></tr>
 <tr class="separator:a5c6cd43cd3d15570eadd7890a83c892a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1875d72f9b78d6caa49502b45901ceea"><td class="memItemLeft" align="right" valign="top">typedef ext::function&lt; T(const <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5f93c0aabd08aba5b00ba5df1b7035ad">container_value_type</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a1875d72f9b78d6caa49502b45901ceea">projection_value</a></td></tr>
+<tr class="memitem:a1875d72f9b78d6caa49502b45901ceea"><td class="memItemLeft" align="right" valign="top">typedef ext::function&lt; <a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>(const <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5f93c0aabd08aba5b00ba5df1b7035ad">container_value_type</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a1875d72f9b78d6caa49502b45901ceea">projection_value</a></td></tr>
 <tr class="separator:a1875d72f9b78d6caa49502b45901ceea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3da093f6067755690b3c724421113ab0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a0833e882f7bd9b10baa8f4ff433ebbd4">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a3da093f6067755690b3c724421113ab0">cbegin</a> () const</td></tr>
 <tr class="separator:a3da093f6067755690b3c724421113ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,7 +215,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a1f45529030690957b9056280e0c9b9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d61c242afa234175931e1a22bc17def"><td class="memItemLeft" align="right" valign="top">typedef boost::transform_iterator&lt; <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a1875d72f9b78d6caa49502b45901ceea">projection_value</a>, <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a1055e6e12361d891226ec727d1d62aee">const_reverse_iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a6d61c242afa234175931e1a22bc17def">const_reverse_value_iterator</a></td></tr>
 <tr class="separator:a6d61c242afa234175931e1a22bc17def"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5892f363c771d73a6058b140760376d"><td class="memItemLeft" align="right" valign="top">QL_DEPRECATED_DISABLE_WARNING <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#ab013c8ecd3104d80275dcffe6bd3f832">const_value_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#ac5892f363c771d73a6058b140760376d">cbegin_values</a> () const</td></tr>
+<tr class="memitem:ac5892f363c771d73a6058b140760376d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d56/qldefines_8hpp.html#a2e2c3685622dcbe6a5a2dfca6bdf7b98">QL_DEPRECATED_DISABLE_WARNING</a> <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#ab013c8ecd3104d80275dcffe6bd3f832">const_value_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#ac5892f363c771d73a6058b140760376d">cbegin_values</a> () const</td></tr>
 <tr class="separator:ac5892f363c771d73a6058b140760376d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09cb641cca4a47b1e244c22bfec00e92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#ab013c8ecd3104d80275dcffe6bd3f832">const_value_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a09cb641cca4a47b1e244c22bfec00e92">cend_values</a> () const</td></tr>
 <tr class="separator:a09cb641cca4a47b1e244c22bfec00e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,16 +238,16 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a8eb5f0b148fb7b819b77eeb6f839d475"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a8eb5f0b148fb7b819b77eeb6f839d475">dates</a> () const</td></tr>
 <tr class="memdesc:a8eb5f0b148fb7b819b77eeb6f839d475"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the dates for which historical data exist  <a href="../../d2/d05/class_quant_lib_1_1_time_series.html#a8eb5f0b148fb7b819b77eeb6f839d475">More...</a><br /></td></tr>
 <tr class="separator:a8eb5f0b148fb7b819b77eeb6f839d475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c56c587bbc7f7769e5d3779175b493c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5c56c587bbc7f7769e5d3779175b493c">values</a> () const</td></tr>
+<tr class="memitem:a5c56c587bbc7f7769e5d3779175b493c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5c56c587bbc7f7769e5d3779175b493c">values</a> () const</td></tr>
 <tr class="memdesc:a5c56c587bbc7f7769e5d3779175b493c"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the historical data  <a href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5c56c587bbc7f7769e5d3779175b493c">More...</a><br /></td></tr>
 <tr class="separator:a5c56c587bbc7f7769e5d3779175b493c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a009fa507e1e9da2162929b042ffb236c"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a009fa507e1e9da2162929b042ffb236c">get_time</a> (const <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5f93c0aabd08aba5b00ba5df1b7035ad">container_value_type</a> &amp;v)</td></tr>
+<tr class="memitem:a009fa507e1e9da2162929b042ffb236c"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a009fa507e1e9da2162929b042ffb236c">get_time</a> (const <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5f93c0aabd08aba5b00ba5df1b7035ad">container_value_type</a> &amp;<a class="el" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>)</td></tr>
 <tr class="separator:a009fa507e1e9da2162929b042ffb236c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acae8cc149b2cf21f6b1b114193bc7d09"><td class="memItemLeft" align="right" valign="top">static const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#acae8cc149b2cf21f6b1b114193bc7d09">get_value</a> (const <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5f93c0aabd08aba5b00ba5df1b7035ad">container_value_type</a> &amp;v)</td></tr>
+<tr class="memitem:acae8cc149b2cf21f6b1b114193bc7d09"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#acae8cc149b2cf21f6b1b114193bc7d09">get_value</a> (const <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5f93c0aabd08aba5b00ba5df1b7035ad">container_value_type</a> &amp;<a class="el" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>)</td></tr>
 <tr class="separator:acae8cc149b2cf21f6b1b114193bc7d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;class T, class Container = std::map&lt;Date, T&gt;&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;class <a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>, class Container = std::map&lt;Date, T&gt;&gt;<br />
 class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historical data. </p>
 <p >This class acts as a generic repository for a set of historical data. Any single datum can be accessed through its date, while sets of consecutive data can be accessed through iterators.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>The <code>Container</code> type must satisfy the requirements set by the C++ standard for associative containers. </dd></dl>
@@ -278,7 +277,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef T <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a265a253612b46abed17c61b0a5e5ce30">value_type</a></td>
+          <td class="memname">typedef <a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a> <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a265a253612b46abed17c61b0a5e5ce30">value_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -409,7 +408,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">typedef ext::function&lt;T(const <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5f93c0aabd08aba5b00ba5df1b7035ad">container_value_type</a>&amp;)&gt; <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a1875d72f9b78d6caa49502b45901ceea">projection_value</a></td>
+          <td class="memname">typedef ext::function&lt;<a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>(const <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5f93c0aabd08aba5b00ba5df1b7035ad">container_value_type</a>&amp;)&gt; <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a1875d72f9b78d6caa49502b45901ceea">projection_value</a></td>
         </tr>
       </table>
   </td>
@@ -434,7 +433,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000176">Deprecated:</a></b></dt><dd>Use const_iterator instead and access the <code>first</code> data member. Deprecated in version 1.31. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000109">Deprecated:</a></b></dt><dd>Use const_iterator instead and access the <code>first</code> data member. Deprecated in version 1.31. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/db6/timeseries_8hpp_source.html#l00185">185</a> of file <a class="el" href="../../d3/db6/timeseries_8hpp_source.html">timeseries.hpp</a>.</p>
 
@@ -451,7 +450,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000177">Deprecated:</a></b></dt><dd>Use const_iterator instead and access the <code>second</code> data member. Deprecated in version 1.31. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000110">Deprecated:</a></b></dt><dd>Use const_iterator instead and access the <code>second</code> data member. Deprecated in version 1.31. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/db6/timeseries_8hpp_source.html#l00191">191</a> of file <a class="el" href="../../d3/db6/timeseries_8hpp_source.html">timeseries.hpp</a>.</p>
 
@@ -468,7 +467,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000178">Deprecated:</a></b></dt><dd>Use const_reverse_iterator instead and access the <code>first</code> data member. Deprecated in version 1.31. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000111">Deprecated:</a></b></dt><dd>Use const_reverse_iterator instead and access the <code>first</code> data member. Deprecated in version 1.31. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/db6/timeseries_8hpp_source.html#l00197">197</a> of file <a class="el" href="../../d3/db6/timeseries_8hpp_source.html">timeseries.hpp</a>.</p>
 
@@ -485,7 +484,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000179">Deprecated:</a></b></dt><dd>Use const_reverse_iterator instead and access the <code>second</code> data member. Deprecated in version 1.31. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000112">Deprecated:</a></b></dt><dd>Use const_reverse_iterator instead and access the <code>second</code> data member. Deprecated in version 1.31. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/db6/timeseries_8hpp_source.html#l00203">203</a> of file <a class="el" href="../../d3/db6/timeseries_8hpp_source.html">timeseries.hpp</a>.</p>
 
@@ -691,7 +690,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
 <area shape="rect" title="returns the number of historical data including null ones" alt="" coords="444,45,491,70"/>
 <area shape="rect" href="../../db/d54/class_quant_lib_1_1_constant_estimator.html#a97fb9033aa0512f390edc1d1ee554ba0" title=" " alt="" coords="205,5,396,45"/>
 <area shape="rect" href="../../de/d26/class_quant_lib_1_1_interval_price.html#a59d147f55984d6a440bbcbc5f536c4a9" title=" " alt="" coords="225,69,377,109"/>
-<area shape="rect" href="../../de/d26/class_quant_lib_1_1_interval_price.html#a41eed6345197faa6e4b991fe55eae872" title=" " alt="" coords="5,69,157,109"/>
+<area shape="rect" href="../../de/d26/class_quant_lib_1_1_interval_price.html#a0e4f5c593738365d968672794222a886" title=" " alt="" coords="5,69,157,109"/>
 </map>
 </div>
 
@@ -734,7 +733,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">T operator[] </td>
+          <td class="memname"><a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a> operator[] </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;&#160;</td>
           <td class="paramname"><em>d</em></td><td>)</td>
@@ -756,7 +755,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">T &amp; operator[] </td>
+          <td class="memname"><a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a> &amp; operator[] </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;&#160;</td>
           <td class="paramname"><em>d</em></td><td>)</td>
@@ -776,7 +775,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries</a>&lt; T, C &gt;<a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a0833e882f7bd9b10baa8f4ff433ebbd4">::const_iterator</a> cbegin</td>
+          <td class="memname"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries</a>&lt; <a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>, C &gt;<a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a0833e882f7bd9b10baa8f4ff433ebbd4">::const_iterator</a> cbegin</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -811,7 +810,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries</a>&lt; T, C &gt;<a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a0833e882f7bd9b10baa8f4ff433ebbd4">::const_iterator</a> cend</td>
+          <td class="memname"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries</a>&lt; <a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>, C &gt;<a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a0833e882f7bd9b10baa8f4ff433ebbd4">::const_iterator</a> cend</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1085,14 +1084,14 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QL_DEPRECATED_DISABLE_WARNING <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#ab013c8ecd3104d80275dcffe6bd3f832">const_value_iterator</a> cbegin_values </td>
+          <td class="memname"><a class="el" href="../../de/d56/qldefines_8hpp.html#a2e2c3685622dcbe6a5a2dfca6bdf7b98">QL_DEPRECATED_DISABLE_WARNING</a> <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#ab013c8ecd3104d80275dcffe6bd3f832">const_value_iterator</a> cbegin_values </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000180">Deprecated:</a></b></dt><dd>Use cbegin instead and access the <code>second</code> data member. Deprecated in version 1.31. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000113">Deprecated:</a></b></dt><dd>Use cbegin instead and access the <code>second</code> data member. Deprecated in version 1.31. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/db6/timeseries_8hpp_source.html#l00211">211</a> of file <a class="el" href="../../d3/db6/timeseries_8hpp_source.html">timeseries.hpp</a>.</p>
 <div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1124,7 +1123,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000181">Deprecated:</a></b></dt><dd>Use cend instead and access the <code>second</code> data member. Deprecated in version 1.31. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000114">Deprecated:</a></b></dt><dd>Use cend instead and access the <code>second</code> data member. Deprecated in version 1.31. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/db6/timeseries_8hpp_source.html#l00219">219</a> of file <a class="el" href="../../d3/db6/timeseries_8hpp_source.html">timeseries.hpp</a>.</p>
 <div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1156,7 +1155,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000182">Deprecated:</a></b></dt><dd>Use crbegin instead and access the <code>second</code> data member. Deprecated in version 1.31. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000115">Deprecated:</a></b></dt><dd>Use crbegin instead and access the <code>second</code> data member. Deprecated in version 1.31. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/db6/timeseries_8hpp_source.html#l00227">227</a> of file <a class="el" href="../../d3/db6/timeseries_8hpp_source.html">timeseries.hpp</a>.</p>
 <div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1189,7 +1188,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000183">Deprecated:</a></b></dt><dd>Use crend instead and access the <code>second</code> data member. Deprecated in version 1.31. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000116">Deprecated:</a></b></dt><dd>Use crend instead and access the <code>second</code> data member. Deprecated in version 1.31. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/db6/timeseries_8hpp_source.html#l00235">235</a> of file <a class="el" href="../../d3/db6/timeseries_8hpp_source.html">timeseries.hpp</a>.</p>
 <div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1222,7 +1221,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000184">Deprecated:</a></b></dt><dd>Use cbegin instead and access the <code>first</code> data member. Deprecated in version 1.31. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000117">Deprecated:</a></b></dt><dd>Use cbegin instead and access the <code>first</code> data member. Deprecated in version 1.31. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/db6/timeseries_8hpp_source.html#l00243">243</a> of file <a class="el" href="../../d3/db6/timeseries_8hpp_source.html">timeseries.hpp</a>.</p>
 <div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1254,7 +1253,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000185">Deprecated:</a></b></dt><dd>Use cend instead and access the <code>first</code> data member. Deprecated in version 1.31. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000118">Deprecated:</a></b></dt><dd>Use cend instead and access the <code>first</code> data member. Deprecated in version 1.31. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/db6/timeseries_8hpp_source.html#l00251">251</a> of file <a class="el" href="../../d3/db6/timeseries_8hpp_source.html">timeseries.hpp</a>.</p>
 <div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1286,7 +1285,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000186">Deprecated:</a></b></dt><dd>Use crbegin instead and access the <code>first</code> data member. Deprecated in version 1.31. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000119">Deprecated:</a></b></dt><dd>Use crbegin instead and access the <code>first</code> data member. Deprecated in version 1.31. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/db6/timeseries_8hpp_source.html#l00259">259</a> of file <a class="el" href="../../d3/db6/timeseries_8hpp_source.html">timeseries.hpp</a>.</p>
 <div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1319,7 +1318,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000187">Deprecated:</a></b></dt><dd>Use crend instead and access the <code>first</code> data member. Deprecated in version 1.31. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000120">Deprecated:</a></b></dt><dd>Use crend instead and access the <code>first</code> data member. Deprecated in version 1.31. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/db6/timeseries_8hpp_source.html#l00267">267</a> of file <a class="el" href="../../d3/db6/timeseries_8hpp_source.html">timeseries.hpp</a>.</p>
 <div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1345,7 +1344,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries</a>&lt; T, C &gt;<a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a0833e882f7bd9b10baa8f4ff433ebbd4">::const_iterator</a> find </td>
+          <td class="memname"><a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries</a>&lt; <a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>, C &gt;<a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a0833e882f7bd9b10baa8f4ff433ebbd4">::const_iterator</a> find </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;&#160;</td>
           <td class="paramname"><em>d</em></td><td>)</td>
@@ -1392,7 +1391,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
 <div class="center"><img src="../../d2/d05/class_quant_lib_1_1_time_series_a8eb5f0b148fb7b819b77eeb6f839d475_icgraph.png" border="0" usemap="#ad2/d05/class_quant_lib_1_1_time_series_a8eb5f0b148fb7b819b77eeb6f839d475_icgraph" alt=""/></div>
 <map name="ad2/d05/class_quant_lib_1_1_time_series_a8eb5f0b148fb7b819b77eeb6f839d475_icgraph" id="ad2/d05/class_quant_lib_1_1_time_series_a8eb5f0b148fb7b819b77eeb6f839d475_icgraph">
 <area shape="rect" title="returns the dates for which historical data exist" alt="" coords="205,13,260,38"/>
-<area shape="rect" href="../../de/d26/class_quant_lib_1_1_interval_price.html#a41eed6345197faa6e4b991fe55eae872" title=" " alt="" coords="5,5,157,45"/>
+<area shape="rect" href="../../de/d26/class_quant_lib_1_1_interval_price.html#a0e4f5c593738365d968672794222a886" title=" " alt="" coords="5,5,157,45"/>
 </map>
 </div>
 
@@ -1405,7 +1404,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; T &gt; values</td>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a> &gt; values</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1481,7 +1480,7 @@ class QuantLib::TimeSeries&lt; T, Container &gt;</div><p >Container for historic
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static const T &amp; get_value </td>
+          <td class="memname">static const <a class="el" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a> &amp; get_value </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html#a5f93c0aabd08aba5b00ba5df1b7035ad">container_value_type</a> &amp;&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>

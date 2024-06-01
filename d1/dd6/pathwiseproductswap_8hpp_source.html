@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/models/marketmodels/products/pathwise/pathwiseproductswap.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/models/marketmodels/products/pathwise/pathwiseproductswap.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">pathwiseproductswap.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d1/dd6/pathwiseproductswap_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2009 Mark Joshi</span></div>
@@ -110,10 +109,10 @@ $(function() {
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#ifndef quantlib_market_model_pathwise_swap_hpp</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define quantlib_market_model_pathwise_swap_hpp</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/types.hpp&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;ql/models/marketmodels/pathwisemultiproduct.hpp&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ql/models/marketmodels/evolutiondescription.hpp&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/models/marketmodels/curvestates/lmmcurvestate.hpp&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/de3/types_8hpp.html">ql/types.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/dd2/pathwisemultiproduct_8hpp.html">ql/models/marketmodels/pathwisemultiproduct.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/df1/evolutiondescription_8hpp.html">ql/models/marketmodels/evolutiondescription.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d69/lmmcurvestate_8hpp.html">ql/models/marketmodels/curvestates/lmmcurvestate.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
@@ -121,7 +120,12 @@ $(function() {
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">class </span>EvolutionDescription;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">class </span>CurveState;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">    /*!</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">    Swap for doing Greeks. Fairly useless when used directly, but if we want to look a breakable swap</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">    it becomes useful. </span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">   </span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html">   41</a></span><span class="keyword">class </span><a class="code hl_class" href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html">MarketModelPathwiseSwap</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d2/dab/class_quant_lib_1_1_market_model_pathwise_multi_product.html">MarketModelPathwiseMultiProduct</a></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>     <span class="keyword">public</span>:</div>
@@ -144,15 +148,18 @@ $(function() {
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>       <span class="comment">// has division by the numeraire already been done?</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>       <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html#a88b2b408d991f3b22a28e275e0f352f9">alreadyDeflated</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>       <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html#aebfcdbbd0fe4efbff10b180be50ca6bc">reset</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>       <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html#a4c6db938e2786bb5cfa9b929a45b236c">nextTimeStep</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../de/db4/class_quant_lib_1_1_curve_state.html">CurveState</a>&amp; currentState,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment"></span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">       //! during simulation put product at start of path</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment"></span>       <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html#aebfcdbbd0fe4efbff10b180be50ca6bc">reset</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment"></span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">       //! return value indicates whether path is finished, TRUE means done</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment"></span>       <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html#a4c6db938e2786bb5cfa9b929a45b236c">nextTimeStep</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../de/db4/class_quant_lib_1_1_curve_state.html">CurveState</a>&amp; currentState,</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                         std::vector&lt;Size&gt;&amp; numberCashFlowsThisStep,</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                         std::vector&lt;std::vector&lt;MarketModelPathwiseMultiProduct::CashFlow&gt; &gt;&amp;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                             cashFlowsGenerated) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        std::unique_ptr&lt;MarketModelPathwiseMultiProduct&gt; <a class="code hl_function" href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html#a527c5cd5bb792f73acbe4a8ca173e3a2">clone</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment"></span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">        //! returns a newly-allocated copy of itself</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment"></span>        std::unique_ptr&lt;MarketModelPathwiseMultiProduct&gt; <a class="code hl_function" href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html#a527c5cd5bb792f73acbe4a8ca173e3a2">clone</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html#adfdcd5dfe44a759ebc2f8467090eecdd">   77</a></span>        std::vector&lt;Real&gt; <a class="code hl_variable" href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html#adfdcd5dfe44a759ebc2f8467090eecdd">rateTimes_</a>;</div>
@@ -190,9 +197,13 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_market_model_pathwise_swap_html_aeb8981967234c763295b4c901abf52fb"><div class="ttname"><a href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html#aeb8981967234c763295b4c901abf52fb">QuantLib::MarketModelPathwiseSwap::accruals_</a></div><div class="ttdeci">std::vector&lt; Real &gt; accruals_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dd6/pathwiseproductswap_8hpp_source.html#l00078">pathwiseproductswap.hpp:78</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_market_model_pathwise_swap_html_aebfcdbbd0fe4efbff10b180be50ca6bc"><div class="ttname"><a href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html#aebfcdbbd0fe4efbff10b180be50ca6bc">QuantLib::MarketModelPathwiseSwap::reset</a></div><div class="ttdeci">void reset() override</div><div class="ttdoc">during simulation put product at start of path</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d08/pathwiseproductswap_8cpp_source.html#l00124">pathwiseproductswap.cpp:124</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_market_model_pathwise_swap_html_af59e79d1dfa72c83c4b0d6b58e60d8be"><div class="ttname"><a href="../../da/dfd/class_quant_lib_1_1_market_model_pathwise_swap.html#af59e79d1dfa72c83c4b0d6b58e60d8be">QuantLib::MarketModelPathwiseSwap::~MarketModelPathwiseSwap</a></div><div class="ttdeci">~MarketModelPathwiseSwap() override=default</div></div>
+<div class="ttc" id="aevolutiondescription_8hpp_html"><div class="ttname"><a href="../../dc/df1/evolutiondescription_8hpp.html">evolutiondescription.hpp</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="almmcurvestate_8hpp_html"><div class="ttname"><a href="../../d0/d69/lmmcurvestate_8hpp.html">lmmcurvestate.hpp</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="apathwisemultiproduct_8hpp_html"><div class="ttname"><a href="../../d3/dd2/pathwisemultiproduct_8hpp.html">pathwisemultiproduct.hpp</a></div></div>
+<div class="ttc" id="atypes_8hpp_html"><div class="ttname"><a href="../../dd/de3/types_8hpp.html">types.hpp</a></div><div class="ttdoc">Custom types.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

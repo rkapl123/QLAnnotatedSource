@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -92,7 +91,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">ql/experimental/inflation/yoycapfloortermpricesurface.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Interpolator1D &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -100,9 +99,8 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/dd4/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface__inherit__graph.png" border="0" usemap="#a_interpolated_yo_y_cap_floor_term_price_surface_3_01_interpolator2_d_00_01_interpolator1_d_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_interpolated_yo_y_cap_floor_term_price_surface_3_01_interpolator2_d_00_01_interpolator1_d_01_4_inherit__map" id="a_interpolated_yo_y_cap_floor_term_price_surface_3_01_interpolator2_d_00_01_interpolator1_d_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="179,1912,393,2495"/>
-<area shape="rect" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html" title="Abstract base class, inheriting from InflationTermStructure." alt="" coords="173,1179,399,1864"/>
-<area shape="rect" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html" title="Interface for inflation term structures." alt="" coords="199,797,373,1131"/>
+<area shape="rect" title=" " alt="" coords="179,1589,393,2172"/>
+<area shape="rect" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html" title="Abstract base class, inheriting from InflationTermStructure." alt="" coords="173,797,399,1541"/>
 <area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html" title="Basic term&#45;structure functionality." alt="" coords="209,255,363,749"/>
 <area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="5,5,188,207"/>
 <area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="213,13,359,199"/>
@@ -116,56 +114,52 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../dd/d64/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface__coll__graph.png" border="0" usemap="#a_interpolated_yo_y_cap_floor_term_price_surface_3_01_interpolator2_d_00_01_interpolator1_d_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="a_interpolated_yo_y_cap_floor_term_price_surface_3_01_interpolator2_d_00_01_interpolator1_d_01_4_coll__map" id="a_interpolated_yo_y_cap_floor_term_price_surface_3_01_interpolator2_d_00_01_interpolator1_d_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="2467,4464,2681,4900"/>
-<area shape="rect" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html" title="Abstract base class, inheriting from InflationTermStructure." alt="" coords="1179,3936,1407,4401"/>
-<area shape="rect" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html" title="Interface for inflation term structures." alt="" coords="1484,2865,1659,3140"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html" title="Basic term&#45;structure functionality." alt="" coords="1869,1677,2023,2084"/>
-<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="1843,343,2025,529"/>
-<area shape="rect" title=" " alt="" coords="1981,599,2109,639"/>
-<area shape="rect" title=" " alt="" coords="1861,225,2004,280"/>
-<area shape="rect" title=" " alt="" coords="1773,108,1948,148"/>
-<area shape="rect" title=" " alt="" coords="1999,108,2077,148"/>
-<area shape="rect" title=" " alt="" coords="2019,5,2057,45"/>
-<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="1971,1061,2118,1233"/>
-<area shape="rect" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html" title="base class for classes possibly allowing extrapolation" alt="" coords="2561,1076,2720,1219"/>
-<area shape="rect" href="../../dd/d7a/class_quant_lib_1_1_interpolation2_d.html" title="base class for 2&#45;D interpolations." alt="" coords="2681,1758,2816,2003"/>
-<area shape="rect" href="../../d9/dbc/class_quant_lib_1_1_interpolation.html" title="base class for 1&#45;D interpolations." alt="" coords="2946,1773,3085,1989"/>
-<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="2498,599,2549,639"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html" title="calendar class" alt="" coords="2142,856,2377,1439"/>
-<area shape="rect" title=" " alt="" coords="2184,592,2335,647"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="1581,709,1756,1585"/>
-<area shape="rect" title=" " alt="" coords="1622,599,1715,639"/>
-<area shape="rect" title=" " alt="" coords="1450,1127,1557,1167"/>
-<area shape="rect" href="../../df/dfa/class_quant_lib_1_1_period.html" title=" " alt="" coords="1044,1773,1149,1989"/>
-<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html" title="day counter class" alt="" coords="1780,1054,1896,1241"/>
-<area shape="rect" title=" " alt="" coords="1745,592,1896,647"/>
-<area shape="rect" title=" " alt="" coords="1400,1853,1551,1908"/>
-<area shape="rect" title=" " alt="" coords="738,2983,919,3023"/>
-<area shape="rect" title=" " alt="" coords="1058,1127,1135,1167"/>
-<area shape="rect" title=" " alt="" coords="1289,1861,1376,1901"/>
-<area shape="rect" title=" " alt="" coords="920,1127,972,1167"/>
-<area shape="rect" title=" " alt="" coords="603,2983,713,3023"/>
-<area shape="rect" title=" " alt="" coords="1653,1853,1793,1908"/>
-<area shape="rect" title=" " alt="" coords="1293,2983,1460,3023"/>
-<area shape="rect" title=" " alt="" coords="1119,2975,1269,3030"/>
-<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title=" " alt="" coords="383,2814,579,3191"/>
-<area shape="rect" title=" " alt="" coords="357,1120,508,1175"/>
-<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title="Shared handle to an observable." alt="" coords="461,1699,612,2062"/>
-<area shape="rect" title=" " alt="" coords="1683,2983,1793,3023"/>
-<area shape="rect" title=" " alt="" coords="1575,1861,1629,1901"/>
-<area shape="rect" title=" " alt="" coords="1174,1861,1265,1901"/>
-<area shape="rect" title=" " alt="" coords="1248,599,1287,639"/>
-<area shape="rect" title=" " alt="" coords="1309,1120,1426,1175"/>
-<area shape="rect" href="../../dd/db6/class_quant_lib_1_1_matrix.html" title="Matrix used in linear algebra." alt="" coords="1928,2161,2113,3844"/>
-<area shape="rect" title=" " alt="" coords="2047,1861,2109,1901"/>
-<area shape="rect" title=" " alt="" coords="165,2975,359,3030"/>
-<area shape="rect" title=" " alt="" coords="5,2968,140,3037"/>
-<area shape="rect" title=" " alt="" coords="944,2968,1095,3037"/>
-<area shape="rect" title=" " alt="" coords="2929,1127,3144,1167"/>
-<area shape="rect" title=" " alt="" coords="2745,1120,2905,1175"/>
-<area shape="rect" title=" " alt="" coords="2611,4149,2718,4189"/>
-<area shape="rect" title=" " alt="" coords="3168,1120,3319,1175"/>
-<area shape="rect" href="../../d6/d87/class_interpolator1_d.html" title=" " alt="" coords="2806,4149,2913,4189"/>
+<area shape="rect" title=" " alt="" coords="2411,4009,2625,4445"/>
+<area shape="rect" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html" title="Abstract base class, inheriting from InflationTermStructure." alt="" coords="1748,3437,1976,3947"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html" title="Basic term&#45;structure functionality." alt="" coords="1077,2301,1231,2707"/>
+<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="900,343,1083,529"/>
+<area shape="rect" title=" " alt="" coords="979,599,1107,639"/>
+<area shape="rect" title=" " alt="" coords="917,225,1060,280"/>
+<area shape="rect" title=" " alt="" coords="829,108,1004,148"/>
+<area shape="rect" title=" " alt="" coords="1055,108,1133,148"/>
+<area shape="rect" title=" " alt="" coords="1075,5,1113,45"/>
+<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="970,1061,1117,1233"/>
+<area shape="rect" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html" title="base class for classes possibly allowing extrapolation" alt="" coords="452,1076,611,1219"/>
+<area shape="rect" href="../../dd/d7a/class_quant_lib_1_1_interpolation2_d.html" title="base class for 2&#45;D interpolations." alt="" coords="336,2381,471,2627"/>
+<area shape="rect" href="../../d9/dbc/class_quant_lib_1_1_interpolation.html" title="base class for 1&#45;D interpolations." alt="" coords="173,2396,311,2612"/>
+<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="798,599,849,639"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html" title="calendar class" alt="" coords="1191,856,1426,1439"/>
+<area shape="rect" title=" " alt="" coords="1233,592,1384,647"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="1451,709,1625,1585"/>
+<area shape="rect" title=" " alt="" coords="1491,599,1585,639"/>
+<area shape="rect" title=" " alt="" coords="2058,599,2165,639"/>
+<area shape="rect" href="../../df/dfa/class_quant_lib_1_1_period.html" title=" " alt="" coords="1945,1039,2051,1255"/>
+<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html" title="day counter class" alt="" coords="1649,1054,1765,1241"/>
+<area shape="rect" title=" " alt="" coords="1632,592,1783,647"/>
+<area shape="rect" title=" " alt="" coords="2352,2484,2519,2524"/>
+<area shape="rect" title=" " alt="" coords="715,2477,865,2531"/>
+<area shape="rect" title=" " alt="" coords="1961,2484,2142,2524"/>
+<area shape="rect" title=" " alt="" coords="1957,599,2034,639"/>
+<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title=" " alt="" coords="495,2301,691,2707"/>
+<area shape="rect" title=" " alt="" coords="475,592,625,647"/>
+<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title="Shared handle to an observable." alt="" coords="635,951,785,1343"/>
+<area shape="rect" title=" " alt="" coords="2543,2484,2653,2524"/>
+<area shape="rect" title=" " alt="" coords="2497,1127,2550,1167"/>
+<area shape="rect" title=" " alt="" coords="2251,1127,2342,1167"/>
+<area shape="rect" title=" " alt="" coords="2217,2484,2328,2524"/>
+<area shape="rect" title=" " alt="" coords="2380,416,2419,456"/>
+<area shape="rect" title=" " alt="" coords="2517,592,2634,647"/>
+<area shape="rect" title=" " alt="" coords="2432,599,2484,639"/>
+<area shape="rect" title=" " alt="" coords="2575,1120,2715,1175"/>
+<area shape="rect" href="../../dd/db6/class_quant_lib_1_1_matrix.html" title="Matrix used in linear algebra." alt="" coords="2677,1663,2863,3345"/>
+<area shape="rect" title=" " alt="" coords="2739,1127,2801,1167"/>
+<area shape="rect" title=" " alt="" coords="1409,2477,1603,2531"/>
+<area shape="rect" title=" " alt="" coords="1627,2469,1761,2539"/>
+<area shape="rect" title=" " alt="" coords="1785,2469,1936,2539"/>
+<area shape="rect" title=" " alt="" coords="181,1120,341,1175"/>
+<area shape="rect" title=" " alt="" coords="2618,3672,2725,3712"/>
+<area shape="rect" title=" " alt="" coords="5,1120,156,1175"/>
+<area shape="rect" href="../../d6/d87/class_interpolator1_d.html" title=" " alt="" coords="2862,3672,2969,3712"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -176,13 +170,12 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9be17fcd4763fc411a98cfd0ec3d0fe4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a9be17fcd4763fc411a98cfd0ec3d0fe4">InterpolatedYoYCapFloorTermPriceSurface</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a4ae35068cec1065b2ab177cdf77eb205">fixingDays</a>, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;yyLag, const ext::shared_ptr&lt; <a class="el" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html">YoYInflationIndex</a> &gt; &amp;yii, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a6b0c6faeec82f67715cb752399b10911">baseRate</a>, const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; &amp;nominal, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;cal, const <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> &amp;bdc, const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &gt; &amp;cStrikes, const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &gt; &amp;fStrikes, const std::vector&lt; <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &gt; &amp;cfMaturities, const <a class="el" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> &amp;cPrice, const <a class="el" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> &amp;fPrice, const Interpolator2D &amp;interpolator2d=Interpolator2D(), const <a class="el" href="../../d6/d87/class_interpolator1_d.html">Interpolator1D</a> &amp;interpolator1d=<a class="el" href="../../d6/d87/class_interpolator1_d.html">Interpolator1D</a>())</td></tr>
+<tr class="memitem:a9be17fcd4763fc411a98cfd0ec3d0fe4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a9be17fcd4763fc411a98cfd0ec3d0fe4">InterpolatedYoYCapFloorTermPriceSurface</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a4ae35068cec1065b2ab177cdf77eb205">fixingDays</a>, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;yyLag, const ext::shared_ptr&lt; <a class="el" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html">YoYInflationIndex</a> &gt; &amp;yii, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> baseRate, const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; &amp;nominal, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;cal, const <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> &amp;bdc, const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &gt; &amp;cStrikes, const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &gt; &amp;fStrikes, const std::vector&lt; <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &gt; &amp;cfMaturities, const <a class="el" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> &amp;cPrice, const <a class="el" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> &amp;fPrice, const Interpolator2D &amp;interpolator2d=Interpolator2D(), const <a class="el" href="../../d6/d87/class_interpolator1_d.html">Interpolator1D</a> &amp;interpolator1d=<a class="el" href="../../d6/d87/class_interpolator1_d.html">Interpolator1D</a>())</td></tr>
 <tr class="separator:a9be17fcd4763fc411a98cfd0ec3d0fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa72216913cb42d4910ebcae64d655934"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#aa72216913cb42d4910ebcae64d655934">maxDate</a> () const override</td></tr>
 <tr class="memdesc:aa72216913cb42d4910ebcae64d655934"><td class="mdescLeft">&#160;</td><td class="mdescRight">inflation term structure interface  <a href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#aa72216913cb42d4910ebcae64d655934">More...</a><br /></td></tr>
 <tr class="separator:aa72216913cb42d4910ebcae64d655934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5043dbd45586c59283d2c6fbb500dcbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a5043dbd45586c59283d2c6fbb500dcbe">baseDate</a> () const override</td></tr>
-<tr class="memdesc:a5043dbd45586c59283d2c6fbb500dcbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">minimum (base) date  <a href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a5043dbd45586c59283d2c6fbb500dcbe">More...</a><br /></td></tr>
 <tr class="separator:a5043dbd45586c59283d2c6fbb500dcbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ae35068cec1065b2ab177cdf77eb205"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a4ae35068cec1065b2ab177cdf77eb205">fixingDays</a> () const override</td></tr>
 <tr class="separator:a4ae35068cec1065b2ab177cdf77eb205"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,21 +188,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4ee16faa07d49a017539784e463133ae"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../dd/db3/class_quant_lib_1_1_yo_y_inflation_term_structure.html">YoYInflationTermStructure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a4ee16faa07d49a017539784e463133ae">YoYTS</a> () const override</td></tr>
 <tr class="memdesc:a4ee16faa07d49a017539784e463133ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">derived from yoy swap rates  <a href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a4ee16faa07d49a017539784e463133ae">More...</a><br /></td></tr>
 <tr class="separator:a4ee16faa07d49a017539784e463133ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71805bb83375b635494c0bb3f19763ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a71805bb83375b635494c0bb3f19763ff">price</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const override</td></tr>
+<tr class="memitem:a71805bb83375b635494c0bb3f19763ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a71805bb83375b635494c0bb3f19763ff">price</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const override</td></tr>
 <tr class="separator:a71805bb83375b635494c0bb3f19763ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1db7726b0d30dfc840a6943276153393"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a1db7726b0d30dfc840a6943276153393">floorPrice</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const override</td></tr>
+<tr class="memitem:a1db7726b0d30dfc840a6943276153393"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a1db7726b0d30dfc840a6943276153393">floorPrice</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const override</td></tr>
 <tr class="separator:a1db7726b0d30dfc840a6943276153393"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bbbf7cb168aa455d7f8fcb0e29bd178"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a0bbbf7cb168aa455d7f8fcb0e29bd178">capPrice</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const override</td></tr>
+<tr class="memitem:a0bbbf7cb168aa455d7f8fcb0e29bd178"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a0bbbf7cb168aa455d7f8fcb0e29bd178">capPrice</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const override</td></tr>
 <tr class="separator:a0bbbf7cb168aa455d7f8fcb0e29bd178"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46e51a52782674bf3be03459d79a41a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a46e51a52782674bf3be03459d79a41a4">atmYoYSwapRate</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=true) const override</td></tr>
+<tr class="memitem:a46e51a52782674bf3be03459d79a41a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a46e51a52782674bf3be03459d79a41a4">atmYoYSwapRate</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=true) const override</td></tr>
 <tr class="separator:a46e51a52782674bf3be03459d79a41a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0822e6f4dfba3577009024737afafd4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a0822e6f4dfba3577009024737afafd4f">atmYoYRate</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;obsLag=<a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(-1, <a class="el" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">Days</a>), <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=true) const override</td></tr>
+<tr class="memitem:a0822e6f4dfba3577009024737afafd4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a0822e6f4dfba3577009024737afafd4f">atmYoYRate</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;obsLag=<a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(-1, <a class="el" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">Days</a>), <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=true) const override</td></tr>
 <tr class="separator:a0822e6f4dfba3577009024737afafd4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html">YoYCapFloorTermPriceSurface</a></td></tr>
-<tr class="memitem:a5795c876094abfc54ffece6f8ff51fe5 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a5795c876094abfc54ffece6f8ff51fe5">YoYCapFloorTermPriceSurface</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a060bd76346716555c156dcb372f9a342">fixingDays</a>, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;yyLag, const ext::shared_ptr&lt; <a class="el" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html">YoYInflationIndex</a> &gt; &amp;yii, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a6b0c6faeec82f67715cb752399b10911">baseRate</a>, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; nominal, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;cal, const <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> &amp;bdc, const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &gt; &amp;cStrikes, const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &gt; &amp;fStrikes, const std::vector&lt; <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &gt; &amp;cfMaturities, const <a class="el" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> &amp;cPrice, const <a class="el" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> &amp;fPrice)</td></tr>
+<tr class="memitem:a5795c876094abfc54ffece6f8ff51fe5 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a5795c876094abfc54ffece6f8ff51fe5">YoYCapFloorTermPriceSurface</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a060bd76346716555c156dcb372f9a342">fixingDays</a>, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;yyLag, const ext::shared_ptr&lt; <a class="el" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html">YoYInflationIndex</a> &gt; &amp;yii, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> baseRate, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; nominal, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;dc, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;cal, const <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> &amp;bdc, const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &gt; &amp;cStrikes, const std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &gt; &amp;fStrikes, const std::vector&lt; <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &gt; &amp;cfMaturities, const <a class="el" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> &amp;cPrice, const <a class="el" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> &amp;fPrice)</td></tr>
 <tr class="separator:a5795c876094abfc54ffece6f8ff51fe5 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e097ddf7ea432dae436d2dd6bef1f1c inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a5e097ddf7ea432dae436d2dd6bef1f1c">indexIsInterpolated</a> () const</td></tr>
 <tr class="separator:a5e097ddf7ea432dae436d2dd6bef1f1c inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a889297000bf532621599d453601070ff inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a889297000bf532621599d453601070ff">observationLag</a> () const</td></tr>
+<tr class="separator:a889297000bf532621599d453601070ff inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf0d54ac5dbc652d38513b587cbc100 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#adbf0d54ac5dbc652d38513b587cbc100">frequency</a> () const</td></tr>
+<tr class="separator:adbf0d54ac5dbc652d38513b587cbc100 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb2b727eab6ac8b058f8b23bbb13edfc inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> &gt;, std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#aeb2b727eab6ac8b058f8b23bbb13edfc">atmYoYSwapTimeRates</a> () const =0</td></tr>
 <tr class="memdesc:aeb2b727eab6ac8b058f8b23bbb13edfc inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="mdescLeft">&#160;</td><td class="mdescRight">atm yoy swaps from put-call parity on cap/floor data  <a href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#aeb2b727eab6ac8b058f8b23bbb13edfc">More...</a><br /></td></tr>
 <tr class="separator:aeb2b727eab6ac8b058f8b23bbb13edfc inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,25 +223,27 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7b4711dd3a8b93d84d547d7b5e5609db inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a060bd76346716555c156dcb372f9a342 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a060bd76346716555c156dcb372f9a342">fixingDays</a> () const</td></tr>
 <tr class="separator:a060bd76346716555c156dcb372f9a342 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ead5d6d35977c4e7a864fcbd872cea9 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a0ead5d6d35977c4e7a864fcbd872cea9">price</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const =0</td></tr>
+<tr class="memitem:afec07013d98138f010a327210da23b50 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#afec07013d98138f010a327210da23b50">baseDate</a> () const =0</td></tr>
+<tr class="separator:afec07013d98138f010a327210da23b50 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ead5d6d35977c4e7a864fcbd872cea9 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a0ead5d6d35977c4e7a864fcbd872cea9">price</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const =0</td></tr>
 <tr class="separator:a0ead5d6d35977c4e7a864fcbd872cea9 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c6404c0e4506cde98496072cae6a9e5 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a5c6404c0e4506cde98496072cae6a9e5">capPrice</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const =0</td></tr>
+<tr class="memitem:a5c6404c0e4506cde98496072cae6a9e5 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a5c6404c0e4506cde98496072cae6a9e5">capPrice</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const =0</td></tr>
 <tr class="separator:a5c6404c0e4506cde98496072cae6a9e5 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac96073052feae5947b674ba774e940c6 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#ac96073052feae5947b674ba774e940c6">floorPrice</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const =0</td></tr>
+<tr class="memitem:ac96073052feae5947b674ba774e940c6 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#ac96073052feae5947b674ba774e940c6">floorPrice</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const =0</td></tr>
 <tr class="separator:ac96073052feae5947b674ba774e940c6 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad94b91de3255d72427351385836bc9f inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#aad94b91de3255d72427351385836bc9f">atmYoYSwapRate</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=true) const =0</td></tr>
+<tr class="memitem:aad94b91de3255d72427351385836bc9f inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#aad94b91de3255d72427351385836bc9f">atmYoYSwapRate</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=true) const =0</td></tr>
 <tr class="separator:aad94b91de3255d72427351385836bc9f inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c97b1fddfa032899b738da50e4e4ed7 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a1c97b1fddfa032899b738da50e4e4ed7">atmYoYRate</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;obsLag=<a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(-1, <a class="el" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">Days</a>), <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=true) const =0</td></tr>
+<tr class="memitem:a1c97b1fddfa032899b738da50e4e4ed7 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a1c97b1fddfa032899b738da50e4e4ed7">atmYoYRate</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;obsLag=<a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(-1, <a class="el" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">Days</a>), <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=true) const =0</td></tr>
 <tr class="separator:a1c97b1fddfa032899b738da50e4e4ed7 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc10aa96e6967da736c02ca6e0242aa2 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#acc10aa96e6967da736c02ca6e0242aa2">price</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const</td></tr>
+<tr class="memitem:acc10aa96e6967da736c02ca6e0242aa2 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#acc10aa96e6967da736c02ca6e0242aa2">price</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const</td></tr>
 <tr class="separator:acc10aa96e6967da736c02ca6e0242aa2 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aade77a19f2b7d209b485ad34ecdb2103 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#aade77a19f2b7d209b485ad34ecdb2103">capPrice</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const</td></tr>
+<tr class="memitem:aade77a19f2b7d209b485ad34ecdb2103 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#aade77a19f2b7d209b485ad34ecdb2103">capPrice</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const</td></tr>
 <tr class="separator:aade77a19f2b7d209b485ad34ecdb2103 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc1a7e14734861c2c11f156d0c9e52f4 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#adc1a7e14734861c2c11f156d0c9e52f4">floorPrice</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;d, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const</td></tr>
+<tr class="memitem:adc1a7e14734861c2c11f156d0c9e52f4 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#adc1a7e14734861c2c11f156d0c9e52f4">floorPrice</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> k) const</td></tr>
 <tr class="separator:adc1a7e14734861c2c11f156d0c9e52f4 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1f42c3f8816df9c0cfaae225af7bc08 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#ab1f42c3f8816df9c0cfaae225af7bc08">atmYoYSwapRate</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;d, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=true) const</td></tr>
+<tr class="memitem:ab1f42c3f8816df9c0cfaae225af7bc08 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#ab1f42c3f8816df9c0cfaae225af7bc08">atmYoYSwapRate</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=true) const</td></tr>
 <tr class="separator:ab1f42c3f8816df9c0cfaae225af7bc08 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68ceeb2e447931e944e7df614e95fc35 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a68ceeb2e447931e944e7df614e95fc35">atmYoYRate</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;d, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;obsLag=<a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(-1, <a class="el" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">Days</a>), <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=true) const</td></tr>
+<tr class="memitem:a68ceeb2e447931e944e7df614e95fc35 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a68ceeb2e447931e944e7df614e95fc35">atmYoYRate</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;obsLag=<a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(-1, <a class="el" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">Days</a>), <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate=true) const</td></tr>
 <tr class="separator:a68ceeb2e447931e944e7df614e95fc35 inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a124d9715a0d20e1e709405f4e40d1a1e inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a124d9715a0d20e1e709405f4e40d1a1e">strikes</a> () const</td></tr>
 <tr class="separator:a124d9715a0d20e1e709405f4e40d1a1e inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -264,26 +263,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aae7479395c99bc6bb135a18fd4ff3b7a inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3f437adcafce45db70bb93570a7f7db inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#af3f437adcafce45db70bb93570a7f7db">yoyOptionDateFromTenor</a> (const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;p) const</td></tr>
 <tr class="separator:af3f437adcafce45db70bb93570a7f7db inherit pub_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_quant_lib_1_1_inflation_term_structure"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_inflation_term_structure')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html">InflationTermStructure</a></td></tr>
-<tr class="memitem:ad9061e6dede12d2a1fbf0b4c83817617 inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#ad9061e6dede12d2a1fbf0b4c83817617">InflationTermStructure</a> (<a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a6b0c6faeec82f67715cb752399b10911">baseRate</a>, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;<a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a889297000bf532621599d453601070ff">observationLag</a>, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#adbf0d54ac5dbc652d38513b587cbc100">frequency</a>, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880">dayCounter</a>=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>(), ext::shared_ptr&lt; <a class="el" href="../../d3/dfe/class_quant_lib_1_1_seasonality.html">Seasonality</a> &gt; <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a6ddbf3d77942aa10b01e2553cdfb6e19">seasonality</a>={})</td></tr>
-<tr class="separator:ad9061e6dede12d2a1fbf0b4c83817617 inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6516fe2811b8e426653ef80a38276c5d inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a6516fe2811b8e426653ef80a38276c5d">InflationTermStructure</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a">referenceDate</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a6b0c6faeec82f67715cb752399b10911">baseRate</a>, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;<a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a889297000bf532621599d453601070ff">observationLag</a>, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#adbf0d54ac5dbc652d38513b587cbc100">frequency</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f">calendar</a>=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880">dayCounter</a>=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>(), ext::shared_ptr&lt; <a class="el" href="../../d3/dfe/class_quant_lib_1_1_seasonality.html">Seasonality</a> &gt; <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a6ddbf3d77942aa10b01e2553cdfb6e19">seasonality</a>={})</td></tr>
-<tr class="separator:a6516fe2811b8e426653ef80a38276c5d inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ba7eeddc169c9edeed7a59ba8ee07ed inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a3ba7eeddc169c9edeed7a59ba8ee07ed">InflationTermStructure</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080">settlementDays</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f">calendar</a>, <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a6b0c6faeec82f67715cb752399b10911">baseRate</a>, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;<a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a889297000bf532621599d453601070ff">observationLag</a>, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#adbf0d54ac5dbc652d38513b587cbc100">frequency</a>, const <a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> &amp;<a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880">dayCounter</a>=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>(), ext::shared_ptr&lt; <a class="el" href="../../d3/dfe/class_quant_lib_1_1_seasonality.html">Seasonality</a> &gt; <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a6ddbf3d77942aa10b01e2553cdfb6e19">seasonality</a>={})</td></tr>
-<tr class="separator:a3ba7eeddc169c9edeed7a59ba8ee07ed inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a889297000bf532621599d453601070ff inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a889297000bf532621599d453601070ff">observationLag</a> () const</td></tr>
-<tr class="separator:a889297000bf532621599d453601070ff inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbf0d54ac5dbc652d38513b587cbc100 inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#adbf0d54ac5dbc652d38513b587cbc100">frequency</a> () const</td></tr>
-<tr class="separator:adbf0d54ac5dbc652d38513b587cbc100 inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b0c6faeec82f67715cb752399b10911 inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a6b0c6faeec82f67715cb752399b10911">baseRate</a> () const</td></tr>
-<tr class="separator:a6b0c6faeec82f67715cb752399b10911 inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85f608c10adf8795a5c1d61dba83d0f2 inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a85f608c10adf8795a5c1d61dba83d0f2">setSeasonality</a> (const ext::shared_ptr&lt; <a class="el" href="../../d3/dfe/class_quant_lib_1_1_seasonality.html">Seasonality</a> &gt; &amp;<a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a6ddbf3d77942aa10b01e2553cdfb6e19">seasonality</a>={})</td></tr>
-<tr class="memdesc:a85f608c10adf8795a5c1d61dba83d0f2 inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions to set and get seasonality.  <a href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a85f608c10adf8795a5c1d61dba83d0f2">More...</a><br /></td></tr>
-<tr class="separator:a85f608c10adf8795a5c1d61dba83d0f2 inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ddbf3d77942aa10b01e2553cdfb6e19 inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d3/dfe/class_quant_lib_1_1_seasonality.html">Seasonality</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a6ddbf3d77942aa10b01e2553cdfb6e19">seasonality</a> () const</td></tr>
-<tr class="separator:a6ddbf3d77942aa10b01e2553cdfb6e19 inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2832eb828926e984406d55961f81dc51 inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a2832eb828926e984406d55961f81dc51">hasSeasonality</a> () const</td></tr>
-<tr class="separator:a2832eb828926e984406d55961f81dc51 inherit pub_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_term_structure"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_term_structure')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html">TermStructure</a></td></tr>
 <tr class="memitem:a7a8af4eb53fd6dc79080752fccf3cfa9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7a8af4eb53fd6dc79080752fccf3cfa9">TermStructure</a> (<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc=<a class="el" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>())</td></tr>
 <tr class="memdesc:a7a8af4eb53fd6dc79080752fccf3cfa9 inherit pub_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a7a8af4eb53fd6dc79080752fccf3cfa9">More...</a><br /></td></tr>
@@ -357,10 +336,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac0c29f9a2a9efdf12a8d81c6f74b9ed3 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d5b5a39a87eeb712a188d1929787001 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#a3d5b5a39a87eeb712a188d1929787001">~Extrapolator</a> ()=default</td></tr>
 <tr class="separator:a3d5b5a39a87eeb712a188d1929787001 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae60e793a77f44a9c022b103458fa993c inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ae60e793a77f44a9c022b103458fa993c">enableExtrapolation</a> (<a class="el" href="../../d9/db9/classbool.html">bool</a> b=true)</td></tr>
+<tr class="memitem:ae60e793a77f44a9c022b103458fa993c inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ae60e793a77f44a9c022b103458fa993c">enableExtrapolation</a> (<a class="el" href="../../d9/db9/classbool.html">bool</a> <a class="el" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>=true)</td></tr>
 <tr class="memdesc:ae60e793a77f44a9c022b103458fa993c inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable extrapolation in subsequent calls  <a href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ae60e793a77f44a9c022b103458fa993c">More...</a><br /></td></tr>
 <tr class="separator:ae60e793a77f44a9c022b103458fa993c inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abab5047522a68771f2b1d51d1ac78383 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#abab5047522a68771f2b1d51d1ac78383">disableExtrapolation</a> (<a class="el" href="../../d9/db9/classbool.html">bool</a> b=true)</td></tr>
+<tr class="memitem:abab5047522a68771f2b1d51d1ac78383 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#abab5047522a68771f2b1d51d1ac78383">disableExtrapolation</a> (<a class="el" href="../../d9/db9/classbool.html">bool</a> <a class="el" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>=true)</td></tr>
 <tr class="memdesc:abab5047522a68771f2b1d51d1ac78383 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable extrapolation in subsequent calls  <a href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#abab5047522a68771f2b1d51d1ac78383">More...</a><br /></td></tr>
 <tr class="separator:abab5047522a68771f2b1d51d1ac78383 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a323f875818fddd62a1c56c25ddaee418 inherit pub_methods_class_quant_lib_1_1_extrapolator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#a323f875818fddd62a1c56c25ddaee418">allowsExtrapolation</a> () const</td></tr>
@@ -407,20 +386,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html">YoYCapFloorTermPriceSurface</a></td></tr>
 <tr class="memitem:a989f0298a3cb028ecfa63ee8f54521f1 inherit pro_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a989f0298a3cb028ecfa63ee8f54521f1">checkStrike</a> (<a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> K)</td></tr>
 <tr class="separator:a989f0298a3cb028ecfa63ee8f54521f1 inherit pro_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8942fbb8364526df51f68686dea0770 inherit pro_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#ac8942fbb8364526df51f68686dea0770">checkMaturity</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d)</td></tr>
+<tr class="memitem:ac8942fbb8364526df51f68686dea0770 inherit pro_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#ac8942fbb8364526df51f68686dea0770">checkMaturity</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>)</td></tr>
 <tr class="separator:ac8942fbb8364526df51f68686dea0770 inherit pro_methods_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_class_quant_lib_1_1_inflation_term_structure"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_quant_lib_1_1_inflation_term_structure')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html">InflationTermStructure</a></td></tr>
-<tr class="memitem:ac0e48993d8ea49b560dec3f8ee39c8aa inherit pro_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#ac0e48993d8ea49b560dec3f8ee39c8aa">setBaseRate</a> (const <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &amp;r)</td></tr>
-<tr class="separator:ac0e48993d8ea49b560dec3f8ee39c8aa inherit pro_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3679b19ed9cc9138811a49227f622fd inherit pro_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#af3679b19ed9cc9138811a49227f622fd">checkRange</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate) const</td></tr>
-<tr class="separator:af3679b19ed9cc9138811a49227f622fd inherit pro_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac13f8e2d29e10f3fb6838bfb59759299 inherit pro_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#ac13f8e2d29e10f3fb6838bfb59759299">checkRange</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate) const</td></tr>
-<tr class="separator:ac13f8e2d29e10f3fb6838bfb59759299 inherit pro_methods_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_quant_lib_1_1_term_structure"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_quant_lib_1_1_term_structure')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html">TermStructure</a></td></tr>
-<tr class="memitem:abbff679b6600c49cafed098870f94376 inherit pro_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#abbff679b6600c49cafed098870f94376">checkRange</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;d, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate) const</td></tr>
+<tr class="memitem:abbff679b6600c49cafed098870f94376 inherit pro_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#abbff679b6600c49cafed098870f94376">checkRange</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;<a class="el" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate) const</td></tr>
 <tr class="memdesc:abbff679b6600c49cafed098870f94376 inherit pro_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">date-range check  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#abbff679b6600c49cafed098870f94376">More...</a><br /></td></tr>
 <tr class="separator:abbff679b6600c49cafed098870f94376 inherit pro_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac13f8e2d29e10f3fb6838bfb59759299 inherit pro_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ac13f8e2d29e10f3fb6838bfb59759299">checkRange</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate) const</td></tr>
+<tr class="memitem:ac13f8e2d29e10f3fb6838bfb59759299 inherit pro_methods_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ac13f8e2d29e10f3fb6838bfb59759299">checkRange</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> extrapolate) const</td></tr>
 <tr class="memdesc:ac13f8e2d29e10f3fb6838bfb59759299 inherit pro_methods_class_quant_lib_1_1_term_structure"><td class="mdescLeft">&#160;</td><td class="mdescRight">time-range check  <a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ac13f8e2d29e10f3fb6838bfb59759299">More...</a><br /></td></tr>
 <tr class="separator:ac13f8e2d29e10f3fb6838bfb59759299 inherit pro_methods_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html">YoYCapFloorTermPriceSurface</a></td></tr>
@@ -430,6 +402,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aa63f20268765f716e3c0ced196db5798 inherit pro_attribs_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae71233d00ce18ca0360664e926331766 inherit pro_attribs_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html">YoYInflationIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#ae71233d00ce18ca0360664e926331766">yoyIndex_</a></td></tr>
 <tr class="separator:ae71233d00ce18ca0360664e926331766 inherit pro_attribs_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f0b22e1c17db6dd8f558f4dfc8dfff6 inherit pro_attribs_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a2f0b22e1c17db6dd8f558f4dfc8dfff6">observationLag_</a></td></tr>
+<tr class="separator:a2f0b22e1c17db6dd8f558f4dfc8dfff6 inherit pro_attribs_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42aae45064ba532a08adc916c521280c inherit pro_attribs_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a42aae45064ba532a08adc916c521280c">nominalTS_</a></td></tr>
 <tr class="separator:a42aae45064ba532a08adc916c521280c inherit pro_attribs_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a453f3ab9755dd0aef266c881f09b905b inherit pro_attribs_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a453f3ab9755dd0aef266c881f09b905b">cStrikes_</a></td></tr>
@@ -454,15 +428,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a7a50d3f5176c804a320f01747c2099cc inherit pro_attribs_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84d4accb28cab9c6cec59a378b9d3923 inherit pro_attribs_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::vector&lt; <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &gt;, std::vector&lt; <a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a84d4accb28cab9c6cec59a378b9d3923">atmYoYSwapDateRates_</a></td></tr>
 <tr class="separator:a84d4accb28cab9c6cec59a378b9d3923 inherit pro_attribs_class_quant_lib_1_1_yo_y_cap_floor_term_price_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_quant_lib_1_1_inflation_term_structure"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_quant_lib_1_1_inflation_term_structure')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html">InflationTermStructure</a></td></tr>
-<tr class="memitem:a441c82f28ea6357a02ea8c5270112c47 inherit pro_attribs_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d3/dfe/class_quant_lib_1_1_seasonality.html">Seasonality</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a441c82f28ea6357a02ea8c5270112c47">seasonality_</a></td></tr>
-<tr class="separator:a441c82f28ea6357a02ea8c5270112c47 inherit pro_attribs_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f0b22e1c17db6dd8f558f4dfc8dfff6 inherit pro_attribs_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a2f0b22e1c17db6dd8f558f4dfc8dfff6">observationLag_</a></td></tr>
-<tr class="separator:a2f0b22e1c17db6dd8f558f4dfc8dfff6 inherit pro_attribs_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae358763dc753768bb42e898365204a9a inherit pro_attribs_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#ae358763dc753768bb42e898365204a9a">frequency_</a></td></tr>
-<tr class="separator:ae358763dc753768bb42e898365204a9a inherit pro_attribs_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4eb4d174abedf4391dcf778cba6e7dd3 inherit pro_attribs_class_quant_lib_1_1_inflation_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a4eb4d174abedf4391dcf778cba6e7dd3">baseRate_</a></td></tr>
-<tr class="separator:a4eb4d174abedf4391dcf778cba6e7dd3 inherit pro_attribs_class_quant_lib_1_1_inflation_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_quant_lib_1_1_term_structure"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_quant_lib_1_1_term_structure')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html">TermStructure</a></td></tr>
 <tr class="memitem:a3cfce9cb19de6f0604adee64b6d80a35 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a3cfce9cb19de6f0604adee64b6d80a35">moving_</a> = false</td></tr>
 <tr class="separator:a3cfce9cb19de6f0604adee64b6d80a35 inherit pro_attribs_class_quant_lib_1_1_term_structure"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -474,7 +439,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class Interpolator2D, class <a class="el" href="../../d6/d87/class_interpolator1_d.html">Interpolator1D</a>&gt;<br />
 class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Interpolator1D &gt;</div>
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00145">145</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00149">149</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9be17fcd4763fc411a98cfd0ec3d0fe4" name="a9be17fcd4763fc411a98cfd0ec3d0fe4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9be17fcd4763fc411a98cfd0ec3d0fe4">&#9670;&#160;</a></span>InterpolatedYoYCapFloorTermPriceSurface()</h2>
@@ -610,7 +575,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 
 <p>Implements <a class="el" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a9d5c437961b8f9e30cffb723777ed7c6">TermStructure</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00167">167</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00171">171</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -637,12 +602,20 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 </table>
 </div><div class="memdoc">
 
-<p>minimum (base) date </p>
-<p >Important in inflation since it starts before nominal reference date. Changes depending whether index is interpolated or not. When interpolated the base date is just observation lag before nominal. When not interpolated it is the beginning of the relevant period (hence it is easy to create interpolated fixings from a not-interpolated curve because interpolation, usually, of fixings is forward looking). </p>
+<p>Implements <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#afec07013d98138f010a327210da23b50">YoYCapFloorTermPriceSurface</a>.</p>
 
-<p>Implements <a class="el" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#afec07013d98138f010a327210da23b50">InflationTermStructure</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00168">168</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00172">172</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a5043dbd45586c59283d2c6fbb500dcbe_icgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a5043dbd45586c59283d2c6fbb500dcbe_icgraph" alt=""/></div>
+<map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a5043dbd45586c59283d2c6fbb500dcbe_icgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a5043dbd45586c59283d2c6fbb500dcbe_icgraph">
+<area shape="rect" title=" " alt="" coords="235,5,312,31"/>
+<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#ac6e0a346c4698b8764559acaa3270066" title="mess of making it, i.e. create instruments from quotes and bootstrap" alt="" coords="5,5,187,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -671,7 +644,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 
 <p>Reimplemented from <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a060bd76346716555c156dcb372f9a342">YoYCapFloorTermPriceSurface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00170">170</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00174">174</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -703,7 +676,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 
 <p>Implements <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#aeb2b727eab6ac8b058f8b23bbb13edfc">YoYCapFloorTermPriceSurface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00174">174</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00178">178</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -732,7 +705,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 
 <p>Implements <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#ad69582b861dce311c27bb0d4f46dc0db">YoYCapFloorTermPriceSurface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00177">177</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00181">181</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -763,7 +736,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 
 <p>Implements <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a50c13408edec217f66a9402d93fe90cc">YoYCapFloorTermPriceSurface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00180">180</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00184">184</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -803,48 +776,49 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 
 <p>Implements <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a0ead5d6d35977c4e7a864fcbd872cea9">YoYCapFloorTermPriceSurface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00300">300</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a71805bb83375b635494c0bb3f19763ff_cgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a71805bb83375b635494c0bb3f19763ff_cgraph" alt=""/></div>
-<map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a71805bb83375b635494c0bb3f19763ff_cgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a71805bb83375b635494c0bb3f19763ff_cgraph">
-<area shape="rect" title=" " alt="" coords="5,263,56,288"/>
-<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a46e51a52782674bf3be03459d79a41a4" title=" " alt="" coords="104,213,232,239"/>
-<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a0bbbf7cb168aa455d7f8fcb0e29bd178" title=" " alt="" coords="131,263,205,288"/>
-<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a1db7726b0d30dfc840a6943276153393" title=" " alt="" coords="130,312,206,337"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="280,255,444,295"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="492,191,656,231"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="492,255,656,295"/>
-<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="499,319,649,359"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="719,127,853,167"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="704,191,868,231"/>
-<area shape="rect" href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3" title="the date at which pricing is to be performed." alt="" coords="721,255,851,295"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="711,319,861,359"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="704,383,868,423"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1124,98,1257,138"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1361,209,1495,249"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="916,159,1049,199"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="916,95,1049,135"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1335,107,1521,132"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1572,56,1725,81"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1777,5,1956,31"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="2008,56,2151,81"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1789,208,1944,233"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1773,107,1960,132"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2199,31,2375,56"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1582,258,1715,298"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1097,275,1284,300"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1332,273,1524,299"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00313">313</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a71805bb83375b635494c0bb3f19763ff_cgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a71805bb83375b635494c0bb3f19763ff_cgraph" alt=""/></div>
+<map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a71805bb83375b635494c0bb3f19763ff_cgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a71805bb83375b635494c0bb3f19763ff_cgraph">
+<area shape="rect" title=" " alt="" coords="5,372,56,397"/>
+<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a46e51a52782674bf3be03459d79a41a4" title=" " alt="" coords="104,323,232,348"/>
+<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a0bbbf7cb168aa455d7f8fcb0e29bd178" title=" " alt="" coords="131,372,205,397"/>
+<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a1db7726b0d30dfc840a6943276153393" title=" " alt="" coords="130,421,206,447"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="280,365,444,405"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="492,301,656,341"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="492,365,656,405"/>
+<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="499,429,649,469"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="719,237,853,277"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="704,301,868,341"/>
+<area shape="rect" href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3" title="the date at which pricing is to be performed." alt="" coords="721,365,851,405"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="711,429,861,469"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="704,493,868,533"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1130,150,1263,190"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1373,207,1507,247"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1103,327,1290,352"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="916,265,1049,305"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#aa0e9cb47a55168ecd2af13d7be0e8a86" title="whether a date is the last day of its month" alt="" coords="1097,380,1296,405"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="916,150,1049,190"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1347,107,1533,132"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1584,157,1737,183"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1789,5,1968,31"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="2020,56,2163,81"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1801,265,1956,291"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1785,107,1972,132"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2211,31,2387,56"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1594,258,1727,298"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1344,373,1536,399"/>
+</map>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a71805bb83375b635494c0bb3f19763ff_icgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a71805bb83375b635494c0bb3f19763ff_icgraph" alt=""/></div>
 <map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a71805bb83375b635494c0bb3f19763ff_icgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a71805bb83375b635494c0bb3f19763ff_icgraph">
 <area shape="rect" title=" " alt="" coords="125,5,176,31"/>
@@ -890,45 +864,46 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 
 <p>Implements <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#ac96073052feae5947b674ba774e940c6">YoYCapFloorTermPriceSurface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00316">316</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a1db7726b0d30dfc840a6943276153393_cgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a1db7726b0d30dfc840a6943276153393_cgraph" alt=""/></div>
-<map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a1db7726b0d30dfc840a6943276153393_cgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a1db7726b0d30dfc840a6943276153393_cgraph">
-<area shape="rect" title=" " alt="" coords="5,263,81,288"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="129,255,293,295"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="341,191,505,231"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="341,255,505,295"/>
-<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="348,319,499,359"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="569,127,702,167"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="553,191,717,231"/>
-<area shape="rect" href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3" title="the date at which pricing is to be performed." alt="" coords="570,255,701,295"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="560,319,711,359"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="553,383,717,423"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="973,98,1107,138"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1211,209,1344,249"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="765,159,899,199"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="765,95,899,135"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1184,107,1371,132"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1421,56,1575,81"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1627,5,1805,31"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="1857,56,2000,81"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1639,208,1793,233"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1623,107,1809,132"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2048,31,2224,56"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1431,258,1565,298"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="947,275,1133,300"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1181,273,1373,299"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00329">329</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a1db7726b0d30dfc840a6943276153393_cgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a1db7726b0d30dfc840a6943276153393_cgraph" alt=""/></div>
+<map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a1db7726b0d30dfc840a6943276153393_cgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a1db7726b0d30dfc840a6943276153393_cgraph">
+<area shape="rect" title=" " alt="" coords="5,371,81,396"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="129,363,293,403"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="341,299,505,339"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="341,363,505,403"/>
+<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="348,427,499,467"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="569,235,702,275"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="553,299,717,339"/>
+<area shape="rect" href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3" title="the date at which pricing is to be performed." alt="" coords="570,363,701,403"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="560,427,711,467"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="553,491,717,531"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="979,150,1113,190"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1223,207,1356,247"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="953,327,1139,352"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="765,265,899,305"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#aa0e9cb47a55168ecd2af13d7be0e8a86" title="whether a date is the last day of its month" alt="" coords="947,380,1145,405"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="765,150,899,190"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1196,107,1383,132"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1433,157,1587,183"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1639,5,1817,31"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="1869,56,2012,81"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1651,265,1805,291"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1635,107,1821,132"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2060,31,2236,56"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1443,258,1577,298"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1193,373,1385,399"/>
+</map>
+</div>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a1db7726b0d30dfc840a6943276153393_icgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a1db7726b0d30dfc840a6943276153393_icgraph" alt=""/></div>
 <map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a1db7726b0d30dfc840a6943276153393_icgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a1db7726b0d30dfc840a6943276153393_icgraph">
 <area shape="rect" title=" " alt="" coords="224,5,300,31"/>
@@ -975,45 +950,46 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 
 <p>Implements <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a5c6404c0e4506cde98496072cae6a9e5">YoYCapFloorTermPriceSurface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00308">308</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0bbbf7cb168aa455d7f8fcb0e29bd178_cgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0bbbf7cb168aa455d7f8fcb0e29bd178_cgraph" alt=""/></div>
-<map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0bbbf7cb168aa455d7f8fcb0e29bd178_cgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0bbbf7cb168aa455d7f8fcb0e29bd178_cgraph">
-<area shape="rect" title=" " alt="" coords="5,263,79,288"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="127,255,291,295"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="339,191,503,231"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="339,255,503,295"/>
-<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="345,319,496,359"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="566,127,699,167"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="551,191,715,231"/>
-<area shape="rect" href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3" title="the date at which pricing is to be performed." alt="" coords="567,255,698,295"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="557,319,708,359"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="551,383,715,423"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="971,98,1104,138"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1208,209,1341,249"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="763,159,896,199"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="763,95,896,135"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1181,107,1368,132"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1419,56,1572,81"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1624,5,1803,31"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="1855,56,1997,81"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1636,208,1791,233"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1620,107,1807,132"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2045,31,2221,56"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1429,258,1562,298"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="944,275,1131,300"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1179,273,1371,299"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00321">321</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0bbbf7cb168aa455d7f8fcb0e29bd178_cgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0bbbf7cb168aa455d7f8fcb0e29bd178_cgraph" alt=""/></div>
+<map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0bbbf7cb168aa455d7f8fcb0e29bd178_cgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0bbbf7cb168aa455d7f8fcb0e29bd178_cgraph">
+<area shape="rect" title=" " alt="" coords="5,371,79,396"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="127,363,291,403"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="339,299,503,339"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="339,363,503,403"/>
+<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="345,427,496,467"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="566,235,699,275"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="551,299,715,339"/>
+<area shape="rect" href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3" title="the date at which pricing is to be performed." alt="" coords="567,363,698,403"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="557,427,708,467"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="551,491,715,531"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="977,150,1110,190"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1220,207,1353,247"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="950,327,1137,352"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="763,265,896,305"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#aa0e9cb47a55168ecd2af13d7be0e8a86" title="whether a date is the last day of its month" alt="" coords="944,380,1143,405"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="763,150,896,190"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1193,107,1380,132"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1431,157,1584,183"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1636,5,1815,31"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="1867,56,2009,81"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1648,265,1803,291"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1632,107,1819,132"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2057,31,2233,56"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1441,258,1574,298"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1191,373,1383,399"/>
+</map>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0bbbf7cb168aa455d7f8fcb0e29bd178_icgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0bbbf7cb168aa455d7f8fcb0e29bd178_icgraph" alt=""/></div>
 <map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0bbbf7cb168aa455d7f8fcb0e29bd178_icgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0bbbf7cb168aa455d7f8fcb0e29bd178_icgraph">
 <area shape="rect" title=" " alt="" coords="224,5,297,31"/>
@@ -1060,45 +1036,46 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 
 <p>Implements <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#aad94b91de3255d72427351385836bc9f">YoYCapFloorTermPriceSurface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00184">184</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a46e51a52782674bf3be03459d79a41a4_cgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a46e51a52782674bf3be03459d79a41a4_cgraph" alt=""/></div>
-<map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a46e51a52782674bf3be03459d79a41a4_cgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a46e51a52782674bf3be03459d79a41a4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,263,133,288"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="181,255,345,295"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="393,191,557,231"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="393,255,557,295"/>
-<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="400,319,551,359"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="621,127,754,167"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="605,191,769,231"/>
-<area shape="rect" href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3" title="the date at which pricing is to be performed." alt="" coords="622,255,753,295"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="612,319,763,359"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="605,383,769,423"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1025,98,1159,138"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1263,209,1396,249"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="817,159,951,199"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="817,95,951,135"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1236,107,1423,132"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1473,56,1627,81"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1679,5,1857,31"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="1909,56,2052,81"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1691,208,1845,233"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1675,107,1861,132"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2100,31,2276,56"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1483,258,1617,298"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="999,275,1185,300"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1233,273,1425,299"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00188">188</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a46e51a52782674bf3be03459d79a41a4_cgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a46e51a52782674bf3be03459d79a41a4_cgraph" alt=""/></div>
+<map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a46e51a52782674bf3be03459d79a41a4_cgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a46e51a52782674bf3be03459d79a41a4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,371,133,396"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="181,363,345,403"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="393,299,557,339"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="393,363,557,403"/>
+<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="400,427,551,467"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="621,235,754,275"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="605,299,769,339"/>
+<area shape="rect" href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3" title="the date at which pricing is to be performed." alt="" coords="622,363,753,403"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="612,427,763,467"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="605,491,769,531"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1031,150,1165,190"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1275,207,1408,247"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1005,327,1191,352"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="817,265,951,305"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#aa0e9cb47a55168ecd2af13d7be0e8a86" title="whether a date is the last day of its month" alt="" coords="999,380,1197,405"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="817,150,951,190"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1248,107,1435,132"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1485,157,1639,183"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="1691,5,1869,31"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="1921,56,2064,81"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="1703,265,1857,291"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="1687,107,1873,132"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2112,31,2288,56"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1495,258,1629,298"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1245,373,1437,399"/>
+</map>
+</div>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a46e51a52782674bf3be03459d79a41a4_icgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a46e51a52782674bf3be03459d79a41a4_icgraph" alt=""/></div>
 <map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a46e51a52782674bf3be03459d79a41a4_icgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a46e51a52782674bf3be03459d79a41a4_icgraph">
 <area shape="rect" title=" " alt="" coords="355,31,483,56"/>
@@ -1152,7 +1129,18 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 
 <p>Implements <a class="el" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a1c97b1fddfa032899b738da50e4e4ed7">YoYCapFloorTermPriceSurface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00187">187</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00191">191</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0822e6f4dfba3577009024737afafd4f_cgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0822e6f4dfba3577009024737afafd4f_cgraph" alt=""/></div>
+<map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0822e6f4dfba3577009024737afafd4f_cgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_a0822e6f4dfba3577009024737afafd4f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,101,38"/>
+<area shape="rect" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a889297000bf532621599d453601070ff" title=" " alt="" coords="149,5,340,45"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -1182,7 +1170,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 
 <p>Implements <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a99b02345a8a15d3c5ea2844a2253f510">Observer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00270">270</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00283">283</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -1198,7 +1186,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00277">277</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00290">290</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -1224,48 +1212,49 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 
 <p>intersection of cap and floor price surfaces at given strikes </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00333">333</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00346">346</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_ac6a4e89ff2110faa5f04b5dd607e2e7f_cgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_ac6a4e89ff2110faa5f04b5dd607e2e7f_cgraph" alt=""/></div>
 <map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_ac6a4e89ff2110faa5f04b5dd607e2e7f_cgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_ac6a4e89ff2110faa5f04b5dd607e2e7f_cgraph">
-<area shape="rect" title="intersection of cap and floor price surfaces at given strikes" alt="" coords="5,233,77,258"/>
-<area shape="rect" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ae60e793a77f44a9c022b103458fa993c" title="enable extrapolation in subsequent calls" alt="" coords="125,5,277,45"/>
-<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a71805bb83375b635494c0bb3f19763ff" title=" " alt="" coords="176,194,227,219"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="608,163,772,203"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="864,256,1028,296"/>
-<area shape="rect" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a706af4c4d308b619825b6ee05b21e678" title=" " alt="" coords="135,396,268,436"/>
-<area shape="rect" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#af3f437adcafce45db70bb93570a7f7db" title=" " alt="" coords="564,256,816,296"/>
-<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a46e51a52782674bf3be03459d79a41a4" title=" " alt="" coords="357,121,485,146"/>
-<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a0bbbf7cb168aa455d7f8fcb0e29bd178" title=" " alt="" coords="384,170,457,195"/>
-<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a1db7726b0d30dfc840a6943276153393" title=" " alt="" coords="383,219,459,245"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="864,177,1028,217"/>
-<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="871,113,1021,153"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="1091,128,1225,168"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="1076,192,1240,232"/>
-<area shape="rect" href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3" title="the date at which pricing is to be performed." alt="" coords="1093,256,1223,296"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="1083,320,1233,360"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="1076,384,1240,424"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1496,99,1629,139"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1733,209,1867,249"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="1288,160,1421,200"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="1288,96,1421,136"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1707,107,1893,133"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1944,57,2097,82"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="2149,6,2328,31"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="2380,57,2523,82"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="2161,209,2316,234"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="2145,107,2332,133"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2571,31,2747,57"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1954,259,2087,299"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1469,275,1656,301"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1704,274,1896,299"/>
-<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#ab7d80f1774594ee7d9c1309083a44207" title=" " alt="" coords="364,371,477,397"/>
-<area shape="rect" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a1830db78cfda10301b3cc5c3336a4838" title=" " alt="" coords="354,421,487,461"/>
-<area shape="rect" href="../../d3/d92/class_quant_lib_1_1_curiously_recurring_template.html#addc89a03a38efd2e02ef64ea3d5d65f4" title=" " alt="" coords="325,485,516,525"/>
+<area shape="rect" title="intersection of cap and floor price surfaces at given strikes" alt="" coords="5,335,77,360"/>
+<area shape="rect" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html#ae60e793a77f44a9c022b103458fa993c" title="enable extrapolation in subsequent calls" alt="" coords="125,107,277,147"/>
+<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a71805bb83375b635494c0bb3f19763ff" title=" " alt="" coords="176,296,227,321"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="608,265,772,305"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="864,365,1028,405"/>
+<area shape="rect" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a706af4c4d308b619825b6ee05b21e678" title=" " alt="" coords="135,447,268,487"/>
+<area shape="rect" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#af3f437adcafce45db70bb93570a7f7db" title=" " alt="" coords="564,365,816,405"/>
+<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a46e51a52782674bf3be03459d79a41a4" title=" " alt="" coords="357,321,485,347"/>
+<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a0bbbf7cb168aa455d7f8fcb0e29bd178" title=" " alt="" coords="384,223,457,248"/>
+<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a1db7726b0d30dfc840a6943276153393" title=" " alt="" coords="383,272,459,297"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="864,283,1028,323"/>
+<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="871,219,1021,259"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="1091,237,1225,277"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="1076,301,1240,341"/>
+<area shape="rect" href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3" title="the date at which pricing is to be performed." alt="" coords="1093,365,1223,405"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="1083,429,1233,469"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="1076,493,1240,533"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1502,150,1635,190"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1745,207,1879,247"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1475,327,1662,352"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="1288,265,1421,305"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#aa0e9cb47a55168ecd2af13d7be0e8a86" title="whether a date is the last day of its month" alt="" coords="1469,380,1668,405"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="1288,150,1421,190"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1719,107,1905,132"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1956,157,2109,183"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="2161,5,2340,31"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="2392,56,2535,81"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="2173,265,2328,291"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="2157,107,2344,132"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2583,31,2759,56"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1966,258,2099,298"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1716,373,1908,399"/>
+<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#ab7d80f1774594ee7d9c1309083a44207" title=" " alt="" coords="364,423,477,448"/>
+<area shape="rect" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a1830db78cfda10301b3cc5c3336a4838" title=" " alt="" coords="354,473,487,513"/>
+<area shape="rect" href="../../d3/d92/class_quant_lib_1_1_curiously_recurring_template.html#addc89a03a38efd2e02ef64ea3d5d65f4" title=" " alt="" coords="325,537,516,577"/>
 </map>
 </div>
 
@@ -1293,43 +1282,46 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 
 <p>mess of making it, i.e. create instruments from quotes and bootstrap </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00510">510</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00523">523</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_ac6e0a346c4698b8764559acaa3270066_cgraph.png" border="0" usemap="#ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_ac6e0a346c4698b8764559acaa3270066_cgraph" alt=""/></div>
 <map name="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_ac6e0a346c4698b8764559acaa3270066_cgraph" id="ad5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface_ac6e0a346c4698b8764559acaa3270066_cgraph">
-<area shape="rect" title="mess of making it, i.e. create instruments from quotes and bootstrap" alt="" coords="5,235,187,260"/>
-<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a46e51a52782674bf3be03459d79a41a4" title=" " alt="" coords="275,83,403,108"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="535,93,699,133"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="791,26,955,66"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="791,161,955,201"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="1003,283,1167,323"/>
-<area shape="rect" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#adbf0d54ac5dbc652d38513b587cbc100" title=" " alt="" coords="235,335,443,375"/>
-<area shape="rect" href="../../d7/de8/class_quant_lib_1_1_inflation_term_structure.html#a889297000bf532621599d453601070ff" title=" " alt="" coords="235,399,443,439"/>
-<area shape="rect" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a6df4b6a4108356be9993e6c27cb94182" title="index yoy is based on" alt="" coords="245,463,433,503"/>
-<area shape="rect" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#af3f437adcafce45db70bb93570a7f7db" title=" " alt="" coords="491,162,743,202"/>
-<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="797,93,948,133"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="1018,219,1151,259"/>
-<area shape="rect" href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3" title="the date at which pricing is to be performed." alt="" coords="1019,27,1150,67"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="1009,91,1160,131"/>
-<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="1003,155,1167,195"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1423,189,1556,229"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1660,301,1793,341"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="1215,251,1348,291"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="1215,187,1348,227"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1633,199,1820,224"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1871,148,2024,173"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="2076,97,2255,123"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="2307,148,2449,173"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="2088,300,2243,325"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="2072,199,2259,224"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2497,123,2673,148"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1881,350,2014,390"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1396,367,1583,392"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1631,365,1823,391"/>
+<area shape="rect" title="mess of making it, i.e. create instruments from quotes and bootstrap" alt="" coords="5,397,187,422"/>
+<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a46e51a52782674bf3be03459d79a41a4" title=" " alt="" coords="266,245,394,270"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#aa249f26327547294e5f920745cab10fd" title="date/time conversion" alt="" coords="517,204,681,244"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880" title="the day counter used for date/time conversion" alt="" coords="773,137,937,177"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a" title="the date at which discount = 1.0 and/or variance = 0.0" alt="" coords="773,273,937,313"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a38e235178eb0a7749c37a16d71f4762f" title="the calendar used for reference and/or option date calculation" alt="" coords="985,447,1149,487"/>
+<area shape="rect" href="../../d5/de2/class_quant_lib_1_1_interpolated_yo_y_cap_floor_term_price_surface.html#a5043dbd45586c59283d2c6fbb500dcbe" title=" " alt="" coords="291,498,369,523"/>
+<area shape="rect" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#adbf0d54ac5dbc652d38513b587cbc100" title=" " alt="" coords="236,548,424,588"/>
+<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#a75bda18f151fe3647025daf813b13fc6" title="utility function giving the inflation period for a given date" alt="" coords="1197,434,1360,459"/>
+<area shape="rect" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a889297000bf532621599d453601070ff" title=" " alt="" coords="235,612,425,652"/>
+<area shape="rect" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#a6df4b6a4108356be9993e6c27cb94182" title="index yoy is based on" alt="" coords="236,676,424,716"/>
+<area shape="rect" href="../../da/d20/class_quant_lib_1_1_yo_y_cap_floor_term_price_surface.html#af3f437adcafce45db70bb93570a7f7db" title=" " alt="" coords="473,332,725,372"/>
+<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8" title="Returns the period between two dates as a fraction of year." alt="" coords="780,204,931,244"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb" title=" " alt="" coords="1001,268,1134,308"/>
+<area shape="rect" href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3" title="the date at which pricing is to be performed." alt="" coords="1002,332,1133,372"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="992,140,1143,180"/>
+<area shape="rect" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a32e050c75a34ceee6f0633bdb799a080" title="the settlementDays used for reference date calculation" alt="" coords="985,204,1149,244"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b" title=" " alt="" coords="1441,191,1574,231"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab13329f64ace5bdf7c448e0c374def96" title=" " alt="" coords="1684,96,1817,136"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c1704dd4c31093571b353b270e160cd" title="last day of the month to which the given date belongs" alt="" coords="1414,333,1601,358"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#afdd3c15eb27b5b835bcec6e08294a005" title="last business day of the month to which the given date belongs" alt="" coords="1212,268,1345,308"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#aa0e9cb47a55168ecd2af13d7be0e8a86" title="whether a date is the last day of its month" alt="" coords="1408,383,1607,409"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a54058cd47ebf5a87e394b1d6027d2fd6" title=" " alt="" coords="1212,204,1345,244"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a266e04a4f334209d10294ba8ed0c271d" title=" " alt="" coords="1657,171,1844,197"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a14547dc7eae7e255d783514b585615a6" title=" " alt="" coords="1895,222,2048,247"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9fe7e5e2bc70723b30aa39c99f84ef72" title="One&#45;based (Jan 1st = 1)" alt="" coords="2100,122,2279,147"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a17308ee299bd08b69af405dc93cef73d" title=" " alt="" coords="2331,173,2473,198"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#ae64d1fdb03e61dc20511e43b08b10d65" title="whether the given year is a leap one" alt="" coords="2112,298,2267,323"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a7c3d96e5b8740aafa9ea13d1943a11ca" title=" " alt="" coords="2096,171,2283,197"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a124a61061e82c0f932a96d8bb4f9db93" title=" " alt="" coords="2521,147,2697,173"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a64b5cd5a1f5471543bdf78a67749d615" title=" " alt="" coords="1905,5,2038,45"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a9b742882b953368f78df78576fb98dd7" title=" " alt="" coords="1655,333,1847,358"/>
 </map>
 </div>
 
@@ -1356,7 +1348,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00219">219</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00224">224</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -1380,7 +1372,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00220">220</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00225">225</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -1404,7 +1396,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00221">221</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00226">226</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -1428,7 +1420,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00222">222</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00227">227</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -1452,7 +1444,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00223">223</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00228">228</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -1476,7 +1468,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00223">223</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00228">228</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -1500,7 +1492,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00224">224</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00229">229</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -1524,7 +1516,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00225">225</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00230">230</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -1548,7 +1540,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00226">226</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00231">231</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>
@@ -1572,7 +1564,7 @@ class QuantLib::InterpolatedYoYCapFloorTermPriceSurface&lt; Interpolator2D, Inte
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00227">227</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html#l00232">232</a> of file <a class="el" href="../../d7/d5f/yoycapfloortermpricesurface_8hpp_source.html">yoycapfloortermpricesurface.hpp</a>.</p>
 
 </div>
 </div>

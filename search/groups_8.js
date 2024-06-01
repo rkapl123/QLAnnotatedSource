@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['numeric_20limits_0',['Numeric limits',['../d3/d8f/group__limit_macros.html',1,'']]],
-  ['numeric_20types_1',['Numeric types',['../d6/d59/group__types.html',1,'']]]
+  ['math_20tools_0',['Math tools',['../de/df1/group__math.html',1,'']]],
+  ['monte_20carlo_20framework_1',['Monte Carlo framework',['../d8/d99/group__mcarlo.html',1,'']]]
 ];

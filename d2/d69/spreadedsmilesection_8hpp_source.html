@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/termstructures/volatility/spreadedsmilesection.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/termstructures/volatility/spreadedsmilesection.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">spreadedsmilesection.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d2/d69/spreadedsmilesection_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2006 Mario Pucci</span></div>
@@ -105,12 +104,16 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file spreadedsmilesection.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Spreaded SmileSection class</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_spreaded_smile_section_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_spreaded_smile_section_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/termstructures/volatility/smilesection.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/handle.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/d4a/smilesection_8hpp.html">ql/termstructures/volatility/smilesection.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/dd4/handle_8hpp.html">ql/handle.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
@@ -118,9 +121,10 @@ $(function() {
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html">   34</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html">SpreadedSmileSection</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d9/db6/class_quant_lib_1_1_smile_section.html">SmileSection</a> {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_class" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html">SpreadedSmileSection</a>(ext::shared_ptr&lt;SmileSection&gt;, <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> spread);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a5ecfabbe9cee89ddf29e43ecb95ce9bd">minStrike</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_class" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html">SpreadedSmileSection</a>(ext::shared_ptr&lt;SmileSection&gt;, <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> spread);<span class="comment"></span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        //! \name SmileSection interface</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a5ecfabbe9cee89ddf29e43ecb95ce9bd">minStrike</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#ada8cff07d95e752d7cf21d9bc78c1ebb">maxStrike</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a07899387168765b6dbc391407ce49764">atmLevel</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; <a class="code hl_function" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a4eb857b5d3b6f8c9bc4d03f796a115df">exerciseDate</a>() <span class="keyword">const override</span>;</div>
@@ -128,10 +132,13 @@ $(function() {
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">const</span> <a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&amp; <a class="code hl_function" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#aa2b33f74eeb1743fdf6b2c3d65431571">dayCounter</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; <a class="code hl_function" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a5ce8b0af276b7c06ab424e688ae2d318">referenceDate</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_enumeration" href="../../d5/d7b/namespace_quant_lib.html#a8b2aa10016abb1ffb6f55484a04a5143">VolatilityType</a> <a class="code hl_function" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a72983c4ae34d208cce6942ef26bec58c">volatilityType</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="code hl_function" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#af7d2533e38435e519e885e807cc187a3">shift</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a44137bb65de2396875934e48a6ee5099">   51</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a44137bb65de2396875934e48a6ee5099">update</a>()<span class="keyword"> override </span>{ <a class="code hl_function" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a>(); }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="code hl_function" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#af7d2533e38435e519e885e807cc187a3">shift</a>() <span class="keyword">const override</span>;<span class="comment"></span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment"></span><span class="comment">        //! \name LazyObject interface</span><span class="comment"></span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a44137bb65de2396875934e48a6ee5099">   51</a></span><span class="comment"></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a44137bb65de2396875934e48a6ee5099">update</a>()<span class="keyword"> override </span>{ <a class="code hl_function" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a>(); }<span class="comment"></span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment"></span>      <span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> <a class="code hl_function" href="../../d8/d36/class_quant_lib_1_1_spreaded_smile_section.html#a91edb067d586cd4f5470202d1ced2798">volatilityImpl</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> strike) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <span class="keyword">private</span>:</div>
@@ -200,8 +207,10 @@ $(function() {
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
+<div class="ttc" id="ahandle_8hpp_html"><div class="ttname"><a href="../../d9/dd4/handle_8hpp.html">handle.hpp</a></div><div class="ttdoc">Globally accessible relinkable pointer.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a8b2aa10016abb1ffb6f55484a04a5143"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a8b2aa10016abb1ffb6f55484a04a5143">QuantLib::VolatilityType</a></div><div class="ttdeci">VolatilityType</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd6/volatilitytype_8hpp_source.html#l00032">volatilitytype.hpp:32</a></div></div>
+<div class="ttc" id="asmilesection_8hpp_html"><div class="ttname"><a href="../../d8/d4a/smilesection_8hpp.html">smilesection.hpp</a></div><div class="ttdoc">Smile section base class.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -43,7 +43,7 @@ var searchData=
   ['stationaryfunctionaccuracy_40',['StationaryFunctionAccuracy',['../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7a609aaafaa7919647e823d340096c355d',1,'QuantLib::EndCriteria']]],
   ['stationaryfunctionvalue_41',['StationaryFunctionValue',['../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7a36536d16f277f9dfa2406257a6933c1c',1,'QuantLib::EndCriteria']]],
   ['stationarypoint_42',['StationaryPoint',['../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7a88f5519658bd88b5f442f5b0869cac34',1,'QuantLib::EndCriteria']]],
-  ['steps_43',['Steps',['../df/dbe/class_quant_lib_1_1_sobol_brownian_generator.html#a0248f65bd948236b9f656ce6c5d65355a56c6baeb3f6de237e26365daff6ca73f',1,'QuantLib::SobolBrownianGenerator']]],
+  ['steps_43',['Steps',['../d3/dd6/class_quant_lib_1_1_sobol_brownian_generator_base.html#a0248f65bd948236b9f656ce6c5d65355a56c6baeb3f6de237e26365daff6ca73f',1,'QuantLib::SobolBrownianGeneratorBase']]],
   ['sturges_44',['Sturges',['../dd/db4/class_quant_lib_1_1_histogram.html#a5e41188f16a381c8915a17a22228e691ad053b3f1bf23d7f7231caa563b51eb00',1,'QuantLib::Histogram']]],
   ['sub_45',['Sub',['../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7a3e53f06234367d0e453fa5ea0ad2ab34',1,'QuantLib::Replication']]],
   ['sublowetier2_46',['SubLoweTier2',['../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dca254f8507c6ced86604401592bfde52c3',1,'QuantLib']]],

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/math/integrals/segmentintegral.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/math/integrals/segmentintegral.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">segmentintegral.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d0/d44/segmentintegral_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2000, 2001, 2002, 2003 RiskMap srl</span></div>
@@ -106,22 +105,41 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file segmentintegral.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief Integral of a one-dimensional function using segment algorithm</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_segment_integral_h</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_segment_integral_h</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/math/integrals/integral.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/math/comparison.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/errors.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/da8/integral_8hpp.html">ql/math/integrals/integral.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/d03/comparison_8hpp.html">ql/math/comparison.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d52/errors_8hpp.html">ql/errors.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    //! Integral of a one-dimensional function</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span><span class="comment">    /*! Given a number \f$ N \f$ of intervals, the integral of</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        a function \f$ f \f$ between \f$ a \f$ and \f$ b \f$ is</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        calculated by means of the trapezoid formula</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        \f[</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">        \int_{a}^{b} f \mathrm{d}x =</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">        \frac{1}{2} f(x_{0}) + f(x_{1}) + f(x_{2}) + \dots</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        + f(x_{N-1}) + \frac{1}{2} f(x_{N})</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        \f]</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        where \f$ x_0 = a \f$, \f$ x_N = b \f$, and</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        \f$ x_i = a+i \Delta x \f$ with</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        \f$ \Delta x = (b-a)/N \f$.</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"></span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        \test the correctness of the result is tested by checking it</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">              against known good values.</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../d6/d47/class_quant_lib_1_1_segment_integral.html">   50</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d6/d47/class_quant_lib_1_1_segment_integral.html">SegmentIntegral</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../db/df7/class_quant_lib_1_1_integrator.html">Integrator</a> {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="../../d6/d47/class_quant_lib_1_1_segment_integral.html">SegmentIntegral</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> intervals);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d6/d47/class_quant_lib_1_1_segment_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">integrate</a>(<span class="keyword">const</span> ext::function&lt;<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt;&amp; f, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> b) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d6/d47/class_quant_lib_1_1_segment_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">integrate</a>(<span class="keyword">const</span> ext::function&lt;<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt;&amp; <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d6/d47/class_quant_lib_1_1_segment_integral.html#aef3259d7b7dae8e2f1754e749abac94b">   57</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_variable" href="../../d6/d47/class_quant_lib_1_1_segment_integral.html#aef3259d7b7dae8e2f1754e749abac94b">intervals_</a>;</div>
@@ -131,16 +149,16 @@ $(function() {
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// inline and template definitions</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">inline</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d6/d47/class_quant_lib_1_1_segment_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">   64</a></span>    <a class="code hl_function" href="../../d6/d47/class_quant_lib_1_1_segment_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">SegmentIntegral::integrate</a>(<span class="keyword">const</span> ext::function&lt;<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt;&amp; f,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d6/d47/class_quant_lib_1_1_segment_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">   64</a></span>    <a class="code hl_function" href="../../d6/d47/class_quant_lib_1_1_segment_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">SegmentIntegral::integrate</a>(<span class="keyword">const</span> ext::function&lt;<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt;&amp; <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>,</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                               <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a,</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                               <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> b)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#aedc6094cfc783bb3e6a6c9a7ee68e3f8">close_enough</a>(a,b))</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                               <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#aedc6094cfc783bb3e6a6c9a7ee68e3f8">close_enough</a>(a,<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>))</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">return</span> 0.0;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> dx = (b-a)/<a class="code hl_variable" href="../../d6/d47/class_quant_lib_1_1_segment_integral.html#aef3259d7b7dae8e2f1754e749abac94b">intervals_</a>;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> sum = 0.5*(f(a)+f(b));</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> end = b - 0.5*dx;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> dx = (<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>-a)/<a class="code hl_variable" href="../../d6/d47/class_quant_lib_1_1_segment_integral.html#aef3259d7b7dae8e2f1754e749abac94b">intervals_</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> sum = 0.5*(<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>(a)+<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>(<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>));</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> end = <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a> - 0.5*dx;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x = a+dx; x &lt; end; x += dx)</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            sum += f(x);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            sum += <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>(x);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> sum*dx;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
@@ -151,8 +169,13 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_segment_integral_html"><div class="ttname"><a href="../../d6/d47/class_quant_lib_1_1_segment_integral.html">QuantLib::SegmentIntegral</a></div><div class="ttdoc">Integral of a one-dimensional function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d44/segmentintegral_8hpp_source.html#l00050">segmentintegral.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_segment_integral_html_a7204bd05d6a0697ae1ca38f11f004d84"><div class="ttname"><a href="../../d6/d47/class_quant_lib_1_1_segment_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">QuantLib::SegmentIntegral::integrate</a></div><div class="ttdeci">Real integrate(const ext::function&lt; Real(Real)&gt; &amp;f, Real a, Real b) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d44/segmentintegral_8hpp_source.html#l00064">segmentintegral.hpp:64</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_segment_integral_html_aef3259d7b7dae8e2f1754e749abac94b"><div class="ttname"><a href="../../d6/d47/class_quant_lib_1_1_segment_integral.html#aef3259d7b7dae8e2f1754e749abac94b">QuantLib::SegmentIntegral::intervals_</a></div><div class="ttdeci">Size intervals_</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d44/segmentintegral_8hpp_source.html#l00057">segmentintegral.hpp:57</a></div></div>
+<div class="ttc" id="acomparison_8hpp_html"><div class="ttname"><a href="../../da/d03/comparison_8hpp.html">comparison.hpp</a></div><div class="ttdoc">floating-point comparisons</div></div>
+<div class="ttc" id="adefaultdensitystructure_8cpp_html_ae19b4006a311a298a93a5cd06a7cb0e7"><div class="ttname"><a href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a></div><div class="ttdeci">F f</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d93/defaultdensitystructure_8cpp_source.html#l00032">defaultdensitystructure.cpp:32</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html"><div class="ttname"><a href="../../df/d52/errors_8hpp.html">errors.hpp</a></div><div class="ttdoc">Classes and functions for error handling.</div></div>
+<div class="ttc" id="aextendedornsteinuhlenbeckprocess_8cpp_html_a1759c348ed007f12d79ceff98cc3abbe"><div class="ttname"><a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a></div><div class="ttdeci">ext::function&lt; Real(Real)&gt; b</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp_source.html#l00030">extendedornsteinuhlenbeckprocess.cpp:30</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="aintegral_8hpp_html"><div class="ttname"><a href="../../d3/da8/integral_8hpp.html">integral.hpp</a></div><div class="ttdoc">Integrators base class definition.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_aedc6094cfc783bb3e6a6c9a7ee68e3f8"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#aedc6094cfc783bb3e6a6c9a7ee68e3f8">QuantLib::close_enough</a></div><div class="ttdeci">bool close_enough(const Quantity &amp;m1, const Quantity &amp;m2, Size n)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dbf/quantity_8cpp_source.html#l00182">quantity.cpp:182</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

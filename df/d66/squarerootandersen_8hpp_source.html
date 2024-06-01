@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/models/marketmodels/evolvers/volprocesses/squarerootandersen.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/models/marketmodels/evolvers/volprocesses/squarerootandersen.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">squarerootandersen.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../df/d66/squarerootandersen_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 Mark Joshi</span></div>
@@ -109,19 +108,24 @@ $(function() {
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#ifndef quantlib_square_root_andersen_hpp</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define quantlib_square_root_andersen_hpp</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/models/marketmodels/evolvers/marketmodelvolprocess.hpp&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d7/dc0/marketmodelvolprocess_8hpp.html">ql/models/marketmodels/evolvers/marketmodelvolprocess.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="comment"></span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">    /*!</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">   Displaced diffusion LMM with uncorrelated vol process. Called &quot;Shifted BGM&quot; with Heston vol by Brace in &quot;Engineering BGM.&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">   Vol process is an external input.</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    </span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html">   34</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html">SquareRootAndersen</a>  : <span class="keyword">public</span> <a class="code hl_class" href="../../d7/d42/class_quant_lib_1_1_market_model_vol_process.html">MarketModelVolProcess</a></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>          <a class="code hl_class" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html">SquareRootAndersen</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> meanLevel,</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                             <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> reversionSpeed,</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                             <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> volVar,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                             <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> v0,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                             <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#a4dc92b5a616bb241f0abaf2c785fcdc1">v0</a>,</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                             <span class="keyword">const</span> std::vector&lt;Real&gt;&amp; evolutionTimes,</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                             <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_variable" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#af39cdac72a14ae54ca665f43a171b9de">numberSubSteps_</a>,</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                             <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> w1,</div>
@@ -140,7 +144,7 @@ $(function() {
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>          <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a556f65df522c6382c53665089d2a8de7">DoOneSubStep</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&amp; v, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> variate, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>          <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a556f65df522c6382c53665089d2a8de7">DoOneSubStep</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&amp; <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> variate, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a5ca0ebc8ec96d11c5542cd549f01db16">   61</a></span>          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a5ca0ebc8ec96d11c5542cd549f01db16">theta_</a>; <span class="comment">// mean level</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
@@ -157,8 +161,9 @@ $(function() {
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a9f487a5c26e28c66af672d3543ab3761">   73</a></span>          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a9f487a5c26e28c66af672d3543ab3761">w1_</a>; <span class="comment">// weights to use for computing variance across step</span></div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a578becc7be6609588bbd951de5e0d53d">   74</a></span>          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a578becc7be6609588bbd951de5e0d53d">w2_</a>; </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a103e9d2baa21eb3cc06a52a59068519b">   75</a></span>          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a103e9d2baa21eb3cc06a52a59068519b">PsiC_</a>; <span class="comment">// cut-off between two types of evolution</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a71178b2c04ebe21b50e734c362ecd083">   78</a></span>          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a71178b2c04ebe21b50e734c362ecd083">v_</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment"></span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">          //! evolving values</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a71178b2c04ebe21b50e734c362ecd083">   78</a></span><span class="comment"></span>          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a71178b2c04ebe21b50e734c362ecd083">v_</a>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a0cd1da9c234a65843ed1783da733f913">   79</a></span>          <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_variable" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a0cd1da9c234a65843ed1783da733f913">currentStep_</a>;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#aa66aa849f6624f3fb0765ae7265120a0">   80</a></span>          <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_variable" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#aa66aa849f6624f3fb0765ae7265120a0">subStep_</a>;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a6443ad2e3b468ce174b1703314214a42">   81</a></span>          std::vector&lt;Real&gt; <a class="code hl_variable" href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#a6443ad2e3b468ce174b1703314214a42">vPath_</a>;</div>
@@ -197,7 +202,10 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_square_root_andersen_html_af39cdac72a14ae54ca665f43a171b9de"><div class="ttname"><a href="../../d0/d10/class_quant_lib_1_1_square_root_andersen.html#af39cdac72a14ae54ca665f43a171b9de">QuantLib::SquareRootAndersen::numberSubSteps_</a></div><div class="ttdeci">Size numberSubSteps_</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d66/squarerootandersen_8hpp_source.html#l00067">squarerootandersen.hpp:67</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="ahestonrndcalculator_8cpp_html_a4dc92b5a616bb241f0abaf2c785fcdc1"><div class="ttname"><a href="../../d2/d3a/hestonrndcalculator_8cpp.html#a4dc92b5a616bb241f0abaf2c785fcdc1">v0</a></div><div class="ttdeci">Real v0</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3a/hestonrndcalculator_8cpp_source.html#l00036">hestonrndcalculator.cpp:36</a></div></div>
+<div class="ttc" id="amarketmodelvolprocess_8hpp_html"><div class="ttname"><a href="../../d7/dc0/marketmodelvolprocess_8hpp.html">marketmodelvolprocess.hpp</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aperturbativebarrieroptionengine_8cpp_html_ac58b0f1581c316228a305f7eb7cce633"><div class="ttname"><a href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a></div><div class="ttdeci">ext::shared_ptr&lt; BlackVolTermStructure &gt; v</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de0/perturbativebarrieroptionengine_8cpp_source.html#l01487">perturbativebarrieroptionengine.cpp:1487</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

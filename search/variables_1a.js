@@ -15,5 +15,6 @@ var searchData=
   ['zeropayments_5f_12',['zeroPayments_',['../d6/d41/class_quant_lib_1_1_cms_leg.html#acc7f66a340ffea2949d23b57b91f9ed6',1,'QuantLib::CmsLeg::zeroPayments_()'],['../df/da2/class_quant_lib_1_1_ibor_leg.html#acc7f66a340ffea2949d23b57b91f9ed6',1,'QuantLib::IborLeg::zeroPayments_()'],['../dd/d9c/class_quant_lib_1_1_cms_spread_leg.html#acc7f66a340ffea2949d23b57b91f9ed6',1,'QuantLib::CmsSpreadLeg::zeroPayments_()']]],
   ['zeta_5f_13',['zeta_',['../d4/db7/class_quant_lib_1_1_geman_roncoroni_process.html#af09c161b9190c044ea727e043823de84',1,'QuantLib::GemanRoncoroniProcess']]],
   ['zii_5f_14',['zii_',['../d8/dca/class_quant_lib_1_1_c_p_i_cap_floor_term_price_surface.html#ac75cf633eed0692d073e2d6d774f1016',1,'QuantLib::CPICapFloorTermPriceSurface::zii_()'],['../d5/d87/class_quant_lib_1_1_zero_coupon_inflation_swap_helper.html#ac75cf633eed0692d073e2d6d774f1016',1,'QuantLib::ZeroCouponInflationSwapHelper::zii_()']]],
-  ['zweight_5f_15',['zweight_',['../d0/dfa/class_quant_lib_1_1_sphere_cylinder_optimizer.html#a03949db495c5123468b45840905ef928',1,'QuantLib::SphereCylinderOptimizer']]]
+  ['zspread_5f_15',['zSpread_',['../da/d4b/cashflows_8cpp.html#a08a392f9c7afaccc6b3968cf1fdd4fb3',1,'cashflows.cpp']]],
+  ['zweight_5f_16',['zweight_',['../d0/dfa/class_quant_lib_1_1_sphere_cylinder_optimizer.html#a03949db495c5123468b45840905ef928',1,'QuantLib::SphereCylinderOptimizer']]]
 ];

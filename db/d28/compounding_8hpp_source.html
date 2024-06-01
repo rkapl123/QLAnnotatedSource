@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/compounding.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/compounding.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">compounding.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../db/d28/compounding_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2004, 2005, 2006, 2007 Ferdinando Ametrano</span></div>
@@ -105,19 +104,24 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file compounding.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Compounding enumeration</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_compounding_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_compounding_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/qldefines.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d56/qldefines_8hpp.html">ql/qldefines.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">   32</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">Compounding</a> { <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73aebfbf7dc5cde0772efb1aa49712bd76b">Simple</a> = 0,          </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a7f3e11143ca01a7d20f92e11ad445e0c">   33</a></span>                       <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a7f3e11143ca01a7d20f92e11ad445e0c">Compounded</a> = 1,      </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a6cb140948cbeedb9f7182dd4027e5e37">   34</a></span>                       <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a6cb140948cbeedb9f7182dd4027e5e37">Continuous</a> = 2,      </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73ab261e0d57265bd864aeb690cedf336b8">   35</a></span>                       <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73ab261e0d57265bd864aeb690cedf336b8">SimpleThenCompounded</a>, </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                       <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a0492c9d8f140b0c45064a78b1a5d19a5">CompoundedThenSimple</a> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"></span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">    //! Interest rate coumpounding rule</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">   32</a></span><span class="comment"></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73">Compounding</a> { <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73aebfbf7dc5cde0772efb1aa49712bd76b">Simple</a> = 0,          <span class="comment">//!&lt; \f$ 1+rt \f$</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a7f3e11143ca01a7d20f92e11ad445e0c">   33</a></span>                       <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a7f3e11143ca01a7d20f92e11ad445e0c">Compounded</a> = 1,      <span class="comment">//!&lt; \f$ (1+r)^t \f$</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a6cb140948cbeedb9f7182dd4027e5e37">   34</a></span>                       <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a6cb140948cbeedb9f7182dd4027e5e37">Continuous</a> = 2,      <span class="comment">//!&lt; \f$ e^{rt} \f$</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73ab261e0d57265bd864aeb690cedf336b8">   35</a></span>                       <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73ab261e0d57265bd864aeb690cedf336b8">SimpleThenCompounded</a>, <span class="comment">//!&lt; Simple up to the first period then Compounded</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                       <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a0492c9d8f140b0c45064a78b1a5d19a5">CompoundedThenSimple</a> <span class="comment">//!&lt; Compounded up to the first period then Simple</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a0492c9d8f140b0c45064a78b1a5d19a5">   37</a></span>    };</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
@@ -130,6 +134,7 @@ $(function() {
 <div class="ttc" id="anamespace_quant_lib_html_a2779d04b4839fd386b5c85bbb96aaf73a7f3e11143ca01a7d20f92e11ad445e0c"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a7f3e11143ca01a7d20f92e11ad445e0c">QuantLib::Compounded</a></div><div class="ttdeci">@ Compounded</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d28/compounding_8hpp_source.html#l00033">compounding.hpp:33</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a2779d04b4839fd386b5c85bbb96aaf73ab261e0d57265bd864aeb690cedf336b8"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73ab261e0d57265bd864aeb690cedf336b8">QuantLib::SimpleThenCompounded</a></div><div class="ttdeci">@ SimpleThenCompounded</div><div class="ttdoc">Simple up to the first period then Compounded.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d28/compounding_8hpp_source.html#l00035">compounding.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a2779d04b4839fd386b5c85bbb96aaf73aebfbf7dc5cde0772efb1aa49712bd76b"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73aebfbf7dc5cde0772efb1aa49712bd76b">QuantLib::Simple</a></div><div class="ttdeci">@ Simple</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d28/compounding_8hpp_source.html#l00032">compounding.hpp:32</a></div></div>
+<div class="ttc" id="aqldefines_8hpp_html"><div class="ttname"><a href="../../de/d56/qldefines_8hpp.html">qldefines.hpp</a></div><div class="ttdoc">Global definitions and compiler switches.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

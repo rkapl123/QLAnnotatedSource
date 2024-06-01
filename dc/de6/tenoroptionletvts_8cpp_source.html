@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/basismodels/tenoroptionletvts.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/basismodels/tenoroptionletvts.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">tenoroptionletvts.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../dc/de6/tenoroptionletvts_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">Copyright (C) 2018 Sebastian Schlenkrich</span></div>
@@ -105,14 +104,18 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/exercise.hpp&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;ql/experimental/basismodels/tenoroptionletvts.hpp&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ql/indexes/iborindex.hpp&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/math/rounding.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/pricingengines/swap/discountingswapengine.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/time/dategenerationrule.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/time/schedule.hpp&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file tenoroptionletvts.cpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief caplet volatility term structure based on volatility transformation</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d94/exercise_8hpp.html">ql/exercise.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dd3/tenoroptionletvts_8hpp.html">ql/experimental/basismodels/tenoroptionletvts.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d13/iborindex_8hpp.html">ql/indexes/iborindex.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/db3/rounding_8hpp.html">ql/math/rounding.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d7/da2/discountingswapengine_8hpp.html">ql/pricingengines/swap/discountingswapengine.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d35/dategenerationrule_8hpp.html">ql/time/dategenerationrule.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/dd1/schedule_8hpp.html">ql/time/schedule.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
@@ -127,8 +130,8 @@ $(function() {
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                                   baseVTS-&gt;businessDayConvention(),</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                                   baseVTS-&gt;dayCounter()),</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      baseVTS_(baseVTS), baseIndex_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(baseIndex)), targIndex_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(targIndex)),</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      correlation_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(correlation)) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        QL_REQUIRE(<a class="code hl_variable" href="../../d0/d49/class_quant_lib_1_1_tenor_optionlet_v_t_s.html#af34ede4aa968b2c1bec767f4af82be3a">baseIndex_</a>-&gt;tenor().frequency() % <a class="code hl_variable" href="../../d0/d49/class_quant_lib_1_1_tenor_optionlet_v_t_s.html#a8041f99d0276fe5173c811445f5b205d">targIndex_</a>-&gt;tenor().frequency() == 0,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <a class="code hl_variable" href="../../da/d9a/analyticeuropeanvasicekengine_8cpp.html#a7e99e192b1f8083fb9698974031ade6a">correlation_</a>(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(correlation)) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d0/d49/class_quant_lib_1_1_tenor_optionlet_v_t_s.html#af34ede4aa968b2c1bec767f4af82be3a">baseIndex_</a>-&gt;tenor().frequency() % <a class="code hl_variable" href="../../d0/d49/class_quant_lib_1_1_tenor_optionlet_v_t_s.html#a8041f99d0276fe5173c811445f5b205d">targIndex_</a>-&gt;tenor().frequency() == 0,</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                   <span class="stringliteral">&quot;Base index frequency must be a multiple of target tenor frequency&quot;</span>);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
@@ -136,7 +139,7 @@ $(function() {
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../df/d81/class_quant_lib_1_1_tenor_optionlet_v_t_s_1_1_tenor_optionlet_smile_section.html#a9483d4b79c1ff81d6b8ff569a875c07c">   51</a></span>    <a class="code hl_function" href="../../df/d81/class_quant_lib_1_1_tenor_optionlet_v_t_s_1_1_tenor_optionlet_smile_section.html#a9483d4b79c1ff81d6b8ff569a875c07c">TenorOptionletVTS::TenorOptionletSmileSection::TenorOptionletSmileSection</a>(</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">const</span> <a class="code hl_class" href="../../d0/d49/class_quant_lib_1_1_tenor_optionlet_v_t_s.html">TenorOptionletVTS</a>&amp; volTS, <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> optionTime)</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    : <a class="code hl_class" href="../../d9/db6/class_quant_lib_1_1_smile_section.html">SmileSection</a>(optionTime, volTS.baseVTS_-&gt;dayCounter(), <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a8b2aa10016abb1ffb6f55484a04a5143a5ecbcf0afce98b042f35ec71ba03fa4b">Normal</a>, 0.0),</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      correlation_(volTS.correlation_) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <a class="code hl_variable" href="../../da/d9a/analyticeuropeanvasicekengine_8cpp.html#a7e99e192b1f8083fb9698974031ade6a">correlation_</a>(volTS.<a class="code hl_variable" href="../../da/d9a/analyticeuropeanvasicekengine_8cpp.html#a7e99e192b1f8083fb9698974031ade6a">correlation_</a>) {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="comment">// we assume that long (target) tenor is a multiple of short (base) tenor</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="comment">// first we need the long tenor start and end date</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> oneDayAsYear =</div>
@@ -193,6 +196,7 @@ $(function() {
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>}</div>
+<div class="ttc" id="aanalyticeuropeanvasicekengine_8cpp_html_a7e99e192b1f8083fb9698974031ade6a"><div class="ttname"><a href="../../da/d9a/analyticeuropeanvasicekengine_8cpp.html#a7e99e192b1f8083fb9698974031ade6a">correlation_</a></div><div class="ttdeci">const Real correlation_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d9a/analyticeuropeanvasicekengine_8cpp_source.html#l00038">analyticeuropeanvasicekengine.cpp:38</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_closest_rounding_html"><div class="ttname"><a href="../../dc/d9b/class_quant_lib_1_1_closest_rounding.html">QuantLib::ClosestRounding</a></div><div class="ttdoc">Closest rounding.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db3/rounding_8hpp_source.html#l00106">rounding.hpp:106</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_day_counter_html_a28170faaec75755611ff6fc220c1fab8"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8">QuantLib::DayCounter::yearFraction</a></div><div class="ttdeci">Time yearFraction(const Date &amp;, const Date &amp;, const Date &amp;refPeriodStart=Date(), const Date &amp;refPeriodEnd=Date()) const</div><div class="ttdoc">Returns the period between two dates as a fraction of year.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00128">daycounter.hpp:128</a></div></div>
@@ -216,6 +220,10 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_tenor_optionlet_v_t_s_html_af34ede4aa968b2c1bec767f4af82be3a"><div class="ttname"><a href="../../d0/d49/class_quant_lib_1_1_tenor_optionlet_v_t_s.html#af34ede4aa968b2c1bec767f4af82be3a">QuantLib::TenorOptionletVTS::baseIndex_</a></div><div class="ttdeci">ext::shared_ptr&lt; IborIndex &gt; baseIndex_</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd3/tenoroptionletvts_8hpp_source.html#l00069">tenoroptionletvts.hpp:69</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_term_structure_html_a34aadf8e384e50e6ee34067cc448262a"><div class="ttname"><a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a">QuantLib::TermStructure::referenceDate</a></div><div class="ttdeci">virtual const Date &amp; referenceDate() const</div><div class="ttdoc">the date at which discount = 1.0 and/or variance = 0.0</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d3a/termstructure_8cpp_source.html#l00039">termstructure.cpp:39</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_term_structure_html_ad49654ea33055b03f8666910acc13880"><div class="ttname"><a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880">QuantLib::TermStructure::dayCounter</a></div><div class="ttdeci">virtual DayCounter dayCounter() const</div><div class="ttdoc">the day counter used for date/time conversion</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da6/termstructure_8hpp_source.html#l00115">termstructure.hpp:115</a></div></div>
+<div class="ttc" id="adategenerationrule_8hpp_html"><div class="ttname"><a href="../../d6/d35/dategenerationrule_8hpp.html">dategenerationrule.hpp</a></div><div class="ttdoc">date generation rule</div></div>
+<div class="ttc" id="adiscountingswapengine_8hpp_html"><div class="ttname"><a href="../../d7/da2/discountingswapengine_8hpp.html">discountingswapengine.hpp</a></div><div class="ttdoc">discounting swap engine</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aexercise_8hpp_html"><div class="ttname"><a href="../../de/d94/exercise_8hpp.html">exercise.hpp</a></div><div class="ttdoc">Option exercise classes and payoff function.</div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">QuantLib::Days</a></div><div class="ttdeci">@ Days</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00037">timeunit.hpp:37</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707">QuantLib::ModifiedFollowing</a></div><div class="ttdeci">@ ModifiedFollowing</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00049">businessdayconvention.hpp:45</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547">QuantLib::Unadjusted</a></div><div class="ttdeci">@ Unadjusted</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00058">businessdayconvention.hpp:58</a></div></div>
@@ -225,10 +233,14 @@ $(function() {
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="aiborindex_8hpp_html"><div class="ttname"><a href="../../d2/d13/iborindex_8hpp.html">iborindex.hpp</a></div><div class="ttdoc">base class for Inter-Bank-Offered-Rate indexes</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a8b2aa10016abb1ffb6f55484a04a5143a5ecbcf0afce98b042f35ec71ba03fa4b"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a8b2aa10016abb1ffb6f55484a04a5143a5ecbcf0afce98b042f35ec71ba03fa4b">QuantLib::Normal</a></div><div class="ttdeci">@ Normal</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd6/volatilitytype_8hpp_source.html#l00032">volatilitytype.hpp:32</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="arounding_8hpp_html"><div class="ttname"><a href="../../d4/db3/rounding_8hpp.html">rounding.hpp</a></div><div class="ttdoc">Rounding implementation.</div></div>
+<div class="ttc" id="aschedule_8hpp_html"><div class="ttname"><a href="../../d2/dd1/schedule_8hpp.html">schedule.hpp</a></div><div class="ttdoc">date schedule</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_date_generation_html_a11fcd51ef86118f65e603c1474377a78a67e19347f85332c3bbfd61266cecbe4e"><div class="ttname"><a href="../../dc/dcb/struct_quant_lib_1_1_date_generation.html#a11fcd51ef86118f65e603c1474377a78a67e19347f85332c3bbfd61266cecbe4e">QuantLib::DateGeneration::Backward</a></div><div class="ttdeci">@ Backward</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d35/dategenerationrule_8hpp_source.html#l00042">dategenerationrule.hpp:41</a></div></div>
+<div class="ttc" id="atenoroptionletvts_8hpp_html"><div class="ttname"><a href="../../d6/dd3/tenoroptionletvts_8hpp.html">tenoroptionletvts.hpp</a></div><div class="ttdoc">caplet volatility term structure based on volatility transformation</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

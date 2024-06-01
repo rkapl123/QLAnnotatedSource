@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/instruments/cpiswap.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/instruments/cpiswap.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">cpiswap.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../de/dd7/cpiswap_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2007, 2009, 2011 Chris Kenyon</span></div>
@@ -106,28 +105,59 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file cpiswap.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> \brief zero-inflation-indexed-ratio-with-base swap</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_zeroinflationswap_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_zeroinflationswap_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/instruments/swap.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/time/calendar.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/time/daycounter.hpp&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/time/schedule.hpp&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;ql/indexes/iborindex.hpp&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;ql/cashflows/cpicoupon.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d6f/swap_8hpp.html">ql/instruments/swap.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d39/calendar_8hpp.html">ql/time/calendar.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d32/daycounter_8hpp.html">ql/time/daycounter.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/dd1/schedule_8hpp.html">ql/time/schedule.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d13/iborindex_8hpp.html">ql/indexes/iborindex.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/ddf/cpicoupon_8hpp.html">ql/cashflows/cpicoupon.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">class </span>ZeroInflationIndex;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"></span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">    //! zero-inflation-indexed swap,</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"></span><span class="comment">    /*! fixed x zero-inflation, i.e. fixed x CPI(i&#39;th fixing)/CPI(base)</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        versus floating + spread</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"></span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        Note that this does ony the inflation-vs-floating-leg.</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        Extension to inflation-vs-fixed-leg.  is simple - just replace</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        the floating leg with a fixed leg.</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"></span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        Typically there are notional exchanges at the end: either</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">        inflated-notional vs notional; or just (inflated-notional -</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">        notional) vs zero.  The latter is perhaphs more typical.</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">        \warning Setting subtractInflationNominal to true means that</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">        the original inflation nominal is subtracted from both</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        nominals before they are exchanged, even if they are</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">        different.</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment"></span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">        This swap can mimic a ZCIIS where [(1+q)^n - 1] is exchanged</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">        against (cpi ratio - 1), by using differnt nominals on each</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">        leg and setting subtractInflationNominal to true.  ALSO -</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">        there must be just one date in each schedule.</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment"></span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">        The two legs can have different schedules, fixing (days vs</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">        lag), settlement, and roll conventions.  N.B. accrual</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">        adjustment periods are already in the schedules.  Trade date</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">        and swap settlement date are outside the scope of the</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">        instrument.</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="../../d6/d5f/class_quant_lib_1_1_c_p_i_swap.html">   66</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d6/d5f/class_quant_lib_1_1_c_p_i_swap.html">CPISwap</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d54/class_quant_lib_1_1_swap.html">Swap</a> {</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">class </span><a class="code hl_class" href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html">arguments</a>;</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">class </span><a class="code hl_class" href="../../dd/dc5/class_quant_lib_1_1_c_p_i_swap_1_1results.html">results</a>;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">class </span><a class="code hl_class" href="../../d8/d73/class_quant_lib_1_1_c_p_i_swap_1_1engine.html">engine</a>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment"></span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">        /*! In this swap, the type (Payer or Receiver) refers to the floating leg. */</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_class" href="../../d6/d5f/class_quant_lib_1_1_c_p_i_swap.html">CPISwap</a>(<a class="code hl_enumeration" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> <a class="code hl_function" href="../../d6/d5f/class_quant_lib_1_1_c_p_i_swap.html#a7eba997f6dc7f9634f41ead3e4401d70">type</a>,</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d6/d5f/class_quant_lib_1_1_c_p_i_swap.html#a8eee3d3767fab185a6f78d6b406618f5">nominal</a>,</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d6/d5f/class_quant_lib_1_1_c_p_i_swap.html#ad18bb8c9adcb773afe981d4e19e339c9">subtractInflationNominal</a>,</div>
@@ -220,8 +250,9 @@ $(function() {
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    };</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html">  167</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html">CPISwap::arguments</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d5/d9c/class_quant_lib_1_1_swap_1_1arguments.html">Swap::arguments</a> {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment"></span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment">    //! %Arguments for swap calculation</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html">  167</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html">CPISwap::arguments</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d5/d9c/class_quant_lib_1_1_swap_1_1arguments.html">Swap::arguments</a> {</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html#a3f3e8935c236a7cc71235cbd1845fbd8">  169</a></span>      <a class="code hl_function" href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html#a3f3e8935c236a7cc71235cbd1845fbd8">arguments</a>() : <a class="code hl_variable" href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html#a587bb2361e4713f6bbe62501a9c37ea1">nominal</a>(<a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null</a>&lt;<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&gt;()) {}</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html#ab6f4e6d3fde00ce906e46494f60dfe7a">  170</a></span>      <a class="code hl_enumeration" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> <a class="code hl_variable" href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html#ab6f4e6d3fde00ce906e46494f60dfe7a">type</a> = <a class="code hl_enumvalue" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7a7928a668954c57bb64a7a9d98994cbaa">Receiver</a>;</div>
@@ -229,8 +260,9 @@ $(function() {
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html#ae26e38f89ead35fd7cbe08f68b2e19d7">validate</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    };</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="../../dd/dc5/class_quant_lib_1_1_c_p_i_swap_1_1results.html">  177</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dd/dc5/class_quant_lib_1_1_c_p_i_swap_1_1results.html">CPISwap::results</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d5/d68/class_quant_lib_1_1_swap_1_1results.html">Swap::results</a> {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment"></span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">    //! %Results from swap calculation</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="../../dd/dc5/class_quant_lib_1_1_c_p_i_swap_1_1results.html">  177</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dd/dc5/class_quant_lib_1_1_c_p_i_swap_1_1results.html">CPISwap::results</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d5/d68/class_quant_lib_1_1_swap_1_1results.html">Swap::results</a> {</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="../../dd/dc5/class_quant_lib_1_1_c_p_i_swap_1_1results.html#ad4b780187770e012156cf76a4c1cb1e1">  179</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="code hl_variable" href="../../dd/dc5/class_quant_lib_1_1_c_p_i_swap_1_1results.html#ad4b780187770e012156cf76a4c1cb1e1">fairRate</a>;</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="../../dd/dc5/class_quant_lib_1_1_c_p_i_swap_1_1results.html#aaae65d8ddf791f2593ac9d1d395f1d3a">  180</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> <a class="code hl_variable" href="../../dd/dc5/class_quant_lib_1_1_c_p_i_swap_1_1results.html#aaae65d8ddf791f2593ac9d1d395f1d3a">fairSpread</a>;</div>
@@ -279,6 +311,7 @@ $(function() {
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="ttc" id="acalendar_8hpp_html"><div class="ttname"><a href="../../dc/d39/calendar_8hpp.html">calendar.hpp</a></div><div class="ttdoc">calendar class</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_p_i_swap_1_1arguments_html"><div class="ttname"><a href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html">QuantLib::CPISwap::arguments</a></div><div class="ttdoc">Arguments for swap calculation</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd7/cpiswap_8hpp_source.html#l00167">cpiswap.hpp:167</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_p_i_swap_1_1arguments_html_a3f3e8935c236a7cc71235cbd1845fbd8"><div class="ttname"><a href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html#a3f3e8935c236a7cc71235cbd1845fbd8">QuantLib::CPISwap::arguments::arguments</a></div><div class="ttdeci">arguments()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd7/cpiswap_8hpp_source.html#l00169">cpiswap.hpp:169</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_p_i_swap_1_1arguments_html_a587bb2361e4713f6bbe62501a9c37ea1"><div class="ttname"><a href="../../dd/d3e/class_quant_lib_1_1_c_p_i_swap_1_1arguments.html#a587bb2361e4713f6bbe62501a9c37ea1">QuantLib::CPISwap::arguments::nominal</a></div><div class="ttdeci">Real nominal</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd7/cpiswap_8hpp_source.html#l00171">cpiswap.hpp:171</a></div></div>
@@ -350,15 +383,20 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_swap_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::Swap::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6f/swap_8hpp_source.html#l00050">swap.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_swap_html_a1d1cfd8ffb84e947f82999c682b666a7a7928a668954c57bb64a7a9d98994cbaa"><div class="ttname"><a href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7a7928a668954c57bb64a7a9d98994cbaa">QuantLib::Swap::Receiver</a></div><div class="ttdeci">@ Receiver</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6f/swap_8hpp_source.html#l00050">swap.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_swap_html_a55d313924706a6ea67a5f2ab70c1702a"><div class="ttname"><a href="../../dc/d54/class_quant_lib_1_1_swap.html#a55d313924706a6ea67a5f2ab70c1702a">QuantLib::Swap::legs_</a></div><div class="ttdeci">std::vector&lt; Leg &gt; legs_</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6f/swap_8hpp_source.html#l00133">swap.hpp:133</a></div></div>
+<div class="ttc" id="acpicoupon_8hpp_html"><div class="ttname"><a href="../../d5/ddf/cpicoupon_8hpp.html">cpicoupon.hpp</a></div><div class="ttdoc">Coupon paying a zero-inflation index.</div></div>
+<div class="ttc" id="adaycounter_8hpp_html"><div class="ttname"><a href="../../df/d32/daycounter_8hpp.html">daycounter.hpp</a></div><div class="ttdoc">day counter class</div></div>
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
 <div class="ttc" id="agroup__types_html_gae7427f4743503002b0c6eeeefae91a3d"><div class="ttname"><a href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">QuantLib::Spread</a></div><div class="ttdeci">Real Spread</div><div class="ttdoc">spreads on interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00074">types.hpp:74</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
+<div class="ttc" id="aiborindex_8hpp_html"><div class="ttname"><a href="../../d2/d13/iborindex_8hpp.html">iborindex.hpp</a></div><div class="ttdoc">base class for Inter-Bank-Offered-Rate indexes</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_afd0d2e08465e4b7e928c75416bd8dc4b"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">QuantLib::Leg</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; CashFlow &gt; &gt; Leg</div><div class="ttdoc">Sequence of cash-flows.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0e/cashflow_8hpp_source.html#l00078">cashflow.hpp:78</a></div></div>
+<div class="ttc" id="aschedule_8hpp_html"><div class="ttname"><a href="../../d2/dd1/schedule_8hpp.html">schedule.hpp</a></div><div class="ttdoc">date schedule</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_c_p_i_html_a8472f01c511d77bbfb981a46618ea1ea"><div class="ttname"><a href="../../d4/df8/struct_quant_lib_1_1_c_p_i.html#a8472f01c511d77bbfb981a46618ea1ea">QuantLib::CPI::InterpolationType</a></div><div class="ttdeci">InterpolationType</div><div class="ttdoc">when you observe an index, how do you interpolate between fixings?</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db8/inflationindex_8hpp_source.html#l00040">inflationindex.hpp:40</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_c_p_i_html_a8472f01c511d77bbfb981a46618ea1eaa001e44004d8d85d1a98f7a1fb01ea79c"><div class="ttname"><a href="../../d4/df8/struct_quant_lib_1_1_c_p_i.html#a8472f01c511d77bbfb981a46618ea1eaa001e44004d8d85d1a98f7a1fb01ea79c">QuantLib::CPI::AsIndex</a></div><div class="ttdeci">@ AsIndex</div><div class="ttdoc">same interpolation as index</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db8/inflationindex_8hpp_source.html#l00041">inflationindex.hpp:41</a></div></div>
+<div class="ttc" id="aswap_8hpp_html"><div class="ttname"><a href="../../dd/d6f/swap_8hpp.html">swap.hpp</a></div><div class="ttdoc">Interest rate swap.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

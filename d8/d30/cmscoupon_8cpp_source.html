@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/cashflows/cmscoupon.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/cashflows/cmscoupon.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">cmscoupon.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="../../d8/d30/cmscoupon_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> Copyright (C) 2006 Giorgio Facchinetti</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> Copyright (C) 2006 Mario Pucci</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2006, 2007 StatPro Italia srl</span></div>
@@ -107,10 +106,10 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> or FITNESS FOR A PARTICULAR PURPOSE. See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/cashflows/capflooredcoupon.hpp&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/cashflows/cashflowvectors.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/cashflows/cmscoupon.hpp&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/indexes/swapindex.hpp&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/dd3/capflooredcoupon_8hpp.html">ql/cashflows/capflooredcoupon.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/d4f/cashflowvectors_8hpp.html">ql/cashflows/cashflowvectors.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/de7/cmscoupon_8hpp.html">ql/cashflows/cmscoupon.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d76/swapindex_8hpp.html">ql/indexes/swapindex.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
@@ -134,18 +133,18 @@ $(function() {
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                         dayCounter, isInArrears, exCouponDate),</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      swapIndex_(swapIndex) {}</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../db/df7/class_quant_lib_1_1_cms_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/df7/class_quant_lib_1_1_cms_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">CmsCoupon::accept</a>(<a class="code hl_class" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp; v) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">auto</span>* v1 = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d6/d87/class_quant_lib_1_1_visitor.html">Visitor&lt;CmsCoupon&gt;</a>*<span class="keyword">&gt;</span>(&amp;v);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../db/df7/class_quant_lib_1_1_cms_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/df7/class_quant_lib_1_1_cms_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">CmsCoupon::accept</a>(<a class="code hl_class" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp; <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">auto</span>* v1 = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d6/d87/class_quant_lib_1_1_visitor.html">Visitor&lt;CmsCoupon&gt;</a>*<span class="keyword">&gt;</span>(&amp;<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">if</span> (v1 != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            v1-&gt;<a class="code hl_function" href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">visit</a>(*<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <a class="code hl_function" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">FloatingRateCoupon::accept</a>(v);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <a class="code hl_function" href="../../df/dd6/class_quant_lib_1_1_floating_rate_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">FloatingRateCoupon::accept</a>(<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d6/d41/class_quant_lib_1_1_cms_leg.html#ad83160abd76f38737b2aeb4e0fd2cabe">   57</a></span>    <a class="code hl_function" href="../../d6/d41/class_quant_lib_1_1_cms_leg.html#ad83160abd76f38737b2aeb4e0fd2cabe">CmsLeg::CmsLeg</a>(<a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> schedule, ext::shared_ptr&lt;SwapIndex&gt; swapIndex)</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    : schedule_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(schedule)), swapIndex_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(swapIndex)) {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        QL_REQUIRE(<a class="code hl_variable" href="../../d6/d41/class_quant_lib_1_1_cms_leg.html#a6b222ee02ce17cbf62a49576e58fa76b">swapIndex_</a>, <span class="stringliteral">&quot;no index provided&quot;</span>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d6/d41/class_quant_lib_1_1_cms_leg.html#a6b222ee02ce17cbf62a49576e58fa76b">swapIndex_</a>, <span class="stringliteral">&quot;no index provided&quot;</span>);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d6/d41/class_quant_lib_1_1_cms_leg.html#abd49ca46656aab34a458586fbc8ef448">   62</a></span>    <a class="code hl_class" href="../../d6/d41/class_quant_lib_1_1_cms_leg.html">CmsLeg</a>&amp; <a class="code hl_function" href="../../d6/d41/class_quant_lib_1_1_cms_leg.html#abd49ca46656aab34a458586fbc8ef448">CmsLeg::withNotionals</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> notional) {</div>
@@ -251,6 +250,8 @@ $(function() {
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>   }</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>}</div>
+<div class="ttc" id="acapflooredcoupon_8hpp_html"><div class="ttname"><a href="../../da/dd3/capflooredcoupon_8hpp.html">capflooredcoupon.hpp</a></div><div class="ttdoc">Floating rate coupon with additional cap/floor.</div></div>
+<div class="ttc" id="acashflowvectors_8hpp_html"><div class="ttname"><a href="../../da/d4f/cashflowvectors_8hpp.html">cashflowvectors.hpp</a></div><div class="ttdoc">Cash flow vector builders.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_acyclic_visitor_html"><div class="ttname"><a href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">QuantLib::AcyclicVisitor</a></div><div class="ttdoc">degenerate base class for the Acyclic Visitor pattern</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00033">visitor.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html">QuantLib::Calendar</a></div><div class="ttdoc">calendar class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00061">calendar.hpp:61</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_cms_coupon_html_a6fcc1b62510947fbc30b2952fff63c2d"><div class="ttname"><a href="../../db/df7/class_quant_lib_1_1_cms_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">QuantLib::CmsCoupon::accept</a></div><div class="ttdeci">void accept(AcyclicVisitor &amp;) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d30/cmscoupon_8cpp_source.html#l00048">cmscoupon.cpp:48</a></div></div>
@@ -291,6 +292,8 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_schedule_html"><div class="ttname"><a href="../../d5/d5b/class_quant_lib_1_1_schedule.html">QuantLib::Schedule</a></div><div class="ttdoc">Payment schedule.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd1/schedule_8hpp_source.html#l00040">schedule.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_visitor_html"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html">QuantLib::Visitor</a></div><div class="ttdoc">Visitor for a specific class</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00040">visitor.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_visitor_html_a6d7e98e3f298924633a9ba9bf5b04a83"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">QuantLib::Visitor::visit</a></div><div class="ttdeci">virtual void visit(T &amp;)=0</div></div>
+<div class="ttc" id="acmscoupon_8hpp_html"><div class="ttname"><a href="../../d0/de7/cmscoupon_8hpp.html">cmscoupon.hpp</a></div><div class="ttdoc">CMS coupon.</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
@@ -299,6 +302,8 @@ $(function() {
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_afd0d2e08465e4b7e928c75416bd8dc4b"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">QuantLib::Leg</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; CashFlow &gt; &gt; Leg</div><div class="ttdoc">Sequence of cash-flows.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0e/cashflow_8hpp_source.html#l00078">cashflow.hpp:78</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="aperturbativebarrieroptionengine_8cpp_html_ac58b0f1581c316228a305f7eb7cce633"><div class="ttname"><a href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a></div><div class="ttdeci">ext::shared_ptr&lt; BlackVolTermStructure &gt; v</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de0/perturbativebarrieroptionengine_8cpp_source.html#l01487">perturbativebarrieroptionengine.cpp:1487</a></div></div>
+<div class="ttc" id="aswapindex_8hpp_html"><div class="ttname"><a href="../../d9/d76/swapindex_8hpp.html">swapindex.hpp</a></div><div class="ttdoc">swap-rate indexes</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

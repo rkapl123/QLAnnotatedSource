@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -85,27 +84,44 @@ $(function() {
 <div class="contents">
 <p >For a given set of option parameters, this example computes the value of three different equity options types (with european, bermudan and american exercise features) using different valuation algorithms. The calculation methods are Black-Scholes (for european options only), Barone-Adesi/Whaley (american-only), Bjerksund/Stensland (american), Integral (european), finite differences, binomial trees, crude Monte Carlo (european-only) and Sobol-sequence Monte Carlo (european-only).</p>
 <div class="fragment"><div class="line"><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment">/*!</span></div>
+<div class="line"><span class="comment"> Copyright (C) 2005, 2006, 2007, 2009 StatPro Italia srl</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment"> This file is part of QuantLib, a free-software/open-source library</span></div>
+<div class="line"><span class="comment"> for financial quantitative analysts and developers - http://quantlib.org/</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment"> QuantLib is free software: you can redistribute it and/or modify it</span></div>
+<div class="line"><span class="comment"> under the terms of the QuantLib license.  You should have received a</span></div>
+<div class="line"><span class="comment"> copy of the license along with this program; if not, please email</span></div>
+<div class="line"><span class="comment"> &lt;quantlib-dev@lists.sf.net&gt;. The license is also available online at</span></div>
+<div class="line"><span class="comment"> &lt;http://quantlib.org/license.shtml&gt;.</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment"> This program is distributed in the hope that it will be useful, but WITHOUT</span></div>
+<div class="line"><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
+<div class="line"><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
+<div class="line"><span class="comment">*/</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;ql/qldefines.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../de/d56/qldefines_8hpp.html">ql/qldefines.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#if !defined(BOOST_ALL_NO_LIB) &amp;&amp; defined(BOOST_MSVC)</span></div>
-<div class="line"><span class="preprocessor">#  include &lt;ql/auto_link.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#  include &lt;<a class="code" href="../../d7/dbf/auto__link_8hpp.html">ql/auto_link.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/instruments/vanillaoption.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/math/integrals/tanhsinhintegral.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/analyticeuropeanengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/analyticeuropeanvasicekengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/analytichestonengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/baroneadesiwhaleyengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/batesengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/binomialengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/bjerksundstenslandengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/fdblackscholesvanillaengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/integralengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/mcamericanengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/mceuropeanengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/qdfpamericanengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/time/calendars/target.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/utilities/dataformatters.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dde/vanillaoption_8hpp.html">ql/instruments/vanillaoption.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d9f/tanhsinhintegral_8hpp.html">ql/math/integrals/tanhsinhintegral.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d98/analyticeuropeanengine_8hpp.html">ql/pricingengines/vanilla/analyticeuropeanengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../db/dab/analyticeuropeanvasicekengine_8hpp.html">ql/pricingengines/vanilla/analyticeuropeanvasicekengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d9/dee/analytichestonengine_8hpp.html">ql/pricingengines/vanilla/analytichestonengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d2/dad/baroneadesiwhaleyengine_8hpp.html">ql/pricingengines/vanilla/baroneadesiwhaleyengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../da/da7/batesengine_8hpp.html">ql/pricingengines/vanilla/batesengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../db/db1/binomialengine_8hpp.html">ql/pricingengines/vanilla/binomialengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../df/d44/bjerksundstenslandengine_8hpp.html">ql/pricingengines/vanilla/bjerksundstenslandengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d53/fdblackscholesvanillaengine_8hpp.html">ql/pricingengines/vanilla/fdblackscholesvanillaengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d3/dcc/integralengine_8hpp.html">ql/pricingengines/vanilla/integralengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d4/df5/mcamericanengine_8hpp.html">ql/pricingengines/vanilla/mcamericanengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de9/mceuropeanengine_8hpp.html">ql/pricingengines/vanilla/mceuropeanengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../df/ddb/qdfpamericanengine_8hpp.html">ql/pricingengines/vanilla/qdfpamericanengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d69/target_8hpp.html">ql/time/calendars/target.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../db/db9/dataformatters_8hpp.html">ql/utilities/dataformatters.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
@@ -166,33 +182,33 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        <span class="keyword">auto</span> americanExercise = ext::make_shared&lt;AmericanExercise&gt;(settlementDate, maturity);</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a5" name="_a5"></a><a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> underlyingH(ext::make_shared&lt;SimpleQuote&gt;(underlying));</div>
+<div class="line">        <span class="keyword">auto</span> underlyingH = makeQuoteHandle(underlying);</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// bootstrap the yield/dividend/vol curves</span></div>
-<div class="line">        <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> flatTermStructure(</div>
+<div class="line">        <a id="_a5" name="_a5"></a><a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> flatTermStructure(</div>
 <div class="line">            ext::make_shared&lt;FlatForward&gt;(settlementDate, riskFreeRate, dayCounter));</div>
 <div class="line">        <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> flatDividendTS(</div>
 <div class="line">            ext::make_shared&lt;FlatForward&gt;(settlementDate, dividendYield, dayCounter));</div>
 <div class="line">        <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;BlackVolTermStructure&gt;</a> flatVolTS(</div>
 <div class="line">            ext::make_shared&lt;BlackConstantVol&gt;(settlementDate, calendar, volatility,</div>
 <div class="line">                                     dayCounter));</div>
-<div class="line">        <span class="keyword">auto</span> payoff = ext::make_shared&lt;PlainVanillaPayoff&gt;(type, strike);</div>
+<div class="line">        <span class="keyword">auto</span> <a id="a6" name="a6"></a><a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a> = ext::make_shared&lt;PlainVanillaPayoff&gt;(type, strike);</div>
 <div class="line">        <span class="keyword">auto</span> bsmProcess = ext::make_shared&lt;BlackScholesMertonProcess&gt;(</div>
 <div class="line">                underlyingH, flatDividendTS, flatTermStructure, flatVolTS);</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// options</span></div>
-<div class="line">        <a id="_a6" name="_a6"></a><a class="code hl_class" href="../../d2/d47/class_quant_lib_1_1_vanilla_option.html">VanillaOption</a> europeanOption(payoff, europeanExercise);</div>
-<div class="line">        <a class="code hl_class" href="../../d2/d47/class_quant_lib_1_1_vanilla_option.html">VanillaOption</a> bermudanOption(payoff, bermudanExercise);</div>
-<div class="line">        <a class="code hl_class" href="../../d2/d47/class_quant_lib_1_1_vanilla_option.html">VanillaOption</a> americanOption(payoff, americanExercise);</div>
+<div class="line">        <a id="_a7" name="_a7"></a><a class="code hl_class" href="../../d2/d47/class_quant_lib_1_1_vanilla_option.html">VanillaOption</a> europeanOption(<a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>, europeanExercise);</div>
+<div class="line">        <a class="code hl_class" href="../../d2/d47/class_quant_lib_1_1_vanilla_option.html">VanillaOption</a> bermudanOption(<a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>, bermudanExercise);</div>
+<div class="line">        <a class="code hl_class" href="../../d2/d47/class_quant_lib_1_1_vanilla_option.html">VanillaOption</a> americanOption(<a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>, americanExercise);</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Analytic formulas:</span></div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Black-Scholes for European</span></div>
 <div class="line">        method = <span class="stringliteral">&quot;Black-Scholes&quot;</span>;</div>
-<div class="line">        europeanOption.<a id="a7" name="a7"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(ext::make_shared&lt;AnalyticEuropeanEngine&gt;(bsmProcess));</div>
+<div class="line">        europeanOption.<a id="a8" name="a8"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(ext::make_shared&lt;AnalyticEuropeanEngine&gt;(bsmProcess));</div>
 <div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; std::left &lt;&lt; method</div>
 <div class="line">                  &lt;&lt; std::fixed</div>
-<div class="line">                  &lt;&lt; std::setw(widths[1]) &lt;&lt; std::left &lt;&lt; europeanOption.<a id="a8" name="a8"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">NPV</a>()</div>
+<div class="line">                  &lt;&lt; std::setw(widths[1]) &lt;&lt; std::left &lt;&lt; europeanOption.<a id="a9" name="a9"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">NPV</a>()</div>
 <div class="line">                  &lt;&lt; std::setw(widths[2]) &lt;&lt; std::left &lt;&lt; <span class="stringliteral">&quot;N/A&quot;</span></div>
 <div class="line">                  &lt;&lt; std::setw(widths[3]) &lt;&lt; std::left &lt;&lt; <span class="stringliteral">&quot;N/A&quot;</span></div>
 <div class="line">                  &lt;&lt; std::endl;</div>
@@ -201,11 +217,11 @@ $(function() {
 <div class="line">        method = <span class="stringliteral">&quot;Black Vasicek Model&quot;</span>;</div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> r0 = riskFreeRate;</div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a = 0.3;</div>
-<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> b = 0.3;</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a id="a10" name="a10"></a><a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a> = 0.3;</div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> sigma_r = 0.15;</div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> riskPremium = 0.0;</div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> correlation = 0.5;</div>
-<div class="line">        <span class="keyword">auto</span> vasicekProcess = ext::make_shared&lt;Vasicek&gt;(r0, a, b, sigma_r, riskPremium);</div>
+<div class="line">        <span class="keyword">auto</span> vasicekProcess = ext::make_shared&lt;Vasicek&gt;(r0, a, <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>, sigma_r, riskPremium);</div>
 <div class="line">        europeanOption.<a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(ext::make_shared&lt;AnalyticBlackVasicekEngine&gt;(bsmProcess, vasicekProcess, correlation));</div>
 <div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; std::left &lt;&lt; method</div>
 <div class="line">                  &lt;&lt; std::fixed</div>
@@ -416,10 +432,10 @@ $(function() {
 <div class="line">        timeSteps = 1;</div>
 <div class="line">        method = <span class="stringliteral">&quot;MC (crude)&quot;</span>;</div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> mcSeed = 42;</div>
-<div class="line">        <span class="keyword">auto</span> mcengine1 = <a id="_a9" name="_a9"></a><a class="code hl_class" href="../../df/d4f/class_quant_lib_1_1_make_m_c_european_engine.html">MakeMCEuropeanEngine&lt;PseudoRandom&gt;</a>(bsmProcess)</div>
-<div class="line">            .<a id="a10" name="a10"></a><a class="code hl_function" href="../../df/d4f/class_quant_lib_1_1_make_m_c_european_engine.html#a781235eb7666133dde356f041784e37b">withSteps</a>(timeSteps)</div>
-<div class="line">            .<a id="a11" name="a11"></a><a class="code hl_function" href="../../df/d4f/class_quant_lib_1_1_make_m_c_european_engine.html#a7aabe62cd84705afffb83ff2aba675a8">withAbsoluteTolerance</a>(0.02)</div>
-<div class="line">            .<a id="a12" name="a12"></a><a class="code hl_function" href="../../df/d4f/class_quant_lib_1_1_make_m_c_european_engine.html#a1a5dd10d3fb3c3a09f14a6279b73e8a0">withSeed</a>(mcSeed);</div>
+<div class="line">        <span class="keyword">auto</span> mcengine1 = <a id="_a11" name="_a11"></a><a class="code hl_class" href="../../df/d4f/class_quant_lib_1_1_make_m_c_european_engine.html">MakeMCEuropeanEngine&lt;PseudoRandom&gt;</a>(bsmProcess)</div>
+<div class="line">            .<a id="a12" name="a12"></a><a class="code hl_function" href="../../df/d4f/class_quant_lib_1_1_make_m_c_european_engine.html#a781235eb7666133dde356f041784e37b">withSteps</a>(timeSteps)</div>
+<div class="line">            .<a id="a13" name="a13"></a><a class="code hl_function" href="../../df/d4f/class_quant_lib_1_1_make_m_c_european_engine.html#a7aabe62cd84705afffb83ff2aba675a8">withAbsoluteTolerance</a>(0.02)</div>
+<div class="line">            .<a id="a14" name="a14"></a><a class="code hl_function" href="../../df/d4f/class_quant_lib_1_1_make_m_c_european_engine.html#a1a5dd10d3fb3c3a09f14a6279b73e8a0">withSeed</a>(mcSeed);</div>
 <div class="line">        europeanOption.<a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(mcengine1);</div>
 <div class="line">        <span class="comment">// Real errorEstimate = europeanOption.errorEstimate();</span></div>
 <div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; std::left &lt;&lt; method</div>
@@ -435,7 +451,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        <span class="keyword">auto</span> mcengine2 = <a class="code hl_class" href="../../df/d4f/class_quant_lib_1_1_make_m_c_european_engine.html">MakeMCEuropeanEngine&lt;LowDiscrepancy&gt;</a>(bsmProcess)</div>
 <div class="line">            .<a class="code hl_function" href="../../df/d4f/class_quant_lib_1_1_make_m_c_european_engine.html#a781235eb7666133dde356f041784e37b">withSteps</a>(timeSteps)</div>
-<div class="line">            .<a id="a13" name="a13"></a><a class="code hl_function" href="../../df/d4f/class_quant_lib_1_1_make_m_c_european_engine.html#aec510d9e16db456214238d61040ca4e3">withSamples</a>(nSamples);</div>
+<div class="line">            .<a id="a15" name="a15"></a><a class="code hl_function" href="../../df/d4f/class_quant_lib_1_1_make_m_c_european_engine.html#aec510d9e16db456214238d61040ca4e3">withSamples</a>(nSamples);</div>
 <div class="line">        europeanOption.<a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(mcengine2);</div>
 <div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; std::left &lt;&lt; method</div>
 <div class="line">                  &lt;&lt; std::fixed</div>
@@ -446,12 +462,12 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Monte Carlo Method: MC (Longstaff Schwartz)</span></div>
 <div class="line">        method = <span class="stringliteral">&quot;MC (Longstaff Schwartz)&quot;</span>;</div>
-<div class="line">        <span class="keyword">auto</span> mcengine3 = <a id="_a14" name="_a14"></a><a class="code hl_class" href="../../d0/da5/class_quant_lib_1_1_make_m_c_american_engine.html">MakeMCAmericanEngine&lt;PseudoRandom&gt;</a>(bsmProcess)</div>
-<div class="line">            .<a id="a15" name="a15"></a><a class="code hl_function" href="../../d0/da5/class_quant_lib_1_1_make_m_c_american_engine.html#ad3fc9e9430a0680cb86efaeb2409fd3d">withSteps</a>(100)</div>
-<div class="line">            .<a id="a16" name="a16"></a><a class="code hl_function" href="../../d0/da5/class_quant_lib_1_1_make_m_c_american_engine.html#acf5c1ea65643ed4bdb30a1a69eb7ccf4">withAntitheticVariate</a>()</div>
-<div class="line">            .<a id="a17" name="a17"></a><a class="code hl_function" href="../../d0/da5/class_quant_lib_1_1_make_m_c_american_engine.html#a498dcb14dea932f62f41d159eecd9a74">withCalibrationSamples</a>(4096)</div>
-<div class="line">            .<a id="a18" name="a18"></a><a class="code hl_function" href="../../d0/da5/class_quant_lib_1_1_make_m_c_american_engine.html#a583cf1437b90eb78a35ff60cfe2822eb">withAbsoluteTolerance</a>(0.02)</div>
-<div class="line">            .<a id="a19" name="a19"></a><a class="code hl_function" href="../../d0/da5/class_quant_lib_1_1_make_m_c_american_engine.html#ab49bb835627649fea436ee9b8997624d">withSeed</a>(mcSeed);</div>
+<div class="line">        <span class="keyword">auto</span> mcengine3 = <a id="_a16" name="_a16"></a><a class="code hl_class" href="../../d0/da5/class_quant_lib_1_1_make_m_c_american_engine.html">MakeMCAmericanEngine&lt;PseudoRandom&gt;</a>(bsmProcess)</div>
+<div class="line">            .<a id="a17" name="a17"></a><a class="code hl_function" href="../../d0/da5/class_quant_lib_1_1_make_m_c_american_engine.html#ad3fc9e9430a0680cb86efaeb2409fd3d">withSteps</a>(100)</div>
+<div class="line">            .<a id="a18" name="a18"></a><a class="code hl_function" href="../../d0/da5/class_quant_lib_1_1_make_m_c_american_engine.html#acf5c1ea65643ed4bdb30a1a69eb7ccf4">withAntitheticVariate</a>()</div>
+<div class="line">            .<a id="a19" name="a19"></a><a class="code hl_function" href="../../d0/da5/class_quant_lib_1_1_make_m_c_american_engine.html#a498dcb14dea932f62f41d159eecd9a74">withCalibrationSamples</a>(4096)</div>
+<div class="line">            .<a id="a20" name="a20"></a><a class="code hl_function" href="../../d0/da5/class_quant_lib_1_1_make_m_c_american_engine.html#a583cf1437b90eb78a35ff60cfe2822eb">withAbsoluteTolerance</a>(0.02)</div>
+<div class="line">            .<a id="a21" name="a21"></a><a class="code hl_function" href="../../d0/da5/class_quant_lib_1_1_make_m_c_american_engine.html#ab49bb835627649fea436ee9b8997624d">withSeed</a>(mcSeed);</div>
 <div class="line">        americanOption.<a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(mcengine3);</div>
 <div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; std::left &lt;&lt; method</div>
 <div class="line">                  &lt;&lt; std::fixed</div>
@@ -471,6 +487,14 @@ $(function() {
 <div class="line">        <span class="keywordflow">return</span> 1;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
+<div class="ttc" id="aanalyticeuropeanengine_8hpp_html"><div class="ttname"><a href="../../d2/d98/analyticeuropeanengine_8hpp.html">analyticeuropeanengine.hpp</a></div><div class="ttdoc">Analytic European engine.</div></div>
+<div class="ttc" id="aanalyticeuropeanvasicekengine_8hpp_html"><div class="ttname"><a href="../../db/dab/analyticeuropeanvasicekengine_8hpp.html">analyticeuropeanvasicekengine.hpp</a></div></div>
+<div class="ttc" id="aanalytichestonengine_8hpp_html"><div class="ttname"><a href="../../d9/dee/analytichestonengine_8hpp.html">analytichestonengine.hpp</a></div><div class="ttdoc">analytic Heston-model engine</div></div>
+<div class="ttc" id="aauto__link_8hpp_html"><div class="ttname"><a href="../../d7/dbf/auto__link_8hpp.html">auto_link.hpp</a></div></div>
+<div class="ttc" id="abaroneadesiwhaleyengine_8hpp_html"><div class="ttname"><a href="../../d2/dad/baroneadesiwhaleyengine_8hpp.html">baroneadesiwhaleyengine.hpp</a></div><div class="ttdoc">Barone-Adesi and Whaley approximation engine.</div></div>
+<div class="ttc" id="abatesengine_8hpp_html"><div class="ttname"><a href="../../da/da7/batesengine_8hpp.html">batesengine.hpp</a></div><div class="ttdoc">analytic Bates model engine</div></div>
+<div class="ttc" id="abinomialengine_8hpp_html"><div class="ttname"><a href="../../db/db1/binomialengine_8hpp.html">binomialengine.hpp</a></div><div class="ttdoc">Binomial option engine.</div></div>
+<div class="ttc" id="abjerksundstenslandengine_8hpp_html"><div class="ttname"><a href="../../df/d44/bjerksundstenslandengine_8hpp.html">bjerksundstenslandengine.hpp</a></div><div class="ttdoc">Bjerksund and Stensland approximation engine.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual365_fixed_html"><div class="ttname"><a href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">QuantLib::Actual365Fixed</a></div><div class="ttdoc">Actual/365 (Fixed) day count convention.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbf/actual365fixed_8hpp_source.html#l00045">actual365fixed.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html">QuantLib::Calendar</a></div><div class="ttdoc">calendar class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00061">calendar.hpp:61</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
@@ -492,13 +516,25 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_option_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::Option::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd9/option_8hpp_source.html#l00039">option.hpp:39</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_t_a_r_g_e_t_html"><div class="ttname"><a href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">QuantLib::TARGET</a></div><div class="ttdoc">TARGET calendar</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d69/target_8hpp_source.html#l00050">target.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_vanilla_option_html"><div class="ttname"><a href="../../d2/d47/class_quant_lib_1_1_vanilla_option.html">QuantLib::VanillaOption</a></div><div class="ttdoc">Vanilla option (no discrete dividends, no barriers) on a single asset.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dde/vanillaoption_8hpp_source.html#l00038">vanillaoption.hpp:38</a></div></div>
+<div class="ttc" id="adataformatters_8hpp_html"><div class="ttname"><a href="../../db/db9/dataformatters_8hpp.html">dataformatters.hpp</a></div><div class="ttdoc">output manipulators</div></div>
+<div class="ttc" id="aextendedornsteinuhlenbeckprocess_8cpp_html_a1759c348ed007f12d79ceff98cc3abbe"><div class="ttname"><a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a></div><div class="ttdeci">ext::function&lt; Real(Real)&gt; b</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp_source.html#l00030">extendedornsteinuhlenbeckprocess.cpp:30</a></div></div>
+<div class="ttc" id="afdblackscholesvanillaengine_8hpp_html"><div class="ttname"><a href="../../dd/d53/fdblackscholesvanillaengine_8hpp.html">fdblackscholesvanillaengine.hpp</a></div><div class="ttdoc">Finite-differences Black Scholes vanilla option engine.</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
 <div class="ttc" id="agroup__types_html_gae7427f4743503002b0c6eeeefae91a3d"><div class="ttname"><a href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">QuantLib::Spread</a></div><div class="ttdeci">Real Spread</div><div class="ttdoc">spreads on interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00074">types.hpp:74</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="aintegralengine_8hpp_html"><div class="ttname"><a href="../../d3/dcc/integralengine_8hpp.html">integralengine.hpp</a></div><div class="ttdoc">Integral option engine.</div></div>
+<div class="ttc" id="aintegralhestonvarianceoptionengine_8cpp_html_aac80ba3218a14ee2ac65bfc8989a2015"><div class="ttname"><a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a></div><div class="ttdeci">ext::shared_ptr&lt; QuantLib::Payoff &gt; payoff</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp_source.html#l00350">integralhestonvarianceoptionengine.cpp:350</a></div></div>
+<div class="ttc" id="amcamericanengine_8hpp_html"><div class="ttname"><a href="../../d4/df5/mcamericanengine_8hpp.html">mcamericanengine.hpp</a></div><div class="ttdoc">American Monte Carlo engine.</div></div>
+<div class="ttc" id="amceuropeanengine_8hpp_html"><div class="ttname"><a href="../../d5/de9/mceuropeanengine_8hpp.html">mceuropeanengine.hpp</a></div><div class="ttdoc">Monte Carlo European option engine.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aqdfpamericanengine_8hpp_html"><div class="ttname"><a href="../../df/ddb/qdfpamericanengine_8hpp.html">qdfpamericanengine.hpp</a></div></div>
+<div class="ttc" id="aqldefines_8hpp_html"><div class="ttname"><a href="../../de/d56/qldefines_8hpp.html">qldefines.hpp</a></div><div class="ttdoc">Global definitions and compiler switches.</div></div>
+<div class="ttc" id="atanhsinhintegral_8hpp_html"><div class="ttname"><a href="../../d4/d9f/tanhsinhintegral_8hpp.html">tanhsinhintegral.hpp</a></div></div>
+<div class="ttc" id="atarget_8hpp_html"><div class="ttname"><a href="../../dc/d69/target_8hpp.html">target.hpp</a></div><div class="ttdoc">TARGET calendar.</div></div>
+<div class="ttc" id="avanillaoption_8hpp_html"><div class="ttname"><a href="../../d6/dde/vanillaoption_8hpp.html">vanillaoption.hpp</a></div><div class="ttdoc">Vanilla option on a single asset.</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

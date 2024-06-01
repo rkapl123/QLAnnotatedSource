@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/math/matrixutilities/symmetricschurdecomposition.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/math/matrixutilities/symmetricschurdecomposition.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">symmetricschurdecomposition.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../dc/deb/symmetricschurdecomposition_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2003 Ferdinando Ametrano</span></div>
@@ -106,18 +105,40 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file symmetricschurdecomposition.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief Eigenvalues/eigenvectors of a real symmetric matrix</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_math_jacobi_decomposition_h</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_math_jacobi_decomposition_h</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/math/matrix.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/dce/matrix_8hpp.html">ql/math/matrix.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"></span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    //! symmetric threshold Jacobi algorithm.</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span><span class="comment">    /*! Given a real symmetric matrix S, the Schur decomposition</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">        finds the eigenvalues and eigenvectors of S. If D is the</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        diagonal matrix formed by the eigenvalues and U the</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        unitarian matrix of the eigenvectors we can write the</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        Schur decomposition as</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        \f[ S = U \cdot D \cdot U^T \, ,\f]</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">        where \f$ \cdot \f$ is the standard matrix product</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">        and  \f$ ^T  \f$ is the transpose operator.</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        This class implements the Schur decomposition using the</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        symmetric threshold Jacobi algorithm. For details on the</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        different Jacobi transfomations see &quot;Matrix computation,&quot;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        second edition, by Golub and Van Loan,</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        The Johns Hopkins University Press</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"></span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        \test the correctness of the returned values is tested by</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">              checking their properties.</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html">   50</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html">SymmetricSchurDecomposition</a> {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_class" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html">SymmetricSchurDecomposition</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> &amp;s);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        /*! \pre s must be symmetric */</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_class" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html">SymmetricSchurDecomposition</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> &amp;<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a0e63b0ad913b68a68ba39aa88ab60cb3">s</a>);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#ac35f36e99c9276e13b8139cad39be6b3">   54</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; <a class="code hl_function" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#ac35f36e99c9276e13b8139cad39be6b3">eigenvalues</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#af5530947e239dbe2770cc68b00be1c5d">diagonal_</a>; }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#ac2380e9eaf6ddfca2506f7c2e2d3382e">   55</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a>&amp; <a class="code hl_function" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#ac2380e9eaf6ddfca2506f7c2e2d3382e">eigenvectors</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#a567fec5753f16416f938273edd3c99fc">eigenVectors_</a>; }</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <span class="keyword">private</span>:</div>
@@ -129,8 +150,9 @@ $(function() {
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// inline definitions</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#a62f03bb16b8cccdd405441892f36095a">   67</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#a62f03bb16b8cccdd405441892f36095a">SymmetricSchurDecomposition::jacobiRotate_</a>(</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment"></span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">    //! This routines implements the Jacobi, a.k.a. Givens, rotation</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#a62f03bb16b8cccdd405441892f36095a">   67</a></span><span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#a62f03bb16b8cccdd405441892f36095a">SymmetricSchurDecomposition::jacobiRotate_</a>(</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                                      <a class="code hl_class" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> &amp;m, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> rot, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> dil, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j1,</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                                      <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> k1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j2, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> k2)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x1, x2;</div>
@@ -156,7 +178,9 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_symmetric_schur_decomposition_html_af5530947e239dbe2770cc68b00be1c5d"><div class="ttname"><a href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#af5530947e239dbe2770cc68b00be1c5d">QuantLib::SymmetricSchurDecomposition::diagonal_</a></div><div class="ttdeci">Array diagonal_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/symmetricschurdecomposition_8hpp_source.html#l00057">symmetricschurdecomposition.hpp:57</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="amatrix_8hpp_html"><div class="ttname"><a href="../../df/dce/matrix_8hpp.html">matrix.hpp</a></div><div class="ttdoc">matrix used in linear algebra.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aperturbativebarrieroptionengine_8cpp_html_a0e63b0ad913b68a68ba39aa88ab60cb3"><div class="ttname"><a href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a0e63b0ad913b68a68ba39aa88ab60cb3">s</a></div><div class="ttdeci">Real s</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de0/perturbativebarrieroptionengine_8cpp_source.html#l01488">perturbativebarrieroptionengine.cpp:1488</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/mcbasket/pathmultiassetoption.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/mcbasket/pathmultiassetoption.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">pathmultiassetoption.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../dc/da4/pathmultiassetoption_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 Andrea Odetti</span></div>
@@ -106,11 +105,11 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/experimental/mcbasket/pathmultiassetoption.hpp&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/processes/stochasticprocessarray.hpp&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/termstructures/volatility/equityfx/blackconstantvol.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/math/solvers1d/brent.hpp&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/event.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/dd4/pathmultiassetoption_8hpp.html">ql/experimental/mcbasket/pathmultiassetoption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../d7/d38/stochasticprocessarray_8hpp.html">ql/processes/stochasticprocessarray.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d96/blackconstantvol_8hpp.html">ql/termstructures/volatility/equityfx/blackconstantvol.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d09/brent_8hpp.html">ql/math/solvers1d/brent.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d94/event_8hpp.html">ql/event.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
@@ -132,18 +131,20 @@ $(function() {
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">                                                                       const </span>{</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">auto</span>* <a class="code hl_class" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html">arguments</a> = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html">PathMultiAssetOption::arguments</a>*<span class="keyword">&gt;</span>(args);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        QL_REQUIRE(<a class="code hl_class" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html">arguments</a> != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;wrong argument type&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_class" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html">arguments</a> != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;wrong argument type&quot;</span>);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_class" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html">arguments</a>-&gt;<a class="code hl_variable" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html#aab659e2f507ca4fbc266d69a0a5c9ef5">payoff</a>            = <a class="code hl_function" href="../../df/d63/class_quant_lib_1_1_path_multi_asset_option.html#afd6962f983c126fe76325d6f5dd5f7e6">pathPayoff</a>();</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_class" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html">arguments</a>-&gt;<a class="code hl_variable" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html#aa3c115cda618ed9bc3eecdf266fa5b2d">fixingDates</a>       = <a class="code hl_function" href="../../df/d63/class_quant_lib_1_1_path_multi_asset_option.html#aa642d8c0252f83b0d6f180f81df55c76">fixingDates</a>();</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html#ae26e38f89ead35fd7cbe08f68b2e19d7">   52</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html#ae26e38f89ead35fd7cbe08f68b2e19d7">PathMultiAssetOption::arguments::validate</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        QL_REQUIRE(<a class="code hl_variable" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html#aab659e2f507ca4fbc266d69a0a5c9ef5">payoff</a>,                 <span class="stringliteral">&quot;no payoff given&quot;</span>);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        QL_REQUIRE(!<a class="code hl_variable" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html#aa3c115cda618ed9bc3eecdf266fa5b2d">fixingDates</a>.empty(), <span class="stringliteral">&quot;no dates given&quot;</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html#aab659e2f507ca4fbc266d69a0a5c9ef5">payoff</a>,                 <span class="stringliteral">&quot;no payoff given&quot;</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(!<a class="code hl_variable" href="../../db/da8/class_quant_lib_1_1_path_multi_asset_option_1_1arguments.html#aa3c115cda618ed9bc3eecdf266fa5b2d">fixingDates</a>.empty(), <span class="stringliteral">&quot;no dates given&quot;</span>);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="ttc" id="ablackconstantvol_8hpp_html"><div class="ttname"><a href="../../d9/d96/blackconstantvol_8hpp.html">blackconstantvol.hpp</a></div><div class="ttdoc">Black constant volatility, no time dependence, no strike dependence.</div></div>
+<div class="ttc" id="abrent_8hpp_html"><div class="ttname"><a href="../../df/d09/brent_8hpp.html">brent.hpp</a></div><div class="ttdoc">Brent 1-D solver.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_event_html_aec849cb9335c1489b335f183d1327cb6"><div class="ttname"><a href="../../d2/d6c/class_quant_lib_1_1_event.html#aec849cb9335c1489b335f183d1327cb6">QuantLib::Event::hasOccurred</a></div><div class="ttdeci">virtual bool hasOccurred(const Date &amp;refDate=Date(), ext::optional&lt; bool &gt; includeRefDate=ext::nullopt) const</div><div class="ttdoc">returns true if an event has already occurred before a date</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d1b/event_8cpp_source.html#l00028">event.cpp:28</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_instrument_html_abb995b099094913d099029f2fd3936b8"><div class="ttname"><a href="../../d9/d65/class_quant_lib_1_1_instrument.html#abb995b099094913d099029f2fd3936b8">QuantLib::Instrument::NPV_</a></div><div class="ttdeci">Real NPV_</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da7/instrument_8hpp_source.html#l00106">instrument.hpp:106</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_instrument_html_ae58e4c75062c7f3f4dedbd744f9a379f"><div class="ttname"><a href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">QuantLib::Instrument::setPricingEngine</a></div><div class="ttdeci">void setPricingEngine(const ext::shared_ptr&lt; PricingEngine &gt; &amp;)</div><div class="ttdoc">set the pricing engine to be used.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8b/instrument_8cpp_source.html#l00035">instrument.cpp:35</a></div></div>
@@ -160,7 +161,11 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_path_multi_asset_option_html_afd6962f983c126fe76325d6f5dd5f7e6"><div class="ttname"><a href="../../df/d63/class_quant_lib_1_1_path_multi_asset_option.html#afd6962f983c126fe76325d6f5dd5f7e6">QuantLib::PathMultiAssetOption::pathPayoff</a></div><div class="ttdeci">virtual ext::shared_ptr&lt; PathPayoff &gt; pathPayoff() const =0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pricing_engine_1_1arguments_html"><div class="ttname"><a href="../../d7/d14/class_quant_lib_1_1_pricing_engine_1_1arguments.html">QuantLib::PricingEngine::arguments</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcc/pricingengine_8hpp_source.html#l00045">pricingengine.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1detail_1_1simple__event_html"><div class="ttname"><a href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html">QuantLib::detail::simple_event</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d94/event_8hpp_source.html#l00069">event.hpp:69</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aevent_8hpp_html"><div class="ttname"><a href="../../dc/d94/event_8hpp.html">event.hpp</a></div><div class="ttdoc">Base class for events associated with a given date.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="apathmultiassetoption_8hpp_html"><div class="ttname"><a href="../../da/dd4/pathmultiassetoption_8hpp.html">pathmultiassetoption.hpp</a></div><div class="ttdoc">Option on multiple assets.</div></div>
+<div class="ttc" id="astochasticprocessarray_8hpp_html"><div class="ttname"><a href="../../d7/d38/stochasticprocessarray_8hpp.html">stochasticprocessarray.hpp</a></div><div class="ttdoc">Array of correlated 1-D stochastic processes.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/instruments/oneassetoption.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/instruments/oneassetoption.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">oneassetoption.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../de/d2b/oneassetoption_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2000, 2001, 2002, 2003 RiskMap srl</span></div>
@@ -107,24 +106,32 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"></span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">/*! \file oneassetoption.hpp</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">    \brief Option on a single asset</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef quantlib_oneasset_option_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define quantlib_oneasset_option_hpp</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/option.hpp&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/dd9/option_8hpp.html">ql/option.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html">   34</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html">OneAssetOption</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d2/df1/class_quant_lib_1_1_option.html">Option</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">    //! Base class for options on a single asset</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html">   34</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html">OneAssetOption</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d2/df1/class_quant_lib_1_1_option.html">Option</a> {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">class </span><a class="code hl_class" href="../../d6/d09/class_quant_lib_1_1_one_asset_option_1_1engine.html">engine</a>;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">class </span><a class="code hl_class" href="../../d5/dea/class_quant_lib_1_1_one_asset_option_1_1results.html">results</a>;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_class" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html">OneAssetOption</a>(<span class="keyword">const</span> ext::shared_ptr&lt;Payoff&gt;&amp;,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                       <span class="keyword">const</span> ext::shared_ptr&lt;Exercise&gt;&amp;);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#a34523db1515ba7190d517dc4c483c293">isExpired</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#a397f8534c2b3d08642e5040c40426ab7">delta</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                       <span class="keyword">const</span> ext::shared_ptr&lt;Exercise&gt;&amp;);<span class="comment"></span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">        //! \name Instrument interface</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#a34523db1515ba7190d517dc4c483c293">isExpired</a>() <span class="keyword">const override</span>;<span class="comment"></span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"></span><span class="comment">        //! \name greeks</span><span class="comment"></span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#a397f8534c2b3d08642e5040c40426ab7">delta</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#ad1aeee7c18b44d616b3c8169ebb9611a">deltaForward</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#a3279751aa21dd6b1bbb01f26d47dc115">elasticity</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#aaed679bde0c499002fce41342891b61d">gamma</a>() <span class="keyword">const</span>;</div>
@@ -134,8 +141,9 @@ $(function() {
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#a891ea127047dcd9acc1dff3dbf26e88e">rho</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#ab4a1639c3e385d85ad87e75f842e281b">dividendRho</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#a55b21c7d22a7fdce4611b3b95effc896">strikeSensitivity</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#a52f0d80c352ce23b6009d89a828b7824">itmCashProbability</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#ad0f7bbb6440966f75189fac0562b6a67">fetchResults</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">PricingEngine::results</a>*) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#a52f0d80c352ce23b6009d89a828b7824">itmCashProbability</a>() <span class="keyword">const</span>;<span class="comment"></span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment"></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#ad0f7bbb6440966f75189fac0562b6a67">fetchResults</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">PricingEngine::results</a>*) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#ac9853d2deac18759fe4e1a4b186767d3">setupExpired</a>() <span class="keyword">const override</span>;</div>
@@ -144,8 +152,9 @@ $(function() {
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#a6c7b39d5c2301630075ba6e2b4b179db">   64</a></span>            <a class="code hl_variable" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#ac410d11a4e9ec30e8d15881d4c9cd515">thetaPerDay_</a>, <a class="code hl_variable" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#a7c212193f9c0fd38b46c202f42e9ec5b">vega_</a>, <a class="code hl_variable" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#a98f57706bc57f4e14ca8c8cb1cfa213b">rho_</a>, <a class="code hl_variable" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#a6c7b39d5c2301630075ba6e2b4b179db">dividendRho_</a>, <a class="code hl_variable" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#ad618eb552fd12a281b63c0e1f61331a8">strikeSensitivity_</a>,</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#acd2b2c1226fed076988f92801a2688e5">   65</a></span>            <a class="code hl_variable" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html#acd2b2c1226fed076988f92801a2688e5">itmCashProbability_</a>;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    };</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../d5/dea/class_quant_lib_1_1_one_asset_option_1_1results.html">   69</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d5/dea/class_quant_lib_1_1_one_asset_option_1_1results.html">OneAssetOption::results</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d7/dde/class_quant_lib_1_1_instrument_1_1results.html">Instrument::results</a>,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment"></span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">    //! %Results from single-asset option calculation</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../d5/dea/class_quant_lib_1_1_one_asset_option_1_1results.html">   69</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d5/dea/class_quant_lib_1_1_one_asset_option_1_1results.html">OneAssetOption::results</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d7/dde/class_quant_lib_1_1_instrument_1_1results.html">Instrument::results</a>,</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                                    <span class="keyword">public</span> <a class="code hl_class" href="../../da/d25/class_quant_lib_1_1_greeks.html">Greeks</a>,</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                                    <span class="keyword">public</span> <a class="code hl_class" href="../../de/df8/class_quant_lib_1_1_more_greeks.html">MoreGreeks</a> {</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keyword">public</span>:</div>
@@ -205,6 +214,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_pricing_engine_1_1results_html"><div class="ttname"><a href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">QuantLib::PricingEngine::results</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcc/pricingengine_8hpp_source.html#l00051">pricingengine.hpp:51</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aoption_8hpp_html"><div class="ttname"><a href="../../d0/dd9/option_8hpp.html">option.hpp</a></div><div class="ttdoc">Base option class.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

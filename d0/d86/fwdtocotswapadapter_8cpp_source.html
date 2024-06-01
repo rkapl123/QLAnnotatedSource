@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/models/marketmodels/models/fwdtocotswapadapter.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/models/marketmodels/models/fwdtocotswapadapter.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">fwdtocotswapadapter.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d0/d86/fwdtocotswapadapter_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2006 Ferdinando Ametrano</span></div>
@@ -108,11 +107,11 @@ $(function() {
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/models/marketmodels/models/fwdtocotswapadapter.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/models/marketmodels/curvestates/lmmcurvestate.hpp&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/models/marketmodels/evolutiondescription.hpp&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;ql/models/marketmodels/swapforwardmappings.hpp&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ql/utilities/dataformatters.hpp&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/dcc/fwdtocotswapadapter_8hpp.html">ql/models/marketmodels/models/fwdtocotswapadapter.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d69/lmmcurvestate_8hpp.html">ql/models/marketmodels/curvestates/lmmcurvestate.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/df1/evolutiondescription_8hpp.html">ql/models/marketmodels/evolutiondescription.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/dbd/swapforwardmappings_8hpp.html">ql/models/marketmodels/swapforwardmappings.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/db9/dataformatters_8hpp.html">ql/utilities/dataformatters.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
@@ -128,7 +127,7 @@ $(function() {
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">const</span> std::vector&lt;Spread&gt;&amp; <a class="code hl_function" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a14a34a8c69fbc9444f8aeba4c104b857">displacements</a> =</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_variable" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#aeb5d6b866d157467d71391e0c6cf3c5a">fwdModel_</a>-&gt;displacements();</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i = 1; i&lt;<a class="code hl_function" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a14a34a8c69fbc9444f8aeba4c104b857">displacements</a>.size(); ++i) {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            QL_REQUIRE(<a class="code hl_function" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a14a34a8c69fbc9444f8aeba4c104b857">displacements</a>[i]==<a class="code hl_function" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a14a34a8c69fbc9444f8aeba4c104b857">displacements</a>[0],</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_function" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a14a34a8c69fbc9444f8aeba4c104b857">displacements</a>[i]==<a class="code hl_function" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a14a34a8c69fbc9444f8aeba4c104b857">displacements</a>[0],</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                       <a class="code hl_function" href="../../dc/da8/group__manips.html#gace46b8e41fd72ee71b9ca53cafd0277f">io::ordinal</a>(i+1) &lt;&lt; <span class="stringliteral">&quot; displacement (&quot;</span> &lt;&lt;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                       <a class="code hl_function" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a14a34a8c69fbc9444f8aeba4c104b857">displacements</a>[i] &lt;&lt; <span class="stringliteral">&quot;) not equal to the previous ones&quot;</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                       <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; <a class="code hl_function" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#a14a34a8c69fbc9444f8aeba4c104b857">displacements</a>[0] &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
@@ -141,7 +140,7 @@ $(function() {
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_variable" href="../../db/de1/class_quant_lib_1_1_fwd_to_cot_swap_adapter.html#aeb5d6b866d157467d71391e0c6cf3c5a">fwdModel_</a>-&gt;evolution().evolutionTimes();</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i = 0;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>             i&lt;rateTimes.size() &amp;&amp; rateTimes[i]&lt;=evolutionTimes.back(); ++i) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            QL_REQUIRE(std::find(evolutionTimes.begin(), evolutionTimes.end(),</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(std::find(evolutionTimes.begin(), evolutionTimes.end(),</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                                 rateTimes[i])!=evolutionTimes.end(),</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                 <span class="stringliteral">&quot;skipping &quot;</span> &lt;&lt; <a class="code hl_function" href="../../dc/da8/group__manips.html#gace46b8e41fd72ee71b9ca53cafd0277f">io::ordinal</a>(i+1) &lt;&lt; <span class="stringliteral">&quot; rate time&quot;</span>);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
@@ -209,9 +208,15 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_observable_html_a397546715bfc5aedd1d16dd202a19d4c"><div class="ttname"><a href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">QuantLib::Observable::notifyObservers</a></div><div class="ttdeci">void notifyObservers()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d2a/observable_8cpp_source.html#l00056">observable.cpp:56</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_observer_html_aa6ade205ed506bf712da2704f80a73a0"><div class="ttname"><a href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">QuantLib::Observer::registerWith</a></div><div class="ttdeci">std::pair&lt; iterator, bool &gt; registerWith(const ext::shared_ptr&lt; Observable &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00228">observable.hpp:228</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_swap_forward_mappings_html_a47774671d8a88d65d56a8f4e4e3726fa"><div class="ttname"><a href="../../da/d2c/class_quant_lib_1_1_swap_forward_mappings.html#a47774671d8a88d65d56a8f4e4e3726fa">QuantLib::SwapForwardMappings::coterminalSwapZedMatrix</a></div><div class="ttdeci">static Matrix coterminalSwapZedMatrix(const CurveState &amp;cs, Spread displacement)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/swapforwardmappings_8cpp_source.html#l00102">swapforwardmappings.cpp:102</a></div></div>
+<div class="ttc" id="adataformatters_8hpp_html"><div class="ttname"><a href="../../db/db9/dataformatters_8hpp.html">dataformatters.hpp</a></div><div class="ttdoc">output manipulators</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aevolutiondescription_8hpp_html"><div class="ttname"><a href="../../dc/df1/evolutiondescription_8hpp.html">evolutiondescription.hpp</a></div></div>
+<div class="ttc" id="afwdtocotswapadapter_8hpp_html"><div class="ttname"><a href="../../d4/dcc/fwdtocotswapadapter_8hpp.html">fwdtocotswapadapter.hpp</a></div></div>
 <div class="ttc" id="agroup__manips_html_gace46b8e41fd72ee71b9ca53cafd0277f"><div class="ttname"><a href="../../dc/da8/group__manips.html#gace46b8e41fd72ee71b9ca53cafd0277f">QuantLib::io::ordinal</a></div><div class="ttdeci">detail::ordinal_holder ordinal(Size)</div><div class="ttdoc">outputs naturals as 1st, 2nd, 3rd...</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db9/dataformatters_8hpp_source.html#l00116">dataformatters.hpp:116</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="almmcurvestate_8hpp_html"><div class="ttname"><a href="../../d0/d69/lmmcurvestate_8hpp.html">lmmcurvestate.hpp</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aswapforwardmappings_8hpp_html"><div class="ttname"><a href="../../d5/dbd/swapforwardmappings_8hpp.html">swapforwardmappings.hpp</a></div><div class="ttdoc">Utility functions for mapping between swap rate and forward rate.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

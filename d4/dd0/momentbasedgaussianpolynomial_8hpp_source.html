@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/math/integrals/momentbasedgaussianpolynomial.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/math/integrals/momentbasedgaussianpolynomial.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">momentbasedgaussianpolynomial.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d4/dd0/momentbasedgaussianpolynomial_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2020 Klaus Spanderen</span></div>
@@ -105,17 +104,34 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file momentbasedgaussianpolynomial.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Gaussian quadrature defined by the moments of the distribution</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_moment_based_gaussian_polynomial_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_moment_based_gaussian_polynomial_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/math/comparison.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/math/integrals/gaussianorthogonalpolynomial.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/errors.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/d03/comparison_8hpp.html">ql/math/comparison.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d1a/gaussianorthogonalpolynomial_8hpp.html">ql/math/integrals/gaussianorthogonalpolynomial.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d52/errors_8hpp.html">ql/errors.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {<span class="comment"></span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    /*! References:</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        Gauss quadratures and orthogonal polynomials</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"></span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        G.H. Gloub and J.H. Welsch: Calculation of Gauss quadrature rule.</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        Math. Comput. 23 (1986), 221-230,</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">        http://web.stanford.edu/class/cme335/spr11/S0025-5718-69-99647-1.pdf</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"></span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        M. Morandi Cecchi and M. Redivo Zaglia, Computing the coefficients</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        of a recurrence formula for numerical integration by moments and</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        modified moments.</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        http://ac.els-cdn.com/0377042793901522/1-s2.0-0377042793901522-main.pdf?_tid=643d5dca-a05d-11e6-9a56-00000aab0f27&amp;acdnat=1478023545_cf7c87cba4cc9e37a136e68a2564d411</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> mp_real&gt;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d3/d17/class_quant_lib_1_1_moment_based_gaussian_polynomial.html">   48</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d3/d17/class_quant_lib_1_1_moment_based_gaussian_polynomial.html">MomentBasedGaussianPolynomial</a></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            : <span class="keyword">public</span> <a class="code hl_class" href="../../d2/dd5/class_quant_lib_1_1_gaussian_orthogonal_polynomial.html">GaussianOrthogonalPolynomial</a> {</div>
@@ -174,20 +190,20 @@ $(function() {
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> mp_real&gt; <span class="keyword">inline</span></div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="../../d3/d17/class_quant_lib_1_1_moment_based_gaussian_polynomial.html#a8fabe8d4d3bfd4971ba1d046be93889d">  103</a></span>    mp_real <a class="code hl_function" href="../../d3/d17/class_quant_lib_1_1_moment_based_gaussian_polynomial.html#a8fabe8d4d3bfd4971ba1d046be93889d">MomentBasedGaussianPolynomial&lt;mp_real&gt;::alpha_</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> u)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">if</span> (b_.size() &lt;= u)</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            b_.resize(u+1, std::numeric_limits&lt;mp_real&gt;::quiet_NaN());</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a>.size() &lt;= u)</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a>.resize(u+1, std::numeric_limits&lt;mp_real&gt;::quiet_NaN());</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">if</span> (std::isnan(b_[u])) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">if</span> (std::isnan(<a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a>[u])) {</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">if</span> (u == 0)</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                b_[u] = moment(1);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a>[u] = moment(1);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> iu(u);</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <span class="keyword">const</span> mp_real tmp =</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                    -z(iu-1, iu)/z(iu-1, iu-1) + z(iu, iu+1)/z(iu, iu);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                b_[u] = tmp;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                <a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a>[u] = tmp;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            }</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        }</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">return</span> b_[u];</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a>[u];</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> mp_real&gt; <span class="keyword">inline</span></div>
@@ -195,15 +211,15 @@ $(function() {
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">if</span> (u == 0)</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordflow">return</span> mp_real(1.0);</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">if</span> (c_.size() &lt;= u)</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            c_.resize(u+1, std::numeric_limits&lt;mp_real&gt;::quiet_NaN());</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d88/bivariatenormaldistribution_8cpp.html#a04b890f917032156f955c80d329dbd80">c_</a>.size() &lt;= u)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <a class="code hl_variable" href="../../d7/d88/bivariatenormaldistribution_8cpp.html#a04b890f917032156f955c80d329dbd80">c_</a>.resize(u+1, std::numeric_limits&lt;mp_real&gt;::quiet_NaN());</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">if</span> (std::isnan(c_[u])) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">if</span> (std::isnan(<a class="code hl_variable" href="../../d7/d88/bivariatenormaldistribution_8cpp.html#a04b890f917032156f955c80d329dbd80">c_</a>[u])) {</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> iu(u);</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keyword">const</span> mp_real tmp = z(iu, iu) / z(iu-1, iu-1);</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            c_[u] = tmp;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <a class="code hl_variable" href="../../d7/d88/bivariatenormaldistribution_8cpp.html#a04b890f917032156f955c80d329dbd80">c_</a>[u] = tmp;</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        }</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">return</span> c_[u];</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/d88/bivariatenormaldistribution_8cpp.html#a04b890f917032156f955c80d329dbd80">c_</a>[u];</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    }</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keyword">template</span> &lt;&gt; <span class="keyword">inline</span></div>
@@ -223,14 +239,14 @@ $(function() {
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> mp_real&gt; <span class="keyword">inline</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="../../d3/d17/class_quant_lib_1_1_moment_based_gaussian_polynomial.html#a5d968009b12a633349935f730e562c3c">  153</a></span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d3/d17/class_quant_lib_1_1_moment_based_gaussian_polynomial.html#a5d968009b12a633349935f730e562c3c">MomentBasedGaussianPolynomial&lt;mp_real&gt;::beta</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> u)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        mp_real b = beta_(u);</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordflow">return</span> b.template convert_to&lt;Real&gt;();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        mp_real <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a> = beta_(u);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>.template convert_to&lt;Real&gt;();</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keyword">template</span> &lt;&gt; <span class="keyword">inline</span></div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="../../d3/d17/class_quant_lib_1_1_moment_based_gaussian_polynomial.html#aa0a08b221c82ab0aa3d9a0af2308c24d">  159</a></span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d3/d17/class_quant_lib_1_1_moment_based_gaussian_polynomial.html#a43d13b3377d9c2489192862b6bb0a63f">MomentBasedGaussianPolynomial&lt;Real&gt;::mu_0</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> m0 = moment(0);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        QL_REQUIRE(<a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#aedc6094cfc783bb3e6a6c9a7ee68e3f8">close_enough</a>(m0, 1.0), <span class="stringliteral">&quot;zero moment must by one.&quot;</span>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#aedc6094cfc783bb3e6a6c9a7ee68e3f8">close_enough</a>(m0, 1.0), <span class="stringliteral">&quot;zero moment must by one.&quot;</span>);</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">return</span> moment(0);</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
@@ -242,6 +258,7 @@ $(function() {
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>}</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abivariatenormaldistribution_8cpp_html_a04b890f917032156f955c80d329dbd80"><div class="ttname"><a href="../../d7/d88/bivariatenormaldistribution_8cpp.html#a04b890f917032156f955c80d329dbd80">c_</a></div><div class="ttdeci">Real c_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d88/bivariatenormaldistribution_8cpp_source.html#l00149">bivariatenormaldistribution.cpp:149</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_gaussian_orthogonal_polynomial_html"><div class="ttname"><a href="../../d2/dd5/class_quant_lib_1_1_gaussian_orthogonal_polynomial.html">QuantLib::GaussianOrthogonalPolynomial</a></div><div class="ttdoc">orthogonal polynomial for Gaussian quadratures</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1a/gaussianorthogonalpolynomial_8hpp_source.html#l00050">gaussianorthogonalpolynomial.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_moment_based_gaussian_polynomial_html"><div class="ttname"><a href="../../d3/d17/class_quant_lib_1_1_moment_based_gaussian_polynomial.html">QuantLib::MomentBasedGaussianPolynomial</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/momentbasedgaussianpolynomial_8hpp_source.html#l00048">momentbasedgaussianpolynomial.hpp:49</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_moment_based_gaussian_polynomial_html_a2320c3b4ab9c442dc83e5108b8bb5777"><div class="ttname"><a href="../../d3/d17/class_quant_lib_1_1_moment_based_gaussian_polynomial.html#a2320c3b4ab9c442dc83e5108b8bb5777">QuantLib::MomentBasedGaussianPolynomial::moment</a></div><div class="ttdeci">virtual mp_real moment(Size i) const =0</div></div>
@@ -255,9 +272,15 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_moment_based_gaussian_polynomial_html_aa60b7f4d94704d4be993b9f913da8503"><div class="ttname"><a href="../../d3/d17/class_quant_lib_1_1_moment_based_gaussian_polynomial.html#aa60b7f4d94704d4be993b9f913da8503">QuantLib::MomentBasedGaussianPolynomial::z</a></div><div class="ttdeci">mp_real z(Integer k, Integer i) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/momentbasedgaussianpolynomial_8hpp_source.html#l00074">momentbasedgaussianpolynomial.hpp:74</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_moment_based_gaussian_polynomial_html_abf709c50008768f4109e5bc27f91d6a8"><div class="ttname"><a href="../../d3/d17/class_quant_lib_1_1_moment_based_gaussian_polynomial.html#abf709c50008768f4109e5bc27f91d6a8">QuantLib::MomentBasedGaussianPolynomial::c_</a></div><div class="ttdeci">std::vector&lt; mp_real &gt; c_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/momentbasedgaussianpolynomial_8hpp_source.html#l00065">momentbasedgaussianpolynomial.hpp:65</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_moment_based_gaussian_polynomial_html_ae2afa2b3924ecb5e07bb4137edbbab8a"><div class="ttname"><a href="../../d3/d17/class_quant_lib_1_1_moment_based_gaussian_polynomial.html#ae2afa2b3924ecb5e07bb4137edbbab8a">QuantLib::MomentBasedGaussianPolynomial::beta_</a></div><div class="ttdeci">mp_real beta_(Size i) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/momentbasedgaussianpolynomial_8hpp_source.html#l00122">momentbasedgaussianpolynomial.hpp:122</a></div></div>
+<div class="ttc" id="acomparison_8hpp_html"><div class="ttname"><a href="../../da/d03/comparison_8hpp.html">comparison.hpp</a></div><div class="ttdoc">floating-point comparisons</div></div>
+<div class="ttc" id="aerrors_8hpp_html"><div class="ttname"><a href="../../df/d52/errors_8hpp.html">errors.hpp</a></div><div class="ttdoc">Classes and functions for error handling.</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aextendedornsteinuhlenbeckprocess_8cpp_html_a1759c348ed007f12d79ceff98cc3abbe"><div class="ttname"><a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a></div><div class="ttdeci">ext::function&lt; Real(Real)&gt; b</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp_source.html#l00030">extendedornsteinuhlenbeckprocess.cpp:30</a></div></div>
+<div class="ttc" id="agaussianorthogonalpolynomial_8hpp_html"><div class="ttname"><a href="../../d9/d1a/gaussianorthogonalpolynomial_8hpp.html">gaussianorthogonalpolynomial.hpp</a></div><div class="ttdoc">orthogonal polynomials for gaussian quadratures</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="alsmbasissystem_8cpp_html_a348c18cf6f6480c5806950ba9b795c2d"><div class="ttname"><a href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a></div><div class="ttdeci">const VF_R b_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d41/lsmbasissystem_8cpp_source.html#l00071">lsmbasissystem.cpp:71</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_aedc6094cfc783bb3e6a6c9a7ee68e3f8"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#aedc6094cfc783bb3e6a6c9a7ee68e3f8">QuantLib::close_enough</a></div><div class="ttdeci">bool close_enough(const Quantity &amp;m1, const Quantity &amp;m2, Size n)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dbf/quantity_8cpp_source.html#l00182">quantity.cpp:182</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>

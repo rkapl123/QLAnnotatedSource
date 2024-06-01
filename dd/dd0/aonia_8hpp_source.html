@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/indexes/ibor/aonia.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/indexes/ibor/aonia.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">aonia.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../dd/dd0/aonia_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">Copyright (C) 2016 Fabrice Lecuyer</span></div>
@@ -105,18 +104,26 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file aonia.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">\brief %Aonia index</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_aonia_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_aonia_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/indexes/iborindex.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/time/calendars/australia.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/time/daycounters/actual365fixed.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/currencies/oceania.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d13/iborindex_8hpp.html">ql/indexes/iborindex.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d9e/australia_8hpp.html">ql/time/calendars/australia.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dbf/actual365fixed_8hpp.html">ql/time/daycounters/actual365fixed.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d68/oceania_8hpp.html">ql/currencies/oceania.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    //! %Aonia index</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span><span class="comment">    /*! Aonia (Australia Overnight Index Average) rate fixed by the RBA.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"></span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">    See &lt;http://www.isda.org/publications/pdf/Supplement-13-to-2000DefinitionsAnnex.pdf&gt;.</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d0/dd3/class_quant_lib_1_1_aonia.html">   39</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d0/dd3/class_quant_lib_1_1_aonia.html">Aonia</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d0/dd3/class_quant_lib_1_1_aonia.html#ad256b23caa7cac7f46b6eb69abef3f6f">   41</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="../../d0/dd3/class_quant_lib_1_1_aonia.html#ad256b23caa7cac7f46b6eb69abef3f6f">Aonia</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; h = {})</div>
@@ -128,6 +135,8 @@ $(function() {
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aactual365fixed_8hpp_html"><div class="ttname"><a href="../../d6/dbf/actual365fixed_8hpp.html">actual365fixed.hpp</a></div><div class="ttdoc">Actual/365 (Fixed) day counter.</div></div>
+<div class="ttc" id="aaustralia_8hpp_html"><div class="ttname"><a href="../../d6/d9e/australia_8hpp.html">australia.hpp</a></div><div class="ttdoc">Australian calendar.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_a_u_d_currency_html"><div class="ttname"><a href="../../d8/d62/class_quant_lib_1_1_a_u_d_currency.html">QuantLib::AUDCurrency</a></div><div class="ttdoc">Australian dollar.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d68/oceania_8hpp_source.html#l00045">oceania.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual365_fixed_html"><div class="ttname"><a href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">QuantLib::Actual365Fixed</a></div><div class="ttdoc">Actual/365 (Fixed) day count convention.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbf/actual365fixed_8hpp_source.html#l00045">actual365fixed.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_aonia_html"><div class="ttname"><a href="../../d0/dd3/class_quant_lib_1_1_aonia.html">QuantLib::Aonia</a></div><div class="ttdoc">Aonia index</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd0/aonia_8hpp_source.html#l00039">aonia.hpp:39</a></div></div>
@@ -135,7 +144,9 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_australia_html"><div class="ttname"><a href="../../d9/d71/class_quant_lib_1_1_australia.html">QuantLib::Australia</a></div><div class="ttdoc">Australian calendar.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d9e/australia_8hpp_source.html#l00052">australia.hpp:52</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_overnight_index_html"><div class="ttname"><a href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">QuantLib::OvernightIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d13/iborindex_8hpp_source.html#l00088">iborindex.hpp:88</a></div></div>
+<div class="ttc" id="aiborindex_8hpp_html"><div class="ttname"><a href="../../d2/d13/iborindex_8hpp.html">iborindex.hpp</a></div><div class="ttdoc">base class for Inter-Bank-Offered-Rate indexes</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aoceania_8hpp_html"><div class="ttname"><a href="../../df/d68/oceania_8hpp.html">oceania.hpp</a></div><div class="ttdoc">Oceanian currencies.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -35,6 +35,7 @@ var searchData=
   ['crossdefault_32',['CrossDefault',['../d7/de1/struct_quant_lib_1_1_atomic_default.html#a1d1cfd8ffb84e947f82999c682b666a7a76547e5e5958214c3c394dc944992bc1',1,'QuantLib::AtomicDefault']]],
   ['cubicspline_33',['CubicSpline',['../d7/dbb/class_quant_lib_1_1_andreasen_huge_volatility_interpl.html#a8472f01c511d77bbfb981a46618ea1eaa7a3fa6d18ffe1961c68c7f03516f34e8',1,'QuantLib::AndreasenHugeVolatilityInterpl']]],
   ['currenttobest2diffs_34',['CurrentToBest2Diffs',['../d4/d1a/class_quant_lib_1_1_differential_evolution.html#acf7192c608527efb8f8dedf0a3f2e706a7010ededa44c804fffe175ca12927075',1,'QuantLib::DifferentialEvolution']]],
-  ['customdate_35',['CustomDate',['../de/d54/struct_quant_lib_1_1_pillar.html#ac5102e0b11ce43d0b9ef595c3c3ab0c3a4087cecaec282e80b3e4c24ce9117e84',1,'QuantLib::Pillar']]],
-  ['customsmile_36',['CustomSmile',['../df/df4/struct_quant_lib_1_1_markov_functional_1_1_model_settings.html#a8ec85d2e73a67db49185f3b3c9cc306cac235d234015cf289f28f6835207f2730',1,'QuantLib::MarkovFunctional::ModelSettings']]]
+  ['custom_35',['Custom',['../de/d67/struct_quant_lib_1_1_futures.html#a1d1cfd8ffb84e947f82999c682b666a7a26b367bcdd210f7345b551b921c5551f',1,'QuantLib::Futures']]],
+  ['customdate_36',['CustomDate',['../de/d54/struct_quant_lib_1_1_pillar.html#ac5102e0b11ce43d0b9ef595c3c3ab0c3a4087cecaec282e80b3e4c24ce9117e84',1,'QuantLib::Pillar']]],
+  ['customsmile_37',['CustomSmile',['../df/df4/struct_quant_lib_1_1_markov_functional_1_1_model_settings.html#a8ec85d2e73a67db49185f3b3c9cc306cac235d234015cf289f28f6835207f2730',1,'QuantLib::MarkovFunctional::ModelSettings']]]
 ];

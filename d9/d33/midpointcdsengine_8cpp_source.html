@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/pricingengines/credit/midpointcdsengine.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/pricingengines/credit/midpointcdsengine.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">midpointcdsengine.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d9/d33/midpointcdsengine_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008, 2009 Jose Aparicio</span></div>
@@ -108,11 +107,11 @@ $(function() {
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/cashflows/fixedratecoupon.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/instruments/claim.hpp&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/pricingengines/credit/midpointcdsengine.hpp&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;ql/termstructures/yieldtermstructure.hpp&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ql/optional.hpp&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d2b/fixedratecoupon_8hpp.html">ql/cashflows/fixedratecoupon.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/deb/claim_8hpp.html">ql/instruments/claim.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dfe/midpointcdsengine_8hpp.html">ql/pricingengines/credit/midpointcdsengine.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d89/yieldtermstructure_8hpp.html">ql/termstructures/yieldtermstructure.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/dd5/optional_8hpp.html">ql/optional.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
@@ -122,16 +121,16 @@ $(function() {
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                                         <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> discountCurve,</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                                         <span class="keyword">const</span> ext::optional&lt;bool&gt;&amp; includeSettlementDateFlows)</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    : probability_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(probability)), recoveryRate_(recoveryRate),</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      discountCurve_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(discountCurve)),</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      includeSettlementDateFlows_(includeSettlementDateFlows) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <a class="code hl_variable" href="../../da/d4b/cashflows_8cpp.html#aed220d10e30b97ef78d64ad62212c241">discountCurve_</a>(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(discountCurve)),</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <a class="code hl_variable" href="../../da/d4b/cashflows_8cpp.html#ad9543729c4f91803553a520d5f62f488">includeSettlementDateFlows_</a>(includeSettlementDateFlows) {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_function" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code hl_variable" href="../../d0/db6/class_quant_lib_1_1_mid_point_cds_engine.html#a441cf22e5da9198c16764b48f18d056f">probability_</a>);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_function" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(<a class="code hl_variable" href="../../d0/db6/class_quant_lib_1_1_mid_point_cds_engine.html#a188f6df4c42679c1c133919254e351c5">discountCurve_</a>);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d0/db6/class_quant_lib_1_1_mid_point_cds_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">   42</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/db6/class_quant_lib_1_1_mid_point_cds_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">MidPointCdsEngine::calculate</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        QL_REQUIRE(!<a class="code hl_variable" href="../../d0/db6/class_quant_lib_1_1_mid_point_cds_engine.html#a188f6df4c42679c1c133919254e351c5">discountCurve_</a>.empty(),</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(!<a class="code hl_variable" href="../../d0/db6/class_quant_lib_1_1_mid_point_cds_engine.html#a188f6df4c42679c1c133919254e351c5">discountCurve_</a>.empty(),</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                   <span class="stringliteral">&quot;no discount term structure set&quot;</span>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        QL_REQUIRE(!<a class="code hl_variable" href="../../d0/db6/class_quant_lib_1_1_mid_point_cds_engine.html#a441cf22e5da9198c16764b48f18d056f">probability_</a>.empty(),</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(!<a class="code hl_variable" href="../../d0/db6/class_quant_lib_1_1_mid_point_cds_engine.html#a441cf22e5da9198c16764b48f18d056f">probability_</a>.empty(),</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                   <span class="stringliteral">&quot;no probability term structure set&quot;</span>);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> today = <a class="code hl_function" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">Settings::instance</a>().<a class="code hl_function" href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3">evaluationDate</a>();</div>
@@ -230,7 +229,7 @@ $(function() {
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            upfrontSign = -1.0;</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>          <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            QL_FAIL(<span class="stringliteral">&quot;unknown protection side&quot;</span>);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;unknown protection side&quot;</span>);</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        }</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <a class="code hl_variable" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html#ac34e18c69939ed8140f8cccc00ace941">results_</a>.<a class="code hl_variable" href="../../d7/dde/class_quant_lib_1_1_instrument_1_1results.html#abd5746c9a8c4bf217e5294c6c702559b">value</a> =</div>
@@ -274,6 +273,9 @@ $(function() {
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    }</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>}</div>
+<div class="ttc" id="acashflows_8cpp_html_ad9543729c4f91803553a520d5f62f488"><div class="ttname"><a href="../../da/d4b/cashflows_8cpp.html#ad9543729c4f91803553a520d5f62f488">includeSettlementDateFlows_</a></div><div class="ttdeci">bool includeSettlementDateFlows_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d4b/cashflows_8cpp_source.html#l01188">cashflows.cpp:1188</a></div></div>
+<div class="ttc" id="acashflows_8cpp_html_aed220d10e30b97ef78d64ad62212c241"><div class="ttname"><a href="../../da/d4b/cashflows_8cpp.html#aed220d10e30b97ef78d64ad62212c241">discountCurve_</a></div><div class="ttdeci">const YieldTermStructure &amp; discountCurve_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d4b/cashflows_8cpp_source.html#l00418">cashflows.cpp:418</a></div></div>
+<div class="ttc" id="aclaim_8hpp_html"><div class="ttname"><a href="../../de/deb/claim_8hpp.html">claim.hpp</a></div><div class="ttdoc">Classes for default-event claims.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_credit_default_swap_1_1arguments_html_a006e5d9773e9d08f08220d74537d8e46"><div class="ttname"><a href="../../d9/dce/class_quant_lib_1_1_credit_default_swap_1_1arguments.html#a006e5d9773e9d08f08220d74537d8e46">QuantLib::CreditDefaultSwap::arguments::claim</a></div><div class="ttdeci">ext::shared_ptr&lt; Claim &gt; claim</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d33/creditdefaultswap_8hpp_source.html#l00325">creditdefaultswap.hpp:325</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_credit_default_swap_1_1arguments_html_a0550ee1d488cddb9c9192a0a9eb8781f"><div class="ttname"><a href="../../d9/dce/class_quant_lib_1_1_credit_default_swap_1_1arguments.html#a0550ee1d488cddb9c9192a0a9eb8781f">QuantLib::CreditDefaultSwap::arguments::accrualRebate</a></div><div class="ttdeci">ext::shared_ptr&lt; SimpleCashFlow &gt; accrualRebate</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d33/creditdefaultswap_8hpp_source.html#l00322">creditdefaultswap.hpp:322</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_credit_default_swap_1_1arguments_html_a07c2d0e57c7e50acbacdfa1703016dd9"><div class="ttname"><a href="../../d9/dce/class_quant_lib_1_1_credit_default_swap_1_1arguments.html#a07c2d0e57c7e50acbacdfa1703016dd9">QuantLib::CreditDefaultSwap::arguments::side</a></div><div class="ttdeci">Protection::Side side</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d33/creditdefaultswap_8hpp_source.html#l00315">creditdefaultswap.hpp:315</a></div></div>
@@ -310,14 +312,20 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_settings_html_a95055e9410ed0465a5f30d3ffc90c1d3"><div class="ttname"><a href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3">QuantLib::Settings::evaluationDate</a></div><div class="ttdeci">DateProxy &amp; evaluationDate()</div><div class="ttdoc">the date at which pricing is to be performed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0f/settings_8hpp_source.html#l00147">settings.hpp:147</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_singleton_html_ab7455b7e1235d292c444095842349291"><div class="ttname"><a href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">QuantLib::Singleton&lt; Settings &gt;::instance</a></div><div class="ttdeci">static Settings &amp; instance()</div><div class="ttdoc">access to the unique instance</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/singleton_8hpp_source.html#l00068">singleton.hpp:104</a></div></div>
 <div class="ttc" id="aclass_s_html"><div class="ttname"><a href="../../df/da8/class_s.html">S</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a8efe9cb3e67c8d0585e57b4d53c5d2fe"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a></div><div class="ttdeci">#define QL_FAIL(message)</div><div class="ttdoc">throw an error (possibly with file and line information)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00092">errors.hpp:92</a></div></div>
+<div class="ttc" id="afixedratecoupon_8hpp_html"><div class="ttname"><a href="../../d4/d2b/fixedratecoupon_8hpp.html">fixedratecoupon.hpp</a></div><div class="ttdoc">Coupon paying a fixed annual rate.</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gad9817a6a21dfcb91429f0152c99d6313"><div class="ttname"><a href="../../d6/d59/group__types.html#gad9817a6a21dfcb91429f0152c99d6313">QuantLib::Probability</a></div><div class="ttdeci">Real Probability</div><div class="ttdoc">probability</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00082">types.hpp:82</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="amidpointcdsengine_8hpp_html"><div class="ttname"><a href="../../d6/dfe/midpointcdsengine_8hpp.html">midpointcdsengine.hpp</a></div><div class="ttdoc">Mid-point engine for credit default swaps.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="aoptional_8hpp_html"><div class="ttname"><a href="../../db/dd5/optional_8hpp.html">optional.hpp</a></div><div class="ttdoc">Maps optional to either the boost or std implementation.</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_protection_html_a8c0137d7160ad71b6ed265c53c99ed00a9d8adb3a58f9266f34281a3afd6abcb6"><div class="ttname"><a href="../../d1/dbb/struct_quant_lib_1_1_protection.html#a8c0137d7160ad71b6ed265c53c99ed00a9d8adb3a58f9266f34281a3afd6abcb6">QuantLib::Protection::Buyer</a></div><div class="ttdeci">@ Buyer</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc2/default_8hpp_source.html#l00033">default.hpp:33</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_protection_html_a8c0137d7160ad71b6ed265c53c99ed00af07cc4a205761c4aeb2d8011744712f4"><div class="ttname"><a href="../../d1/dbb/struct_quant_lib_1_1_protection.html#a8c0137d7160ad71b6ed265c53c99ed00af07cc4a205761c4aeb2d8011744712f4">QuantLib::Protection::Seller</a></div><div class="ttdeci">@ Seller</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc2/default_8hpp_source.html#l00033">default.hpp:33</a></div></div>
+<div class="ttc" id="ayieldtermstructure_8hpp_html"><div class="ttname"><a href="../../dd/d89/yieldtermstructure_8hpp.html">yieldtermstructure.hpp</a></div><div class="ttdoc">Interest-rate term structure.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

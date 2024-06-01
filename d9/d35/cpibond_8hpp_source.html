@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/instruments/bonds/cpibond.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/instruments/bonds/cpibond.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">cpibond.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d9/d35/cpibond_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2010, 2011 Chris Kenyon</span></div>
@@ -105,22 +104,30 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file cpibond.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> \brief zero-inflation-indexed-ratio-with-base bond</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_cpibond_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_cpibond_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/instruments/bond.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/time/dategenerationrule.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/time/daycounter.hpp&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/interestrate.hpp&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;ql/cashflows/cpicoupon.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d1e/bond_8hpp.html">ql/instruments/bond.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d35/dategenerationrule_8hpp.html">ql/time/dategenerationrule.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d32/daycounter_8hpp.html">ql/time/daycounter.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/dc3/interestrate_8hpp.html">ql/interestrate.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/ddf/cpicoupon_8hpp.html">ql/cashflows/cpicoupon.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">class </span>Schedule;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"></span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">    //! cpi bond; if there is only one date in the schedule it</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">    //! is a zero bond returning an inflated notional.</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"></span><span class="comment">    /*! \ingroup instruments</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"></span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">     */</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../da/dc6/class_quant_lib_1_1_c_p_i_bond.html">   43</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/dc6/class_quant_lib_1_1_c_p_i_bond.html">CPIBond</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d8/d2e/class_quant_lib_1_1_bond.html">Bond</a> {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_class" href="../../da/dc6/class_quant_lib_1_1_c_p_i_bond.html">CPIBond</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a32e050c75a34ceee6f0633bdb799a080">settlementDays</a>,</div>
@@ -130,7 +137,7 @@ $(function() {
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                <span class="keyword">const</span> <a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp; <a class="code hl_function" href="../../da/dc6/class_quant_lib_1_1_c_p_i_bond.html#a889297000bf532621599d453601070ff">observationLag</a>,</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                ext::shared_ptr&lt;ZeroInflationIndex&gt; <a class="code hl_function" href="../../da/dc6/class_quant_lib_1_1_c_p_i_bond.html#ad0c5bc8a67dc5e25c2d7724203bd4474">cpiIndex</a>,</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <a class="code hl_enumeration" href="../../d4/df8/struct_quant_lib_1_1_c_p_i.html#a8472f01c511d77bbfb981a46618ea1ea">CPI::InterpolationType</a> <a class="code hl_function" href="../../da/dc6/class_quant_lib_1_1_c_p_i_bond.html#a4db110b42e8de3c208c95d37f31f0a16">observationInterpolation</a>,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keyword">const</span> <a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a>&amp; schedule,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> schedule,</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <span class="keyword">const</span> std::vector&lt;Rate&gt;&amp; coupons,</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <span class="keyword">const</span> <a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&amp; accrualDayCounter,</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <a class="code hl_enumeration" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> paymentConvention = <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707">ModifiedFollowing</a>,</div>
@@ -168,9 +175,10 @@ $(function() {
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abond_8hpp_html"><div class="ttname"><a href="../../dc/d1e/bond_8hpp.html">bond.hpp</a></div><div class="ttdoc">concrete bond class</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bond_html"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html">QuantLib::Bond</a></div><div class="ttdoc">Base bond class.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00059">bond.hpp:59</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a32e050c75a34ceee6f0633bdb799a080"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a32e050c75a34ceee6f0633bdb799a080">QuantLib::Bond::settlementDays</a></div><div class="ttdeci">Natural settlementDays() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00318">bond.hpp:318</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a817473aebbeeec3bf73aaf6c1627e1c5"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a817473aebbeeec3bf73aaf6c1627e1c5">QuantLib::Bond::issueDate</a></div><div class="ttdeci">Date issueDate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00338">bond.hpp:338</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a32e050c75a34ceee6f0633bdb799a080"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a32e050c75a34ceee6f0633bdb799a080">QuantLib::Bond::settlementDays</a></div><div class="ttdeci">Natural settlementDays() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00332">bond.hpp:332</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a817473aebbeeec3bf73aaf6c1627e1c5"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a817473aebbeeec3bf73aaf6c1627e1c5">QuantLib::Bond::issueDate</a></div><div class="ttdeci">Date issueDate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00352">bond.hpp:352</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_p_i_bond_html"><div class="ttname"><a href="../../da/dc6/class_quant_lib_1_1_c_p_i_bond.html">QuantLib::CPIBond</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d35/cpibond_8hpp_source.html#l00043">cpibond.hpp:43</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_p_i_bond_html_a2f0b22e1c17db6dd8f558f4dfc8dfff6"><div class="ttname"><a href="../../da/dc6/class_quant_lib_1_1_c_p_i_bond.html#a2f0b22e1c17db6dd8f558f4dfc8dfff6">QuantLib::CPIBond::observationLag_</a></div><div class="ttdeci">Period observationLag_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d35/cpibond_8hpp_source.html#l00076">cpibond.hpp:76</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_p_i_bond_html_a31c0dd357b185f62d1effded12509f82"><div class="ttname"><a href="../../da/dc6/class_quant_lib_1_1_c_p_i_bond.html#a31c0dd357b185f62d1effded12509f82">QuantLib::CPIBond::cpiIndex_</a></div><div class="ttdeci">ext::shared_ptr&lt; ZeroInflationIndex &gt; cpiIndex_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d35/cpibond_8hpp_source.html#l00077">cpibond.hpp:77</a></div></div>
@@ -191,12 +199,16 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_day_counter_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html">QuantLib::DayCounter</a></div><div class="ttdoc">day counter class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00044">daycounter.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_schedule_html"><div class="ttname"><a href="../../d5/d5b/class_quant_lib_1_1_schedule.html">QuantLib::Schedule</a></div><div class="ttdoc">Payment schedule.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd1/schedule_8hpp_source.html#l00040">schedule.hpp:40</a></div></div>
+<div class="ttc" id="acpicoupon_8hpp_html"><div class="ttname"><a href="../../d5/ddf/cpicoupon_8hpp.html">cpicoupon.hpp</a></div><div class="ttdoc">Coupon paying a zero-inflation index.</div></div>
+<div class="ttc" id="adategenerationrule_8hpp_html"><div class="ttname"><a href="../../d6/d35/dategenerationrule_8hpp.html">dategenerationrule.hpp</a></div><div class="ttdoc">date generation rule</div></div>
+<div class="ttc" id="adaycounter_8hpp_html"><div class="ttname"><a href="../../df/d32/daycounter_8hpp.html">daycounter.hpp</a></div><div class="ttdoc">day counter class</div></div>
 <div class="ttc" id="agroup__datetime_html_ga6d41db8ba0ea90d22df35889df452ada"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">QuantLib::Frequency</a></div><div class="ttdeci">Frequency</div><div class="ttdoc">Frequency of events.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d40/frequency_8hpp_source.html#l00037">frequency.hpp:37</a></div></div>
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707">QuantLib::ModifiedFollowing</a></div><div class="ttdeci">@ ModifiedFollowing</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00049">businessdayconvention.hpp:45</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547">QuantLib::Unadjusted</a></div><div class="ttdeci">@ Unadjusted</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00058">businessdayconvention.hpp:58</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
+<div class="ttc" id="ainterestrate_8hpp_html"><div class="ttname"><a href="../../dd/dc3/interestrate_8hpp.html">interestrate.hpp</a></div><div class="ttdoc">Instrument rate class.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_c_p_i_html_a8472f01c511d77bbfb981a46618ea1ea"><div class="ttname"><a href="../../d4/df8/struct_quant_lib_1_1_c_p_i.html#a8472f01c511d77bbfb981a46618ea1ea">QuantLib::CPI::InterpolationType</a></div><div class="ttdeci">InterpolationType</div><div class="ttdoc">when you observe an index, how do you interpolate between fixings?</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db8/inflationindex_8hpp_source.html#l00040">inflationindex.hpp:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/credit/pool.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/credit/pool.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">pool.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d3/dc1/pool_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 Roland Lichters</span></div>
@@ -105,11 +104,15 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file pool.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief pool of issuers</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_pool_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_pool_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/experimental/credit/issuer.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d1e/issuer_8hpp.html">ql/experimental/credit/issuer.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
@@ -134,7 +137,9 @@ $(function() {
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="comment">//   where used? e.g. simulations.</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../dc/d25/class_quant_lib_1_1_pool.html#a874bbc5b3000d84f699a0badb252ea32">   50</a></span>        std::map&lt;std::string,Issuer&gt; <a class="code hl_variable" href="../../dc/d25/class_quant_lib_1_1_pool.html#a874bbc5b3000d84f699a0badb252ea32">data_</a>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../dc/d25/class_quant_lib_1_1_pool.html#a4a4e8d4b717c21589a060b4a2d56c4ce">   51</a></span>        std::map&lt;std::string,Real&gt; <a class="code hl_variable" href="../../dc/d25/class_quant_lib_1_1_pool.html#a4a4e8d4b717c21589a060b4a2d56c4ce">time_</a>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../dc/d25/class_quant_lib_1_1_pool.html#ab0040ffc4275fed51da172ce1ee71f8b">   52</a></span>        std::vector&lt;std::string&gt; <a class="code hl_variable" href="../../dc/d25/class_quant_lib_1_1_pool.html#ab0040ffc4275fed51da172ce1ee71f8b">names_</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../dc/d25/class_quant_lib_1_1_pool.html#ab0040ffc4275fed51da172ce1ee71f8b">   52</a></span>        std::vector&lt;std::string&gt; <a class="code hl_variable" href="../../dc/d25/class_quant_lib_1_1_pool.html#ab0040ffc4275fed51da172ce1ee71f8b">names_</a>;<span class="comment"></span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">        /*! default events seniority and currency this name enters the basket </span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">        with. Determines to which event/probability this pool referes to. */</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../dc/d25/class_quant_lib_1_1_pool.html#ae714ca023146dc617d9cd4a8880d55e3">   55</a></span>        std::map&lt;std::string, DefaultProbKey&gt; <a class="code hl_variable" href="../../dc/d25/class_quant_lib_1_1_pool.html#ae714ca023146dc617d9cd4a8880d55e3">defaultKeys_</a>;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    };</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
@@ -165,6 +170,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_pool_html_af71e2c9e63c7a14525b20806f3c40c23"><div class="ttname"><a href="../../dc/d25/class_quant_lib_1_1_pool.html#af71e2c9e63c7a14525b20806f3c40c23">QuantLib::Pool::Pool</a></div><div class="ttdeci">Pool()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dce/pool_8cpp_source.html#l00026">pool.cpp:26</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="aissuer_8hpp_html"><div class="ttname"><a href="../../d2/d1e/issuer_8hpp.html">issuer.hpp</a></div><div class="ttdoc">Classes for credit-name handling.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a67b45b4a8252bded773b222c6f9428dca58f8d6688b98d67fda81d5f4b61a24e9"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dca58f8d6688b98d67fda81d5f4b61a24e9">QuantLib::SeniorSec</a></div><div class="ttdeci">@ SeniorSec</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d52/defaulttype_8hpp_source.html#l00046">defaulttype.hpp:46</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -88,7 +87,6 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="../../d8/dbe/class_quant_lib_1_1_sobol_rsg-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">SobolRsg Class Reference</div></div>
 </div><!--header-->
@@ -97,7 +95,7 @@ $(function() {
 <p>Sobol low-discrepancy sequence generator.  
  <a href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">ql/math/randomnumbers/sobolrsg.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Collaboration diagram for SobolRsg:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -105,21 +103,19 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d1/db8/class_quant_lib_1_1_sobol_rsg__coll__graph.png" border="0" usemap="#a_sobol_rsg_coll__map" alt="Collaboration graph"/></div>
 <map name="a_sobol_rsg_coll__map" id="a_sobol_rsg_coll__map">
-<area shape="rect" title="Sobol low&#45;discrepancy sequence generator." alt="" coords="327,460,481,588"/>
-<area shape="rect" title=" " alt="" coords="5,343,45,383"/>
-<area shape="rect" title=" " alt="" coords="69,343,133,383"/>
-<area shape="rect" title=" " alt="" coords="231,343,292,383"/>
-<area shape="rect" title=" " alt="" coords="345,108,452,148"/>
-<area shape="rect" title=" " alt="" coords="419,218,610,258"/>
-<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="413,343,464,383"/>
-<area shape="rect" href="../../d4/da1/struct_quant_lib_1_1_sample.html" title=" " alt="" coords="854,328,997,397"/>
-<area shape="rect" title=" " alt="" coords="810,218,921,258"/>
-<area shape="rect" title=" " alt="" coords="839,108,891,148"/>
-<area shape="rect" title=" " alt="" coords="676,108,767,148"/>
-<area shape="rect" title=" " alt="" coords="651,335,816,390"/>
-<area shape="rect" title=" " alt="" coords="865,5,903,45"/>
-<area shape="rect" href="../../d4/da1/struct_quant_lib_1_1_sample.html" title="weighted sample" alt="" coords="945,211,1047,265"/>
-<area shape="rect" title=" " alt="" coords="1043,108,1127,148"/>
+<area shape="rect" title="Sobol low&#45;discrepancy sequence generator." alt="" coords="177,475,330,603"/>
+<area shape="rect" title=" " alt="" coords="5,343,67,383"/>
+<area shape="rect" title=" " alt="" coords="145,108,217,148"/>
+<area shape="rect" title=" " alt="" coords="233,218,389,258"/>
+<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="192,343,243,383"/>
+<area shape="rect" href="../../d4/da1/struct_quant_lib_1_1_sample.html" title=" " alt="" coords="615,328,758,397"/>
+<area shape="rect" title=" " alt="" coords="570,218,681,258"/>
+<area shape="rect" title=" " alt="" coords="599,108,651,148"/>
+<area shape="rect" title=" " alt="" coords="439,108,529,148"/>
+<area shape="rect" title=" " alt="" coords="447,335,579,390"/>
+<area shape="rect" title=" " alt="" coords="625,5,663,45"/>
+<area shape="rect" href="../../d4/da1/struct_quant_lib_1_1_sample.html" title="weighted sample" alt="" coords="705,211,807,265"/>
+<area shape="rect" title=" " alt="" coords="803,108,887,148"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -146,12 +142,12 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a517494ec668ecd36efffc01912e484c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a517494ec668ecd36efffc01912e484c0">SobolRsg</a> (<a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> dimensionality, unsigned long seed=0, <a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#af5254f10d63ffdac50ac07c6df7cc90d">DirectionIntegers</a> directionIntegers=<a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#af5254f10d63ffdac50ac07c6df7cc90da4ae3ff929e6a1cef9e6c14dda463e16b">Jaeckel</a>)</td></tr>
-<tr class="separator:a517494ec668ecd36efffc01912e484c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a814339e3e680b2dc90e41fc132fcd234"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a814339e3e680b2dc90e41fc132fcd234">skipTo</a> (std::uint_least32_t n)</td></tr>
-<tr class="separator:a814339e3e680b2dc90e41fc132fcd234"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9703a7df6237de08f8f8e7453cba0eb"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::uint_least32_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#aa9703a7df6237de08f8f8e7453cba0eb">nextInt32Sequence</a> () const</td></tr>
-<tr class="separator:aa9703a7df6237de08f8f8e7453cba0eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd3bd835c526ba7dacc214e50c869c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a0dd3bd835c526ba7dacc214e50c869c8">SobolRsg</a> (<a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> dimensionality, unsigned long seed=0, <a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#af5254f10d63ffdac50ac07c6df7cc90d">DirectionIntegers</a> directionIntegers=<a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#af5254f10d63ffdac50ac07c6df7cc90da4ae3ff929e6a1cef9e6c14dda463e16b">Jaeckel</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> useGrayCode=true)</td></tr>
+<tr class="separator:a0dd3bd835c526ba7dacc214e50c869c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e375ec58ff84947c3d6eb32d9e35cca"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::uint32_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a2e375ec58ff84947c3d6eb32d9e35cca">skipTo</a> (std::uint32_t <a class="el" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>) const</td></tr>
+<tr class="separator:a2e375ec58ff84947c3d6eb32d9e35cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55e8d20bcc5c7ee85dd5d80c7466c1c3"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::uint32_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a55e8d20bcc5c7ee85dd5d80c7466c1c3">nextInt32Sequence</a> () const</td></tr>
+<tr class="separator:a55e8d20bcc5c7ee85dd5d80c7466c1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a890c68b5e4749dde1bb3c430df839568"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#af3b59a3dd56521693efc68c221a2bf38">SobolRsg::sample_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a890c68b5e4749dde1bb3c430df839568">nextSequence</a> () const</td></tr>
 <tr class="separator:a890c68b5e4749dde1bb3c430df839568"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa658e9d43811b3ee2cd68f160e0f3430"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#af3b59a3dd56521693efc68c221a2bf38">sample_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#aa658e9d43811b3ee2cd68f160e0f3430">lastSequence</a> () const</td></tr>
@@ -163,29 +159,24 @@ Public Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a9cf0dc854ef1c5ea1ceb614b8c06b5c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a9cf0dc854ef1c5ea1ceb614b8c06b5c4">dimensionality_</a></td></tr>
 <tr class="separator:a9cf0dc854ef1c5ea1ceb614b8c06b5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c59e9da86469ed3fdbc04a3014751c3"><td class="memItemLeft" align="right" valign="top">std::uint_least32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a0c59e9da86469ed3fdbc04a3014751c3">sequenceCounter_</a> = 0</td></tr>
-<tr class="separator:a0c59e9da86469ed3fdbc04a3014751c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af772de7094d8987ac91d698bfc5b3e"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a8af772de7094d8987ac91d698bfc5b3e">sequenceCounter_</a> = 0</td></tr>
+<tr class="separator:a8af772de7094d8987ac91d698bfc5b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30ed145520654b162ae4cad78aaa58cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a30ed145520654b162ae4cad78aaa58cb">firstDraw_</a> = true</td></tr>
 <tr class="separator:a30ed145520654b162ae4cad78aaa58cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79a766cc4ab56b2fe639f0a5d3b99131"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#af3b59a3dd56521693efc68c221a2bf38">sample_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a79a766cc4ab56b2fe639f0a5d3b99131">sequence_</a></td></tr>
 <tr class="separator:a79a766cc4ab56b2fe639f0a5d3b99131"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa688c24922fbf09fabff0ce168616ef9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::uint_least32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#aa688c24922fbf09fabff0ce168616ef9">integerSequence_</a></td></tr>
-<tr class="separator:aa688c24922fbf09fabff0ce168616ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b78a11f0d43dcd5dc81bba140fef541"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; std::uint_least32_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a1b78a11f0d43dcd5dc81bba140fef541">directionIntegers_</a></td></tr>
-<tr class="separator:a1b78a11f0d43dcd5dc81bba140fef541"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a8730b54eabb730eb3b5a7da3eac60448"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a8730b54eabb730eb3b5a7da3eac60448">bits_</a> = 8*sizeof(std::uint_least32_t)</td></tr>
-<tr class="separator:a8730b54eabb730eb3b5a7da3eac60448"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c3e1fa530cf971227e1ef07d3be06e9"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a4c3e1fa530cf971227e1ef07d3be06e9">normalizationFactor_</a></td></tr>
-<tr class="separator:a4c3e1fa530cf971227e1ef07d3be06e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7d31a90839046487228bd113bf805e4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#ad7d31a90839046487228bd113bf805e4">integerSequence_</a></td></tr>
+<tr class="separator:ad7d31a90839046487228bd113bf805e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a1c2f2960bea939e88d7359e030076a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; std::uint32_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a9a1c2f2960bea939e88d7359e030076a">directionIntegers_</a></td></tr>
+<tr class="separator:a9a1c2f2960bea939e88d7359e030076a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a0c68941b13844e5689ed06d00b4699"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a7a0c68941b13844e5689ed06d00b4699">useGrayCode_</a></td></tr>
+<tr class="separator:a7a0c68941b13844e5689ed06d00b4699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Sobol low-discrepancy sequence generator. </p>
 <p >A Gray code counter and bitwise operations are used for very fast sequence generation.</p>
 <p >The implementation relies on primitive polynomials modulo two from the book "Monte Carlo Methods in Finance" by Peter Jäckel.</p>
-<p >21 200 primitive polynomials modulo two are provided in <a class="el" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a>. Jäckel has calculated 8 129 334 polynomials: if you need that many dimensions you can replace the <a class="el" href="../../d2/dea/primitivepolynomials_8cpp_source.html">primitivepolynomials.cpp</a> file included in <a class="el" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> with the one provided in the CD of the "Monte Carlo
+<p >21 200 primitive polynomials modulo two are provided in <a class="el" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a>. Jäckel has calculated 8 129 334 polynomials: if you need that many dimensions you can replace the <a class="el" href="../../d2/dea/primitivepolynomials_8cpp.html">primitivepolynomials.cpp</a> file included in <a class="el" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> with the one provided in the CD of the "Monte Carlo
 Methods in Finance" book.</p>
 <p >The choice of initialization numbers (also know as free direction integers) is crucial for the homogeneity properties of the sequence. Sobol defines two homogeneity properties: Property A and Property A'.</p>
 <p >The unit initialization numbers suggested in "Numerical
@@ -258,8 +249,8 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a517494ec668ecd36efffc01912e484c0" name="a517494ec668ecd36efffc01912e484c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a517494ec668ecd36efffc01912e484c0">&#9670;&#160;</a></span>SobolRsg()</h2>
+<a id="a0dd3bd835c526ba7dacc214e50c869c8" name="a0dd3bd835c526ba7dacc214e50c869c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd3bd835c526ba7dacc214e50c869c8">&#9670;&#160;</a></span>SobolRsg()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -283,7 +274,13 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#af5254f10d63ffdac50ac07c6df7cc90d">DirectionIntegers</a>&#160;</td>
-          <td class="paramname"><em>directionIntegers</em> = <code><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#af5254f10d63ffdac50ac07c6df7cc90da4ae3ff929e6a1cef9e6c14dda463e16b">Jaeckel</a></code>&#160;</td>
+          <td class="paramname"><em>directionIntegers</em> = <code><a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#af5254f10d63ffdac50ac07c6df7cc90da4ae3ff929e6a1cef9e6c14dda463e16b">Jaeckel</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td>
+          <td class="paramname"><em>useGrayCode</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -297,16 +294,17 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
   </tr>
 </table>
 </div><div class="memdoc">
+<p >The so called generating integer is chosen to be \(\gamma(n) = n\) if useGrayCode is set to false and \(\gamma(n) = G(n)\) where \(G(n)\) is the Gray code of \(n\) otherwise. The Sobol integers are then constructed using formula 8.20 resp. 8.23, see "Monte Carlo Methods in Finance" by Peter Jäckel. The default is to use the Gray code since this allows a faster sequence generation. The <a class="el" href="../../d9/d68/class_quant_lib_1_1_burley2020_sobol_rsg.html" title="Scrambled sobol sequence according to Burley, 2020.">Burley2020SobolRsg</a> relies on an underlying <a class="el" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html" title="Sobol low-discrepancy sequence generator.">SobolRsg</a> not using the Gray code on the other hand due to its specific way of constructing the integer sequence.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>dimensionality must be &lt;= PPMT_MAX_DIM </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/sobolrsg_8cpp_source.html#l78482">78482</a> of file <a class="el" href="../../d6/d3b/sobolrsg_8cpp_source.html">sobolrsg.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/sobolrsg_8cpp_source.html#l78477">78477</a> of file <a class="el" href="../../d6/d3b/sobolrsg_8cpp_source.html">sobolrsg.cpp</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dc/d20/class_quant_lib_1_1_sobol_rsg_a517494ec668ecd36efffc01912e484c0_cgraph.png" border="0" usemap="#adc/d20/class_quant_lib_1_1_sobol_rsg_a517494ec668ecd36efffc01912e484c0_cgraph" alt=""/></div>
-<map name="adc/d20/class_quant_lib_1_1_sobol_rsg_a517494ec668ecd36efffc01912e484c0_cgraph" id="adc/d20/class_quant_lib_1_1_sobol_rsg_a517494ec668ecd36efffc01912e484c0_cgraph">
+<div class="center"><img src="../../dc/d20/class_quant_lib_1_1_sobol_rsg_a0dd3bd835c526ba7dacc214e50c869c8_cgraph.png" border="0" usemap="#adc/d20/class_quant_lib_1_1_sobol_rsg_a0dd3bd835c526ba7dacc214e50c869c8_cgraph" alt=""/></div>
+<map name="adc/d20/class_quant_lib_1_1_sobol_rsg_a0dd3bd835c526ba7dacc214e50c869c8_cgraph" id="adc/d20/class_quant_lib_1_1_sobol_rsg_a0dd3bd835c526ba7dacc214e50c869c8_cgraph">
 <area shape="rect" title=" " alt="" coords="5,13,84,38"/>
 <area shape="rect" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a1dd1acca2b223c8da6c27cad720cfc7d" title=" " alt="" coords="132,5,312,45"/>
 <area shape="rect" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a97a3fedfd3fb15531808709d2e58073f" title="return a random number in the (0.0, 1.0)&#45;interval" alt="" coords="360,5,540,45"/>
@@ -318,35 +316,51 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a814339e3e680b2dc90e41fc132fcd234" name="a814339e3e680b2dc90e41fc132fcd234"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a814339e3e680b2dc90e41fc132fcd234">&#9670;&#160;</a></span>skipTo()</h2>
+<a id="a2e375ec58ff84947c3d6eb32d9e35cca" name="a2e375ec58ff84947c3d6eb32d9e35cca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e375ec58ff84947c3d6eb32d9e35cca">&#9670;&#160;</a></span>skipTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void skipTo </td>
+          <td class="memname">const std::vector&lt; std::uint32_t &gt; &amp; skipTo </td>
           <td>(</td>
-          <td class="paramtype">std::uint_least32_t&#160;</td>
+          <td class="paramtype">std::uint32_t&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p >skip to the n-th sample in the low-discrepancy sequence </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/sobolrsg_8cpp_source.html#l78774">78774</a> of file <a class="el" href="../../d6/d3b/sobolrsg_8cpp_source.html">sobolrsg.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/sobolrsg_8cpp_source.html#l78775">78775</a> of file <a class="el" href="../../d6/d3b/sobolrsg_8cpp_source.html">sobolrsg.cpp</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../dc/d20/class_quant_lib_1_1_sobol_rsg_a2e375ec58ff84947c3d6eb32d9e35cca_icgraph.png" border="0" usemap="#adc/d20/class_quant_lib_1_1_sobol_rsg_a2e375ec58ff84947c3d6eb32d9e35cca_icgraph" alt=""/></div>
+<map name="adc/d20/class_quant_lib_1_1_sobol_rsg_a2e375ec58ff84947c3d6eb32d9e35cca_icgraph" id="adc/d20/class_quant_lib_1_1_sobol_rsg_a2e375ec58ff84947c3d6eb32d9e35cca_icgraph">
+<area shape="rect" title=" " alt="" coords="913,45,973,70"/>
+<area shape="rect" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a55e8d20bcc5c7ee85dd5d80c7466c1c3" title=" " alt="" coords="732,45,865,70"/>
+<area shape="rect" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a890c68b5e4749dde1bb3c430df839568" title=" " alt="" coords="579,45,684,70"/>
+<area shape="rect" href="../../d2/dfa/class_quant_lib_1_1_firefly_algorithm.html#a79afa25fdcd03e070dc1f46c52a6f6d5" title=" " alt="" coords="325,5,497,45"/>
+<area shape="rect" href="../../dc/d9f/class_quant_lib_1_1_particle_swarm_optimization.html#a79afa25fdcd03e070dc1f46c52a6f6d5" title=" " alt="" coords="292,69,531,109"/>
+<area shape="rect" href="../../d2/dfa/class_quant_lib_1_1_firefly_algorithm.html#af67ca22f313bdd3223a68b5c85f9065f" title="minimize the optimization problem P" alt="" coords="39,5,211,45"/>
+<area shape="rect" href="../../dc/d9f/class_quant_lib_1_1_particle_swarm_optimization.html#af67ca22f313bdd3223a68b5c85f9065f" title="minimize the optimization problem P" alt="" coords="5,69,244,109"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="aa9703a7df6237de08f8f8e7453cba0eb" name="aa9703a7df6237de08f8f8e7453cba0eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9703a7df6237de08f8f8e7453cba0eb">&#9670;&#160;</a></span>nextInt32Sequence()</h2>
+<a id="a55e8d20bcc5c7ee85dd5d80c7466c1c3" name="a55e8d20bcc5c7ee85dd5d80c7466c1c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55e8d20bcc5c7ee85dd5d80c7466c1c3">&#9670;&#160;</a></span>nextInt32Sequence()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; std::uint_least32_t &gt; &amp; nextInt32Sequence </td>
+          <td class="memname">const std::vector&lt; std::uint32_t &gt; &amp; nextInt32Sequence </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -354,14 +368,25 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/sobolrsg_8cpp_source.html#l78793">78793</a> of file <a class="el" href="../../d6/d3b/sobolrsg_8cpp_source.html">sobolrsg.cpp</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/sobolrsg_8cpp_source.html#l78807">78807</a> of file <a class="el" href="../../d6/d3b/sobolrsg_8cpp_source.html">sobolrsg.cpp</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dc/d20/class_quant_lib_1_1_sobol_rsg_aa9703a7df6237de08f8f8e7453cba0eb_icgraph.png" border="0" usemap="#adc/d20/class_quant_lib_1_1_sobol_rsg_aa9703a7df6237de08f8f8e7453cba0eb_icgraph" alt=""/></div>
-<map name="adc/d20/class_quant_lib_1_1_sobol_rsg_aa9703a7df6237de08f8f8e7453cba0eb_icgraph" id="adc/d20/class_quant_lib_1_1_sobol_rsg_aa9703a7df6237de08f8f8e7453cba0eb_icgraph">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../dc/d20/class_quant_lib_1_1_sobol_rsg_a55e8d20bcc5c7ee85dd5d80c7466c1c3_cgraph.png" border="0" usemap="#adc/d20/class_quant_lib_1_1_sobol_rsg_a55e8d20bcc5c7ee85dd5d80c7466c1c3_cgraph" alt=""/></div>
+<map name="adc/d20/class_quant_lib_1_1_sobol_rsg_a55e8d20bcc5c7ee85dd5d80c7466c1c3_cgraph" id="adc/d20/class_quant_lib_1_1_sobol_rsg_a55e8d20bcc5c7ee85dd5d80c7466c1c3_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,139,31"/>
+<area shape="rect" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a2e375ec58ff84947c3d6eb32d9e35cca" title=" " alt="" coords="187,5,247,31"/>
+</map>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../dc/d20/class_quant_lib_1_1_sobol_rsg_a55e8d20bcc5c7ee85dd5d80c7466c1c3_icgraph.png" border="0" usemap="#adc/d20/class_quant_lib_1_1_sobol_rsg_a55e8d20bcc5c7ee85dd5d80c7466c1c3_icgraph" alt=""/></div>
+<map name="adc/d20/class_quant_lib_1_1_sobol_rsg_a55e8d20bcc5c7ee85dd5d80c7466c1c3_icgraph" id="adc/d20/class_quant_lib_1_1_sobol_rsg_a55e8d20bcc5c7ee85dd5d80c7466c1c3_icgraph">
 <area shape="rect" title=" " alt="" coords="732,45,865,70"/>
 <area shape="rect" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a890c68b5e4749dde1bb3c430df839568" title=" " alt="" coords="579,45,684,70"/>
 <area shape="rect" href="../../d2/dfa/class_quant_lib_1_1_firefly_algorithm.html#a79afa25fdcd03e070dc1f46c52a6f6d5" title=" " alt="" coords="325,5,497,45"/>
@@ -388,23 +413,24 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00134">134</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../dc/d20/class_quant_lib_1_1_sobol_rsg_a890c68b5e4749dde1bb3c430df839568_cgraph.png" border="0" usemap="#adc/d20/class_quant_lib_1_1_sobol_rsg_a890c68b5e4749dde1bb3c430df839568_cgraph" alt=""/></div>
 <map name="adc/d20/class_quant_lib_1_1_sobol_rsg_a890c68b5e4749dde1bb3c430df839568_cgraph" id="adc/d20/class_quant_lib_1_1_sobol_rsg_a890c68b5e4749dde1bb3c430df839568_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,111,31"/>
-<area shape="rect" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#aa9703a7df6237de08f8f8e7453cba0eb" title=" " alt="" coords="159,5,292,31"/>
+<area shape="rect" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a55e8d20bcc5c7ee85dd5d80c7466c1c3" title=" " alt="" coords="159,5,292,31"/>
+<area shape="rect" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a2e375ec58ff84947c3d6eb32d9e35cca" title=" " alt="" coords="340,5,400,31"/>
 </map>
 </div>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../dc/d20/class_quant_lib_1_1_sobol_rsg_a890c68b5e4749dde1bb3c430df839568_icgraph.png" border="0" usemap="#adc/d20/class_quant_lib_1_1_sobol_rsg_a890c68b5e4749dde1bb3c430df839568_icgraph" alt=""/></div>
 <map name="adc/d20/class_quant_lib_1_1_sobol_rsg_a890c68b5e4749dde1bb3c430df839568_icgraph" id="adc/d20/class_quant_lib_1_1_sobol_rsg_a890c68b5e4749dde1bb3c430df839568_icgraph">
 <area shape="rect" title=" " alt="" coords="579,45,684,70"/>
@@ -432,7 +458,7 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00132">132</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
 
 </div>
 </div>
@@ -451,62 +477,11 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00133">133</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00142">142</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a8730b54eabb730eb3b5a7da3eac60448" name="a8730b54eabb730eb3b5a7da3eac60448"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8730b54eabb730eb3b5a7da3eac60448">&#9670;&#160;</a></span>bits_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int bits_ = 8*sizeof(std::uint_least32_t)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00135">135</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a4c3e1fa530cf971227e1ef07d3be06e9" name="a4c3e1fa530cf971227e1ef07d3be06e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c3e1fa530cf971227e1ef07d3be06e9">&#9670;&#160;</a></span>normalizationFactor_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const double normalizationFactor_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">        0.5/(1UL&lt;&lt;(<a class="code hl_variable" href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a8730b54eabb730eb3b5a7da3eac60448">SobolRsg::bits_</a>-1))</div>
-<div class="ttc" id="aclass_quant_lib_1_1_sobol_rsg_html_a8730b54eabb730eb3b5a7da3eac60448"><div class="ttname"><a href="../../dc/d20/class_quant_lib_1_1_sobol_rsg.html#a8730b54eabb730eb3b5a7da3eac60448">QuantLib::SobolRsg::bits_</a></div><div class="ttdeci">static const int bits_</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d47/sobolrsg_8hpp_source.html#l00135">sobolrsg.hpp:135</a></div></div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00136">136</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
-
-</div>
-</div>
 <a id="a9cf0dc854ef1c5ea1ceb614b8c06b5c4" name="a9cf0dc854ef1c5ea1ceb614b8c06b5c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9cf0dc854ef1c5ea1ceb614b8c06b5c4">&#9670;&#160;</a></span>dimensionality_</h2>
 
@@ -527,12 +502,12 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00137">137</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00144">144</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a0c59e9da86469ed3fdbc04a3014751c3" name="a0c59e9da86469ed3fdbc04a3014751c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c59e9da86469ed3fdbc04a3014751c3">&#9670;&#160;</a></span>sequenceCounter_</h2>
+<a id="a8af772de7094d8987ac91d698bfc5b3e" name="a8af772de7094d8987ac91d698bfc5b3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af772de7094d8987ac91d698bfc5b3e">&#9670;&#160;</a></span>sequenceCounter_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -541,7 +516,7 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::uint_least32_t sequenceCounter_ = 0</td>
+          <td class="memname">std::uint32_t sequenceCounter_ = 0</td>
         </tr>
       </table>
   </td>
@@ -551,7 +526,7 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00138">138</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00145">145</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
 
 </div>
 </div>
@@ -575,7 +550,7 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00139">139</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00146">146</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
 
 </div>
 </div>
@@ -599,12 +574,12 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00147">147</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aa688c24922fbf09fabff0ce168616ef9" name="aa688c24922fbf09fabff0ce168616ef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa688c24922fbf09fabff0ce168616ef9">&#9670;&#160;</a></span>integerSequence_</h2>
+<a id="ad7d31a90839046487228bd113bf805e4" name="ad7d31a90839046487228bd113bf805e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7d31a90839046487228bd113bf805e4">&#9670;&#160;</a></span>integerSequence_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -613,7 +588,7 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::uint_least32_t&gt; integerSequence_</td>
+          <td class="memname">std::vector&lt;std::uint32_t&gt; integerSequence_</td>
         </tr>
       </table>
   </td>
@@ -623,12 +598,12 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00148">148</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a1b78a11f0d43dcd5dc81bba140fef541" name="a1b78a11f0d43dcd5dc81bba140fef541"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b78a11f0d43dcd5dc81bba140fef541">&#9670;&#160;</a></span>directionIntegers_</h2>
+<a id="a9a1c2f2960bea939e88d7359e030076a" name="a9a1c2f2960bea939e88d7359e030076a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a1c2f2960bea939e88d7359e030076a">&#9670;&#160;</a></span>directionIntegers_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -637,7 +612,7 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;std::uint_least32_t&gt; &gt; directionIntegers_</td>
+          <td class="memname">std::vector&lt;std::vector&lt;std::uint32_t&gt; &gt; directionIntegers_</td>
         </tr>
       </table>
   </td>
@@ -647,7 +622,31 @@ Methods in Financial Engineering," by P. Glasserman, 2004, Springer, section 5.2
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00142">142</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00149">149</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7a0c68941b13844e5689ed06d00b4699" name="a7a0c68941b13844e5689ed06d00b4699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a0c68941b13844e5689ed06d00b4699">&#9670;&#160;</a></span>useGrayCode_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/db9/classbool.html">bool</a> useGrayCode_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html#l00150">150</a> of file <a class="el" href="../../d5/d47/sobolrsg_8hpp_source.html">sobolrsg.hpp</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['short_2drate_20modelling_20framework_0',['Short-rate modelling framework',['../d3/d90/group__shortrate.html',1,'']]],
-  ['stochastic_20processes_1',['Stochastic processes',['../d5/d22/group__processes.html',1,'']]],
-  ['swaption_20engines_2',['Swaption engines',['../de/d69/group__swaptionengines.html',1,'']]]
+  ['quantlib_20macros_0',['QuantLib macros',['../d5/dfd/group__macros.html',1,'']]],
+  ['quanto_20option_20engines_1',['Quanto option engines',['../d1/d69/group__quantoengines.html',1,'']]]
 ];

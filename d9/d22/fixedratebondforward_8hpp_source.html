@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/instruments/fixedratebondforward.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/instruments/fixedratebondforward.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">fixedratebondforward.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d9/d22/fixedratebondforward_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2006 Allen Kuo</span></div>
@@ -106,17 +105,22 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file fixedratebondforward.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief forward contract on a fixed-rate bond</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_fixed_rate_bond_forward_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_fixed_rate_bond_forward_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/instruments/bondforward.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/instruments/bonds/fixedratebond.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d0f/bondforward_8hpp.html">ql/instruments/bondforward.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/db1/fixedratebond_8hpp.html">ql/instruments/bonds/fixedratebond.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d2/d09/class_quant_lib_1_1_fixed_rate_bond_forward.html">   35</a></span>    <span class="keyword">class </span>QL_DEPRECATED <a class="code hl_class" href="../../d2/d09/class_quant_lib_1_1_fixed_rate_bond_forward.html">FixedRateBondForward</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d8/d9f/class_quant_lib_1_1_bond_forward.html">BondForward</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">    //! %Forward contract on a fixed-rate bond</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span><span class="comment">    /*! \deprecated Use BondForward instead. */</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d2/d09/class_quant_lib_1_1_fixed_rate_bond_forward.html">   35</a></span>    <span class="keyword">class </span><a class="code hl_define" href="../../de/d56/qldefines_8hpp.html#a0f9479a1b8e4a45ac141925c58c525e3">QL_DEPRECATED</a> <a class="code hl_class" href="../../d2/d09/class_quant_lib_1_1_fixed_rate_bond_forward.html">FixedRateBondForward</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d8/d9f/class_quant_lib_1_1_bond_forward.html">BondForward</a> {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d2/d09/class_quant_lib_1_1_fixed_rate_bond_forward.html#aa160392d4ae685a77f7e7dc9ad189f45">   37</a></span>        <a class="code hl_function" href="../../d2/d09/class_quant_lib_1_1_fixed_rate_bond_forward.html#aa160392d4ae685a77f7e7dc9ad189f45">FixedRateBondForward</a>(</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; valueDate,</div>
@@ -145,6 +149,7 @@ $(function() {
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abondforward_8hpp_html"><div class="ttname"><a href="../../d6/d0f/bondforward_8hpp.html">bondforward.hpp</a></div><div class="ttdoc">forward contract on a bond</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bond_forward_html"><div class="ttname"><a href="../../d8/d9f/class_quant_lib_1_1_bond_forward.html">QuantLib::BondForward</a></div><div class="ttdoc">Forward contract on a bond</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0f/bondforward_8hpp_source.html#l00069">bondforward.hpp:69</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html">QuantLib::Calendar</a></div><div class="ttdoc">calendar class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00061">calendar.hpp:61</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
@@ -152,10 +157,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_fixed_rate_bond_forward_html"><div class="ttname"><a href="../../d2/d09/class_quant_lib_1_1_fixed_rate_bond_forward.html">QuantLib::FixedRateBondForward</a></div><div class="ttdoc">Forward contract on a fixed-rate bond</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d22/fixedratebondforward_8hpp_source.html#l00035">fixedratebondforward.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fixed_rate_bond_forward_html_aa160392d4ae685a77f7e7dc9ad189f45"><div class="ttname"><a href="../../d2/d09/class_quant_lib_1_1_fixed_rate_bond_forward.html#aa160392d4ae685a77f7e7dc9ad189f45">QuantLib::FixedRateBondForward::FixedRateBondForward</a></div><div class="ttdeci">FixedRateBondForward(const Date &amp;valueDate, const Date &amp;maturityDate, Position::Type type, Real strike, Natural settlementDays, const DayCounter &amp;dayCounter, const Calendar &amp;calendar, BusinessDayConvention businessDayConvention, const ext::shared_ptr&lt; FixedRateBond &gt; &amp;fixedRateBond, const Handle&lt; YieldTermStructure &gt; &amp;discountCurve=Handle&lt; YieldTermStructure &gt;(), const Handle&lt; YieldTermStructure &gt; &amp;incomeDiscountCurve=Handle&lt; YieldTermStructure &gt;())</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d22/fixedratebondforward_8hpp_source.html#l00037">fixedratebondforward.hpp:37</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
+<div class="ttc" id="afixedratebond_8hpp_html"><div class="ttname"><a href="../../d8/db1/fixedratebond_8hpp.html">fixedratebond.hpp</a></div><div class="ttdoc">fixed-rate bond</div></div>
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aqldefines_8hpp_html_a0f9479a1b8e4a45ac141925c58c525e3"><div class="ttname"><a href="../../de/d56/qldefines_8hpp.html#a0f9479a1b8e4a45ac141925c58c525e3">QL_DEPRECATED</a></div><div class="ttdeci">#define QL_DEPRECATED</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/qldefines_8hpp_source.html#l00215">qldefines.hpp:215</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_position_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../d9/d6f/struct_quant_lib_1_1_position.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::Position::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d91/position_8hpp_source.html#l00033">position.hpp:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

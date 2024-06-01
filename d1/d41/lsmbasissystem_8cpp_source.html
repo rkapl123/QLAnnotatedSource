@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/methods/montecarlo/lsmbasissystem.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/methods/montecarlo/lsmbasissystem.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">lsmbasissystem.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d1/d41/lsmbasissystem_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2006 Klaus Spanderen</span></div>
@@ -106,9 +105,13 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;ql/math/integrals/gaussianquadratures.hpp&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ql/methods/montecarlo/lsmbasissystem.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file lsmbasissystem.cpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief utility classes for longstaff schwartz early exercise Monte Carlo</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d97/gaussianquadratures_8hpp.html">ql/math/integrals/gaussianquadratures.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../d7/d0b/lsmbasissystem_8hpp.html">ql/methods/montecarlo/lsmbasissystem.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;numeric&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;set&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
@@ -125,58 +128,58 @@ $(function() {
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="comment">// pow(x, order)</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">class </span>MonomialFct {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>          <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keyword">explicit</span> MonomialFct(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> order): order_(order) {}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keyword">explicit</span> MonomialFct(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> order): <a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a4fd300cf57dfba619b23674e43b193ce">order_</a>(order) {}</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keyword">inline</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> operator()(<span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> ret = 1.0;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;order_; ++i)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;<a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a4fd300cf57dfba619b23674e43b193ce">order_</a>; ++i)</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                    ret *= x;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>          <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> order_;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d1/d41/lsmbasissystem_8cpp.html#a4fd300cf57dfba619b23674e43b193ce">   51</a></span>            <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a4fd300cf57dfba619b23674e43b193ce">order_</a>;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        };</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="comment">/* multiplies [Real -&gt; Real] functors</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">           to create [Array -&gt; Real] functor */</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">class </span>MultiDimFct {</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>          <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keyword">explicit</span> MultiDimFct(VF_R b) : b_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(b)) {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                QL_REQUIRE(!b_.empty(), <span class="stringliteral">&quot;zero size basis&quot;</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keyword">explicit</span> MultiDimFct(VF_R <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>) : <a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a>(std::move(<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>)) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(!<a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a>.empty(), <span class="stringliteral">&quot;zero size basis&quot;</span>);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keyword">inline</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> operator()(<span class="keyword">const</span> Array&amp; a)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">                #if defined(QL_EXTRA_SAFETY_CHECKS)</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                QL_REQUIRE(b_.size()==a.size(), <span class="stringliteral">&quot;wrong argument size&quot;</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a>.size()==a.size(), <span class="stringliteral">&quot;wrong argument size&quot;</span>);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">                #endif</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> ret = b_[0](a[0]);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=1; i&lt;b_.size(); ++i)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> ret = <a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a>[0](a[0]);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=1; i&lt;<a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a>.size(); ++i)</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    ret *= b_[i](a[i]);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>          <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keyword">const</span> VF_R b_;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">   71</a></span>            <span class="keyword">const</span> VF_R <a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a>;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        };</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="comment">// check size and order of tuples</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">void</span> check_tuples(<span class="keyword">const</span> VV&amp; v, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> dim, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> order) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; i : v) {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                QL_REQUIRE(dim == i.size(), <span class="stringliteral">&quot;wrong tuple size&quot;</span>);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                QL_REQUIRE(order == std::accumulate(i.begin(), i.end(), 0UL), <span class="stringliteral">&quot;wrong tuple order&quot;</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">void</span> check_tuples(<span class="keyword">const</span> VV&amp; <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> dim, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> order) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; i : <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(dim == i.size(), <span class="stringliteral">&quot;wrong tuple size&quot;</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(order == std::accumulate(i.begin(), i.end(), 0UL), <span class="stringliteral">&quot;wrong tuple order&quot;</span>);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            }</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="comment">// build order N+1 tuples from order N tuples</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        VV next_order_tuples(<span class="keyword">const</span> VV&amp; v) {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> order = std::accumulate(v[0].begin(), v[0].end(), 0UL);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> dim = v[0].size();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        VV next_order_tuples(<span class="keyword">const</span> VV&amp; <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> order = std::accumulate(<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>[0].begin(), <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>[0].end(), 0UL);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> dim = <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>[0].size();</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            check_tuples(v, dim, order);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            check_tuples(<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>, dim, order);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="comment">// the set of unique tuples</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            std::set&lt;std::vector&lt;Size&gt; &gt; tuples;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            std::vector&lt;Size&gt; x;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;dim; ++i) {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                <span class="comment">// increase i-th value in every tuple by 1</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; j : v) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; j : <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>) {</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                    x = j;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    x[i] += 1;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    tuples.insert(x);</div>
@@ -235,7 +238,7 @@ $(function() {
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                }</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>              <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                QL_FAIL(<span class="stringliteral">&quot;unknown regression type&quot;</span>);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;unknown regression type&quot;</span>);</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            }</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        }</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">return</span> ret;</div>
@@ -243,7 +246,7 @@ $(function() {
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="../../d6/d87/class_quant_lib_1_1_lsm_basis_system.html#a9e8e839c6582067110eda20ac330b6f6">  159</a></span>    VF_A <a class="code hl_function" href="../../d6/d87/class_quant_lib_1_1_lsm_basis_system.html#a9e8e839c6582067110eda20ac330b6f6">LsmBasisSystem::multiPathBasisSystem</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> dim, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> order,</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                                              <a class="code hl_enumeration" href="../../d6/d87/class_quant_lib_1_1_lsm_basis_system.html#aacef9e17170e75ddd58984e7e355fba9">PolynomialType</a> type) {</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        QL_REQUIRE(dim&gt;0, <span class="stringliteral">&quot;zero dimension&quot;</span>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(dim&gt;0, <span class="stringliteral">&quot;zero dimension&quot;</span>);</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="comment">// get single factor basis</span></div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        VF_R pathBasis = <a class="code hl_function" href="../../d6/d87/class_quant_lib_1_1_lsm_basis_system.html#a91b64828efcba53186ab14751243f651">pathBasisSystem</a>(order, type);</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        VF_A ret;</div>
@@ -284,10 +287,17 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_lsm_basis_system_html_aacef9e17170e75ddd58984e7e355fba9a7c01f7381672fb21e07a117905330c1c"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_lsm_basis_system.html#aacef9e17170e75ddd58984e7e355fba9a7c01f7381672fb21e07a117905330c1c">QuantLib::LsmBasisSystem::Monomial</a></div><div class="ttdeci">@ Monomial</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0b/lsmbasissystem_8hpp_source.html#l00040">lsmbasissystem.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_lsm_basis_system_html_aacef9e17170e75ddd58984e7e355fba9a7d1f37bf9f42ce07c38cab40b84c9585"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_lsm_basis_system.html#aacef9e17170e75ddd58984e7e355fba9a7d1f37bf9f42ce07c38cab40b84c9585">QuantLib::LsmBasisSystem::Hyperbolic</a></div><div class="ttdeci">@ Hyperbolic</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0b/lsmbasissystem_8hpp_source.html#l00040">lsmbasissystem.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_lsm_basis_system_html_aacef9e17170e75ddd58984e7e355fba9aa533459c08077e92f289693540d77e6a"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_lsm_basis_system.html#aacef9e17170e75ddd58984e7e355fba9aa533459c08077e92f289693540d77e6a">QuantLib::LsmBasisSystem::Chebyshev</a></div><div class="ttdeci">@ Chebyshev</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0b/lsmbasissystem_8hpp_source.html#l00041">lsmbasissystem.hpp:41</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a8efe9cb3e67c8d0585e57b4d53c5d2fe"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a></div><div class="ttdeci">#define QL_FAIL(message)</div><div class="ttdoc">throw an error (possibly with file and line information)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00092">errors.hpp:92</a></div></div>
+<div class="ttc" id="aextendedornsteinuhlenbeckprocess_8cpp_html_a1759c348ed007f12d79ceff98cc3abbe"><div class="ttname"><a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a></div><div class="ttdeci">ext::function&lt; Real(Real)&gt; b</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp_source.html#l00030">extendedornsteinuhlenbeckprocess.cpp:30</a></div></div>
+<div class="ttc" id="agaussianquadratures_8hpp_html"><div class="ttname"><a href="../../d9/d97/gaussianquadratures_8hpp.html">gaussianquadratures.hpp</a></div><div class="ttdoc">Integral of a 1-dimensional function using the Gauss quadratures.</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="alsmbasissystem_8cpp_html_a348c18cf6f6480c5806950ba9b795c2d"><div class="ttname"><a href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a></div><div class="ttdeci">const VF_R b_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d41/lsmbasissystem_8cpp_source.html#l00071">lsmbasissystem.cpp:71</a></div></div>
+<div class="ttc" id="alsmbasissystem_8cpp_html_a4fd300cf57dfba619b23674e43b193ce"><div class="ttname"><a href="../../d1/d41/lsmbasissystem_8cpp.html#a4fd300cf57dfba619b23674e43b193ce">order_</a></div><div class="ttdeci">const Size order_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d41/lsmbasissystem_8cpp_source.html#l00051">lsmbasissystem.cpp:51</a></div></div>
+<div class="ttc" id="alsmbasissystem_8hpp_html"><div class="ttname"><a href="../../d7/d0b/lsmbasissystem_8hpp.html">lsmbasissystem.hpp</a></div><div class="ttdoc">utility classes for Longstaff-Schwartz early-exercise Monte Carlo</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
-<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="aperturbativebarrieroptionengine_8cpp_html_ac58b0f1581c316228a305f7eb7cce633"><div class="ttname"><a href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a></div><div class="ttdeci">ext::shared_ptr&lt; BlackVolTermStructure &gt; v</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de0/perturbativebarrieroptionengine_8cpp_source.html#l01487">perturbativebarrieroptionengine.cpp:1487</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

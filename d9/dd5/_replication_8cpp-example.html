@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -85,6 +84,23 @@ $(function() {
 <div class="contents">
 <p >This example uses the CompositeInstrument class to statically replicate a down-and-out barrier options.</p>
 <div class="fragment"><div class="line"><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment">/*!</span></div>
+<div class="line"><span class="comment"> Copyright (C) 2006, 2007 StatPro Italia srl</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment"> This file is part of QuantLib, a free-software/open-source library</span></div>
+<div class="line"><span class="comment"> for financial quantitative analysts and developers - http://quantlib.org/</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment"> QuantLib is free software: you can redistribute it and/or modify it</span></div>
+<div class="line"><span class="comment"> under the terms of the QuantLib license.  You should have received a</span></div>
+<div class="line"><span class="comment"> copy of the license along with this program; if not, please email</span></div>
+<div class="line"><span class="comment"> &lt;quantlib-dev@lists.sf.net&gt;. The license is also available online at</span></div>
+<div class="line"><span class="comment"> &lt;http://quantlib.org/license.shtml&gt;.</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment"> This program is distributed in the hope that it will be useful, but WITHOUT</span></div>
+<div class="line"><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
+<div class="line"><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
+<div class="line"><span class="comment">*/</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">/*  This example showcases the CompositeInstrument class. Such class</span></div>
 <div class="line"><span class="comment">    is used to build a static replication of a down-and-out barrier</span></div>
@@ -93,20 +109,20 @@ $(function() {
 <div class="line"><span class="comment">    reader.</span></div>
 <div class="line"><span class="comment">*/</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;ql/qldefines.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../de/d56/qldefines_8hpp.html">ql/qldefines.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#if !defined(BOOST_ALL_NO_LIB) &amp;&amp; defined(BOOST_MSVC)</span></div>
-<div class="line"><span class="preprocessor">#  include &lt;ql/auto_link.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#  include &lt;<a class="code" href="../../d7/dbf/auto__link_8hpp.html">ql/auto_link.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/instruments/compositeinstrument.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/instruments/barrieroption.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/instruments/europeanoption.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/barrier/analyticbarrierengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/analyticeuropeanengine.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/exercise.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/yield/flatforward.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/volatility/equityfx/blackconstantvol.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/quotes/simplequote.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/time/calendars/nullcalendar.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d8e/compositeinstrument_8hpp.html">ql/instruments/compositeinstrument.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d8/d4a/barrieroption_8hpp.html">ql/instruments/barrieroption.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d12/europeanoption_8hpp.html">ql/instruments/europeanoption.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../de/d8b/analyticbarrierengine_8hpp.html">ql/pricingengines/barrier/analyticbarrierengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d98/analyticeuropeanengine_8hpp.html">ql/pricingengines/vanilla/analyticeuropeanengine.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../de/d94/exercise_8hpp.html">ql/exercise.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d0e/flatforward_8hpp.html">ql/termstructures/yield/flatforward.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d96/blackconstantvol_8hpp.html">ql/termstructures/volatility/equityfx/blackconstantvol.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d17/simplequote_8hpp.html">ql/quotes/simplequote.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../dd/da6/nullcalendar_8hpp.html">ql/time/calendars/nullcalendar.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
@@ -161,7 +177,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        <span class="comment">// instantiate the option</span></div>
 <div class="line">        <span class="keyword">auto</span> exercise = ext::make_shared&lt;EuropeanExercise&gt;(maturity);</div>
-<div class="line">        <span class="keyword">auto</span> payoff = ext::make_shared&lt;PlainVanillaPayoff&gt;(type, strike);</div>
+<div class="line">        <span class="keyword">auto</span> <a id="a5" name="a5"></a><a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a> = ext::make_shared&lt;PlainVanillaPayoff&gt;(type, strike);</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">auto</span> bsProcess = ext::make_shared&lt;BlackScholesProcess&gt;(</div>
 <div class="line">            <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(underlying), flatRate, flatVol);</div>
@@ -169,11 +185,11 @@ $(function() {
 <div class="line">        <span class="keyword">auto</span> barrierEngine = ext::make_shared&lt;AnalyticBarrierEngine&gt;(bsProcess);</div>
 <div class="line">        <span class="keyword">auto</span> europeanEngine = ext::make_shared&lt;AnalyticEuropeanEngine&gt;(bsProcess);</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a5" name="_a5"></a><a class="code hl_class" href="../../d1/da0/class_quant_lib_1_1_barrier_option.html">BarrierOption</a> referenceOption(barrierType, barrier, rebate,</div>
-<div class="line">                                      payoff, exercise);</div>
-<div class="line">        referenceOption.<a id="a6" name="a6"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(barrierEngine);</div>
+<div class="line">        <a id="_a6" name="_a6"></a><a class="code hl_class" href="../../d1/da0/class_quant_lib_1_1_barrier_option.html">BarrierOption</a> referenceOption(barrierType, barrier, rebate,</div>
+<div class="line">                                      <a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>, exercise);</div>
+<div class="line">        referenceOption.<a id="a7" name="a7"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(barrierEngine);</div>
 <div class="line"> </div>
-<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> referenceValue = referenceOption.<a id="a7" name="a7"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">NPV</a>();</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> referenceValue = referenceOption.<a id="a8" name="a8"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">NPV</a>();</div>
 <div class="line"> </div>
 <div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; std::left</div>
 <div class="line">                  &lt;&lt; <span class="stringliteral">&quot;Original barrier option&quot;</span></div>
@@ -183,20 +199,20 @@ $(function() {
 <div class="line">                  &lt;&lt; std::endl;</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Replicating portfolios</span></div>
-<div class="line">        <a id="_a8" name="_a8"></a><a class="code hl_class" href="../../dc/dca/class_quant_lib_1_1_composite_instrument.html">CompositeInstrument</a> portfolio1, portfolio2, portfolio3;</div>
+<div class="line">        <a id="_a9" name="_a9"></a><a class="code hl_class" href="../../dc/dca/class_quant_lib_1_1_composite_instrument.html">CompositeInstrument</a> portfolio1, portfolio2, portfolio3;</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Final payoff first (the same for all portfolios):</span></div>
 <div class="line">        <span class="comment">// as shown in Joshi, a put struck at K...</span></div>
-<div class="line">        <span class="keyword">auto</span> put1 = ext::make_shared&lt;EuropeanOption&gt;(payoff, exercise);</div>
+<div class="line">        <span class="keyword">auto</span> put1 = ext::make_shared&lt;EuropeanOption&gt;(<a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>, exercise);</div>
 <div class="line">        put1-&gt;setPricingEngine(europeanEngine);</div>
-<div class="line">        portfolio1.<a id="a9" name="a9"></a><a class="code hl_function" href="../../dc/dca/class_quant_lib_1_1_composite_instrument.html#a17f4129206e9cd104423285c9bb7457e">add</a>(put1);</div>
+<div class="line">        portfolio1.<a id="a10" name="a10"></a><a class="code hl_function" href="../../dc/dca/class_quant_lib_1_1_composite_instrument.html#a17f4129206e9cd104423285c9bb7457e">add</a>(put1);</div>
 <div class="line">        portfolio2.<a class="code hl_function" href="../../dc/dca/class_quant_lib_1_1_composite_instrument.html#a17f4129206e9cd104423285c9bb7457e">add</a>(put1);</div>
 <div class="line">        portfolio3.<a class="code hl_function" href="../../dc/dca/class_quant_lib_1_1_composite_instrument.html#a17f4129206e9cd104423285c9bb7457e">add</a>(put1);</div>
 <div class="line">        <span class="comment">// ...minus a digital put struck at B of notional K-B...</span></div>
 <div class="line">        <span class="keyword">auto</span> digitalPayoff = ext::make_shared&lt;CashOrNothingPayoff&gt;(Option::Put, barrier, 1.0);</div>
 <div class="line">        <span class="keyword">auto</span> digitalPut = ext::make_shared&lt;EuropeanOption&gt;(digitalPayoff, exercise);</div>
 <div class="line">        digitalPut-&gt;setPricingEngine(europeanEngine);</div>
-<div class="line">        portfolio1.<a id="a10" name="a10"></a><a class="code hl_function" href="../../dc/dca/class_quant_lib_1_1_composite_instrument.html#a5d1575f5d5bd36deb2aafbeb785ceeb7">subtract</a>(digitalPut, strike-barrier);</div>
+<div class="line">        portfolio1.<a id="a11" name="a11"></a><a class="code hl_function" href="../../dc/dca/class_quant_lib_1_1_composite_instrument.html#a5d1575f5d5bd36deb2aafbeb785ceeb7">subtract</a>(digitalPut, strike-barrier);</div>
 <div class="line">        portfolio2.<a class="code hl_function" href="../../dc/dca/class_quant_lib_1_1_composite_instrument.html#a5d1575f5d5bd36deb2aafbeb785ceeb7">subtract</a>(digitalPut, strike-barrier);</div>
 <div class="line">        portfolio3.<a class="code hl_function" href="../../dc/dca/class_quant_lib_1_1_composite_instrument.html#a5d1575f5d5bd36deb2aafbeb785ceeb7">subtract</a>(digitalPut, strike-barrier);</div>
 <div class="line">        <span class="comment">// ...minus a put option struck at B.</span></div>
@@ -412,6 +428,11 @@ $(function() {
 <div class="line">        <span class="keywordflow">return</span> 1;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
+<div class="ttc" id="aanalyticbarrierengine_8hpp_html"><div class="ttname"><a href="../../de/d8b/analyticbarrierengine_8hpp.html">analyticbarrierengine.hpp</a></div><div class="ttdoc">Analytic barrier option engines.</div></div>
+<div class="ttc" id="aanalyticeuropeanengine_8hpp_html"><div class="ttname"><a href="../../d2/d98/analyticeuropeanengine_8hpp.html">analyticeuropeanengine.hpp</a></div><div class="ttdoc">Analytic European engine.</div></div>
+<div class="ttc" id="aauto__link_8hpp_html"><div class="ttname"><a href="../../d7/dbf/auto__link_8hpp.html">auto_link.hpp</a></div></div>
+<div class="ttc" id="abarrieroption_8hpp_html"><div class="ttname"><a href="../../d8/d4a/barrieroption_8hpp.html">barrieroption.hpp</a></div><div class="ttdoc">Barrier option on a single asset.</div></div>
+<div class="ttc" id="ablackconstantvol_8hpp_html"><div class="ttname"><a href="../../d9/d96/blackconstantvol_8hpp.html">blackconstantvol.hpp</a></div><div class="ttdoc">Black constant volatility, no time dependence, no strike dependence.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual365_fixed_html"><div class="ttname"><a href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">QuantLib::Actual365Fixed</a></div><div class="ttdoc">Actual/365 (Fixed) day count convention.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbf/actual365fixed_8hpp_source.html#l00045">actual365fixed.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_barrier_option_html"><div class="ttname"><a href="../../d1/da0/class_quant_lib_1_1_barrier_option.html">QuantLib::BarrierOption</a></div><div class="ttdoc">Barrier option on a single asset.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d4a/barrieroption_8hpp_source.html#l00043">barrieroption.hpp:43</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_composite_instrument_html"><div class="ttname"><a href="../../dc/dca/class_quant_lib_1_1_composite_instrument.html">QuantLib::CompositeInstrument</a></div><div class="ttdoc">Composite instrument</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8e/compositeinstrument_8hpp_source.html#l00044">compositeinstrument.hpp:44</a></div></div>
@@ -424,10 +445,18 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_instrument_html_ae58e4c75062c7f3f4dedbd744f9a379f"><div class="ttname"><a href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">QuantLib::Instrument::setPricingEngine</a></div><div class="ttdeci">void setPricingEngine(const ext::shared_ptr&lt; PricingEngine &gt; &amp;)</div><div class="ttdoc">set the pricing engine to be used.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8b/instrument_8cpp_source.html#l00035">instrument.cpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_null_calendar_html"><div class="ttname"><a href="../../da/d77/class_quant_lib_1_1_null_calendar.html">QuantLib::NullCalendar</a></div><div class="ttdoc">Calendar for reproducing theoretical calculations.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/da6/nullcalendar_8hpp_source.html#l00038">nullcalendar.hpp:38</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_option_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::Option::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd9/option_8hpp_source.html#l00039">option.hpp:39</a></div></div>
+<div class="ttc" id="acompositeinstrument_8hpp_html"><div class="ttname"><a href="../../d0/d8e/compositeinstrument_8hpp.html">compositeinstrument.hpp</a></div><div class="ttdoc">Composite instrument class.</div></div>
+<div class="ttc" id="aeuropeanoption_8hpp_html"><div class="ttname"><a href="../../dd/d12/europeanoption_8hpp.html">europeanoption.hpp</a></div><div class="ttdoc">European option on a single asset.</div></div>
+<div class="ttc" id="aexercise_8hpp_html"><div class="ttname"><a href="../../de/d94/exercise_8hpp.html">exercise.hpp</a></div><div class="ttdoc">Option exercise classes and payoff function.</div></div>
+<div class="ttc" id="aflatforward_8hpp_html"><div class="ttname"><a href="../../d5/d0e/flatforward_8hpp.html">flatforward.hpp</a></div><div class="ttdoc">flat forward rate term structure</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="aintegralhestonvarianceoptionengine_8cpp_html_aac80ba3218a14ee2ac65bfc8989a2015"><div class="ttname"><a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a></div><div class="ttdeci">ext::shared_ptr&lt; QuantLib::Payoff &gt; payoff</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp_source.html#l00350">integralhestonvarianceoptionengine.cpp:350</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="anullcalendar_8hpp_html"><div class="ttname"><a href="../../dd/da6/nullcalendar_8hpp.html">nullcalendar.hpp</a></div><div class="ttdoc">Calendar for reproducing theoretical calculations.</div></div>
+<div class="ttc" id="aqldefines_8hpp_html"><div class="ttname"><a href="../../de/d56/qldefines_8hpp.html">qldefines.hpp</a></div><div class="ttdoc">Global definitions and compiler switches.</div></div>
+<div class="ttc" id="asimplequote_8hpp_html"><div class="ttname"><a href="../../d4/d17/simplequote_8hpp.html">simplequote.hpp</a></div><div class="ttdoc">simple quote class</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_barrier_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../de/d3f/struct_quant_lib_1_1_barrier.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::Barrier::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dbd/barriertype_8hpp_source.html#l00036">barriertype.hpp:36</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/cashflows/yoyinflationcoupon.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/cashflows/yoyinflationcoupon.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">yoyinflationcoupon.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d0/d31/yoyinflationcoupon_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2009 Chris Kenyon</span></div>
@@ -105,18 +104,23 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file yoyinflationcoupon.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> \brief Coupon paying a yoy inflation index</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_newyoy_coupon_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_newyoy_coupon_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/cashflows/inflationcoupon.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/indexes/inflationindex.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/time/schedule.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/dfd/inflationcoupon_8hpp.html">ql/cashflows/inflationcoupon.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/db8/inflationindex_8hpp.html">ql/indexes/inflationindex.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/dd1/schedule_8hpp.html">ql/time/schedule.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">class </span>YoYInflationCouponPricer;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html">   35</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html">YoYInflationCoupon</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../da/ddf/class_quant_lib_1_1_inflation_coupon.html">InflationCoupon</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    //! %Coupon paying a YoY-inflation type index</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html">   35</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html">YoYInflationCoupon</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../da/ddf/class_quant_lib_1_1_inflation_coupon.html">InflationCoupon</a> {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_class" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html">YoYInflationCoupon</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; paymentDate,</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../de/d94/class_quant_lib_1_1_coupon.html#a8eee3d3767fab185a6f78d6b406618f5">nominal</a>,</div>
@@ -131,19 +135,24 @@ $(function() {
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                        <span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; refPeriodStart = <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(),</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                        <span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; refPeriodEnd = <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>()</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                        );</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#a78f208a97efd10cf54cdf25431be64cf">   54</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#a78f208a97efd10cf54cdf25431be64cf">gearing</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#ac49985ed0b7d726bb87fe57577cd6d3d">gearing_</a>; }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#af2b1ac06508be31b34a28d76091c0e3f">   56</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> <a class="code hl_function" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#af2b1ac06508be31b34a28d76091c0e3f">spread</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#aa6db15cb8f4db71dbdd282eb1a4a9bcd">spread_</a>; }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment"></span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">        //! \name Inspectors</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment"></span><span class="comment">        //! index gearing, i.e. multiplicative coefficient for the index</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#a78f208a97efd10cf54cdf25431be64cf">   54</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#a78f208a97efd10cf54cdf25431be64cf">gearing</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#ac49985ed0b7d726bb87fe57577cd6d3d">gearing_</a>; }<span class="comment"></span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">        //! spread paid over the fixing of the underlying index</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#af2b1ac06508be31b34a28d76091c0e3f">   56</a></span><span class="comment"></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> <a class="code hl_function" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#af2b1ac06508be31b34a28d76091c0e3f">spread</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#aa6db15cb8f4db71dbdd282eb1a4a9bcd">spread_</a>; }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="code hl_function" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#a8b1b46f7fcdea7131e6b5a705168e82b">adjustedFixing</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">const</span> ext::shared_ptr&lt;YoYInflationIndex&gt;&amp; <a class="code hl_function" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#a849e2d18d883285e17a308ccbcfa0248">yoyIndex</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">accept</a>(<a class="code hl_class" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment"></span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment"></span><span class="comment">        //! \name Visitability</span><span class="comment"></span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment"></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">accept</a>(<a class="code hl_class" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp;) <span class="keyword">override</span>;<span class="comment"></span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment"></span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#ae71233d00ce18ca0360664e926331766">   69</a></span>        ext::shared_ptr&lt;YoYInflationIndex&gt; <a class="code hl_variable" href="../../d4/d4f/class_quant_lib_1_1_yo_y_inflation_coupon.html#ae71233d00ce18ca0360664e926331766">yoyIndex_</a>;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">protected</span>:</div>
@@ -164,8 +173,10 @@ $(function() {
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="../../d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html">   91</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html">yoyInflationLeg</a> {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment"></span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">    //! Helper class building a sequence of capped/floored yoy inflation coupons</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">    //! payoff is: spread + gearing x index</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="../../d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html">   91</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html">yoyInflationLeg</a> {</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <a class="code hl_class" href="../../d0/d7f/class_quant_lib_1_1yoy_inflation_leg.html">yoyInflationLeg</a>(<a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> schedule,</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                      <a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> cal,</div>
@@ -256,8 +267,11 @@ $(function() {
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
 <div class="ttc" id="agroup__types_html_gae7427f4743503002b0c6eeeefae91a3d"><div class="ttname"><a href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">QuantLib::Spread</a></div><div class="ttdeci">Real Spread</div><div class="ttdoc">spreads on interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00074">types.hpp:74</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
+<div class="ttc" id="ainflationcoupon_8hpp_html"><div class="ttname"><a href="../../d4/dfd/inflationcoupon_8hpp.html">inflationcoupon.hpp</a></div><div class="ttdoc">Coupon paying a variable index-based rate.</div></div>
+<div class="ttc" id="ainflationindex_8hpp_html"><div class="ttname"><a href="../../d4/db8/inflationindex_8hpp.html">inflationindex.hpp</a></div><div class="ttdoc">base classes for inflation indexes</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_afd0d2e08465e4b7e928c75416bd8dc4b"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">QuantLib::Leg</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; CashFlow &gt; &gt; Leg</div><div class="ttdoc">Sequence of cash-flows.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0e/cashflow_8hpp_source.html#l00078">cashflow.hpp:78</a></div></div>
+<div class="ttc" id="aschedule_8hpp_html"><div class="ttname"><a href="../../d2/dd1/schedule_8hpp.html">schedule.hpp</a></div><div class="ttdoc">date schedule</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

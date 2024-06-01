@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/legacy/libormarketmodels/lfmswaptionengine.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/legacy/libormarketmodels/lfmswaptionengine.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">lfmswaptionengine.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d2/d0c/lfmswaptionengine_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2006 Klaus Spanderen</span></div>
@@ -105,17 +104,22 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file lfmswaptionengine.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief libor forward model swaption engine based on black formula</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_libor_forward_model_swaption_engine_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_libor_forward_model_swaption_engine_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/instruments/swaption.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/pricingengines/genericmodelengine.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/legacy/libormarketmodels/liborforwardmodel.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d68/swaption_8hpp.html">ql/instruments/swaption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d4f/genericmodelengine_8hpp.html">ql/pricingengines/genericmodelengine.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/df7/liborforwardmodel_8hpp.html">ql/legacy/libormarketmodels/liborforwardmodel.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">    //! %Libor forward model swaption engine based on Black formula</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span><span class="comment">    /*! \ingroup swaptionengines */</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html">   35</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html">LfmSwaptionEngine</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html">GenericModelEngine</a>&lt;LiborForwardModel,</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                                                        Swaption::arguments,</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                                                        Swaption::results&gt; {</div>
@@ -137,7 +141,10 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_lfm_swaption_engine_html"><div class="ttname"><a href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html">QuantLib::LfmSwaptionEngine</a></div><div class="ttdoc">Libor forward model swaption engine based on Black formula</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0c/lfmswaptionengine_8hpp_source.html#l00035">lfmswaptionengine.hpp:37</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_lfm_swaption_engine_html_a188f6df4c42679c1c133919254e351c5"><div class="ttname"><a href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a188f6df4c42679c1c133919254e351c5">QuantLib::LfmSwaptionEngine::discountCurve_</a></div><div class="ttdeci">Handle&lt; YieldTermStructure &gt; discountCurve_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0c/lfmswaptionengine_8hpp_source.html#l00044">lfmswaptionengine.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_lfm_swaption_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d0/d0e/class_quant_lib_1_1_lfm_swaption_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::LfmSwaptionEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d7f/lfmswaptionengine_8cpp_source.html#l00035">lfmswaptionengine.cpp:35</a></div></div>
+<div class="ttc" id="agenericmodelengine_8hpp_html"><div class="ttname"><a href="../../d2/d4f/genericmodelengine_8hpp.html">genericmodelengine.hpp</a></div><div class="ttdoc">Generic option engine based on a model.</div></div>
+<div class="ttc" id="aliborforwardmodel_8hpp_html"><div class="ttname"><a href="../../dc/df7/liborforwardmodel_8hpp.html">liborforwardmodel.hpp</a></div><div class="ttdoc">libor forward model incl. exact cap pricing Rebonato formula to approximate swaption prices.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aswaption_8hpp_html"><div class="ttname"><a href="../../d5/d68/swaption_8hpp.html">swaption.hpp</a></div><div class="ttdoc">Swaption class.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/math/randomnumbers/primitivepolynomials.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/math/randomnumbers/primitivepolynomials.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">primitivepolynomials.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d5/d67/primitivepolynomials_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/* this file is a slightly edited version of</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * PrimitivePolynomialsModuloTwoUpToDegree27.h</span></div>
@@ -184,35 +183,35 @@ $(function() {
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_01         1</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_02         2</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_03         4</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_04         6</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_05        12</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_06        18</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_07        36</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_08        52</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_09       100</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_10       160</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_11       336</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_12       480</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_13      1110</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_14      1866</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_15      3666</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_16      5714</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_17     13424</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_18     21200</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_19     48794</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_20     72794</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_21    157466</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_22    277498</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_23    634458</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_24    910938</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_25   2206938</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_26   3926838</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_27   8129334</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a9e5a2faca6475d1b26b7194e4ad0a4fe">   98</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_01         1</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a507afcb784ec43b87a6c30768b436de4">   99</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_02         2</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a7c485f884921fbf05fcce2b9e69fca30">  100</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_03         4</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a31eb39e54d38a8d79f6404406c8830d3">  101</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_04         6</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a2561b4d7503bf0a144b6d4ba16b3b75d">  102</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_05        12</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#aeb79f4ab89057db91082061b3b81db8a">  103</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_06        18</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a4d24c75400a23e5a3a47e4494f4f0d2a">  104</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_07        36</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a7f1e209b12f48075d07cd6d14bc43fbc">  105</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_08        52</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a84e53bd6c689b9d08c85531332a2218a">  106</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_09       100</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a8f8257ed52cdef76066f2cfb2ceb6f13">  107</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_10       160</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a2d6897f20dca91b0b8d9180e58c13069">  108</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_11       336</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a358dca46290dce24582c3ea2982a9ecd">  109</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_12       480</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#ad967efe5b95682b6792d1f12cab1adbb">  110</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_13      1110</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a597bec05c9c029859fc94ca2e532d0a3">  111</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_14      1866</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#accc3babb4cd5ebbb94c1b898b8ab5f63">  112</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_15      3666</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#adb6ce9dbf02a34c90dd0510f50e1deea">  113</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_16      5714</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#ad1eedf3c3ac64b9fd53a5b38570ffdcd">  114</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_17     13424</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a2aaff8e6ab8710c6278f0e8a4534f79b">  115</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_18     21200</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#acef44807fcb258b82452c15c811cbf7c">  116</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_19     48794</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#ad120f3ac95184c47abb8579da421f9e9">  117</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_20     72794</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a42b08845daefe84026475a87565c745c">  118</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_21    157466</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#acba3a93d0615e3381e7495849d1128c6">  119</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_22    277498</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a3409ffb563772171844aa4762334f20a">  120</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_23    634458</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#aef10ef9eb66f223d118dfa916b4b9b66">  121</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_24    910938</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a4c7c6c1046e7e5a2969585e4d00fbfe1">  122</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_25   2206938</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#abe922a99715c49545f0bf947aa5c474a">  123</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_26   3926838</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a38ff35254f76c38233730b75ce3f2ce9">  124</a></span><span class="preprocessor">#define N_PRIMITIVES_UP_TO_DEGREE_27   8129334</span></div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#define N_PRIMITIVES N_PRIMITIVES_UP_TO_DEGREE_27</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a051c5cefe2ca8af77c30654913656f3b">  126</a></span><span class="preprocessor">#define N_PRIMITIVES N_PRIMITIVES_UP_TO_DEGREE_27</span></div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#ifndef  PPMT_MAX_DIM</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor"># define PPMT_MAX_DIM N_PRIMITIVES_UP_TO_DEGREE_18</span></div>
@@ -290,8 +289,8 @@ $(function() {
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor"># define N_MAX_DEGREE 17</span></div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">#elif    PPMT_MAX_DIM &lt;= N_PRIMITIVES_UP_TO_DEGREE_18</span></div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor"># undef  PPMT_MAX_DIM</span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor"># define PPMT_MAX_DIM N_PRIMITIVES_UP_TO_DEGREE_18</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor"># define N_MAX_DEGREE 18</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a6c2091084460dee210ef8fb1da02403a">  204</a></span><span class="preprocessor"># define PPMT_MAX_DIM N_PRIMITIVES_UP_TO_DEGREE_18</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="../../d5/d67/primitivepolynomials_8hpp.html#a0d0fd4927c7ef10cc8576297473a66f5">  205</a></span><span class="preprocessor"># define N_MAX_DEGREE 18</span></div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">#elif    PPMT_MAX_DIM &lt;= N_PRIMITIVES_UP_TO_DEGREE_19</span></div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor"># undef  PPMT_MAX_DIM</span></div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor"># define PPMT_MAX_DIM N_PRIMITIVES_UP_TO_DEGREE_19</span></div>
@@ -346,10 +345,18 @@ $(function() {
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="stringliteral">&quot;C&quot;</span></div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="keyword">const</span> <span class="keywordtype">long</span> *<span class="keyword">const</span> PrimitivePolynomials[N_MAX_DEGREE];</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="comment"></span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="comment">/*! You can access the following array as in PrimitivePolynomials[i][j]</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="comment">    with i and j counting from 0 in C convention. PrimitivePolynomials[i][j]</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="comment">    will get you the j-th (counting from zero) primitive polynomial of degree</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="comment">    i+1. Each one-dimensional array of primitive polynomials of a given</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="comment">    degree is terminated with an entry of -1. Accessing beyond this entry</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="comment">    will result in a memory violation and must be avoided.  */</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="keyword">const</span> <span class="keywordtype">long</span> *<span class="keyword">const</span> <a class="code hl_variable" href="../../d5/d67/primitivepolynomials_8hpp.html#a7c958c36ec1ef8a0af15535a713e5b4b">PrimitivePolynomials</a>[<a class="code hl_define" href="../../d5/d67/primitivepolynomials_8hpp.html#a0d0fd4927c7ef10cc8576297473a66f5">N_MAX_DEGREE</a>];</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aprimitivepolynomials_8hpp_html_a0d0fd4927c7ef10cc8576297473a66f5"><div class="ttname"><a href="../../d5/d67/primitivepolynomials_8hpp.html#a0d0fd4927c7ef10cc8576297473a66f5">N_MAX_DEGREE</a></div><div class="ttdeci">#define N_MAX_DEGREE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d67/primitivepolynomials_8hpp_source.html#l00205">primitivepolynomials.hpp:205</a></div></div>
+<div class="ttc" id="aprimitivepolynomials_8hpp_html_a7c958c36ec1ef8a0af15535a713e5b4b"><div class="ttname"><a href="../../d5/d67/primitivepolynomials_8hpp.html#a7c958c36ec1ef8a0af15535a713e5b4b">PrimitivePolynomials</a></div><div class="ttdeci">const long *const PrimitivePolynomials[18]</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dea/primitivepolynomials_8cpp_source.html#l21323">primitivepolynomials.cpp:21323</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

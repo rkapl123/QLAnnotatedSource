@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -90,6 +89,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d2/dc0/class_quant_lib_1_1_analytic_heston_engine-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">AnalyticHestonEngine Class Reference<div class="ingroups"><a class="el" href="../../de/dd4/group__engines.html">Pricing engines</a> &raquo; <a class="el" href="../../d8/d84/group__vanillaengines.html">Vanilla option engines</a></div></div></div>
@@ -99,7 +99,7 @@ $(function() {
 <p>analytic Heston-model engine based on Fourier transform  
  <a href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">ql/pricingengines/vanilla/analytichestonengine.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for AnalyticHestonEngine:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -107,10 +107,10 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../dc/de5/class_quant_lib_1_1_analytic_heston_engine__inherit__graph.png" border="0" usemap="#a_analytic_heston_engine_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_analytic_heston_engine_inherit__map" id="a_analytic_heston_engine_inherit__map">
-<area shape="rect" title="analytic Heston&#45;model engine based on Fourier transform" alt="" coords="259,1067,445,1312"/>
-<area shape="rect" href="../../d0/db6/class_quant_lib_1_1_analytic_heston_hull_white_engine.html" title="Analytic Heston engine incl. stochastic interest rates." alt="" coords="5,1361,235,1548"/>
-<area shape="rect" href="../../d6/de0/class_quant_lib_1_1_bates_double_exp_engine.html" title=" " alt="" coords="259,1413,445,1497"/>
-<area shape="rect" href="../../de/d08/class_quant_lib_1_1_bates_engine.html" title="Bates model engines based on Fourier transform." alt="" coords="495,1413,617,1497"/>
+<area shape="rect" title="analytic Heston&#45;model engine based on Fourier transform" alt="" coords="259,1067,445,1371"/>
+<area shape="rect" href="../../d0/db6/class_quant_lib_1_1_analytic_heston_hull_white_engine.html" title="Analytic Heston engine incl. stochastic interest rates." alt="" coords="5,1420,235,1607"/>
+<area shape="rect" href="../../d6/de0/class_quant_lib_1_1_bates_double_exp_engine.html" title=" " alt="" coords="259,1471,445,1555"/>
+<area shape="rect" href="../../de/d08/class_quant_lib_1_1_bates_engine.html" title="Bates model engines based on Fourier transform." alt="" coords="495,1471,617,1555"/>
 <area shape="rect" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html" title=" " alt="" coords="255,889,449,1017"/>
 <area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="176,492,363,635"/>
 <area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="209,285,345,399"/>
@@ -118,9 +118,9 @@ $(function() {
 <area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="204,5,351,192"/>
 <area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="383,241,566,443"/>
 <area shape="rect" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html" title="Base class for some pricing engine on a particular model." alt="" coords="352,684,552,797"/>
-<area shape="rect" href="../../d2/d15/class_quant_lib_1_1_analytic_h1_h_w_engine.html" title="Analytic Heston&#45;Hull&#45;White engine based on the H1&#45;HW approximation." alt="" coords="35,1597,205,1696"/>
-<area shape="rect" href="../../d3/dfc/class_quant_lib_1_1_bates_double_exp_det_jump_engine.html" title=" " alt="" coords="231,1605,467,1689"/>
-<area shape="rect" href="../../de/d80/class_quant_lib_1_1_bates_det_jump_engine.html" title=" " alt="" coords="492,1605,665,1689"/>
+<area shape="rect" href="../../d2/d15/class_quant_lib_1_1_analytic_h1_h_w_engine.html" title="Analytic Heston&#45;Hull&#45;White engine based on the H1&#45;HW approximation." alt="" coords="35,1656,205,1755"/>
+<area shape="rect" href="../../d3/dfc/class_quant_lib_1_1_bates_double_exp_det_jump_engine.html" title=" " alt="" coords="231,1663,467,1747"/>
+<area shape="rect" href="../../de/d80/class_quant_lib_1_1_bates_det_jump_engine.html" title=" " alt="" coords="492,1663,665,1747"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -130,11 +130,11 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d0/d4e/class_quant_lib_1_1_analytic_heston_engine__coll__graph.png" border="0" usemap="#a_analytic_heston_engine_coll__map" alt="Collaboration graph"/></div>
 <map name="a_analytic_heston_engine_coll__map" id="a_analytic_heston_engine_coll__map">
-<area shape="rect" title="analytic Heston&#45;model engine based on Fourier transform" alt="" coords="565,2147,741,2333"/>
-<area shape="rect" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html" title=" " alt="" coords="258,1971,453,2084"/>
-<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="650,1479,837,1593"/>
-<area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="737,1054,873,1167"/>
-<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="406,1479,593,1593"/>
+<area shape="rect" title="analytic Heston&#45;model engine based on Fourier transform" alt="" coords="565,2220,741,2451"/>
+<area shape="rect" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html" title=" " alt="" coords="258,2029,453,2143"/>
+<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="650,1523,837,1637"/>
+<area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="737,1069,873,1182"/>
+<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="406,1523,593,1637"/>
 <area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="589,695,735,867"/>
 <area shape="rect" title=" " alt="" coords="475,592,603,632"/>
 <area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="448,343,631,529"/>
@@ -142,17 +142,17 @@ $(function() {
 <area shape="rect" title=" " alt="" coords="479,108,653,148"/>
 <area shape="rect" title=" " alt="" coords="359,108,437,148"/>
 <area shape="rect" title=" " alt="" coords="379,5,417,45"/>
-<area shape="rect" title=" " alt="" coords="590,1091,707,1131"/>
-<area shape="rect" title=" " alt="" coords="457,1091,555,1131"/>
-<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title=" " alt="" coords="5,1355,172,1717"/>
+<area shape="rect" title=" " alt="" coords="590,1105,707,1145"/>
+<area shape="rect" title=" " alt="" coords="457,1105,555,1145"/>
+<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title=" " alt="" coords="5,1384,172,1776"/>
 <area shape="rect" title=" " alt="" coords="123,753,273,808"/>
-<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title="Shared handle to an observable." alt="" coords="123,929,273,1292"/>
-<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title=" " alt="" coords="228,1355,381,1717"/>
-<area shape="rect" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html" title="Base class for some pricing engine on a particular model." alt="" coords="255,1780,455,1879"/>
-<area shape="rect" title=" " alt="" coords="477,2007,538,2047"/>
-<area shape="rect" title=" " alt="" coords="562,2007,743,2047"/>
-<area shape="rect" title=" " alt="" coords="768,1993,927,2062"/>
-<area shape="rect" title=" " alt="" coords="951,2007,1039,2047"/>
+<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title="Shared handle to an observable." alt="" coords="123,929,273,1321"/>
+<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title=" " alt="" coords="228,1384,381,1776"/>
+<area shape="rect" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html" title="Base class for some pricing engine on a particular model." alt="" coords="255,1839,455,1937"/>
+<area shape="rect" title=" " alt="" coords="477,2066,538,2106"/>
+<area shape="rect" title=" " alt="" coords="562,2066,743,2106"/>
+<area shape="rect" title=" " alt="" coords="768,2051,927,2121"/>
+<area shape="rect" title=" " alt="" coords="951,2066,1039,2106"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -161,6 +161,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db4/class_quant_lib_1_1_analytic_heston_engine_1_1_a_p___helper.html">AP_Helper</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html">Integration</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d31/class_quant_lib_1_1_analytic_heston_engine_1_1_optimal_alpha.html">OptimalAlpha</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -172,6 +174,8 @@ Public Types</h2></td></tr>
 , <a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a3caae3180358d7e623bcf2dc25e5b627afd072ac9c99dc2c0a4ee4dd0d298d8f3">AndersenPiterbargOptCV</a>
 , <br />
 &#160;&#160;<a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a3caae3180358d7e623bcf2dc25e5b627aeef5f5cf130c2571274619f2940ba803">AsymptoticChF</a>
+, <a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a3caae3180358d7e623bcf2dc25e5b627a6d62795ea1da7d899a7d95431e9982ce">AngledContour</a>
+, <a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a3caae3180358d7e623bcf2dc25e5b627a6af0b439cd9f6a1843f6e0984a33d401">AngledContourNoCV</a>
 , <a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a3caae3180358d7e623bcf2dc25e5b627a22eb8a23398f8d057121e273fe3bdce1">OptimalCV</a>
 <br />
  }</td></tr>
@@ -186,16 +190,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9e13d7148b536a03183b655256e4ab41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc2a0a5d97c13025c0e27fba18e12c45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#afc2a0a5d97c13025c0e27fba18e12c45">AnalyticHestonEngine</a> (const ext::shared_ptr&lt; <a class="el" href="../../d6/d68/class_quant_lib_1_1_heston_model.html">HestonModel</a> &gt; &amp;model, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> integrationOrder=144)</td></tr>
 <tr class="separator:afc2a0a5d97c13025c0e27fba18e12c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0191825a296d5a0f9a6ebf9f243f597"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#af0191825a296d5a0f9a6ebf9f243f597">AnalyticHestonEngine</a> (const ext::shared_ptr&lt; <a class="el" href="../../d6/d68/class_quant_lib_1_1_heston_model.html">HestonModel</a> &gt; &amp;model, <a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a3caae3180358d7e623bcf2dc25e5b627">ComplexLogFormula</a> cpxLog, const <a class="el" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html">Integration</a> &amp;itg, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> andersenPiterbargEpsilon=1e-8)</td></tr>
-<tr class="separator:af0191825a296d5a0f9a6ebf9f243f597"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6f3e944aa95e90e9ed7ee38cde29b0c"><td class="memItemLeft" align="right" valign="top">std::complex&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#ae6f3e944aa95e90e9ed7ee38cde29b0c">chF</a> (const std::complex&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;z, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t) const</td></tr>
-<tr class="separator:ae6f3e944aa95e90e9ed7ee38cde29b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f42d9d26692ecdbc7cad58139225122"><td class="memItemLeft" align="right" valign="top">std::complex&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a1f42d9d26692ecdbc7cad58139225122">lnChF</a> (const std::complex&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;z, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t) const</td></tr>
-<tr class="separator:a1f42d9d26692ecdbc7cad58139225122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa542dd813954c069b2f46438a46eeac3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#aa542dd813954c069b2f46438a46eeac3">AnalyticHestonEngine</a> (const ext::shared_ptr&lt; <a class="el" href="../../d6/d68/class_quant_lib_1_1_heston_model.html">HestonModel</a> &gt; &amp;model, <a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a3caae3180358d7e623bcf2dc25e5b627">ComplexLogFormula</a> cpxLog, const <a class="el" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html">Integration</a> &amp;itg, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> andersenPiterbargEpsilon=1e-25, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../df/dae/sabr_8cpp.html#ab7eeb7bf31a421bd2f657cd118290d6c">alpha</a>=-0.5)</td></tr>
+<tr class="separator:aa542dd813954c069b2f46438a46eeac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61eb1a24e5329ccc296715a40dc3a19a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a> () const override</td></tr>
 <tr class="separator:a61eb1a24e5329ccc296715a40dc3a19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f3e944aa95e90e9ed7ee38cde29b0c"><td class="memItemLeft" align="right" valign="top">std::complex&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#ae6f3e944aa95e90e9ed7ee38cde29b0c">chF</a> (const std::complex&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;z, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>) const</td></tr>
+<tr class="separator:ae6f3e944aa95e90e9ed7ee38cde29b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f42d9d26692ecdbc7cad58139225122"><td class="memItemLeft" align="right" valign="top">std::complex&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a1f42d9d26692ecdbc7cad58139225122">lnChF</a> (const std::complex&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;z, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>) const</td></tr>
+<tr class="separator:a1f42d9d26692ecdbc7cad58139225122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a171352dc86e7106a631fa1e136f8a9e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a171352dc86e7106a631fa1e136f8a9e3">numberOfEvaluations</a> () const</td></tr>
 <tr class="separator:a171352dc86e7106a631fa1e136f8a9e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d68adf9afff32b6094f12a7410e4793"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a9d68adf9afff32b6094f12a7410e4793">priceVanillaPayoff</a> (const ext::shared_ptr&lt; <a class="el" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a> &gt; &amp;<a class="el" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;maturity) const</td></tr>
+<tr class="separator:a9d68adf9afff32b6094f12a7410e4793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2cee84853f75594a9958e002f2582b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#ab2cee84853f75594a9958e002f2582b4">priceVanillaPayoff</a> (const ext::shared_ptr&lt; <a class="el" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a> &gt; &amp;<a class="el" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> maturity) const</td></tr>
+<tr class="separator:ab2cee84853f75594a9958e002f2582b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_generic_model_engine"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_generic_model_engine')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html">GenericModelEngine&lt; HestonModel, VanillaOption::arguments, VanillaOption::results &gt;</a></td></tr>
 <tr class="memitem:abff0d2e5736a96e9eccd7050af152ca6 inherit pub_methods_class_quant_lib_1_1_generic_model_engine"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html#abff0d2e5736a96e9eccd7050af152ca6">GenericModelEngine</a> (<a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d6/d68/class_quant_lib_1_1_heston_model.html">HestonModel</a> &gt; model=<a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d6/d68/class_quant_lib_1_1_heston_model.html">HestonModel</a> &gt;())</td></tr>
 <tr class="separator:abff0d2e5736a96e9eccd7050af152ca6 inherit pub_methods_class_quant_lib_1_1_generic_model_engine"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,15 +268,20 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5529e23ca823062da04b6856c037a1c4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a5529e23ca823062da04b6856c037a1c4">doCalculation</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> riskFreeDiscount, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> dividendDiscount, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spotPrice, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strikePrice, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> term, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> kappa, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> theta, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> sigma, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> v0, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> rho, const <a class="el" href="../../d5/d8d/class_quant_lib_1_1_type_payoff.html">TypePayoff</a> &amp;type, const <a class="el" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html">Integration</a> &amp;integration, <a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a3caae3180358d7e623bcf2dc25e5b627">ComplexLogFormula</a> cpxLog, const <a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html">AnalyticHestonEngine</a> *enginePtr, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &amp;value, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> &amp;evaluations)</td></tr>
+<tr class="memitem:a5529e23ca823062da04b6856c037a1c4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a5529e23ca823062da04b6856c037a1c4">doCalculation</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> riskFreeDiscount, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> dividendDiscount, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> spotPrice, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strikePrice, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> term, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d2/d3a/hestonrndcalculator_8cpp.html#a1aa91b63a8ef79fd3743070dc775ead8">kappa</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d2/d3a/hestonrndcalculator_8cpp.html#a2c52330fe605e3d67b38b448db51a49c">theta</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d2/d3a/hestonrndcalculator_8cpp.html#a4dc92b5a616bb241f0abaf2c785fcdc1">v0</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d2/d3a/hestonrndcalculator_8cpp.html#ae07d6de71cc56577f5d379b54839ba8c">rho</a>, const <a class="el" href="../../d5/d8d/class_quant_lib_1_1_type_payoff.html">TypePayoff</a> &amp;type, const <a class="el" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html">Integration</a> &amp;integration, <a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a3caae3180358d7e623bcf2dc25e5b627">ComplexLogFormula</a> cpxLog, const <a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html">AnalyticHestonEngine</a> *enginePtr, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &amp;value, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> &amp;evaluations)</td></tr>
 <tr class="separator:a5529e23ca823062da04b6856c037a1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe7f862a6014a2d6be27c94b0d971f48"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a3caae3180358d7e623bcf2dc25e5b627">ComplexLogFormula</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#afe7f862a6014a2d6be27c94b0d971f48">optimalControlVariate</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> v0, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> kappa, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> theta, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> sigma, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> rho)</td></tr>
+<tr class="memitem:afe7f862a6014a2d6be27c94b0d971f48"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a3caae3180358d7e623bcf2dc25e5b627">ComplexLogFormula</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#afe7f862a6014a2d6be27c94b0d971f48">optimalControlVariate</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d2/d3a/hestonrndcalculator_8cpp.html#a4dc92b5a616bb241f0abaf2c785fcdc1">v0</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d2/d3a/hestonrndcalculator_8cpp.html#a1aa91b63a8ef79fd3743070dc775ead8">kappa</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d2/d3a/hestonrndcalculator_8cpp.html#a2c52330fe605e3d67b38b448db51a49c">theta</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d2/d3a/hestonrndcalculator_8cpp.html#ae07d6de71cc56577f5d379b54839ba8c">rho</a>)</td></tr>
 <tr class="separator:afe7f862a6014a2d6be27c94b0d971f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:af6a0ac6a6909199ea89886ed4cc59ada"><td class="memItemLeft" align="right" valign="top">virtual std::complex&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#af6a0ac6a6909199ea89886ed4cc59ada">addOnTerm</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> phi, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j) const</td></tr>
+<tr class="memitem:af6a0ac6a6909199ea89886ed4cc59ada"><td class="memItemLeft" align="right" valign="top">virtual std::complex&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#af6a0ac6a6909199ea89886ed4cc59ada">addOnTerm</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> phi, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, <a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j) const</td></tr>
 <tr class="separator:af6a0ac6a6909199ea89886ed4cc59ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:acd9d5b9fe0dbf0d2d11952d5a08b0f95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#acd9d5b9fe0dbf0d2d11952d5a08b0f95">priceVanillaPayoff</a> (const ext::shared_ptr&lt; <a class="el" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a> &gt; &amp;<a class="el" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>, <a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> maturity, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> fwd) const</td></tr>
+<tr class="separator:acd9d5b9fe0dbf0d2d11952d5a08b0f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -280,6 +293,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:adba60026c26bc002ac17c93aa06b52dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a064a7307b0078d4396f595fc7b6a98fc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a064a7307b0078d4396f595fc7b6a98fc">andersenPiterbargEpsilon_</a></td></tr>
 <tr class="separator:a064a7307b0078d4396f595fc7b6a98fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5f60670b1c3273333467ce33939204"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a3a5f60670b1c3273333467ce33939204">alpha_</a></td></tr>
+<tr class="separator:a3a5f60670b1c3273333467ce33939204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -303,9 +318,10 @@ Additional Inherited Members</h2></td></tr>
 <p >J. Gatheral, The Volatility Surface: A Practitioner's Guide, Wiley Finance</p>
 <p >F. Le Floc'h, Fourier <a class="el" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html">Integration</a> and Stochastic Volatility Calibration, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2362968">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2362968</a></p>
 <p >L. Andersen, and V. Piterbarg, 2010, Interest Rate Modeling, Volume I: Foundations and Vanilla Models, Atlantic Financial Press London.</p>
-<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000136">Tests:</a></b></dt><dd>the correctness of the returned value is tested by reproducing results available in web/literature and comparison with Black pricing. </dd></dl>
+<p >L. Andersen and M. Lake, 2018 Robust High-Precision <a class="el" href="../../d2/df1/class_quant_lib_1_1_option.html" title="base option class">Option</a> Pricing by Fourier Transforms: Contour Deformations and Double-Exponential Quadrature, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3231626">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3231626</a></p>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000139">Tests:</a></b></dt><dd>the correctness of the returned value is tested by reproducing results available in web/literature and comparison with Black pricing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00087">87</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a3caae3180358d7e623bcf2dc25e5b627" name="a3caae3180358d7e623bcf2dc25e5b627"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3caae3180358d7e623bcf2dc25e5b627">&#9670;&#160;</a></span>ComplexLogFormula</h2>
@@ -324,10 +340,12 @@ Additional Inherited Members</h2></td></tr>
 <tr><td class="fieldname"><a id="a3caae3180358d7e623bcf2dc25e5b627a436dac05f3b0c230e55a57d861a48f2b" name="a3caae3180358d7e623bcf2dc25e5b627a436dac05f3b0c230e55a57d861a48f2b"></a>AndersenPiterbarg&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3caae3180358d7e623bcf2dc25e5b627afd072ac9c99dc2c0a4ee4dd0d298d8f3" name="a3caae3180358d7e623bcf2dc25e5b627afd072ac9c99dc2c0a4ee4dd0d298d8f3"></a>AndersenPiterbargOptCV&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3caae3180358d7e623bcf2dc25e5b627aeef5f5cf130c2571274619f2940ba803" name="a3caae3180358d7e623bcf2dc25e5b627aeef5f5cf130c2571274619f2940ba803"></a>AsymptoticChF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3caae3180358d7e623bcf2dc25e5b627a6d62795ea1da7d899a7d95431e9982ce" name="a3caae3180358d7e623bcf2dc25e5b627a6d62795ea1da7d899a7d95431e9982ce"></a>AngledContour&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3caae3180358d7e623bcf2dc25e5b627a6af0b439cd9f6a1843f6e0984a33d401" name="a3caae3180358d7e623bcf2dc25e5b627a6af0b439cd9f6a1843f6e0984a33d401"></a>AngledContourNoCV&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3caae3180358d7e623bcf2dc25e5b627a22eb8a23398f8d057121e273fe3bdce1" name="a3caae3180358d7e623bcf2dc25e5b627a22eb8a23398f8d057121e273fe3bdce1"></a>OptimalCV&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00093">93</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00100">100</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
 
 </div>
 </div>
@@ -364,7 +382,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00524">524</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00673">673</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
 
 </div>
 </div>
@@ -394,12 +412,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00511">511</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00659">659</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
 
 </div>
 </div>
-<a id="af0191825a296d5a0f9a6ebf9f243f597" name="af0191825a296d5a0f9a6ebf9f243f597"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0191825a296d5a0f9a6ebf9f243f597">&#9670;&#160;</a></span>AnalyticHestonEngine() <span class="overload">[3/3]</span></h2>
+<a id="aa542dd813954c069b2f46438a46eeac3" name="aa542dd813954c069b2f46438a46eeac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa542dd813954c069b2f46438a46eeac3">&#9670;&#160;</a></span>AnalyticHestonEngine() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,7 +444,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td>
-          <td class="paramname"><em>andersenPiterbargEpsilon</em> = <code>1e-8</code>&#160;</td>
+          <td class="paramname"><em>andersenPiterbargEpsilon</em> = <code>1e-25</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td>
+          <td class="paramname"><em>alpha</em> = <code>-0.5</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -436,14 +460,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00537">537</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00687">687</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_af0191825a296d5a0f9a6ebf9f243f597_cgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_af0191825a296d5a0f9a6ebf9f243f597_cgraph" alt=""/></div>
-<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_af0191825a296d5a0f9a6ebf9f243f597_cgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_af0191825a296d5a0f9a6ebf9f243f597_cgraph">
+<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_aa542dd813954c069b2f46438a46eeac3_cgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_aa542dd813954c069b2f46438a46eeac3_cgraph" alt=""/></div>
+<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_aa542dd813954c069b2f46438a46eeac3_cgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_aa542dd813954c069b2f46438a46eeac3_cgraph">
 <area shape="rect" title=" " alt="" coords="5,20,156,45"/>
 <area shape="rect" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html#a23c3a02c33eae5ead550a1a364fd496f" title=" " alt="" coords="204,5,401,60"/>
 </map>
@@ -452,6 +476,59 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a61eb1a24e5329ccc296715a40dc3a19a" name="a61eb1a24e5329ccc296715a40dc3a19a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61eb1a24e5329ccc296715a40dc3a19a">&#9670;&#160;</a></span>calculate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void calculate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html#a6b564cec9dfa3d4397000b9f3b7a43f6">PricingEngine</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d0/db6/class_quant_lib_1_1_analytic_heston_hull_white_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">AnalyticHestonHullWhiteEngine</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00861">861</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph" alt=""/></div>
+<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,80,55"/>
+<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a9d68adf9afff32b6094f12a7410e4793" title=" " alt="" coords="128,29,253,55"/>
+</map>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_icgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_icgraph" alt=""/></div>
+<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_icgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_icgraph">
+<area shape="rect" title=" " alt="" coords="232,13,307,38"/>
+<area shape="rect" href="../../d0/db6/class_quant_lib_1_1_analytic_heston_hull_white_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,5,184,45"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ae6f3e944aa95e90e9ed7ee38cde29b0c" name="ae6f3e944aa95e90e9ed7ee38cde29b0c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae6f3e944aa95e90e9ed7ee38cde29b0c">&#9670;&#160;</a></span>chF()</h2>
 
@@ -478,28 +555,30 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00454">454</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00578">578</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_ae6f3e944aa95e90e9ed7ee38cde29b0c_cgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_ae6f3e944aa95e90e9ed7ee38cde29b0c_cgraph" alt=""/></div>
 <map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_ae6f3e944aa95e90e9ed7ee38cde29b0c_cgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_ae6f3e944aa95e90e9ed7ee38cde29b0c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,49,31"/>
-<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#aab685c5b017f44b8bd6e54a06e6051d4" title=" " alt="" coords="97,5,225,31"/>
+<area shape="rect" title=" " alt="" coords="5,80,49,105"/>
+<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a1f42d9d26692ecdbc7cad58139225122" title=" " alt="" coords="97,55,153,80"/>
+<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#aab685c5b017f44b8bd6e54a06e6051d4" title=" " alt="" coords="371,56,499,81"/>
+<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#ad88a470a0d2801f9b31bc4c9168a8b30" title=" " alt="" coords="201,5,323,31"/>
+<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#a12d6999f4ea5fc6951d3cf18b95351c2" title=" " alt="" coords="205,55,319,80"/>
 </map>
 </div>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_ae6f3e944aa95e90e9ed7ee38cde29b0c_icgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_ae6f3e944aa95e90e9ed7ee38cde29b0c_icgraph" alt=""/></div>
 <map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_ae6f3e944aa95e90e9ed7ee38cde29b0c_icgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_ae6f3e944aa95e90e9ed7ee38cde29b0c_icgraph">
-<area shape="rect" title=" " alt="" coords="224,52,268,77"/>
-<area shape="rect" href="../../d8/db4/class_quant_lib_1_1_analytic_heston_engine_1_1_a_p___helper.html#a08adb58a53cf86bcda9f280e1946a218" title=" " alt="" coords="5,5,176,60"/>
-<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a1f42d9d26692ecdbc7cad58139225122" title=" " alt="" coords="63,84,119,109"/>
+<area shape="rect" title=" " alt="" coords="224,20,268,45"/>
+<area shape="rect" href="../../d8/db4/class_quant_lib_1_1_analytic_heston_engine_1_1_a_p___helper.html#ae5b8bf2f92c4e6e91c7279e1ac8c4d5d" title=" " alt="" coords="5,5,176,60"/>
 </map>
 </div>
 
@@ -531,81 +610,30 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00506">506</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_a1f42d9d26692ecdbc7cad58139225122_cgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a1f42d9d26692ecdbc7cad58139225122_cgraph" alt=""/></div>
-<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a1f42d9d26692ecdbc7cad58139225122_cgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a1f42d9d26692ecdbc7cad58139225122_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,61,31"/>
-<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#ae6f3e944aa95e90e9ed7ee38cde29b0c" title=" " alt="" coords="109,5,153,31"/>
-<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#aab685c5b017f44b8bd6e54a06e6051d4" title=" " alt="" coords="201,5,329,31"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a61eb1a24e5329ccc296715a40dc3a19a" name="a61eb1a24e5329ccc296715a40dc3a19a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61eb1a24e5329ccc296715a40dc3a19a">&#9670;&#160;</a></span>calculate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void calculate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html#a6b564cec9dfa3d4397000b9f3b7a43f6">PricingEngine</a>.</p>
-
-<p>Reimplemented in <a class="el" href="../../d0/db6/class_quant_lib_1_1_analytic_heston_hull_white_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">AnalyticHestonHullWhiteEngine</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00668">668</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph" alt=""/></div>
-<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,235,80,260"/>
-<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a5529e23ca823062da04b6856c037a1c4" title=" " alt="" coords="128,235,228,260"/>
-<area shape="rect" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html#a0f5381693cdfb0b737966980519485fd" title=" " alt="" coords="307,48,498,103"/>
-<area shape="rect" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html#a9c59dd19f80a301849f86006cdbd8221" title=" " alt="" coords="307,127,498,167"/>
-<area shape="rect" href="../../d8/db4/class_quant_lib_1_1_analytic_heston_engine_1_1_a_p___helper.html#a62f956221ac30afaf88d77b0f8d2601b" title=" " alt="" coords="276,191,529,231"/>
-<area shape="rect" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html#a171352dc86e7106a631fa1e136f8a9e3" title=" " alt="" coords="305,256,500,311"/>
-<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#afe7f862a6014a2d6be27c94b0d971f48" title=" " alt="" coords="329,335,476,360"/>
-<area shape="rect" href="../../d5/d8d/class_quant_lib_1_1_type_payoff.html#adb0ba825d3a506ae8445b023210c40ce" title=" " alt="" coords="329,385,476,425"/>
-<area shape="rect" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a706af4c4d308b619825b6ee05b21e678" title=" " alt="" coords="597,55,731,95"/>
-<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#ab7d80f1774594ee7d9c1309083a44207" title=" " alt="" coords="837,5,951,31"/>
-<area shape="rect" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a1830db78cfda10301b3cc5c3336a4838" title=" " alt="" coords="827,55,961,95"/>
-<area shape="rect" href="../../d3/d92/class_quant_lib_1_1_curiously_recurring_template.html#addc89a03a38efd2e02ef64ea3d5d65f4" title=" " alt="" coords="799,119,989,159"/>
-<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc" title=" " alt="" coords="577,191,751,231"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00621">621</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_icgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_icgraph" alt=""/></div>
-<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_icgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a61eb1a24e5329ccc296715a40dc3a19a_icgraph">
-<area shape="rect" title=" " alt="" coords="232,13,307,38"/>
-<area shape="rect" href="../../d0/db6/class_quant_lib_1_1_analytic_heston_hull_white_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,5,184,45"/>
+<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_a1f42d9d26692ecdbc7cad58139225122_cgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a1f42d9d26692ecdbc7cad58139225122_cgraph" alt=""/></div>
+<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a1f42d9d26692ecdbc7cad58139225122_cgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a1f42d9d26692ecdbc7cad58139225122_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,61,56"/>
+<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#ad88a470a0d2801f9b31bc4c9168a8b30" title=" " alt="" coords="109,5,231,31"/>
+<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#a12d6999f4ea5fc6951d3cf18b95351c2" title=" " alt="" coords="113,55,227,80"/>
+<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#aab685c5b017f44b8bd6e54a06e6051d4" title=" " alt="" coords="279,5,407,31"/>
+</map>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_a1f42d9d26692ecdbc7cad58139225122_icgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a1f42d9d26692ecdbc7cad58139225122_icgraph" alt=""/></div>
+<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a1f42d9d26692ecdbc7cad58139225122_icgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a1f42d9d26692ecdbc7cad58139225122_icgraph">
+<area shape="rect" title=" " alt="" coords="316,20,372,45"/>
+<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#ae6f3e944aa95e90e9ed7ee38cde29b0c" title=" " alt="" coords="224,20,268,45"/>
+<area shape="rect" href="../../d8/db4/class_quant_lib_1_1_analytic_heston_engine_1_1_a_p___helper.html#ae5b8bf2f92c4e6e91c7279e1ac8c4d5d" title=" " alt="" coords="5,5,176,60"/>
 </map>
 </div>
 
@@ -626,7 +654,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00568">568</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00721">721</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
 
 </div>
 </div>
@@ -748,17 +776,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00572">572</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l01068">1068</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_a5529e23ca823062da04b6856c037a1c4_cgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a5529e23ca823062da04b6856c037a1c4_cgraph" alt=""/></div>
 <map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a5529e23ca823062da04b6856c037a1c4_cgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a5529e23ca823062da04b6856c037a1c4_cgraph">
 <area shape="rect" title=" " alt="" coords="5,235,105,260"/>
 <area shape="rect" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html#a0f5381693cdfb0b737966980519485fd" title=" " alt="" coords="185,48,375,103"/>
-<area shape="rect" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html#a9c59dd19f80a301849f86006cdbd8221" title=" " alt="" coords="185,127,375,167"/>
+<area shape="rect" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html#ad4d67f07572b3e206823f1edad813079" title=" " alt="" coords="185,127,375,167"/>
 <area shape="rect" href="../../d8/db4/class_quant_lib_1_1_analytic_heston_engine_1_1_a_p___helper.html#a62f956221ac30afaf88d77b0f8d2601b" title=" " alt="" coords="153,191,407,231"/>
 <area shape="rect" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html#a171352dc86e7106a631fa1e136f8a9e3" title=" " alt="" coords="183,256,377,311"/>
 <area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#afe7f862a6014a2d6be27c94b0d971f48" title=" " alt="" coords="207,335,353,360"/>
@@ -770,18 +798,99 @@ Additional Inherited Members</h2></td></tr>
 <area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc" title=" " alt="" coords="455,191,628,231"/>
 </map>
 </div>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_a5529e23ca823062da04b6856c037a1c4_icgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a5529e23ca823062da04b6856c037a1c4_icgraph" alt=""/></div>
-<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a5529e23ca823062da04b6856c037a1c4_icgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a5529e23ca823062da04b6856c037a1c4_icgraph">
-<area shape="rect" title=" " alt="" coords="456,45,556,70"/>
+</div>
+<a id="a9d68adf9afff32b6094f12a7410e4793" name="a9d68adf9afff32b6094f12a7410e4793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d68adf9afff32b6094f12a7410e4793">&#9670;&#160;</a></span>priceVanillaPayoff() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> priceVanillaPayoff </td>
+          <td>(</td>
+          <td class="paramtype">const ext::shared_ptr&lt; <a class="el" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>payoff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;&#160;</td>
+          <td class="paramname"><em>maturity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00725">725</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_a9d68adf9afff32b6094f12a7410e4793_cgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a9d68adf9afff32b6094f12a7410e4793_cgraph" alt=""/></div>
+<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a9d68adf9afff32b6094f12a7410e4793_cgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a9d68adf9afff32b6094f12a7410e4793_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,131,55"/>
+</map>
+</div>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_a9d68adf9afff32b6094f12a7410e4793_icgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a9d68adf9afff32b6094f12a7410e4793_icgraph" alt=""/></div>
+<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a9d68adf9afff32b6094f12a7410e4793_icgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_a9d68adf9afff32b6094f12a7410e4793_icgraph">
+<area shape="rect" title=" " alt="" coords="456,45,581,70"/>
 <area shape="rect" href="../../d1/d41/class_quant_lib_1_1_heston_black_vol_surface.html#ac8384ed07427d6f044e03c97f6e77f61" title="Black volatility calculation." alt="" coords="233,8,408,48"/>
 <area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="283,74,358,99"/>
 <area shape="rect" href="../../d1/d41/class_quant_lib_1_1_heston_black_vol_surface.html#ab6d7e53b07ebe1ec8c12ae6e467f2005" title="Black variance calculation." alt="" coords="5,5,185,45"/>
 <area shape="rect" href="../../d0/db6/class_quant_lib_1_1_analytic_heston_hull_white_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="6,69,185,109"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab2cee84853f75594a9958e002f2582b4" name="ab2cee84853f75594a9958e002f2582b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2cee84853f75594a9958e002f2582b4">&#9670;&#160;</a></span>priceVanillaPayoff() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> priceVanillaPayoff </td>
+          <td>(</td>
+          <td class="paramtype">const ext::shared_ptr&lt; <a class="el" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>payoff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a>&#160;</td>
+          <td class="paramname"><em>maturity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00737">737</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_ab2cee84853f75594a9958e002f2582b4_cgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_ab2cee84853f75594a9958e002f2582b4_cgraph" alt=""/></div>
+<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_ab2cee84853f75594a9958e002f2582b4_cgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_ab2cee84853f75594a9958e002f2582b4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,131,55"/>
+<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a9d68adf9afff32b6094f12a7410e4793" title=" " alt="" coords="179,29,304,55"/>
 </map>
 </div>
 
@@ -845,21 +954,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00556">556</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00708">708</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_afe7f862a6014a2d6be27c94b0d971f48_icgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_afe7f862a6014a2d6be27c94b0d971f48_icgraph" alt=""/></div>
 <map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_afe7f862a6014a2d6be27c94b0d971f48_icgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_afe7f862a6014a2d6be27c94b0d971f48_icgraph">
-<area shape="rect" title=" " alt="" coords="691,42,837,67"/>
-<area shape="rect" href="../../d6/d02/class_quant_lib_1_1_exponential_fitting_heston_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="456,5,643,45"/>
-<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a5529e23ca823062da04b6856c037a1c4" title=" " alt="" coords="499,70,599,95"/>
-<area shape="rect" href="../../d1/d41/class_quant_lib_1_1_heston_black_vol_surface.html#ac8384ed07427d6f044e03c97f6e77f61" title="Black volatility calculation." alt="" coords="233,33,408,73"/>
-<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="283,99,358,125"/>
-<area shape="rect" href="../../d1/d41/class_quant_lib_1_1_heston_black_vol_surface.html#ab6d7e53b07ebe1ec8c12ae6e467f2005" title="Black variance calculation." alt="" coords="5,31,185,71"/>
-<area shape="rect" href="../../d0/db6/class_quant_lib_1_1_analytic_heston_hull_white_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="6,95,185,135"/>
+<area shape="rect" title=" " alt="" coords="240,70,387,95"/>
+<area shape="rect" href="../../d6/d02/class_quant_lib_1_1_exponential_fitting_heston_engine.html#a61eb1a24e5329ccc296715a40dc3a19a" title=" " alt="" coords="5,5,192,45"/>
+<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#a5529e23ca823062da04b6856c037a1c4" title=" " alt="" coords="49,70,149,95"/>
+<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#acd9d5b9fe0dbf0d2d11952d5a08b0f95" title=" " alt="" coords="36,119,161,145"/>
 </map>
 </div>
 
@@ -907,7 +1013,69 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d2/d15/class_quant_lib_1_1_analytic_h1_h_w_engine.html#a74b1557bf3bfb3596e04da12f5777cde">AnalyticH1HWEngine</a>, <a class="el" href="../../d0/db6/class_quant_lib_1_1_analytic_heston_hull_white_engine.html#a74b1557bf3bfb3596e04da12f5777cde">AnalyticHestonHullWhiteEngine</a>, <a class="el" href="../../de/d08/class_quant_lib_1_1_bates_engine.html#a74b1557bf3bfb3596e04da12f5777cde">BatesEngine</a>, <a class="el" href="../../de/d80/class_quant_lib_1_1_bates_det_jump_engine.html#a74b1557bf3bfb3596e04da12f5777cde">BatesDetJumpEngine</a>, <a class="el" href="../../d6/de0/class_quant_lib_1_1_bates_double_exp_engine.html#a74b1557bf3bfb3596e04da12f5777cde">BatesDoubleExpEngine</a>, and <a class="el" href="../../d3/dfc/class_quant_lib_1_1_bates_double_exp_det_jump_engine.html#a74b1557bf3bfb3596e04da12f5777cde">BatesDoubleExpDetJumpEngine</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00250">250</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00307">307</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acd9d5b9fe0dbf0d2d11952d5a08b0f95" name="acd9d5b9fe0dbf0d2d11952d5a08b0f95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9d5b9fe0dbf0d2d11952d5a08b0f95">&#9670;&#160;</a></span>priceVanillaPayoff() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> priceVanillaPayoff </td>
+          <td>(</td>
+          <td class="paramtype">const ext::shared_ptr&lt; <a class="el" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>payoff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a>&#160;</td>
+          <td class="paramname"><em>maturity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td>
+          <td class="paramname"><em>fwd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html#l00748">748</a> of file <a class="el" href="../../df/d22/analytichestonengine_8cpp_source.html">analytichestonengine.cpp</a>.</p>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine_acd9d5b9fe0dbf0d2d11952d5a08b0f95_cgraph.png" border="0" usemap="#ad7/d80/class_quant_lib_1_1_analytic_heston_engine_acd9d5b9fe0dbf0d2d11952d5a08b0f95_cgraph" alt=""/></div>
+<map name="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_acd9d5b9fe0dbf0d2d11952d5a08b0f95_cgraph" id="ad7/d80/class_quant_lib_1_1_analytic_heston_engine_acd9d5b9fe0dbf0d2d11952d5a08b0f95_cgraph">
+<area shape="rect" title=" " alt="" coords="5,135,131,160"/>
+<area shape="rect" href="../../d9/dbb/class_quant_lib_1_1_analytic_heston_engine_1_1_integration.html#a0f5381693cdfb0b737966980519485fd" title=" " alt="" coords="210,48,401,103"/>
+<area shape="rect" href="../../d8/db4/class_quant_lib_1_1_analytic_heston_engine_1_1_a_p___helper.html#a62f956221ac30afaf88d77b0f8d2601b" title=" " alt="" coords="179,127,432,167"/>
+<area shape="rect" href="../../d7/d80/class_quant_lib_1_1_analytic_heston_engine.html#afe7f862a6014a2d6be27c94b0d971f48" title=" " alt="" coords="232,192,379,217"/>
+<area shape="rect" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a706af4c4d308b619825b6ee05b21e678" title=" " alt="" coords="500,55,633,95"/>
+<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#ab7d80f1774594ee7d9c1309083a44207" title=" " alt="" coords="740,5,853,31"/>
+<area shape="rect" href="../../d1/dfd/class_quant_lib_1_1_solver1_d.html#a1830db78cfda10301b3cc5c3336a4838" title=" " alt="" coords="730,55,863,95"/>
+<area shape="rect" href="../../d3/d92/class_quant_lib_1_1_curiously_recurring_template.html#addc89a03a38efd2e02ef64ea3d5d65f4" title=" " alt="" coords="701,119,892,159"/>
+<area shape="rect" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc" title=" " alt="" coords="480,127,653,167"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -932,7 +1100,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00185">185</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00191">191</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
 
 </div>
 </div>
@@ -956,7 +1124,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00186">186</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00192">192</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
 
 </div>
 </div>
@@ -980,7 +1148,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00187">187</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00193">193</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
 
 </div>
 </div>
@@ -1004,7 +1172,31 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00188">188</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00194">194</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3a5f60670b1c3273333467ce33939204" name="a3a5f60670b1c3273333467ce33939204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a5f60670b1c3273333467ce33939204">&#9670;&#160;</a></span>alpha_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> alpha_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html#l00194">194</a> of file <a class="el" href="../../d9/dee/analytichestonengine_8hpp_source.html">analytichestonengine.hpp</a>.</p>
 
 </div>
 </div>

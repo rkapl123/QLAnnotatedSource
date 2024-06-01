@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/credit/basecorrelationlossmodel.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/credit/basecorrelationlossmodel.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">basecorrelationlossmodel.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../db/d6f/basecorrelationlossmodel_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2014 Jose Aparicio</span></div>
@@ -110,21 +109,61 @@ $(function() {
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define quantlib_base_correl_lossmodel_hpp</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/quote.hpp&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;ql/quotes/simplequote.hpp&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d02/quote_8hpp.html">ql/quote.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d17/simplequote_8hpp.html">ql/quotes/simplequote.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/experimental/credit/basket.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/experimental/credit/defaultlossmodel.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/experimental/credit/basecorrelationstructure.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d28/basket_8hpp.html">ql/experimental/credit/basket.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/db2/defaultlossmodel_8hpp.html">ql/experimental/credit/defaultlossmodel.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d45/basecorrelationstructure_8hpp.html">ql/experimental/credit/basecorrelationstructure.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// move these to the CPP (and the template spezs)</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;ql/experimental/credit/binomiallossmodel.hpp&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;ql/experimental/credit/gaussianlhplossmodel.hpp&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;ql/experimental/credit/inhomogeneouspooldef.hpp&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d50/binomiallossmodel_8hpp.html">ql/experimental/credit/binomiallossmodel.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/d62/gaussianlhplossmodel_8hpp.html">ql/experimental/credit/gaussianlhplossmodel.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d79/inhomogeneouspooldef_8hpp.html">ql/experimental/credit/inhomogeneouspooldef.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"></span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">    /*! Base Correlation loss model; interpolation is performed by portfolio </span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">    (live) amount percentage.\par</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">    Though the literature on this model is inmense, see for a more than </span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">    introductory level (precrisis) chapters 19, 20 and 21 of &lt;b&gt;Modelling single</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">    name and multi-name credit derivatives.&lt;/b&gt; Dominic O&#39;Kane, Wiley Finance, </span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">    2008\par</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">    For freely available documentation see:\par</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">    Credit Correlation: A Guide; JP Morgan Credit Derivatives Strategy; </span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        12 March 2004 \par</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">    Introducing Base Correlations; JP Morgan Credit Derivatives Strategy; </span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">        22 March 2004 \par</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">    A Relative Value Framework for Credit Correlation; JP Morgan Credit </span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">        Derivatives Strategy; 27 April 2004 \par</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">    Valuing and Hedging Synthetic CDO Tranches Using Base Correlations; Bear </span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">        Stearns; May 17, 2004 \par</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">    Correlation Primer; Nomura Fixed Income Research, August 6, 2004 \par</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">    Base Correlation Explained; Lehman Brothers Fixed Income Quantitative </span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">        Credit Research; 15 November 2004 \par</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">    &#39;Pricing CDOs with a smile&#39; in Societe Generale Credit Research; </span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">        February 2005 \par</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">    For bespoke base correlation see: \par</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">    Base Correlation Mapping in Lehman Brothers&#39; Quantitative Credit Research </span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">        Quarterly; Volume 2007-Q1 \par</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">    You can explore typical postcrisis data by perusing some of the JPMorgan </span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">    Global Correlation Daily Analytics \par</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">    Here the crisis model problems of ability to price stressed portfolios </span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">    or tranches over the maximum loss are the responsibility of the base models.</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">    Users should select their models according to this; choosing the copula or</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">    a random loss given default base model (or more exotic ones). \par</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">    Notice this is different to a bespoke base correlation loss (bespoke here </span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">    refering to basket composition, not just attachment levels) ; where </span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">    loss interpolation is on the expected loss value to match the two baskets. </span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">    Therefore the correlation surface should refer to the same basket intended</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">    to be priced. But this is left to the user and is not implemented in the </span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">    correlation surface (yet...)</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment"></span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">    \todo Bespoke portfolios BC models are yet to be implemented.</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment"></span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">    BaseModel_T must have a constructor with a single quote value</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">/* Criticism:</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">    This model is not as generic as it could be. In principle a default loss </span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">    model dependent on a single factor correlation parameter is the only </span></div>
@@ -179,15 +218,19 @@ $(function() {
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="comment">/* Most of the statistics are not implemented, not impossible but</span></div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">        the model is intended for pricing rather than ptfolio risk management.</span></div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">        */</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#aada6e256cf967559d9499fa9c9cddd31">expectedTrancheLoss</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; d) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#aada6e256cf967559d9499fa9c9cddd31">expectedTrancheLoss</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">        /*! Sets up attach/detach models. Gets called on basket update. </span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">        To be specialized on the spacific model type.</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">        */</span></div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#a0cd6e1d9bcbcd6c167cb00ece5ee1c3d">  139</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#a0cd6e1d9bcbcd6c167cb00ece5ee1c3d">setupModels</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#a50db5d6847dfb39ee2f1ad829ea5b952">  141</a></span>        <span class="keyword">mutable</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#a50db5d6847dfb39ee2f1ad829ea5b952">attachRatio_</a>, <a class="code hl_variable" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#ac2ba57262c84664d3061d8a797e63082">detachRatio_</a>;</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#a06c05f7e4de70c95a3304dd89f788178">  142</a></span>        <span class="keyword">mutable</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#a06c05f7e4de70c95a3304dd89f788178">remainingNotional_</a>;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="comment">//  trigger calculation.</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment"></span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">        //! Correlation buffer to pick up values from the surface and </span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment"></span>        <span class="comment">//  trigger calculation.</span></div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#a69b0f7e2bc1eb6081dc086ab0bf9a60b">  146</a></span>        ext::shared_ptr&lt;SimpleQuote&gt; <a class="code hl_variable" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#a69b0f7e2bc1eb6081dc086ab0bf9a60b">localCorrelationAttach_</a>, </div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#a8e24e0776609d61173d618d648b4c54f">  147</a></span>            <a class="code hl_variable" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#a8e24e0776609d61173d618d648b4c54f">localCorrelationDetach_</a>;</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#ad6b132248b6671042b1adb6a5fe15eb9">  148</a></span>        <span class="keyword">mutable</span> ext::shared_ptr&lt;Basket&gt; <a class="code hl_variable" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#ad6b132248b6671042b1adb6a5fe15eb9">basketAttach_</a>,</div>
@@ -206,19 +249,19 @@ $(function() {
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="comment">// Remember ETL returns the EL on the live part of the basket. </span></div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> LM, <span class="keyword">class</span> I&gt;</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#aada6e256cf967559d9499fa9c9cddd31">  163</a></span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#aada6e256cf967559d9499fa9c9cddd31">BaseCorrelationLossModel&lt;LM, I&gt;::expectedTrancheLoss</a>(</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; d)<span class="keyword"> const </span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>)<span class="keyword"> const </span></div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> correlK1 = correlTS_-&gt;correlation(d, attachRatio_);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> correlK2 = correlTS_-&gt;correlation(d, detachRatio_);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> correlK1 = correlTS_-&gt;correlation(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, attachRatio_);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> correlK2 = correlTS_-&gt;correlation(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, detachRatio_);</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="comment">/* reset correl and call base models which have the different baskets </span></div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment">        associated.*/</span></div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        localCorrelationAttach_-&gt;setValue(correlK1);</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> expLossK1 = </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            basketAttach_-&gt;expectedTrancheLoss(d);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            basketAttach_-&gt;expectedTrancheLoss(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>);</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        localCorrelationDetach_-&gt;setValue(correlK2);</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> expLossK2 = </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            basketDetach_-&gt;expectedTrancheLoss(d);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            basketDetach_-&gt;expectedTrancheLoss(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>);</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <span class="keywordflow">return</span> expLossK2 - expLossK1;</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    }</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
@@ -337,6 +380,9 @@ $(function() {
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>}</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abasecorrelationstructure_8hpp_html"><div class="ttname"><a href="../../de/d45/basecorrelationstructure_8hpp.html">basecorrelationstructure.hpp</a></div></div>
+<div class="ttc" id="abasket_8hpp_html"><div class="ttname"><a href="../../df/d28/basket_8hpp.html">basket.hpp</a></div><div class="ttdoc">basket of issuers and related notionals</div></div>
+<div class="ttc" id="abinomiallossmodel_8hpp_html"><div class="ttname"><a href="../../d5/d50/binomiallossmodel_8hpp.html">binomiallossmodel.hpp</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_base_correlation_loss_model_html"><div class="ttname"><a href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html">QuantLib::BaseCorrelationLossModel</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6f/basecorrelationlossmodel_8hpp_source.html#l00092">basecorrelationlossmodel.hpp:93</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_base_correlation_loss_model_html_a06c05f7e4de70c95a3304dd89f788178"><div class="ttname"><a href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#a06c05f7e4de70c95a3304dd89f788178">QuantLib::BaseCorrelationLossModel::remainingNotional_</a></div><div class="ttdeci">Real remainingNotional_</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6f/basecorrelationlossmodel_8hpp_source.html#l00142">basecorrelationlossmodel.hpp:142</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_base_correlation_loss_model_html_a0cd6e1d9bcbcd6c167cb00ece5ee1c3d"><div class="ttname"><a href="../../d5/df6/class_quant_lib_1_1_base_correlation_loss_model.html#a0cd6e1d9bcbcd6c167cb00ece5ee1c3d">QuantLib::BaseCorrelationLossModel::setupModels</a></div><div class="ttdeci">void setupModels() const</div></div>
@@ -367,14 +413,20 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_observer_html_aa6ade205ed506bf712da2704f80a73a0"><div class="ttname"><a href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">QuantLib::Observer::registerWith</a></div><div class="ttdeci">std::pair&lt; iterator, bool &gt; registerWith(const ext::shared_ptr&lt; Observable &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00228">observable.hpp:228</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simple_quote_html"><div class="ttname"><a href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">QuantLib::SimpleQuote</a></div><div class="ttdoc">market element returning a stored value</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d17/simplequote_8hpp_source.html#l00033">simplequote.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_singleton_html_ab7455b7e1235d292c444095842349291"><div class="ttname"><a href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">QuantLib::Singleton&lt; Settings &gt;::instance</a></div><div class="ttdeci">static Settings &amp; instance()</div><div class="ttdoc">access to the unique instance</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/singleton_8hpp_source.html#l00068">singleton.hpp:104</a></div></div>
+<div class="ttc" id="adefaultlossmodel_8hpp_html"><div class="ttname"><a href="../../d5/db2/defaultlossmodel_8hpp.html">defaultlossmodel.hpp</a></div></div>
+<div class="ttc" id="aexchangeratemanager_8cpp_html_a85641069b0d4478ab8a7356c3bf32ea3"><div class="ttname"><a href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a></div><div class="ttdeci">Date d</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/exchangeratemanager_8cpp_source.html#l00032">exchangeratemanager.cpp:32</a></div></div>
+<div class="ttc" id="agaussianlhplossmodel_8hpp_html"><div class="ttname"><a href="../../da/d62/gaussianlhplossmodel_8hpp.html">gaussianlhplossmodel.hpp</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_1_1_latent_model_integration_type_html_a3272cb8c142bf8708927fc6c25f0e5abaa2e9f7eaa8f6528f24d797fef45f4917"><div class="ttname"><a href="../../d8/d68/namespace_quant_lib_1_1_latent_model_integration_type.html#a3272cb8c142bf8708927fc6c25f0e5abaa2e9f7eaa8f6528f24d797fef45f4917">QuantLib::LatentModelIntegrationType::GaussianQuadrature</a></div><div class="ttdeci">@ GaussianQuadrature</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dfe/latentmodel_8hpp_source.html#l00108">latentmodel.hpp:108</a></div></div>
+<div class="ttc" id="ainhomogeneouspooldef_8hpp_html"><div class="ttname"><a href="../../df/d79/inhomogeneouspooldef_8hpp.html">inhomogeneouspooldef.hpp</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_1_1_latent_model_integration_type_html_a3272cb8c142bf8708927fc6c25f0e5abaa2e9f7eaa8f6528f24d797fef45f4917"><div class="ttname"><a href="../../d8/d68/namespace_quant_lib_1_1_latent_model_integration_type.html#a3272cb8c142bf8708927fc6c25f0e5abaa2e9f7eaa8f6528f24d797fef45f4917">QuantLib::LatentModelIntegrationType::GaussianQuadrature</a></div><div class="ttdeci">@ GaussianQuadrature</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dfe/latentmodel_8hpp_source.html#l00102">latentmodel.hpp:102</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a0d66e13d83f39f4de6c49508bad5f7cc"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a0d66e13d83f39f4de6c49508bad5f7cc">QuantLib::IHGaussPoolLossModel</a></div><div class="ttdeci">InhomogeneousPoolLossModel&lt; GaussianCopulaPolicy &gt; IHGaussPoolLossModel</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d79/inhomogeneouspooldef_8hpp_source.html#l00108">inhomogeneouspooldef.hpp:108</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a377976d855c43d856b67bcd218744a3e"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a377976d855c43d856b67bcd218744a3e">QuantLib::GaussianBinomialLossModel</a></div><div class="ttdeci">BinomialLossModel&lt; GaussianConstantLossLM &gt; GaussianBinomialLossModel</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d50/binomiallossmodel_8hpp_source.html#l00414">binomiallossmodel.hpp:414</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a5a0fa2eb449b1e31fb45ef48b4ac6cfb"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a5a0fa2eb449b1e31fb45ef48b4ac6cfb">QuantLib::TBinomialLossModel</a></div><div class="ttdeci">BinomialLossModel&lt; TConstantLossLM &gt; TBinomialLossModel</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d50/binomiallossmodel_8hpp_source.html#l00415">binomiallossmodel.hpp:415</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_aedfec6028abd560e0016218f7a946545"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#aedfec6028abd560e0016218f7a946545">QuantLib::GaussianLHPFlatBCLM</a></div><div class="ttdeci">BaseCorrelationLossModel&lt; GaussianLHPLossModel, BilinearInterpolation &gt; GaussianLHPFlatBCLM</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6f/basecorrelationlossmodel_8hpp_source.html#l00289">basecorrelationlossmodel.hpp:289</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="aquote_8hpp_html"><div class="ttname"><a href="../../d2/d02/quote_8hpp.html">quote.hpp</a></div><div class="ttdoc">purely virtual base class for market observables</div></div>
+<div class="ttc" id="asimplequote_8hpp_html"><div class="ttname"><a href="../../d4/d17/simplequote_8hpp.html">simplequote.hpp</a></div><div class="ttdoc">simple quote class</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

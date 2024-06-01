@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/patterns/observable.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/patterns/observable.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">observable.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../dc/d2a/observable_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">Copyright (C) 2013 Chris Higgs</span></div>
@@ -108,7 +107,7 @@ $(function() {
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/patterns/observable.hpp&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d5e/observable_8hpp.html">ql/patterns/observable.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef QL_ENABLE_THREAD_SAFE_OBSERVER_PATTERN</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
@@ -136,7 +135,7 @@ $(function() {
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_variable" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html#a35a1e6351759e14377e9090059442ff3">deferredObservers_</a>.clear();</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            QL_ENSURE(successful,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a394b39aa396098345f86d243f207f7af">QL_ENSURE</a>(successful,</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                  <span class="stringliteral">&quot;could not notify one or more observers: &quot;</span> &lt;&lt; errMsg);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
@@ -167,7 +166,7 @@ $(function() {
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                    successful = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                }</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            QL_ENSURE(successful,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a394b39aa396098345f86d243f207f7af">QL_ENSURE</a>(successful,</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                  <span class="stringliteral">&quot;could not notify one or more observers: &quot;</span> &lt;&lt; errMsg);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
@@ -194,7 +193,7 @@ $(function() {
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            }</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordtype">void</span> disconnect(<span class="keyword">const</span> T&amp; slot) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordtype">void</span> disconnect(<span class="keyword">const</span> <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>&amp; slot) {</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                sig_.disconnect(slot);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            }</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
@@ -207,7 +206,7 @@ $(function() {
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keyword">class </span>ProxyUpdater {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            T* proxy_;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>* proxy_;</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>          <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keyword">explicit</span> ProxyUpdater(<span class="keyword">const</span> ext::shared_ptr&lt;T&gt;&amp; observerProxy)</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            : proxy_(observerProxy.<a class="code hl_function" href="../../d8/d1e/namespace_quant_lib_1_1detail.html#a2a9ed0a73ae94f1da097138d89c87e73">get</a>()) {}</div>
@@ -305,10 +304,13 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_observable_settings_html_a9df97bdb2f4eae6b71f787614c60e1af"><div class="ttname"><a href="../../d3/d71/class_quant_lib_1_1_observable_settings.html#a9df97bdb2f4eae6b71f787614c60e1af">QuantLib::ObservableSettings::registerDeferredObservers</a></div><div class="ttdeci">void registerDeferredObservers(const Observable::set_type &amp;observers)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00163">observable.hpp:163</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_observable_settings_html_ab11dcb6915289c2b393e81df2f8687d3"><div class="ttname"><a href="../../d3/d71/class_quant_lib_1_1_observable_settings.html#ab11dcb6915289c2b393e81df2f8687d3">QuantLib::ObservableSettings::updatesEnabled</a></div><div class="ttdeci">bool updatesEnabled() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00097">observable.hpp:97</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_singleton_html_ab7455b7e1235d292c444095842349291"><div class="ttname"><a href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">QuantLib::Singleton&lt; ObservableSettings &gt;::instance</a></div><div class="ttdeci">static ObservableSettings &amp; instance()</div><div class="ttdoc">access to the unique instance</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/singleton_8hpp_source.html#l00068">singleton.hpp:104</a></div></div>
+<div class="ttc" id="adefaultdensitystructure_8cpp_html_a27c0621a0cfba42bc41a097374ce1c1f"><div class="ttname"><a href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a></div><div class="ttdeci">Time T</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d93/defaultdensitystructure_8cpp_source.html#l00033">defaultdensitystructure.cpp:33</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a394b39aa396098345f86d243f207f7af"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a394b39aa396098345f86d243f207f7af">QL_ENSURE</a></div><div class="ttdeci">#define QL_ENSURE(condition, message)</div><div class="ttdoc">throw an error if the given post-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00130">errors.hpp:130</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_1_1detail_html_a2a9ed0a73ae94f1da097138d89c87e73"><div class="ttname"><a href="../../d8/d1e/namespace_quant_lib_1_1detail.html#a2a9ed0a73ae94f1da097138d89c87e73">QuantLib::detail::get</a></div><div class="ttdeci">T get(const std::vector&lt; T &gt; &amp;v, Size i, U defaultValue)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d80/vectors_8hpp_source.html#l00035">vectors.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html_a10f6f2d9c645c9f506523ed9e0e87c4a"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a10f6f2d9c645c9f506523ed9e0e87c4a">QuantLib::operator==</a></div><div class="ttdeci">bool operator==(const Currency &amp;c1, const Currency &amp;c2)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5f/currency_8hpp_source.html#l00191">currency.hpp:191</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html_a7014347e9206c977dffb47eab68596b5"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a7014347e9206c977dffb47eab68596b5">QuantLib::operator!=</a></div><div class="ttdeci">bool operator!=(const Currency &amp;c1, const Currency &amp;c2)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5f/currency_8hpp_source.html#l00196">currency.hpp:196</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_a10f6f2d9c645c9f506523ed9e0e87c4a"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a10f6f2d9c645c9f506523ed9e0e87c4a">QuantLib::operator==</a></div><div class="ttdeci">bool operator==(const Currency &amp;c1, const Currency &amp;c2)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5f/currency_8hpp_source.html#l00231">currency.hpp:231</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_a7014347e9206c977dffb47eab68596b5"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a7014347e9206c977dffb47eab68596b5">QuantLib::operator!=</a></div><div class="ttdeci">bool operator!=(const Currency &amp;c1, const Currency &amp;c2)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5f/currency_8hpp_source.html#l00236">currency.hpp:236</a></div></div>
+<div class="ttc" id="aobservable_8hpp_html"><div class="ttname"><a href="../../de/d5e/observable_8hpp.html">observable.hpp</a></div><div class="ttdoc">observer/observable pattern</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

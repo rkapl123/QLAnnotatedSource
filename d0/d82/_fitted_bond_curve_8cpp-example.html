@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -85,6 +84,24 @@ $(function() {
 <div class="contents">
 <p >For a given set of coupons and terms to maturity, this example computes the value of a bond by fitting the yields to a curve using different methods. The fitting methods are exponential splines, simple polynomials, Nelson-Siegel, and cubic B-splines. It then shifts the evaluation date into the future to compute implied forward par rates. It also computes yields after small price shifts.</p>
 <div class="fragment"><div class="line"><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment">/*!</span></div>
+<div class="line"><span class="comment"> Copyright (C) 2007 Allen Kuo</span></div>
+<div class="line"><span class="comment"> Copyright (C) 2015 Andres Hernandez</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment"> This file is part of QuantLib, a free-software/open-source library</span></div>
+<div class="line"><span class="comment"> for financial quantitative analysts and developers - http://quantlib.org/</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment"> QuantLib is free software: you can redistribute it and/or modify it</span></div>
+<div class="line"><span class="comment"> under the terms of the QuantLib license.  You should have received a</span></div>
+<div class="line"><span class="comment"> copy of the license along with this program; if not, please email</span></div>
+<div class="line"><span class="comment"> &lt;quantlib-dev@lists.sf.net&gt;. The license is also available online at</span></div>
+<div class="line"><span class="comment"> &lt;http://quantlib.org/license.shtml&gt;.</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment"> This program is distributed in the hope that it will be useful, but WITHOUT</span></div>
+<div class="line"><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
+<div class="line"><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
+<div class="line"><span class="comment">*/</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">/*  This example shows how to fit a term structure to a set of bonds</span></div>
 <div class="line"><span class="comment">    using four different fitting methodologies. Though fitting is most</span></div>
@@ -94,18 +111,18 @@ $(function() {
 <div class="line"><span class="comment">    results generated from the bootstrap fitting method.</span></div>
 <div class="line"><span class="comment">*/</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;ql/qldefines.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../de/d56/qldefines_8hpp.html">ql/qldefines.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#if !defined(BOOST_ALL_NO_LIB) &amp;&amp; defined(BOOST_MSVC)</span></div>
-<div class="line"><span class="preprocessor">#  include &lt;ql/auto_link.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#  include &lt;<a class="code" href="../../d7/dbf/auto__link_8hpp.html">ql/auto_link.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/yield/fittedbonddiscountcurve.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/yield/piecewiseyieldcurve.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/yield/flatforward.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/yield/bondhelpers.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/yield/nonlinearfittingmethods.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/bond/bondfunctions.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/time/calendars/target.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/time/daycounters/simpledaycounter.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d94/fittedbonddiscountcurve_8hpp.html">ql/termstructures/yield/fittedbonddiscountcurve.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d9f/piecewiseyieldcurve_8hpp.html">ql/termstructures/yield/piecewiseyieldcurve.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d0e/flatforward_8hpp.html">ql/termstructures/yield/flatforward.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d8/dae/bondhelpers_8hpp.html">ql/termstructures/yield/bondhelpers.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d50/nonlinearfittingmethods_8hpp.html">ql/termstructures/yield/nonlinearfittingmethods.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../de/dca/bondfunctions_8hpp.html">ql/pricingengines/bond/bondfunctions.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d69/target_8hpp.html">ql/time/calendars/target.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../db/d26/simpledaycounter_8hpp.html">ql/time/daycounters/simpledaycounter.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
@@ -119,13 +136,13 @@ $(function() {
 <div class="line"><a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> parRate(<span class="keyword">const</span> <a id="_a0" name="_a0"></a><a class="code hl_class" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a>&amp; yts,</div>
 <div class="line">             <span class="keyword">const</span> std::vector&lt;Date&gt;&amp; dates,</div>
 <div class="line">             <span class="keyword">const</span> <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&amp; resultDayCounter) {</div>
-<div class="line">    QL_REQUIRE(dates.size() &gt;= 2, <span class="stringliteral">&quot;at least two dates are required&quot;</span>);</div>
+<div class="line">    <a id="a2" name="a2"></a><a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(dates.size() &gt;= 2, <span class="stringliteral">&quot;at least two dates are required&quot;</span>);</div>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> sum = 0.0;</div>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> dt;</div>
 <div class="line">    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=1; i&lt;dates.size(); ++i) {</div>
-<div class="line">        dt = resultDayCounter.<a id="a2" name="a2"></a><a class="code hl_function" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8">yearFraction</a>(dates[i-1], dates[i]);</div>
-<div class="line">        QL_REQUIRE(dt&gt;=0.0, <span class="stringliteral">&quot;unsorted dates&quot;</span>);</div>
-<div class="line">        sum += yts.<a id="a3" name="a3"></a><a class="code hl_function" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html#a3b93b6f5bac5c3f6011f9d050bccaa07">discount</a>(dates[i]) * dt;</div>
+<div class="line">        dt = resultDayCounter.<a id="a3" name="a3"></a><a class="code hl_function" href="../../dd/d24/class_quant_lib_1_1_day_counter.html#a28170faaec75755611ff6fc220c1fab8">yearFraction</a>(dates[i-1], dates[i]);</div>
+<div class="line">        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(dt&gt;=0.0, <span class="stringliteral">&quot;unsorted dates&quot;</span>);</div>
+<div class="line">        sum += yts.<a id="a4" name="a4"></a><a class="code hl_function" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html#a3b93b6f5bac5c3f6011f9d050bccaa07">discount</a>(dates[i]) * dt;</div>
 <div class="line">    }</div>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> result = yts.<a class="code hl_function" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html#a3b93b6f5bac5c3f6011f9d050bccaa07">discount</a>(dates.front()) - yts.<a class="code hl_function" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html#a3b93b6f5bac5c3f6011f9d050bccaa07">discount</a>(dates.back());</div>
 <div class="line">    <span class="keywordflow">return</span> result/sum;</div>
@@ -160,9 +177,9 @@ $(function() {
 <div class="line">            quote.push_back(ext::make_shared&lt;SimpleQuote&gt;(i));</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a4" name="_a4"></a><a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;Quote&gt;</a> quoteHandle[numberOfBonds];</div>
+<div class="line">        <a id="_a5" name="_a5"></a><a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;Quote&gt;</a> quoteHandle[numberOfBonds];</div>
 <div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;numberOfBonds; i++) {</div>
-<div class="line">            quoteHandle[i].<a id="a5" name="a5"></a><a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#af8149d5b913673dd152973e46cad15c4">linkTo</a>(quote[i]);</div>
+<div class="line">            quoteHandle[i].<a id="a6" name="a6"></a><a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#a4c6b52dcdb036a4aa90b3533c80198d0">linkTo</a>(quote[i]);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> lengths[] = { 2, 4, 6, 8, 10, 12, 14, 16,</div>
@@ -172,13 +189,13 @@ $(function() {
 <div class="line">                           0.0450, 0.0475, 0.0500, 0.0525, 0.0550 };</div>
 <div class="line"> </div>
 <div class="line">        <a class="code hl_enumeration" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> frequency = <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#gga6d41db8ba0ea90d22df35889df452adaa508b18014c96e2d466c12b39d7f4e426">Annual</a>;</div>
-<div class="line">        <a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc = <a id="_a6" name="_a6"></a><a class="code hl_class" href="../../d5/d98/class_quant_lib_1_1_simple_day_counter.html">SimpleDayCounter</a>();</div>
+<div class="line">        <a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dc = <a id="_a7" name="_a7"></a><a class="code hl_class" href="../../d5/d98/class_quant_lib_1_1_simple_day_counter.html">SimpleDayCounter</a>();</div>
 <div class="line">        <a class="code hl_enumeration" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> accrualConvention = <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707">ModifiedFollowing</a>;</div>
 <div class="line">        <a class="code hl_enumeration" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> convention = <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707">ModifiedFollowing</a>;</div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> redemption = 100.0;</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a7" name="_a7"></a><a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> calendar = <a id="_a8" name="_a8"></a><a class="code hl_class" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>();</div>
-<div class="line">        <a id="_a9" name="_a9"></a><a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> today = calendar.<a id="a10" name="a10"></a><a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b">adjust</a>(Date::todaysDate());</div>
+<div class="line">        <a id="_a8" name="_a8"></a><a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> calendar = <a id="_a9" name="_a9"></a><a class="code hl_class" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>();</div>
+<div class="line">        <a id="_a10" name="_a10"></a><a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> today = calendar.<a id="a11" name="a11"></a><a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b">adjust</a>(Date::todaysDate());</div>
 <div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> origToday = today;</div>
 <div class="line">        Settings::instance().evaluationDate() = today;</div>
 <div class="line"> </div>
@@ -187,7 +204,7 @@ $(function() {
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> bondSettlementDays = 0;</div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> curveSettlementDays = 0;</div>
 <div class="line"> </div>
-<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> bondSettlementDate = calendar.<a id="a11" name="a11"></a><a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(today, bondSettlementDays*Days);</div>
+<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> bondSettlementDate = calendar.<a id="a12" name="a12"></a><a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(today, bondSettlementDays*Days);</div>
 <div class="line"> </div>
 <div class="line">        cout &lt;&lt; endl;</div>
 <div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;Today&#39;s date: &quot;</span> &lt;&lt; today &lt;&lt; endl;</div>
@@ -201,7 +218,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> maturity = calendar.<a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(bondSettlementDate, lengths[j]*Years);</div>
 <div class="line"> </div>
-<div class="line">            <a id="_a12" name="_a12"></a><a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> schedule(bondSettlementDate, maturity, <a id="_a13" name="_a13"></a><a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(frequency),</div>
+<div class="line">            <a id="_a13" name="_a13"></a><a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> schedule(bondSettlementDate, maturity, <a id="_a14" name="_a14"></a><a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(frequency),</div>
 <div class="line">                              calendar, accrualConvention, accrualConvention,</div>
 <div class="line">                              DateGeneration::Backward, <span class="keyword">false</span>);</div>
 <div class="line"> </div>
@@ -236,7 +253,7 @@ $(function() {
 <div class="line">                                                          instrumentsB,</div>
 <div class="line">                                                          dc);</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a14" name="_a14"></a><a class="code hl_class" href="../../d9/d6c/class_quant_lib_1_1_exponential_splines_fitting.html">ExponentialSplinesFitting</a> exponentialSplines(constrainAtZero);</div>
+<div class="line">        <a id="_a15" name="_a15"></a><a class="code hl_class" href="../../d9/d6c/class_quant_lib_1_1_exponential_splines_fitting.html">ExponentialSplinesFitting</a> exponentialSplines(constrainAtZero);</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">auto</span> ts1 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                              calendar,</div>
@@ -249,7 +266,7 @@ $(function() {
 <div class="line">        printOutput(<span class="stringliteral">&quot;(a) exponential splines&quot;</span>, ts1);</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">        <a id="_a15" name="_a15"></a><a class="code hl_class" href="../../d7/dc0/class_quant_lib_1_1_simple_polynomial_fitting.html">SimplePolynomialFitting</a> simplePolynomial(3, constrainAtZero);</div>
+<div class="line">        <a id="_a16" name="_a16"></a><a class="code hl_class" href="../../d7/dc0/class_quant_lib_1_1_simple_polynomial_fitting.html">SimplePolynomialFitting</a> simplePolynomial(3, constrainAtZero);</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">auto</span> ts2 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                calendar,</div>
@@ -262,7 +279,7 @@ $(function() {
 <div class="line">        printOutput(<span class="stringliteral">&quot;(b) simple polynomial&quot;</span>, ts2);</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">        <a id="_a16" name="_a16"></a><a class="code hl_class" href="../../d2/d95/class_quant_lib_1_1_nelson_siegel_fitting.html">NelsonSiegelFitting</a> nelsonSiegel;</div>
+<div class="line">        <a id="_a17" name="_a17"></a><a class="code hl_class" href="../../d2/d95/class_quant_lib_1_1_nelson_siegel_fitting.html">NelsonSiegelFitting</a> nelsonSiegel;</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">auto</span> ts3 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                    calendar,</div>
@@ -286,7 +303,7 @@ $(function() {
 <div class="line">            knotVector.push_back(knot);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a17" name="_a17"></a><a class="code hl_class" href="../../d7/da7/class_quant_lib_1_1_cubic_b_splines_fitting.html">CubicBSplinesFitting</a> cubicBSplines(knotVector, constrainAtZero);</div>
+<div class="line">        <a id="_a18" name="_a18"></a><a class="code hl_class" href="../../d7/da7/class_quant_lib_1_1_cubic_b_splines_fitting.html">CubicBSplinesFitting</a> cubicBSplines(knotVector, constrainAtZero);</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">auto</span> ts4 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                   calendar,</div>
@@ -298,7 +315,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(d) cubic B-splines&quot;</span>, ts4);</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a18" name="_a18"></a><a class="code hl_class" href="../../d8/d5e/class_quant_lib_1_1_svensson_fitting.html">SvenssonFitting</a> svensson;</div>
+<div class="line">        <a id="_a19" name="_a19"></a><a class="code hl_class" href="../../d8/d5e/class_quant_lib_1_1_svensson_fitting.html">SvenssonFitting</a> svensson;</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">auto</span> ts5 = ext::make_shared&lt;FittedBondDiscountCurve&gt;(curveSettlementDays,</div>
 <div class="line">                                                    calendar,</div>
@@ -310,10 +327,10 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        printOutput(<span class="stringliteral">&quot;(e) Svensson&quot;</span>, ts5);</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a19" name="_a19"></a><a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> discountCurve(</div>
+<div class="line">        <a id="_a20" name="_a20"></a><a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> discountCurve(</div>
 <div class="line">            ext::make_shared&lt;FlatForward&gt;(</div>
 <div class="line">                                    curveSettlementDays, calendar, 0.01, dc));</div>
-<div class="line">        <a id="_a20" name="_a20"></a><a class="code hl_class" href="../../d7/d8e/class_quant_lib_1_1_spread_fitting_method.html">SpreadFittingMethod</a> nelsonSiegelSpread(</div>
+<div class="line">        <a id="_a21" name="_a21"></a><a class="code hl_class" href="../../d7/d8e/class_quant_lib_1_1_spread_fitting_method.html">SpreadFittingMethod</a> nelsonSiegelSpread(</div>
 <div class="line">                                    ext::make_shared&lt;NelsonSiegelFitting&gt;(),</div>
 <div class="line">                                    discountCurve);</div>
 <div class="line"> </div>
@@ -414,7 +431,7 @@ $(function() {
 <div class="line">             &lt;&lt; endl</div>
 <div class="line">             &lt;&lt; endl;</div>
 <div class="line"> </div>
-<div class="line">        today = calendar.<a id="a21" name="a21"></a><a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#ab0c0b9fa2fb896f33b526ee8b53af48d">advance</a>(origToday,23,Months,convention);</div>
+<div class="line">        today = calendar.<a id="a22" name="a22"></a><a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#ab0c0b9fa2fb896f33b526ee8b53af48d">advance</a>(origToday,23,Months,convention);</div>
 <div class="line">        Settings::instance().evaluationDate() = today;</div>
 <div class="line">        bondSettlementDate = calendar.<a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#ab0c0b9fa2fb896f33b526ee8b53af48d">advance</a>(today, bondSettlementDays*Days);</div>
 <div class="line"> </div>
@@ -659,11 +676,11 @@ $(function() {
 <div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> k=0; k&lt;LENGTH(lengths)-1; k++) {</div>
 <div class="line"> </div>
 <div class="line">            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> P = instrumentsA[k]-&gt;quote()-&gt;value();</div>
-<div class="line">            <span class="keyword">const</span> <a id="_a22" name="_a22"></a><a class="code hl_class" href="../../d8/d2e/class_quant_lib_1_1_bond.html">Bond</a>&amp; b = *instrumentsA[k]-&gt;bond();</div>
-<div class="line">            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> ytm = BondFunctions::yield(b, P,</div>
-<div class="line">                                            dc, Compounded, frequency,</div>
+<div class="line">            <span class="keyword">const</span> <a id="_a23" name="_a23"></a><a class="code hl_class" href="../../d8/d2e/class_quant_lib_1_1_bond.html">Bond</a>&amp; <a id="a24" name="a24"></a><a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a> = *instrumentsA[k]-&gt;bond();</div>
+<div class="line">            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> ytm = BondFunctions::yield(<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>, {P, Bond::Price::Clean},</div>
+<div class="line">                                            dc, <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a7f3e11143ca01a7d20f92e11ad445e0c">Compounded</a>, frequency,</div>
 <div class="line">                                            today);</div>
-<div class="line">            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> dur = BondFunctions::duration(b, ytm,</div>
+<div class="line">            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> dur = BondFunctions::duration(<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>, ytm,</div>
 <div class="line">                                               dc, Compounded, frequency,</div>
 <div class="line">                                               Duration::Modified,</div>
 <div class="line">                                               today);</div>
@@ -745,6 +762,9 @@ $(function() {
 <div class="line"> </div>
 <div class="line">}</div>
 <div class="line"> </div>
+<div class="ttc" id="aauto__link_8hpp_html"><div class="ttname"><a href="../../d7/dbf/auto__link_8hpp.html">auto_link.hpp</a></div></div>
+<div class="ttc" id="abondfunctions_8hpp_html"><div class="ttname"><a href="../../de/dca/bondfunctions_8hpp.html">bondfunctions.hpp</a></div><div class="ttdoc">bond functions</div></div>
+<div class="ttc" id="abondhelpers_8hpp_html"><div class="ttname"><a href="../../d8/dae/bondhelpers_8hpp.html">bondhelpers.hpp</a></div><div class="ttdoc">bond rate helpers</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bond_html"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html">QuantLib::Bond</a></div><div class="ttdoc">Base bond class.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00059">bond.hpp:59</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html">QuantLib::Calendar</a></div><div class="ttdoc">calendar class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00061">calendar.hpp:61</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html_a712629806d9ef9a39f8144f368c81e4b"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b">QuantLib::Calendar::adjust</a></div><div class="ttdeci">Date adjust(const Date &amp;, BusinessDayConvention convention=Following) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d2e/calendar_8cpp_source.html#l00084">calendar.cpp:84</a></div></div>
@@ -758,8 +778,8 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_nelson_siegel_fitting_html"><div class="ttname"><a href="../../d2/d95/class_quant_lib_1_1_nelson_siegel_fitting.html">QuantLib::NelsonSiegelFitting</a></div><div class="ttdoc">Nelson-Siegel fitting method.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/nonlinearfittingmethods_8hpp_source.html#l00093">nonlinearfittingmethods.hpp:94</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_relinkable_handle_html"><div class="ttname"><a href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">QuantLib::RelinkableHandle</a></div><div class="ttdoc">Relinkable handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00112">handle.hpp:112</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_relinkable_handle_html_af8149d5b913673dd152973e46cad15c4"><div class="ttname"><a href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#af8149d5b913673dd152973e46cad15c4">QuantLib::RelinkableHandle::linkTo</a></div><div class="ttdeci">void linkTo(const ext::shared_ptr&lt; T &gt; &amp;, bool registerAsObserver=true)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00187">handle.hpp:187</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_relinkable_handle_html"><div class="ttname"><a href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">QuantLib::RelinkableHandle</a></div><div class="ttdoc">Relinkable handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00117">handle.hpp:117</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_relinkable_handle_html_a4c6b52dcdb036a4aa90b3533c80198d0"><div class="ttname"><a href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#a4c6b52dcdb036a4aa90b3533c80198d0">QuantLib::RelinkableHandle::linkTo</a></div><div class="ttdeci">void linkTo(const ext::shared_ptr&lt; T &gt; &amp;h, bool registerAsObserver=true)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00217">handle.hpp:217</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_schedule_html"><div class="ttname"><a href="../../d5/d5b/class_quant_lib_1_1_schedule.html">QuantLib::Schedule</a></div><div class="ttdoc">Payment schedule.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd1/schedule_8hpp_source.html#l00040">schedule.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simple_day_counter_html"><div class="ttname"><a href="../../d5/d98/class_quant_lib_1_1_simple_day_counter.html">QuantLib::SimpleDayCounter</a></div><div class="ttdoc">Simple day counter for reproducing theoretical calculations.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d26/simpledaycounter_8hpp_source.html#l00046">simpledaycounter.hpp:46</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simple_polynomial_fitting_html"><div class="ttname"><a href="../../d7/dc0/class_quant_lib_1_1_simple_polynomial_fitting.html">QuantLib::SimplePolynomialFitting</a></div><div class="ttdoc">Simple polynomial fitting method.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/nonlinearfittingmethods_8hpp_source.html#l00204">nonlinearfittingmethods.hpp:205</a></div></div>
@@ -768,6 +788,10 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_t_a_r_g_e_t_html"><div class="ttname"><a href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">QuantLib::TARGET</a></div><div class="ttdoc">TARGET calendar</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d69/target_8hpp_source.html#l00050">target.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_yield_term_structure_html"><div class="ttname"><a href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">QuantLib::YieldTermStructure</a></div><div class="ttdoc">Interest-rate term structure.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d89/yieldtermstructure_8hpp_source.html#l00044">yieldtermstructure.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_yield_term_structure_html_a3b93b6f5bac5c3f6011f9d050bccaa07"><div class="ttname"><a href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html#a3b93b6f5bac5c3f6011f9d050bccaa07">QuantLib::YieldTermStructure::discount</a></div><div class="ttdeci">DiscountFactor discount(const Date &amp;d, bool extrapolate=false) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d89/yieldtermstructure_8hpp_source.html#l00183">yieldtermstructure.hpp:183</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aextendedornsteinuhlenbeckprocess_8cpp_html_a1759c348ed007f12d79ceff98cc3abbe"><div class="ttname"><a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a></div><div class="ttdeci">ext::function&lt; Real(Real)&gt; b</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp_source.html#l00030">extendedornsteinuhlenbeckprocess.cpp:30</a></div></div>
+<div class="ttc" id="afittedbonddiscountcurve_8hpp_html"><div class="ttname"><a href="../../d5/d94/fittedbonddiscountcurve_8hpp.html">fittedbonddiscountcurve.hpp</a></div><div class="ttdoc">discount curve fitted to a set of bonds</div></div>
+<div class="ttc" id="aflatforward_8hpp_html"><div class="ttname"><a href="../../d5/d0e/flatforward_8hpp.html">flatforward.hpp</a></div><div class="ttdoc">flat forward rate term structure</div></div>
 <div class="ttc" id="agroup__datetime_html_ga6d41db8ba0ea90d22df35889df452ada"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">QuantLib::Frequency</a></div><div class="ttdeci">Frequency</div><div class="ttdoc">Frequency of events.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d40/frequency_8hpp_source.html#l00037">frequency.hpp:37</a></div></div>
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
 <div class="ttc" id="agroup__datetime_html_gga6d41db8ba0ea90d22df35889df452adaa508b18014c96e2d466c12b39d7f4e426"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gga6d41db8ba0ea90d22df35889df452adaa508b18014c96e2d466c12b39d7f4e426">QuantLib::Annual</a></div><div class="ttdeci">@ Annual</div><div class="ttdoc">once a year</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d40/frequency_8hpp_source.html#l00039">frequency.hpp:39</a></div></div>
@@ -779,7 +803,13 @@ $(function() {
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_a2779d04b4839fd386b5c85bbb96aaf73a7f3e11143ca01a7d20f92e11ad445e0c"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a2779d04b4839fd386b5c85bbb96aaf73a7f3e11143ca01a7d20f92e11ad445e0c">QuantLib::Compounded</a></div><div class="ttdeci">@ Compounded</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d28/compounding_8hpp_source.html#l00033">compounding.hpp:33</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="anonlinearfittingmethods_8hpp_html"><div class="ttname"><a href="../../d3/d50/nonlinearfittingmethods_8hpp.html">nonlinearfittingmethods.hpp</a></div><div class="ttdoc">nonlinear methods to fit a bond discount function</div></div>
+<div class="ttc" id="apiecewiseyieldcurve_8hpp_html"><div class="ttname"><a href="../../d9/d9f/piecewiseyieldcurve_8hpp.html">piecewiseyieldcurve.hpp</a></div><div class="ttdoc">piecewise-interpolated term structure</div></div>
+<div class="ttc" id="aqldefines_8hpp_html"><div class="ttname"><a href="../../de/d56/qldefines_8hpp.html">qldefines.hpp</a></div><div class="ttdoc">Global definitions and compiler switches.</div></div>
+<div class="ttc" id="asimpledaycounter_8hpp_html"><div class="ttname"><a href="../../db/d26/simpledaycounter_8hpp.html">simpledaycounter.hpp</a></div><div class="ttdoc">Simple day counter for reproducing theoretical calculations.</div></div>
+<div class="ttc" id="atarget_8hpp_html"><div class="ttname"><a href="../../dc/d69/target_8hpp.html">target.hpp</a></div><div class="ttdoc">TARGET calendar.</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

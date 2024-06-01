@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/instruments/equitytotalreturnswap.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/instruments/equitytotalreturnswap.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">equitytotalreturnswap.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d5/d82/equitytotalreturnswap_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2023 Marcin Rybacki</span></div>
@@ -105,22 +104,41 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file equitytotalreturnswap.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> \brief Equity total return swap</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_equitytotalreturnswap_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_equitytotalreturnswap_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/instruments/swap.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/time/schedule.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/time/calendar.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/time/daycounter.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d6f/swap_8hpp.html">ql/instruments/swap.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/dd1/schedule_8hpp.html">ql/time/schedule.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d39/calendar_8hpp.html">ql/time/calendar.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d32/daycounter_8hpp.html">ql/time/daycounter.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">class </span>InterestRateIndex;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">class </span>IborIndex;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">class </span>OvernightIndex;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">class </span>EquityIndex;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"></span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">    //! Equity total return swap</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"></span><span class="comment">    /*! It exchanges a total return of an equity index for a set of</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">        floating cash flows linked to either Ibor or overnight index.</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        The equity leg future value (FV) is:</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        \f[</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        FV^{equity} = N \left[ \frac{I(t, T_{M})}{I(T_{0})} -1 \right],</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        \f]</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        where \f$ N \f$ is the swap notional, \f$ I(T_{0}) \f$ is the</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">        value of the equity index on the start date and \f$ I(t, T_{M}) \f$</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        is the value of the equity index at maturity.</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">        The floating leg payments are linked to either an Ibor or</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">        an overnight index. In case of an overnight index the interest</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">        rate fixings are compounded over the accrual period.</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment"></span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        Swap type (payer of receiver) refers to the equity leg.</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html">   54</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html">EquityTotalReturnSwap</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d54/class_quant_lib_1_1_swap.html">Swap</a> {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_class" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html">EquityTotalReturnSwap</a>(<a class="code hl_enumeration" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#adf4a6727c689e0038cf2cdd158d5ed2c">type</a>,</div>
@@ -146,9 +164,10 @@ $(function() {
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                              <a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#af32b044155d7abee79789a831518c649">paymentCalendar</a> = <a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(),</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                              <a class="code hl_enumeration" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#a382b71a0946d63934d35492ea2acc187">paymentConvention</a> = <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547">Unadjusted</a>,</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                              <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#aa256899deb5d4e6eb5f9464edf49b126">paymentDelay</a> = 0);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#adf4a6727c689e0038cf2cdd158d5ed2c">   82</a></span>        <a class="code hl_enumeration" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#adf4a6727c689e0038cf2cdd158d5ed2c">type</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#ae96b07c06ceff094f476fd92cbe89e10">type_</a>; }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment"></span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">        //! \name Inspectors</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#adf4a6727c689e0038cf2cdd158d5ed2c">   82</a></span><span class="comment"></span>        <a class="code hl_enumeration" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#adf4a6727c689e0038cf2cdd158d5ed2c">type</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#ae96b07c06ceff094f476fd92cbe89e10">type_</a>; }</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#a8eee3d3767fab185a6f78d6b406618f5">   83</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#a8eee3d3767fab185a6f78d6b406618f5">nominal</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#a0313ad2f0ebbcc7085afb5650bd11b76">nominal_</a>; }</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#abd7c772a9d6fcebe165742b8feaad178">   84</a></span>        <span class="keyword">const</span> ext::shared_ptr&lt;EquityIndex&gt;&amp; <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#abd7c772a9d6fcebe165742b8feaad178">equityIndex</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#a057acef273b6ecfb8acf82cfd02c3451">equityIndex_</a>; } </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#ac443cdc8fb01e9b4f9facde0e769cd6c">   85</a></span>        <span class="keyword">const</span> ext::shared_ptr&lt;InterestRateIndex&gt;&amp; <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#ac443cdc8fb01e9b4f9facde0e769cd6c">interestRateIndex</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#a842448f37a5fc346719ab865603f7af0">interestRateIndex_</a>; }</div>
@@ -161,13 +180,16 @@ $(function() {
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#aa256899deb5d4e6eb5f9464edf49b126">   92</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#aa256899deb5d4e6eb5f9464edf49b126">paymentDelay</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#ade4fea26d7f644a111939e4a8be13fb8">paymentDelay_</a>; }</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a>&amp; <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#ab119951189d6a8db443884861791df67">equityLeg</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a>&amp; <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#ac12698b3f24cd630e18a72b6d2856c29">interestRateLeg</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#a3c6a1a85eb705b36141e11a32baf3681">equityLegNPV</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">Leg</a>&amp; <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#ac12698b3f24cd630e18a72b6d2856c29">interestRateLeg</a>() <span class="keyword">const</span>;<span class="comment"></span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment"></span><span class="comment"></span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">        //! \name Results</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment"></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#a3c6a1a85eb705b36141e11a32baf3681">equityLegNPV</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#a22eb58d1ebafac52b861e49b65492d07">interestRateLegNPV</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#a39e9f6287ae32c77ba3b438bce935e0b">fairMargin</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#a39e9f6287ae32c77ba3b438bce935e0b">fairMargin</a>() <span class="keyword">const</span>;<span class="comment"></span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment"></span> </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_class" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html">EquityTotalReturnSwap</a>(ext::shared_ptr&lt;EquityIndex&gt; <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#abd7c772a9d6fcebe165742b8feaad178">equityIndex</a>,</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                              ext::shared_ptr&lt;InterestRateIndex&gt; <a class="code hl_function" href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html#ac443cdc8fb01e9b4f9facde0e769cd6c">interestRateIndex</a>,</div>
@@ -196,6 +218,7 @@ $(function() {
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acalendar_8hpp_html"><div class="ttname"><a href="../../dc/d39/calendar_8hpp.html">calendar.hpp</a></div><div class="ttdoc">calendar class</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html">QuantLib::Calendar</a></div><div class="ttdoc">calendar class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00061">calendar.hpp:61</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_day_counter_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html">QuantLib::DayCounter</a></div><div class="ttdoc">day counter class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00044">daycounter.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_equity_total_return_swap_html"><div class="ttname"><a href="../../d5/d5e/class_quant_lib_1_1_equity_total_return_swap.html">QuantLib::EquityTotalReturnSwap</a></div><div class="ttdoc">Equity total return swap.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d82/equitytotalreturnswap_8hpp_source.html#l00054">equitytotalreturnswap.hpp:54</a></div></div>
@@ -229,6 +252,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_schedule_html"><div class="ttname"><a href="../../d5/d5b/class_quant_lib_1_1_schedule.html">QuantLib::Schedule</a></div><div class="ttdoc">Payment schedule.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd1/schedule_8hpp_source.html#l00040">schedule.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_swap_html"><div class="ttname"><a href="../../dc/d54/class_quant_lib_1_1_swap.html">QuantLib::Swap</a></div><div class="ttdoc">Interest rate swap.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6f/swap_8hpp_source.html#l00041">swap.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_swap_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::Swap::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6f/swap_8hpp_source.html#l00050">swap.hpp:50</a></div></div>
+<div class="ttc" id="adaycounter_8hpp_html"><div class="ttname"><a href="../../df/d32/daycounter_8hpp.html">daycounter.hpp</a></div><div class="ttdoc">day counter class</div></div>
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547">QuantLib::Unadjusted</a></div><div class="ttdeci">@ Unadjusted</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00058">businessdayconvention.hpp:58</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
@@ -236,6 +260,8 @@ $(function() {
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_afd0d2e08465e4b7e928c75416bd8dc4b"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">QuantLib::Leg</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; CashFlow &gt; &gt; Leg</div><div class="ttdoc">Sequence of cash-flows.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0e/cashflow_8hpp_source.html#l00078">cashflow.hpp:78</a></div></div>
+<div class="ttc" id="aschedule_8hpp_html"><div class="ttname"><a href="../../d2/dd1/schedule_8hpp.html">schedule.hpp</a></div><div class="ttdoc">date schedule</div></div>
+<div class="ttc" id="aswap_8hpp_html"><div class="ttname"><a href="../../dd/d6f/swap_8hpp.html">swap.hpp</a></div><div class="ttdoc">Interest rate swap.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

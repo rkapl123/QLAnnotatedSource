@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/instruments/bonds/convertiblebonds.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/instruments/bonds/convertiblebonds.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">convertiblebonds.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d1/d2c/convertiblebonds_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2005, 2006 Theo Boafo</span></div>
@@ -106,24 +105,29 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file convertiblebonds.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief convertible bond class</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_convertible_bonds_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_convertible_bonds_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/instruments/bond.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/instruments/callabilityschedule.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/instruments/dividendschedule.hpp&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/instruments/oneassetoption.hpp&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;ql/quote.hpp&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;ql/time/daycounter.hpp&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;ql/time/schedule.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d1e/bond_8hpp.html">ql/instruments/bond.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dec/callabilityschedule_8hpp.html">ql/instruments/callabilityschedule.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d57/dividendschedule_8hpp.html">ql/instruments/dividendschedule.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d2b/oneassetoption_8hpp.html">ql/instruments/oneassetoption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d02/quote_8hpp.html">ql/quote.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d32/daycounter_8hpp.html">ql/time/daycounter.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/dd1/schedule_8hpp.html">ql/time/schedule.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">class </span>IborIndex;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">class </span>PricingEngine;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../df/d1b/class_quant_lib_1_1_soft_callability.html">   42</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../df/d1b/class_quant_lib_1_1_soft_callability.html">SoftCallability</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d1/d6d/class_quant_lib_1_1_callability.html">Callability</a> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"></span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">    //! %callability leaving to the holder the possibility to convert</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../df/d1b/class_quant_lib_1_1_soft_callability.html">   42</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../df/d1b/class_quant_lib_1_1_soft_callability.html">SoftCallability</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d1/d6d/class_quant_lib_1_1_callability.html">Callability</a> {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../df/d1b/class_quant_lib_1_1_soft_callability.html#a467e746ee1a3fef4b9702a38eb0fce64">   44</a></span>        <a class="code hl_function" href="../../df/d1b/class_quant_lib_1_1_soft_callability.html#a467e746ee1a3fef4b9702a38eb0fce64">SoftCallability</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d9/d55/class_quant_lib_1_1_bond_1_1_price.html">Bond::Price</a>&amp; <a class="code hl_function" href="../../d1/d6d/class_quant_lib_1_1_callability.html#af09f71921fbb0da830e845baa0698b72">price</a>, <span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; <a class="code hl_function" href="../../d1/d6d/class_quant_lib_1_1_callability.html#acda6b54c0fae709ae1bcccfae9e1d83d">date</a>, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../df/d1b/class_quant_lib_1_1_soft_callability.html#a5a4c705e28b9d3e7dac6e24dd2b82664">trigger</a>)</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        : <a class="code hl_class" href="../../d1/d6d/class_quant_lib_1_1_callability.html">Callability</a>(<a class="code hl_function" href="../../d1/d6d/class_quant_lib_1_1_callability.html#af09f71921fbb0da830e845baa0698b72">price</a>, <a class="code hl_class" href="../../d1/d6d/class_quant_lib_1_1_callability.html">Callability</a>::<a class="code hl_enumvalue" href="../../d1/d6d/class_quant_lib_1_1_callability.html#a1d1cfd8ffb84e947f82999c682b666a7a59b9abc46faffa225d20abc5e5252417">Call</a>, <a class="code hl_function" href="../../d1/d6d/class_quant_lib_1_1_callability.html#acda6b54c0fae709ae1bcccfae9e1d83d">date</a>), <a class="code hl_variable" href="../../df/d1b/class_quant_lib_1_1_soft_callability.html#a39c805c18ebd9255ee1af6663afcc3fa">trigger_</a>(<a class="code hl_function" href="../../df/d1b/class_quant_lib_1_1_soft_callability.html#a5a4c705e28b9d3e7dac6e24dd2b82664">trigger</a>) {}</div>
@@ -133,8 +137,9 @@ $(function() {
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../df/d1b/class_quant_lib_1_1_soft_callability.html#a39c805c18ebd9255ee1af6663afcc3fa">   49</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../df/d1b/class_quant_lib_1_1_soft_callability.html#a39c805c18ebd9255ee1af6663afcc3fa">trigger_</a>;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    };</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../dc/dba/class_quant_lib_1_1_convertible_bond.html">   54</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/dba/class_quant_lib_1_1_convertible_bond.html">ConvertibleBond</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d8/d2e/class_quant_lib_1_1_bond.html">Bond</a> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment"></span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">    //! base class for convertible bonds</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../dc/dba/class_quant_lib_1_1_convertible_bond.html">   54</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/dba/class_quant_lib_1_1_convertible_bond.html">ConvertibleBond</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d8/d2e/class_quant_lib_1_1_bond.html">Bond</a> {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">class </span><a class="code hl_class" href="../../d1/d40/class_quant_lib_1_1_convertible_bond_1_1arguments.html">arguments</a>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">class </span><a class="code hl_class" href="../../d5/d8c/class_quant_lib_1_1_convertible_bond_1_1engine.html">engine</a>;</div>
@@ -158,8 +163,13 @@ $(function() {
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../dc/dba/class_quant_lib_1_1_convertible_bond.html#ada8aca1dd8c0ade1c41c216226d21a41">   75</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../dc/dba/class_quant_lib_1_1_convertible_bond.html#ada8aca1dd8c0ade1c41c216226d21a41">redemption_</a>;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    };</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment"></span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">    //! convertible zero-coupon bond</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment"></span><span class="comment">    /*! \warning Most methods inherited from Bond (such as yield or</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">                 the yield-based dirtyPrice and cleanPrice) refer to</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">                 the underlying plain-vanilla bond and do not take</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">                 convertibility and callability into account.</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../d9/d51/class_quant_lib_1_1_convertible_zero_coupon_bond.html">   85</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d9/d51/class_quant_lib_1_1_convertible_zero_coupon_bond.html">ConvertibleZeroCouponBond</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/dba/class_quant_lib_1_1_convertible_bond.html">ConvertibleBond</a> {</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_class" href="../../d9/d51/class_quant_lib_1_1_convertible_zero_coupon_bond.html">ConvertibleZeroCouponBond</a>(<span class="keyword">const</span> ext::shared_ptr&lt;Exercise&gt;&amp; exercise,</div>
@@ -172,8 +182,13 @@ $(function() {
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                                  <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a94e8bf2a113157f3555431f3ca19d138">redemption</a> = 100);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    };</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment"></span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">    //! convertible fixed-coupon bond</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment"></span><span class="comment">    /*! \warning Most methods inherited from Bond (such as yield or</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">                 the yield-based dirtyPrice and cleanPrice) refer to</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">                 the underlying plain-vanilla bond and do not take</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">                 convertibility and callability into account.</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="../../d1/d22/class_quant_lib_1_1_convertible_fixed_coupon_bond.html">  104</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d1/d22/class_quant_lib_1_1_convertible_fixed_coupon_bond.html">ConvertibleFixedCouponBond</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/dba/class_quant_lib_1_1_convertible_bond.html">ConvertibleBond</a> {</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_class" href="../../d1/d22/class_quant_lib_1_1_convertible_fixed_coupon_bond.html">ConvertibleFixedCouponBond</a>(<span class="keyword">const</span> ext::shared_ptr&lt;Exercise&gt;&amp; exercise,</div>
@@ -191,8 +206,13 @@ $(function() {
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                                   <span class="keywordtype">bool</span> exCouponEndOfMonth = <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    };</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment"></span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment">    //! convertible floating-rate bond</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment"></span><span class="comment">    /*! \warning Most methods inherited from Bond (such as yield or</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">                 the yield-based dirtyPrice and cleanPrice) refer to</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">                 the underlying plain-vanilla bond and do not take</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">                 convertibility and callability into account.</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="../../de/d73/class_quant_lib_1_1_convertible_floating_rate_bond.html">  128</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../de/d73/class_quant_lib_1_1_convertible_floating_rate_bond.html">ConvertibleFloatingRateBond</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/dba/class_quant_lib_1_1_convertible_bond.html">ConvertibleBond</a> {</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <a class="code hl_class" href="../../de/d73/class_quant_lib_1_1_convertible_floating_rate_bond.html">ConvertibleFloatingRateBond</a>(<span class="keyword">const</span> ext::shared_ptr&lt;Exercise&gt;&amp; exercise,</div>
@@ -239,10 +259,12 @@ $(function() {
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>}</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abond_8hpp_html"><div class="ttname"><a href="../../dc/d1e/bond_8hpp.html">bond.hpp</a></div><div class="ttdoc">concrete bond class</div></div>
+<div class="ttc" id="acallabilityschedule_8hpp_html"><div class="ttname"><a href="../../d6/dec/callabilityschedule_8hpp.html">callabilityschedule.hpp</a></div><div class="ttdoc">Schedule of put/call dates.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bond_1_1_price_html"><div class="ttname"><a href="../../d9/d55/class_quant_lib_1_1_bond_1_1_price.html">QuantLib::Bond::Price</a></div><div class="ttdoc">Bond price information.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00062">bond.hpp:62</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bond_html"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html">QuantLib::Bond</a></div><div class="ttdoc">Base bond class.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00059">bond.hpp:59</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a32e050c75a34ceee6f0633bdb799a080"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a32e050c75a34ceee6f0633bdb799a080">QuantLib::Bond::settlementDays</a></div><div class="ttdeci">Natural settlementDays() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00318">bond.hpp:318</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a817473aebbeeec3bf73aaf6c1627e1c5"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a817473aebbeeec3bf73aaf6c1627e1c5">QuantLib::Bond::issueDate</a></div><div class="ttdeci">Date issueDate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00338">bond.hpp:338</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a32e050c75a34ceee6f0633bdb799a080"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a32e050c75a34ceee6f0633bdb799a080">QuantLib::Bond::settlementDays</a></div><div class="ttdeci">Natural settlementDays() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00332">bond.hpp:332</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a817473aebbeeec3bf73aaf6c1627e1c5"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a817473aebbeeec3bf73aaf6c1627e1c5">QuantLib::Bond::issueDate</a></div><div class="ttdeci">Date issueDate() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00352">bond.hpp:352</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bond_html_a94e8bf2a113157f3555431f3ca19d138"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a94e8bf2a113157f3555431f3ca19d138">QuantLib::Bond::redemption</a></div><div class="ttdeci">const ext::shared_ptr&lt; CashFlow &gt; &amp; redemption() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/bond_8cpp_source.html#l00140">bond.cpp:140</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html">QuantLib::Calendar</a></div><div class="ttdoc">calendar class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00061">calendar.hpp:61</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_callability_html"><div class="ttname"><a href="../../d1/d6d/class_quant_lib_1_1_callability.html">QuantLib::Callability</a></div><div class="ttdoc">instrument callability</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dec/callabilityschedule_8hpp_source.html#l00039">callabilityschedule.hpp:39</a></div></div>
@@ -286,6 +308,8 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_soft_callability_html_a39c805c18ebd9255ee1af6663afcc3fa"><div class="ttname"><a href="../../df/d1b/class_quant_lib_1_1_soft_callability.html#a39c805c18ebd9255ee1af6663afcc3fa">QuantLib::SoftCallability::trigger_</a></div><div class="ttdeci">Real trigger_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d2c/convertiblebonds_8hpp_source.html#l00049">convertiblebonds.hpp:49</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_soft_callability_html_a467e746ee1a3fef4b9702a38eb0fce64"><div class="ttname"><a href="../../df/d1b/class_quant_lib_1_1_soft_callability.html#a467e746ee1a3fef4b9702a38eb0fce64">QuantLib::SoftCallability::SoftCallability</a></div><div class="ttdeci">SoftCallability(const Bond::Price &amp;price, const Date &amp;date, Real trigger)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d2c/convertiblebonds_8hpp_source.html#l00044">convertiblebonds.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_soft_callability_html_a5a4c705e28b9d3e7dac6e24dd2b82664"><div class="ttname"><a href="../../df/d1b/class_quant_lib_1_1_soft_callability.html#a5a4c705e28b9d3e7dac6e24dd2b82664">QuantLib::SoftCallability::trigger</a></div><div class="ttdeci">Real trigger() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d2c/convertiblebonds_8hpp_source.html#l00046">convertiblebonds.hpp:46</a></div></div>
+<div class="ttc" id="adaycounter_8hpp_html"><div class="ttname"><a href="../../df/d32/daycounter_8hpp.html">daycounter.hpp</a></div><div class="ttdoc">day counter class</div></div>
+<div class="ttc" id="adividendschedule_8hpp_html"><div class="ttname"><a href="../../d1/d57/dividendschedule_8hpp.html">dividendschedule.hpp</a></div><div class="ttdoc">Schedule of dividend dates.</div></div>
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a5fb8b90b7fdf1a3a228fbbc083e64547">QuantLib::Unadjusted</a></div><div class="ttdeci">@ Unadjusted</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00058">businessdayconvention.hpp:58</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
@@ -293,6 +317,9 @@ $(function() {
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a62292a666c18467ed5e2407154e0b623"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a62292a666c18467ed5e2407154e0b623">QuantLib::CallabilitySchedule</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; Callability &gt; &gt; CallabilitySchedule</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dec/callabilityschedule_8hpp_source.html#l00073">callabilityschedule.hpp:73</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_afd0d2e08465e4b7e928c75416bd8dc4b"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">QuantLib::Leg</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; CashFlow &gt; &gt; Leg</div><div class="ttdoc">Sequence of cash-flows.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0e/cashflow_8hpp_source.html#l00078">cashflow.hpp:78</a></div></div>
+<div class="ttc" id="aoneassetoption_8hpp_html"><div class="ttname"><a href="../../de/d2b/oneassetoption_8hpp.html">oneassetoption.hpp</a></div><div class="ttdoc">Option on a single asset.</div></div>
+<div class="ttc" id="aquote_8hpp_html"><div class="ttname"><a href="../../d2/d02/quote_8hpp.html">quote.hpp</a></div><div class="ttdoc">purely virtual base class for market observables</div></div>
+<div class="ttc" id="aschedule_8hpp_html"><div class="ttname"><a href="../../d2/dd1/schedule_8hpp.html">schedule.hpp</a></div><div class="ttdoc">date schedule</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

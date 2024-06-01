@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/methods/finitedifferences/operatortraits.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/methods/finitedifferences/operatortraits.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">operatortraits.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../db/d70/operatortraits_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> Copyright (C) 2005 Joseph Wang</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span> </div>
@@ -104,12 +103,16 @@ $(function() {
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"></span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/*! \file operatortraits.hpp</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">    \brief Differential operator traits</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef quantlib_operator_traits_hpp</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define quantlib_operator_traits_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ql/methods/finitedifferences/boundarycondition.hpp&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/methods/finitedifferences/stepcondition.hpp&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d58/boundarycondition_8hpp.html">ql/methods/finitedifferences/boundarycondition.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d7/d0a/stepcondition_8hpp.html">ql/methods/finitedifferences/stepcondition.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
@@ -129,6 +132,7 @@ $(function() {
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="ttc" id="aboundarycondition_8hpp_html"><div class="ttname"><a href="../../d0/d58/boundarycondition_8hpp.html">boundarycondition.hpp</a></div><div class="ttdoc">boundary conditions for differential operators</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_boundary_condition_html"><div class="ttname"><a href="../../dc/d5c/class_quant_lib_1_1_boundary_condition.html">QuantLib::BoundaryCondition</a></div><div class="ttdoc">Abstract boundary condition class for finite difference problems.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d58/boundarycondition_8hpp_source.html#l00035">boundarycondition.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_operator_traits_html"><div class="ttname"><a href="../../dd/d48/class_quant_lib_1_1_operator_traits.html">QuantLib::OperatorTraits</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d70/operatortraits_8hpp_source.html#l00033">operatortraits.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_operator_traits_html_a158330dcc465dcd323e801d462791ac4"><div class="ttname"><a href="../../dd/d48/class_quant_lib_1_1_operator_traits.html#a158330dcc465dcd323e801d462791ac4">QuantLib::OperatorTraits::operator_type</a></div><div class="ttdeci">Operator operator_type</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d70/operatortraits_8hpp_source.html#l00035">operatortraits.hpp:35</a></div></div>
@@ -138,6 +142,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_operator_traits_html_a9c398736e49b1d74db6090c0254dbcbf"><div class="ttname"><a href="../../dd/d48/class_quant_lib_1_1_operator_traits.html#a9c398736e49b1d74db6090c0254dbcbf">QuantLib::OperatorTraits::condition_type</a></div><div class="ttdeci">StepCondition&lt; array_type &gt; condition_type</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d70/operatortraits_8hpp_source.html#l00039">operatortraits.hpp:39</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_step_condition_html"><div class="ttname"><a href="../../dc/dda/class_quant_lib_1_1_step_condition.html">QuantLib::StepCondition</a></div><div class="ttdoc">condition to be applied at every time step</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0a/stepcondition_8hpp_source.html#l00035">stepcondition.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="astepcondition_8hpp_html"><div class="ttname"><a href="../../d7/d0a/stepcondition_8hpp.html">stepcondition.hpp</a></div><div class="ttdoc">conditions to be applied at every time step</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

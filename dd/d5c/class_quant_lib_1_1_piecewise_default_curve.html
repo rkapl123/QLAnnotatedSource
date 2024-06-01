@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -95,7 +94,7 @@ $(function() {
 <p>Piecewise default-probability term structure.  
  <a href="../../dd/d5c/class_quant_lib_1_1_piecewise_default_curve.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d5/d3c/piecewisedefaultcurve_8hpp_source.html">ql/termstructures/credit/piecewisedefaultcurve.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d5/d3c/piecewisedefaultcurve_8hpp_source.html">piecewisedefaultcurve.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for PiecewiseDefaultCurve&lt; Traits, Interpolator, Bootstrap &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -298,8 +297,8 @@ Additional Inherited Members</h2></td></tr>
 class QuantLib::PiecewiseDefaultCurve&lt; Traits, Interpolator, Bootstrap &gt;</div><p >Piecewise default-probability term structure. </p>
 <p >This term structure is bootstrapped on a number of credit instruments which are passed as a vector of handles to DefaultProbabilityHelper instances. Their maturities mark the boundaries of the interpolated segments.</p>
 <p >Each segment is determined sequentially starting from the earliest period to the latest and is chosen so that the instrument whose maturity marks the end of such segment is correctly repriced on the curve.</p>
-<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000162">Warning:</a></b></dt><dd>The bootstrapping algorithm will raise an exception if any two instruments have the same maturity date. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#_a31">CDS.cpp</a>.</dd>
+<dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000163">Warning:</a></b></dt><dd>The bootstrapping algorithm will raise an exception if any two instruments have the same maturity date. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/dfe/_c_d_s_8cpp-example.html#_a32">CDS.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d3c/piecewisedefaultcurve_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../d5/d3c/piecewisedefaultcurve_8hpp_source.html">piecewisedefaultcurve.hpp</a>.</p>

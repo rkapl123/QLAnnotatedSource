@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/processes/endeulerdiscretization.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/processes/endeulerdiscretization.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">endeulerdiscretization.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d4/d7b/endeulerdiscretization_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 Frank Hövermann</span></div>
@@ -106,7 +105,7 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/processes/endeulerdiscretization.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d7e/endeulerdiscretization_8hpp.html">ql/processes/endeulerdiscretization.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
@@ -137,15 +136,15 @@ $(function() {
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                                              <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t0,</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                                              <span class="keyword">const</span> <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; x0,</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                                              <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> dt)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_class" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> sigma = process.<a class="code hl_function" href="../../d7/dc8/class_quant_lib_1_1_stochastic_process.html#a953a817561f3155c94c5ec05ea2748df">diffusion</a>(t0+dt, x0);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_class" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> result = sigma*<a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#ae70e63522ef4aa5e6fe6979b295e07e0">transpose</a>(sigma)*dt;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_class" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> <a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a> = process.<a class="code hl_function" href="../../d7/dc8/class_quant_lib_1_1_stochastic_process.html#a953a817561f3155c94c5ec05ea2748df">diffusion</a>(t0+dt, x0);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_class" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> result = <a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a>*<a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#ae70e63522ef4aa5e6fe6979b295e07e0">transpose</a>(<a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a>)*dt;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../db/d9c/class_quant_lib_1_1_end_euler_discretization.html#a2d18ac2edfb88e8ae0451041bb6278ae">   56</a></span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../db/d9c/class_quant_lib_1_1_end_euler_discretization.html#a2d18ac2edfb88e8ae0451041bb6278ae">EndEulerDiscretization::variance</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d4/d1a/class_quant_lib_1_1_stochastic_process1_d.html">StochasticProcess1D</a>&amp; process,</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t0, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x0, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> dt)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> sigma = process.<a class="code hl_function" href="../../d4/d1a/class_quant_lib_1_1_stochastic_process1_d.html#afaf479da3baa52185b369071b1689d89">diffusion</a>(t0+dt, x0);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> sigma*sigma*dt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a> = process.<a class="code hl_function" href="../../d4/d1a/class_quant_lib_1_1_stochastic_process1_d.html#afaf479da3baa52185b369071b1689d89">diffusion</a>(t0+dt, x0);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a>*<a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a>*dt;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
@@ -162,8 +161,10 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_stochastic_process_html"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_stochastic_process.html">QuantLib::StochasticProcess</a></div><div class="ttdoc">multi-dimensional stochastic process class.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d96/stochasticprocess_8hpp_source.html#l00042">stochasticprocess.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_stochastic_process_html_a256d88ac6c56185d9c68ab7a99faea3a"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_stochastic_process.html#a256d88ac6c56185d9c68ab7a99faea3a">QuantLib::StochasticProcess::drift</a></div><div class="ttdeci">virtual Array drift(Time t, const Array &amp;x) const =0</div><div class="ttdoc">returns the drift part of the equation, i.e.,</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_stochastic_process_html_a953a817561f3155c94c5ec05ea2748df"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_stochastic_process.html#a953a817561f3155c94c5ec05ea2748df">QuantLib::StochasticProcess::diffusion</a></div><div class="ttdeci">virtual Matrix diffusion(Time t, const Array &amp;x) const =0</div><div class="ttdoc">returns the diffusion part of the equation, i.e.</div></div>
+<div class="ttc" id="aendeulerdiscretization_8hpp_html"><div class="ttname"><a href="../../dc/d7e/endeulerdiscretization_8hpp.html">endeulerdiscretization.hpp</a></div><div class="ttdoc">Euler end-point discretization for stochastic processes.</div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
+<div class="ttc" id="ahestonrndcalculator_8cpp_html_aea6c7215b6d8026ab3ab5189363bbedd"><div class="ttname"><a href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a></div><div class="ttdeci">Real sigma</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3a/hestonrndcalculator_8cpp_source.html#l00036">hestonrndcalculator.cpp:36</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_ae70e63522ef4aa5e6fe6979b295e07e0"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ae70e63522ef4aa5e6fe6979b295e07e0">QuantLib::transpose</a></div><div class="ttdeci">Matrix transpose(const Matrix &amp;m)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00700">matrix.hpp:700</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

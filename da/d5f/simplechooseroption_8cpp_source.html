@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/instruments/simplechooseroption.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/instruments/simplechooseroption.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">simplechooseroption.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../da/d5f/simplechooseroption_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2010 Master IMAFA - Polytech&#39;Nice Sophia - Université de Nice Sophia Antipolis</span></div>
@@ -106,9 +105,9 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/instruments/simplechooseroption.hpp&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/instruments/payoffs.hpp&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/exercise.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/dfd/instruments_2simplechooseroption_8hpp.html">ql/instruments/simplechooseroption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d95/payoffs_8hpp.html">ql/instruments/payoffs.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d94/exercise_8hpp.html">ql/exercise.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
@@ -122,14 +121,14 @@ $(function() {
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../de/d19/class_quant_lib_1_1_simple_chooser_option.html#a29d098166c6f2ed9f3810fdc6001add3">   33</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d19/class_quant_lib_1_1_simple_chooser_option.html#a29d098166c6f2ed9f3810fdc6001add3">SimpleChooserOption::setupArguments</a>(<a class="code hl_class" href="../../d7/d14/class_quant_lib_1_1_pricing_engine_1_1arguments.html">PricingEngine::arguments</a>* args)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#aedcb8928d5516b30b46f0234d20c9539">OneAssetOption::setupArguments</a>(args);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">auto</span>* moreArgs = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d8/d3b/class_quant_lib_1_1_simple_chooser_option_1_1arguments.html">SimpleChooserOption::arguments</a>*<span class="keyword">&gt;</span>(args);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        QL_REQUIRE(moreArgs != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;wrong argument type&quot;</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(moreArgs != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;wrong argument type&quot;</span>);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        moreArgs-&gt;choosingDate=<a class="code hl_variable" href="../../de/d19/class_quant_lib_1_1_simple_chooser_option.html#ab6bfac07dd994474d04abc9acb0b14dc">choosingDate_</a>;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d8/d3b/class_quant_lib_1_1_simple_chooser_option_1_1arguments.html#ae26e38f89ead35fd7cbe08f68b2e19d7">   40</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/d3b/class_quant_lib_1_1_simple_chooser_option_1_1arguments.html#ae26e38f89ead35fd7cbe08f68b2e19d7">SimpleChooserOption::arguments::validate</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        OneAssetOption::arguments::validate();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        QL_REQUIRE(<a class="code hl_variable" href="../../d8/d3b/class_quant_lib_1_1_simple_chooser_option_1_1arguments.html#a6e45a884968308c9560f663b4a1be847">choosingDate</a> != <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(), <span class="stringliteral">&quot; no choosing date given&quot;</span>);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        QL_REQUIRE(choosingDate &lt; exercise-&gt;lastDate(),</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d8/d3b/class_quant_lib_1_1_simple_chooser_option_1_1arguments.html#a6e45a884968308c9560f663b4a1be847">choosingDate</a> != <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(), <span class="stringliteral">&quot; no choosing date given&quot;</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(choosingDate &lt; exercise-&gt;lastDate(),</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                   <span class="stringliteral">&quot;choosing date later than or equal to maturity date&quot;</span>);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
@@ -146,8 +145,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_simple_chooser_option_html_a29d098166c6f2ed9f3810fdc6001add3"><div class="ttname"><a href="../../de/d19/class_quant_lib_1_1_simple_chooser_option.html#a29d098166c6f2ed9f3810fdc6001add3">QuantLib::SimpleChooserOption::setupArguments</a></div><div class="ttdeci">void setupArguments(PricingEngine::arguments *) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5f/simplechooseroption_8cpp_source.html#l00033">simplechooseroption.cpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simple_chooser_option_html_a7d6c58fac9419d7c4f3c4e7d5fcc1404"><div class="ttname"><a href="../../de/d19/class_quant_lib_1_1_simple_chooser_option.html#a7d6c58fac9419d7c4f3c4e7d5fcc1404">QuantLib::SimpleChooserOption::SimpleChooserOption</a></div><div class="ttdeci">SimpleChooserOption(Date choosingDate, Real strike, const ext::shared_ptr&lt; Exercise &gt; &amp;exercise)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5f/simplechooseroption_8cpp_source.html#l00026">simplechooseroption.cpp:26</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simple_chooser_option_html_ab6bfac07dd994474d04abc9acb0b14dc"><div class="ttname"><a href="../../de/d19/class_quant_lib_1_1_simple_chooser_option.html#ab6bfac07dd994474d04abc9acb0b14dc">QuantLib::SimpleChooserOption::choosingDate_</a></div><div class="ttdeci">Date choosingDate_</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dfd/instruments_2simplechooseroption_8hpp_source.html#l00047">simplechooseroption.hpp:47</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aexercise_8hpp_html"><div class="ttname"><a href="../../de/d94/exercise_8hpp.html">exercise.hpp</a></div><div class="ttdoc">Option exercise classes and payoff function.</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
+<div class="ttc" id="ainstruments_2simplechooseroption_8hpp_html"><div class="ttname"><a href="../../d3/dfd/instruments_2simplechooseroption_8hpp.html">simplechooseroption.hpp</a></div><div class="ttdoc">Simple chooser option on a single asset.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="apayoffs_8hpp_html"><div class="ttname"><a href="../../d0/d95/payoffs_8hpp.html">payoffs.hpp</a></div><div class="ttdoc">Payoffs for various options.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

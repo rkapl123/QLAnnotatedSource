@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -103,15 +102,15 @@ $(function() {
 <div class="line"><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><span class="comment">*/</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;ql/qldefines.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../de/d56/qldefines_8hpp.html">ql/qldefines.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#if !defined(BOOST_ALL_NO_LIB) &amp;&amp; defined(BOOST_MSVC)</span></div>
-<div class="line"><span class="preprocessor">#  include &lt;ql/auto_link.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#  include &lt;<a class="code" href="../../d7/dbf/auto__link_8hpp.html">ql/auto_link.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/experimental/credit/randomdefaultlatentmodel.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/credit/flathazardrate.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/currencies/europe.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/time/calendars/target.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/time/daycounters/actual365fixed.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../de/db6/randomdefaultlatentmodel_8hpp.html">ql/experimental/credit/randomdefaultlatentmodel.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d47/flathazardrate_8hpp.html">ql/termstructures/credit/flathazardrate.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d00/europe_8hpp.html">ql/currencies/europe.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d69/target_8hpp.html">ql/time/calendars/target.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dbf/actual365fixed_8hpp.html">ql/time/daycounters/actual365fixed.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
@@ -329,7 +328,7 @@ $(function() {
 <div class="line">        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iName1=0; iName1 &lt;theBskt-&gt;size(); iName1++) {</div>
 <div class="line">            <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iName2=0; iName2 &lt;theBskt-&gt;size(); iName2++)</div>
 <div class="line">                cout &lt;&lt; </div>
-<div class="line">                #ifndef QL_PATCH_SOLARIS</div>
+<div class="line">                #ifndef <a id="a13" name="a13"></a><a class="code hl_define" href="../../d8/d0e/config_8sun_8hpp.html#a349af8ecf750f64093cf9ecef5e29275">QL_PATCH_SOLARIS</a></div>
 <div class="line">                    correlsGlm[iName1][iName2] &lt;&lt; <span class="stringliteral">&quot; , &quot;</span>;</div>
 <div class="line"><span class="preprocessor">                #else</span></div>
 <div class="line">                    <span class="stringliteral">&quot;n/a&quot;</span> &lt;&lt; <span class="stringliteral">&quot; , &quot;</span>;</div>
@@ -348,7 +347,7 @@ $(function() {
 <div class="line">        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iName1=0; iName1 &lt;theBskt-&gt;size(); iName1++) {</div>
 <div class="line">            <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iName2=0; iName2 &lt;theBskt-&gt;size(); iName2++)</div>
 <div class="line">                cout &lt;&lt; </div>
-<div class="line">                #ifndef QL_PATCH_SOLARIS</div>
+<div class="line">                #ifndef <a class="code hl_define" href="../../d8/d0e/config_8sun_8hpp.html#a349af8ecf750f64093cf9ecef5e29275">QL_PATCH_SOLARIS</a></div>
 <div class="line">                    correlsGrand[iName1][iName2] &lt;&lt; <span class="stringliteral">&quot; , &quot;</span>;</div>
 <div class="line"><span class="preprocessor">                #else</span></div>
 <div class="line">                    <span class="stringliteral">&quot;n/a&quot;</span> &lt;&lt; <span class="stringliteral">&quot; , &quot;</span>;</div>
@@ -374,6 +373,8 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"> </div>
+<div class="ttc" id="aactual365fixed_8hpp_html"><div class="ttname"><a href="../../d6/dbf/actual365fixed_8hpp.html">actual365fixed.hpp</a></div><div class="ttdoc">Actual/365 (Fixed) day counter.</div></div>
+<div class="ttc" id="aauto__link_8hpp_html"><div class="ttname"><a href="../../d7/dbf/auto__link_8hpp.html">auto_link.hpp</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual365_fixed_html"><div class="ttname"><a href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">QuantLib::Actual365Fixed</a></div><div class="ttdoc">Actual/365 (Fixed) day count convention.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbf/actual365fixed_8hpp_source.html#l00045">actual365fixed.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html">QuantLib::Calendar</a></div><div class="ttdoc">calendar class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00061">calendar.hpp:61</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html_a712629806d9ef9a39f8144f368c81e4b"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b">QuantLib::Calendar::adjust</a></div><div class="ttdeci">Date adjust(const Date &amp;, BusinessDayConvention convention=Following) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d2e/calendar_8cpp_source.html#l00084">calendar.cpp:84</a></div></div>
@@ -384,14 +385,20 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_north_america_corp_default_key_html"><div class="ttname"><a href="../../d1/d6c/class_quant_lib_1_1_north_america_corp_default_key.html">QuantLib::NorthAmericaCorpDefaultKey</a></div><div class="ttdoc">ISDA standard default contractual key for corporate US debt.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db3/defaultprobabilitykey_8hpp_source.html#l00071">defaultprobabilitykey.hpp:71</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_t_a_r_g_e_t_html"><div class="ttname"><a href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">QuantLib::TARGET</a></div><div class="ttdoc">TARGET calendar</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d69/target_8hpp_source.html#l00050">target.hpp:50</a></div></div>
+<div class="ttc" id="aconfig_8sun_8hpp_html_a349af8ecf750f64093cf9ecef5e29275"><div class="ttname"><a href="../../d8/d0e/config_8sun_8hpp.html#a349af8ecf750f64093cf9ecef5e29275">QL_PATCH_SOLARIS</a></div><div class="ttdeci">#define QL_PATCH_SOLARIS</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0e/config_8sun_8hpp_source.html#l00031">config.sun.hpp:31</a></div></div>
+<div class="ttc" id="aeurope_8hpp_html"><div class="ttname"><a href="../../d0/d00/europe_8hpp.html">europe.hpp</a></div><div class="ttdoc">European currencies.</div></div>
+<div class="ttc" id="aflathazardrate_8hpp_html"><div class="ttname"><a href="../../d4/d47/flathazardrate_8hpp.html">flathazardrate.hpp</a></div><div class="ttdoc">flat hazard-rate term structure</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a67b45b4a8252bded773b222c6f9428dca58f8d6688b98d67fda81d5f4b61a24e9"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dca58f8d6688b98d67fda81d5f4b61a24e9">QuantLib::SeniorSec</a></div><div class="ttdeci">@ SeniorSec</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d52/defaulttype_8hpp_source.html#l00046">defaulttype.hpp:46</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="aqldefines_8hpp_html"><div class="ttname"><a href="../../de/d56/qldefines_8hpp.html">qldefines.hpp</a></div><div class="ttdoc">Global definitions and compiler switches.</div></div>
+<div class="ttc" id="arandomdefaultlatentmodel_8hpp_html"><div class="ttname"><a href="../../de/db6/randomdefaultlatentmodel_8hpp.html">randomdefaultlatentmodel.hpp</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_gaussian_copula_policy_html_a3f16e8bbc40e0cc318f5c5080ae9223e"><div class="ttname"><a href="../../dc/df8/struct_quant_lib_1_1_gaussian_copula_policy.html#a3f16e8bbc40e0cc318f5c5080ae9223e">QuantLib::GaussianCopulaPolicy::initTraits</a></div><div class="ttdeci">int initTraits</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/gaussiancopulapolicy_8hpp_source.html#l00037">gaussiancopulapolicy.hpp:37</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_t_copula_policy_1_1init_traits_html"><div class="ttname"><a href="../../d1/d6a/struct_quant_lib_1_1_t_copula_policy_1_1init_traits.html">QuantLib::TCopulaPolicy::initTraits</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddd/tcopulapolicy_8hpp_source.html#l00048">tcopulapolicy.hpp:49</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_t_copula_policy_1_1init_traits_html_a61eb2a998ccf63ce7a01b3a2b2e91789"><div class="ttname"><a href="../../d1/d6a/struct_quant_lib_1_1_t_copula_policy_1_1init_traits.html#a61eb2a998ccf63ce7a01b3a2b2e91789">QuantLib::TCopulaPolicy::initTraits::tOrders</a></div><div class="ttdeci">std::vector&lt; Integer &gt; tOrders</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddd/tcopulapolicy_8hpp_source.html#l00050">tcopulapolicy.hpp:50</a></div></div>
+<div class="ttc" id="atarget_8hpp_html"><div class="ttname"><a href="../../dc/d69/target_8hpp.html">target.hpp</a></div><div class="ttdoc">TARGET calendar.</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

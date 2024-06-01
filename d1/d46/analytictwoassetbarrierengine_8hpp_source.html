@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/exoticoptions/analytictwoassetbarrierengine.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/exoticoptions/analytictwoassetbarrierengine.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">analytictwoassetbarrierengine.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d1/d46/analytictwoassetbarrierengine_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2012 Master IMAFA - Polytech&#39;Nice Sophia - Université de Nice Sophia Antipolis</span></div>
@@ -105,16 +104,28 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file analytictwoassetbarrierengine.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Analytic engine for barrier option on two assets</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_analytic_two_asset_barrier_engine_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_analytic_two_asset_barrier_engine_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/experimental/exoticoptions/twoassetbarrieroption.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/processes/blackscholesprocess.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/d4a/twoassetbarrieroption_8hpp.html">ql/experimental/exoticoptions/twoassetbarrieroption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/da0/blackscholesprocess_8hpp.html">ql/processes/blackscholesprocess.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"></span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    //! Analytic engine for barrier option on two assets</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span><span class="comment">    /*! The formulas are taken from &quot;Option pricing formulas&quot;,</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">        E.G. Haug, McGraw-Hill,</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        \ingroup barrierengines</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"></span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        \test the correctness of the returned value is tested by</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">              reproducing results available in literature.</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">     */</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d5/d7c/class_quant_lib_1_1_analytic_two_asset_barrier_engine.html">   41</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d5/d7c/class_quant_lib_1_1_analytic_two_asset_barrier_engine.html">AnalyticTwoAssetBarrierEngine</a></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        : <span class="keyword">public</span> <a class="code hl_class" href="../../de/dc0/class_quant_lib_1_1_two_asset_barrier_option_1_1engine.html">TwoAssetBarrierOption::engine</a> {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keyword">public</span>:</div>
@@ -149,7 +160,7 @@ $(function() {
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="code hl_function" href="../../d5/d7c/class_quant_lib_1_1_analytic_two_asset_barrier_engine.html#ab5c8c8432e04710b5053ce22a6be7748">costOfCarry1</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="code hl_function" href="../../d5/d7c/class_quant_lib_1_1_analytic_two_asset_barrier_engine.html#ab2e459ac6d2bb3adeaea86a4db23da7a">costOfCarry2</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/d7c/class_quant_lib_1_1_analytic_two_asset_barrier_engine.html#ab4df61d6222c1edf8d7854df08a6521e">mu</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> b, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> vol) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/d7c/class_quant_lib_1_1_analytic_two_asset_barrier_engine.html#ab4df61d6222c1edf8d7854df08a6521e">mu</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> vol) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/d7c/class_quant_lib_1_1_analytic_two_asset_barrier_engine.html#a5451e21af2b6631f346865d49a82d54d">d1</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d5/d7c/class_quant_lib_1_1_analytic_two_asset_barrier_engine.html#aff029bc33abeff3a8d0e5ef930b7be0f">d2</a>() <span class="keyword">const</span>;</div>
@@ -174,6 +185,7 @@ $(function() {
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="ablackscholesprocess_8hpp_html"><div class="ttname"><a href="../../d0/da0/blackscholesprocess_8hpp.html">blackscholesprocess.hpp</a></div><div class="ttdoc">Black-Scholes processes.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_two_asset_barrier_engine_html"><div class="ttname"><a href="../../d5/d7c/class_quant_lib_1_1_analytic_two_asset_barrier_engine.html">QuantLib::AnalyticTwoAssetBarrierEngine</a></div><div class="ttdoc">Analytic engine for barrier option on two assets.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d46/analytictwoassetbarrierengine_8hpp_source.html#l00041">analytictwoassetbarrierengine.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_two_asset_barrier_engine_html_a09fceea60150abdef9b9664a0d055c2e"><div class="ttname"><a href="../../d5/d7c/class_quant_lib_1_1_analytic_two_asset_barrier_engine.html#a09fceea60150abdef9b9664a0d055c2e">QuantLib::AnalyticTwoAssetBarrierEngine::process2_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process2_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d46/analytictwoassetbarrierengine_8hpp_source.html#l00051">analytictwoassetbarrierengine.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_two_asset_barrier_engine_html_a0b85990d56489ff747471de68eb7f7ca"><div class="ttname"><a href="../../d5/d7c/class_quant_lib_1_1_analytic_two_asset_barrier_engine.html#a0b85990d56489ff747471de68eb7f7ca">QuantLib::AnalyticTwoAssetBarrierEngine::dividendYield1</a></div><div class="ttdeci">Rate dividendYield1() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dd3/analytictwoassetbarrierengine_8cpp_source.html#l00130">analytictwoassetbarrierengine.cpp:130</a></div></div>
@@ -208,11 +220,13 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_two_asset_barrier_engine_html_aff029bc33abeff3a8d0e5ef930b7be0f"><div class="ttname"><a href="../../d5/d7c/class_quant_lib_1_1_analytic_two_asset_barrier_engine.html#aff029bc33abeff3a8d0e5ef930b7be0f">QuantLib::AnalyticTwoAssetBarrierEngine::d2</a></div><div class="ttdeci">Real d2() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dd3/analytictwoassetbarrierengine_8cpp_source.html#l00153">analytictwoassetbarrierengine.cpp:153</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_two_asset_barrier_option_1_1engine_html"><div class="ttname"><a href="../../de/dc0/class_quant_lib_1_1_two_asset_barrier_option_1_1engine.html">QuantLib::TwoAssetBarrierOption::engine</a></div><div class="ttdoc">Two-asset barrier-option engine base class</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d4a/twoassetbarrieroption_8hpp_source.html#l00067">twoassetbarrieroption.hpp:69</a></div></div>
+<div class="ttc" id="aextendedornsteinuhlenbeckprocess_8cpp_html_a1759c348ed007f12d79ceff98cc3abbe"><div class="ttname"><a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a></div><div class="ttdeci">ext::function&lt; Real(Real)&gt; b</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp_source.html#l00030">extendedornsteinuhlenbeckprocess.cpp:30</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="atwoassetbarrieroption_8hpp_html"><div class="ttname"><a href="../../da/d4a/twoassetbarrieroption_8hpp.html">twoassetbarrieroption.hpp</a></div><div class="ttdoc">Barrier option on two assets.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

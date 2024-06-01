@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/inflation/cpicapfloorengines.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/inflation/cpicapfloorengines.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">cpicapfloorengines.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d0/dbb/cpicapfloorengines_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2011 Chris Kenyon</span></div>
@@ -108,9 +107,9 @@ $(function() {
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/experimental/inflation/cpicapfloorengines.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/experimental/inflation/cpicapfloortermpricesurface.hpp&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/time/daycounters/actualactual.hpp&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d5a/cpicapfloorengines_8hpp.html">ql/experimental/inflation/cpicapfloorengines.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/dd3/cpicapfloortermpricesurface_8hpp.html">ql/experimental/inflation/cpicapfloortermpricesurface.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d81/actualactual_8hpp.html">ql/time/daycounters/actualactual.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
@@ -133,7 +132,7 @@ $(function() {
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">// \TODO next line will fail if units are different</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> lagDiff = <a class="code hl_variable" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html#afee5e1b26214353757b120d9f5ad2169">arguments_</a>.<a class="code hl_variable" href="../../dc/d2a/class_quant_lib_1_1_c_p_i_cap_floor_1_1arguments.html#a70e540d91380c6a734f04886ff863e8e">observationLag</a> - <a class="code hl_variable" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a215d496e0eedd3d3bcde568f52718dd4">priceSurf_</a>-&gt;observationLag();</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="comment">// next line will fail if units are different if Period() is not well written</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        QL_REQUIRE(lagDiff &gt;= <a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(0, <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54">Months</a>), <span class="stringliteral">&quot;InterpolatingCPICapFloorEngine: &quot;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(lagDiff &gt;= <a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(0, <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54">Months</a>), <span class="stringliteral">&quot;InterpolatingCPICapFloorEngine: &quot;</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                   <span class="stringliteral">&quot;lag difference must be non-negative: &quot;</span> &lt;&lt; lagDiff);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">// we now need an effective maturity to use in the price surface because this uses</span></div>
@@ -186,6 +185,7 @@ $(function() {
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+<div class="ttc" id="aactualactual_8hpp_html"><div class="ttname"><a href="../../dd/d81/actualactual_8hpp.html">actualactual.hpp</a></div><div class="ttdoc">act/act day counters</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_p_i_cap_floor_1_1arguments_html_a70e540d91380c6a734f04886ff863e8e"><div class="ttname"><a href="../../dc/d2a/class_quant_lib_1_1_c_p_i_cap_floor_1_1arguments.html#a70e540d91380c6a734f04886ff863e8e">QuantLib::CPICapFloor::arguments::observationLag</a></div><div class="ttdeci">Period observationLag</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d62/cpicapfloor_8hpp_source.html#l00127">cpicapfloor.hpp:127</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_p_i_cap_floor_1_1arguments_html_a9a4a33b294edec6ebb0de2820c5f8408"><div class="ttname"><a href="../../dc/d2a/class_quant_lib_1_1_c_p_i_cap_floor_1_1arguments.html#a9a4a33b294edec6ebb0de2820c5f8408">QuantLib::CPICapFloor::arguments::strike</a></div><div class="ttdeci">Rate strike</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d62/cpicapfloor_8hpp_source.html#l00125">cpicapfloor.hpp:125</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_p_i_cap_floor_1_1arguments_html_accbbdff5a9957196a62671150550449d"><div class="ttname"><a href="../../dc/d2a/class_quant_lib_1_1_c_p_i_cap_floor_1_1arguments.html#accbbdff5a9957196a62671150550449d">QuantLib::CPICapFloor::arguments::observationInterpolation</a></div><div class="ttdeci">CPI::InterpolationType observationInterpolation</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d62/cpicapfloor_8hpp_source.html#l00128">cpicapfloor.hpp:128</a></div></div>
@@ -203,11 +203,14 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_observer_html_aa6ade205ed506bf712da2704f80a73a0"><div class="ttname"><a href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">QuantLib::Observer::registerWith</a></div><div class="ttdeci">std::pair&lt; iterator, bool &gt; registerWith(const ext::shared_ptr&lt; Observable &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5e/observable_8hpp_source.html#l00228">observable.hpp:228</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_option_html_a1d1cfd8ffb84e947f82999c682b666a7a59b9abc46faffa225d20abc5e5252417"><div class="ttname"><a href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7a59b9abc46faffa225d20abc5e5252417">QuantLib::Option::Call</a></div><div class="ttdeci">@ Call</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd9/option_8hpp_source.html#l00041">option.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
+<div class="ttc" id="acpicapfloorengines_8hpp_html"><div class="ttname"><a href="../../d4/d5a/cpicapfloorengines_8hpp.html">cpicapfloorengines.hpp</a></div><div class="ttdoc">Engines for CPI options.</div></div>
+<div class="ttc" id="acpicapfloortermpricesurface_8hpp_html"><div class="ttname"><a href="../../da/dd3/cpicapfloortermpricesurface_8hpp.html">cpicapfloortermpricesurface.hpp</a></div><div class="ttdoc">cpi inflation cap and floor term price structure.</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54">QuantLib::Months</a></div><div class="ttdeci">@ Months</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00039">timeunit.hpp:39</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">QuantLib::Days</a></div><div class="ttdeci">@ Days</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00037">timeunit.hpp:37</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html_a75bda18f151fe3647025daf813b13fc6"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a75bda18f151fe3647025daf813b13fc6">QuantLib::inflationPeriod</a></div><div class="ttdeci">std::pair&lt; Date, Date &gt; inflationPeriod(const Date &amp;d, Frequency frequency)</div><div class="ttdoc">utility function giving the inflation period for a given date</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d01/inflationtermstructure_8cpp_source.html#l00269">inflationtermstructure.cpp:269</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_a75bda18f151fe3647025daf813b13fc6"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a75bda18f151fe3647025daf813b13fc6">QuantLib::inflationPeriod</a></div><div class="ttdeci">std::pair&lt; Date, Date &gt; inflationPeriod(const Date &amp;d, Frequency frequency)</div><div class="ttdoc">utility function giving the inflation period for a given date</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d01/inflationtermstructure_8cpp_source.html#l00394">inflationtermstructure.cpp:394</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_c_p_i_html_a8472f01c511d77bbfb981a46618ea1eaa001e44004d8d85d1a98f7a1fb01ea79c"><div class="ttname"><a href="../../d4/df8/struct_quant_lib_1_1_c_p_i.html#a8472f01c511d77bbfb981a46618ea1eaa001e44004d8d85d1a98f7a1fb01ea79c">QuantLib::CPI::AsIndex</a></div><div class="ttdeci">@ AsIndex</div><div class="ttdoc">same interpolation as index</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db8/inflationindex_8hpp_source.html#l00041">inflationindex.hpp:41</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_c_p_i_html_a8472f01c511d77bbfb981a46618ea1eaa5a9e3347876551cd38b961213ff1ccde"><div class="ttname"><a href="../../d4/df8/struct_quant_lib_1_1_c_p_i.html#a8472f01c511d77bbfb981a46618ea1eaa5a9e3347876551cd38b961213ff1ccde">QuantLib::CPI::Flat</a></div><div class="ttdeci">@ Flat</div><div class="ttdoc">flat from previous fixing</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db8/inflationindex_8hpp_source.html#l00042">inflationindex.hpp:42</a></div></div>

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/math/integrals/simpsonintegral.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/math/integrals/simpsonintegral.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">simpsonintegral.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d7/dec/simpsonintegral_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2003 Roman Gitlin</span></div>
@@ -106,60 +105,75 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file simpsonintegral.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief integral of a one-dimensional function using Simpson formula</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_simpson_integral_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_simpson_integral_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/math/integrals/trapezoidintegral.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d60/trapezoidintegral_8hpp.html">ql/math/integrals/trapezoidintegral.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"></span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    //! Integral of a one-dimensional function</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span><span class="comment">    /*! \test the correctness of the result is tested by checking it</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">              against known good values.</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html">   36</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html">SimpsonIntegral</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d6/d05/class_quant_lib_1_1_trapezoid_integral.html">TrapezoidIntegral</a>&lt;Default&gt; {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#a0fc90f4cf7b13eda7b657cf829bbdba2">   38</a></span>        <a class="code hl_function" href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#a0fc90f4cf7b13eda7b657cf829bbdba2">SimpsonIntegral</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> accuracy,</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> maxIterations)</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        : <a class="code hl_class" href="../../d6/d05/class_quant_lib_1_1_trapezoid_integral.html">TrapezoidIntegral</a>&lt;<a class="code hl_struct" href="../../da/d6b/struct_quant_lib_1_1_default.html">Default</a>&gt;(accuracy, maxIterations) {}</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">   42</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">integrate</a>(<span class="keyword">const</span> ext::function&lt;<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt;&amp; f, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> b)<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">   42</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">integrate</a>(<span class="keyword">const</span> ext::function&lt;<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt;&amp; <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>)<span class="keyword"> const override </span>{</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="comment">// start from the coarsest trapezoid...</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> N = 1;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> I = (f(a)+f(b))*(b-a)/2.0, newI;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> adjI = I, newAdjI;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="comment">// ...and refine it</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i = 1;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">do</span> {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                newI = <a class="code hl_function" href="../../da/d6b/struct_quant_lib_1_1_default.html#a023fee80186df103f1c7dce5d7eea878">Default::integrate</a>(f,a,b,I,N);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                N *= 2;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                newAdjI = (4.0*newI-I)/3.0;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <span class="comment">// good enough? Also, don&#39;t run away immediately</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <span class="keywordflow">if</span> (std::fabs(adjI-newAdjI) &lt;= <a class="code hl_function" href="../../db/df7/class_quant_lib_1_1_integrator.html#a040f464985da978503dd2088334cc59d">absoluteAccuracy</a>() &amp;&amp; i &gt; 5)</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    <span class="comment">// ok, exit</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    <span class="keywordflow">return</span> newAdjI;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="comment">// oh well. Another step.</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                I = newI;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                adjI = newAdjI;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                i++;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            } <span class="keywordflow">while</span> (i &lt; <a class="code hl_function" href="../../db/df7/class_quant_lib_1_1_integrator.html#a174acab51f4fb05a361ebc5326f78bce">maxEvaluations</a>());</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            QL_FAIL(<span class="stringliteral">&quot;max number of iterations reached&quot;</span>);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    };</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> I = (<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>(a)+<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>(<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>))*(<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>-a)/2.0, newI;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <a class="code hl_function" href="../../db/df7/class_quant_lib_1_1_integrator.html#a90098794a49670f57271357e007e2f69">increaseNumberOfEvaluations</a>(2);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> adjI = I, newAdjI;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="comment">// ...and refine it</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i = 1;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">do</span> {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                newI = <a class="code hl_function" href="../../da/d6b/struct_quant_lib_1_1_default.html#a023fee80186df103f1c7dce5d7eea878">Default::integrate</a>(<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>,a,<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>,I,N);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <a class="code hl_function" href="../../db/df7/class_quant_lib_1_1_integrator.html#a90098794a49670f57271357e007e2f69">increaseNumberOfEvaluations</a>(N);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                N *= 2;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                newAdjI = (4.0*newI-I)/3.0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                <span class="comment">// good enough? Also, don&#39;t run away immediately</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="keywordflow">if</span> (std::fabs(adjI-newAdjI) &lt;= <a class="code hl_function" href="../../db/df7/class_quant_lib_1_1_integrator.html#a040f464985da978503dd2088334cc59d">absoluteAccuracy</a>() &amp;&amp; i &gt; 5)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    <span class="comment">// ok, exit</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                    <span class="keywordflow">return</span> newAdjI;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="comment">// oh well. Another step.</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                I = newI;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                adjI = newAdjI;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                i++;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            } <span class="keywordflow">while</span> (i &lt; <a class="code hl_function" href="../../db/df7/class_quant_lib_1_1_integrator.html#a174acab51f4fb05a361ebc5326f78bce">maxEvaluations</a>());</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;max number of iterations reached&quot;</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    };</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_quant_lib_1_1_integrator_html_a040f464985da978503dd2088334cc59d"><div class="ttname"><a href="../../db/df7/class_quant_lib_1_1_integrator.html#a040f464985da978503dd2088334cc59d">QuantLib::Integrator::absoluteAccuracy</a></div><div class="ttdeci">Real absoluteAccuracy() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d35/integral_8cpp_source.html#l00043">integral.cpp:43</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_integrator_html_a174acab51f4fb05a361ebc5326f78bce"><div class="ttname"><a href="../../db/df7/class_quant_lib_1_1_integrator.html#a174acab51f4fb05a361ebc5326f78bce">QuantLib::Integrator::maxEvaluations</a></div><div class="ttdeci">Size maxEvaluations() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d35/integral_8cpp_source.html#l00047">integral.cpp:47</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_integrator_html_a90098794a49670f57271357e007e2f69"><div class="ttname"><a href="../../db/df7/class_quant_lib_1_1_integrator.html#a90098794a49670f57271357e007e2f69">QuantLib::Integrator::increaseNumberOfEvaluations</a></div><div class="ttdeci">void increaseNumberOfEvaluations(Size increase) const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d35/integral_8cpp_source.html#l00067">integral.cpp:67</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simpson_integral_html"><div class="ttname"><a href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html">QuantLib::SimpsonIntegral</a></div><div class="ttdoc">Integral of a one-dimensional function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dec/simpsonintegral_8hpp_source.html#l00036">simpsonintegral.hpp:36</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simpson_integral_html_a0fc90f4cf7b13eda7b657cf829bbdba2"><div class="ttname"><a href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#a0fc90f4cf7b13eda7b657cf829bbdba2">QuantLib::SimpsonIntegral::SimpsonIntegral</a></div><div class="ttdeci">SimpsonIntegral(Real accuracy, Size maxIterations)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dec/simpsonintegral_8hpp_source.html#l00038">simpsonintegral.hpp:38</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simpson_integral_html_a7204bd05d6a0697ae1ca38f11f004d84"><div class="ttname"><a href="../../d1/d26/class_quant_lib_1_1_simpson_integral.html#a7204bd05d6a0697ae1ca38f11f004d84">QuantLib::SimpsonIntegral::integrate</a></div><div class="ttdeci">Real integrate(const ext::function&lt; Real(Real)&gt; &amp;f, Real a, Real b) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dec/simpsonintegral_8hpp_source.html#l00042">simpsonintegral.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_trapezoid_integral_html"><div class="ttname"><a href="../../d6/d05/class_quant_lib_1_1_trapezoid_integral.html">QuantLib::TrapezoidIntegral</a></div><div class="ttdoc">Integral of a one-dimensional function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d60/trapezoidintegral_8hpp_source.html#l00052">trapezoidintegral.hpp:52</a></div></div>
+<div class="ttc" id="adefaultdensitystructure_8cpp_html_ae19b4006a311a298a93a5cd06a7cb0e7"><div class="ttname"><a href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a></div><div class="ttdeci">F f</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d93/defaultdensitystructure_8cpp_source.html#l00032">defaultdensitystructure.cpp:32</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a8efe9cb3e67c8d0585e57b4d53c5d2fe"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a></div><div class="ttdeci">#define QL_FAIL(message)</div><div class="ttdoc">throw an error (possibly with file and line information)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00092">errors.hpp:92</a></div></div>
+<div class="ttc" id="aextendedornsteinuhlenbeckprocess_8cpp_html_a1759c348ed007f12d79ceff98cc3abbe"><div class="ttname"><a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a></div><div class="ttdeci">ext::function&lt; Real(Real)&gt; b</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp_source.html#l00030">extendedornsteinuhlenbeckprocess.cpp:30</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
-<div class="ttc" id="astruct_quant_lib_1_1_default_html"><div class="ttname"><a href="../../da/d6b/struct_quant_lib_1_1_default.html">QuantLib::Default</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d60/trapezoidintegral_8hpp_source.html#l00082">trapezoidintegral.hpp:82</a></div></div>
-<div class="ttc" id="astruct_quant_lib_1_1_default_html_a023fee80186df103f1c7dce5d7eea878"><div class="ttname"><a href="../../da/d6b/struct_quant_lib_1_1_default.html#a023fee80186df103f1c7dce5d7eea878">QuantLib::Default::integrate</a></div><div class="ttdeci">static Real integrate(const ext::function&lt; Real(Real)&gt; &amp;f, Real a, Real b, Real I, Size N)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d60/trapezoidintegral_8hpp_source.html#l00083">trapezoidintegral.hpp:83</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_default_html"><div class="ttname"><a href="../../da/d6b/struct_quant_lib_1_1_default.html">QuantLib::Default</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d60/trapezoidintegral_8hpp_source.html#l00084">trapezoidintegral.hpp:84</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_default_html_a023fee80186df103f1c7dce5d7eea878"><div class="ttname"><a href="../../da/d6b/struct_quant_lib_1_1_default.html#a023fee80186df103f1c7dce5d7eea878">QuantLib::Default::integrate</a></div><div class="ttdeci">static Real integrate(const ext::function&lt; Real(Real)&gt; &amp;f, Real a, Real b, Real I, Size N)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d60/trapezoidintegral_8hpp_source.html#l00085">trapezoidintegral.hpp:85</a></div></div>
+<div class="ttc" id="atrapezoidintegral_8hpp_html"><div class="ttname"><a href="../../d0/d60/trapezoidintegral_8hpp.html">trapezoidintegral.hpp</a></div><div class="ttdoc">integral of a one-dimensional function using the trapezoid formula</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

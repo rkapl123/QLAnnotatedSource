@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/instruments/forwardvanillaoption.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/instruments/forwardvanillaoption.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">forwardvanillaoption.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../de/d3d/forwardvanillaoption_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2002, 2003 Ferdinando Ametrano</span></div>
@@ -106,18 +105,23 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file forwardvanillaoption.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief Forward version of a vanilla option</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_forward_vanilla_option_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_forward_vanilla_option_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/instruments/oneassetoption.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/instruments/payoffs.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/exercise.hpp&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/settings.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d2b/oneassetoption_8hpp.html">ql/instruments/oneassetoption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d95/payoffs_8hpp.html">ql/instruments/payoffs.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d94/exercise_8hpp.html">ql/exercise.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d0f/settings_8hpp.html">ql/settings.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> ArgumentsType&gt;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">    //! %Arguments for forward (strike-resetting) option calculation</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"></span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> ArgumentsType&gt;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d0/db0/class_quant_lib_1_1_forward_option_arguments.html">   37</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d0/db0/class_quant_lib_1_1_forward_option_arguments.html">ForwardOptionArguments</a> : <span class="keyword">public</span> ArgumentsType {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d0/db0/class_quant_lib_1_1_forward_option_arguments.html#aff7e089c17aed3790040e0d4f520e8b7">   39</a></span>        <a class="code hl_function" href="../../d0/db0/class_quant_lib_1_1_forward_option_arguments.html#aff7e089c17aed3790040e0d4f520e8b7">ForwardOptionArguments</a>() : <a class="code hl_variable" href="../../d0/db0/class_quant_lib_1_1_forward_option_arguments.html#a6032d77a6dece5bc46d14d76e329f7eb">moneyness</a>(<a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null</a>&lt;<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&gt;()),</div>
@@ -126,8 +130,9 @@ $(function() {
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d0/db0/class_quant_lib_1_1_forward_option_arguments.html#a6032d77a6dece5bc46d14d76e329f7eb">   42</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d0/db0/class_quant_lib_1_1_forward_option_arguments.html#a6032d77a6dece5bc46d14d76e329f7eb">moneyness</a>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d0/db0/class_quant_lib_1_1_forward_option_arguments.html#acce77eb25acc2dd928c6728a14602ad3">   43</a></span>        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_variable" href="../../d0/db0/class_quant_lib_1_1_forward_option_arguments.html#acce77eb25acc2dd928c6728a14602ad3">resetDate</a>;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"></span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">    //! %Forward version of a vanilla option</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"></span><span class="comment">    /*! \ingroup instruments */</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../de/d76/class_quant_lib_1_1_forward_vanilla_option.html">   48</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../de/d76/class_quant_lib_1_1_forward_vanilla_option.html">ForwardVanillaOption</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d3/da6/class_quant_lib_1_1_one_asset_option.html">OneAssetOption</a> {</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../de/d76/class_quant_lib_1_1_forward_vanilla_option.html#aa921b26418fb0d2cd2b73a34aef8ae14">   50</a></span>        <span class="keyword">typedef</span> <a class="code hl_class" href="../../d0/db0/class_quant_lib_1_1_forward_option_arguments.html">ForwardOptionArguments&lt;OneAssetOption::arguments&gt;</a> <a class="code hl_typedef" href="../../de/d76/class_quant_lib_1_1_forward_vanilla_option.html#aa921b26418fb0d2cd2b73a34aef8ae14">arguments</a>;</div>
@@ -152,13 +157,13 @@ $(function() {
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../d0/db0/class_quant_lib_1_1_forward_option_arguments.html#ae26e38f89ead35fd7cbe08f68b2e19d7">   69</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/db0/class_quant_lib_1_1_forward_option_arguments.html#ae26e38f89ead35fd7cbe08f68b2e19d7">ForwardOptionArguments&lt;ArgumentsType&gt;::validate</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        ArgumentsType::validate();</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        QL_REQUIRE(moneyness != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(), <span class="stringliteral">&quot;null moneyness given&quot;</span>);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        QL_REQUIRE(moneyness &gt; 0.0, <span class="stringliteral">&quot;negative or zero moneyness given&quot;</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(moneyness != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(), <span class="stringliteral">&quot;null moneyness given&quot;</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(moneyness &gt; 0.0, <span class="stringliteral">&quot;negative or zero moneyness given&quot;</span>);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        QL_REQUIRE(resetDate != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Date&gt;</a>(), <span class="stringliteral">&quot;null reset date given&quot;</span>);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        QL_REQUIRE(resetDate &gt;= <a class="code hl_function" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">Settings::instance</a>().evaluationDate(),</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(resetDate != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Date&gt;</a>(), <span class="stringliteral">&quot;null reset date given&quot;</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(resetDate &gt;= <a class="code hl_function" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">Settings::instance</a>().evaluationDate(),</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                   <span class="stringliteral">&quot;reset date in the past&quot;</span>);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        QL_REQUIRE(this-&gt;exercise-&gt;lastDate() &gt; resetDate,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(this-&gt;exercise-&gt;lastDate() &gt; resetDate,</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                   <span class="stringliteral">&quot;reset date later or equal to maturity&quot;</span>);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
@@ -189,8 +194,13 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_pricing_engine_1_1arguments_html"><div class="ttname"><a href="../../d7/d14/class_quant_lib_1_1_pricing_engine_1_1arguments.html">QuantLib::PricingEngine::arguments</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcc/pricingengine_8hpp_source.html#l00045">pricingengine.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pricing_engine_1_1results_html"><div class="ttname"><a href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">QuantLib::PricingEngine::results</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcc/pricingengine_8hpp_source.html#l00051">pricingengine.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_singleton_html_ab7455b7e1235d292c444095842349291"><div class="ttname"><a href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">QuantLib::Singleton&lt; Settings &gt;::instance</a></div><div class="ttdeci">static Settings &amp; instance()</div><div class="ttdoc">access to the unique instance</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/singleton_8hpp_source.html#l00068">singleton.hpp:104</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aexercise_8hpp_html"><div class="ttname"><a href="../../de/d94/exercise_8hpp.html">exercise.hpp</a></div><div class="ttdoc">Option exercise classes and payoff function.</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aoneassetoption_8hpp_html"><div class="ttname"><a href="../../de/d2b/oneassetoption_8hpp.html">oneassetoption.hpp</a></div><div class="ttdoc">Option on a single asset.</div></div>
+<div class="ttc" id="apayoffs_8hpp_html"><div class="ttname"><a href="../../d0/d95/payoffs_8hpp.html">payoffs.hpp</a></div><div class="ttdoc">Payoffs for various options.</div></div>
+<div class="ttc" id="asettings_8hpp_html"><div class="ttname"><a href="../../d5/d0f/settings_8hpp.html">settings.hpp</a></div><div class="ttdoc">global repository for run-time library settings</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

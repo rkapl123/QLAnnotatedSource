@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/commodities/commoditypricinghelpers.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/commodities/commoditypricinghelpers.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">commoditypricinghelpers.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d5/d2e/commoditypricinghelpers_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 J. Erik Radmall</span></div>
@@ -106,7 +105,7 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/experimental/commodities/commoditypricinghelpers.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/db7/commoditypricinghelpers_8hpp.html">ql/experimental/commodities/commoditypricinghelpers.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
@@ -122,7 +121,7 @@ $(function() {
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> (qtyPeriodicity == <a class="code hl_enumvalue" href="../../d3/d6a/class_quant_lib_1_1_energy_commodity.html#ae1c35b00dd9a7841aac1026aa504db9fa836ce08aeb278e8f1464a0331f5bf193">EnergyCommodity::PerMonth</a>) {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                periodQuantity = quantity;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                QL_FAIL(<span class="stringliteral">&quot;Invalid period quantity/pricing period combination.&quot;</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;Invalid period quantity/pricing period combination.&quot;</span>);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            }</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">for</span> (<a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> periodStartDate=startDate; periodStartDate&lt;endDate; ) {</div>
@@ -134,7 +133,7 @@ $(function() {
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                periodStartDate = periodEndDate + 1;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            }</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (deliverySchedule == <a class="code hl_enumvalue" href="../../d3/d6a/class_quant_lib_1_1_energy_commodity.html#aa8a473eb00f211a22d296c4d2f750c9aa6b15f8b55b10fefe6300b2f3bf60ad78">EnergyCommodity::Daily</a>) {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            QL_REQUIRE(qtyPeriodicity == <a class="code hl_enumvalue" href="../../d3/d6a/class_quant_lib_1_1_energy_commodity.html#ae1c35b00dd9a7841aac1026aa504db9faccb3efba137e4dd3074b8032720085aa">EnergyCommodity::PerDay</a>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(qtyPeriodicity == <a class="code hl_enumvalue" href="../../d3/d6a/class_quant_lib_1_1_energy_commodity.html#ae1c35b00dd9a7841aac1026aa504db9faccb3efba137e4dd3074b8032720085aa">EnergyCommodity::PerDay</a>,</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                       <span class="stringliteral">&quot;Invalid period quantity/pricing period combination.&quot;</span>);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">for</span> (<a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> periodStartDate=startDate; periodStartDate&lt;endDate; ) {</div>
@@ -163,6 +162,9 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_payment_term_html"><div class="ttname"><a href="../../d4/dbc/class_quant_lib_1_1_payment_term.html">QuantLib::PaymentTerm</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d41/paymentterm_8hpp_source.html#l00033">paymentterm.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_payment_term_html_a0cb3610986dced470f52a27e49db829d"><div class="ttname"><a href="../../d4/dbc/class_quant_lib_1_1_payment_term.html#a0cb3610986dced470f52a27e49db829d">QuantLib::PaymentTerm::getPaymentDate</a></div><div class="ttdeci">Date getPaymentDate(const Date &amp;date) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d41/paymentterm_8hpp_source.html#l00105">paymentterm.hpp:105</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_quantity_html"><div class="ttname"><a href="../../d1/d7c/class_quant_lib_1_1_quantity.html">QuantLib::Quantity</a></div><div class="ttdoc">Amount of a commodity.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/db8/quantity_8hpp_source.html#l00034">quantity.hpp:34</a></div></div>
+<div class="ttc" id="acommoditypricinghelpers_8hpp_html"><div class="ttname"><a href="../../d8/db7/commoditypricinghelpers_8hpp.html">commoditypricinghelpers.hpp</a></div><div class="ttdoc">Commodity pricing helpers.</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a8efe9cb3e67c8d0585e57b4d53c5d2fe"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a></div><div class="ttdeci">#define QL_FAIL(message)</div><div class="ttdoc">throw an error (possibly with file and line information)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00092">errors.hpp:92</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54">QuantLib::Months</a></div><div class="ttdeci">@ Months</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00039">timeunit.hpp:39</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a601cc4510014fa91b837b14a03d22ab3"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a601cc4510014fa91b837b14a03d22ab3">QuantLib::PricingPeriods</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; PricingPeriod &gt; &gt; PricingPeriods</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5d/pricingperiod_8hpp_source.html#l00051">pricingperiod.hpp:51</a></div></div>

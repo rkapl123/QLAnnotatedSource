@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/models/equity/hestonmodelhelper.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/models/equity/hestonmodelhelper.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">hestonmodelhelper.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d1/d2d/hestonmodelhelper_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2005 Klaus Spanderen</span></div>
@@ -108,12 +107,12 @@ $(function() {
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/exercise.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/instruments/payoffs.hpp&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/models/equity/hestonmodelhelper.hpp&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;ql/pricingengines/blackformula.hpp&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ql/processes/hestonprocess.hpp&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/quotes/simplequote.hpp&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d94/exercise_8hpp.html">ql/exercise.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d95/payoffs_8hpp.html">ql/instruments/payoffs.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/d9f/hestonmodelhelper_8hpp.html">ql/models/equity/hestonmodelhelper.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d2f/blackformula_8hpp.html">ql/pricingengines/blackformula.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d05/hestonprocess_8hpp.html">ql/processes/hestonprocess.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d17/simplequote_8hpp.html">ql/quotes/simplequote.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
@@ -128,7 +127,7 @@ $(function() {
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                                         <span class="keyword">const</span> <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; dividendYield,</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                                         <a class="code hl_enumeration" href="../../d6/dc1/class_quant_lib_1_1_black_calibration_helper.html#a34370195c7123743b79df0fbedd9e033">BlackCalibrationHelper::CalibrationErrorType</a> errorType)</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    : <a class="code hl_class" href="../../d6/dc1/class_quant_lib_1_1_black_calibration_helper.html">BlackCalibrationHelper</a>(volatility, errorType), maturity_(maturity),</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      calendar_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(calendar)), s0_(<a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt;<a class="code hl_class" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a>&gt;(ext::make_shared&lt;<a class="code hl_class" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>&gt;(s0))),</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      calendar_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(calendar)), <a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#a2c6dbd01744a7890ac556f93d8cee6c2">s0_</a>(<a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt;<a class="code hl_class" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a>&gt;(ext::make_shared&lt;<a class="code hl_class" href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">SimpleQuote</a>&gt;(s0))),</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      strikePrice_(strikePrice), riskFreeRate_(riskFreeRate), dividendYield_(dividendYield) {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_function" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(riskFreeRate);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_function" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(dividendYield);</div>
@@ -143,7 +142,7 @@ $(function() {
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                                         <span class="keyword">const</span> <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; dividendYield,</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                                         <a class="code hl_enumeration" href="../../d6/dc1/class_quant_lib_1_1_black_calibration_helper.html#a34370195c7123743b79df0fbedd9e033">BlackCalibrationHelper::CalibrationErrorType</a> errorType)</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    : <a class="code hl_class" href="../../d6/dc1/class_quant_lib_1_1_black_calibration_helper.html">BlackCalibrationHelper</a>(volatility, errorType), maturity_(maturity),</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      calendar_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(calendar)), s0_(s0), strikePrice_(strikePrice),</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      calendar_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(calendar)), <a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#a2c6dbd01744a7890ac556f93d8cee6c2">s0_</a>(s0), strikePrice_(strikePrice),</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      riskFreeRate_(riskFreeRate), dividendYield_(dividendYield) {</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_function" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(s0);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_function" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a>(riskFreeRate);</div>
@@ -158,11 +157,11 @@ $(function() {
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                        <a class="code hl_variable" href="../../dd/dc4/class_quant_lib_1_1_heston_model_helper.html#abfa6bbfcd66fddbf5f3f847d603c3f5a">s0_</a>-&gt;value() * <a class="code hl_variable" href="../../dd/dc4/class_quant_lib_1_1_heston_model_helper.html#a886cfcabead9ec05ca05dd35de3bfa5b">dividendYield_</a>-&gt;discount(<a class="code hl_variable" href="../../dd/dc4/class_quant_lib_1_1_heston_model_helper.html#aadcf1ed666b92f42d112b322eca78254">tau_</a>)</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    ? <a class="code hl_enumvalue" href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7a59b9abc46faffa225d20abc5e5252417">Option::Call</a></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    : <a class="code hl_enumvalue" href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7a210f6c106607e9370f292cc1dd4ca873">Option::Put</a>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        ext::shared_ptr&lt;StrikedTypePayoff&gt; payoff(</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        ext::shared_ptr&lt;StrikedTypePayoff&gt; <a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>(</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keyword">new</span> <a class="code hl_class" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a>(<a class="code hl_variable" href="../../dd/dc4/class_quant_lib_1_1_heston_model_helper.html#abcdb1c11e3593354931e650dd3dd13f2">type_</a>, <a class="code hl_variable" href="../../dd/dc4/class_quant_lib_1_1_heston_model_helper.html#a9c7c739cc17577c5718c8a2421f3a036">strikePrice_</a>));</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        ext::shared_ptr&lt;Exercise&gt; exercise =</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            ext::make_shared&lt;EuropeanExercise&gt;(<a class="code hl_variable" href="../../dd/dc4/class_quant_lib_1_1_heston_model_helper.html#a82043c5ad79ac1b7b969001c0fac6b01">exerciseDate_</a>);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_variable" href="../../dd/dc4/class_quant_lib_1_1_heston_model_helper.html#acc8881619ced557db3427ec046b2daa0">option_</a> = ext::make_shared&lt;VanillaOption&gt;(payoff, exercise);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_variable" href="../../dd/dc4/class_quant_lib_1_1_heston_model_helper.html#acc8881619ced557db3427ec046b2daa0">option_</a> = ext::make_shared&lt;VanillaOption&gt;(<a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>, exercise);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_function" href="../../d6/dc1/class_quant_lib_1_1_black_calibration_helper.html#a1127cccc9668a02247dc139d27121708">BlackCalibrationHelper::performCalculations</a>();</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
@@ -181,6 +180,8 @@ $(function() {
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="ttc" id="aanalyticvariancegammaengine_8cpp_html_a2c6dbd01744a7890ac556f93d8cee6c2"><div class="ttname"><a href="../../de/d83/analyticvariancegammaengine_8cpp.html#a2c6dbd01744a7890ac556f93d8cee6c2">s0_</a></div><div class="ttdeci">Real s0_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d83/analyticvariancegammaengine_8cpp_source.html#l00069">analyticvariancegammaengine.cpp:69</a></div></div>
+<div class="ttc" id="ablackformula_8hpp_html"><div class="ttname"><a href="../../d5/d2f/blackformula_8hpp.html">blackformula.hpp</a></div><div class="ttdoc">Black formula.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_black_calibration_helper_html"><div class="ttname"><a href="../../d6/dc1/class_quant_lib_1_1_black_calibration_helper.html">QuantLib::BlackCalibrationHelper</a></div><div class="ttdoc">liquid Black76 market instrument used during calibration</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d18/calibrationhelper_8hpp_source.html#l00048">calibrationhelper.hpp:48</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_black_calibration_helper_html_a1127cccc9668a02247dc139d27121708"><div class="ttname"><a href="../../d6/dc1/class_quant_lib_1_1_black_calibration_helper.html#a1127cccc9668a02247dc139d27121708">QuantLib::BlackCalibrationHelper::performCalculations</a></div><div class="ttdeci">void performCalculations() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d18/calibrationhelper_8hpp_source.html#l00062">calibrationhelper.hpp:62</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_black_calibration_helper_html_a34370195c7123743b79df0fbedd9e033"><div class="ttname"><a href="../../d6/dc1/class_quant_lib_1_1_black_calibration_helper.html#a34370195c7123743b79df0fbedd9e033">QuantLib::BlackCalibrationHelper::CalibrationErrorType</a></div><div class="ttdeci">CalibrationErrorType</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d18/calibrationhelper_8hpp_source.html#l00050">calibrationhelper.hpp:50</a></div></div>
@@ -212,10 +213,16 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_plain_vanilla_payoff_html"><div class="ttname"><a href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">QuantLib::PlainVanillaPayoff</a></div><div class="ttdoc">Plain-vanilla payoff.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d95/payoffs_8hpp_source.html#l00105">payoffs.hpp:105</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_quote_html"><div class="ttname"><a href="../../df/dec/class_quant_lib_1_1_quote.html">QuantLib::Quote</a></div><div class="ttdoc">purely virtual base class for market observables</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d02/quote_8hpp_source.html#l00037">quote.hpp:37</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_simple_quote_html"><div class="ttname"><a href="../../d1/d49/class_quant_lib_1_1_simple_quote.html">QuantLib::SimpleQuote</a></div><div class="ttdoc">market element returning a stored value</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d17/simplequote_8hpp_source.html#l00033">simplequote.hpp:33</a></div></div>
+<div class="ttc" id="aexercise_8hpp_html"><div class="ttname"><a href="../../de/d94/exercise_8hpp.html">exercise.hpp</a></div><div class="ttdoc">Option exercise classes and payoff function.</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
+<div class="ttc" id="ahestonmodelhelper_8hpp_html"><div class="ttname"><a href="../../da/d9f/hestonmodelhelper_8hpp.html">hestonmodelhelper.hpp</a></div><div class="ttdoc">Heston-model calibration helper.</div></div>
+<div class="ttc" id="ahestonprocess_8hpp_html"><div class="ttname"><a href="../../df/d05/hestonprocess_8hpp.html">hestonprocess.hpp</a></div><div class="ttdoc">Heston stochastic process.</div></div>
+<div class="ttc" id="aintegralhestonvarianceoptionengine_8cpp_html_aac80ba3218a14ee2ac65bfc8989a2015"><div class="ttname"><a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a></div><div class="ttdeci">ext::shared_ptr&lt; QuantLib::Payoff &gt; payoff</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp_source.html#l00350">integralhestonvarianceoptionengine.cpp:350</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_aec212e63377e8a3e7db9671c844b4e32"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#aec212e63377e8a3e7db9671c844b4e32">QuantLib::blackFormula</a></div><div class="ttdeci">Real blackFormula(Option::Type optionType, Real strike, Real forward, Real stdDev, Real discount, Real displacement)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d18/blackformula_8cpp_source.html#l00058">blackformula.cpp:58</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="apayoffs_8hpp_html"><div class="ttname"><a href="../../d0/d95/payoffs_8hpp.html">payoffs.hpp</a></div><div class="ttdoc">Payoffs for various options.</div></div>
+<div class="ttc" id="asimplequote_8hpp_html"><div class="ttname"><a href="../../d4/d17/simplequote_8hpp.html">simplequote.hpp</a></div><div class="ttdoc">simple quote class</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

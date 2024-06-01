@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/pricingengines/barrier/analyticdoublebarrierengine.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/pricingengines/barrier/analyticdoublebarrierengine.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">analyticdoublebarrierengine.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d0/d25/analyticdoublebarrierengine_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2015 Thema Consulting SA</span></div>
@@ -105,17 +104,36 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file analyticdoublebarrierengine.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Analytic double barrier european option engines</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"></span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">  ! Valid only if strike is in barrier range</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef quantlib_analytic_double_barrier_engine_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define quantlib_analytic_double_barrier_engine_hpp</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/instruments/doublebarrieroption.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/processes/blackscholesprocess.hpp&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/math/distributions/normaldistribution.hpp&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/d89/doublebarrieroption_8hpp.html">ql/instruments/doublebarrieroption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/da0/blackscholesprocess_8hpp.html">ql/processes/blackscholesprocess.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/df9/normaldistribution_8hpp.html">ql/math/distributions/normaldistribution.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">    //! Pricing engine for double barrier european options using analytical formulae</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"></span><span class="comment">    /*! The formulas are taken from &quot;The complete guide to option pricing formulas 2nd Ed&quot;,</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">         E.G. Haug, McGraw-Hill, p.156 and following.</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">         Implements the Ikeda and Kunitomo series (see &quot;Pricing Options with </span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">         Curved Boundaries&quot; Mathematical Finance 2/1992&quot;).</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">         This code handles only flat barriers</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"></span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        \ingroup barrierengines</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"></span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        \note the formula holds only when strike is in the barrier range</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"></span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">        \test the correctness of the returned value is tested by</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">              reproducing results available in literature.</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html">   49</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html">AnalyticDoubleBarrierEngine</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../da/def/class_quant_lib_1_1_double_barrier_option_1_1engine.html">DoubleBarrierOption::engine</a> {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html">AnalyticDoubleBarrierEngine</a>(</div>
@@ -151,6 +169,7 @@ $(function() {
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="ablackscholesprocess_8hpp_html"><div class="ttname"><a href="../../d0/da0/blackscholesprocess_8hpp.html">blackscholesprocess.hpp</a></div><div class="ttdoc">Black-Scholes processes.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_double_barrier_engine_html"><div class="ttname"><a href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html">QuantLib::AnalyticDoubleBarrierEngine</a></div><div class="ttdoc">Pricing engine for double barrier european options using analytical formulae.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d25/analyticdoublebarrierengine_8hpp_source.html#l00049">analyticdoublebarrierengine.hpp:49</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_double_barrier_engine_html_a295cb716891a8d7a7568773c4946e459"><div class="ttname"><a href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html#a295cb716891a8d7a7568773c4946e459">QuantLib::AnalyticDoubleBarrierEngine::f_</a></div><div class="ttdeci">CumulativeNormalDistribution f_</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d25/analyticdoublebarrierengine_8hpp_source.html#l00057">analyticdoublebarrierengine.hpp:57</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_double_barrier_engine_html_a2b3c498bce0bd5195343d5d3f5f0f35d"><div class="ttname"><a href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html#a2b3c498bce0bd5195343d5d3f5f0f35d">QuantLib::AnalyticDoubleBarrierEngine::residualTime</a></div><div class="ttdeci">Time residualTime() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/df7/analyticdoublebarrierengine_8cpp_source.html#l00111">analyticdoublebarrierengine.cpp:111</a></div></div>
@@ -174,14 +193,16 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_double_barrier_engine_html_aed8ef4f7d3bbb2e941eb4cadc6f3354e"><div class="ttname"><a href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html#aed8ef4f7d3bbb2e941eb4cadc6f3354e">QuantLib::AnalyticDoubleBarrierEngine::putKI</a></div><div class="ttdeci">Real putKI() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/df7/analyticdoublebarrierengine_8cpp_source.html#l00236">analyticdoublebarrierengine.cpp:236</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_double_barrier_engine_html_aef791311fdeec8deba3e55c6bd324a77"><div class="ttname"><a href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html#aef791311fdeec8deba3e55c6bd324a77">QuantLib::AnalyticDoubleBarrierEngine::putKO</a></div><div class="ttdeci">Real putKO() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/df7/analyticdoublebarrierengine_8cpp_source.html#l00205">analyticdoublebarrierengine.cpp:205</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_double_barrier_engine_html_afb015a588bad5b0f5033f54ca0fa6e23"><div class="ttname"><a href="../../d2/d0b/class_quant_lib_1_1_analytic_double_barrier_engine.html#afb015a588bad5b0f5033f54ca0fa6e23">QuantLib::AnalyticDoubleBarrierEngine::riskFreeDiscount</a></div><div class="ttdeci">DiscountFactor riskFreeDiscount() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/df7/analyticdoublebarrierengine_8cpp_source.html#l00140">analyticdoublebarrierengine.cpp:140</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_cumulative_normal_distribution_html"><div class="ttname"><a href="../../d5/d47/class_quant_lib_1_1_cumulative_normal_distribution.html">QuantLib::CumulativeNormalDistribution</a></div><div class="ttdoc">Cumulative normal distribution function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/normaldistribution_8hpp_source.html#l00080">normaldistribution.hpp:80</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_cumulative_normal_distribution_html"><div class="ttname"><a href="../../d5/d47/class_quant_lib_1_1_cumulative_normal_distribution.html">QuantLib::CumulativeNormalDistribution</a></div><div class="ttdoc">Cumulative normal distribution function.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/normaldistribution_8hpp_source.html#l00068">normaldistribution.hpp:68</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_double_barrier_option_1_1engine_html"><div class="ttname"><a href="../../da/def/class_quant_lib_1_1_double_barrier_option_1_1engine.html">QuantLib::DoubleBarrierOption::engine</a></div><div class="ttdoc">Double-Barrier-option engine base class</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d89/doublebarrieroption_8hpp_source.html#l00081">doublebarrieroption.hpp:83</a></div></div>
+<div class="ttc" id="adoublebarrieroption_8hpp_html"><div class="ttname"><a href="../../da/d89/doublebarrieroption_8hpp.html">doublebarrieroption.hpp</a></div><div class="ttdoc">double Barrier european option on a single asset</div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga642a971a0bcbbd2fb26c35e1a06e5761"><div class="ttname"><a href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">QuantLib::DiscountFactor</a></div><div class="ttdeci">Real DiscountFactor</div><div class="ttdoc">discount factor between dates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00066">types.hpp:66</a></div></div>
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="anormaldistribution_8hpp_html"><div class="ttname"><a href="../../d5/df9/normaldistribution_8hpp.html">normaldistribution.hpp</a></div><div class="ttdoc">normal, cumulative and inverse cumulative distributions</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

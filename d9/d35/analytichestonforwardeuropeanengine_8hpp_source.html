@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/forward/analytichestonforwardeuropeanengine.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/forward/analytichestonforwardeuropeanengine.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">analytichestonforwardeuropeanengine.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d9/d35/analytichestonforwardeuropeanengine_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2020 Jack Gillett</span></div>
@@ -105,22 +104,51 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file analytichestonforwardeuropeanengine.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief analytic heston engine for forward-starting european options</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_analytic_heston_forward_european_engine_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_analytic_heston_forward_european_engine_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/instruments/forwardvanillaoption.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/analytichestonengine.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/processes/hestonprocess.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/models/equity/hestonmodel.hpp&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/math/modifiedbessel.hpp&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;ql/math/integrals/gaussianquadratures.hpp&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;ql/exercise.hpp&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;ql/quotes/simplequote.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d3d/forwardvanillaoption_8hpp.html">ql/instruments/forwardvanillaoption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/dee/analytichestonengine_8hpp.html">ql/pricingengines/vanilla/analytichestonengine.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d05/hestonprocess_8hpp.html">ql/processes/hestonprocess.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/dd1/hestonmodel_8hpp.html">ql/models/equity/hestonmodel.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d57/modifiedbessel_8hpp.html">ql/math/modifiedbessel.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d97/gaussianquadratures_8hpp.html">ql/math/integrals/gaussianquadratures.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d94/exercise_8hpp.html">ql/exercise.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d17/simplequote_8hpp.html">ql/quotes/simplequote.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"></span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">    //! Analytic Heston engine incl. stochastic interest rates</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"></span><span class="comment">    /*! This class is pricing a european option under the following process</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"></span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        \f[</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        \begin{array}{rcl}</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        dS(t, S)  &amp;=&amp; (r-d) S dt +\sqrt{v} S dW_1 \\</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        dv(t, S)  &amp;=&amp; \kappa (\theta - v) dt + \sigma \sqrt{v} dW_2 \\</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        dW_1 dW_2 &amp;=&amp; \rho dt \\</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">        \end{array}</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        \f]</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment"></span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">        References:</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment"></span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">        Implements the analytical solution for forward-starting </span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        strike-reset options descriped in &quot;On the Pricing of Forward </span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">        Starting Options under Stochastic Volatility&quot;, S. Kruse (2003)</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment"></span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">        \ingroup forwardengines</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment"></span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">        \test</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">        - For tReset &gt; 0, price from the analytic pricer is compared</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">          to the MC priver for calls/puts at various moneynesses</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">        - For tReset ~ 0, price from the analytic pricer is compared</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">          to the Heston analytic vanilla pricer for various options</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d2/d2a/class_quant_lib_1_1_analytic_heston_forward_european_engine.html">   64</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d2/d2a/class_quant_lib_1_1_analytic_heston_forward_european_engine.html">AnalyticHestonForwardEuropeanEngine</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html">GenericEngine</a>&lt;ForwardOptionArguments&lt;VanillaOption::arguments&gt;,</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                                                       VanillaOption::results&gt; {</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <span class="keyword">public</span>:</div>
@@ -159,7 +187,7 @@ $(function() {
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="comment">// Integrate over characteristic function to generate P1, P2 (fall back on this</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="comment">// when reset time is very close, to avoid numerical issues with tReset=0s)</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        std::pair&lt;Real, Real&gt; <a class="code hl_function" href="../../d2/d2a/class_quant_lib_1_1_analytic_heston_forward_european_engine.html#a6d54b83e09bc7fc2d0a80692a220a9b2">calculateP1P2</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t,</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        std::pair&lt;Real, Real&gt; <a class="code hl_function" href="../../d2/d2a/class_quant_lib_1_1_analytic_heston_forward_european_engine.html#a6d54b83e09bc7fc2d0a80692a220a9b2">calculateP1P2</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>,</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                                            <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>&amp; St,</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                                            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> K,</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                                            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> ratio,</div>
@@ -177,6 +205,7 @@ $(function() {
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aanalytichestonengine_8hpp_html"><div class="ttname"><a href="../../d9/dee/analytichestonengine_8hpp.html">analytichestonengine.hpp</a></div><div class="ttdoc">analytic Heston-model engine</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_heston_forward_european_engine_html"><div class="ttname"><a href="../../d2/d2a/class_quant_lib_1_1_analytic_heston_forward_european_engine.html">QuantLib::AnalyticHestonForwardEuropeanEngine</a></div><div class="ttdoc">Analytic Heston engine incl. stochastic interest rates.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d35/analytichestonforwardeuropeanengine_8hpp_source.html#l00064">analytichestonforwardeuropeanengine.hpp:65</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_heston_forward_european_engine_html_a036002be23977b4e5c6536e6292b48aa"><div class="ttname"><a href="../../d2/d2a/class_quant_lib_1_1_analytic_heston_forward_european_engine.html#a036002be23977b4e5c6536e6292b48aa">QuantLib::AnalyticHestonForwardEuropeanEngine::integrationOrder_</a></div><div class="ttdeci">Size integrationOrder_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d35/analytichestonforwardeuropeanengine_8hpp_source.html#l00084">analytichestonforwardeuropeanengine.hpp:84</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_analytic_heston_forward_european_engine_html_a06e9bbf5e311fac9084cbf8106d6df55"><div class="ttname"><a href="../../d2/d2a/class_quant_lib_1_1_analytic_heston_forward_european_engine.html#a06e9bbf5e311fac9084cbf8106d6df55">QuantLib::AnalyticHestonForwardEuropeanEngine::thetaHat_</a></div><div class="ttdeci">Real thetaHat_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d35/analytichestonforwardeuropeanengine_8hpp_source.html#l00093">analytichestonforwardeuropeanengine.hpp:93</a></div></div>
@@ -200,10 +229,18 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_gauss_legendre_integration_html"><div class="ttname"><a href="../../d4/de6/class_quant_lib_1_1_gauss_legendre_integration.html">QuantLib::GaussLegendreIntegration</a></div><div class="ttdoc">Gauss-Legendre integration.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d97/gaussianquadratures_8hpp_source.html#l00156">gaussianquadratures.hpp:156</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_generic_engine_html"><div class="ttname"><a href="../../d4/db7/class_quant_lib_1_1_generic_engine.html">QuantLib::GenericEngine</a></div><div class="ttdoc">template base class for option pricing engines</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcc/pricingengine_8hpp_source.html#l00063">pricingengine.hpp:64</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
+<div class="ttc" id="adefaultprobabilitykey_8cpp_html_a15fc20af123a89cd6f40758e341a4a54"><div class="ttname"><a href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a></div><div class="ttdeci">const DefaultType &amp; t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ddb/defaultprobabilitykey_8cpp_source.html#l00039">defaultprobabilitykey.cpp:39</a></div></div>
+<div class="ttc" id="aexercise_8hpp_html"><div class="ttname"><a href="../../de/d94/exercise_8hpp.html">exercise.hpp</a></div><div class="ttdoc">Option exercise classes and payoff function.</div></div>
+<div class="ttc" id="aforwardvanillaoption_8hpp_html"><div class="ttname"><a href="../../de/d3d/forwardvanillaoption_8hpp.html">forwardvanillaoption.hpp</a></div><div class="ttdoc">Forward version of a vanilla option.</div></div>
+<div class="ttc" id="agaussianquadratures_8hpp_html"><div class="ttname"><a href="../../d9/d97/gaussianquadratures_8hpp.html">gaussianquadratures.hpp</a></div><div class="ttdoc">Integral of a 1-dimensional function using the Gauss quadratures.</div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="ahestonmodel_8hpp_html"><div class="ttname"><a href="../../d4/dd1/hestonmodel_8hpp.html">hestonmodel.hpp</a></div><div class="ttdoc">Heston model for the stochastic volatility of an asset.</div></div>
+<div class="ttc" id="ahestonprocess_8hpp_html"><div class="ttname"><a href="../../df/d05/hestonprocess_8hpp.html">hestonprocess.hpp</a></div><div class="ttdoc">Heston stochastic process.</div></div>
+<div class="ttc" id="amodifiedbessel_8hpp_html"><div class="ttname"><a href="../../df/d57/modifiedbessel_8hpp.html">modifiedbessel.hpp</a></div><div class="ttdoc">modified Bessel functions of first and second kind</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="asimplequote_8hpp_html"><div class="ttname"><a href="../../d4/d17/simplequote_8hpp.html">simplequote.hpp</a></div><div class="ttdoc">simple quote class</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -92,7 +91,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../de/dd9/mc__discr__arith__av__price_8hpp_source.html">ql/pricingengines/asian/mc_discr_arith_av_price.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../de/dd9/mc__discr__arith__av__price_8hpp_source.html">mc_discr_arith_av_price.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for ArithmeticAPOPathPricer:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -100,9 +99,9 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d7/dcb/class_quant_lib_1_1_arithmetic_a_p_o_path_pricer__inherit__graph.png" border="0" usemap="#a_arithmetic_a_p_o_path_pricer_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_arithmetic_a_p_o_path_pricer_inherit__map" id="a_arithmetic_a_p_o_path_pricer_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,300,199,428"/>
-<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title=" " alt="" coords="33,167,171,251"/>
-<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title="base class for path pricers" alt="" coords="23,5,181,104"/>
+<area shape="rect" title=" " alt="" coords="5,271,199,399"/>
+<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title=" " alt="" coords="33,152,171,221"/>
+<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title="base class for path pricers" alt="" coords="23,5,181,89"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -112,28 +111,17 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d7/d53/class_quant_lib_1_1_arithmetic_a_p_o_path_pricer__coll__graph.png" border="0" usemap="#a_arithmetic_a_p_o_path_pricer_coll__map" alt="Collaboration graph"/></div>
 <map name="a_arithmetic_a_p_o_path_pricer_coll__map" id="a_arithmetic_a_p_o_path_pricer_coll__map">
-<area shape="rect" title=" " alt="" coords="587,2675,783,2744"/>
-<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title=" " alt="" coords="483,2506,621,2575"/>
-<area shape="rect" href="../../d6/d60/class_quant_lib_1_1_path.html" title="single&#45;factor random walk" alt="" coords="493,1853,611,2407"/>
-<area shape="rect" href="../../df/dff/class_quant_lib_1_1_time_grid.html" title="time grid class" alt="" coords="306,885,465,1424"/>
-<area shape="rect" title=" " alt="" coords="5,306,117,346"/>
-<area shape="rect" title=" " alt="" coords="34,115,89,155"/>
-<area shape="rect" title=" " alt="" coords="139,115,229,155"/>
-<area shape="rect" title=" " alt="" coords="241,5,279,45"/>
-<area shape="rect" title=" " alt="" coords="267,108,384,163"/>
-<area shape="rect" href="../../d0/d7c/class_quant_lib_1_1_array.html" title="1&#45;D array used in linear algebra." alt="" coords="489,519,647,1791"/>
-<area shape="rect" title=" " alt="" coords="498,299,638,353"/>
-<area shape="rect" title=" " alt="" coords="618,115,670,155"/>
-<area shape="rect" title=" " alt="" coords="145,306,207,346"/>
-<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title="base class for path pricers" alt="" coords="297,2088,455,2172"/>
-<area shape="rect" title=" " alt="" coords="201,1135,282,1175"/>
-<area shape="rect" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html" title="Plain&#45;vanilla payoff." alt="" coords="723,2469,875,2612"/>
-<area shape="rect" href="../../d1/d0d/class_quant_lib_1_1_striked_type_payoff.html" title="Intermediate class for payoffs based on a fixed strike." alt="" coords="727,2088,871,2172"/>
-<area shape="rect" href="../../d5/d8d/class_quant_lib_1_1_type_payoff.html" title="Intermediate class for put/call payoffs." alt="" coords="735,1113,846,1197"/>
-<area shape="rect" href="../../d8/d34/class_quant_lib_1_1_payoff.html" title="Abstract base class for option payoffs." alt="" coords="822,240,927,412"/>
-<area shape="rect" title=" " alt="" coords="767,115,982,155"/>
-<area shape="rect" title=" " alt="" coords="743,306,798,346"/>
-<area shape="rect" title=" " alt="" coords="870,1135,954,1175"/>
+<area shape="rect" title=" " alt="" coords="273,739,469,808"/>
+<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title=" " alt="" coords="18,570,157,639"/>
+<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title="base class for path pricers" alt="" coords="5,387,164,471"/>
+<area shape="rect" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html" title="Plain&#45;vanilla payoff." alt="" coords="182,533,334,676"/>
+<area shape="rect" href="../../d1/d0d/class_quant_lib_1_1_striked_type_payoff.html" title="Intermediate class for payoffs based on a fixed strike." alt="" coords="189,387,333,471"/>
+<area shape="rect" href="../../d5/d8d/class_quant_lib_1_1_type_payoff.html" title="Intermediate class for put/call payoffs." alt="" coords="195,240,305,324"/>
+<area shape="rect" href="../../d8/d34/class_quant_lib_1_1_payoff.html" title="Abstract base class for option payoffs." alt="" coords="145,5,251,177"/>
+<area shape="rect" title=" " alt="" coords="275,71,329,111"/>
+<area shape="rect" title=" " alt="" coords="329,262,413,302"/>
+<area shape="rect" title=" " alt="" coords="409,585,461,625"/>
+<area shape="rect" title=" " alt="" coords="493,585,554,625"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -165,9 +153,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_class_quant_lib_1_1_path_pricer"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_quant_lib_1_1_path_pricer')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html">PathPricer&lt; Path &gt;</a></td></tr>
 <tr class="memitem:acd5891901c77cb22bf37f2309008560f inherit pub_types_class_quant_lib_1_1_path_pricer"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#acd5891901c77cb22bf37f2309008560f">result_type</a></td></tr>
 <tr class="separator:acd5891901c77cb22bf37f2309008560f inherit pub_types_class_quant_lib_1_1_path_pricer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_class_quant_lib_1_1_path_pricer"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_quant_lib_1_1_path_pricer')"><img src="../../closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html">PathPricer&lt; Path &gt;</a></td></tr>
-<tr class="memitem:a0f66760579f45c68e699aacc7382a154 inherit pub_attribs_class_quant_lib_1_1_path_pricer"><td class="memItemLeft" align="right" valign="top">QL_DEPRECATED typedef <a class="el" href="../../d6/d60/class_quant_lib_1_1_path.html">Path</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a0f66760579f45c68e699aacc7382a154">argument_type</a></td></tr>
-<tr class="separator:a0f66760579f45c68e699aacc7382a154 inherit pub_attribs_class_quant_lib_1_1_path_pricer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">

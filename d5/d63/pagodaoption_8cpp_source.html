@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/exoticoptions/pagodaoption.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/exoticoptions/pagodaoption.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">pagodaoption.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d5/d63/pagodaoption_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 Master IMAFA - Polytech&#39;Nice Sophia - Université de Nice Sophia Antipolis</span></div>
@@ -106,9 +105,9 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/experimental/exoticoptions/pagodaoption.hpp&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/instruments/payoffs.hpp&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/exercise.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d6c/pagodaoption_8hpp.html">ql/experimental/exoticoptions/pagodaoption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d95/payoffs_8hpp.html">ql/instruments/payoffs.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d94/exercise_8hpp.html">ql/exercise.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
@@ -125,7 +124,7 @@ $(function() {
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_function" href="../../d0/d66/class_quant_lib_1_1_multi_asset_option.html#a29d098166c6f2ed9f3810fdc6001add3">MultiAssetOption::setupArguments</a>(args);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">auto</span>* <a class="code hl_class" href="../../d0/d2f/class_quant_lib_1_1_pagoda_option_1_1arguments.html">arguments</a> = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d0/d2f/class_quant_lib_1_1_pagoda_option_1_1arguments.html">PagodaOption::arguments</a>*<span class="keyword">&gt;</span>(args);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        QL_REQUIRE(<a class="code hl_class" href="../../d0/d2f/class_quant_lib_1_1_pagoda_option_1_1arguments.html">arguments</a> != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;wrong argument type&quot;</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_class" href="../../d0/d2f/class_quant_lib_1_1_pagoda_option_1_1arguments.html">arguments</a> != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;wrong argument type&quot;</span>);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_class" href="../../d0/d2f/class_quant_lib_1_1_pagoda_option_1_1arguments.html">arguments</a>-&gt;<a class="code hl_variable" href="../../d0/d2f/class_quant_lib_1_1_pagoda_option_1_1arguments.html#aa3c115cda618ed9bc3eecdf266fa5b2d">fixingDates</a> = <a class="code hl_variable" href="../../d6/d74/class_quant_lib_1_1_pagoda_option.html#a385ec624b35f431becf19c48a3698e07">fixingDates_</a>;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_class" href="../../d0/d2f/class_quant_lib_1_1_pagoda_option_1_1arguments.html">arguments</a>-&gt;<a class="code hl_variable" href="../../d0/d2f/class_quant_lib_1_1_pagoda_option_1_1arguments.html#a8bd2adbc296761a89bdd67dba30d466a">roof</a> = <a class="code hl_variable" href="../../d6/d74/class_quant_lib_1_1_pagoda_option.html#a95c0170051dff1bbdc70bbe6cdd63f4c">roof_</a>;</div>
@@ -138,9 +137,9 @@ $(function() {
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../d0/d2f/class_quant_lib_1_1_pagoda_option_1_1arguments.html#ae26e38f89ead35fd7cbe08f68b2e19d7">   50</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d2f/class_quant_lib_1_1_pagoda_option_1_1arguments.html#ae26e38f89ead35fd7cbe08f68b2e19d7">PagodaOption::arguments::validate</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        MultiAssetOption::arguments::validate();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        QL_REQUIRE(!fixingDates.empty(), <span class="stringliteral">&quot;no fixingDates given&quot;</span>);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        QL_REQUIRE(roof != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(), <span class="stringliteral">&quot;no roof given&quot;</span>);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        QL_REQUIRE(fraction != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(), <span class="stringliteral">&quot;no fraction given&quot;</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(!fixingDates.empty(), <span class="stringliteral">&quot;no fixingDates given&quot;</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(roof != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(), <span class="stringliteral">&quot;no roof given&quot;</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(fraction != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(), <span class="stringliteral">&quot;no fraction given&quot;</span>);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
@@ -163,8 +162,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_pagoda_option_html_af0abba39c7f061e53d00e11883af4d3f"><div class="ttname"><a href="../../d6/d74/class_quant_lib_1_1_pagoda_option.html#af0abba39c7f061e53d00e11883af4d3f">QuantLib::PagodaOption::fraction_</a></div><div class="ttdeci">Real fraction_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6c/pagodaoption_8hpp_source.html#l00057">pagodaoption.hpp:57</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_payoff_html"><div class="ttname"><a href="../../d8/d34/class_quant_lib_1_1_payoff.html">QuantLib::Payoff</a></div><div class="ttdoc">Abstract base class for option payoffs.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db3/payoff_8hpp_source.html#l00036">payoff.hpp:36</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pricing_engine_1_1arguments_html"><div class="ttname"><a href="../../d7/d14/class_quant_lib_1_1_pricing_engine_1_1arguments.html">QuantLib::PricingEngine::arguments</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcc/pricingengine_8hpp_source.html#l00045">pricingengine.hpp:45</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aexercise_8hpp_html"><div class="ttname"><a href="../../de/d94/exercise_8hpp.html">exercise.hpp</a></div><div class="ttdoc">Option exercise classes and payoff function.</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="apagodaoption_8hpp_html"><div class="ttname"><a href="../../de/d6c/pagodaoption_8hpp.html">pagodaoption.hpp</a></div><div class="ttdoc">Roofed Asian option on a number of assets.</div></div>
+<div class="ttc" id="apayoffs_8hpp_html"><div class="ttname"><a href="../../d0/d95/payoffs_8hpp.html">payoffs.hpp</a></div><div class="ttdoc">Payoffs for various options.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

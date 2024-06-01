@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/math/copulas/marshallolkincopula.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/math/copulas/marshallolkincopula.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">marshallolkincopula.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d7/d20/marshallolkincopula_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 Marek Glowacki</span></div>
@@ -105,44 +104,39 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file marshallolkincopula.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Marshall-Olkin copula</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_math_MarshallOlkin_copula_h</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_math_MarshallOlkin_copula_h</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/types.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/de3/types_8hpp.html">ql/types.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html">   33</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html">MarshallOlkinCopula</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"></span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    //! Marshall-Olkin copula</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html">   33</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html">MarshallOlkinCopula</a> {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        QL_DEPRECATED</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#aa4e7fa2604cbde68fd4249be734006b5">   39</a></span>        <span class="keyword">typedef</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#aa4e7fa2604cbde68fd4249be734006b5">first_argument_type</a>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        QL_DEPRECATED</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#a39906dff09d509d67941ff7e3735fcef">   45</a></span>        <span class="keyword">typedef</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#a39906dff09d509d67941ff7e3735fcef">second_argument_type</a>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        QL_DEPRECATED</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#abe38b2e6180117ed68dbd80686618343">   51</a></span>        <span class="keyword">typedef</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#abe38b2e6180117ed68dbd80686618343">result_type</a>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_class" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html">MarshallOlkinCopula</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a2);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#a4594beed1c8c532b115debf4d1b6f982">operator()</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> y) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#a7808bed616def7f344acacb1b9b48f77">   56</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#a7808bed616def7f344acacb1b9b48f77">a1_</a>, <a class="code hl_variable" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#afeaad24aaccd1fa2c6d91b92be41e4e0">a2_</a>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    };</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_class" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html">MarshallOlkinCopula</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a1, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a2);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#a4594beed1c8c532b115debf4d1b6f982">operator()</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a18279dd4d4460f2130f7a45358c14ffa">y</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#a7808bed616def7f344acacb1b9b48f77">   38</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#a7808bed616def7f344acacb1b9b48f77">a1_</a>, <a class="code hl_variable" href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#afeaad24aaccd1fa2c6d91b92be41e4e0">a2_</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    };</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aandreasenhugevolatilityinterpl_8cpp_html_a18279dd4d4460f2130f7a45358c14ffa"><div class="ttname"><a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a18279dd4d4460f2130f7a45358c14ffa">y</a></div><div class="ttdeci">Real y</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp_source.html#l00046">andreasenhugevolatilityinterpl.cpp:46</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_marshall_olkin_copula_html"><div class="ttname"><a href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html">QuantLib::MarshallOlkinCopula</a></div><div class="ttdoc">Marshall-Olkin copula.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d20/marshallolkincopula_8hpp_source.html#l00033">marshallolkincopula.hpp:33</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_marshall_olkin_copula_html_a39906dff09d509d67941ff7e3735fcef"><div class="ttname"><a href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#a39906dff09d509d67941ff7e3735fcef">QuantLib::MarshallOlkinCopula::second_argument_type</a></div><div class="ttdeci">QL_DEPRECATED typedef Real second_argument_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d20/marshallolkincopula_8hpp_source.html#l00045">marshallolkincopula.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_marshall_olkin_copula_html_a4594beed1c8c532b115debf4d1b6f982"><div class="ttname"><a href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#a4594beed1c8c532b115debf4d1b6f982">QuantLib::MarshallOlkinCopula::operator()</a></div><div class="ttdeci">Real operator()(Real x, Real y) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d28/marshallolkincopula_8cpp_source.html#l00035">marshallolkincopula.cpp:35</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_marshall_olkin_copula_html_a7808bed616def7f344acacb1b9b48f77"><div class="ttname"><a href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#a7808bed616def7f344acacb1b9b48f77">QuantLib::MarshallOlkinCopula::a1_</a></div><div class="ttdeci">Real a1_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d20/marshallolkincopula_8hpp_source.html#l00056">marshallolkincopula.hpp:56</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_marshall_olkin_copula_html_aa4e7fa2604cbde68fd4249be734006b5"><div class="ttname"><a href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#aa4e7fa2604cbde68fd4249be734006b5">QuantLib::MarshallOlkinCopula::first_argument_type</a></div><div class="ttdeci">QL_DEPRECATED typedef Real first_argument_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d20/marshallolkincopula_8hpp_source.html#l00039">marshallolkincopula.hpp:39</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_marshall_olkin_copula_html_abe38b2e6180117ed68dbd80686618343"><div class="ttname"><a href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#abe38b2e6180117ed68dbd80686618343">QuantLib::MarshallOlkinCopula::result_type</a></div><div class="ttdeci">QL_DEPRECATED typedef Real result_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d20/marshallolkincopula_8hpp_source.html#l00051">marshallolkincopula.hpp:51</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_marshall_olkin_copula_html_afeaad24aaccd1fa2c6d91b92be41e4e0"><div class="ttname"><a href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#afeaad24aaccd1fa2c6d91b92be41e4e0">QuantLib::MarshallOlkinCopula::a2_</a></div><div class="ttdeci">Real a2_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d20/marshallolkincopula_8hpp_source.html#l00056">marshallolkincopula.hpp:56</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_marshall_olkin_copula_html_a7808bed616def7f344acacb1b9b48f77"><div class="ttname"><a href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#a7808bed616def7f344acacb1b9b48f77">QuantLib::MarshallOlkinCopula::a1_</a></div><div class="ttdeci">Real a1_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d20/marshallolkincopula_8hpp_source.html#l00038">marshallolkincopula.hpp:38</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_marshall_olkin_copula_html_afeaad24aaccd1fa2c6d91b92be41e4e0"><div class="ttname"><a href="../../de/df8/class_quant_lib_1_1_marshall_olkin_copula.html#afeaad24aaccd1fa2c6d91b92be41e4e0">QuantLib::MarshallOlkinCopula::a2_</a></div><div class="ttdeci">Real a2_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d20/marshallolkincopula_8hpp_source.html#l00038">marshallolkincopula.hpp:38</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="atypes_8hpp_html"><div class="ttname"><a href="../../dd/de3/types_8hpp.html">types.hpp</a></div><div class="ttdoc">Custom types.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

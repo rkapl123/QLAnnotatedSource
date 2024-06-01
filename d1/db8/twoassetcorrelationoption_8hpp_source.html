@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/exoticoptions/twoassetcorrelationoption.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/exoticoptions/twoassetcorrelationoption.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">twoassetcorrelationoption.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d1/db8/twoassetcorrelationoption_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2014 Master IMAFA - Polytech&#39;Nice Sophia - Université de Nice Sophia Antipolis</span></div>
@@ -105,12 +104,16 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file twoassetcorrelationoption.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Two-asset correlation option</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_two_asset_correlation_option_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_two_asset_correlation_option_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/instruments/multiassetoption.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/instruments/payoffs.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d02/multiassetoption_8hpp.html">ql/instruments/multiassetoption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d95/payoffs_8hpp.html">ql/instruments/payoffs.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
@@ -134,7 +137,7 @@ $(function() {
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d4/dd4/class_quant_lib_1_1_two_asset_correlation_option_1_1arguments.html#a3f3e8935c236a7cc71235cbd1845fbd8">   49</a></span>        <a class="code hl_function" href="../../d4/dd4/class_quant_lib_1_1_two_asset_correlation_option_1_1arguments.html#a3f3e8935c236a7cc71235cbd1845fbd8">arguments</a>() : <a class="code hl_variable" href="../../d4/dd4/class_quant_lib_1_1_two_asset_correlation_option_1_1arguments.html#ada1894ed3abfd71050a243cba9543a6b">X2</a>(<a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null</a>&lt;<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&gt;()) {}</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../d4/dd4/class_quant_lib_1_1_two_asset_correlation_option_1_1arguments.html#ae26e38f89ead35fd7cbe08f68b2e19d7">   50</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/dd4/class_quant_lib_1_1_two_asset_correlation_option_1_1arguments.html#ae26e38f89ead35fd7cbe08f68b2e19d7">validate</a>()<span class="keyword"> const override </span>{</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            MultiAssetOption::arguments::validate();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            QL_REQUIRE(<a class="code hl_variable" href="../../d4/dd4/class_quant_lib_1_1_two_asset_correlation_option_1_1arguments.html#ada1894ed3abfd71050a243cba9543a6b">X2</a> != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(), <span class="stringliteral">&quot;no X2 given&quot;</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d4/dd4/class_quant_lib_1_1_two_asset_correlation_option_1_1arguments.html#ada1894ed3abfd71050a243cba9543a6b">X2</a> != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(), <span class="stringliteral">&quot;no X2 given&quot;</span>);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d4/dd4/class_quant_lib_1_1_two_asset_correlation_option_1_1arguments.html#ada1894ed3abfd71050a243cba9543a6b">   54</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d4/dd4/class_quant_lib_1_1_two_asset_correlation_option_1_1arguments.html#ada1894ed3abfd71050a243cba9543a6b">X2</a>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    };</div>
@@ -161,8 +164,11 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_two_asset_correlation_option_html"><div class="ttname"><a href="../../db/d48/class_quant_lib_1_1_two_asset_correlation_option.html">QuantLib::TwoAssetCorrelationOption</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db8/twoassetcorrelationoption_8hpp_source.html#l00032">twoassetcorrelationoption.hpp:32</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_two_asset_correlation_option_html_a29d098166c6f2ed9f3810fdc6001add3"><div class="ttname"><a href="../../db/d48/class_quant_lib_1_1_two_asset_correlation_option.html#a29d098166c6f2ed9f3810fdc6001add3">QuantLib::TwoAssetCorrelationOption::setupArguments</a></div><div class="ttdeci">void setupArguments(PricingEngine::arguments *) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d81/twoassetcorrelationoption_8cpp_source.html#l00033">twoassetcorrelationoption.cpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_two_asset_correlation_option_html_ac7a789b718556f9bc81cfbc9ff18828a"><div class="ttname"><a href="../../db/d48/class_quant_lib_1_1_two_asset_correlation_option.html#ac7a789b718556f9bc81cfbc9ff18828a">QuantLib::TwoAssetCorrelationOption::X2_</a></div><div class="ttdeci">Real X2_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db8/twoassetcorrelationoption_8hpp_source.html#l00043">twoassetcorrelationoption.hpp:43</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
+<div class="ttc" id="amultiassetoption_8hpp_html"><div class="ttname"><a href="../../d3/d02/multiassetoption_8hpp.html">multiassetoption.hpp</a></div><div class="ttdoc">Option on multiple assets.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="apayoffs_8hpp_html"><div class="ttname"><a href="../../d0/d95/payoffs_8hpp.html">payoffs.hpp</a></div><div class="ttdoc">Payoffs for various options.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

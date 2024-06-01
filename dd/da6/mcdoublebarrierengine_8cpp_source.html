@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/barrieroption/mcdoublebarrierengine.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/barrieroption/mcdoublebarrierengine.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">mcdoublebarrierengine.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../dd/da6/mcdoublebarrierengine_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2020 Lew Wei Hao</span></div>
@@ -106,7 +105,7 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/experimental/barrieroption/mcdoublebarrierengine.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d29/mcdoublebarrierengine_8hpp.html">ql/experimental/barrieroption/mcdoublebarrierengine.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
@@ -119,19 +118,19 @@ $(function() {
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                                                     <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike,</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                                                     std::vector&lt;DiscountFactor&gt; discounts)</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    : barrierType_(barrierType), barrierLow_(barrierLow), barrierHigh_(barrierHigh),</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      rebate_(rebate), payoff_(type, strike), discounts_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(discounts)) {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        QL_REQUIRE(strike&gt;=0.0,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      rebate_(rebate), <a class="code hl_variable" href="../../dc/d51/fdornsteinuhlenbeckvanillaengine_8cpp.html#afb9e2c9da25d0584f746121a0f5d79e4">payoff_</a>(type, strike), discounts_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(discounts)) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(strike&gt;=0.0,</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                   <span class="stringliteral">&quot;strike less than zero not allowed&quot;</span>);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        QL_REQUIRE(barrierLow&gt;0.0,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(barrierLow&gt;0.0,</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                   <span class="stringliteral">&quot;low barrier less/equal zero not allowed&quot;</span>);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        QL_REQUIRE(barrierHigh&gt;0.0,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(barrierHigh&gt;0.0,</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                   <span class="stringliteral">&quot;high barrier less/equal zero not allowed&quot;</span>);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../dc/d7a/class_quant_lib_1_1_double_barrier_path_pricer.html#ac6e005ed21b73c75b8ecead7a34474ff">   42</a></span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../dc/d7a/class_quant_lib_1_1_double_barrier_path_pricer.html#ac6e005ed21b73c75b8ecead7a34474ff">DoubleBarrierPathPricer::operator()</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d6/d60/class_quant_lib_1_1_path.html">Path</a>&amp; path)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">static</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> null = <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Size&gt;</a>();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n = path.<a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#a022887254632280a41166a9e97b87e0c">length</a>();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        QL_REQUIRE(n&gt;1, <span class="stringliteral">&quot;the path cannot be empty&quot;</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a> = path.<a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#a022887254632280a41166a9e97b87e0c">length</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>&gt;1, <span class="stringliteral">&quot;the path cannot be empty&quot;</span>);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">bool</span> isOptionActive = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> knockNode = null;</div>
@@ -142,7 +141,7 @@ $(function() {
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="../../dc/d7a/class_quant_lib_1_1_double_barrier_path_pricer.html#a658ffde5ad5c19b6695b04a8c38611e7">barrierType_</a>) {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d12/struct_quant_lib_1_1_double_barrier.html#a1d1cfd8ffb84e947f82999c682b666a7abdc7843b955437cdf0be6aa046fbe760">DoubleBarrier::KnockOut</a>:</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                isOptionActive = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordflow">for</span> (i = 0; i &lt; n-1; i++) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>-1; i++) {</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    new_asset_price = path[i + 1];</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    <span class="keywordflow">if</span> (new_asset_price &gt;= <a class="code hl_variable" href="../../dc/d7a/class_quant_lib_1_1_double_barrier_path_pricer.html#a380d9eb2b54a013b70ca3409c59a5dc7">barrierHigh_</a> || new_asset_price &lt;= <a class="code hl_variable" href="../../dc/d7a/class_quant_lib_1_1_double_barrier_path_pricer.html#ad9538fd19ffb114a69b67f694945aab7">barrierLow_</a>){</div>
@@ -155,7 +154,7 @@ $(function() {
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d12/struct_quant_lib_1_1_double_barrier.html#a1d1cfd8ffb84e947f82999c682b666a7aaf37e5e306d21e43ac2edcc4fb2a1734">DoubleBarrier::KnockIn</a>:</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                isOptionActive = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordflow">for</span> (i = 0; i &lt; n-1; i++) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>-1; i++) {</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    new_asset_price = path[i + 1];</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    <span class="keywordflow">if</span> (new_asset_price &gt;= <a class="code hl_variable" href="../../dc/d7a/class_quant_lib_1_1_double_barrier_path_pricer.html#a380d9eb2b54a013b70ca3409c59a5dc7">barrierHigh_</a> || new_asset_price &lt;= <a class="code hl_variable" href="../../dc/d7a/class_quant_lib_1_1_double_barrier_path_pricer.html#ad9538fd19ffb114a69b67f694945aab7">barrierLow_</a>){</div>
@@ -167,7 +166,7 @@ $(function() {
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                }</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                QL_FAIL(<span class="stringliteral">&quot;unknown barrier type&quot;</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;unknown barrier type&quot;</span>);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">if</span> (isOptionActive) {</div>
@@ -179,12 +178,13 @@ $(function() {
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d12/struct_quant_lib_1_1_double_barrier.html#a1d1cfd8ffb84e947f82999c682b666a7aaf37e5e306d21e43ac2edcc4fb2a1734">DoubleBarrier::KnockIn</a>:</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d7a/class_quant_lib_1_1_double_barrier_path_pricer.html#ad6e88a4eb440388c167742fc333e8fd5">rebate_</a>*<a class="code hl_variable" href="../../dc/d7a/class_quant_lib_1_1_double_barrier_path_pricer.html#a5b7c70a1efc32d377233f99a0dffc62f">discounts_</a>.back();</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    QL_FAIL(<span class="stringliteral">&quot;unknown barrier type&quot;</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;unknown barrier type&quot;</span>);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            }</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+<div class="ttc" id="aandreasenhugevolatilityinterpl_8cpp_html_a4c79e7f153710550f0238535048a4d0a"><div class="ttname"><a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a></div><div class="ttdeci">Size n</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp_source.html#l00047">andreasenhugevolatilityinterpl.cpp:47</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_double_barrier_path_pricer_html_a380d9eb2b54a013b70ca3409c59a5dc7"><div class="ttname"><a href="../../dc/d7a/class_quant_lib_1_1_double_barrier_path_pricer.html#a380d9eb2b54a013b70ca3409c59a5dc7">QuantLib::DoubleBarrierPathPricer::barrierHigh_</a></div><div class="ttdeci">Real barrierHigh_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d29/mcdoublebarrierengine_8hpp_source.html#l00126">mcdoublebarrierengine.hpp:126</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_double_barrier_path_pricer_html_a3d1dc98279327e77c9533ea3e9b62093"><div class="ttname"><a href="../../dc/d7a/class_quant_lib_1_1_double_barrier_path_pricer.html#a3d1dc98279327e77c9533ea3e9b62093">QuantLib::DoubleBarrierPathPricer::payoff_</a></div><div class="ttdeci">PlainVanillaPayoff payoff_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d29/mcdoublebarrierengine_8hpp_source.html#l00128">mcdoublebarrierengine.hpp:128</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_double_barrier_path_pricer_html_a5b7c70a1efc32d377233f99a0dffc62f"><div class="ttname"><a href="../../dc/d7a/class_quant_lib_1_1_double_barrier_path_pricer.html#a5b7c70a1efc32d377233f99a0dffc62f">QuantLib::DoubleBarrierPathPricer::discounts_</a></div><div class="ttdeci">std::vector&lt; DiscountFactor &gt; discounts_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d29/mcdoublebarrierengine_8hpp_source.html#l00129">mcdoublebarrierengine.hpp:129</a></div></div>
@@ -198,8 +198,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_path_html"><div class="ttname"><a href="../../d6/d60/class_quant_lib_1_1_path.html">QuantLib::Path</a></div><div class="ttdoc">single-factor random walk</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d4c/path_8hpp_source.html#l00040">path.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_path_html_a022887254632280a41166a9e97b87e0c"><div class="ttname"><a href="../../d6/d60/class_quant_lib_1_1_path.html#a022887254632280a41166a9e97b87e0c">QuantLib::Path::length</a></div><div class="ttdeci">Size length() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d4c/path_8hpp_source.html#l00094">path.hpp:94</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_path_html_aa390cc96be968b536f4a17d299305e76"><div class="ttname"><a href="../../d6/d60/class_quant_lib_1_1_path.html#aa390cc96be968b536f4a17d299305e76">QuantLib::Path::back</a></div><div class="ttdeci">Real back() const</div><div class="ttdoc">final asset value</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d4c/path_8hpp_source.html#l00130">path.hpp:130</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a8efe9cb3e67c8d0585e57b4d53c5d2fe"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a></div><div class="ttdeci">#define QL_FAIL(message)</div><div class="ttdoc">throw an error (possibly with file and line information)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00092">errors.hpp:92</a></div></div>
+<div class="ttc" id="afdornsteinuhlenbeckvanillaengine_8cpp_html_afb9e2c9da25d0584f746121a0f5d79e4"><div class="ttname"><a href="../../dc/d51/fdornsteinuhlenbeckvanillaengine_8cpp.html#afb9e2c9da25d0584f746121a0f5d79e4">payoff_</a></div><div class="ttdeci">const ext::shared_ptr&lt; Payoff &gt; payoff_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d51/fdornsteinuhlenbeckvanillaengine_8cpp_source.html#l00054">fdornsteinuhlenbeckvanillaengine.cpp:54</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="amcdoublebarrierengine_8hpp_html"><div class="ttname"><a href="../../d1/d29/mcdoublebarrierengine_8hpp.html">mcdoublebarrierengine.hpp</a></div><div class="ttdoc">Monte Carlo barrier option engines.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_double_barrier_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../d0/d12/struct_quant_lib_1_1_double_barrier.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::DoubleBarrier::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc0/doublebarriertype_8hpp_source.html#l00034">doublebarriertype.hpp:34</a></div></div>

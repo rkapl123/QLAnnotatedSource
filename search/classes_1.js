@@ -168,8 +168,12 @@ var searchData=
   ['bsseimpl_165',['BsseImpl',['../dd/d5a/class_quant_lib_1_1_slovakia_1_1_bsse_impl.html',1,'QuantLib::Slovakia']]],
   ['btccurrency_166',['BTCCurrency',['../d6/d04/class_quant_lib_1_1_b_t_c_currency.html',1,'QuantLib']]],
   ['btp_167',['BTP',['../d2/d86/class_quant_lib_1_1_b_t_p.html',1,'QuantLib']]],
-  ['business252_168',['Business252',['../d9/d61/class_quant_lib_1_1_business252.html',1,'QuantLib']]],
-  ['bvbimpl_169',['BVBImpl',['../d6/dfa/class_quant_lib_1_1_romania_1_1_b_v_b_impl.html',1,'QuantLib::Romania']]],
-  ['bwpcurrency_170',['BWPCurrency',['../d7/d8d/class_quant_lib_1_1_b_w_p_currency.html',1,'QuantLib']]],
-  ['byrcurrency_171',['BYRCurrency',['../db/d38/class_quant_lib_1_1_b_y_r_currency.html',1,'QuantLib']]]
+  ['burley2020sobolbrownianbridgersg_168',['Burley2020SobolBrownianBridgeRsg',['../d4/d57/class_quant_lib_1_1_burley2020_sobol_brownian_bridge_rsg.html',1,'QuantLib']]],
+  ['burley2020sobolbrowniangenerator_169',['Burley2020SobolBrownianGenerator',['../d5/dcb/class_quant_lib_1_1_burley2020_sobol_brownian_generator.html',1,'QuantLib']]],
+  ['burley2020sobolbrowniangeneratorfactory_170',['Burley2020SobolBrownianGeneratorFactory',['../d9/d79/class_quant_lib_1_1_burley2020_sobol_brownian_generator_factory.html',1,'QuantLib']]],
+  ['burley2020sobolrsg_171',['Burley2020SobolRsg',['../d9/d68/class_quant_lib_1_1_burley2020_sobol_rsg.html',1,'QuantLib']]],
+  ['business252_172',['Business252',['../d9/d61/class_quant_lib_1_1_business252.html',1,'QuantLib']]],
+  ['bvbimpl_173',['BVBImpl',['../d6/dfa/class_quant_lib_1_1_romania_1_1_b_v_b_impl.html',1,'QuantLib::Romania']]],
+  ['bwpcurrency_174',['BWPCurrency',['../d7/d8d/class_quant_lib_1_1_b_w_p_currency.html',1,'QuantLib']]],
+  ['byrcurrency_175',['BYRCurrency',['../db/d38/class_quant_lib_1_1_b_y_r_currency.html',1,'QuantLib']]]
 ];

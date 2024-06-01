@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -86,6 +85,24 @@ $(function() {
 <p >This example computes profit and loss of a discrete interval hedging strategy and compares with the outcome with the results of Derman and Kamal's Goldman Sachs Equity Derivatives Research Note "When You Cannot Hedge Continuously: The Corrections to
 Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="fragment"><div class="line"><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment">/*!</span></div>
+<div class="line"><span class="comment"> Copyright (C) 2000, 2001, 2002, 2003 RiskMap srl</span></div>
+<div class="line"><span class="comment"> Copyright (C) 2003, 2004, 2005, 2006, 2007 StatPro Italia srl</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment"> This file is part of QuantLib, a free-software/open-source library</span></div>
+<div class="line"><span class="comment"> for financial quantitative analysts and developers - http://quantlib.org/</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment"> QuantLib is free software: you can redistribute it and/or modify it</span></div>
+<div class="line"><span class="comment"> under the terms of the QuantLib license.  You should have received a</span></div>
+<div class="line"><span class="comment"> copy of the license along with this program; if not, please email</span></div>
+<div class="line"><span class="comment"> &lt;quantlib-dev@lists.sf.net&gt;. The license is also available online at</span></div>
+<div class="line"><span class="comment"> &lt;http://quantlib.org/license.shtml&gt;.</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment"> This program is distributed in the hope that it will be useful, but WITHOUT</span></div>
+<div class="line"><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
+<div class="line"><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
+<div class="line"><span class="comment">*/</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">/*  This example computes profit and loss of a discrete interval hedging</span></div>
 <div class="line"><span class="comment">    strategy and compares with the results of Derman &amp; Kamal&#39;s (Goldman Sachs</span></div>
@@ -114,18 +131,18 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line"><span class="comment">    We examine the range of possibilities, computing the replication error.</span></div>
 <div class="line"><span class="comment">*/</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;ql/qldefines.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../de/d56/qldefines_8hpp.html">ql/qldefines.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#if !defined(BOOST_ALL_NO_LIB) &amp;&amp; defined(BOOST_MSVC)</span></div>
-<div class="line"><span class="preprocessor">#  include &lt;ql/auto_link.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#  include &lt;<a class="code" href="../../d7/dbf/auto__link_8hpp.html">ql/auto_link.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/methods/montecarlo/montecarlomodel.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/processes/blackscholesprocess.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/yield/flatforward.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/termstructures/volatility/equityfx/blackconstantvol.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/pricingengines/blackcalculator.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/quotes/simplequote.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/time/calendars/target.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;ql/time/daycounters/actual365fixed.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d9/dde/montecarlomodel_8hpp.html">ql/methods/montecarlo/montecarlomodel.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d0/da0/blackscholesprocess_8hpp.html">ql/processes/blackscholesprocess.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d0e/flatforward_8hpp.html">ql/termstructures/yield/flatforward.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d96/blackconstantvol_8hpp.html">ql/termstructures/volatility/equityfx/blackconstantvol.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../df/d90/blackcalculator_8hpp.html">ql/pricingengines/blackcalculator.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d17/simplequote_8hpp.html">ql/quotes/simplequote.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d69/target_8hpp.html">ql/time/calendars/target.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dbf/actual365fixed_8hpp.html">ql/time/daycounters/actual365fixed.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
@@ -143,22 +160,22 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line">                     <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> maturity,</div>
 <div class="line">                     <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike,</div>
 <div class="line">                     <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> s0,</div>
-<div class="line">                     <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> sigma,</div>
-<div class="line">                     <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> r)</div>
-<div class="line">    : maturity_(maturity), payoff_(type, strike), s0_(s0),</div>
-<div class="line">      sigma_(sigma), r_(r) {</div>
+<div class="line">                     <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> <a id="a0" name="a0"></a><a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a>,</div>
+<div class="line">                     <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a id="a1" name="a1"></a><a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a>)</div>
+<div class="line">    : maturity_(maturity), <a id="a2" name="a2"></a><a class="code hl_variable" href="../../dc/d51/fdornsteinuhlenbeckvanillaengine_8cpp.html#afb9e2c9da25d0584f746121a0f5d79e4">payoff_</a>(type, strike), <a id="a3" name="a3"></a><a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#a2c6dbd01744a7890ac556f93d8cee6c2">s0_</a>(s0),</div>
+<div class="line">      <a id="a4" name="a4"></a><a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a>(<a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a>), r_(<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a>) {</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// value of the option</span></div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">DiscountFactor</a> rDiscount = std::exp(-r_*maturity_);</div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">DiscountFactor</a> qDiscount = 1.0;</div>
-<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> forward = s0_*qDiscount/rDiscount;</div>
-<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> stdDev = std::sqrt(sigma_*sigma_*maturity_);</div>
-<div class="line">        <span class="keyword">auto</span> payoff = ext::make_shared&lt;PlainVanillaPayoff&gt;(payoff_);</div>
-<div class="line">        <a id="_a0" name="_a0"></a><a class="code hl_class" href="../../de/dac/class_quant_lib_1_1_black_calculator.html">BlackCalculator</a> black(payoff,forward,stdDev,rDiscount);</div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Option value: &quot;</span> &lt;&lt; black.<a id="a1" name="a1"></a><a class="code hl_function" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc">value</a>() &lt;&lt; std::endl;</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> forward = <a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#a2c6dbd01744a7890ac556f93d8cee6c2">s0_</a>*qDiscount/rDiscount;</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> stdDev = std::sqrt(<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a>*<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a>*maturity_);</div>
+<div class="line">        <span class="keyword">auto</span> <a id="a5" name="a5"></a><a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a> = ext::make_shared&lt;PlainVanillaPayoff&gt;(<a class="code hl_variable" href="../../dc/d51/fdornsteinuhlenbeckvanillaengine_8cpp.html#afb9e2c9da25d0584f746121a0f5d79e4">payoff_</a>);</div>
+<div class="line">        <a id="_a6" name="_a6"></a><a class="code hl_class" href="../../de/dac/class_quant_lib_1_1_black_calculator.html">BlackCalculator</a> black(<a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>,forward,stdDev,rDiscount);</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Option value: &quot;</span> &lt;&lt; black.<a id="a7" name="a7"></a><a class="code hl_function" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a72887400b9a4d1ba185b887b84876cdc">value</a>() &lt;&lt; std::endl;</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// store option&#39;s vega, since Derman and Kamal&#39;s formula needs it</span></div>
-<div class="line">        vega_ = black.<a id="a2" name="a2"></a><a class="code hl_function" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a27d29dc37488c0e1005fd3df6c1f232e">vega</a>(maturity_);</div>
+<div class="line">        vega_ = black.<a id="a8" name="a8"></a><a class="code hl_function" href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a27d29dc37488c0e1005fd3df6c1f232e">vega</a>(maturity_);</div>
 <div class="line"> </div>
 <div class="line">        std::cout &lt;&lt; std::endl;</div>
 <div class="line"> </div>
@@ -185,9 +202,9 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line">    <span class="keywordtype">void</span> compute(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> nTimeSteps, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> nSamples);</div>
 <div class="line"><span class="keyword">private</span>:</div>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> maturity_;</div>
-<div class="line">    <a id="_a3" name="_a3"></a><a class="code hl_class" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a> payoff_;</div>
-<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> s0_;</div>
-<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> sigma_;</div>
+<div class="line">    <a id="_a9" name="_a9"></a><a class="code hl_class" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a> <a class="code hl_variable" href="../../dc/d51/fdornsteinuhlenbeckvanillaengine_8cpp.html#afb9e2c9da25d0584f746121a0f5d79e4">payoff_</a>;</div>
+<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#a2c6dbd01744a7890ac556f93d8cee6c2">s0_</a>;</div>
+<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> <a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a>;</div>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> r_;</div>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> vega_;</div>
 <div class="line">};</div>
@@ -195,33 +212,33 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line"><span class="comment">// The key for the MonteCarlo simulation is to have a PathPricer that</span></div>
 <div class="line"><span class="comment">// implements a value(const Path&amp; path) method.</span></div>
 <div class="line"><span class="comment">// This method prices the portfolio for each Path of the random variable</span></div>
-<div class="line"><span class="keyword">class </span>ReplicationPathPricer : <span class="keyword">public</span> <a id="_a4" name="_a4"></a><a class="code hl_class" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html">PathPricer</a>&lt;Path&gt; {</div>
+<div class="line"><span class="keyword">class </span>ReplicationPathPricer : <span class="keyword">public</span> <a id="_a10" name="_a10"></a><a class="code hl_class" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html">PathPricer</a>&lt;Path&gt; {</div>
 <div class="line">  <span class="keyword">public</span>:</div>
 <div class="line">    <span class="comment">// real constructor</span></div>
 <div class="line">    ReplicationPathPricer(<a class="code hl_enumeration" href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7">Option::Type</a> type,</div>
 <div class="line">                          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike,</div>
-<div class="line">                          <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> r,</div>
+<div class="line">                          <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a>,</div>
 <div class="line">                          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> maturity,</div>
-<div class="line">                          <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> sigma)</div>
-<div class="line">    : type_(type), strike_(strike),</div>
-<div class="line">      r_(r), maturity_(maturity), sigma_(sigma) {</div>
-<div class="line">        QL_REQUIRE(strike_ &gt; 0.0, <span class="stringliteral">&quot;strike must be positive&quot;</span>);</div>
-<div class="line">        QL_REQUIRE(r_ &gt;= 0.0,</div>
+<div class="line">                          <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> <a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a>)</div>
+<div class="line">    : type_(type), <a id="a11" name="a11"></a><a class="code hl_variable" href="../../d3/dca/swaptionpseudojacobian_8cpp.html#af4df09cd4cbe06f6558dc5777c23e106">strike_</a>(strike),</div>
+<div class="line">      r_(<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a>), maturity_(maturity), <a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a>(<a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a>) {</div>
+<div class="line">        <a id="a12" name="a12"></a><a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d3/dca/swaptionpseudojacobian_8cpp.html#af4df09cd4cbe06f6558dc5777c23e106">strike_</a> &gt; 0.0, <span class="stringliteral">&quot;strike must be positive&quot;</span>);</div>
+<div class="line">        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(r_ &gt;= 0.0,</div>
 <div class="line">                   <span class="stringliteral">&quot;risk free rate (r) must be positive or zero&quot;</span>);</div>
-<div class="line">        QL_REQUIRE(maturity_ &gt; 0.0, <span class="stringliteral">&quot;maturity must be positive&quot;</span>);</div>
-<div class="line">        QL_REQUIRE(sigma_ &gt;= 0.0,</div>
+<div class="line">        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(maturity_ &gt; 0.0, <span class="stringliteral">&quot;maturity must be positive&quot;</span>);</div>
+<div class="line">        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a> &gt;= 0.0,</div>
 <div class="line">                   <span class="stringliteral">&quot;volatility (sigma) must be positive or zero&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    }</div>
 <div class="line">    <span class="comment">// The value() method encapsulates the pricing code</span></div>
-<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> operator()(<span class="keyword">const</span> <a id="_a5" name="_a5"></a><a class="code hl_class" href="../../d6/d60/class_quant_lib_1_1_path.html">Path</a>&amp; path) <span class="keyword">const override</span>;</div>
+<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> operator()(<span class="keyword">const</span> <a id="_a13" name="_a13"></a><a class="code hl_class" href="../../d6/d60/class_quant_lib_1_1_path.html">Path</a>&amp; path) <span class="keyword">const override</span>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">private</span>:</div>
 <div class="line">    <a class="code hl_enumeration" href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7">Option::Type</a> type_;</div>
-<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike_;</div>
+<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d3/dca/swaptionpseudojacobian_8cpp.html#af4df09cd4cbe06f6558dc5777c23e106">strike_</a>;</div>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> r_;</div>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> maturity_;</div>
-<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> sigma_;</div>
+<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> <a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a>;</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -268,20 +285,20 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line"><span class="comment">*/</span></div>
 <div class="line"><a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> ReplicationPathPricer::operator()(<span class="keyword">const</span> <a class="code hl_class" href="../../d6/d60/class_quant_lib_1_1_path.html">Path</a>&amp; path)<span class="keyword"> const </span>{</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n = path.<a id="a6" name="a6"></a><a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#a022887254632280a41166a9e97b87e0c">length</a>()-1;</div>
-<div class="line">    QL_REQUIRE(n&gt;0, <span class="stringliteral">&quot;the path cannot be empty&quot;</span>);</div>
+<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a id="a14" name="a14"></a><a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a> = path.<a id="a15" name="a15"></a><a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#a022887254632280a41166a9e97b87e0c">length</a>()-1;</div>
+<div class="line">    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>&gt;0, <span class="stringliteral">&quot;the path cannot be empty&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// discrete hedging interval</span></div>
-<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> dt = maturity_/n;</div>
+<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> dt = maturity_/<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// For simplicity, we assume the stock pays no dividends.</span></div>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> stockDividendYield = 0.0;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// let&#39;s start</span></div>
-<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t = 0;</div>
+<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a id="a16" name="a16"></a><a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a> = 0;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// stock value at t=0</span></div>
-<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> stock = path.<a id="a7" name="a7"></a><a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#af78ff4861aaf9bf0524b958dbb4d1b18">front</a>();</div>
+<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> stock = path.<a id="a17" name="a17"></a><a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#af78ff4861aaf9bf0524b958dbb4d1b18">front</a>();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// money account at t=0</span></div>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> money_account = 0.0;</div>
@@ -293,9 +310,9 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">DiscountFactor</a> rDiscount = std::exp(-r_*maturity_);</div>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">DiscountFactor</a> qDiscount = std::exp(-stockDividendYield*maturity_);</div>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> forward = stock*qDiscount/rDiscount;</div>
-<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> stdDev = std::sqrt(sigma_*sigma_*maturity_);</div>
-<div class="line">    <span class="keyword">auto</span> payoff = ext::make_shared&lt;PlainVanillaPayoff&gt;(type_,strike_);</div>
-<div class="line">    <a class="code hl_class" href="../../de/dac/class_quant_lib_1_1_black_calculator.html">BlackCalculator</a> black(payoff,forward,stdDev,rDiscount);</div>
+<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> stdDev = std::sqrt(<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a>*<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a>*maturity_);</div>
+<div class="line">    <span class="keyword">auto</span> <a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a> = ext::make_shared&lt;PlainVanillaPayoff&gt;(type_,<a class="code hl_variable" href="../../d3/dca/swaptionpseudojacobian_8cpp.html#af4df09cd4cbe06f6558dc5777c23e106">strike_</a>);</div>
+<div class="line">    <a class="code hl_class" href="../../de/dac/class_quant_lib_1_1_black_calculator.html">BlackCalculator</a> black(<a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>,forward,stdDev,rDiscount);</div>
 <div class="line">    <span class="comment">// sell the option, cash in its premium</span></div>
 <div class="line">    money_account += black.value();</div>
 <div class="line">    <span class="comment">// compute delta</span></div>
@@ -307,10 +324,10 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line"><span class="comment">    /**********************************/</span></div>
 <div class="line"><span class="comment">    /*** hedging during option life ***/</span></div>
 <div class="line"><span class="comment">    /**********************************/</span></div>
-<div class="line">    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> step = 0; step &lt; n-1; step++){</div>
+<div class="line">    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> step = 0; step &lt; <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>-1; step++){</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// time flows</span></div>
-<div class="line">        t += dt;</div>
+<div class="line">        <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a> += dt;</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// accruing on the money account</span></div>
 <div class="line">        money_account *= std::exp( r_*dt );</div>
@@ -320,11 +337,11 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// recalculate option value at the current stock value,</span></div>
 <div class="line">        <span class="comment">// and the current time to maturity</span></div>
-<div class="line">        rDiscount = std::exp(-r_*(maturity_-t));</div>
-<div class="line">        qDiscount = std::exp(-stockDividendYield*(maturity_-t));</div>
+<div class="line">        rDiscount = std::exp(-r_*(maturity_-<a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>));</div>
+<div class="line">        qDiscount = std::exp(-stockDividendYield*(maturity_-<a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>));</div>
 <div class="line">        forward = stock*qDiscount/rDiscount;</div>
-<div class="line">        stdDev = std::sqrt(sigma_*sigma_*(maturity_-t));</div>
-<div class="line">        <a class="code hl_class" href="../../de/dac/class_quant_lib_1_1_black_calculator.html">BlackCalculator</a> black(payoff,forward,stdDev,rDiscount);</div>
+<div class="line">        stdDev = std::sqrt(<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a>*<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a>*(maturity_-<a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>));</div>
+<div class="line">        <a class="code hl_class" href="../../de/dac/class_quant_lib_1_1_black_calculator.html">BlackCalculator</a> black(<a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>,forward,stdDev,rDiscount);</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// recalculate delta</span></div>
 <div class="line">        delta = black.delta(stock);</div>
@@ -340,10 +357,10 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line">    <span class="comment">// last accrual on my money account</span></div>
 <div class="line">    money_account *= std::exp( r_*dt );</div>
 <div class="line">    <span class="comment">// last stock growth</span></div>
-<div class="line">    stock = path[n];</div>
+<div class="line">    stock = path[<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>];</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// the hedger delivers the option payoff to the option holder</span></div>
-<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> optionPayoff = <a class="code hl_class" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a>(type_, strike_)(stock);</div>
+<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> optionPayoff = <a class="code hl_class" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a>(type_, <a class="code hl_variable" href="../../d3/dca/swaptionpseudojacobian_8cpp.html#af4df09cd4cbe06f6558dc5777c23e106">strike_</a>)(stock);</div>
 <div class="line">    money_account -= optionPayoff;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// and unwinds the hedge selling his stock position</span></div>
@@ -357,7 +374,7 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line"><span class="comment">// The computation over nSamples paths of the P&amp;L distribution</span></div>
 <div class="line"><span class="keywordtype">void</span> ReplicationError::compute(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> nTimeSteps, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> nSamples)</div>
 <div class="line">{</div>
-<div class="line">    QL_REQUIRE(nTimeSteps&gt;0, <span class="stringliteral">&quot;the number of steps must be &gt; 0&quot;</span>);</div>
+<div class="line">    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(nTimeSteps&gt;0, <span class="stringliteral">&quot;the number of steps must be &gt; 0&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// hedging interval</span></div>
 <div class="line">    <span class="comment">// Time tau = maturity_ / nTimeSteps;</span></div>
@@ -366,29 +383,28 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line"><span class="comment">       lognormally with a fixed known volatility that stays constant</span></div>
 <div class="line"><span class="comment">       throughout time.</span></div>
 <div class="line"><span class="comment">    */</span></div>
-<div class="line">    <a id="_a8" name="_a8"></a><a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> calendar = <a id="_a9" name="_a9"></a><a class="code hl_class" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>();</div>
-<div class="line">    <a id="_a10" name="_a10"></a><a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> today = Date::todaysDate();</div>
-<div class="line">    <a id="_a11" name="_a11"></a><a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dayCount = <a id="_a12" name="_a12"></a><a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>();</div>
-<div class="line">    <a id="_a13" name="_a13"></a><a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a> stateVariable(</div>
-<div class="line">                          ext::make_shared&lt;SimpleQuote&gt;(s0_));</div>
-<div class="line">    <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> riskFreeRate(</div>
+<div class="line">    <a id="_a18" name="_a18"></a><a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> calendar = <a id="_a19" name="_a19"></a><a class="code hl_class" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>();</div>
+<div class="line">    <a id="_a20" name="_a20"></a><a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> today = Date::todaysDate();</div>
+<div class="line">    <a id="_a21" name="_a21"></a><a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> dayCount = <a id="_a22" name="_a22"></a><a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>();</div>
+<div class="line">    <span class="keyword">auto</span> stateVariable = <a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#a8f88482b3c0f20180cf502ad0e13e842">makeQuoteHandle</a>(<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#a2c6dbd01744a7890ac556f93d8cee6c2">s0_</a>);</div>
+<div class="line">    <a id="_a23" name="_a23"></a><a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> riskFreeRate(</div>
 <div class="line">                          ext::make_shared&lt;FlatForward&gt;(today, r_, dayCount));</div>
 <div class="line">    <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a> dividendYield(</div>
 <div class="line">                          ext::make_shared&lt;FlatForward&gt;(today, 0.0, dayCount));</div>
 <div class="line">    <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;BlackVolTermStructure&gt;</a> <a class="code hl_function" href="../../dc/da8/group__manips.html#gac402ef7c87f63f7c603ee87210b5750c">volatility</a>(</div>
-<div class="line">                          ext::make_shared&lt;BlackConstantVol&gt;(today, calendar, sigma_, dayCount));</div>
+<div class="line">                          ext::make_shared&lt;BlackConstantVol&gt;(today, calendar, <a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a>, dayCount));</div>
 <div class="line">    <span class="keyword">auto</span> diffusion = ext::make_shared&lt;BlackScholesMertonProcess&gt;(</div>
 <div class="line">                          stateVariable, dividendYield, riskFreeRate, volatility);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Black Scholes equation rules the path generator:</span></div>
 <div class="line">    <span class="comment">// at each step the log of the stock</span></div>
 <div class="line">    <span class="comment">// will have drift and sigma^2 variance</span></div>
-<div class="line">    <a id="_a14" name="_a14"></a><a class="code hl_class" href="../../d2/d45/class_quant_lib_1_1_inverse_cumulative_rsg.html">PseudoRandom::rsg_type</a> rsg =</div>
+<div class="line">    <a id="_a24" name="_a24"></a><a class="code hl_class" href="../../d2/d45/class_quant_lib_1_1_inverse_cumulative_rsg.html">PseudoRandom::rsg_type</a> rsg =</div>
 <div class="line">        PseudoRandom::make_sequence_generator(nTimeSteps, 0);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">bool</span> brownianBridge = <span class="keyword">false</span>;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">typedef</span> <a id="_a15" name="_a15"></a><a class="code hl_class" href="../../de/df5/class_quant_lib_1_1_path_generator.html">SingleVariate&lt;PseudoRandom&gt;::path_generator_type</a> generator_type;</div>
+<div class="line">    <span class="keyword">typedef</span> <a id="_a25" name="_a25"></a><a class="code hl_class" href="../../de/df5/class_quant_lib_1_1_path_generator.html">SingleVariate&lt;PseudoRandom&gt;::path_generator_type</a> generator_type;</div>
 <div class="line">    <span class="keyword">auto</span> myPathGenerator = ext::make_shared&lt;generator_type&gt;(</div>
 <div class="line">                       diffusion, maturity_, nTimeSteps,</div>
 <div class="line">                       rsg, brownianBridge);</div>
@@ -397,16 +413,16 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line">    <span class="comment">// of the stock. The path pricer knows how to price a path using its</span></div>
 <div class="line">    <span class="comment">// value() method</span></div>
 <div class="line">    <span class="keyword">auto</span> myPathPricer = ext::make_shared&lt;ReplicationPathPricer&gt;(</div>
-<div class="line">                              payoff_.optionType(), payoff_.strike(),</div>
-<div class="line">                              r_, maturity_, sigma_);</div>
+<div class="line">                              <a class="code hl_variable" href="../../dc/d51/fdornsteinuhlenbeckvanillaengine_8cpp.html#afb9e2c9da25d0584f746121a0f5d79e4">payoff_</a>.optionType(), <a class="code hl_variable" href="../../dc/d51/fdornsteinuhlenbeckvanillaengine_8cpp.html#afb9e2c9da25d0584f746121a0f5d79e4">payoff_</a>.strike(),</div>
+<div class="line">                              r_, maturity_, <a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// a statistics accumulator for the path-dependant Profit&amp;Loss values</span></div>
-<div class="line">    <a id="_a16" name="_a16"></a><a class="code hl_class" href="../../d0/d8b/class_quant_lib_1_1_generic_risk_statistics.html">Statistics</a> statisticsAccumulator;</div>
+<div class="line">    <a id="_a26" name="_a26"></a><a class="code hl_class" href="../../d0/d8b/class_quant_lib_1_1_generic_risk_statistics.html">Statistics</a> statisticsAccumulator;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// The Monte Carlo model generates paths using myPathGenerator</span></div>
 <div class="line">    <span class="comment">// each path is priced using myPathPricer</span></div>
 <div class="line">    <span class="comment">// prices will be accumulated into statisticsAccumulator</span></div>
-<div class="line">    <a id="_a17" name="_a17"></a><a class="code hl_class" href="../../dc/d5d/class_quant_lib_1_1_monte_carlo_model.html">MonteCarloModel&lt;SingleVariate,PseudoRandom&gt;</a></div>
+<div class="line">    <a id="_a27" name="_a27"></a><a class="code hl_class" href="../../dc/d5d/class_quant_lib_1_1_monte_carlo_model.html">MonteCarloModel&lt;SingleVariate,PseudoRandom&gt;</a></div>
 <div class="line">        MCSimulation(myPathGenerator,</div>
 <div class="line">                     myPathPricer,</div>
 <div class="line">                     statisticsAccumulator,</div>
@@ -423,7 +439,7 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> PLKurt  = MCSimulation.sampleAccumulator().kurtosis();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Derman and Kamal&#39;s formula</span></div>
-<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> theorStD = std::sqrt(M_PI/4/nTimeSteps)*vega_*sigma_;</div>
+<div class="line">    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> theorStD = std::sqrt(<a id="a28" name="a28"></a><a class="code hl_define" href="../../de/ddc/mathconstants_8hpp.html#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a>/4/nTimeSteps)*vega_*<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a>;</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">    std::cout &lt;&lt; std::fixed</div>
@@ -435,6 +451,14 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="line">              &lt;&lt; std::setw(8) &lt;&lt; std::setprecision(2) &lt;&lt; PLSkew &lt;&lt; <span class="stringliteral">&quot; | &quot;</span></div>
 <div class="line">              &lt;&lt; std::setw(8) &lt;&lt; std::setprecision(2) &lt;&lt; PLKurt &lt;&lt; std::endl;</div>
 <div class="line">}</div>
+<div class="ttc" id="aactual365fixed_8hpp_html"><div class="ttname"><a href="../../d6/dbf/actual365fixed_8hpp.html">actual365fixed.hpp</a></div><div class="ttdoc">Actual/365 (Fixed) day counter.</div></div>
+<div class="ttc" id="aanalyticvariancegammaengine_8cpp_html_a2c6dbd01744a7890ac556f93d8cee6c2"><div class="ttname"><a href="../../de/d83/analyticvariancegammaengine_8cpp.html#a2c6dbd01744a7890ac556f93d8cee6c2">s0_</a></div><div class="ttdeci">Real s0_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d83/analyticvariancegammaengine_8cpp_source.html#l00069">analyticvariancegammaengine.cpp:69</a></div></div>
+<div class="ttc" id="aanalyticvariancegammaengine_8cpp_html_aaecef422e0c58265ec08db24ad530b60"><div class="ttname"><a href="../../de/d83/analyticvariancegammaengine_8cpp.html#aaecef422e0c58265ec08db24ad530b60">sigma_</a></div><div class="ttdeci">Rate sigma_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d83/analyticvariancegammaengine_8cpp_source.html#l00073">analyticvariancegammaengine.cpp:73</a></div></div>
+<div class="ttc" id="aandreasenhugevolatilityinterpl_8cpp_html_a4c79e7f153710550f0238535048a4d0a"><div class="ttname"><a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a></div><div class="ttdeci">Size n</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp_source.html#l00047">andreasenhugevolatilityinterpl.cpp:47</a></div></div>
+<div class="ttc" id="aauto__link_8hpp_html"><div class="ttname"><a href="../../d7/dbf/auto__link_8hpp.html">auto_link.hpp</a></div></div>
+<div class="ttc" id="ablackcalculator_8hpp_html"><div class="ttname"><a href="../../df/d90/blackcalculator_8hpp.html">blackcalculator.hpp</a></div><div class="ttdoc">Black-formula calculator class.</div></div>
+<div class="ttc" id="ablackconstantvol_8hpp_html"><div class="ttname"><a href="../../d9/d96/blackconstantvol_8hpp.html">blackconstantvol.hpp</a></div><div class="ttdoc">Black constant volatility, no time dependence, no strike dependence.</div></div>
+<div class="ttc" id="ablackscholesprocess_8hpp_html"><div class="ttname"><a href="../../d0/da0/blackscholesprocess_8hpp.html">blackscholesprocess.hpp</a></div><div class="ttdoc">Black-Scholes processes.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual365_fixed_html"><div class="ttname"><a href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">QuantLib::Actual365Fixed</a></div><div class="ttdoc">Actual/365 (Fixed) day count convention.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbf/actual365fixed_8hpp_source.html#l00045">actual365fixed.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_black_calculator_html"><div class="ttname"><a href="../../de/dac/class_quant_lib_1_1_black_calculator.html">QuantLib::BlackCalculator</a></div><div class="ttdoc">Black 1976 calculator class.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d90/blackcalculator_8hpp_source.html#l00037">blackcalculator.hpp:37</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_black_calculator_html_a27d29dc37488c0e1005fd3df6c1f232e"><div class="ttname"><a href="../../de/dac/class_quant_lib_1_1_black_calculator.html#a27d29dc37488c0e1005fd3df6c1f232e">QuantLib::BlackCalculator::vega</a></div><div class="ttdeci">Real vega(Time maturity) const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5b/blackcalculator_8cpp_source.html#l00301">blackcalculator.cpp:301</a></div></div>
@@ -454,6 +478,10 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="ttc" id="aclass_quant_lib_1_1_path_pricer_html"><div class="ttname"><a href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html">QuantLib::PathPricer</a></div><div class="ttdoc">base class for path pricers</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/pathpricer_8hpp_source.html#l00040">pathpricer.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_plain_vanilla_payoff_html"><div class="ttname"><a href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">QuantLib::PlainVanillaPayoff</a></div><div class="ttdoc">Plain-vanilla payoff.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d95/payoffs_8hpp_source.html#l00105">payoffs.hpp:105</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_t_a_r_g_e_t_html"><div class="ttname"><a href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">QuantLib::TARGET</a></div><div class="ttdoc">TARGET calendar</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d69/target_8hpp_source.html#l00050">target.hpp:50</a></div></div>
+<div class="ttc" id="adefaultprobabilitykey_8cpp_html_a15fc20af123a89cd6f40758e341a4a54"><div class="ttname"><a href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a></div><div class="ttdeci">const DefaultType &amp; t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ddb/defaultprobabilitykey_8cpp_source.html#l00039">defaultprobabilitykey.cpp:39</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="afdornsteinuhlenbeckvanillaengine_8cpp_html_afb9e2c9da25d0584f746121a0f5d79e4"><div class="ttname"><a href="../../dc/d51/fdornsteinuhlenbeckvanillaengine_8cpp.html#afb9e2c9da25d0584f746121a0f5d79e4">payoff_</a></div><div class="ttdeci">const ext::shared_ptr&lt; Payoff &gt; payoff_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d51/fdornsteinuhlenbeckvanillaengine_8cpp_source.html#l00054">fdornsteinuhlenbeckvanillaengine.cpp:54</a></div></div>
+<div class="ttc" id="aflatforward_8hpp_html"><div class="ttname"><a href="../../d5/d0e/flatforward_8hpp.html">flatforward.hpp</a></div><div class="ttdoc">flat forward rate term structure</div></div>
 <div class="ttc" id="agroup__manips_html_gac402ef7c87f63f7c603ee87210b5750c"><div class="ttname"><a href="../../dc/da8/group__manips.html#gac402ef7c87f63f7c603ee87210b5750c">QuantLib::io::volatility</a></div><div class="ttdeci">detail::percent_holder volatility(Volatility)</div><div class="ttdoc">output volatilities as percentages</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db9/dataformatters_8hpp_source.html#l00133">dataformatters.hpp:133</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
@@ -461,7 +489,17 @@ Black-Scholes". It shows the use of the Monte Carlo framework.</p>
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="ahestonrndcalculator_8cpp_html_aea6c7215b6d8026ab3ab5189363bbedd"><div class="ttname"><a href="../../d2/d3a/hestonrndcalculator_8cpp.html#aea6c7215b6d8026ab3ab5189363bbedd">sigma</a></div><div class="ttdeci">Real sigma</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3a/hestonrndcalculator_8cpp_source.html#l00036">hestonrndcalculator.cpp:36</a></div></div>
+<div class="ttc" id="aintegralhestonvarianceoptionengine_8cpp_html_aac80ba3218a14ee2ac65bfc8989a2015"><div class="ttname"><a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a></div><div class="ttdeci">ext::shared_ptr&lt; QuantLib::Payoff &gt; payoff</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp_source.html#l00350">integralhestonvarianceoptionengine.cpp:350</a></div></div>
+<div class="ttc" id="amathconstants_8hpp_html_ae71449b1cc6e6250b91f539153a7a0d3"><div class="ttname"><a href="../../de/ddc/mathconstants_8hpp.html#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a></div><div class="ttdeci">#define M_PI</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ddc/mathconstants_8hpp_source.html#l00054">mathconstants.hpp:54</a></div></div>
+<div class="ttc" id="amontecarlomodel_8hpp_html"><div class="ttname"><a href="../../d9/dde/montecarlomodel_8hpp.html">montecarlomodel.hpp</a></div><div class="ttdoc">General-purpose Monte Carlo model.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_a8f88482b3c0f20180cf502ad0e13e842"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a8f88482b3c0f20180cf502ad0e13e842">QuantLib::makeQuoteHandle</a></div><div class="ttdeci">RelinkableHandle&lt; Quote &gt; makeQuoteHandle(Real value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d17/simplequote_8hpp_source.html#l00056">simplequote.hpp:56</a></div></div>
+<div class="ttc" id="aperturbativebarrieroptionengine_8cpp_html_a6d844b40eb92df66654caf1145a265fc"><div class="ttname"><a href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a></div><div class="ttdeci">ext::shared_ptr&lt; YieldTermStructure &gt; r</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de0/perturbativebarrieroptionengine_8cpp_source.html#l01454">perturbativebarrieroptionengine.cpp:1454</a></div></div>
+<div class="ttc" id="aqldefines_8hpp_html"><div class="ttname"><a href="../../de/d56/qldefines_8hpp.html">qldefines.hpp</a></div><div class="ttdoc">Global definitions and compiler switches.</div></div>
+<div class="ttc" id="asimplequote_8hpp_html"><div class="ttname"><a href="../../d4/d17/simplequote_8hpp.html">simplequote.hpp</a></div><div class="ttdoc">simple quote class</div></div>
+<div class="ttc" id="aswaptionpseudojacobian_8cpp_html_af4df09cd4cbe06f6558dc5777c23e106"><div class="ttname"><a href="../../d3/dca/swaptionpseudojacobian_8cpp.html#af4df09cd4cbe06f6558dc5777c23e106">strike_</a></div><div class="ttdeci">Real strike_</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dca/swaptionpseudojacobian_8cpp_source.html#l00173">swaptionpseudojacobian.cpp:173</a></div></div>
+<div class="ttc" id="atarget_8hpp_html"><div class="ttname"><a href="../../dc/d69/target_8hpp.html">target.hpp</a></div><div class="ttdoc">TARGET calendar.</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

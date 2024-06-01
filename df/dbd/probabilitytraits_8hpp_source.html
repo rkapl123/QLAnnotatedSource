@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/termstructures/credit/probabilitytraits.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/termstructures/credit/probabilitytraits.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">probabilitytraits.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../df/dbd/probabilitytraits_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008, 2016 Jose Aparicio</span></div>
@@ -109,14 +108,18 @@ $(function() {
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"></span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">/*! \file probabilitytraits.hpp</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">    \brief default-probability bootstrap traits</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#ifndef ql_probability_traits_hpp</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define ql_probability_traits_hpp</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/termstructures/credit/interpolatedsurvivalprobabilitycurve.hpp&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;ql/termstructures/credit/interpolatedhazardratecurve.hpp&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;ql/termstructures/credit/interpolateddefaultdensitycurve.hpp&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;ql/termstructures/bootstraphelper.hpp&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/d12/interpolatedsurvivalprobabilitycurve_8hpp.html">ql/termstructures/credit/interpolatedsurvivalprobabilitycurve.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d1f/interpolatedhazardratecurve_8hpp.html">ql/termstructures/credit/interpolatedhazardratecurve.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d03/interpolateddefaultdensitycurve_8hpp.html">ql/termstructures/credit/interpolateddefaultdensitycurve.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d76/bootstraphelper_8hpp.html">ql/termstructures/bootstraphelper.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
@@ -124,8 +127,9 @@ $(function() {
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d8/d1e/namespace_quant_lib_1_1detail.html#a0d6d77d52e65d4c4e93f23d97ca96ccd">   39</a></span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d8/d1e/namespace_quant_lib_1_1detail.html#a0d6d77d52e65d4c4e93f23d97ca96ccd">avgHazardRate</a> = 0.01;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d8/d1e/namespace_quant_lib_1_1detail.html#acec1e84321d5502dec917167e1115afe">   40</a></span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d8/d1e/namespace_quant_lib_1_1detail.html#acec1e84321d5502dec917167e1115afe">maxHazardRate</a> = 1.0;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../dc/d8a/struct_quant_lib_1_1_survival_probability.html">   44</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../dc/d8a/struct_quant_lib_1_1_survival_probability.html">SurvivalProbability</a> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"></span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">    //! Survival-Probability-curve traits</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../dc/d8a/struct_quant_lib_1_1_survival_probability.html">   44</a></span><span class="comment"></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../dc/d8a/struct_quant_lib_1_1_survival_probability.html">SurvivalProbability</a> {</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="comment">// interpolated curve type</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Interpolator&gt;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d1/d2f/struct_quant_lib_1_1_survival_probability_1_1curve.html">   47</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="../../d1/d2f/struct_quant_lib_1_1_survival_probability_1_1curve.html">curve</a> {</div>
@@ -157,8 +161,8 @@ $(function() {
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                <span class="keywordflow">return</span> 1.0/(1.0+<a class="code hl_variable" href="../../d8/d1e/namespace_quant_lib_1_1detail.html#a0d6d77d52e65d4c4e93f23d97ca96ccd">detail::avgHazardRate</a>*0.25);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="comment">// extrapolate</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> d = c-&gt;dates()[i];</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">return</span> c-&gt;survivalProbability(d,<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a> = c-&gt;dates()[i];</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">return</span> c-&gt;survivalProbability(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>,<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="comment">// constraints</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> C&gt;</div>
@@ -194,8 +198,9 @@ $(function() {
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    };</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="../../df/d67/struct_quant_lib_1_1_hazard_rate.html">  115</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../df/d67/struct_quant_lib_1_1_hazard_rate.html">HazardRate</a> {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment"></span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">    //! Hazard-rate-curve traits</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="../../df/d67/struct_quant_lib_1_1_hazard_rate.html">  115</a></span><span class="comment"></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../df/d67/struct_quant_lib_1_1_hazard_rate.html">HazardRate</a> {</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="comment">// interpolated curve type</span></div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Interpolator&gt;</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="../../d8/d66/struct_quant_lib_1_1_hazard_rate_1_1curve.html">  118</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="../../d8/d66/struct_quant_lib_1_1_hazard_rate_1_1curve.html">curve</a> {</div>
@@ -227,8 +232,8 @@ $(function() {
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/d1e/namespace_quant_lib_1_1detail.html#a0d6d77d52e65d4c4e93f23d97ca96ccd">detail::avgHazardRate</a>;</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="comment">// extrapolate</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> d = c-&gt;dates()[i];</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <span class="keywordflow">return</span> c-&gt;hazardRate(d, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a> = c-&gt;dates()[i];</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <span class="keywordflow">return</span> c-&gt;hazardRate(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        }</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="comment">// constraints</span></div>
@@ -239,8 +244,8 @@ $(function() {
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                                  <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>) <span class="comment">// firstAliveHelper</span></div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        {</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <span class="keywordflow">if</span> (validData) {</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> r = *(std::min_element(c-&gt;data().begin(), c-&gt;data().end()));</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                <span class="keywordflow">return</span> r/2.0;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a> = *(std::min_element(c-&gt;data().begin(), c-&gt;data().end()));</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a>/2.0;</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            }</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordflow">return</span> <a class="code hl_define" href="../../d3/d8f/group__limit_macros.html#ga4f2e6bcf6b19224bce1a5a6234286c17">QL_EPSILON</a>;</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        }</div>
@@ -251,8 +256,8 @@ $(function() {
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                                  <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>) <span class="comment">// firstAliveHelper</span></div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        {</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <span class="keywordflow">if</span> (validData) {</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> r = *(std::max_element(c-&gt;data().begin(), c-&gt;data().end()));</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                <span class="keywordflow">return</span> r*2.0;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a> = *(std::max_element(c-&gt;data().begin(), c-&gt;data().end()));</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a>*2.0;</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            }</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            <span class="comment">// no constraints.</span></div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            <span class="comment">// We choose as max a value very unlikely to be exceeded.</span></div>
@@ -270,8 +275,9 @@ $(function() {
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="../../df/d67/struct_quant_lib_1_1_hazard_rate.html#a94f6bccfa587a673afc9e72fb5a3a1ca">  187</a></span>        <span class="keyword">static</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_function" href="../../df/d67/struct_quant_lib_1_1_hazard_rate.html#a94f6bccfa587a673afc9e72fb5a3a1ca">maxIterations</a>() { <span class="keywordflow">return</span> 30; }</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    };</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="../../dd/dc7/struct_quant_lib_1_1_default_density.html">  192</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../dd/dc7/struct_quant_lib_1_1_default_density.html">DefaultDensity</a> {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment"></span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment">    //! Default-density-curve traits</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="../../dd/dc7/struct_quant_lib_1_1_default_density.html">  192</a></span><span class="comment"></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../dd/dc7/struct_quant_lib_1_1_default_density.html">DefaultDensity</a> {</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="comment">// interpolated curve type</span></div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Interpolator&gt;</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="../../da/d33/struct_quant_lib_1_1_default_density_1_1curve.html">  195</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="../../da/d33/struct_quant_lib_1_1_default_density_1_1curve.html">curve</a> {</div>
@@ -302,8 +308,8 @@ $(function() {
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/d1e/namespace_quant_lib_1_1detail.html#a0d6d77d52e65d4c4e93f23d97ca96ccd">detail::avgHazardRate</a>;</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            <span class="comment">// extrapolate</span></div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> d = c-&gt;dates()[i];</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="keywordflow">return</span> c-&gt;defaultDensity(d, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a> = c-&gt;dates()[i];</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="keywordflow">return</span> c-&gt;defaultDensity(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        }</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="comment">// constraints</span></div>
@@ -314,8 +320,8 @@ $(function() {
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                                  <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>) <span class="comment">// firstAliveHelper</span></div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        {</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="keywordflow">if</span> (validData) {</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> r = *(std::min_element(c-&gt;data().begin(), c-&gt;data().end()));</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                <span class="keywordflow">return</span> r/2.0;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a> = *(std::min_element(c-&gt;data().begin(), c-&gt;data().end()));</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a>/2.0;</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            }</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordflow">return</span> <a class="code hl_define" href="../../d3/d8f/group__limit_macros.html#ga4f2e6bcf6b19224bce1a5a6234286c17">QL_EPSILON</a>;</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        }</div>
@@ -326,8 +332,8 @@ $(function() {
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                                  <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>) <span class="comment">// firstAliveHelper</span></div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        {</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <span class="keywordflow">if</span> (validData) {</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> r = *(std::max_element(c-&gt;data().begin(), c-&gt;data().end()));</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                <span class="keywordflow">return</span> r*2.0;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a> = *(std::max_element(c-&gt;data().begin(), c-&gt;data().end()));</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a>*2.0;</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            }</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            <span class="comment">// no constraints.</span></div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            <span class="comment">// We choose as max a value very unlikely to be exceeded.</span></div>
@@ -349,6 +355,7 @@ $(function() {
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>}</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abootstraphelper_8hpp_html"><div class="ttname"><a href="../../d0/d76/bootstraphelper_8hpp.html">bootstraphelper.hpp</a></div><div class="ttdoc">base helper class used for bootstrapping</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_bootstrap_helper_html"><div class="ttname"><a href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html">QuantLib::BootstrapHelper</a></div><div class="ttdoc">Base helper class for bootstrapping.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d76/bootstraphelper_8hpp_source.html#l00063">bootstraphelper.hpp:63</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_default_probability_term_structure_html"><div class="ttname"><a href="../../db/df4/class_quant_lib_1_1_default_probability_term_structure.html">QuantLib::DefaultProbabilityTermStructure</a></div><div class="ttdoc">Default probability term structure.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d7c/defaulttermstructure_8hpp_source.html#l00041">defaulttermstructure.hpp:41</a></div></div>
@@ -356,14 +363,19 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_interpolated_hazard_rate_curve_html"><div class="ttname"><a href="../../d9/d0e/class_quant_lib_1_1_interpolated_hazard_rate_curve.html">QuantLib::InterpolatedHazardRateCurve</a></div><div class="ttdoc">DefaultProbabilityTermStructure based on interpolation of hazard rates.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1f/interpolatedhazardratecurve_8hpp_source.html#l00039">interpolatedhazardratecurve.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_interpolated_survival_probability_curve_html"><div class="ttname"><a href="../../d3/dc9/class_quant_lib_1_1_interpolated_survival_probability_curve.html">QuantLib::InterpolatedSurvivalProbabilityCurve</a></div><div class="ttdoc">DefaultProbabilityTermStructure based on interpolation of survival probabilities.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d12/interpolatedsurvivalprobabilitycurve_8hpp_source.html#l00036">interpolatedsurvivalprobabilitycurve.hpp:38</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_term_structure_html_a34aadf8e384e50e6ee34067cc448262a"><div class="ttname"><a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a">QuantLib::TermStructure::referenceDate</a></div><div class="ttdeci">virtual const Date &amp; referenceDate() const</div><div class="ttdoc">the date at which discount = 1.0 and/or variance = 0.0</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d3a/termstructure_8cpp_source.html#l00039">termstructure.cpp:39</a></div></div>
+<div class="ttc" id="aexchangeratemanager_8cpp_html_a85641069b0d4478ab8a7356c3bf32ea3"><div class="ttname"><a href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a></div><div class="ttdeci">Date d</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/exchangeratemanager_8cpp_source.html#l00032">exchangeratemanager.cpp:32</a></div></div>
 <div class="ttc" id="agroup__limit_macros_html_ga4f2e6bcf6b19224bce1a5a6234286c17"><div class="ttname"><a href="../../d3/d8f/group__limit_macros.html#ga4f2e6bcf6b19224bce1a5a6234286c17">QL_EPSILON</a></div><div class="ttdeci">#define QL_EPSILON</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/qldefines_8hpp_source.html#l00178">qldefines.hpp:178</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gad9817a6a21dfcb91429f0152c99d6313"><div class="ttname"><a href="../../d6/d59/group__types.html#gad9817a6a21dfcb91429f0152c99d6313">QuantLib::Probability</a></div><div class="ttdeci">Real Probability</div><div class="ttdoc">probability</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00082">types.hpp:82</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="ainterpolateddefaultdensitycurve_8hpp_html"><div class="ttname"><a href="../../d6/d03/interpolateddefaultdensitycurve_8hpp.html">interpolateddefaultdensitycurve.hpp</a></div><div class="ttdoc">interpolated default-density term structure</div></div>
+<div class="ttc" id="ainterpolatedhazardratecurve_8hpp_html"><div class="ttname"><a href="../../dc/d1f/interpolatedhazardratecurve_8hpp.html">interpolatedhazardratecurve.hpp</a></div><div class="ttdoc">interpolated hazard-rate term structure</div></div>
+<div class="ttc" id="ainterpolatedsurvivalprobabilitycurve_8hpp_html"><div class="ttname"><a href="../../db/d12/interpolatedsurvivalprobabilitycurve_8hpp.html">interpolatedsurvivalprobabilitycurve.hpp</a></div><div class="ttdoc">interpolated survival-probability term structure</div></div>
 <div class="ttc" id="anamespace_quant_lib_1_1detail_html_a0d6d77d52e65d4c4e93f23d97ca96ccd"><div class="ttname"><a href="../../d8/d1e/namespace_quant_lib_1_1detail.html#a0d6d77d52e65d4c4e93f23d97ca96ccd">QuantLib::detail::avgHazardRate</a></div><div class="ttdeci">const Real avgHazardRate</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbd/probabilitytraits_8hpp_source.html#l00039">probabilitytraits.hpp:39</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_1_1detail_html_acec1e84321d5502dec917167e1115afe"><div class="ttname"><a href="../../d8/d1e/namespace_quant_lib_1_1detail.html#acec1e84321d5502dec917167e1115afe">QuantLib::detail::maxHazardRate</a></div><div class="ttdeci">const Real maxHazardRate</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbd/probabilitytraits_8hpp_source.html#l00040">probabilitytraits.hpp:40</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aperturbativebarrieroptionengine_8cpp_html_a6d844b40eb92df66654caf1145a265fc"><div class="ttname"><a href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a6d844b40eb92df66654caf1145a265fc">r</a></div><div class="ttdeci">ext::shared_ptr&lt; YieldTermStructure &gt; r</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de0/perturbativebarrieroptionengine_8cpp_source.html#l01454">perturbativebarrieroptionengine.cpp:1454</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_default_density_1_1curve_html"><div class="ttname"><a href="../../da/d33/struct_quant_lib_1_1_default_density_1_1curve.html">QuantLib::DefaultDensity::curve</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbd/probabilitytraits_8hpp_source.html#l00195">probabilitytraits.hpp:195</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_default_density_1_1curve_html_ab95db33b409abd5e18ca57f63769a613"><div class="ttname"><a href="../../da/d33/struct_quant_lib_1_1_default_density_1_1curve.html#ab95db33b409abd5e18ca57f63769a613">QuantLib::DefaultDensity::curve::type</a></div><div class="ttdeci">InterpolatedDefaultDensityCurve&lt; Interpolator &gt; type</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbd/probabilitytraits_8hpp_source.html#l00196">probabilitytraits.hpp:196</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_default_density_html"><div class="ttname"><a href="../../dd/dc7/struct_quant_lib_1_1_default_density.html">QuantLib::DefaultDensity</a></div><div class="ttdoc">Default-density-curve traits.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbd/probabilitytraits_8hpp_source.html#l00192">probabilitytraits.hpp:192</a></div></div>

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/models/marketmodels/pathwisegreeks/bumpinstrumentjacobian.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/models/marketmodels/pathwisegreeks/bumpinstrumentjacobian.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">bumpinstrumentjacobian.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d8/d1b/bumpinstrumentjacobian_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span> </div>
@@ -112,8 +111,8 @@ $(function() {
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#define quantlib_bump_instrument_jacobian_hpp</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ql/models/marketmodels/marketmodel.hpp&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/models/marketmodels/pathwisegreeks/vegabumpcluster.hpp&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/de3/marketmodel_8hpp.html">ql/models/marketmodels/marketmodel.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d78/vegabumpcluster_8hpp.html">ql/models/marketmodels/pathwisegreeks/vegabumpcluster.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;valarray&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div>
@@ -166,7 +165,16 @@ $(function() {
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../d8/dad/class_quant_lib_1_1_volatility_bump_instrument_jacobian.html#af3828fb6dd2c8f26deee19266e76c097">   77</a></span>         <span class="keyword">mutable</span> std::vector&lt;std::vector&lt;Real&gt; &gt; <a class="code hl_variable" href="../../d8/dad/class_quant_lib_1_1_volatility_bump_instrument_jacobian.html#af3828fb6dd2c8f26deee19266e76c097">onePercentBumps_</a>;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="../../d8/dad/class_quant_lib_1_1_volatility_bump_instrument_jacobian.html#aaa0a81e56299281df9c35c4b869426a2">   78</a></span>         <span class="keyword">mutable</span> <a class="code hl_class" href="../../dd/db6/class_quant_lib_1_1_matrix.html">Matrix</a> <a class="code hl_variable" href="../../d8/dad/class_quant_lib_1_1_volatility_bump_instrument_jacobian.html#aaa0a81e56299281df9c35c4b869426a2">bumpMatrix_</a>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    };</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment"></span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">    /*!</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">    Pass in a market model, a list of instruments, and possible bumps.</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment"></span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">    Get out pseudo-root bumps that shift each implied vol by one percent, and leave the other instruments fixed. </span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment"></span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">    If the contribution of an instrument is too correlated with other instruments used, discard it. </span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment"></span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="../../db/dac/class_quant_lib_1_1_orthogonalized_bump_finder.html">   90</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../db/dac/class_quant_lib_1_1_orthogonalized_bump_finder.html">OrthogonalizedBumpFinder</a></div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    {</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keyword">public</span>:</div>
@@ -216,6 +224,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_volatility_bump_instrument_jacobian_html_afcde5144b64bd1e869f907580495a107"><div class="ttname"><a href="../../d8/dad/class_quant_lib_1_1_volatility_bump_instrument_jacobian.html#afcde5144b64bd1e869f907580495a107">QuantLib::VolatilityBumpInstrumentJacobian::derivativesVolatility</a></div><div class="ttdeci">std::vector&lt; Real &gt; derivativesVolatility(Size j) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d58/bumpinstrumentjacobian_8cpp_source.html#l00042">bumpinstrumentjacobian.cpp:42</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="amarketmodel_8hpp_html"><div class="ttname"><a href="../../d3/de3/marketmodel_8hpp.html">marketmodel.hpp</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_volatility_bump_instrument_jacobian_1_1_cap_html"><div class="ttname"><a href="../../de/d04/struct_quant_lib_1_1_volatility_bump_instrument_jacobian_1_1_cap.html">QuantLib::VolatilityBumpInstrumentJacobian::Cap</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1b/bumpinstrumentjacobian_8hpp_source.html#l00042">bumpinstrumentjacobian.hpp:43</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_volatility_bump_instrument_jacobian_1_1_cap_html_a202147612522384bf58d92f294a8cedb"><div class="ttname"><a href="../../de/d04/struct_quant_lib_1_1_volatility_bump_instrument_jacobian_1_1_cap.html#a202147612522384bf58d92f294a8cedb">QuantLib::VolatilityBumpInstrumentJacobian::Cap::startIndex_</a></div><div class="ttdeci">Size startIndex_</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1b/bumpinstrumentjacobian_8hpp_source.html#l00044">bumpinstrumentjacobian.hpp:44</a></div></div>
@@ -224,6 +233,7 @@ $(function() {
 <div class="ttc" id="astruct_quant_lib_1_1_volatility_bump_instrument_jacobian_1_1_swaption_html"><div class="ttname"><a href="../../dc/d54/struct_quant_lib_1_1_volatility_bump_instrument_jacobian_1_1_swaption.html">QuantLib::VolatilityBumpInstrumentJacobian::Swaption</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1b/bumpinstrumentjacobian_8hpp_source.html#l00036">bumpinstrumentjacobian.hpp:37</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_volatility_bump_instrument_jacobian_1_1_swaption_html_a202147612522384bf58d92f294a8cedb"><div class="ttname"><a href="../../dc/d54/struct_quant_lib_1_1_volatility_bump_instrument_jacobian_1_1_swaption.html#a202147612522384bf58d92f294a8cedb">QuantLib::VolatilityBumpInstrumentJacobian::Swaption::startIndex_</a></div><div class="ttdeci">Size startIndex_</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1b/bumpinstrumentjacobian_8hpp_source.html#l00038">bumpinstrumentjacobian.hpp:38</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_volatility_bump_instrument_jacobian_1_1_swaption_html_a93c98cea283aa6d8bd047b968fd86970"><div class="ttname"><a href="../../dc/d54/struct_quant_lib_1_1_volatility_bump_instrument_jacobian_1_1_swaption.html#a93c98cea283aa6d8bd047b968fd86970">QuantLib::VolatilityBumpInstrumentJacobian::Swaption::endIndex_</a></div><div class="ttdeci">Size endIndex_</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d1b/bumpinstrumentjacobian_8hpp_source.html#l00039">bumpinstrumentjacobian.hpp:39</a></div></div>
+<div class="ttc" id="avegabumpcluster_8hpp_html"><div class="ttname"><a href="../../d5/d78/vegabumpcluster_8hpp.html">vegabumpcluster.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

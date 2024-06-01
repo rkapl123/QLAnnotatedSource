@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/event.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/event.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">event.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../dc/d94/event_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2009 Ferdinando Ametrano</span></div>
@@ -106,34 +105,49 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file event.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief Base class for events associated with a given date</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_event_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_event_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/time/date.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/patterns/observable.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/optional.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dd9/date_8hpp.html">ql/time/date.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d5e/observable_8hpp.html">ql/patterns/observable.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/dd5/optional_8hpp.html">ql/optional.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">class </span>AcyclicVisitor;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">    //! Base class for event</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"></span><span class="comment">    /*! This class acts as a base class for the actual</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        event implementations.</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d2/d6c/class_quant_lib_1_1_event.html">   40</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d2/d6c/class_quant_lib_1_1_event.html">Event</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d2/d6c/class_quant_lib_1_1_event.html#a2b4170e3e745845eb7d18f569f770ad2">   42</a></span>        <a class="code hl_function" href="../../d2/d6c/class_quant_lib_1_1_event.html#a2b4170e3e745845eb7d18f569f770ad2">~Event</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d2/d6c/class_quant_lib_1_1_event.html#a2b4170e3e745845eb7d18f569f770ad2">   42</a></span>        <a class="code hl_function" href="../../d2/d6c/class_quant_lib_1_1_event.html#a2b4170e3e745845eb7d18f569f770ad2">~Event</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;<span class="comment"></span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        //! \name Event interface</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"></span><span class="comment">        //! returns the date at which the event occurs</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d2/d6c/class_quant_lib_1_1_event.html#ac659412fae5cc99a0fdf25f7f4b9562e">   46</a></span>        <span class="keyword">virtual</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_function" href="../../d2/d6c/class_quant_lib_1_1_event.html#ac659412fae5cc99a0fdf25f7f4b9562e">date</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"></span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">        //! returns true if an event has already occurred before a date</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment"></span><span class="comment">        /*! If includeRefDate is true, then an event has not occurred if its</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">            date is the same as the refDate, i.e. this method returns false if</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">            the event date is the same as the refDate.</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        */</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d2/d6c/class_quant_lib_1_1_event.html#aec849cb9335c1489b335f183d1327cb6">hasOccurred</a>(</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    <span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; refDate = <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(),</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    ext::optional&lt;bool&gt; includeRefDate = <a class="code hl_variable" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a>) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d6c/class_quant_lib_1_1_event.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">accept</a>(<a class="code hl_class" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp;);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    };</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    ext::optional&lt;bool&gt; includeRefDate = <a class="code hl_variable" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a>) <span class="keyword">const</span>;<span class="comment"></span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment"></span><span class="comment"></span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">        //! \name Visitability</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment"></span><span class="comment">        //@{</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment"></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d6c/class_quant_lib_1_1_event.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">accept</a>(<a class="code hl_class" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp;);<span class="comment"></span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">        //@}</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment"></span>    };</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">namespace </span>detail {</div>
@@ -167,8 +181,11 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1detail_1_1simple__event_html_aafbb0786dca875b972ca9ddf654f4840"><div class="ttname"><a href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#aafbb0786dca875b972ca9ddf654f4840">QuantLib::detail::simple_event::simple_event</a></div><div class="ttdeci">simple_event(const Date &amp;date)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d94/event_8hpp_source.html#l00071">event.hpp:71</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1detail_1_1simple__event_html_acda6b54c0fae709ae1bcccfae9e1d83d"><div class="ttname"><a href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#acda6b54c0fae709ae1bcccfae9e1d83d">QuantLib::detail::simple_event::date</a></div><div class="ttdeci">Date date() const override</div><div class="ttdoc">returns the date at which the event occurs</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d94/event_8hpp_source.html#l00072">event.hpp:72</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1detail_1_1simple__event_html_ae66f66b0d2874fc0d466bc1ef6dd2976"><div class="ttname"><a href="../../d0/d67/class_quant_lib_1_1detail_1_1simple__event.html#ae66f66b0d2874fc0d466bc1ef6dd2976">QuantLib::detail::simple_event::date_</a></div><div class="ttdeci">Date date_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d94/event_8hpp_source.html#l00075">event.hpp:75</a></div></div>
+<div class="ttc" id="adate_8hpp_html"><div class="ttname"><a href="../../d6/dd9/date_8hpp.html">date.hpp</a></div><div class="ttdoc">date- and time-related classes, typedefs and enumerations</div></div>
 <div class="ttc" id="anamespace_quant_lib_1_1ext_html_a3d1f3fb2cb126ecea6a56dd80734c3d3"><div class="ttname"><a href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">QuantLib::ext::nullopt</a></div><div class="ttdeci">const boost::none_t &amp; nullopt</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d95/optional_8cpp_source.html#l00027">optional.cpp:27</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="aobservable_8hpp_html"><div class="ttname"><a href="../../de/d5e/observable_8hpp.html">observable.hpp</a></div><div class="ttdoc">observer/observable pattern</div></div>
+<div class="ttc" id="aoptional_8hpp_html"><div class="ttname"><a href="../../db/dd5/optional_8hpp.html">optional.hpp</a></div><div class="ttdoc">Maps optional to either the boost or std implementation.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

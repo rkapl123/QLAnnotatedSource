@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/models/marketmodels/models/capletcoterminalswaptioncalibration.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/models/marketmodels/models/capletcoterminalswaptioncalibration.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">capletcoterminalswaptioncalibration.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d0/d8d/capletcoterminalswaptioncalibration_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2007 Ferdinando Ametrano</span></div>
@@ -107,10 +106,10 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/models/marketmodels/models/capletcoterminalswaptioncalibration.hpp&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/models/marketmodels/models/piecewiseconstantvariance.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/models/marketmodels/swapforwardmappings.hpp&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/math/matrixutilities/pseudosqrt.hpp&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d9f/capletcoterminalswaptioncalibration_8hpp.html">ql/models/marketmodels/models/capletcoterminalswaptioncalibration.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d60/piecewiseconstantvariance_8hpp.html">ql/models/marketmodels/models/piecewiseconstantvariance.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/dbd/swapforwardmappings_8hpp.html">ql/models/marketmodels/swapforwardmappings.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/dd2/pseudosqrt_8hpp.html">ql/math/matrixutilities/pseudosqrt.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
@@ -123,17 +122,17 @@ $(function() {
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                            <span class="keyword">const</span> std::vector&lt;Volatility&gt;&amp; mktCapletVols,</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                            <span class="keyword">const</span> ext::shared_ptr&lt;CurveState&gt;&amp; cs,</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> displacement,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                            <span class="keyword">const</span> std::vector&lt;Real&gt;&amp; alpha,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                            <span class="keyword">const</span> std::vector&lt;Real&gt;&amp; <a class="code hl_variable" href="../../df/dae/sabr_8cpp.html#ab7eeb7bf31a421bd2f657cd118290d6c">alpha</a>,</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                            <span class="keywordtype">bool</span> lowestRoot,</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                            <span class="keywordtype">bool</span> useFullApprox)</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    : <a class="code hl_class" href="../../d8/d66/class_quant_lib_1_1_c_t_s_m_m_caplet_calibration.html">CTSMMCapletCalibration</a>(evolution, corr, displacedSwapVariances,</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                             mktCapletVols, cs, displacement),</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      alpha_(alpha), lowestRoot_(lowestRoot),</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      alpha_(<a class="code hl_variable" href="../../df/dae/sabr_8cpp.html#ab7eeb7bf31a421bd2f657cd118290d6c">alpha</a>), lowestRoot_(lowestRoot),</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      useFullApprox_(useFullApprox) {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        QL_REQUIRE(<a class="code hl_variable" href="../../d8/d66/class_quant_lib_1_1_c_t_s_m_m_caplet_calibration.html#a9c042abcd446925e95dde36619f5bf6d">numberOfRates_</a>==alpha.size(),</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d8/d66/class_quant_lib_1_1_c_t_s_m_m_caplet_calibration.html#a9c042abcd446925e95dde36619f5bf6d">numberOfRates_</a>==<a class="code hl_variable" href="../../df/dae/sabr_8cpp.html#ab7eeb7bf31a421bd2f657cd118290d6c">alpha</a>.size(),</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                   <span class="stringliteral">&quot;mismatch between number of rates (&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d8/d66/class_quant_lib_1_1_c_t_s_m_m_caplet_calibration.html#a9c042abcd446925e95dde36619f5bf6d">numberOfRates_</a> &lt;&lt;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                   <span class="stringliteral">&quot;) and alpha (&quot;</span> &lt;&lt; alpha.size() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                   <span class="stringliteral">&quot;) and alpha (&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../df/dae/sabr_8cpp.html#ab7eeb7bf31a421bd2f657cd118290d6c">alpha</a>.size() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
@@ -147,7 +146,7 @@ $(function() {
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                            <span class="keyword">const</span> <a class="code hl_class" href="../../de/db4/class_quant_lib_1_1_curve_state.html">CurveState</a>&amp; cs,</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> displacement,</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                            <span class="keyword">const</span> std::vector&lt;Real&gt;&amp; alpha,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                            <span class="keyword">const</span> std::vector&lt;Real&gt;&amp; <a class="code hl_variable" href="../../df/dae/sabr_8cpp.html#ab7eeb7bf31a421bd2f657cd118290d6c">alpha</a>,</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                            <span class="keywordtype">bool</span> lowestRoot,</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                            <span class="keywordtype">bool</span> useFullAprox,</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
@@ -164,11 +163,11 @@ $(function() {
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> numberOfRates = evolution.<a class="code hl_function" href="../../de/dd0/class_quant_lib_1_1_evolution_description.html#a1f7fca17f1af46f16730a2f1dbdd7f29">numberOfRates</a>();</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">const</span> std::vector&lt;Time&gt;&amp; rateTimes = evolution.<a class="code hl_function" href="../../de/dd0/class_quant_lib_1_1_evolution_description.html#a72560eeaab6501c071aa24605ee6e153">rateTimes</a>();</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        QL_REQUIRE(numberOfFactors&lt;=numberOfRates,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(numberOfFactors&lt;=numberOfRates,</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                   <span class="stringliteral">&quot;number of factors (&quot;</span> &lt;&lt; numberOfFactors &lt;&lt;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                   <span class="stringliteral">&quot;) cannot be greater than numberOfRates (&quot;</span> &lt;&lt;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                   numberOfRates &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        QL_REQUIRE(numberOfFactors&gt;0,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(numberOfFactors&gt;0,</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                   <span class="stringliteral">&quot;number of factors (&quot;</span> &lt;&lt; numberOfFactors &lt;&lt;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                   <span class="stringliteral">&quot;) must be greater than zero&quot;</span>);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
@@ -196,12 +195,12 @@ $(function() {
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        std::vector&lt;Real&gt; modifiedVariances(numberOfRates, 0.0);</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keyword">const</span> std::vector&lt;Time&gt;&amp; evolutionTimes = evolution.<a class="code hl_function" href="../../de/dd0/class_quant_lib_1_1_evolution_description.html#a9b4351740f3114b32c8a423cedb2bbf8">evolutionTimes</a>();</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;numberOfSteps; ++i) {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> s = (i==0 ? 0.0 : evolutionTimes[i-1]);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a0e63b0ad913b68a68ba39aa88ab60cb3">s</a> = (i==0 ? 0.0 : evolutionTimes[i-1]);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j=i; j&lt;numberOfRates; ++j) {</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="keyword">const</span> std::vector&lt;Real&gt;&amp; var = displacedSwapVariances[j]-&gt;variances();</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                originalVariances[j]+=var[i];</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                swapTimeInhomogeneousVariances[i][j] = var[i]/</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                    ((1.0+alpha[j]*s)*(1.0+alpha[j]*s));</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                    ((1.0+<a class="code hl_variable" href="../../df/dae/sabr_8cpp.html#ab7eeb7bf31a421bd2f657cd118290d6c">alpha</a>[j]*<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a0e63b0ad913b68a68ba39aa88ab60cb3">s</a>)*(1.0+<a class="code hl_variable" href="../../df/dae/sabr_8cpp.html#ab7eeb7bf31a421bd2f657cd118290d6c">alpha</a>[j]*<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a0e63b0ad913b68a68ba39aa88ab60cb3">s</a>));</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                modifiedVariances[j]+=swapTimeInhomogeneousVariances[i][j];</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            }</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
@@ -270,16 +269,16 @@ $(function() {
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="comment">// the first element is not used</span></div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        std::vector&lt;Real&gt; a(numberOfSteps, 1.0);</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="comment">// multiplier afterward</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        std::vector&lt;Real&gt; b(numberOfSteps);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        std::vector&lt;Real&gt; <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>(numberOfSteps);</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        b[0]=displacedSwapVariances[0]-&gt;variances()[0]/swapTimeInhomogeneousVariances[0][0];</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>[0]=displacedSwapVariances[0]-&gt;variances()[0]/swapTimeInhomogeneousVariances[0][0];</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="comment">// main loop where work is done</span></div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=1; i&lt;numberOfSteps; ++i) {</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> j=0;</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <span class="comment">// up date variances to take account of last a and b computed</span></div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            <span class="keywordflow">for</span> (; j &lt;= static_cast&lt;Integer&gt;(i)-2; j++)</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                swapTimeInhomogeneousVariances[j][i-1]*= a[i-1]*a[i-1];</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            swapTimeInhomogeneousVariances[j][i-1]*= b[i-1]*b[i-1];</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            swapTimeInhomogeneousVariances[j][i-1]*= <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>[i-1]*<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>[i-1];</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> w0 = invertedZedMatrix[i-1][i-1];</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> w1 = -invertedZedMatrix[i-1][i];</div>
@@ -312,11 +311,11 @@ $(function() {
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                extraConstantPart+=invertedZedMatrix[i-1][i-1] *</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                    CovarianceSwapMarginalCovs[i-1][i-1][k] *</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                    invertedZedMatrix[i-1][k]*b[i-1];</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                    invertedZedMatrix[i-1][k]*<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>[i-1];</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                extraConstantPart+=invertedZedMatrix[i-1][k] *</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                    CovarianceSwapCovs[i-1][k][i-1] *</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                    invertedZedMatrix[i-1][i-1]*b[i-1];</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                    invertedZedMatrix[i-1][i-1]*<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>[i-1];</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            }</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
@@ -338,7 +337,7 @@ $(function() {
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> constantPart = w0*w0*totVariance[i-1] +</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                                                    extraConstantPart*extraMultiplier-v1t1;</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> linearPart = -2*w0*w1*(a[i-1]*almostTotCovariance[i] +</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                                                b[i-1]*leftCovariance[i]) +extraLinearPart*extraMultiplier ;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                                                <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>[i-1]*leftCovariance[i]) +extraLinearPart*extraMultiplier ;</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> quadraticPart = w1*w1*almostTotVariance[i];</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> disc = linearPart*linearPart-4.0*constantPart*quadraticPart;</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
@@ -373,15 +372,15 @@ $(function() {
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            {</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>               ++<a class="code hl_function" href="../../d8/d66/class_quant_lib_1_1_c_t_s_m_m_caplet_calibration.html#a8cfde263ee4f066c3500ea71922da2e4">failures</a>;</div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>               a[i]=root;</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>               b[i]=0.0;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>               <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>[i]=0.0;</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            }</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            {</div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                a[i]=root;</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                b[i]=std::sqrt(mult);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>[i]=std::sqrt(mult);</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            }</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            QL_ENSURE(root&gt;=0.0,</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a394b39aa396098345f86d243f207f7af">QL_ENSURE</a>(root&gt;=0.0,</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                      <span class="stringliteral">&quot;negative root -- it should have not happened&quot;</span>);</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        }</div>
@@ -391,7 +390,7 @@ $(function() {
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> j=0;</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            <span class="keywordflow">for</span> (; j &lt;= static_cast&lt;Integer&gt;(i)-2; j++)</div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                swapTimeInhomogeneousVariances[j][i-1]*= a[i-1]*a[i-1];</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            swapTimeInhomogeneousVariances[j][i-1]*= b[i-1]*b[i-1];</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            swapTimeInhomogeneousVariances[j][i-1]*= <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>[i-1]*<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>[i-1];</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        }</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <span class="comment">// compute the results</span></div>
@@ -403,12 +402,12 @@ $(function() {
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                 <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;numberOfFactors; ++i)</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                    swapCovariancePseudoRoots[k][j][i]*=coeff;</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            }</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            QL_ENSURE(swapCovariancePseudoRoots[k].rows()==numberOfRates,</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a394b39aa396098345f86d243f207f7af">QL_ENSURE</a>(swapCovariancePseudoRoots[k].rows()==numberOfRates,</div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                      <span class="stringliteral">&quot;step &quot;</span> &lt;&lt; k</div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                      &lt;&lt; <span class="stringliteral">&quot; abcd vol wrong number of rows: &quot;</span></div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                      &lt;&lt; swapCovariancePseudoRoots[k].rows()</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                      &lt;&lt; <span class="stringliteral">&quot; instead of &quot;</span> &lt;&lt; numberOfRates);</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            QL_ENSURE(swapCovariancePseudoRoots[k].columns()==numberOfFactors,</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a394b39aa396098345f86d243f207f7af">QL_ENSURE</a>(swapCovariancePseudoRoots[k].columns()==numberOfFactors,</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                      <span class="stringliteral">&quot;step &quot;</span> &lt;&lt; k</div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                      &lt;&lt; <span class="stringliteral">&quot; abcd vol wrong number of columns: &quot;</span></div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                      &lt;&lt; swapCovariancePseudoRoots[k].columns()</div>
@@ -441,6 +440,7 @@ $(function() {
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    }</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>}</div>
+<div class="ttc" id="acapletcoterminalswaptioncalibration_8hpp_html"><div class="ttname"><a href="../../d2/d9f/capletcoterminalswaptioncalibration_8hpp.html">capletcoterminalswaptioncalibration.hpp</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_t_s_m_m_caplet_calibration_html"><div class="ttname"><a href="../../d8/d66/class_quant_lib_1_1_c_t_s_m_m_caplet_calibration.html">QuantLib::CTSMMCapletCalibration</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d1c/ctsmmcapletcalibration_8hpp_source.html#l00035">ctsmmcapletcalibration.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_t_s_m_m_caplet_calibration_html_a09c1a38a1fd1989b3999730dbffdd615"><div class="ttname"><a href="../../d8/d66/class_quant_lib_1_1_c_t_s_m_m_caplet_calibration.html#a09c1a38a1fd1989b3999730dbffdd615">QuantLib::CTSMMCapletCalibration::corr_</a></div><div class="ttdeci">ext::shared_ptr&lt; PiecewiseConstantCorrelation &gt; corr_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d1c/ctsmmcapletcalibration_8hpp_source.html#l00091">ctsmmcapletcalibration.hpp:91</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_t_s_m_m_caplet_calibration_html_a362cf951c3b318d1cb2a09b7aa79e1d4"><div class="ttname"><a href="../../d8/d66/class_quant_lib_1_1_c_t_s_m_m_caplet_calibration.html#a362cf951c3b318d1cb2a09b7aa79e1d4">QuantLib::CTSMMCapletCalibration::cs_</a></div><div class="ttdeci">ext::shared_ptr&lt; CurveState &gt; cs_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d1c/ctsmmcapletcalibration_8hpp_source.html#l00099">ctsmmcapletcalibration.hpp:99</a></div></div>
@@ -470,6 +470,9 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_piecewise_constant_correlation_html_ae9a00c5c38aecf1b97f71ab0e8393338"><div class="ttname"><a href="../../dc/dca/class_quant_lib_1_1_piecewise_constant_correlation.html#ae9a00c5c38aecf1b97f71ab0e8393338">QuantLib::PiecewiseConstantCorrelation::times</a></div><div class="ttdeci">virtual const std::vector&lt; Time &gt; &amp; times() const =0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_piecewise_constant_variance_html"><div class="ttname"><a href="../../d8/db5/class_quant_lib_1_1_piecewise_constant_variance.html">QuantLib::PiecewiseConstantVariance</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d60/piecewiseconstantvariance_8hpp_source.html#l00033">piecewiseconstantvariance.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_swap_forward_mappings_html_a47774671d8a88d65d56a8f4e4e3726fa"><div class="ttname"><a href="../../da/d2c/class_quant_lib_1_1_swap_forward_mappings.html#a47774671d8a88d65d56a8f4e4e3726fa">QuantLib::SwapForwardMappings::coterminalSwapZedMatrix</a></div><div class="ttdeci">static Matrix coterminalSwapZedMatrix(const CurveState &amp;cs, Spread displacement)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/swapforwardmappings_8cpp_source.html#l00102">swapforwardmappings.cpp:102</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a394b39aa396098345f86d243f207f7af"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a394b39aa396098345f86d243f207f7af">QL_ENSURE</a></div><div class="ttdeci">#define QL_ENSURE(condition, message)</div><div class="ttdoc">throw an error if the given post-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00130">errors.hpp:130</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aextendedornsteinuhlenbeckprocess_8cpp_html_a1759c348ed007f12d79ceff98cc3abbe"><div class="ttname"><a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a></div><div class="ttdeci">ext::function&lt; Real(Real)&gt; b</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp_source.html#l00030">extendedornsteinuhlenbeckprocess.cpp:30</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
@@ -479,7 +482,12 @@ $(function() {
 <div class="ttc" id="anamespace_quant_lib_html_a41b604140b4be7485514bef44c28abd2"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a41b604140b4be7485514bef44c28abd2">QuantLib::rankReducedSqrt</a></div><div class="ttdeci">Matrix rankReducedSqrt(const Matrix &amp;matrix, Size maxRank, Real componentRetainedPercentage, SalvagingAlgorithm::Type sa)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2a/pseudosqrt_8cpp_source.html#l00427">pseudosqrt.cpp:427</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_ae70e63522ef4aa5e6fe6979b295e07e0"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ae70e63522ef4aa5e6fe6979b295e07e0">QuantLib::transpose</a></div><div class="ttdeci">Matrix transpose(const Matrix &amp;m)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00700">matrix.hpp:700</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_aff21cecb1b3c4d8e3f3d525edebd7d5c"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#aff21cecb1b3c4d8e3f3d525edebd7d5c">QuantLib::inverse</a></div><div class="ttdeci">Matrix inverse(const Matrix &amp;m)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d84/matrix_8cpp_source.html#l00044">matrix.cpp:44</a></div></div>
+<div class="ttc" id="aperturbativebarrieroptionengine_8cpp_html_a0e63b0ad913b68a68ba39aa88ab60cb3"><div class="ttname"><a href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#a0e63b0ad913b68a68ba39aa88ab60cb3">s</a></div><div class="ttdeci">Real s</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de0/perturbativebarrieroptionengine_8cpp_source.html#l01488">perturbativebarrieroptionengine.cpp:1488</a></div></div>
+<div class="ttc" id="apiecewiseconstantvariance_8hpp_html"><div class="ttname"><a href="../../d2/d60/piecewiseconstantvariance_8hpp.html">piecewiseconstantvariance.hpp</a></div></div>
+<div class="ttc" id="apseudosqrt_8hpp_html"><div class="ttname"><a href="../../d2/dd2/pseudosqrt_8hpp.html">pseudosqrt.hpp</a></div><div class="ttdoc">pseudo square root of a real symmetric matrix</div></div>
+<div class="ttc" id="asabr_8cpp_html_ab7eeb7bf31a421bd2f657cd118290d6c"><div class="ttname"><a href="../../df/dae/sabr_8cpp.html#ab7eeb7bf31a421bd2f657cd118290d6c">alpha</a></div><div class="ttdeci">Real alpha</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dae/sabr_8cpp_source.html#l00200">sabr.cpp:200</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_salvaging_algorithm_html_a1d1cfd8ffb84e947f82999c682b666a7ac9d3e887722f2bc482bcca9d41c512af"><div class="ttname"><a href="../../d5/dec/struct_quant_lib_1_1_salvaging_algorithm.html#a1d1cfd8ffb84e947f82999c682b666a7ac9d3e887722f2bc482bcca9d41c512af">QuantLib::SalvagingAlgorithm::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd2/pseudosqrt_8hpp_source.html#l00033">pseudosqrt.hpp:33</a></div></div>
+<div class="ttc" id="aswapforwardmappings_8hpp_html"><div class="ttname"><a href="../../d5/dbd/swapforwardmappings_8hpp.html">swapforwardmappings.hpp</a></div><div class="ttdoc">Utility functions for mapping between swap rate and forward rate.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

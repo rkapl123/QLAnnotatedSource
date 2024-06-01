@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/catbonds/catrisk.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/catbonds/catrisk.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">catrisk.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d4/d9f/catrisk_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2012, 2013 Grzegorz Andruszkiewicz</span></div>
@@ -105,13 +104,17 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file catrisk.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief classes that encapsulate catastrophe risk</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_catrisk_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_catrisk_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/time/date.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/errors.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/shared_ptr.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dd9/date_8hpp.html">ql/time/date.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d52/errors_8hpp.html">ql/errors.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/dc5/shared__ptr_8hpp.html">ql/shared_ptr.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;random&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
@@ -178,8 +181,8 @@ $(function() {
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                           <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> end, </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                           <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> maxLoss, </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                           <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> lambda, </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                           <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> alpha, </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                           <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> beta) ;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                           <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../df/dae/sabr_8cpp.html#ab7eeb7bf31a421bd2f657cd118290d6c">alpha</a>, </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                           <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../df/dae/sabr_8cpp.html#a089c92717e019853c89cd03144cb682b">beta</a>) ;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../de/d99/class_quant_lib_1_1_beta_risk_simulation.html#ab104cd6b44524b3c99d38b16b310bc51">nextPath</a>(std::vector&lt;std::pair&lt;Date, Real&gt; &gt;&amp; path) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../de/d99/class_quant_lib_1_1_beta_risk_simulation.html#a5db4cd80d08c917a6c5dd24b235d6bab">generateBeta</a>();</div>
@@ -256,11 +259,16 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_event_set_simulation_html_a9de19025ee1fa4c29cca96569228248e"><div class="ttname"><a href="../../d6/df0/class_quant_lib_1_1_event_set_simulation.html#a9de19025ee1fa4c29cca96569228248e">QuantLib::EventSetSimulation::periodStart_</a></div><div class="ttdeci">Date periodStart_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9f/catrisk_8hpp_source.html#l00070">catrisk.hpp:70</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_event_set_simulation_html_ab104cd6b44524b3c99d38b16b310bc51"><div class="ttname"><a href="../../d6/df0/class_quant_lib_1_1_event_set_simulation.html#ab104cd6b44524b3c99d38b16b310bc51">QuantLib::EventSetSimulation::nextPath</a></div><div class="ttdeci">bool nextPath(std::vector&lt; std::pair&lt; Date, Real &gt; &gt; &amp;path) override</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d74/catrisk_8cpp_source.html#l00048">catrisk.cpp:48</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_event_set_simulation_html_ad27d8d0948bbfeb6fc0afcfebb7bf4cc"><div class="ttname"><a href="../../d6/df0/class_quant_lib_1_1_event_set_simulation.html#ad27d8d0948bbfeb6fc0afcfebb7bf4cc">QuantLib::EventSetSimulation::eventsEnd_</a></div><div class="ttdeci">Date eventsEnd_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d9f/catrisk_8hpp_source.html#l00067">catrisk.hpp:67</a></div></div>
+<div class="ttc" id="adate_8hpp_html"><div class="ttname"><a href="../../d6/dd9/date_8hpp.html">date.hpp</a></div><div class="ttdoc">date- and time-related classes, typedefs and enumerations</div></div>
+<div class="ttc" id="aerrors_8hpp_html"><div class="ttname"><a href="../../df/d52/errors_8hpp.html">errors.hpp</a></div><div class="ttdoc">Classes and functions for error handling.</div></div>
 <div class="ttc" id="agroup__datetime_html_ga84dee895910074cbc7d936c86c1abf3d"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ga84dee895910074cbc7d936c86c1abf3d">QuantLib::Year</a></div><div class="ttdeci">Integer Year</div><div class="ttdoc">Year number.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00087">date.hpp:87</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a2d0cc8c8852f8405939146b0f8442542"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a2d0cc8c8852f8405939146b0f8442542">QuantLib::years</a></div><div class="ttdeci">Real years(const Period &amp;p)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d54/period_8cpp_source.html#l00279">period.cpp:279</a></div></div>
+<div class="ttc" id="asabr_8cpp_html_a089c92717e019853c89cd03144cb682b"><div class="ttname"><a href="../../df/dae/sabr_8cpp.html#a089c92717e019853c89cd03144cb682b">beta</a></div><div class="ttdeci">Real beta</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dae/sabr_8cpp_source.html#l00200">sabr.cpp:200</a></div></div>
+<div class="ttc" id="asabr_8cpp_html_ab7eeb7bf31a421bd2f657cd118290d6c"><div class="ttname"><a href="../../df/dae/sabr_8cpp.html#ab7eeb7bf31a421bd2f657cd118290d6c">alpha</a></div><div class="ttdeci">Real alpha</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dae/sabr_8cpp_source.html#l00200">sabr.cpp:200</a></div></div>
+<div class="ttc" id="ashared__ptr_8hpp_html"><div class="ttname"><a href="../../d0/dc5/shared__ptr_8hpp.html">shared_ptr.hpp</a></div><div class="ttdoc">Maps shared_ptr to either the boost or std implementation.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

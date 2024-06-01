@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/instruments/europeanoption.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/instruments/europeanoption.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">europeanoption.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../de/d98/europeanoption_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2004, 2007 StatPro Italia srl</span></div>
@@ -106,20 +105,23 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/instruments/europeanoption.hpp&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/pricingengines/vanilla/analyticeuropeanengine.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d12/europeanoption_8hpp.html">ql/instruments/europeanoption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d98/analyticeuropeanengine_8hpp.html">ql/pricingengines/vanilla/analyticeuropeanengine.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d6/de7/class_quant_lib_1_1_european_option.html#ade5183d027f11912379ef84bb72c6927">   25</a></span>    <a class="code hl_function" href="../../d6/de7/class_quant_lib_1_1_european_option.html#ade5183d027f11912379ef84bb72c6927">EuropeanOption::EuropeanOption</a>(</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">const</span> ext::shared_ptr&lt;StrikedTypePayoff&gt;&amp; payoff,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">const</span> ext::shared_ptr&lt;StrikedTypePayoff&gt;&amp; <a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>,</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">const</span> ext::shared_ptr&lt;Exercise&gt;&amp; exercise)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    : <a class="code hl_class" href="../../d2/d47/class_quant_lib_1_1_vanilla_option.html">VanillaOption</a>(payoff, exercise) {}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    : <a class="code hl_class" href="../../d2/d47/class_quant_lib_1_1_vanilla_option.html">VanillaOption</a>(<a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>, exercise) {}</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="ttc" id="aanalyticeuropeanengine_8hpp_html"><div class="ttname"><a href="../../d2/d98/analyticeuropeanengine_8hpp.html">analyticeuropeanengine.hpp</a></div><div class="ttdoc">Analytic European engine.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_european_option_html_ade5183d027f11912379ef84bb72c6927"><div class="ttname"><a href="../../d6/de7/class_quant_lib_1_1_european_option.html#ade5183d027f11912379ef84bb72c6927">QuantLib::EuropeanOption::EuropeanOption</a></div><div class="ttdeci">EuropeanOption(const ext::shared_ptr&lt; StrikedTypePayoff &gt; &amp;, const ext::shared_ptr&lt; Exercise &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d98/europeanoption_8cpp_source.html#l00025">europeanoption.cpp:25</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_vanilla_option_html"><div class="ttname"><a href="../../d2/d47/class_quant_lib_1_1_vanilla_option.html">QuantLib::VanillaOption</a></div><div class="ttdoc">Vanilla option (no discrete dividends, no barriers) on a single asset.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dde/vanillaoption_8hpp_source.html#l00038">vanillaoption.hpp:38</a></div></div>
+<div class="ttc" id="aeuropeanoption_8hpp_html"><div class="ttname"><a href="../../dd/d12/europeanoption_8hpp.html">europeanoption.hpp</a></div><div class="ttdoc">European option on a single asset.</div></div>
+<div class="ttc" id="aintegralhestonvarianceoptionengine_8cpp_html_aac80ba3218a14ee2ac65bfc8989a2015"><div class="ttname"><a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a></div><div class="ttdeci">ext::shared_ptr&lt; QuantLib::Payoff &gt; payoff</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp_source.html#l00350">integralhestonvarianceoptionengine.cpp:350</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

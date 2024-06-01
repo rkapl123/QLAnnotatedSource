@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/indexes/ibor/thbfix.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/indexes/ibor/thbfix.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">thbfix.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d8/d8c/thbfix_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2018 Matthias Groncki</span></div>
@@ -105,46 +104,66 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file thbfix.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief %THB %THBFIX rate</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_thbfix_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_thbfix_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/indexes/ibor/libor.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/time/calendars/thailand.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/time/calendars/unitedstates.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/time/calendars/unitedkingdom.hpp&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/time/calendars/jointcalendar.hpp&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;ql/time/daycounters/actual365fixed.hpp&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;ql/currencies/asia.hpp&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html">   53</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html">THBFIX</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html#ae9313c9915486c6afee5c86dce4bf072">   55</a></span>        <a class="code hl_function" href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html#ae9313c9915486c6afee5c86dce4bf072">THBFIX</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp; <a class="code hl_function" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a893a77839fce3112da824bd5e08d5834">tenor</a>,</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>               <span class="keyword">const</span> <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; h = {})</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        : <a class="code hl_class" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a>(<span class="stringliteral">&quot;THBFIX&quot;</span>, <a class="code hl_function" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a893a77839fce3112da824bd5e08d5834">tenor</a>,</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                    2,</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    <a class="code hl_class" href="../../da/de9/class_quant_lib_1_1_t_h_b_currency.html">THBCurrency</a>(),</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                    <a class="code hl_class" href="../../dd/d6c/class_quant_lib_1_1_thailand.html">Thailand</a>(),</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707">ModifiedFollowing</a>, <span class="keyword">true</span>,</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                    <a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>(), h) {}</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    };</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/dec/libor_8hpp.html">ql/indexes/ibor/libor.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d3b/thailand_8hpp.html">ql/time/calendars/thailand.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dbf/actual365fixed_8hpp.html">ql/time/daycounters/actual365fixed.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/df2/asia_8hpp.html">ql/currencies/asia.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    //! %THB %THBFIX rate</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span><span class="comment">    /*! THBFIX</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"></span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">    THB interest rate implied by USD/THB foreign exchange swaps</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"></span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">    The Swap Offer Rate represents the cost of</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">    borrowing a currency synthetically by borrowing USD</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">    for the same tenor and using the foreign exchange swap</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">    offer rate on the offer side to swap out the USD in return</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">    for the foreign currency.</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"></span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">    Fixing is based on average FX Forward rates from 21 banks</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">    and the USD Libor Fixing.</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"></span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">    Fixing is published at 11:00 am BKK time</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html">   50</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html">THBFIX</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html#ae9313c9915486c6afee5c86dce4bf072">   52</a></span>        <a class="code hl_function" href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html#ae9313c9915486c6afee5c86dce4bf072">THBFIX</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp; <a class="code hl_function" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a893a77839fce3112da824bd5e08d5834">tenor</a>,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>               <span class="keyword">const</span> <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;YieldTermStructure&gt;</a>&amp; h = {})</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        : <a class="code hl_class" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a>(<span class="stringliteral">&quot;THBFIX&quot;</span>, <a class="code hl_function" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a893a77839fce3112da824bd5e08d5834">tenor</a>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    2,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    <a class="code hl_class" href="../../da/de9/class_quant_lib_1_1_t_h_b_currency.html">THBCurrency</a>(),</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    <a class="code hl_class" href="../../dd/d6c/class_quant_lib_1_1_thailand.html">Thailand</a>(),</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                    <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707">ModifiedFollowing</a>, <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    <a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>(), h) {}</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    };</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aactual365fixed_8hpp_html"><div class="ttname"><a href="../../d6/dbf/actual365fixed_8hpp.html">actual365fixed.hpp</a></div><div class="ttdoc">Actual/365 (Fixed) day counter.</div></div>
+<div class="ttc" id="aasia_8hpp_html"><div class="ttname"><a href="../../d2/df2/asia_8hpp.html">asia.hpp</a></div><div class="ttdoc">Asian currencies.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual365_fixed_html"><div class="ttname"><a href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">QuantLib::Actual365Fixed</a></div><div class="ttdoc">Actual/365 (Fixed) day count convention.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbf/actual365fixed_8hpp_source.html#l00045">actual365fixed.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_ibor_index_html"><div class="ttname"><a href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">QuantLib::IborIndex</a></div><div class="ttdoc">base class for Inter-Bank-Offered-Rate indexes (e.g. Libor, etc.)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d13/iborindex_8hpp_source.html#l00035">iborindex.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_interest_rate_index_html_a893a77839fce3112da824bd5e08d5834"><div class="ttname"><a href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a893a77839fce3112da824bd5e08d5834">QuantLib::InterestRateIndex::tenor</a></div><div class="ttdeci">Period tenor() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d22/interestrateindex_8hpp_source.html#l00062">interestrateindex.hpp:62</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_t_h_b_currency_html"><div class="ttname"><a href="../../da/de9/class_quant_lib_1_1_t_h_b_currency.html">QuantLib::THBCurrency</a></div><div class="ttdoc">Thai baht.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df2/asia_8hpp_source.html#l00227">asia.hpp:227</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_t_h_b_f_i_x_html"><div class="ttname"><a href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html">QuantLib::THBFIX</a></div><div class="ttdoc">THB THBFIX rate</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8c/thbfix_8hpp_source.html#l00053">thbfix.hpp:53</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_t_h_b_f_i_x_html_ae9313c9915486c6afee5c86dce4bf072"><div class="ttname"><a href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html#ae9313c9915486c6afee5c86dce4bf072">QuantLib::THBFIX::THBFIX</a></div><div class="ttdeci">THBFIX(const Period &amp;tenor, const Handle&lt; YieldTermStructure &gt; &amp;h={})</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8c/thbfix_8hpp_source.html#l00055">thbfix.hpp:55</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_thailand_html"><div class="ttname"><a href="../../dd/d6c/class_quant_lib_1_1_thailand.html">QuantLib::Thailand</a></div><div class="ttdoc">Thailand calendars</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d3b/thailand_8hpp_source.html#l00068">thailand.hpp:68</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_t_h_b_f_i_x_html"><div class="ttname"><a href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html">QuantLib::THBFIX</a></div><div class="ttdoc">THB THBFIX rate</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8c/thbfix_8hpp_source.html#l00050">thbfix.hpp:50</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_t_h_b_f_i_x_html_ae9313c9915486c6afee5c86dce4bf072"><div class="ttname"><a href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html#ae9313c9915486c6afee5c86dce4bf072">QuantLib::THBFIX::THBFIX</a></div><div class="ttdeci">THBFIX(const Period &amp;tenor, const Handle&lt; YieldTermStructure &gt; &amp;h={})</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8c/thbfix_8hpp_source.html#l00052">thbfix.hpp:52</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_thailand_html"><div class="ttname"><a href="../../dd/d6c/class_quant_lib_1_1_thailand.html">QuantLib::Thailand</a></div><div class="ttdoc">Thailand calendars</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d3b/thailand_8hpp_source.html#l00069">thailand.hpp:69</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707">QuantLib::ModifiedFollowing</a></div><div class="ttdeci">@ ModifiedFollowing</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00049">businessdayconvention.hpp:45</a></div></div>
+<div class="ttc" id="alibor_8hpp_html"><div class="ttname"><a href="../../da/dec/libor_8hpp.html">libor.hpp</a></div><div class="ttdoc">base class for BBA LIBOR indexes</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="athailand_8hpp_html"><div class="ttname"><a href="../../d4/d3b/thailand_8hpp.html">thailand.hpp</a></div><div class="ttdoc">Thailand calendars.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

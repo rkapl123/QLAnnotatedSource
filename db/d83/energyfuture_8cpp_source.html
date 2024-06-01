@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/commodities/energyfuture.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/commodities/energyfuture.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">energyfuture.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../db/d83/energyfuture_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 J. Erik Radmall</span></div>
@@ -106,9 +105,9 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/experimental/commodities/commoditysettings.hpp&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/experimental/commodities/energyfuture.hpp&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/settings.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d39/commoditysettings_8hpp.html">ql/experimental/commodities/commoditysettings.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d66/energyfuture_8hpp.html">ql/experimental/commodities/energyfuture.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d0f/settings_8hpp.html">ql/settings.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
@@ -177,7 +176,7 @@ $(function() {
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <a class="code hl_function" href="../../d9/d5a/class_quant_lib_1_1_commodity.html#ace4b7cdb5b5f131482b80c05f7bc4ddb">addPricingError</a>(<a class="code hl_enumvalue" href="../../d3/dda/struct_quant_lib_1_1_pricing_error.html#a221b779e6bb7b8d40677d7642bfefac5a48f2bb70fceb692a2dedd8cea496c44b">PricingError::Warning</a>, message.str());</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        QL_REQUIRE(quoteValue != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(),</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(quoteValue != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(),</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                   <span class="stringliteral">&quot;missing quote for [&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d4/df6/class_quant_lib_1_1_energy_future.html#ab3514cfc57b1acc42ae7bb32b0edeb41">index_</a>-&gt;name() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> tradePriceValue =</div>
@@ -240,11 +239,15 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_settings_html_a95055e9410ed0465a5f30d3ffc90c1d3"><div class="ttname"><a href="../../d7/de1/class_quant_lib_1_1_settings.html#a95055e9410ed0465a5f30d3ffc90c1d3">QuantLib::Settings::evaluationDate</a></div><div class="ttdeci">DateProxy &amp; evaluationDate()</div><div class="ttdoc">the date at which pricing is to be performed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0f/settings_8hpp_source.html#l00147">settings.hpp:147</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_singleton_html_ab7455b7e1235d292c444095842349291"><div class="ttname"><a href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">QuantLib::Singleton&lt; Settings &gt;::instance</a></div><div class="ttdeci">static Settings &amp; instance()</div><div class="ttdoc">access to the unique instance</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/singleton_8hpp_source.html#l00068">singleton.hpp:104</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_unit_of_measure_html"><div class="ttname"><a href="../../df/deb/class_quant_lib_1_1_unit_of_measure.html">QuantLib::UnitOfMeasure</a></div><div class="ttdoc">Unit of measure specification</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/unitofmeasure_8hpp_source.html#l00037">unitofmeasure.hpp:37</a></div></div>
+<div class="ttc" id="acommoditysettings_8hpp_html"><div class="ttname"><a href="../../de/d39/commoditysettings_8hpp.html">commoditysettings.hpp</a></div><div class="ttdoc">commodity settings</div></div>
+<div class="ttc" id="aenergyfuture_8hpp_html"><div class="ttname"><a href="../../dd/d66/energyfuture_8hpp.html">energyfuture.hpp</a></div><div class="ttdoc">Energy future.</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
 <div class="ttc" id="agroup__manips_html_gafcc88da4bd66750d565dc3467464c63e"><div class="ttname"><a href="../../dc/da8/group__manips.html#gafcc88da4bd66750d565dc3467464c63e">QuantLib::io::iso_date</a></div><div class="ttdeci">detail::iso_date_holder iso_date(const Date &amp;d)</div><div class="ttdoc">output dates in ISO format (yyyy-mm-dd)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da2/date_8cpp_source.html#l00991">date.cpp:991</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="asettings_8hpp_html"><div class="ttname"><a href="../../d5/d0f/settings_8hpp.html">settings.hpp</a></div><div class="ttdoc">global repository for run-time library settings</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_pricing_error_html_a221b779e6bb7b8d40677d7642bfefac5a48f2bb70fceb692a2dedd8cea496c44b"><div class="ttname"><a href="../../d3/dda/struct_quant_lib_1_1_pricing_error.html#a221b779e6bb7b8d40677d7642bfefac5a48f2bb70fceb692a2dedd8cea496c44b">QuantLib::PricingError::Warning</a></div><div class="ttdeci">@ Warning</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dbe/commodity_8hpp_source.html#l00044">commodity.hpp:44</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

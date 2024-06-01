@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -83,7 +82,105 @@ $(function() {
   <div class="headertitle"><div class="title">Version history </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><b>Release 1.32 - October 2023</b></p>
+<div class="textblock"><p ><b>Release 1.34 - April 2024</b></p>
+<p >PORTABILITY</p><ul>
+<li><b>Future end of support:</b> as announced in release 1.32, we're targeting next release (1.35) as the last to support Visual C++ 2015, g++ up to version 6.x, and clang up to version 4; support for those compilers will be dropped in release 1.36, about six months from now. From that point onwards, this will allows us to enable the use of C++17 in the code base. Also, given the testing environments available on GitHub actions, clang 5 is already no longer available to us for testing, and in a while the same will hold for clang 6 and g++ 7. Therefore, it is suggested to upgrade to a newer version if possible.</li>
+<li><b>Future end of support:</b> at the same time as the above, we'll also remove the configure switch that allows to use <code>boost::tuple</code>, <code>boost::function</code> and <code>boost::bind</code> instead of their <code>std</code> counterparts; the <code>std</code> classes are already the default since release 1.32.</li>
+<li>Generate and install pkg-config files in CMake builds; thanks to GitHub user jez6.</li>
+</ul>
+<p >DATES AND CALENDARS</p><ul>
+<li>Prevent <code>Calendar::advance</code> from returning the business end of month (instead of the calendar end) when <code>endOfMonth</code> is <code>true</code> and <code>convention</code> is <code>Unadjusted</code>; thanks to GitHub user DeimosXing.</li>
+<li>Add good Friday holiday for SOFR fixing; thanks to GitHub user PaulXiCao.</li>
+<li>Properly restrict São Paulo city holiday to years before 2022; thanks to Marco Bruno Ferreira Vasconcellos.</li>
+<li>Update holidays for 2023 and 2024 in calendars for India, Thailand, Singapore and South Africa; thanks to Fredrik Gerdin Börjesson.</li>
+</ul>
+<p >CASH FLOWS</p><ul>
+<li>Fixed a couple of cases in which notifications were not forwarded properly; thanks to GitHub user djkrystul for the heads-up.</li>
+<li>Fixed past payment dates and added support for OIS in <code>LinearTsrPricer</code>; thanks to Peter Caspers.</li>
+</ul>
+<p >INSTRUMENTS</p><ul>
+<li>Swaptions can now take an OIS as underlying; thanks to Guillaume Horel and Peter Caspers. So far, only <code>BlackSwaptionEngine</code> manages OIS explicitly; other engines might work and return approximated values.</li>
+<li>More methods in <code>MakeOIS</code> and <code>MakeVanillaSwap</code>; thanks to Eugene Toder.</li>
+<li>More methods in the <code>BondFunctions</code> class now support either clean or dirty prices; thanks to Francois Botha.</li>
+<li>The <code>basisPointValue</code> and <code>yieldValueBasisPoint</code> methods in <code>BondFunctions</code> didn't always manage the settlement date correctly; this is now fixed (thanks to GitHub user jez6).</li>
+<li>Add <code>Custom</code> to <code>Futures::Type</code> enumeration to allow passing custom dates to futures; thanks to Eugene Toder.</li>
+</ul>
+<p >TERM STRUCTURES</p><ul>
+<li>Inflation curves can now be built passing an explicit base date (corresponding to the last published fixing) instead of an observation lag.</li>
+<li>Fixed calculation of year fraction under Actual/365 Canadian convention in <code>FuturesRateHelper</code>; thanks to GitHub user PaulXiCao.</li>
+<li>Fixed settlement date calculation in cross-currency basis-swap rate helpers in some cases; thanks to Marcin Rybacki for the fix and to Aleksis Ali Raza for the heads-up.</li>
+</ul>
+<p >MATH</p><ul>
+<li>Handle non-equidistant grids and arbitrary dimensions in Laplace interpolation; thanks to Peter Caspers.</li>
+</ul>
+<p >DEPRECATED FEATURES</p><ul>
+<li><b>Removed</b> features deprecated in version 1.29:<ul>
+<li>The <code>argument_type</code>, <code>first_argument_type</code>, <code>second_argument_type</code> and <code>result_type</code> typedefs in several classes;</li>
+<li>The overloads of zero-rate inflation index constructors taking an <code>interpolated</code> argument;</li>
+<li>The <code>interpolated</code> method and the protected <code>interpolated_</code> data member in <code>InflationIndex</code>;</li>
+<li>The overload of <code>CashFlows::npvbps</code> taking the result by reference;</li>
+<li>The protected <code>rateCurve_</code> method in <code>InflationCouponPricer</code>;</li>
+<li>The <code>ThreadKey</code> typedef;</li>
+<li>The empty header <code>ql/experimental/credit/riskybond.hpp</code>.</li>
+</ul>
+</li>
+<li>Deprecated the constructors of <code>InflationTermStructure</code>, <code>ZeroInflationTermStructure</code>, <code>YoYInflationTermStructure</code>, <code>InterpolatedZeroInflationCurve</code>, <code>InterpolatedYoYInflationCurve</code>, <code>PiecewiseZeroInflationCurve</code> and <code>PiecewiseYoYInflationCurve</code> taking an observation lag; use the overloads taking an explicit base date instead.</li>
+<li>Deprecated the <code>Bond::yield</code>, <code>BondFunctions::atmRate</code>, <code>BondFunctions::yield</code> and <code>BondFunctions::zSpread</code> overloads taking a clean price as a number; use the overloads taking a <code>Bond::Price</code> instead.</li>
+<li>Deprecated the <code>InflationTermStructure::setSeasonality</code> overload taking no arguments; use the overload taking a pointer and pass an empty one to remove seasonality.</li>
+<li>Deprecated the <code>InflationTermStructure::setBaseRate</code> method; set <code>baseRate_</code> directly if needed.</li>
+<li>Deprecated the <code>Swaption::underlyingSwap</code> and <code>SwaptionHelper::underlyingSwap</code> methods; use <code>underlying</code> instead.</li>
+<li>Deprecated the broken <code>FixedRateBondHelper::fixedRateBond</code> and <code>CPIBondHelper::cpiBond</code> methods and the corresponding <code>fixedRateBond_</code> and <code>cpiBond_</code> data members.</li>
+</ul>
+<p >Thanks go also to Isuru Fernando, Viktor Zhou, Stephen Dacek, Yi Jiang, Jonathan Sweemer, Eugene Toder, the XAD team and GitHub user PaulXiCao and klin333 for miscellaneous fixes, improvements or reports.</p>
+<p ><b>Release 1.33 - January 22nd, 2024</b></p>
+<p >PORTABILITY</p><ul>
+<li><b>Future end of support:</b> as announced in release 1.32, we're targeting the future release 1.35 as the last to support Visual C++ 2015, g++ up to version 6.x, and clang up to version 4; support for those compilers will be dropped in release 1.36, about nine months from now. From that point onwards, this will allows us to enable the use of C++17 in the code base.</li>
+<li><b>Future end of support:</b> at the same time as the above, we'll also remove the configure switch that allows to use <code>boost::tuple</code>, <code>boost::function</code> and <code>boost::bind</code> instead of their <code>std</code> counterparts; the <code>std</code> classes are already the default since release 1.32.</li>
+<li>Added CMake presets for Apple; thanks to Christian Köhnenkamp.</li>
+</ul>
+<p >DATES AND CALENDARS</p><ul>
+<li>Added New Year's Eve as a holiday to the Chilean calendar; thanks to GitHub user MoixaStrikes.</li>
+<li>Added Black Awareness Day as a holiday to the Brazilian calendar starting from 2024; thanks to GitHub user PaulXiCao.</li>
+<li>Added Inauguration Day as a holiday to the Mexican calendar starting from 2024; thanks to Fredrik Gerdin Börjesson.</li>
+<li>Added Chinese holidays for 2024; thanks to Cheng Li.</li>
+<li>Updated list of known ECB dates; thanks to GitHub user PaulXiCao.</li>
+<li>Added Thailandese and Taiwanese holidays up to 2024; thanks to Fredrik Gerdin Börjesson.</li>
+<li>Added a one-time holiday to the South African calendar; thanks to Francois Botha.</li>
+</ul>
+<p >MODELS</p><ul>
+<li>Added support for angled contour shift integrals to Heston model; thanks to Klaus Spanderen.</li>
+</ul>
+<p >INSTRUMENTS</p><ul>
+<li>Allow different calendars and frequencies for different legs in <code>MakeOIS</code> and <code>OISRateHelper</code>; thanks to Eugene Toder.</li>
+<li>Enabled negative payment lag in swap legs; thanks to GitHub user Stoozy.</li>
+</ul>
+<p >RANDOM NUMBERS</p><ul>
+<li>Added Burley 2020 scrambled Sobol sequence generator; thanks to Peter Caspers.</li>
+</ul>
+<p >TESTS</p><ul>
+<li>Use automated registration of unit tests; thanks to Siddharth Mehrotra.</li>
+<li>Added a few fuzzing tests; thanks to Nathaniel Brough.</li>
+<li>Improved test coverage for a few classes; thanks to GitHub user PaulXiCao.</li>
+</ul>
+<p >DEPRECATED FEATURES</p><ul>
+<li><b>Removed</b> features deprecated in version 1.28:<ul>
+<li>The overload of <code>CallableBond::impliedVolatility</code> taking an NPV as target.</li>
+<li>The constructor of <code>AmortizingFixedRateBond</code> taking a sinking frequency.</li>
+<li>The constructor of <code>AmortizingFixedRateBond</code> taking a vector of <code>InterestRate</code> instances.</li>
+<li>The constructor of <code>FixedRateBond</code> taking start date, maturity date etc. instead of a schedule.</li>
+<li>The constructor of <code>FixedRateBond</code> taking a vector of <code>InterestRate</code> instances.</li>
+<li>The constructor of <code>FloatingRateBond</code> taking start date, maturity date etc. instead of a schedule.</li>
+<li>The constructor of <code>CPICapFloor</code> taking a handle to an interest-rate index.</li>
+<li>The <code>CPICapFloor::inflationIndex</code> method.</li>
+<li>The <code>infIndex</code> data member of the <code>CPICapFloor::arguments</code> class.</li>
+<li>A redundant constructor of <code>SabrSmileSection</code>.</li>
+<li>The empty headers <code>ql/experimental/amortizingbonds/amortizingcmsratebond.hpp</code>, <code>ql/experimental/amortizingbonds/amortizingfixedratebond.hpp</code> and <code>ql/experimental/amortizingbonds/amortizingfloatingratebond.hpp</code>.</li>
+</ul>
+</li>
+<li>Deprecated the constructor of <code>Currency</code> and <code>Currency::Data</code> taking a format string, and the <code>Currency::format</code> method.</li>
+</ul>
+<p >Thanks go also to Yi Jiang, Hoang Giap Vu, Jonathan Sweemer and the XAD team for smaller fixes and improvements.</p>
+<p ><b>Release 1.32 - October 20th, 2023</b></p>
 <p >PORTABILITY</p><ul>
 <li><b>Possibly breaking change:</b> the protected <code>evaluationDate_</code> data member of the <code>SwaptionVolatilityDiscrete</code> class was renamed to <code>cachedReferenceDate_</code>.</li>
 <li><b>Future end of support:</b> we're targeting the future release 1.35 as the last to support Visual C++ 2015, g++ up to version 6.x, and clang up to version 4; support for those compilers will be dropped in release 1.36, about one year from now. From that point onwards, this will allows us to enable the use of C++17 in the code base.</li>
@@ -131,7 +228,7 @@ $(function() {
 <li>Deprecated the <code>StandardFiniteDifferenceModel</code>, <code>StandardSystemFiniteDifferenceModel</code> and <code>StandardStepCondition</code> typedefs; define your own typedefs if needed.</li>
 <li>Deprecated the <code>FDVanillaEngine</code>, <code>FDMultiPeriodEngine</code>, <code>StepConditionSet</code>, <code>ParallelEvolverTraits</code>, <code>ParallelEvolver</code> and <code>SampledCurve</code>classes and the <code>BSMTermOperator</code> and <code>SampledCurveSet</code> typedefs; use the new finite-differences framework instead.</li>
 <li>Deprecated the <code>QL_NULL_FUNCTION</code> macro; to check if a function is empty, use it in a bool context instead.</li>
-<li>Deprecated the now empty headers <code><a class="el" href="../../dd/d73/experimental_2exoticoptions_2margrabeoption_8hpp_source.html">ql/experimental/exoticoptions/margrabeoption.hpp</a></code>, <code><a class="el" href="../../dc/d15/experimental_2exoticoptions_2analyticcomplexchooserengine_8hpp_source.html">ql/experimental/exoticoptions/analyticcomplexchooserengine.hpp</a></code>, <code><a class="el" href="../../d3/dff/experimental_2exoticoptions_2analyticeuropeanmargrabeengine_8hpp_source.html">ql/experimental/exoticoptions/analyticeuropeanmargrabeengine.hpp</a></code>, <code><a class="el" href="../../da/dc1/experimental_2exoticoptions_2analyticcompoundoptionengine_8hpp_source.html">ql/experimental/exoticoptions/analyticcompoundoptionengine.hpp</a></code>, <code><a class="el" href="../../de/dbb/experimental_2exoticoptions_2simplechooseroption_8hpp_source.html">ql/experimental/exoticoptions/simplechooseroption.hpp</a></code>, <code><a class="el" href="../../da/d21/experimental_2exoticoptions_2compoundoption_8hpp_source.html">ql/experimental/exoticoptions/compoundoption.hpp</a></code>, <code><a class="el" href="../../d6/d8e/experimental_2exoticoptions_2analyticamericanmargrabeengine_8hpp_source.html">ql/experimental/exoticoptions/analyticamericanmargrabeengine.hpp</a></code>, <code><a class="el" href="../../db/d74/experimental_2exoticoptions_2analyticsimplechooserengine_8hpp_source.html">ql/experimental/exoticoptions/analyticsimplechooserengine.hpp</a></code>, <code><a class="el" href="../../d1/d38/experimental_2exoticoptions_2complexchooseroption_8hpp_source.html">ql/experimental/exoticoptions/complexchooseroption.hpp</a></code>, <code><a class="el" href="../../d1/dbc/multicurvesensitivities_8hpp_source.html">ql/experimental/termstructures/multicurvesensitivities.hpp</a></code>, <code><a class="el" href="../../d1/d90/shoutcondition_8hpp_source.html">ql/methods/finitedifferences/shoutcondition.hpp</a></code>, <code><a class="el" href="../../d9/d6a/pdeshortrate_8hpp_source.html">ql/methods/finitedifferences/pdeshortrate.hpp</a></code>, <code><a class="el" href="../../da/da8/fddividendengine_8hpp_source.html">ql/pricingengines/vanilla/fddividendengine.hpp</a></code>, <code><a class="el" href="../../d5/de5/fdstepconditionengine_8hpp_source.html">ql/pricingengines/vanilla/fdstepconditionengine.hpp</a></code>, <code><a class="el" href="../../df/dcc/fdconditions_8hpp_source.html">ql/pricingengines/vanilla/fdconditions.hpp</a></code> and <code><a class="el" href="../../d1/d6c/duffsdeviceinnerproduct_8hpp_source.html">ql/models/marketmodels/duffsdeviceinnerproduct.hpp</a></code>.</li>
+<li>Deprecated the now empty headers <code><a class="el" href="../../dd/d73/experimental_2exoticoptions_2margrabeoption_8hpp.html">ql/experimental/exoticoptions/margrabeoption.hpp</a></code>, <code><a class="el" href="../../dc/d15/experimental_2exoticoptions_2analyticcomplexchooserengine_8hpp.html">ql/experimental/exoticoptions/analyticcomplexchooserengine.hpp</a></code>, <code><a class="el" href="../../d3/dff/experimental_2exoticoptions_2analyticeuropeanmargrabeengine_8hpp.html">ql/experimental/exoticoptions/analyticeuropeanmargrabeengine.hpp</a></code>, <code><a class="el" href="../../da/dc1/experimental_2exoticoptions_2analyticcompoundoptionengine_8hpp.html">ql/experimental/exoticoptions/analyticcompoundoptionengine.hpp</a></code>, <code><a class="el" href="../../de/dbb/experimental_2exoticoptions_2simplechooseroption_8hpp.html">ql/experimental/exoticoptions/simplechooseroption.hpp</a></code>, <code><a class="el" href="../../da/d21/experimental_2exoticoptions_2compoundoption_8hpp.html">ql/experimental/exoticoptions/compoundoption.hpp</a></code>, <code><a class="el" href="../../d6/d8e/experimental_2exoticoptions_2analyticamericanmargrabeengine_8hpp.html">ql/experimental/exoticoptions/analyticamericanmargrabeengine.hpp</a></code>, <code><a class="el" href="../../db/d74/experimental_2exoticoptions_2analyticsimplechooserengine_8hpp.html">ql/experimental/exoticoptions/analyticsimplechooserengine.hpp</a></code>, <code><a class="el" href="../../d1/d38/experimental_2exoticoptions_2complexchooseroption_8hpp.html">ql/experimental/exoticoptions/complexchooseroption.hpp</a></code>, <code><a class="el" href="../../d1/dbc/multicurvesensitivities_8hpp.html">ql/experimental/termstructures/multicurvesensitivities.hpp</a></code>, <code><a class="el" href="../../d1/d90/shoutcondition_8hpp.html">ql/methods/finitedifferences/shoutcondition.hpp</a></code>, <code><a class="el" href="../../d9/d6a/pdeshortrate_8hpp.html">ql/methods/finitedifferences/pdeshortrate.hpp</a></code>, <code><a class="el" href="../../da/da8/fddividendengine_8hpp.html">ql/pricingengines/vanilla/fddividendengine.hpp</a></code>, <code><a class="el" href="../../d5/de5/fdstepconditionengine_8hpp.html">ql/pricingengines/vanilla/fdstepconditionengine.hpp</a></code>, <code><a class="el" href="../../df/dcc/fdconditions_8hpp.html">ql/pricingengines/vanilla/fdconditions.hpp</a></code> and <code><a class="el" href="../../d1/d6c/duffsdeviceinnerproduct_8hpp.html">ql/models/marketmodels/duffsdeviceinnerproduct.hpp</a></code>.</li>
 </ul>
 <p >Thanks go also to Jonathan Sweemer, Ralf Konrad, Klaus Spanderen, Peter Caspers, Tom Anderson, Fredrik Gerdin Börjesson, Guillaume Horel and the XAD team for a number of smaller fixes and improvements.</p>
 <p ><b>Release 1.31.1 - July 24th, 2023</b></p>
@@ -144,7 +241,7 @@ $(function() {
 <li>A number of Boost classes and functions only used internally were replaced by their standard-library equivalent; thanks to Jonathan Sweemer.</li>
 </ul>
 <p >PATTERNS</p><ul>
-<li><b>Optional change of behavior:</b> by default, the <code>LazyObject</code> class forwards only one notification after recalculating and silently ignores the others. In some edge cases, this could lead to objects not being updated. It's now possible to enable a different behavior where all notifications are forwarded; the new behavior can be chosen at compile time via the configure option <code>--disable-faster-lazy-objects</code> (or disabling <code>QL_FASTER_LAZY_OBJECTS</code> in cmake or <code><a class="el" href="../../df/dbb/userconfig_8hpp_source.html">userconfig.hpp</a></code>) or at run time by calling <code>LazyObject::Defaults::instance().alwaysForwardNotifications()</code>. This might cause a slow down, so you're invited to try it out and report on the mailing list. If there are no problems, the new behavior might become the default in future releases. Also, a new configure option <code>--enable-throwing-in-cycles</code> (<code>QL_THROW_IN_CYCLES</code> in cmake or <code><a class="el" href="../../df/dbb/userconfig_8hpp_source.html">userconfig.hpp</a></code>) is optionally available; when both this option and the new behavior are enabled, notifications cycles involving a lazy object will throw an exception. It is suggested to try enabling the option and removing such loops, if any. Thanks to Peter Caspers for the change and to Ralf Konrad, Jonathan Sweemer and GitHub user <code>djkrystul</code> for feedback.</li>
+<li><b>Optional change of behavior:</b> by default, the <code>LazyObject</code> class forwards only one notification after recalculating and silently ignores the others. In some edge cases, this could lead to objects not being updated. It's now possible to enable a different behavior where all notifications are forwarded; the new behavior can be chosen at compile time via the configure option <code>--disable-faster-lazy-objects</code> (or disabling <code>QL_FASTER_LAZY_OBJECTS</code> in cmake or <code><a class="el" href="../../df/dbb/userconfig_8hpp.html">userconfig.hpp</a></code>) or at run time by calling <code>LazyObject::Defaults::instance().alwaysForwardNotifications()</code>. This might cause a slow down, so you're invited to try it out and report on the mailing list. If there are no problems, the new behavior might become the default in future releases. Also, a new configure option <code>--enable-throwing-in-cycles</code> (<code>QL_THROW_IN_CYCLES</code> in cmake or <code><a class="el" href="../../df/dbb/userconfig_8hpp.html">userconfig.hpp</a></code>) is optionally available; when both this option and the new behavior are enabled, notifications cycles involving a lazy object will throw an exception. It is suggested to try enabling the option and removing such loops, if any. Thanks to Peter Caspers for the change and to Ralf Konrad, Jonathan Sweemer and GitHub user <code>djkrystul</code> for feedback.</li>
 </ul>
 <p >DATE/TIME</p><ul>
 <li><b>Change of behavior:</b> when the end-of-month option is true, the constructor of a schedule no longer adjust to the end of their month the effective date and the termination date if they were passed explicitly. Thanks to Hristo Raykov.</li>
@@ -352,7 +449,7 @@ $(function() {
 <p >Thanks go also to Konstantin Novitsky, Peter Caspers, Klaus Spanderen, Fredrik Gerdin Börjesson and Dirk Eddelbuettel for a number of smaller fixes, and to Jonathan Sweemer for various improvements to the automated CI builds.</p>
 <p ><b>Release 1.27.1 - August 30th, 2022</b></p>
 <p ><a class="el" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> 1.27.1 is a bug-fix release.</p>
-<p >It restores the old implementation of <code>Null&lt;T&gt;</code> which was replaced in version 1.27 with a new one; the latter was reported to cause an internal compiler error under Visual C++ 2022 for some client code. The new version (which avoids some problems when replacing <code>Real</code> with some AAD-enabled types) is still available; depending on how you compile <a class="el" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a>, it can be enabled through the <code>--enable-null-as-functions</code> configure flag, the cmake variable <code>QL_NULL_AS_FUNCTIONS</code>, or the define with the same name in the <code><a class="el" href="../../df/dbb/userconfig_8hpp_source.html">ql/userconfig.hpp</a></code> header.</p>
+<p >It restores the old implementation of <code>Null&lt;T&gt;</code> which was replaced in version 1.27 with a new one; the latter was reported to cause an internal compiler error under Visual C++ 2022 for some client code. The new version (which avoids some problems when replacing <code>Real</code> with some AAD-enabled types) is still available; depending on how you compile <a class="el" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a>, it can be enabled through the <code>--enable-null-as-functions</code> configure flag, the cmake variable <code>QL_NULL_AS_FUNCTIONS</code>, or the define with the same name in the <code><a class="el" href="../../df/dbb/userconfig_8hpp.html">ql/userconfig.hpp</a></code> header.</p>
 <p ><b>Release 1.27 - July 22nd, 2022</b></p>
 <p >PORTABILITY</p><ul>
 <li><b>Removed support:</b> as announced in the notes for the previous release, support for Visual Studio 2013 was dropped.</li>
@@ -395,7 +492,7 @@ $(function() {
 <li>the <code>FDStepConditionEngine</code> and <code>FDEngineAdapter</code> classes.</li>
 </ul>
 </li>
-<li>Deprecated a number of function objects in the <code><a class="el" href="../../d1/d94/math_2functional_8hpp_source.html">ql/math/functional.hpp</a></code> header.</li>
+<li>Deprecated a number of function objects in the <code><a class="el" href="../../d1/d94/math_2functional_8hpp.html" title="functionals and combinators not included in the STL">ql/math/functional.hpp</a></code> header.</li>
 <li>Deprecated the unused <code>MultiCurveSensitivities</code> class.</li>
 <li>Deprecated the unused <code>inner_product</code> function.</li>
 </ul>
@@ -405,7 +502,7 @@ $(function() {
 <li><b>End of support:</b> as announced in the notes for the previous release, this release is the last to support Visual Studio 2013.</li>
 <li><b>End of support:</b> this release is the last to support the long-deprecated configure switches <code>--enable-disposable</code> and <code>--enable-std-unique-ptr</code>. From the next release, <code>Disposable</code> will always be disabled (and eventually removed) and <code>std::unique_ptr</code> will always be used instead of <code>std::auto_ptr</code>. This has already been the default in the last few releases.</li>
 <li><b>Future end of support:</b> this release and the next will be the last to avoid C++14 syntax. This should still support most compilers released in the past several years (except for Visual Studio 2013, which we're already dropping in this release).</li>
-<li>If tagged libraries are specified, as is the default on Windows, CMake now gives the built libraries the same names as the Visual Studio solution (for instance, <code>QuantLib-x64-mt-s</code> instead of <code>QuantLib-mt-s-x64</code>) so that the pragma in <code><a class="el" href="../../d7/dbf/auto__link_8hpp_source.html">ql/auto_link.hpp</a></code> works.</li>
+<li>If tagged libraries are specified, as is the default on Windows, CMake now gives the built libraries the same names as the Visual Studio solution (for instance, <code>QuantLib-x64-mt-s</code> instead of <code>QuantLib-mt-s-x64</code>) so that the pragma in <code><a class="el" href="../../d7/dbf/auto__link_8hpp.html">ql/auto_link.hpp</a></code> works.</li>
 <li><a class="el" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> can now also be built as a subproject in a larger CMake build (thanks to Peter Caspers).</li>
 </ul>
 <p >DATE/TIME</p><ul>
@@ -629,7 +726,7 @@ $(function() {
 <p ><b>Release 1.20 - October 26th, 2020</b></p>
 <p >PORTABILITY</p><ul>
 <li>Support for Visual C++ 2012 is being deprecated. It will be dropped after the next release in order to enable use of C++11 features.</li>
-<li>It is now possible to opt into using <code>std::tuple</code> instead of <code>boost::tuple</code> when the compiler allows it. The default is still to use the Boost implementation. The feature can be enabled by uncommenting the <code>QL_USE_STD_TUPLE</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp_source.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-std-tuple</code> switch to <code>./configure</code> on other systems. The <code>--enable-std-tuple</code> switch is also implied by <code>--enable-std-classes</code>. (Thanks to Joseph Wang.)</li>
+<li>It is now possible to opt into using <code>std::tuple</code> instead of <code>boost::tuple</code> when the compiler allows it. The default is still to use the Boost implementation. The feature can be enabled by uncommenting the <code>QL_USE_STD_TUPLE</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-std-tuple</code> switch to <code>./configure</code> on other systems. The <code>--enable-std-tuple</code> switch is also implied by <code>--enable-std-classes</code>. (Thanks to Joseph Wang.)</li>
 </ul>
 <p >INSTRUMENTS</p><ul>
 <li>Added mixing-factor parameter to Heston finite-differences barrier, rebate and double-barrier engines (thanks to GitHub user <code>jackgillett101</code>).</li>
@@ -840,7 +937,7 @@ $(function() {
 <li>Added multi-curve bootstrapping example (thanks to Jose Garcia). This examples supersedes the old swap-valuation example, that was therefore removed.</li>
 </ul>
 <p >NEW OPT-IN FEATURES</p><ul>
-<li>It is now possible to use <code>std::function</code>, <code>std::bind</code> and their related classes instead of <code>boost::function</code> and <code>boost::bind</code>. The feature can be enabled by uncommenting the <code>QL_USE_STD_FUNCTION</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp_source.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-std-function</code> to <code>./configure</code> on other systems. This requires using at least the C++11 standard during compilation.</li>
+<li>It is now possible to use <code>std::function</code>, <code>std::bind</code> and their related classes instead of <code>boost::function</code> and <code>boost::bind</code>. The feature can be enabled by uncommenting the <code>QL_USE_STD_FUNCTION</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-std-function</code> to <code>./configure</code> on other systems. This requires using at least the C++11 standard during compilation.</li>
 <li>A new <code>./configure</code> switch, <code>--enable-std-classes</code>, was added as a shortcut for <code>--enable-std-pointers</code> <code>--enable-std-unique-ptr</code> <code>--enable-std-function</code>.</li>
 </ul>
 <p ><b>Release 1.14 - October 1st, 2018</b></p>
@@ -882,8 +979,8 @@ $(function() {
 <li>Fixed bug in convex-monotone interpolation (thanks to Peter Caspers for the fix and to Tom Anderson for finding the bug).</li>
 </ul>
 <p >NEW OPT-IN FEATURES</p><ul>
-<li>It is now possible to use <code>std::shared_ptr</code> and its related classes instead of <code>boost::shared_ptr</code>. Note that, unlike its boost counterpart, <code>std::shared_ptr</code> doesn't check for null pointers before access; this can lead to crashes. The feature can be enabled by uncommenting the <code>QL_USE_STD_SHARED_PTR</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp_source.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-std-pointers</code> to <code>./configure</code> on other systems. This requires using at least the C++11 standard during compilation.</li>
-<li>It is now possible to use <code>std::unique_ptr</code> instead of <code>std::auto_ptr</code>; this makes it possible to compile the library in strict C++17 mode and to avoid deprecation warnings in C++11 and C++14 mode. The feature can be enabled by uncommenting the <code>QL_USE_STD_UNIQUE_PTR</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp_source.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-std-unique-ptr</code> to <code>./configure</code> on other systems.</li>
+<li>It is now possible to use <code>std::shared_ptr</code> and its related classes instead of <code>boost::shared_ptr</code>. Note that, unlike its boost counterpart, <code>std::shared_ptr</code> doesn't check for null pointers before access; this can lead to crashes. The feature can be enabled by uncommenting the <code>QL_USE_STD_SHARED_PTR</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-std-pointers</code> to <code>./configure</code> on other systems. This requires using at least the C++11 standard during compilation.</li>
+<li>It is now possible to use <code>std::unique_ptr</code> instead of <code>std::auto_ptr</code>; this makes it possible to compile the library in strict C++17 mode and to avoid deprecation warnings in C++11 and C++14 mode. The feature can be enabled by uncommenting the <code>QL_USE_STD_UNIQUE_PTR</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-std-unique-ptr</code> to <code>./configure</code> on other systems.</li>
 </ul>
 <p >Thanks go also to Sam Danbury, Barry Devlin, Roland Kapl, and GitHub user todatamining for smaller fixes, enhancements, and bug reports.</p>
 <p ><b>Release 1.13 - May 24th, 2018</b></p>
@@ -1077,7 +1174,7 @@ $(function() {
 <p ><b>Release 1.9.1 - January 5th, 2017</b></p>
 <p >QuantLib 1.9.1 is a bug-fix release for version 1.9.</p>
 <ul>
-<li>Prevented a linking error when multiple compilation units included the global <a class="el" href="../../d4/dae/quantlib_8hpp_source.html">ql/quantlib.hpp</a> header (thanks to Dirk Eddelbuettel).</li>
+<li>Prevented a linking error when multiple compilation units included the global <a class="el" href="../../d4/dae/quantlib_8hpp.html">ql/quantlib.hpp</a> header (thanks to Dirk Eddelbuettel).</li>
 <li>Prevented a compilation error with gcc 4.4 on RedHat (thanks to GitHub user aloupos for the heads-up).</li>
 <li>Prevented a compilation error with the parallel unit runner and the recently released Boost 1.63.0.</li>
 </ul>
@@ -1108,7 +1205,7 @@ $(function() {
 </ul>
 <p >NEW OPT-IN FEATURES</p>
 <p >These features are disabled by default and can be enabled by defining a macro or passing a flag to <code>./configure</code>. Feedback is appreciated.</p><ul>
-<li>Enable thread-safe singleton initialization (thanks to GitHub user sdgit). The feature can be enabled by uncommenting the <code>QL_ENABLE_SINGLETON_THREAD_SAFE_INIT</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp_source.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-thread-safe-singleton-init</code> to <code>./configure</code> on other systems.</li>
+<li>Enable thread-safe singleton initialization (thanks to GitHub user sdgit). The feature can be enabled by uncommenting the <code>QL_ENABLE_SINGLETON_THREAD_SAFE_INIT</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-thread-safe-singleton-init</code> to <code>./configure</code> on other systems.</li>
 </ul>
 <p >EXPERIMENTAL FOLDER</p>
 <p >The <code>ql/experimental</code> folder contains code whose interface is not fully stable, but is released in order to get user feedback. Experimental classes make no guarantees of backward compatibility; their interfaces might change in future releases.</p>
@@ -1171,7 +1268,7 @@ $(function() {
 </div><!-- fragment --> (Thanks to Peter Caspers.)</li>
 </ul>
 <p >NEW OPT-IN FEATURES</p><ul>
-<li>Added a parallel unit-test runner (thanks to Klaus Spanderen). This was successfully used under Linux, but problems were reported on Mac OS X and occasionally on Visual C++ 2010. The feature requires Boost 1.59 or later and can be enabled by uncommenting the <code>QL_ENABLE_PARALLEL_UNIT_TEST_RUNNER</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp_source.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-parallel-unit-test-runner</code> to <code>./configure</code> on other systems.</li>
+<li>Added a parallel unit-test runner (thanks to Klaus Spanderen). This was successfully used under Linux, but problems were reported on Mac OS X and occasionally on Visual C++ 2010. The feature requires Boost 1.59 or later and can be enabled by uncommenting the <code>QL_ENABLE_PARALLEL_UNIT_TEST_RUNNER</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-parallel-unit-test-runner</code> to <code>./configure</code> on other systems.</li>
 </ul>
 <p >EXPERIMENTAL FOLDER</p><ul>
 <li>Stochastic local-volatility Heston model, (thanks to Klaus Spanderen and Johannes Göttker-Schnetmann). Both a Monte Carlo and a finite-difference calibration and calculation are provided.</li>
@@ -1230,8 +1327,8 @@ $(function() {
 <li>Added Goldstein line-search method (thanks to Cheng Li).</li>
 </ul>
 <p >NEW OPT-IN FEATURES</p><ul>
-<li>Added intraday component to dates (thanks to Klaus Spanderen). Date specifications now include hours, minutes, seconds, milliseconds and microseconds. Day counters are aware of the added data and include them in results. The feature can be enabled by uncommenting the <code>QL_HIGH_RESOLUTION_DATE</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp_source.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-intraday</code> flag to <code>./configure</code> on other systems.</li>
-<li>Added thread-safe implementation of the Observer pattern (thanks to Klaus Spanderen). This can be used to avoid crashes when using QuantLib from languages (such as C# or Java) that run a garbage collector in a separate thread. The feature requires Boost 1.58 or later and can be enabled by uncommenting the <code>QL_ENABLE_THREAD_SAFE_OBSERVER_PATTERN</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp_source.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-thread-safe-observer-pattern</code> to <code>./configure</code> on other systems.</li>
+<li>Added intraday component to dates (thanks to Klaus Spanderen). Date specifications now include hours, minutes, seconds, milliseconds and microseconds. Day counters are aware of the added data and include them in results. The feature can be enabled by uncommenting the <code>QL_HIGH_RESOLUTION_DATE</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-intraday</code> flag to <code>./configure</code> on other systems.</li>
+<li>Added thread-safe implementation of the Observer pattern (thanks to Klaus Spanderen). This can be used to avoid crashes when using QuantLib from languages (such as C# or Java) that run a garbage collector in a separate thread. The feature requires Boost 1.58 or later and can be enabled by uncommenting the <code>QL_ENABLE_THREAD_SAFE_OBSERVER_PATTERN</code> macro in <code><a class="el" href="../../df/dbb/userconfig_8hpp.html">ql/userconfig.hpp</a></code> on Visual C++ or by passing the <code>--enable-thread-safe-observer-pattern</code> to <code>./configure</code> on other systems.</li>
 </ul>
 <p ><b>Release 1.6.2 - September 2015</b></p>
 <p >QuantLib 1.6.2 is a compatibility release. It solves an ambiguous name resolution in the test-suite code when Visual Studio and the newly released Boost 1.59.0 are used together.</p>
@@ -1929,7 +2026,7 @@ $(function() {
 <li>Version 0.8.0 is the last QuantLib release to support the Metrowerks CodeWarrior compiler (which was discountinued by Metrowerks.) If you use such compiler and want support to continue, you can volunteer for maintaining the necessary patches: contact the QuantLib developers for information.</li>
 </ul>
 <p >SOURCE TREE</p><ul>
-<li>Files and folders in the source tree have been reorganized (hopefully for th ebetter.) If you only included &lt;<a class="el" href="../../d4/dae/quantlib_8hpp_source.html">ql/quantlib.hpp</a>&gt;, all changes were taken care of for you. if you included specific headers, you might want to check its current location; in particular, all folder names are now lowercase.</li>
+<li>Files and folders in the source tree have been reorganized (hopefully for th ebetter.) If you only included &lt;<a class="el" href="../../d4/dae/quantlib_8hpp.html">ql/quantlib.hpp</a>&gt;, all changes were taken care of for you. if you included specific headers, you might want to check its current location; in particular, all folder names are now lowercase.</li>
 </ul>
 <p >CALENDARS</p><ul>
 <li>Added 2007 holidays for Indonesia, Saudi Arabia, and South Korea calendars.</li>
@@ -2140,7 +2237,10 @@ $(function() {
 <li>QL_SQRT, QL_MIN etc. deprecated in favor of std::sqrt, std::min...</li>
 <li>Added a tentative tracing facility to ease debugging.</li>
 <li>Formatters deprecated in favor of output manipulators. A number of data types can now be sent directly to output streams.</li>
-<li>Stream-based implementation of QL_REQUIRE, QL_TRACE and similar macros. Together with manipulators, this allows one to write simpler error messages, as in: <div class="fragment"><div class="line">QL_FAIL(<span class="stringliteral">&quot;forward at date &quot;</span> &lt;&lt; d &lt;&lt; <span class="stringliteral">&quot; is &quot;</span> &lt;&lt; io::rate(f));</div>
+<li>Stream-based implementation of QL_REQUIRE, QL_TRACE and similar macros. Together with manipulators, this allows one to write simpler error messages, as in: <div class="fragment"><div class="line"><a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;forward at date &quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a> &lt;&lt; <span class="stringliteral">&quot; is &quot;</span> &lt;&lt; io::rate(<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>));</div>
+<div class="ttc" id="adefaultdensitystructure_8cpp_html_ae19b4006a311a298a93a5cd06a7cb0e7"><div class="ttname"><a href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a></div><div class="ttdeci">F f</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d93/defaultdensitystructure_8cpp_source.html#l00032">defaultdensitystructure.cpp:32</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a8efe9cb3e67c8d0585e57b4d53c5d2fe"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a></div><div class="ttdeci">#define QL_FAIL(message)</div><div class="ttdoc">throw an error (possibly with file and line information)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00092">errors.hpp:92</a></div></div>
+<div class="ttc" id="aexchangeratemanager_8cpp_html_a85641069b0d4478ab8a7356c3bf32ea3"><div class="ttname"><a href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a></div><div class="ttdeci">Date d</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/exchangeratemanager_8cpp_source.html#l00032">exchangeratemanager.cpp:32</a></div></div>
 </div><!-- fragment --></li>
 </ul>
 <p >INSTRUMENTS</p><ul>
@@ -2278,7 +2378,7 @@ $(function() {
 <p >Bug-fix release for QuantLib 0.3.5. A bug was removed where calls to impliedVolatility() would break the state of the option and of all options sharing the same stochastic process.</p>
 <p ><b>Release 0.3.5 - March 31th, 2004</b></p>
 <p >BOOST SUPPORT</p><ul>
-<li>When available, QuantLib 0.3.5 now uses parts of the Boost library. The presence of Boost is detected automatically under Unix/Linux systems; on Windows systems, it must be enabled by uncommenting the relevant line in <a class="el" href="../../df/dbb/userconfig_8hpp_source.html">ql/userconfig.hpp</a>.</li>
+<li>When available, QuantLib 0.3.5 now uses parts of the Boost library. The presence of Boost is detected automatically under Unix/Linux systems; on Windows systems, it must be enabled by uncommenting the relevant line in <a class="el" href="../../df/dbb/userconfig_8hpp.html">ql/userconfig.hpp</a>.</li>
 <li>In the next QuantLib release, the presence of the Boost library will be mandatory.</li>
 </ul>
 <p >MONTE CARLO FRAMEWORK</p><ul>

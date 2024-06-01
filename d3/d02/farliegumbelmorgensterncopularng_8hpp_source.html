@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/math/farliegumbelmorgensterncopularng.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/math/farliegumbelmorgensterncopularng.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">farliegumbelmorgensterncopularng.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d3/d02/farliegumbelmorgensterncopularng_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2010 Hachemi Benyahia</span></div>
@@ -106,23 +105,28 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file farliegumbelmorgensterncopularng.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief Farlie-Gumbel-Morgenstern copula random-number generator</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_farlie_gumbel_morgenstern_copula_rng_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_farlie_gumbel_morgenstern_copula_rng_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/methods/montecarlo/sample.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/errors.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de9/sample_8hpp.html">ql/methods/montecarlo/sample.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d52/errors_8hpp.html">ql/errors.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> RNG&gt;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    //! Farlie-Gumbel-Morgenstern copula random-number generator</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> RNG&gt;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html">   36</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html">FarlieGumbelMorgensternCopulaRng</a> {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#af3b59a3dd56521693efc68c221a2bf38">   38</a></span>        <span class="keyword">typedef</span> <a class="code hl_struct" href="../../d4/da1/struct_quant_lib_1_1_sample.html">Sample&lt;std::vector&lt;Real&gt;</a> &gt; <a class="code hl_typedef" href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#af3b59a3dd56521693efc68c221a2bf38">sample_type</a>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#abf33bf876d7887a0d4a55f3d3ebba7ba">   39</a></span>        <span class="keyword">typedef</span> RNG <a class="code hl_typedef" href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#abf33bf876d7887a0d4a55f3d3ebba7ba">urng_type</a>;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html">FarlieGumbelMorgensternCopulaRng</a>(<span class="keyword">const</span> RNG&amp; uniformGenerator,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                                  <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> theta);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                                  <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#a2c52330fe605e3d67b38b448db51a49c">theta</a>);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_class" href="../../d4/da1/struct_quant_lib_1_1_sample.html">sample_type</a> <a class="code hl_function" href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#a8ba60353028230348cfc0e39b877e5d7">next</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#a5ca0ebc8ec96d11c5542cd549f01db16">   44</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#a5ca0ebc8ec96d11c5542cd549f01db16">theta_</a>;</div>
@@ -132,8 +136,8 @@ $(function() {
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> RNG&gt;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#a17bb1ad743439a304ed64de9e6892b75">   49</a></span>    <a class="code hl_function" href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#a17bb1ad743439a304ed64de9e6892b75">FarlieGumbelMorgensternCopulaRng&lt;RNG&gt;::FarlieGumbelMorgensternCopulaRng</a>(</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                                                       <span class="keyword">const</span> RNG&amp; ug, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> th)</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    : uniformGenerator_(ug), theta_(th) {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        QL_REQUIRE(th &gt;= -1.0 &amp;&amp; th &lt;= 1.00,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    : uniformGenerator_(ug), <a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#a5ca0ebc8ec96d11c5542cd549f01db16">theta_</a>(th) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(th &gt;= -1.0 &amp;&amp; th &lt;= 1.00,</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                   <span class="stringliteral">&quot;theta (&quot;</span> &lt;&lt; th &lt;&lt; <span class="stringliteral">&quot;) must be in [-1,1]&quot;</span>);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
@@ -143,9 +147,9 @@ $(function() {
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">typename</span> RNG::sample_type v1 = uniformGenerator_.next();</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">typename</span> RNG::sample_type v2 = uniformGenerator_.next();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> u1 = v1.<a class="code hl_variable" href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4fc7f59e3113e19697159919a5aad095">value</a>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a = theta_*(2.0*u1-1.0);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> b = pow(1.0-theta_*(2.0*u1-1.0),2.0)+4.0*theta_*v2.value*(2.0*u1-1.0);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> u2 = (2.0*v2.value)/(sqrt(b)-a);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> a = <a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#a5ca0ebc8ec96d11c5542cd549f01db16">theta_</a>*(2.0*u1-1.0);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a> = pow(1.0-<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#a5ca0ebc8ec96d11c5542cd549f01db16">theta_</a>*(2.0*u1-1.0),2.0)+4.0*<a class="code hl_variable" href="../../de/d83/analyticvariancegammaengine_8cpp.html#a5ca0ebc8ec96d11c5542cd549f01db16">theta_</a>*v2.value*(2.0*u1-1.0);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> u2 = (2.0*v2.value)/(sqrt(<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a>)-a);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        std::vector&lt;Real&gt; u;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        u.push_back(u1);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        u.push_back(u2);</div>
@@ -156,6 +160,7 @@ $(function() {
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aanalyticvariancegammaengine_8cpp_html_a5ca0ebc8ec96d11c5542cd549f01db16"><div class="ttname"><a href="../../de/d83/analyticvariancegammaengine_8cpp.html#a5ca0ebc8ec96d11c5542cd549f01db16">theta_</a></div><div class="ttdeci">Real theta_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d83/analyticvariancegammaengine_8cpp_source.html#l00075">analyticvariancegammaengine.cpp:75</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng_html"><div class="ttname"><a href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html">QuantLib::FarlieGumbelMorgensternCopulaRng</a></div><div class="ttdoc">Farlie-Gumbel-Morgenstern copula random-number generator.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d02/farliegumbelmorgensterncopularng_8hpp_source.html#l00036">farliegumbelmorgensterncopularng.hpp:36</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng_html_a17bb1ad743439a304ed64de9e6892b75"><div class="ttname"><a href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#a17bb1ad743439a304ed64de9e6892b75">QuantLib::FarlieGumbelMorgensternCopulaRng::FarlieGumbelMorgensternCopulaRng</a></div><div class="ttdeci">FarlieGumbelMorgensternCopulaRng(const RNG &amp;uniformGenerator, Real theta)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d02/farliegumbelmorgensterncopularng_8hpp_source.html#l00049">farliegumbelmorgensterncopularng.hpp:49</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng_html_a5b45866e4fe2a7e4590496cecf387afc"><div class="ttname"><a href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#a5b45866e4fe2a7e4590496cecf387afc">QuantLib::FarlieGumbelMorgensternCopulaRng::uniformGenerator_</a></div><div class="ttdeci">RNG uniformGenerator_</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d02/farliegumbelmorgensterncopularng_8hpp_source.html#l00045">farliegumbelmorgensterncopularng.hpp:45</a></div></div>
@@ -163,8 +168,13 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng_html_a8ba60353028230348cfc0e39b877e5d7"><div class="ttname"><a href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#a8ba60353028230348cfc0e39b877e5d7">QuantLib::FarlieGumbelMorgensternCopulaRng::next</a></div><div class="ttdeci">sample_type next() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d02/farliegumbelmorgensterncopularng_8hpp_source.html#l00058">farliegumbelmorgensterncopularng.hpp:58</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng_html_abf33bf876d7887a0d4a55f3d3ebba7ba"><div class="ttname"><a href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#abf33bf876d7887a0d4a55f3d3ebba7ba">QuantLib::FarlieGumbelMorgensternCopulaRng::urng_type</a></div><div class="ttdeci">RNG urng_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d02/farliegumbelmorgensterncopularng_8hpp_source.html#l00039">farliegumbelmorgensterncopularng.hpp:39</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng_html_af3b59a3dd56521693efc68c221a2bf38"><div class="ttname"><a href="../../db/d1b/class_quant_lib_1_1_farlie_gumbel_morgenstern_copula_rng.html#af3b59a3dd56521693efc68c221a2bf38">QuantLib::FarlieGumbelMorgensternCopulaRng::sample_type</a></div><div class="ttdeci">Sample&lt; std::vector&lt; Real &gt; &gt; sample_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d02/farliegumbelmorgensterncopularng_8hpp_source.html#l00038">farliegumbelmorgensterncopularng.hpp:38</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html"><div class="ttname"><a href="../../df/d52/errors_8hpp.html">errors.hpp</a></div><div class="ttdoc">Classes and functions for error handling.</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aextendedornsteinuhlenbeckprocess_8cpp_html_a1759c348ed007f12d79ceff98cc3abbe"><div class="ttname"><a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a1759c348ed007f12d79ceff98cc3abbe">b</a></div><div class="ttdeci">ext::function&lt; Real(Real)&gt; b</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp_source.html#l00030">extendedornsteinuhlenbeckprocess.cpp:30</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
+<div class="ttc" id="ahestonrndcalculator_8cpp_html_a2c52330fe605e3d67b38b448db51a49c"><div class="ttname"><a href="../../d2/d3a/hestonrndcalculator_8cpp.html#a2c52330fe605e3d67b38b448db51a49c">theta</a></div><div class="ttdeci">Real theta</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3a/hestonrndcalculator_8cpp_source.html#l00036">hestonrndcalculator.cpp:36</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="asample_8hpp_html"><div class="ttname"><a href="../../d5/de9/sample_8hpp.html">sample.hpp</a></div><div class="ttdoc">weighted sample</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_sample_html"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html">QuantLib::Sample</a></div><div class="ttdoc">weighted sample</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00035">sample.hpp:35</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_sample_html_a4fc7f59e3113e19697159919a5aad095"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html#a4fc7f59e3113e19697159919a5aad095">QuantLib::Sample::value</a></div><div class="ttdeci">T value</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00039">sample.hpp:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

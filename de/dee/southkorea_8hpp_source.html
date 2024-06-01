@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/time/calendars/southkorea.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/time/calendars/southkorea.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">southkorea.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../de/dee/southkorea_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2004 FIMAT Group</span></div>
@@ -108,15 +107,61 @@ $(function() {
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"></span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">/*! \file southkorea.hpp</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">    \brief South Korean calendars</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#ifndef quantlib_south_korean_calendar_hpp</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define quantlib_south_korean_calendar_hpp</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/time/calendar.hpp&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d39/calendar_8hpp.html">ql/time/calendar.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    //! South Korean calendars</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span><span class="comment">    /*! Public holidays:</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        &lt;ul&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        &lt;li&gt;Saturdays&lt;/li&gt;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        &lt;li&gt;Sundays&lt;/li&gt;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">        &lt;li&gt;New Year&#39;s Day, January 1st&lt;/li&gt;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">        &lt;li&gt;Independence Day, March 1st&lt;/li&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        &lt;li&gt;Arbour Day, April 5th (until 2005)&lt;/li&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        &lt;li&gt;Labour Day, May 1st&lt;/li&gt;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        &lt;li&gt;Children&#39;s Day, May 5th&lt;/li&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        &lt;li&gt;Memorial Day, June 6th&lt;/li&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        &lt;li&gt;Constitution Day, July 17th (until 2007)&lt;/li&gt;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">        &lt;li&gt;Liberation Day, August 15th&lt;/li&gt;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        &lt;li&gt;National Fondation Day, October 3th&lt;/li&gt;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">        &lt;li&gt;Hangeul Day, October 9th (from 2013)&lt;/li&gt;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">        &lt;li&gt;Christmas Day, December 25th&lt;/li&gt;</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">        &lt;/ul&gt;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment"></span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        Other holidays for which no rule is given</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">        (data available for 2004-2050 only:)</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">        &lt;ul&gt;</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">        &lt;li&gt;Lunar New Year, the last day of the previous lunar year&lt;/li&gt;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">        &lt;li&gt;Election Days&lt;/li&gt;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">        &lt;li&gt;National Assemblies&lt;/li&gt;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">        &lt;li&gt;Presidency&lt;/li&gt;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">        &lt;li&gt;Regional Election Days&lt;/li&gt;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">        &lt;li&gt;Buddha&#39;s birthday&lt;/li&gt;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">        &lt;li&gt;Harvest Moon Day&lt;/li&gt;</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">        &lt;/ul&gt;</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment"></span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">        Holidays for the Korea exchange</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">        (data from</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">        &lt;http://eng.krx.co.kr/&gt; or</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">        &lt;http://www.dooriworld.com/daishin/holiday/holiday.html&gt;</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">        &lt;https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B4%80%EA%B3%B5%EC%84%9C%EC%9D%98%20%EA%B3%B5%ED%9C%B4%EC%9D%BC%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%A0%95&gt;):</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">        &lt;ul&gt;</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">        &lt;li&gt;Public holidays as listed above&lt;/li&gt;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">        &lt;li&gt;Year-end closing&lt;/li&gt;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">        &lt;li&gt;Occasional closing days&lt;/li&gt;</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">        &lt;/ul&gt;</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment"></span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">        \ingroup calendars</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../dc/da5/class_quant_lib_1_1_south_korea.html">   77</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/da5/class_quant_lib_1_1_south_korea.html">SouthKorea</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="../../df/d5c/class_quant_lib_1_1_south_korea_1_1_settlement_impl.html">   79</a></span>        <span class="keyword">class </span><a class="code hl_class" href="../../df/d5c/class_quant_lib_1_1_south_korea_1_1_settlement_impl.html">SettlementImpl</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d5/df3/class_quant_lib_1_1_calendar_1_1_impl.html">Calendar::Impl</a> {</div>
@@ -131,8 +176,8 @@ $(function() {
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d8/d11/class_quant_lib_1_1_south_korea_1_1_krx_impl.html#a0850bb5ce5d116ab4bd209e4e608e06f">isBusinessDay</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp;) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        };</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="../../dc/da5/class_quant_lib_1_1_south_korea.html#abe41cfffd960e29a5d8b07be00aeda42">   91</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../dc/da5/class_quant_lib_1_1_south_korea.html#abe41cfffd960e29a5d8b07be00aeda42">Market</a> { <a class="code hl_enumvalue" href="../../dc/da5/class_quant_lib_1_1_south_korea.html#abe41cfffd960e29a5d8b07be00aeda42a6f0faf2bdd3a1f7cf69bcd9164150be8">Settlement</a>,  </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                      <a class="code hl_enumvalue" href="../../dc/da5/class_quant_lib_1_1_south_korea.html#abe41cfffd960e29a5d8b07be00aeda42a27eb21ee5297bb50ae0947b93b24d449">KRX</a>          </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="../../dc/da5/class_quant_lib_1_1_south_korea.html#abe41cfffd960e29a5d8b07be00aeda42">   91</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../dc/da5/class_quant_lib_1_1_south_korea.html#abe41cfffd960e29a5d8b07be00aeda42">Market</a> { <a class="code hl_enumvalue" href="../../dc/da5/class_quant_lib_1_1_south_korea.html#abe41cfffd960e29a5d8b07be00aeda42a6f0faf2bdd3a1f7cf69bcd9164150be8">Settlement</a>,  <span class="comment">//!&lt; Public holidays</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                      <a class="code hl_enumvalue" href="../../dc/da5/class_quant_lib_1_1_south_korea.html#abe41cfffd960e29a5d8b07be00aeda42a27eb21ee5297bb50ae0947b93b24d449">KRX</a>          <span class="comment">//!&lt; Korea exchange</span></div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="../../dc/da5/class_quant_lib_1_1_south_korea.html#abe41cfffd960e29a5d8b07be00aeda42a27eb21ee5297bb50ae0947b93b24d449">   93</a></span>        };</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_class" href="../../dc/da5/class_quant_lib_1_1_south_korea.html">SouthKorea</a>(<a class="code hl_enumeration" href="../../dc/da5/class_quant_lib_1_1_south_korea.html#abe41cfffd960e29a5d8b07be00aeda42">Market</a> m = <a class="code hl_enumvalue" href="../../dc/da5/class_quant_lib_1_1_south_korea.html#abe41cfffd960e29a5d8b07be00aeda42a27eb21ee5297bb50ae0947b93b24d449">KRX</a>);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    };</div>
@@ -141,6 +186,7 @@ $(function() {
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acalendar_8hpp_html"><div class="ttname"><a href="../../dc/d39/calendar_8hpp.html">calendar.hpp</a></div><div class="ttdoc">calendar class</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_1_1_impl_html"><div class="ttname"><a href="../../d5/df3/class_quant_lib_1_1_calendar_1_1_impl.html">QuantLib::Calendar::Impl</a></div><div class="ttdoc">abstract base class for calendar implementations</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00064">calendar.hpp:64</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html">QuantLib::Calendar</a></div><div class="ttdoc">calendar class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00061">calendar.hpp:61</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>

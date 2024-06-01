@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/cashflows/digitaliborcoupon.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/cashflows/digitaliborcoupon.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">digitaliborcoupon.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d5/d23/digitaliborcoupon_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">  Copyright (C) 2007 Cristina Duminuco</span></div>
@@ -108,8 +107,8 @@ $(function() {
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/cashflows/cashflowvectors.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/cashflows/digitaliborcoupon.hpp&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/d4f/cashflowvectors_8hpp.html">ql/cashflows/cashflowvectors.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d64/digitaliborcoupon_8hpp.html">ql/cashflows/digitaliborcoupon.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
@@ -130,13 +129,13 @@ $(function() {
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    callDigitalPayoff, putStrike, putPosition,</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                    isPutATMIncluded, putDigitalPayoff, replication, nakedOption) {}</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d2/d3f/class_quant_lib_1_1_digital_ibor_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d3f/class_quant_lib_1_1_digital_ibor_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">DigitalIborCoupon::accept</a>(<a class="code hl_class" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp; v) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d2/d3f/class_quant_lib_1_1_digital_ibor_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d3f/class_quant_lib_1_1_digital_ibor_coupon.html#a6fcc1b62510947fbc30b2952fff63c2d">DigitalIborCoupon::accept</a>(<a class="code hl_class" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp; <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>) {</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">typedef</span> <a class="code hl_class" href="../../d5/dfa/class_quant_lib_1_1_digital_coupon.html">DigitalCoupon</a> super;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">auto</span>* v1 = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d6/d87/class_quant_lib_1_1_visitor.html">Visitor&lt;DigitalIborCoupon&gt;</a>*<span class="keyword">&gt;</span>(&amp;v);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">auto</span>* v1 = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d6/d87/class_quant_lib_1_1_visitor.html">Visitor&lt;DigitalIborCoupon&gt;</a>*<span class="keyword">&gt;</span>(&amp;<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span> (v1 != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            v1-&gt;<a class="code hl_function" href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">visit</a>(*<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            super::accept(v);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            super::accept(<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
@@ -225,8 +224,8 @@ $(function() {
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#ad9f267c127e4923a66da8ef9abb2fc67">  139</a></span>    <a class="code hl_class" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html">DigitalIborLeg</a>&amp; <a class="code hl_function" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#ad9f267c127e4923a66da8ef9abb2fc67">DigitalIborLeg::withCallPayoffs</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> payoff) {</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <a class="code hl_variable" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#a774a7ff60d89364c8ab4e8423cd1a324">callPayoffs_</a> = std::vector&lt;Rate&gt;(1,payoff);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#ad9f267c127e4923a66da8ef9abb2fc67">  139</a></span>    <a class="code hl_class" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html">DigitalIborLeg</a>&amp; <a class="code hl_function" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#ad9f267c127e4923a66da8ef9abb2fc67">DigitalIborLeg::withCallPayoffs</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <a class="code hl_variable" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#a774a7ff60d89364c8ab4e8423cd1a324">callPayoffs_</a> = std::vector&lt;Rate&gt;(1,<a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>);</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
@@ -257,8 +256,8 @@ $(function() {
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#ac5b8de31beeb3550ccf1da95472a3cf4">  171</a></span>    <a class="code hl_class" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html">DigitalIborLeg</a>&amp; <a class="code hl_function" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#ac5b8de31beeb3550ccf1da95472a3cf4">DigitalIborLeg::withPutPayoffs</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> payoff) {</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <a class="code hl_variable" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#ad4f5728682685b3188d1fd660952d52b">putPayoffs_</a> = std::vector&lt;Rate&gt;(1,payoff);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#ac5b8de31beeb3550ccf1da95472a3cf4">  171</a></span>    <a class="code hl_class" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html">DigitalIborLeg</a>&amp; <a class="code hl_function" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#ac5b8de31beeb3550ccf1da95472a3cf4">DigitalIborLeg::withPutPayoffs</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> <a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <a class="code hl_variable" href="../../dc/da3/class_quant_lib_1_1_digital_ibor_leg.html#ad4f5728682685b3188d1fd660952d52b">putPayoffs_</a> = std::vector&lt;Rate&gt;(1,<a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>);</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    }</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
@@ -297,6 +296,7 @@ $(function() {
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>}</div>
+<div class="ttc" id="acashflowvectors_8hpp_html"><div class="ttname"><a href="../../da/d4f/cashflowvectors_8hpp.html">cashflowvectors.hpp</a></div><div class="ttdoc">Cash flow vector builders.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_acyclic_visitor_html"><div class="ttname"><a href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">QuantLib::AcyclicVisitor</a></div><div class="ttdoc">degenerate base class for the Acyclic Visitor pattern</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00033">visitor.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_day_counter_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html">QuantLib::DayCounter</a></div><div class="ttdoc">day counter class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00044">daycounter.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_digital_coupon_html"><div class="ttname"><a href="../../d5/dfa/class_quant_lib_1_1_digital_coupon.html">QuantLib::DigitalCoupon</a></div><div class="ttdoc">Digital-payoff coupon.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da2/digitalcoupon_8hpp_source.html#l00079">digitalcoupon.hpp:79</a></div></div>
@@ -341,14 +341,17 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_schedule_html"><div class="ttname"><a href="../../d5/d5b/class_quant_lib_1_1_schedule.html">QuantLib::Schedule</a></div><div class="ttdoc">Payment schedule.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd1/schedule_8hpp_source.html#l00040">schedule.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_visitor_html"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html">QuantLib::Visitor</a></div><div class="ttdoc">Visitor for a specific class</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00040">visitor.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_visitor_html_a6d7e98e3f298924633a9ba9bf5b04a83"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">QuantLib::Visitor::visit</a></div><div class="ttdeci">virtual void visit(T &amp;)=0</div></div>
+<div class="ttc" id="adigitaliborcoupon_8hpp_html"><div class="ttname"><a href="../../d6/d64/digitaliborcoupon_8hpp.html">digitaliborcoupon.hpp</a></div><div class="ttdoc">Ibor-rate coupon with digital call/put option.</div></div>
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
 <div class="ttc" id="agroup__types_html_gae7427f4743503002b0c6eeeefae91a3d"><div class="ttname"><a href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">QuantLib::Spread</a></div><div class="ttdeci">Real Spread</div><div class="ttdoc">spreads on interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00074">types.hpp:74</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
+<div class="ttc" id="aintegralhestonvarianceoptionengine_8cpp_html_aac80ba3218a14ee2ac65bfc8989a2015"><div class="ttname"><a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a></div><div class="ttdeci">ext::shared_ptr&lt; QuantLib::Payoff &gt; payoff</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp_source.html#l00350">integralhestonvarianceoptionengine.cpp:350</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_afd0d2e08465e4b7e928c75416bd8dc4b"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#afd0d2e08465e4b7e928c75416bd8dc4b">QuantLib::Leg</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; CashFlow &gt; &gt; Leg</div><div class="ttdoc">Sequence of cash-flows.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0e/cashflow_8hpp_source.html#l00078">cashflow.hpp:78</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="aperturbativebarrieroptionengine_8cpp_html_ac58b0f1581c316228a305f7eb7cce633"><div class="ttname"><a href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a></div><div class="ttdeci">ext::shared_ptr&lt; BlackVolTermStructure &gt; v</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de0/perturbativebarrieroptionengine_8cpp_source.html#l01487">perturbativebarrieroptionengine.cpp:1487</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_position_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../d9/d6f/struct_quant_lib_1_1_position.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::Position::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d91/position_8hpp_source.html#l00033">position.hpp:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

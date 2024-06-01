@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/methods/lattices/binomialtree.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/methods/lattices/binomialtree.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">binomialtree.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../db/d89/binomialtree_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2003 Ferdinando Ametrano</span></div>
@@ -107,26 +106,31 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"></span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">/*! \file binomialtree.hpp</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">    \brief Binomial tree class</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef quantlib_binomial_tree_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define quantlib_binomial_tree_hpp</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/methods/lattices/tree.hpp&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/instruments/dividendschedule.hpp&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;ql/stochasticprocess.hpp&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/dfd/tree_8hpp.html">ql/methods/lattices/tree.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d57/dividendschedule_8hpp.html">ql/instruments/dividendschedule.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d96/stochasticprocess_8hpp.html">ql/stochasticprocess.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">    //! Binomial tree base class</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"></span><span class="comment">    /*! \ingroup lattices */</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html">   39</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html">BinomialTree</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d4/d3f/class_quant_lib_1_1_tree.html">Tree</a>&lt;T&gt; {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a617aa1e32f64a3e471e0facc2b9c63f0ac45748c7ad342476d13e14f6632203c1">   41</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a617aa1e32f64a3e471e0facc2b9c63f0">Branches</a> { <a class="code hl_enumvalue" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a617aa1e32f64a3e471e0facc2b9c63f0ac45748c7ad342476d13e14f6632203c1">branches</a> = 2 };</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a617aa1e32f64a3e471e0facc2b9c63f0">   41</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a617aa1e32f64a3e471e0facc2b9c63f0">Branches</a> { <a class="code hl_enumvalue" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a617aa1e32f64a3e471e0facc2b9c63f0ac45748c7ad342476d13e14f6632203c1">branches</a> = 2 };</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a958029f8dc7ab003bebae560e2e7f14f">   42</a></span>        <a class="code hl_function" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a958029f8dc7ab003bebae560e2e7f14f">BinomialTree</a>(<span class="keyword">const</span> ext::shared_ptr&lt;StochasticProcess1D&gt;&amp; process,</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                     <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> end,</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                     <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> steps)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        : <a class="code hl_class" href="../../d4/d3f/class_quant_lib_1_1_tree.html">Tree</a>&lt;T&gt;(steps+1), <a class="code hl_variable" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#afb597b35edab96eecbcbf9a2df04f05d">x0_</a>(process-&gt;x0()), <a class="code hl_variable" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a6be603d8547f31e72817d2aaf219e325">dt_</a>(end/steps) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        : <a class="code hl_class" href="../../d4/d3f/class_quant_lib_1_1_tree.html">Tree</a>&lt;<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>&gt;(steps+1), <a class="code hl_variable" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#afb597b35edab96eecbcbf9a2df04f05d">x0_</a>(process-&gt;x0()), <a class="code hl_variable" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a6be603d8547f31e72817d2aaf219e325">dt_</a>(end/steps) {</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_variable" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a1f3db9657071c9b664b10313f33717ca">driftPerStep_</a> = process-&gt;drift(0.0, <a class="code hl_variable" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#afb597b35edab96eecbcbf9a2df04f05d">x0_</a>) * <a class="code hl_variable" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a6be603d8547f31e72817d2aaf219e325">dt_</a>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#aeb4f25e4b90d3059100df693c425563f">   48</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_function" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#aeb4f25e4b90d3059100df693c425563f">size</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i)<span class="keyword"> const </span>{</div>
@@ -140,8 +144,9 @@ $(function() {
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a6be603d8547f31e72817d2aaf219e325">   56</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="code hl_variable" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html#a6be603d8547f31e72817d2aaf219e325">dt_</a>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    };</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment"></span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">    //! Base class for equal probabilities binomial tree</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment"></span><span class="comment">    /*! \ingroup lattices */</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d7/dd5/class_quant_lib_1_1_equal_probabilities_binomial_tree.html">   63</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/dd5/class_quant_lib_1_1_equal_probabilities_binomial_tree.html">EqualProbabilitiesBinomialTree</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html">BinomialTree</a>&lt;T&gt; {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keyword">public</span>:</div>
@@ -149,7 +154,7 @@ $(function() {
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                        <span class="keyword">const</span> ext::shared_ptr&lt;StochasticProcess1D&gt;&amp; process,</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> end,</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> steps)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        : <a class="code hl_class" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html">BinomialTree</a>&lt;T&gt;(process, end, steps) {}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        : <a class="code hl_class" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html">BinomialTree</a>&lt;<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>&gt;(process, end, steps) {}</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../d7/dd5/class_quant_lib_1_1_equal_probabilities_binomial_tree.html#a9c660cefba93734dec67bf2180b51689">   70</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d7/dd5/class_quant_lib_1_1_equal_probabilities_binomial_tree.html#a9c660cefba93734dec67bf2180b51689">underlying</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> index)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4f0ecbbf99e41b6d69cd54871d5d2b9e">BigInteger</a> j = 2*<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4f0ecbbf99e41b6d69cd54871d5d2b9e">BigInteger</a>(index) - <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4f0ecbbf99e41b6d69cd54871d5d2b9e">BigInteger</a>(i);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="comment">// exploiting the forward value tree centering</span></div>
@@ -160,8 +165,9 @@ $(function() {
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../d7/dd5/class_quant_lib_1_1_equal_probabilities_binomial_tree.html#a6bdba80dd07eadaa79cdc7afceee47dd">   77</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d7/dd5/class_quant_lib_1_1_equal_probabilities_binomial_tree.html#a6bdba80dd07eadaa79cdc7afceee47dd">up_</a>;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    };</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment"></span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">    //! Base class for equal jumps binomial tree</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment"></span><span class="comment">    /*! \ingroup lattices */</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="../../da/db2/class_quant_lib_1_1_equal_jumps_binomial_tree.html">   84</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/db2/class_quant_lib_1_1_equal_jumps_binomial_tree.html">EqualJumpsBinomialTree</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html">BinomialTree</a>&lt;T&gt; {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      <span class="keyword">public</span>:</div>
@@ -169,7 +175,7 @@ $(function() {
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                        <span class="keyword">const</span> ext::shared_ptr&lt;StochasticProcess1D&gt;&amp; process,</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> end,</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> steps)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        : <a class="code hl_class" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html">BinomialTree</a>&lt;T&gt;(process, end, steps) {}</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        : <a class="code hl_class" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html">BinomialTree</a>&lt;<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>&gt;(process, end, steps) {}</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="../../da/db2/class_quant_lib_1_1_equal_jumps_binomial_tree.html#a9c660cefba93734dec67bf2180b51689">   91</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../da/db2/class_quant_lib_1_1_equal_jumps_binomial_tree.html#a9c660cefba93734dec67bf2180b51689">underlying</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> index)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4f0ecbbf99e41b6d69cd54871d5d2b9e">BigInteger</a> j = 2*<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4f0ecbbf99e41b6d69cd54871d5d2b9e">BigInteger</a>(index) - <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4f0ecbbf99e41b6d69cd54871d5d2b9e">BigInteger</a>(i);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="comment">// exploiting equal jump and the x0_ tree centering</span></div>
@@ -182,8 +188,9 @@ $(function() {
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="../../da/db2/class_quant_lib_1_1_equal_jumps_binomial_tree.html#ad8c571c3fb4003f56e31ff01a371fe30">  100</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../da/db2/class_quant_lib_1_1_equal_jumps_binomial_tree.html#ad8c571c3fb4003f56e31ff01a371fe30">dx_</a>, <a class="code hl_variable" href="../../da/db2/class_quant_lib_1_1_equal_jumps_binomial_tree.html#a12eb865f529d1a229999534c74fee43b">pu_</a>, <a class="code hl_variable" href="../../da/db2/class_quant_lib_1_1_equal_jumps_binomial_tree.html#a50ade66877e89aa9b7d723ecb6d9d428">pd_</a>;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    };</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment"></span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">    //! Jarrow-Rudd (multiplicative) equal probabilities binomial tree</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment"></span><span class="comment">    /*! \ingroup lattices */</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="../../dc/d96/class_quant_lib_1_1_jarrow_rudd.html">  106</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/d96/class_quant_lib_1_1_jarrow_rudd.html">JarrowRudd</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d7/dd5/class_quant_lib_1_1_equal_probabilities_binomial_tree.html">EqualProbabilitiesBinomialTree</a>&lt;JarrowRudd&gt; {</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <a class="code hl_class" href="../../dc/d96/class_quant_lib_1_1_jarrow_rudd.html">JarrowRudd</a>(<span class="keyword">const</span> ext::shared_ptr&lt;StochasticProcess1D&gt;&amp;,</div>
@@ -192,8 +199,9 @@ $(function() {
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                   <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    };</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment"></span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">    //! Cox-Ross-Rubinstein (multiplicative) equal jumps binomial tree</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment"></span><span class="comment">    /*! \ingroup lattices */</span></div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="../../da/d9b/class_quant_lib_1_1_cox_ross_rubinstein.html">  117</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/d9b/class_quant_lib_1_1_cox_ross_rubinstein.html">CoxRossRubinstein</a></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        : <span class="keyword">public</span> <a class="code hl_class" href="../../da/db2/class_quant_lib_1_1_equal_jumps_binomial_tree.html">EqualJumpsBinomialTree</a>&lt;CoxRossRubinstein&gt; {</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      <span class="keyword">public</span>:</div>
@@ -203,8 +211,9 @@ $(function() {
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                          <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike);</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    };</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment"></span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">    //! Additive equal probabilities binomial tree</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment"></span><span class="comment">    /*! \ingroup lattices */</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="../../dc/ded/class_quant_lib_1_1_additive_e_q_p_binomial_tree.html">  129</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/ded/class_quant_lib_1_1_additive_e_q_p_binomial_tree.html">AdditiveEQPBinomialTree</a></div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        : <span class="keyword">public</span> <a class="code hl_class" href="../../d7/dd5/class_quant_lib_1_1_equal_probabilities_binomial_tree.html">EqualProbabilitiesBinomialTree</a>&lt;AdditiveEQPBinomialTree&gt; {</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <span class="keyword">public</span>:</div>
@@ -215,8 +224,9 @@ $(function() {
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike);</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    };</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment"></span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">    //! %Trigeorgis (additive equal jumps) binomial tree</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment"></span><span class="comment">    /*! \ingroup lattices */</span></div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="../../d7/da3/class_quant_lib_1_1_trigeorgis.html">  142</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/da3/class_quant_lib_1_1_trigeorgis.html">Trigeorgis</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../da/db2/class_quant_lib_1_1_equal_jumps_binomial_tree.html">EqualJumpsBinomialTree</a>&lt;Trigeorgis&gt; {</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <a class="code hl_class" href="../../d7/da3/class_quant_lib_1_1_trigeorgis.html">Trigeorgis</a>(<span class="keyword">const</span> ext::shared_ptr&lt;StochasticProcess1D&gt;&amp;,</div>
@@ -225,8 +235,9 @@ $(function() {
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                   <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike);</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    };</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment"></span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment">    //! %Tian tree: third moment matching, multiplicative approach</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment"></span><span class="comment">    /*! \ingroup lattices */</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="../../dd/d0a/class_quant_lib_1_1_tian.html">  153</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dd/d0a/class_quant_lib_1_1_tian.html">Tian</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html">BinomialTree</a>&lt;Tian&gt; {</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <a class="code hl_class" href="../../dd/d0a/class_quant_lib_1_1_tian.html">Tian</a>(<span class="keyword">const</span> ext::shared_ptr&lt;StochasticProcess1D&gt;&amp;,</div>
@@ -243,8 +254,9 @@ $(function() {
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      <span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="../../dd/d0a/class_quant_lib_1_1_tian.html#a6b276e1f7c8cbcc32a209ac36f328d40">  167</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../dd/d0a/class_quant_lib_1_1_tian.html#a6bdba80dd07eadaa79cdc7afceee47dd">up_</a>, <a class="code hl_variable" href="../../dd/d0a/class_quant_lib_1_1_tian.html#a6b276e1f7c8cbcc32a209ac36f328d40">down_</a>, <a class="code hl_variable" href="../../dd/d0a/class_quant_lib_1_1_tian.html#a12eb865f529d1a229999534c74fee43b">pu_</a>, <a class="code hl_variable" href="../../dd/d0a/class_quant_lib_1_1_tian.html#a50ade66877e89aa9b7d723ecb6d9d428">pd_</a>;</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    };</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment"></span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment">    //! Leisen &amp; Reimer tree: multiplicative approach</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment"></span><span class="comment">    /*! \ingroup lattices */</span></div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="../../dc/d62/class_quant_lib_1_1_leisen_reimer.html">  172</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/d62/class_quant_lib_1_1_leisen_reimer.html">LeisenReimer</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d7/da1/class_quant_lib_1_1_binomial_tree.html">BinomialTree</a>&lt;LeisenReimer&gt; {</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <a class="code hl_class" href="../../dc/d62/class_quant_lib_1_1_leisen_reimer.html">LeisenReimer</a>(<span class="keyword">const</span> ext::shared_ptr&lt;StochasticProcess1D&gt;&amp;,</div>
@@ -334,11 +346,15 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_tian_html_a9dddb15a084664a8b6e35266f4e40100"><div class="ttname"><a href="../../dd/d0a/class_quant_lib_1_1_tian.html#a9dddb15a084664a8b6e35266f4e40100">QuantLib::Tian::probability</a></div><div class="ttdeci">Real probability(Size, Size, Size branch) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d89/binomialtree_8hpp_source.html#l00163">binomialtree.hpp:163</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_tree_html"><div class="ttname"><a href="../../d4/d3f/class_quant_lib_1_1_tree.html">QuantLib::Tree</a></div><div class="ttdoc">Tree approximating a single-factor diffusion</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dfd/tree_8hpp_source.html#l00051">tree.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_trigeorgis_html"><div class="ttname"><a href="../../d7/da3/class_quant_lib_1_1_trigeorgis.html">QuantLib::Trigeorgis</a></div><div class="ttdoc">Trigeorgis (additive equal jumps) binomial tree</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d89/binomialtree_8hpp_source.html#l00142">binomialtree.hpp:142</a></div></div>
+<div class="ttc" id="adefaultdensitystructure_8cpp_html_a27c0621a0cfba42bc41a097374ce1c1f"><div class="ttname"><a href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a></div><div class="ttdeci">Time T</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d93/defaultdensitystructure_8cpp_source.html#l00033">defaultdensitystructure.cpp:33</a></div></div>
+<div class="ttc" id="adividendschedule_8hpp_html"><div class="ttname"><a href="../../d1/d57/dividendschedule_8hpp.html">dividendschedule.hpp</a></div><div class="ttdoc">Schedule of dividend dates.</div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4f0ecbbf99e41b6d69cd54871d5d2b9e"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4f0ecbbf99e41b6d69cd54871d5d2b9e">QuantLib::BigInteger</a></div><div class="ttdeci">QL_BIG_INTEGER BigInteger</div><div class="ttdoc">large integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00039">types.hpp:39</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="astochasticprocess_8hpp_html"><div class="ttname"><a href="../../de/d96/stochasticprocess_8hpp.html">stochasticprocess.hpp</a></div><div class="ttdoc">stochastic processes</div></div>
+<div class="ttc" id="atree_8hpp_html"><div class="ttname"><a href="../../de/dfd/tree_8hpp.html">tree.hpp</a></div><div class="ttdoc">Tree class.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

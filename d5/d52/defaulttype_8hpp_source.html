@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/credit/defaulttype.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/credit/defaulttype.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">defaulttype.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d5/d52/defaulttype_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2009 StatPro Italia srl</span></div>
@@ -106,15 +105,23 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file defaulttype.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief Classes for default-event description.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef quantlib_default_type_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define quantlib_default_type_hpp</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/time/period.hpp&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d7/dff/period_8hpp.html">ql/time/period.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">    //! Seniority of a bond.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span><span class="comment">    /*! They are also ISDA tier/seniorities used for CDS conventional</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        spreads.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dc">   37</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dc">Seniority</a> {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dcad8c072341eaf98e67c8036d269bdf1f7">   38</a></span>        <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dcad8c072341eaf98e67c8036d269bdf1f7">SecDom</a> = 0,</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dca20cab8c7668e6293c001e98486645bc5">   39</a></span>        <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dca20cab8c7668e6293c001e98486645bc5">SnrFor</a>,</div>
@@ -131,8 +138,13 @@ $(function() {
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dca254f8507c6ced86604401592bfde52c3">SubLoweTier2</a>  = <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dca209d594ffe0b28736a89176de0120ed0">SubLT2</a></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dca254f8507c6ced86604401592bfde52c3">   51</a></span>    };</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment"></span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">    //! Atomic (single contractual event) default events.</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment"></span><span class="comment">    /*! Default types defined as enum to allow easy aggregation of</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">        types. Theres an event algebra logic by default provided by</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">        DefaultType. If your new type requires more sofisticated test</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">        you need to derive from it as in FailureToPay</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d7/de1/struct_quant_lib_1_1_atomic_default.html">   60</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d7/de1/struct_quant_lib_1_1_atomic_default.html">AtomicDefault</a> {</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d7/de1/struct_quant_lib_1_1_atomic_default.html#a1d1cfd8ffb84e947f82999c682b666a7">   61</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../d7/de1/struct_quant_lib_1_1_atomic_default.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> {</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="comment">// Includes one of the restructuring cases</span></div>
@@ -155,8 +167,9 @@ $(function() {
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// these could be merged with the ones above if not because</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">//   restructuring types can not be combined together.</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="../../d9/d5a/struct_quant_lib_1_1_restructuring.html">   84</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d9/d5a/struct_quant_lib_1_1_restructuring.html">Restructuring</a> {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment"></span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">    //! Restructuring type</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="../../d9/d5a/struct_quant_lib_1_1_restructuring.html">   84</a></span><span class="comment"></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d9/d5a/struct_quant_lib_1_1_restructuring.html">Restructuring</a> {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../d9/d5a/struct_quant_lib_1_1_restructuring.html#a1d1cfd8ffb84e947f82999c682b666a7">   85</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../d9/d5a/struct_quant_lib_1_1_restructuring.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> {</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="../../d9/d5a/struct_quant_lib_1_1_restructuring.html#a1d1cfd8ffb84e947f82999c682b666a7a87077092dc8a25cf4848c1652f61a07e">   86</a></span>            <a class="code hl_enumvalue" href="../../d9/d5a/struct_quant_lib_1_1_restructuring.html#a1d1cfd8ffb84e947f82999c682b666a7a87077092dc8a25cf4848c1652f61a07e">NoRestructuring</a> = 0,</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="../../d9/d5a/struct_quant_lib_1_1_restructuring.html#a1d1cfd8ffb84e947f82999c682b666a7a1157a52de091d4b2ea5750cc7a1c97d1">   87</a></span>            <a class="code hl_enumvalue" href="../../d9/d5a/struct_quant_lib_1_1_restructuring.html#a1d1cfd8ffb84e947f82999c682b666a7a1157a52de091d4b2ea5750cc7a1c97d1">ModifiedRestructuring</a>,</div>
@@ -171,8 +184,13 @@ $(function() {
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="../../d9/d5a/struct_quant_lib_1_1_restructuring.html#a1d1cfd8ffb84e947f82999c682b666a7aaaa8401b50cb34e3a0d58729f70494f0">   96</a></span>        };</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    };</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment"></span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">    //! Atomic credit-event type.</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment"></span><span class="comment">    /*! This class encapsulates the ISDA default contractual types and</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">        their combinations. Non-atomicity works only at the atomic</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">        type level, obviating the specific event characteristics which</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">        it is accounted for only in derived classes.</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="../../d8/d52/class_quant_lib_1_1_default_type.html">  106</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d8/d52/class_quant_lib_1_1_default_type.html">DefaultType</a> {</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="../../d8/d52/class_quant_lib_1_1_default_type.html">DefaultType</a>(<a class="code hl_enumeration" href="../../d7/de1/struct_quant_lib_1_1_atomic_default.html#a1d1cfd8ffb84e947f82999c682b666a7">AtomicDefault::Type</a> defType =</div>
@@ -190,7 +208,17 @@ $(function() {
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="comment">// bool isAtomic() const { return defTypes_.size() == 1;}</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment"></span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">        /*! Returns true if one or a set of event types is within this</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">            one and as such will be recognised as a trigger. Not the</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">            same as equality.</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment"></span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">            Notice that these methods do not include any event logical</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">            hierarchy. The match is in a strict sense. If event B is</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment">            contained in (implied by) event A this would not send a</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">            match. This policies should be implemented at the</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">            CreditEvent class, which is polymorphic.</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">        */</span></div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="../../d8/d52/class_quant_lib_1_1_default_type.html#acc14c374fbf22f61a70e86be57bd2f86">  134</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d8/d52/class_quant_lib_1_1_default_type.html#acc14c374fbf22f61a70e86be57bd2f86">containsDefaultType</a>(<a class="code hl_enumeration" href="../../d7/de1/struct_quant_lib_1_1_atomic_default.html#a1d1cfd8ffb84e947f82999c682b666a7">AtomicDefault::Type</a> defType)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/d52/class_quant_lib_1_1_default_type.html#a4ccfce5a2a470d2898d05344e7780fa2">defTypes_</a> ==  defType;</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
@@ -205,12 +233,24 @@ $(function() {
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="../../d8/d52/class_quant_lib_1_1_default_type.html#a3fe600d064ddf07ac5988601872dc131">  145</a></span>        <a class="code hl_enumeration" href="../../d9/d5a/struct_quant_lib_1_1_restructuring.html#a1d1cfd8ffb84e947f82999c682b666a7">Restructuring::Type</a> <a class="code hl_variable" href="../../d8/d52/class_quant_lib_1_1_default_type.html#a3fe600d064ddf07ac5988601872dc131">restrType_</a>;</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    };</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment"></span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment">    /*! Equality is the criteria for indexing the curves. This depends</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">        only on the atomic types and not on idiosincracies of derived</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment">        type as mentioned in the functional documentation (specific</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment">        event characteristics are relevant to credit event matching</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="comment">        but not to the probability meaning).  operator== is also used</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">        to remove duplicates in some containers. This ensures we do</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment">        not have two equal events (despite having different</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment">        characteristics) in those containers. This makes sense, theres</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment">        no logic in having two FailureToPay in a contract even if they</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment">        have different characteristics.</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#a10f6f2d9c645c9f506523ed9e0e87c4a">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d8/d52/class_quant_lib_1_1_default_type.html">DefaultType</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_class" href="../../d8/d52/class_quant_lib_1_1_default_type.html">DefaultType</a>&amp; rhs);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="../../d8/d5d/class_quant_lib_1_1_failure_to_pay.html">  165</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d8/d5d/class_quant_lib_1_1_failure_to_pay.html">FailureToPay</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d8/d52/class_quant_lib_1_1_default_type.html">DefaultType</a> {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment"></span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">    //! Failure to Pay atomic event type.</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="../../d8/d5d/class_quant_lib_1_1_failure_to_pay.html">  165</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d8/d5d/class_quant_lib_1_1_failure_to_pay.html">FailureToPay</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d8/d52/class_quant_lib_1_1_default_type.html">DefaultType</a> {</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="comment">// Only atomic construction.</span></div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="comment">// Amount contract by default is in dollars as per ISDA doc and not</span></div>
@@ -251,7 +291,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html_a10f6f2d9c645c9f506523ed9e0e87c4a"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a10f6f2d9c645c9f506523ed9e0e87c4a">QuantLib::operator==</a></div><div class="ttdeci">bool operator==(const Currency &amp;c1, const Currency &amp;c2)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5f/currency_8hpp_source.html#l00191">currency.hpp:191</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html_a10f6f2d9c645c9f506523ed9e0e87c4a"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a10f6f2d9c645c9f506523ed9e0e87c4a">QuantLib::operator==</a></div><div class="ttdeci">bool operator==(const Currency &amp;c1, const Currency &amp;c2)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d5f/currency_8hpp_source.html#l00231">currency.hpp:231</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a67b45b4a8252bded773b222c6f9428dc"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dc">QuantLib::Seniority</a></div><div class="ttdeci">Seniority</div><div class="ttdoc">Seniority of a bond.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d52/defaulttype_8hpp_source.html#l00037">defaulttype.hpp:37</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a67b45b4a8252bded773b222c6f9428dca209d594ffe0b28736a89176de0120ed0"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dca209d594ffe0b28736a89176de0120ed0">QuantLib::SubLT2</a></div><div class="ttdeci">@ SubLT2</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d52/defaulttype_8hpp_source.html#l00040">defaulttype.hpp:40</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a67b45b4a8252bded773b222c6f9428dca20cab8c7668e6293c001e98486645bc5"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dca20cab8c7668e6293c001e98486645bc5">QuantLib::SnrFor</a></div><div class="ttdeci">@ SnrFor</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d52/defaulttype_8hpp_source.html#l00039">defaulttype.hpp:39</a></div></div>
@@ -264,6 +304,7 @@ $(function() {
 <div class="ttc" id="anamespace_quant_lib_html_a67b45b4a8252bded773b222c6f9428dcad8c072341eaf98e67c8036d269bdf1f7"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dcad8c072341eaf98e67c8036d269bdf1f7">QuantLib::SecDom</a></div><div class="ttdeci">@ SecDom</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d52/defaulttype_8hpp_source.html#l00038">defaulttype.hpp:38</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a67b45b4a8252bded773b222c6f9428dcaf3454a892a41e4dd2b4a70d3afe1b42d"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dcaf3454a892a41e4dd2b4a70d3afe1b42d">QuantLib::JrSubT2</a></div><div class="ttdeci">@ JrSubT2</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d52/defaulttype_8hpp_source.html#l00041">defaulttype.hpp:41</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a67b45b4a8252bded773b222c6f9428dcaf6441f06ede4da0a547816f930591445"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a67b45b4a8252bded773b222c6f9428dcaf6441f06ede4da0a547816f930591445">QuantLib::PrefT1</a></div><div class="ttdeci">@ PrefT1</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d52/defaulttype_8hpp_source.html#l00042">defaulttype.hpp:42</a></div></div>
+<div class="ttc" id="aperiod_8hpp_html"><div class="ttname"><a href="../../d7/dff/period_8hpp.html">period.hpp</a></div><div class="ttdoc">period- and frequency-related classes and enumerations</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_atomic_default_html"><div class="ttname"><a href="../../d7/de1/struct_quant_lib_1_1_atomic_default.html">QuantLib::AtomicDefault</a></div><div class="ttdoc">Atomic (single contractual event) default events.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d52/defaulttype_8hpp_source.html#l00060">defaulttype.hpp:60</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_atomic_default_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../d7/de1/struct_quant_lib_1_1_atomic_default.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::AtomicDefault::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d52/defaulttype_8hpp_source.html#l00061">defaulttype.hpp:61</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_atomic_default_html_a1d1cfd8ffb84e947f82999c682b666a7a0ee7f06e1b4b3ad05ee380524592dd11"><div class="ttname"><a href="../../d7/de1/struct_quant_lib_1_1_atomic_default.html#a1d1cfd8ffb84e947f82999c682b666a7a0ee7f06e1b4b3ad05ee380524592dd11">QuantLib::AtomicDefault::ObligationDefault</a></div><div class="ttdeci">@ ObligationDefault</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d52/defaulttype_8hpp_source.html#l00071">defaulttype.hpp:71</a></div></div>

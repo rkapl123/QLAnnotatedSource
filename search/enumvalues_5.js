@@ -1,7 +1,7 @@
 var searchData=
 [
   ['f_0',['F',['../d5/d9b/struct_quant_lib_1_1_a_s_x.html#ae34b763987dcf60c6c619d327b8c9dbbaf382a63cc3d6491bf26b59e66f46826d',1,'QuantLib::ASX::F()'],['../d4/d14/struct_quant_lib_1_1_i_m_m.html#ae34b763987dcf60c6c619d327b8c9dbbaf382a63cc3d6491bf26b59e66f46826d',1,'QuantLib::IMM::F()']]],
-  ['factors_1',['Factors',['../df/dbe/class_quant_lib_1_1_sobol_brownian_generator.html#a0248f65bd948236b9f656ce6c5d65355a80d941f67956dd1f25b0c208987ddd31',1,'QuantLib::SobolBrownianGenerator']]],
+  ['factors_1',['Factors',['../d3/dd6/class_quant_lib_1_1_sobol_brownian_generator_base.html#a0248f65bd948236b9f656ce6c5d65355a80d941f67956dd1f25b0c208987ddd31',1,'QuantLib::SobolBrownianGeneratorBase']]],
   ['failuretopay_2',['FailureToPay',['../d7/de1/struct_quant_lib_1_1_atomic_default.html#a1d1cfd8ffb84e947f82999c682b666a7aa614732eeef71d99bbde0167cabb855c',1,'QuantLib::AtomicDefault']]],
   ['fatal_3',['Fatal',['../d3/dda/struct_quant_lib_1_1_pricing_error.html#a221b779e6bb7b8d40677d7642bfefac5a24d54883f5403a81c97e5ce29ee031ba',1,'QuantLib::PricingError']]],
   ['fd_4',['FD',['../dd/db4/class_quant_lib_1_1_histogram.html#a5e41188f16a381c8915a17a22228e691af6cb3036978c564d260f5016cac04f85',1,'QuantLib::Histogram']]],

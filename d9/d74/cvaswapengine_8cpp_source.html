@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/pricingengines/swap/cvaswapengine.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/pricingengines/swap/cvaswapengine.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">cvaswapengine.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d9/d74/cvaswapengine_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2015 Jose Aparicio</span></div>
@@ -106,16 +105,16 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/pricingengines/swap/cvaswapengine.hpp&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/cashflows/fixedratecoupon.hpp&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/cashflows/floatingratecoupon.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/indexes/iborindex.hpp&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/instruments/makevanillaswap.hpp&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;ql/exercise.hpp&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ql/pricingengines/swap/discountingswapengine.hpp&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/termstructures/credit/flathazardrate.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/pricingengines/swaption/blackswaptionengine.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/time/calendars/nullcalendar.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d9b/cvaswapengine_8hpp.html">ql/pricingengines/swap/cvaswapengine.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d2b/fixedratecoupon_8hpp.html">ql/cashflows/fixedratecoupon.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/dcf/floatingratecoupon_8hpp.html">ql/cashflows/floatingratecoupon.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d13/iborindex_8hpp.html">ql/indexes/iborindex.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d08/makevanillaswap_8hpp.html">ql/instruments/makevanillaswap.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d94/exercise_8hpp.html">ql/exercise.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../d7/da2/discountingswapengine_8hpp.html">ql/pricingengines/swap/discountingswapengine.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d47/flathazardrate_8hpp.html">ql/termstructures/credit/flathazardrate.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d3e/blackswaptionengine_8hpp.html">ql/pricingengines/swaption/blackswaptionengine.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/da6/nullcalendar_8hpp.html">ql/time/calendars/nullcalendar.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  </div>
@@ -129,7 +128,7 @@ $(function() {
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  : baseSwapEngine_(<a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt;<a class="code hl_class" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html">PricingEngine</a>&gt;(</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      ext::make_shared&lt;<a class="code hl_class" href="../../d6/d81/class_quant_lib_1_1_discounting_swap_engine.html">DiscountingSwapEngine</a>&gt;(discountCurve))),</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    swaptionletEngine_(swaptionEngine),</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    discountCurve_(discountCurve),</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_variable" href="../../da/d4b/cashflows_8cpp.html#aed220d10e30b97ef78d64ad62212c241">discountCurve_</a>(discountCurve),</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    defaultTS_(ctptyDTS), </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    ctptyRecoveryRate_(ctptyRecoveryRate),</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    invstDTS_(invstDTS.empty() ? <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt;<a class="code hl_class" href="../../db/df4/class_quant_lib_1_1_default_probability_term_structure.html">DefaultProbabilityTermStructure</a>&gt;(</div>
@@ -155,7 +154,7 @@ $(function() {
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    swaptionletEngine_(<a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt;<a class="code hl_class" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html">PricingEngine</a>&gt;(</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      ext::make_shared&lt;<a class="code hl_class" href="../../da/dcf/class_quant_lib_1_1_black_swaption_engine.html">BlackSwaptionEngine</a>&gt;(discountCurve,</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        blackVol))),</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    discountCurve_(discountCurve),</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_variable" href="../../da/d4b/cashflows_8cpp.html#aed220d10e30b97ef78d64ad62212c241">discountCurve_</a>(discountCurve),</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    defaultTS_(ctptyDTS), </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    ctptyRecoveryRate_(ctptyRecoveryRate),</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    invstDTS_(invstDTS.empty() ? <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt;<a class="code hl_class" href="../../db/df4/class_quant_lib_1_1_default_probability_term_structure.html">DefaultProbabilityTermStructure</a>&gt;(</div>
@@ -180,7 +179,7 @@ $(function() {
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    swaptionletEngine_(<a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt;<a class="code hl_class" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html">PricingEngine</a>&gt;(</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      ext::make_shared&lt;<a class="code hl_class" href="../../da/dcf/class_quant_lib_1_1_black_swaption_engine.html">BlackSwaptionEngine</a>&gt;(discountCurve,</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        blackVol))),</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    discountCurve_(discountCurve),</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_variable" href="../../da/d4b/cashflows_8cpp.html#aed220d10e30b97ef78d64ad62212c241">discountCurve_</a>(discountCurve),</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    defaultTS_(ctptyDTS), </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    ctptyRecoveryRate_(ctptyRecoveryRate),</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    invstDTS_(invstDTS.empty() ? <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt;<a class="code hl_class" href="../../db/df4/class_quant_lib_1_1_default_probability_term_structure.html">DefaultProbabilityTermStructure</a>&gt;(</div>
@@ -197,14 +196,14 @@ $(function() {
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">  108</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">CounterpartyAdjSwapEngine::calculate</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="comment">/* both DTS, YTS ref dates and pricing date consistency </span></div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">         checks? settlement... */</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    QL_REQUIRE(!<a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a188f6df4c42679c1c133919254e351c5">discountCurve_</a>.empty(),</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(!<a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a188f6df4c42679c1c133919254e351c5">discountCurve_</a>.empty(),</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                 <span class="stringliteral">&quot;no discount term structure set&quot;</span>);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    QL_REQUIRE(!<a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a91bcd9366ffaa6883788c4d5cecbc265">defaultTS_</a>.empty(),</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(!<a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a91bcd9366ffaa6883788c4d5cecbc265">defaultTS_</a>.empty(),</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                 <span class="stringliteral">&quot;no ctpty default term structure set&quot;</span>);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    QL_REQUIRE(!<a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a255b642c8b349a5ae776cdfd9e4851c6">swaptionletEngine_</a>.empty(),</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(!<a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a255b642c8b349a5ae776cdfd9e4851c6">swaptionletEngine_</a>.empty(),</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                 <span class="stringliteral">&quot;no swap option engine set&quot;</span>);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    QL_REQUIRE(arguments_.nominal != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(),</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(arguments_.nominal != <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Real&gt;</a>(),</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>               <span class="stringliteral">&quot;non-constant nominals are not supported yet&quot;</span>);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> priceDate = <a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a91bcd9366ffaa6883788c4d5cecbc265">defaultTS_</a>-&gt;referenceDate();</div>
@@ -221,7 +220,7 @@ $(function() {
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="comment">// Compute fair spread for strike value:</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="comment">// copy args into the non risky engine</span></div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keyword">auto</span>* noCVAArgs = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d5/d9c/class_quant_lib_1_1_swap_1_1arguments.html">Swap::arguments</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a6073bfb7b5d2fb465de28e79d1caa7ad">baseSwapEngine_</a>-&gt;getArguments());</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    QL_REQUIRE(noCVAArgs != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;wrong argument type&quot;</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(noCVAArgs != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;wrong argument type&quot;</span>);</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    noCVAArgs-&gt;legs = this-&gt;arguments_.legs;</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    noCVAArgs-&gt;payer = this-&gt;arguments_.payer;</div>
@@ -229,11 +228,11 @@ $(function() {
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a6073bfb7b5d2fb465de28e79d1caa7ad">baseSwapEngine_</a>-&gt;calculate();</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    ext::shared_ptr&lt;FixedRateCoupon&gt; coupon = ext::dynamic_pointer_cast&lt;FixedRateCoupon&gt;(arguments_.legs[0][0]);</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    QL_REQUIRE(coupon,<span class="stringliteral">&quot;dynamic cast of fixed leg coupon failed.&quot;</span>);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(coupon,<span class="stringliteral">&quot;dynamic cast of fixed leg coupon failed.&quot;</span>);</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> baseSwapRate = coupon-&gt;rate();</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* vSResults = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code hl_class" href="../../d5/d68/class_quant_lib_1_1_swap_1_1results.html">Swap::results</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a6073bfb7b5d2fb465de28e79d1caa7ad">baseSwapEngine_</a>-&gt;getResults());</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    QL_REQUIRE(vSResults != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;wrong result type&quot;</span>);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(vSResults != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;wrong result type&quot;</span>);</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> baseSwapFairRate = -baseSwapRate * vSResults-&gt;legNPV[1] / </div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        vSResults-&gt;legNPV[0];</div>
@@ -245,9 +244,9 @@ $(function() {
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordflow">while</span>(nextFD != arguments_.fixedPayDates.end()) {</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      <span class="comment">// iFD coupon not fixed, create swaptionlet:</span></div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      ext::shared_ptr&lt;FloatingRateCoupon&gt; floatCoupon = ext::dynamic_pointer_cast&lt;FloatingRateCoupon&gt;(arguments_.legs[1][0]);</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      QL_REQUIRE(floatCoupon,<span class="stringliteral">&quot;dynamic cast of floating leg coupon failed.&quot;</span>);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(floatCoupon,<span class="stringliteral">&quot;dynamic cast of floating leg coupon failed.&quot;</span>);</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>      ext::shared_ptr&lt;IborIndex&gt; swapIndex = ext::dynamic_pointer_cast&lt;IborIndex&gt;(floatCoupon-&gt;index());</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      QL_REQUIRE(swapIndex,<span class="stringliteral">&quot;dynamic cast of floating leg index failed.&quot;</span>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(swapIndex,<span class="stringliteral">&quot;dynamic cast of floating leg index failed.&quot;</span>);</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      <span class="comment">// Alternatively one could cap this period to, say, 1M </span></div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      <span class="comment">// Period swapPeriod = ext::dynamic_pointer_cast&lt;FloatingRateCoupon&gt;(</span></div>
@@ -261,8 +260,9 @@ $(function() {
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        baseSwapFairRate <span class="comment">// strike</span></div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        )</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        .<a class="code hl_function" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html#ad7dbd89236b065979f3161664b9d8c0c">withType</a>(arguments_.type)</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        .<a class="code hl_function" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html#a92774d85c93d5318c0a8834abcca7a3d">withNominal</a>(arguments_.nominal)</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        .<a class="code hl_function" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html#a087cd2ce7c5a1a807d2c61a0eab79ceb">withEffectiveDate</a>(swapletStart)</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        .<a class="code hl_function" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html#a92774d85c93d5318c0a8834abcca7a3d">withNominal</a>(arguments_.nominal)<span class="comment"></span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">          ////////      .withSettlementDays(2)</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment"></span>        .<a class="code hl_function" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html#a087cd2ce7c5a1a807d2c61a0eab79ceb">withEffectiveDate</a>(swapletStart)</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        .<a class="code hl_function" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html#a2ff8632324a8dd873c8b9da8a7a6be7f">withTerminationDate</a>(arguments_.fixedPayDates.back());</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      ext::shared_ptr&lt;VanillaSwap&gt; revSwaplet = <a class="code hl_class" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html">MakeVanillaSwap</a>(</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        baseSwapsTenor,</div>
@@ -270,8 +270,9 @@ $(function() {
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        baseSwapFairRate <span class="comment">// strike</span></div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        )</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        .<a class="code hl_function" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html#ad7dbd89236b065979f3161664b9d8c0c">withType</a>(reversedType)</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        .<a class="code hl_function" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html#a92774d85c93d5318c0a8834abcca7a3d">withNominal</a>(arguments_.nominal)</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        .<a class="code hl_function" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html#a087cd2ce7c5a1a807d2c61a0eab79ceb">withEffectiveDate</a>(swapletStart)</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        .<a class="code hl_function" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html#a92774d85c93d5318c0a8834abcca7a3d">withNominal</a>(arguments_.nominal)<span class="comment"></span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">          /////////     .withSettlementDays(2)</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment"></span>        .<a class="code hl_function" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html#a087cd2ce7c5a1a807d2c61a0eab79ceb">withEffectiveDate</a>(swapletStart)</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        .<a class="code hl_function" href="../../d2/dcc/class_quant_lib_1_1_make_vanilla_swap.html#a2ff8632324a8dd873c8b9da8a7a6be7f">withTerminationDate</a>(arguments_.fixedPayDates.back());</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>      <a class="code hl_class" href="../../dd/dc4/class_quant_lib_1_1_swaption.html">Swaption</a> swaptionlet(swaplet, </div>
@@ -292,10 +293,10 @@ $(function() {
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>      ++nextFD;</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    results_.value = baseSwapNPV - (1.-<a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a35993b41ae8e18c0a831c643f02b5d40">ctptyRecoveryRate_</a>) * cumOptVal</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <a class="code hl_variable" href="../../dc/d10/cdsoption_8cpp.html#afeb3e8b4e6ab6604c185b2ea55bbc728">results_</a>.value = baseSwapNPV - (1.-<a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a35993b41ae8e18c0a831c643f02b5d40">ctptyRecoveryRate_</a>) * cumOptVal</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        + (1.-<a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a9cbc8c1e5603faf3b91f089dc4976d87">invstRecoveryRate_</a>) * cumPutVal;</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    results_.fairRate =  -baseSwapRate * (vSResults-&gt;legNPV[1] </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <a class="code hl_variable" href="../../dc/d10/cdsoption_8cpp.html#afeb3e8b4e6ab6604c185b2ea55bbc728">results_</a>.fairRate =  -baseSwapRate * (vSResults-&gt;legNPV[1] </div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        - (1.-<a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a35993b41ae8e18c0a831c643f02b5d40">ctptyRecoveryRate_</a>) * cumOptVal + </div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>          (1.-<a class="code hl_variable" href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a9cbc8c1e5603faf3b91f089dc4976d87">invstRecoveryRate_</a>) * cumPutVal )</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>      / vSResults-&gt;legNPV[0];</div>
@@ -304,6 +305,9 @@ $(function() {
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>}</div>
+<div class="ttc" id="ablackswaptionengine_8hpp_html"><div class="ttname"><a href="../../d3/d3e/blackswaptionengine_8hpp.html">blackswaptionengine.hpp</a></div><div class="ttdoc">Black-formula swaption engine.</div></div>
+<div class="ttc" id="acashflows_8cpp_html_aed220d10e30b97ef78d64ad62212c241"><div class="ttname"><a href="../../da/d4b/cashflows_8cpp.html#aed220d10e30b97ef78d64ad62212c241">discountCurve_</a></div><div class="ttdeci">const YieldTermStructure &amp; discountCurve_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d4b/cashflows_8cpp_source.html#l00418">cashflows.cpp:418</a></div></div>
+<div class="ttc" id="acdsoption_8cpp_html_afeb3e8b4e6ab6604c185b2ea55bbc728"><div class="ttname"><a href="../../dc/d10/cdsoption_8cpp.html#afeb3e8b4e6ab6604c185b2ea55bbc728">results_</a></div><div class="ttdeci">const Instrument::results * results_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d10/cdsoption_8cpp_source.html#l00063">cdsoption.cpp:63</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_black_swaption_engine_html"><div class="ttname"><a href="../../da/dcf/class_quant_lib_1_1_black_swaption_engine.html">QuantLib::BlackSwaptionEngine</a></div><div class="ttdoc">Shifted Lognormal Black-formula swaption engine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d3e/blackswaptionengine_8hpp_source.html#l00136">blackswaptionengine.hpp:137</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_counterparty_adj_swap_engine_html_a188f6df4c42679c1c133919254e351c5"><div class="ttname"><a href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a188f6df4c42679c1c133919254e351c5">QuantLib::CounterpartyAdjSwapEngine::discountCurve_</a></div><div class="ttdeci">Handle&lt; YieldTermStructure &gt; discountCurve_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d9b/cvaswapengine_8hpp_source.html#l00116">cvaswapengine.hpp:116</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_counterparty_adj_swap_engine_html_a255b642c8b349a5ae776cdfd9e4851c6"><div class="ttname"><a href="../../dc/dff/class_quant_lib_1_1_counterparty_adj_swap_engine.html#a255b642c8b349a5ae776cdfd9e4851c6">QuantLib::CounterpartyAdjSwapEngine::swaptionletEngine_</a></div><div class="ttdeci">Handle&lt; PricingEngine &gt; swaptionletEngine_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d9b/cvaswapengine_8hpp_source.html#l00115">cvaswapengine.hpp:115</a></div></div>
@@ -317,7 +321,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html_aaec3b964a5cb05552abc1ee4614318f1"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#aaec3b964a5cb05552abc1ee4614318f1">QuantLib::Date::serialNumber</a></div><div class="ttdeci">Date::serial_type serialNumber() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00408">date.hpp:408</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_default_probability_term_structure_html"><div class="ttname"><a href="../../db/df4/class_quant_lib_1_1_default_probability_term_structure.html">QuantLib::DefaultProbabilityTermStructure</a></div><div class="ttdoc">Default probability term structure.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d7c/defaulttermstructure_8hpp_source.html#l00041">defaulttermstructure.hpp:41</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_discounting_swap_engine_html"><div class="ttname"><a href="../../d6/d81/class_quant_lib_1_1_discounting_swap_engine.html">QuantLib::DiscountingSwapEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da2/discountingswapengine_8hpp_source.html#l00035">discountingswapengine.hpp:35</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_discounting_swap_engine_html"><div class="ttname"><a href="../../d6/d81/class_quant_lib_1_1_discounting_swap_engine.html">QuantLib::DiscountingSwapEngine</a></div><div class="ttdoc">Discounting engine for swaps.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da2/discountingswapengine_8hpp_source.html#l00039">discountingswapengine.hpp:39</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_flat_hazard_rate_html"><div class="ttname"><a href="../../d4/d39/class_quant_lib_1_1_flat_hazard_rate.html">QuantLib::FlatHazardRate</a></div><div class="ttdoc">Flat hazard-rate curve.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d47/flathazardrate_8hpp_source.html#l00035">flathazardrate.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_instrument_html_a4f791921f063f3ea19bd6efa9ceb4892"><div class="ttname"><a href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">QuantLib::Instrument::NPV</a></div><div class="ttdeci">Real NPV() const</div><div class="ttdoc">returns the net present value of the instrument.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da7/instrument_8hpp_source.html#l00167">instrument.hpp:167</a></div></div>
@@ -336,12 +340,22 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_swap_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::Swap::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6f/swap_8hpp_source.html#l00050">swap.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_swap_html_a1d1cfd8ffb84e947f82999c682b666a7a7928a668954c57bb64a7a9d98994cbaa"><div class="ttname"><a href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7a7928a668954c57bb64a7a9d98994cbaa">QuantLib::Swap::Receiver</a></div><div class="ttdeci">@ Receiver</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6f/swap_8hpp_source.html#l00050">swap.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_swap_html_a1d1cfd8ffb84e947f82999c682b666a7a9ca3b60bb6eb8726ba5e66e5afa8b6a0"><div class="ttname"><a href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7a9ca3b60bb6eb8726ba5e66e5afa8b6a0">QuantLib::Swap::Payer</a></div><div class="ttdeci">@ Payer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6f/swap_8hpp_source.html#l00050">swap.hpp:50</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_swaption_html"><div class="ttname"><a href="../../dd/dc4/class_quant_lib_1_1_swaption.html">QuantLib::Swaption</a></div><div class="ttdoc">Swaption class</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d68/swaption_8hpp_source.html#l00081">swaption.hpp:81</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_swaption_html"><div class="ttname"><a href="../../dd/dc4/class_quant_lib_1_1_swaption.html">QuantLib::Swaption</a></div><div class="ttdoc">Swaption class</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d68/swaption_8hpp_source.html#l00088">swaption.hpp:88</a></div></div>
+<div class="ttc" id="acvaswapengine_8hpp_html"><div class="ttname"><a href="../../dc/d9b/cvaswapengine_8hpp.html">cvaswapengine.hpp</a></div></div>
+<div class="ttc" id="adiscountingswapengine_8hpp_html"><div class="ttname"><a href="../../d7/da2/discountingswapengine_8hpp.html">discountingswapengine.hpp</a></div><div class="ttdoc">discounting swap engine</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aexercise_8hpp_html"><div class="ttname"><a href="../../de/d94/exercise_8hpp.html">exercise.hpp</a></div><div class="ttdoc">Option exercise classes and payoff function.</div></div>
+<div class="ttc" id="afixedratecoupon_8hpp_html"><div class="ttname"><a href="../../d4/d2b/fixedratecoupon_8hpp.html">fixedratecoupon.hpp</a></div><div class="ttdoc">Coupon paying a fixed annual rate.</div></div>
+<div class="ttc" id="aflathazardrate_8hpp_html"><div class="ttname"><a href="../../d4/d47/flathazardrate_8hpp.html">flathazardrate.hpp</a></div><div class="ttdoc">flat hazard-rate term structure</div></div>
+<div class="ttc" id="afloatingratecoupon_8hpp_html"><div class="ttname"><a href="../../dc/dcf/floatingratecoupon_8hpp.html">floatingratecoupon.hpp</a></div><div class="ttdoc">Coupon paying a variable index-based rate.</div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">QuantLib::Days</a></div><div class="ttdeci">@ Days</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00037">timeunit.hpp:37</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
+<div class="ttc" id="aiborindex_8hpp_html"><div class="ttname"><a href="../../d2/d13/iborindex_8hpp.html">iborindex.hpp</a></div><div class="ttdoc">base class for Inter-Bank-Offered-Rate indexes</div></div>
+<div class="ttc" id="amakevanillaswap_8hpp_html"><div class="ttname"><a href="../../d0/d08/makevanillaswap_8hpp.html">makevanillaswap.hpp</a></div><div class="ttdoc">Helper class to instantiate standard market swaps.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="anullcalendar_8hpp_html"><div class="ttname"><a href="../../dd/da6/nullcalendar_8hpp.html">nullcalendar.hpp</a></div><div class="ttdoc">Calendar for reproducing theoretical calculations.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

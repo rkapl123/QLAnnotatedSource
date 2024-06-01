@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -92,7 +91,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../de/d22/mcdigitalengine_8hpp_source.html">ql/pricingengines/vanilla/mcdigitalengine.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../de/d22/mcdigitalengine_8hpp_source.html">mcdigitalengine.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for DigitalPathPricer:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -100,9 +99,9 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d6/ddb/class_quant_lib_1_1_digital_path_pricer__inherit__graph.png" border="0" usemap="#a_digital_path_pricer_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_digital_path_pricer_inherit__map" id="a_digital_path_pricer_inherit__map">
-<area shape="rect" title=" " alt="" coords="13,300,156,443"/>
-<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title=" " alt="" coords="15,167,154,251"/>
-<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title="base class for path pricers" alt="" coords="5,5,164,104"/>
+<area shape="rect" title=" " alt="" coords="13,271,156,413"/>
+<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title=" " alt="" coords="15,152,154,221"/>
+<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title="base class for path pricers" alt="" coords="5,5,164,89"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -112,41 +111,33 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d1/de9/class_quant_lib_1_1_digital_path_pricer__coll__graph.png" border="0" usemap="#a_digital_path_pricer_coll__map" alt="Collaboration graph"/></div>
 <map name="a_digital_path_pricer_coll__map" id="a_digital_path_pricer_coll__map">
-<area shape="rect" title=" " alt="" coords="536,2777,681,2847"/>
-<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title=" " alt="" coords="87,2491,226,2561"/>
-<area shape="rect" href="../../d6/d60/class_quant_lib_1_1_path.html" title="single&#45;factor random walk" alt="" coords="188,1721,307,2275"/>
-<area shape="rect" href="../../df/dff/class_quant_lib_1_1_time_grid.html" title="time grid class" alt="" coords="159,753,317,1292"/>
-<area shape="rect" title=" " alt="" coords="182,233,294,273"/>
-<area shape="rect" title=" " alt="" coords="211,115,265,155"/>
-<area shape="rect" title=" " alt="" coords="505,115,595,155"/>
-<area shape="rect" title=" " alt="" coords="804,233,915,273"/>
-<area shape="rect" title=" " alt="" coords="623,233,767,273"/>
-<area shape="rect" title=" " alt="" coords="531,5,569,45"/>
-<area shape="rect" title=" " alt="" coords="363,108,481,163"/>
-<area shape="rect" href="../../d4/da1/struct_quant_lib_1_1_sample.html" title="weighted sample" alt="" coords="1037,225,1138,280"/>
-<area shape="rect" href="../../d0/d7c/class_quant_lib_1_1_array.html" title="1&#45;D array used in linear algebra." alt="" coords="341,387,500,1659"/>
-<area shape="rect" title=" " alt="" coords="352,225,492,280"/>
-<area shape="rect" title=" " alt="" coords="620,115,672,155"/>
-<area shape="rect" title=" " alt="" coords="518,233,579,273"/>
-<area shape="rect" href="../../dc/d7a/class_quant_lib_1_1_random_sequence_generator.html" title="Random sequence generator based on a pseudo&#45;random number generator." alt="" coords="727,1927,938,2069"/>
-<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title="base class for path pricers" alt="" coords="5,1956,164,2040"/>
-<area shape="rect" title=" " alt="" coords="44,1003,125,1043"/>
-<area shape="rect" title=" " alt="" coords="251,2499,417,2553"/>
-<area shape="rect" title=" " alt="" coords="441,2499,592,2553"/>
-<area shape="rect" title=" " alt="" coords="617,2499,785,2553"/>
-<area shape="rect" title=" " alt="" coords="821,1003,876,1043"/>
-<area shape="rect" href="../../d4/da1/struct_quant_lib_1_1_sample.html" title=" " alt="" coords="900,988,1043,1057"/>
-<area shape="rect" title=" " alt="" coords="936,115,1020,155"/>
-<area shape="rect" title=" " alt="" coords="696,115,887,155"/>
-<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title=" " alt="" coords="953,2337,1149,2715"/>
-<area shape="rect" title=" " alt="" coords="1079,995,1229,1050"/>
-<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title="Shared handle to an observable." alt="" coords="1113,1817,1264,2179"/>
+<area shape="rect" title=" " alt="" coords="464,1252,609,1321"/>
+<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title=" " alt="" coords="15,951,154,1021"/>
+<area shape="rect" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html" title="base class for path pricers" alt="" coords="5,482,164,566"/>
+<area shape="rect" title=" " alt="" coords="179,959,345,1013"/>
+<area shape="rect" title=" " alt="" coords="369,959,520,1013"/>
+<area shape="rect" title=" " alt="" coords="545,959,713,1013"/>
+<area shape="rect" href="../../dc/d7a/class_quant_lib_1_1_random_sequence_generator.html" title="Random sequence generator based on a pseudo&#45;random number generator." alt="" coords="737,915,947,1057"/>
+<area shape="rect" title=" " alt="" coords="687,504,749,544"/>
+<area shape="rect" title=" " alt="" coords="820,504,875,544"/>
+<area shape="rect" href="../../d4/da1/struct_quant_lib_1_1_sample.html" title=" " alt="" coords="520,489,663,559"/>
+<area shape="rect" title=" " alt="" coords="665,218,776,258"/>
+<area shape="rect" title=" " alt="" coords="620,108,672,148"/>
+<area shape="rect" title=" " alt="" coords="697,108,787,148"/>
+<area shape="rect" title=" " alt="" coords="851,218,995,258"/>
+<area shape="rect" title=" " alt="" coords="511,5,549,45"/>
+<area shape="rect" href="../../d4/da1/struct_quant_lib_1_1_sample.html" title="weighted sample" alt="" coords="395,211,497,265"/>
+<area shape="rect" title=" " alt="" coords="512,108,596,148"/>
+<area shape="rect" title=" " alt="" coords="852,108,1043,148"/>
+<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title=" " alt="" coords="972,783,1168,1189"/>
+<area shape="rect" title=" " alt="" coords="1173,211,1324,265"/>
+<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title="Shared handle to an observable." alt="" coords="1072,328,1223,720"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab2c232162175238d917147482478eceb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d27/class_quant_lib_1_1_digital_path_pricer.html#ab2c232162175238d917147482478eceb">DigitalPathPricer</a> (ext::shared_ptr&lt; <a class="el" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html">CashOrNothingPayoff</a> &gt; payoff, ext::shared_ptr&lt; <a class="el" href="../../d4/dc9/class_quant_lib_1_1_american_exercise.html">AmericanExercise</a> &gt; exercise, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; discountTS, ext::shared_ptr&lt; <a class="el" href="../../d4/d1a/class_quant_lib_1_1_stochastic_process1_d.html">StochasticProcess1D</a> &gt; diffProcess, <a class="el" href="../../d9/d48/struct_quant_lib_1_1_generic_pseudo_random.html#a9ec0daac1a5df690cfb0e14bcef2c36e">PseudoRandom::ursg_type</a> sequenceGen)</td></tr>
+<tr class="memitem:ab2c232162175238d917147482478eceb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d27/class_quant_lib_1_1_digital_path_pricer.html#ab2c232162175238d917147482478eceb">DigitalPathPricer</a> (ext::shared_ptr&lt; <a class="el" href="../../d8/d76/class_quant_lib_1_1_cash_or_nothing_payoff.html">CashOrNothingPayoff</a> &gt; <a class="el" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>, ext::shared_ptr&lt; <a class="el" href="../../d4/dc9/class_quant_lib_1_1_american_exercise.html">AmericanExercise</a> &gt; exercise, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; discountTS, ext::shared_ptr&lt; <a class="el" href="../../d4/d1a/class_quant_lib_1_1_stochastic_process1_d.html">StochasticProcess1D</a> &gt; diffProcess, <a class="el" href="../../d9/d48/struct_quant_lib_1_1_generic_pseudo_random.html#a9ec0daac1a5df690cfb0e14bcef2c36e">PseudoRandom::ursg_type</a> sequenceGen)</td></tr>
 <tr class="separator:ab2c232162175238d917147482478eceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6e005ed21b73c75b8ecead7a34474ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d27/class_quant_lib_1_1_digital_path_pricer.html#ac6e005ed21b73c75b8ecead7a34474ff">operator()</a> (const <a class="el" href="../../d6/d60/class_quant_lib_1_1_path.html">Path</a> &amp;path) const override</td></tr>
 <tr class="separator:ac6e005ed21b73c75b8ecead7a34474ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,9 +165,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_class_quant_lib_1_1_path_pricer"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_quant_lib_1_1_path_pricer')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html">PathPricer&lt; Path &gt;</a></td></tr>
 <tr class="memitem:acd5891901c77cb22bf37f2309008560f inherit pub_types_class_quant_lib_1_1_path_pricer"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#acd5891901c77cb22bf37f2309008560f">result_type</a></td></tr>
 <tr class="separator:acd5891901c77cb22bf37f2309008560f inherit pub_types_class_quant_lib_1_1_path_pricer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_class_quant_lib_1_1_path_pricer"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_quant_lib_1_1_path_pricer')"><img src="../../closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html">PathPricer&lt; Path &gt;</a></td></tr>
-<tr class="memitem:a0f66760579f45c68e699aacc7382a154 inherit pub_attribs_class_quant_lib_1_1_path_pricer"><td class="memItemLeft" align="right" valign="top">QL_DEPRECATED typedef <a class="el" href="../../d6/d60/class_quant_lib_1_1_path.html">Path</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4a/class_quant_lib_1_1_path_pricer.html#a0f66760579f45c68e699aacc7382a154">argument_type</a></td></tr>
-<tr class="separator:a0f66760579f45c68e699aacc7382a154 inherit pub_attribs_class_quant_lib_1_1_path_pricer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">

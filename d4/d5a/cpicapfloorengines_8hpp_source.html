@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/inflation/cpicapfloorengines.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/inflation/cpicapfloorengines.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">cpicapfloorengines.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d4/d5a/cpicapfloorengines_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2011 Chris Kenyon</span></div>
@@ -106,19 +105,27 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*!</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \file cpicapfloorengines.hpp</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">    \brief Engines for CPI options</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef quantlib_cpicapfloorengines_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define quantlib_cpicapfloorengines_hpp</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/pricingengines/genericmodelengine.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/instruments/cpicapfloor.hpp&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d4f/genericmodelengine_8hpp.html">ql/pricingengines/genericmodelengine.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d62/cpicapfloor_8hpp.html">ql/instruments/cpicapfloor.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">class </span>CPICapFloorTermPriceSurface;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"></span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">    //! Engine for CPI cap/floors based on a price surface</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"></span><span class="comment">    /*! This engine only adds timing functionality (e.g. different lag)</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">        w.r.t. an existing interpolated price surface.</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html">   41</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html">InterpolatingCPICapFloorEngine</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d5/dbb/class_quant_lib_1_1_c_p_i_cap_floor_1_1engine.html">CPICapFloor::engine</a> {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>          <span class="keyword">explicit</span> <a class="code hl_class" href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html">InterpolatingCPICapFloorEngine</a>(<a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;CPICapFloorTermPriceSurface&gt;</a>);</div>
@@ -142,6 +149,8 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html_a215d496e0eedd3d3bcde568f52718dd4"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a215d496e0eedd3d3bcde568f52718dd4">QuantLib::InterpolatingCPICapFloorEngine::priceSurf_</a></div><div class="ttdeci">Handle&lt; CPICapFloorTermPriceSurface &gt; priceSurf_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5a/cpicapfloorengines_8hpp_source.html#l00051">cpicapfloorengines.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::InterpolatingCPICapFloorEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dbb/cpicapfloorengines_8cpp_source.html#l00038">cpicapfloorengines.cpp:38</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine_html_a6a119daa8b83c3aaffdb6e11fac1f97e"><div class="ttname"><a href="../../d8/dd3/class_quant_lib_1_1_interpolating_c_p_i_cap_floor_engine.html#a6a119daa8b83c3aaffdb6e11fac1f97e">QuantLib::InterpolatingCPICapFloorEngine::name</a></div><div class="ttdeci">virtual std::string name() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5a/cpicapfloorengines_8hpp_source.html#l00046">cpicapfloorengines.hpp:46</a></div></div>
+<div class="ttc" id="acpicapfloor_8hpp_html"><div class="ttname"><a href="../../d6/d62/cpicapfloor_8hpp.html">cpicapfloor.hpp</a></div><div class="ttdoc">zero-inflation-indexed-ratio-with-base option</div></div>
+<div class="ttc" id="agenericmodelengine_8hpp_html"><div class="ttname"><a href="../../d2/d4f/genericmodelengine_8hpp.html">genericmodelengine.hpp</a></div><div class="ttdoc">Generic option engine based on a model.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

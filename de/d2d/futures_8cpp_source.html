@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/instruments/futures.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/instruments/futures.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">futures.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../de/d2d/futures_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">Copyright (C) 2015 Ferdinando Ametrano</span></div>
@@ -107,30 +106,37 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/instruments/futures.hpp&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/types.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/errors.hpp&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/de5/futures_8hpp.html">ql/instruments/futures.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/de3/types_8hpp.html">ql/types.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d52/errors_8hpp.html">ql/errors.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../de/d67/struct_quant_lib_1_1_futures.html#a5780d27c2b893b319a889130187cc39b">   27</a></span>    std::ostream&amp; <a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#a667d80c284f89eb33f170880e2965118">operator&lt;&lt;</a>(std::ostream&amp; out, <a class="code hl_enumeration" href="../../de/d67/struct_quant_lib_1_1_futures.html#a1d1cfd8ffb84e947f82999c682b666a7">Futures::Type</a> f) {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">switch</span> (f) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../de/d67/struct_quant_lib_1_1_futures.html#a5780d27c2b893b319a889130187cc39b">   27</a></span>    std::ostream&amp; <a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#a667d80c284f89eb33f170880e2965118">operator&lt;&lt;</a>(std::ostream&amp; out, <a class="code hl_enumeration" href="../../de/d67/struct_quant_lib_1_1_futures.html#a1d1cfd8ffb84e947f82999c682b666a7">Futures::Type</a> <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>) {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../de/d67/struct_quant_lib_1_1_futures.html#a1d1cfd8ffb84e947f82999c682b666a7aa77e6848bc2c2031677291053c6badaa">Futures::IMM</a>:</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot;IMM&quot;</span>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../de/d67/struct_quant_lib_1_1_futures.html#a1d1cfd8ffb84e947f82999c682b666a7a06964cf1ec93e904888af9e55f733df6">Futures::ASX</a>:</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot;ASX&quot;</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>          <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            QL_FAIL(<span class="stringliteral">&quot;unknown futures type (&quot;</span> &lt;&lt; <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>(f) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../de/d67/struct_quant_lib_1_1_futures.html#a1d1cfd8ffb84e947f82999c682b666a7a26b367bcdd210f7345b551b921c5551f">Futures::Custom</a>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot;Custom&quot;</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>          <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot;Unknown(&quot;</span> &lt;&lt; <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>(<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>) &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="ttc" id="adefaultdensitystructure_8cpp_html_ae19b4006a311a298a93a5cd06a7cb0e7"><div class="ttname"><a href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a></div><div class="ttdeci">F f</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d93/defaultdensitystructure_8cpp_source.html#l00032">defaultdensitystructure.cpp:32</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html"><div class="ttname"><a href="../../df/d52/errors_8hpp.html">errors.hpp</a></div><div class="ttdoc">Classes and functions for error handling.</div></div>
+<div class="ttc" id="afutures_8hpp_html"><div class="ttname"><a href="../../de/de5/futures_8hpp.html">futures.hpp</a></div><div class="ttdoc">Futures.</div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a667d80c284f89eb33f170880e2965118"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a667d80c284f89eb33f170880e2965118">QuantLib::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, GFunctionFactory::YieldCurveModel type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da9/conundrumpricer_8hpp_source.html#l00183">conundrumpricer.hpp:183</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_futures_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../de/d67/struct_quant_lib_1_1_futures.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::Futures::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Futures type enumeration.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de5/futures_8hpp_source.html#l00036">futures.hpp:36</a></div></div>
-<div class="ttc" id="astruct_quant_lib_1_1_futures_html_a1d1cfd8ffb84e947f82999c682b666a7a06964cf1ec93e904888af9e55f733df6"><div class="ttname"><a href="../../de/d67/struct_quant_lib_1_1_futures.html#a1d1cfd8ffb84e947f82999c682b666a7a06964cf1ec93e904888af9e55f733df6">QuantLib::Futures::ASX</a></div><div class="ttdeci">@ ASX</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de5/futures_8hpp_source.html#l00041">futures.hpp:39</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_futures_html_a1d1cfd8ffb84e947f82999c682b666a7a06964cf1ec93e904888af9e55f733df6"><div class="ttname"><a href="../../de/d67/struct_quant_lib_1_1_futures.html#a1d1cfd8ffb84e947f82999c682b666a7a06964cf1ec93e904888af9e55f733df6">QuantLib::Futures::ASX</a></div><div class="ttdeci">@ ASX</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de5/futures_8hpp_source.html#l00040">futures.hpp:39</a></div></div>
+<div class="ttc" id="astruct_quant_lib_1_1_futures_html_a1d1cfd8ffb84e947f82999c682b666a7a26b367bcdd210f7345b551b921c5551f"><div class="ttname"><a href="../../de/d67/struct_quant_lib_1_1_futures.html#a1d1cfd8ffb84e947f82999c682b666a7a26b367bcdd210f7345b551b921c5551f">QuantLib::Futures::Custom</a></div><div class="ttdeci">@ Custom</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de5/futures_8hpp_source.html#l00042">futures.hpp:41</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_futures_html_a1d1cfd8ffb84e947f82999c682b666a7aa77e6848bc2c2031677291053c6badaa"><div class="ttname"><a href="../../de/d67/struct_quant_lib_1_1_futures.html#a1d1cfd8ffb84e947f82999c682b666a7aa77e6848bc2c2031677291053c6badaa">QuantLib::Futures::IMM</a></div><div class="ttdeci">@ IMM</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de5/futures_8hpp_source.html#l00038">futures.hpp:37</a></div></div>
+<div class="ttc" id="atypes_8hpp_html"><div class="ttname"><a href="../../dd/de3/types_8hpp.html">types.hpp</a></div><div class="ttdoc">Custom types.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/methods/finitedifferences/stepconditions/fdmbermudanstepcondition.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/methods/finitedifferences/stepconditions/fdmbermudanstepcondition.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">fdmbermudanstepcondition.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../db/d25/fdmbermudanstepcondition_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2010 Klaus Spanderen</span></div>
@@ -105,13 +104,17 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file fdmbermudanstepcondition.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief bermudan step condition for multi dimensional problems</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_fdm_bermudan_step_condition_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_fdm_bermudan_step_condition_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/time/daycounter.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/methods/finitedifferences/stepcondition.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/methods/finitedifferences/meshers/fdmmesher.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d32/daycounter_8hpp.html">ql/time/daycounter.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d7/d0a/stepcondition_8hpp.html">ql/methods/finitedifferences/stepcondition.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d76/fdmmesher_8hpp.html">ql/methods/finitedifferences/meshers/fdmmesher.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
@@ -125,7 +128,7 @@ $(function() {
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                                 ext::shared_ptr&lt;FdmMesher&gt; mesher,</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                 ext::shared_ptr&lt;FdmInnerValueCalculator&gt; calculator);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d72/class_quant_lib_1_1_fdm_bermudan_step_condition.html#abe7b3e67f32110abbd846e32b4012cd1">applyTo</a>(<a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; a, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d72/class_quant_lib_1_1_fdm_bermudan_step_condition.html#abe7b3e67f32110abbd846e32b4012cd1">applyTo</a>(<a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; a, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">const</span> std::vector&lt;Time&gt;&amp; <a class="code hl_function" href="../../d1/d72/class_quant_lib_1_1_fdm_bermudan_step_condition.html#aeb30ee05cfd66e27585274030b17a2a2">exerciseTimes</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <span class="keyword">private</span>:</div>
@@ -146,8 +149,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_bermudan_step_condition_html_abe7b3e67f32110abbd846e32b4012cd1"><div class="ttname"><a href="../../d1/d72/class_quant_lib_1_1_fdm_bermudan_step_condition.html#abe7b3e67f32110abbd846e32b4012cd1">QuantLib::FdmBermudanStepCondition::applyTo</a></div><div class="ttdeci">void applyTo(Array &amp;a, Time t) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da3/fdmbermudanstepcondition_8cpp_source.html#l00045">fdmbermudanstepcondition.cpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_bermudan_step_condition_html_aeb30ee05cfd66e27585274030b17a2a2"><div class="ttname"><a href="../../d1/d72/class_quant_lib_1_1_fdm_bermudan_step_condition.html#aeb30ee05cfd66e27585274030b17a2a2">QuantLib::FdmBermudanStepCondition::exerciseTimes</a></div><div class="ttdeci">const std::vector&lt; Time &gt; &amp; exerciseTimes() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da3/fdmbermudanstepcondition_8cpp_source.html#l00041">fdmbermudanstepcondition.cpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_step_condition_html"><div class="ttname"><a href="../../dc/dda/class_quant_lib_1_1_step_condition.html">QuantLib::StepCondition</a></div><div class="ttdoc">condition to be applied at every time step</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0a/stepcondition_8hpp_source.html#l00035">stepcondition.hpp:35</a></div></div>
+<div class="ttc" id="adaycounter_8hpp_html"><div class="ttname"><a href="../../df/d32/daycounter_8hpp.html">daycounter.hpp</a></div><div class="ttdoc">day counter class</div></div>
+<div class="ttc" id="adefaultprobabilitykey_8cpp_html_a15fc20af123a89cd6f40758e341a4a54"><div class="ttname"><a href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a></div><div class="ttdeci">const DefaultType &amp; t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ddb/defaultprobabilitykey_8cpp_source.html#l00039">defaultprobabilitykey.cpp:39</a></div></div>
+<div class="ttc" id="afdmmesher_8hpp_html"><div class="ttname"><a href="../../d0/d76/fdmmesher_8hpp.html">fdmmesher.hpp</a></div><div class="ttdoc">mesher for a fdm grid</div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="astepcondition_8hpp_html"><div class="ttname"><a href="../../d7/d0a/stepcondition_8hpp.html">stepcondition.hpp</a></div><div class="ttdoc">conditions to be applied at every time step</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

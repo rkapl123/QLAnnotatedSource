@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/processes/vegastressedblackscholesprocess.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/processes/vegastressedblackscholesprocess.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">vegastressedblackscholesprocess.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../db/d51/vegastressedblackscholesprocess_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2010 Michael Heckl</span></div>
@@ -106,7 +105,7 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/experimental/processes/vegastressedblackscholesprocess.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d85/vegastressedblackscholesprocess_8hpp.html">ql/experimental/processes/vegastressedblackscholesprocess.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
@@ -187,12 +186,12 @@ $(function() {
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#a5e8031b6bc1abc7f8ca5b77c966d2442">  101</a></span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#a5e8031b6bc1abc7f8ca5b77c966d2442">VegaStressedBlackScholesProcess::diffusion</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#a2e56025f49827a93ab5ee281e237c875">lowerTimeBorderForStressTest_</a> &lt;= t &amp;&amp; t &lt;= <a class="code hl_variable" href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#a54902db4197f37315298796f0c82ac98">upperTimeBorderForStressTest_</a> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#a5e8031b6bc1abc7f8ca5b77c966d2442">  101</a></span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#a5e8031b6bc1abc7f8ca5b77c966d2442">VegaStressedBlackScholesProcess::diffusion</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#a2e56025f49827a93ab5ee281e237c875">lowerTimeBorderForStressTest_</a> &lt;= <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a> &amp;&amp; <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a> &lt;= <a class="code hl_variable" href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#a54902db4197f37315298796f0c82ac98">upperTimeBorderForStressTest_</a> </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            &amp;&amp; <a class="code hl_variable" href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#ad8d088819eb889dca83b2a8ee122108d">lowerAssetBorderForStressTest_</a> &lt;= x &amp;&amp; x &lt;= <a class="code hl_variable" href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#acbf3ed0b629af6dbfaf1cccaf8eb81bf">upperAssetBorderForStressTest_</a>) {</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html#a5e8031b6bc1abc7f8ca5b77c966d2442">GeneralizedBlackScholesProcess::diffusion</a>(t, x)+<a class="code hl_variable" href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#acbd18b7e5fd3f93f4c6a2e8ffd08aa21">stressLevel_</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html#a5e8031b6bc1abc7f8ca5b77c966d2442">GeneralizedBlackScholesProcess::diffusion</a>(<a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, x)+<a class="code hl_variable" href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#acbd18b7e5fd3f93f4c6a2e8ffd08aa21">stressLevel_</a>;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html#a5e8031b6bc1abc7f8ca5b77c966d2442">GeneralizedBlackScholesProcess::diffusion</a>(t, x);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/dc2/class_quant_lib_1_1_generalized_black_scholes_process.html#a5e8031b6bc1abc7f8ca5b77c966d2442">GeneralizedBlackScholesProcess::diffusion</a>(<a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, x);</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
@@ -218,9 +217,11 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_vega_stressed_black_scholes_process_html_acbf97c10217c63f2203a1ddffcb44cfe"><div class="ttname"><a href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#acbf97c10217c63f2203a1ddffcb44cfe">QuantLib::VegaStressedBlackScholesProcess::getUpperAssetBorderForStressTest</a></div><div class="ttdeci">Real getUpperAssetBorderForStressTest() const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d51/vegastressedblackscholesprocess_8cpp_source.html#l00059">vegastressedblackscholesprocess.cpp:59</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_vega_stressed_black_scholes_process_html_ad8d088819eb889dca83b2a8ee122108d"><div class="ttname"><a href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#ad8d088819eb889dca83b2a8ee122108d">QuantLib::VegaStressedBlackScholesProcess::lowerAssetBorderForStressTest_</a></div><div class="ttdeci">Real lowerAssetBorderForStressTest_</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d85/vegastressedblackscholesprocess_8hpp_source.html#l00077">vegastressedblackscholesprocess.hpp:77</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_vega_stressed_black_scholes_process_html_aee522bf9f9a38706ed09d33f3b4ee05a"><div class="ttname"><a href="../../d1/de2/class_quant_lib_1_1_vega_stressed_black_scholes_process.html#aee522bf9f9a38706ed09d33f3b4ee05a">QuantLib::VegaStressedBlackScholesProcess::getLowerTimeBorderForStressTest</a></div><div class="ttdeci">Real getLowerTimeBorderForStressTest() const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d51/vegastressedblackscholesprocess_8cpp_source.html#l00044">vegastressedblackscholesprocess.cpp:44</a></div></div>
+<div class="ttc" id="adefaultprobabilitykey_8cpp_html_a15fc20af123a89cd6f40758e341a4a54"><div class="ttname"><a href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a></div><div class="ttdeci">const DefaultType &amp; t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ddb/defaultprobabilitykey_8cpp_source.html#l00039">defaultprobabilitykey.cpp:39</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="avegastressedblackscholesprocess_8hpp_html"><div class="ttname"><a href="../../dd/d85/vegastressedblackscholesprocess_8hpp.html">vegastressedblackscholesprocess.hpp</a></div><div class="ttdoc">Black-Scholes process which supports local vega stress tests.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/processes/coxingersollrossprocess.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/processes/coxingersollrossprocess.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">coxingersollrossprocess.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../de/db1/coxingersollrossprocess_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2020 Lew Wei Hao</span></div>
@@ -106,16 +105,16 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/processes/coxingersollrossprocess.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d94/coxingersollrossprocess_8hpp.html">ql/processes/coxingersollrossprocess.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../d6/d50/class_quant_lib_1_1_cox_ingersoll_ross_process.html#a6f16182e4f3ad750e3feda409cf22eee">   24</a></span>    <a class="code hl_function" href="../../d6/d50/class_quant_lib_1_1_cox_ingersoll_ross_process.html#a6f16182e4f3ad750e3feda409cf22eee">CoxIngersollRossProcess::CoxIngersollRossProcess</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> speed,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../d6/d50/class_quant_lib_1_1_cox_ingersoll_ross_process.html#a6f16182e4f3ad750e3feda409cf22eee">   24</a></span>    <a class="code hl_function" href="../../d6/d50/class_quant_lib_1_1_cox_ingersoll_ross_process.html#a6f16182e4f3ad750e3feda409cf22eee">CoxIngersollRossProcess::CoxIngersollRossProcess</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a83e666bb9a6adc2a938a0bf3eda05b2c">speed</a>,</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                                                       <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> vol,</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                                                       <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x0,</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                                                       <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> level)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    : x0_(x0), speed_(speed), level_(level), volatility_(vol) {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        QL_REQUIRE(<a class="code hl_variable" href="../../d6/d50/class_quant_lib_1_1_cox_ingersoll_ross_process.html#affafcc6e56e72b677c7afa126e18a595">volatility_</a> &gt;= 0.0, <span class="stringliteral">&quot;negative volatility given&quot;</span>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    : x0_(x0), speed_(<a class="code hl_variable" href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a83e666bb9a6adc2a938a0bf3eda05b2c">speed</a>), level_(level), volatility_(vol) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d6/d50/class_quant_lib_1_1_cox_ingersoll_ross_process.html#affafcc6e56e72b677c7afa126e18a595">volatility_</a> &gt;= 0.0, <span class="stringliteral">&quot;negative volatility given&quot;</span>);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d6/d50/class_quant_lib_1_1_cox_ingersoll_ross_process.html#afabed984ce6730100cb6b9ffe75ae936">   32</a></span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d6/d50/class_quant_lib_1_1_cox_ingersoll_ross_process.html#afabed984ce6730100cb6b9ffe75ae936">CoxIngersollRossProcess::variance</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a>, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> dt)<span class="keyword"> const </span>{</div>
@@ -134,6 +133,9 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_cox_ingersoll_ross_process_html_afabed984ce6730100cb6b9ffe75ae936"><div class="ttname"><a href="../../d6/d50/class_quant_lib_1_1_cox_ingersoll_ross_process.html#afabed984ce6730100cb6b9ffe75ae936">QuantLib::CoxIngersollRossProcess::variance</a></div><div class="ttdeci">Real variance(Time t0, Real x0, Time dt) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db1/coxingersollrossprocess_8cpp_source.html#l00032">coxingersollrossprocess.cpp:32</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_cox_ingersoll_ross_process_html_afb597b35edab96eecbcbf9a2df04f05d"><div class="ttname"><a href="../../d6/d50/class_quant_lib_1_1_cox_ingersoll_ross_process.html#afb597b35edab96eecbcbf9a2df04f05d">QuantLib::CoxIngersollRossProcess::x0_</a></div><div class="ttdeci">Real x0_</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d94/coxingersollrossprocess_8hpp_source.html#l00068">coxingersollrossprocess.hpp:68</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_cox_ingersoll_ross_process_html_affafcc6e56e72b677c7afa126e18a595"><div class="ttname"><a href="../../d6/d50/class_quant_lib_1_1_cox_ingersoll_ross_process.html#affafcc6e56e72b677c7afa126e18a595">QuantLib::CoxIngersollRossProcess::volatility_</a></div><div class="ttdeci">Volatility volatility_</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d94/coxingersollrossprocess_8hpp_source.html#l00069">coxingersollrossprocess.hpp:69</a></div></div>
+<div class="ttc" id="acoxingersollrossprocess_8hpp_html"><div class="ttname"><a href="../../d0/d94/coxingersollrossprocess_8hpp.html">coxingersollrossprocess.hpp</a></div><div class="ttdoc">CoxIngersollRoss process.</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aextendedornsteinuhlenbeckprocess_8cpp_html_a83e666bb9a6adc2a938a0bf3eda05b2c"><div class="ttname"><a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp.html#a83e666bb9a6adc2a938a0bf3eda05b2c">speed</a></div><div class="ttdeci">Real speed</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d9e/extendedornsteinuhlenbeckprocess_8cpp_source.html#l00031">extendedornsteinuhlenbeckprocess.cpp:31</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>

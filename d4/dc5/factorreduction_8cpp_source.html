@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/math/matrixutilities/factorreduction.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/math/matrixutilities/factorreduction.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">factorreduction.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d4/dc5/factorreduction_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2009 Jose Aparicio</span></div>
@@ -106,8 +105,8 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/math/matrixutilities/factorreduction.hpp&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/math/matrixutilities/symmetricschurdecomposition.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d83/factorreduction_8hpp.html">ql/math/matrixutilities/factorreduction.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/deb/symmetricschurdecomposition_8hpp.html">ql/math/matrixutilities/symmetricschurdecomposition.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
@@ -116,30 +115,30 @@ $(function() {
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                                      <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> maxIters) {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">static</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> tolerance = 1.e-6;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        QL_REQUIRE(mtrx.<a class="code hl_function" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a74da223ed3bde38f5e9f6822f6cacfbe">rows</a>() == mtrx.<a class="code hl_function" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a86a771d47cf764c4ef43aab250442fda">columns</a>(),</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(mtrx.<a class="code hl_function" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a74da223ed3bde38f5e9f6822f6cacfbe">rows</a>() == mtrx.<a class="code hl_function" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a86a771d47cf764c4ef43aab250442fda">columns</a>(),</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                   <span class="stringliteral">&quot;Input matrix is not square&quot;</span>);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n = mtrx.<a class="code hl_function" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a86a771d47cf764c4ef43aab250442fda">columns</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a> = mtrx.<a class="code hl_function" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a86a771d47cf764c4ef43aab250442fda">columns</a>();</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">        #if defined(QL_EXTRA_SAFETY_CHECKS)</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="comment">// check symmetry</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iRow=0; iRow&lt;mtrx.<a class="code hl_function" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a74da223ed3bde38f5e9f6822f6cacfbe">rows</a>(); iRow++)</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iCol=0; iCol&lt;iRow; iCol++)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                QL_REQUIRE(mtrx[iRow][iCol] == mtrx[iCol][iRow],</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(mtrx[iRow][iCol] == mtrx[iCol][iRow],</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                           <span class="stringliteral">&quot;input matrix is not symmetric&quot;</span>);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        QL_REQUIRE(*std::max_element(mtrx.<a class="code hl_function" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a3dece4c106f934e6135985fdad30c0c8">begin</a>(), mtrx.<a class="code hl_function" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a82a59cb80a1b5eed6e558cf220b24cc9">end</a>()) &lt;=1 &amp;&amp;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(*std::max_element(mtrx.<a class="code hl_function" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a3dece4c106f934e6135985fdad30c0c8">begin</a>(), mtrx.<a class="code hl_function" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a82a59cb80a1b5eed6e558cf220b24cc9">end</a>()) &lt;=1 &amp;&amp;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            *std::min_element(mtrx.<a class="code hl_function" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a3dece4c106f934e6135985fdad30c0c8">begin</a>(), mtrx.<a class="code hl_function" href="../../dd/db6/class_quant_lib_1_1_matrix.html#a82a59cb80a1b5eed6e558cf220b24cc9">end</a>()) &gt;=-1,</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                    <span class="stringliteral">&quot;input matrix data is not correlation data&quot;</span>);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">        #endif</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="comment">// Initial guess value</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        std::vector&lt;Real&gt; previousCorrels(n, 0.);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iCol=0; iCol&lt;n; iCol++) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iRow=0; iRow&lt;n; iRow++)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        std::vector&lt;Real&gt; previousCorrels(<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>, 0.);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iCol=0; iCol&lt;<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>; iCol++) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iRow=0; iRow&lt;<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>; iRow++)</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                previousCorrels[iCol] +=</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                    mtrx[iRow][iCol] * mtrx[iRow][iCol];</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            previousCorrels[iCol] =</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                std::sqrt((previousCorrels[iCol]-1.)/(n-1.));</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                std::sqrt((previousCorrels[iCol]-1.)/(<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>-1.));</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="comment">// iterative solution</span></div>
@@ -147,7 +146,7 @@ $(function() {
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> distance;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">do</span> {</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="comment">// patch Matrix diagonal</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iCol=0; iCol&lt;n; iCol++)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iCol=0; iCol&lt;<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>; iCol++)</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                mtrx[iCol][iCol] =</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    previousCorrels[iCol];</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="comment">// compute eigenvector decomposition</span></div>
@@ -160,7 +159,7 @@ $(function() {
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="comment">//   corresponding eigenvector</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iMax = std::distance(eigenVals.<a class="code hl_function" href="../../d0/d7c/class_quant_lib_1_1_array.html#af820f57a2b80308855934b525a082765">begin</a>(), itMaxEval);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            std::vector&lt;Real&gt; newCorrels, distances;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iCol=0; iCol&lt;n; iCol++) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">for</span>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> iCol=0; iCol&lt;<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>; iCol++) {</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> thisCorrel = mtrx[iMax][iCol];</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                newCorrels.push_back(thisCorrel);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="comment">// strictly is:</span></div>
@@ -175,12 +174,12 @@ $(function() {
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="comment">// test it did not go up to the max iteration and the matrix can</span></div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="comment">//   be reduced to one factor.</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        QL_REQUIRE(iteration &lt; maxIters,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(iteration &lt; maxIters,</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                   <span class="stringliteral">&quot;convergence not reached after &quot;</span> &lt;&lt;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                   iteration &lt;&lt; <span class="stringliteral">&quot; iterations&quot;</span>);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">        #if defined(QL_EXTRA_SAFETY_CHECKS)</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        QL_REQUIRE(*std::max_element(previousCorrels.begin(),</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(*std::max_element(previousCorrels.begin(),</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                                     previousCorrels.end()) &lt;=1 &amp;&amp;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                   *std::min_element(previousCorrels.begin(),</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                     previousCorrels.end()) &gt;=-1,</div>
@@ -191,6 +190,7 @@ $(function() {
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
+<div class="ttc" id="aandreasenhugevolatilityinterpl_8cpp_html_a4c79e7f153710550f0238535048a4d0a"><div class="ttname"><a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a></div><div class="ttdeci">Size n</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp_source.html#l00047">andreasenhugevolatilityinterpl.cpp:47</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00052">array.hpp:52</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html_a0282fb9d40dbac6ced245bd67c194257"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#a0282fb9d40dbac6ced245bd67c194257">QuantLib::Array::const_iterator</a></div><div class="ttdeci">const Real * const_iterator</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00124">array.hpp:124</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html_a8edb38fc95e912ca47338586b47c5607"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#a8edb38fc95e912ca47338586b47c5607">QuantLib::Array::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00511">array.hpp:511</a></div></div>
@@ -202,10 +202,13 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_matrix_html_a86a771d47cf764c4ef43aab250442fda"><div class="ttname"><a href="../../dd/db6/class_quant_lib_1_1_matrix.html#a86a771d47cf764c4ef43aab250442fda">QuantLib::Matrix::columns</a></div><div class="ttdeci">Size columns() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/matrix_8hpp_source.html#l00508">matrix.hpp:508</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_symmetric_schur_decomposition_html"><div class="ttname"><a href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html">QuantLib::SymmetricSchurDecomposition</a></div><div class="ttdoc">symmetric threshold Jacobi algorithm.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/symmetricschurdecomposition_8hpp_source.html#l00050">symmetricschurdecomposition.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_symmetric_schur_decomposition_html_ac35f36e99c9276e13b8139cad39be6b3"><div class="ttname"><a href="../../da/db8/class_quant_lib_1_1_symmetric_schur_decomposition.html#ac35f36e99c9276e13b8139cad39be6b3">QuantLib::SymmetricSchurDecomposition::eigenvalues</a></div><div class="ttdeci">const Array &amp; eigenvalues() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/symmetricschurdecomposition_8hpp_source.html#l00054">symmetricschurdecomposition.hpp:54</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="afactorreduction_8hpp_html"><div class="ttname"><a href="../../dc/d83/factorreduction_8hpp.html">factorreduction.hpp</a></div><div class="ttdoc">Single factor correlation reduction.</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a237aca4c528d5ca505cee5db6122cec2"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a237aca4c528d5ca505cee5db6122cec2">QuantLib::factorReduction</a></div><div class="ttdeci">std::vector&lt; Real &gt; factorReduction(Matrix mtrx, Size maxIters)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dc5/factorreduction_8cpp_source.html#l00026">factorreduction.cpp:26</a></div></div>
+<div class="ttc" id="asymmetricschurdecomposition_8hpp_html"><div class="ttname"><a href="../../dc/deb/symmetricschurdecomposition_8hpp.html">symmetricschurdecomposition.hpp</a></div><div class="ttdoc">Eigenvalues/eigenvectors of a real symmetric matrix.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

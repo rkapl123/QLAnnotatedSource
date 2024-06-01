@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/cashflows/dividend.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/cashflows/dividend.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">dividend.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d6/da5/dividend_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2005 Joseph Wang</span></div>
@@ -107,34 +106,34 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/cashflows/dividend.hpp&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/patterns/visitor.hpp&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d04/dividend_8hpp.html">ql/cashflows/dividend.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/df0/visitor_8hpp.html">ql/patterns/visitor.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d2/de5/class_quant_lib_1_1_dividend.html#a6fcc1b62510947fbc30b2952fff63c2d">   26</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/de5/class_quant_lib_1_1_dividend.html#a6fcc1b62510947fbc30b2952fff63c2d">Dividend::accept</a>(<a class="code hl_class" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp; v) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">auto</span>* v1 = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d6/d87/class_quant_lib_1_1_visitor.html">Visitor&lt;Dividend&gt;</a>*<span class="keyword">&gt;</span>(&amp;v);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d2/de5/class_quant_lib_1_1_dividend.html#a6fcc1b62510947fbc30b2952fff63c2d">   26</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/de5/class_quant_lib_1_1_dividend.html#a6fcc1b62510947fbc30b2952fff63c2d">Dividend::accept</a>(<a class="code hl_class" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a>&amp; <a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">auto</span>* v1 = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d6/d87/class_quant_lib_1_1_visitor.html">Visitor&lt;Dividend&gt;</a>*<span class="keyword">&gt;</span>(&amp;<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">if</span> (v1 != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            v1-&gt;<a class="code hl_function" href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">visit</a>(*<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            CashFlow::accept(v);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            CashFlow::accept(<a class="code hl_variable" href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a>);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::vector&lt;ext::shared_ptr&lt;Dividend&gt; &gt;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d5/d7b/namespace_quant_lib.html#aac6496205c037b601b08d3532a4a18ae">   35</a></span>    <a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#aac6496205c037b601b08d3532a4a18ae">DividendVector</a>(<span class="keyword">const</span> std::vector&lt;Date&gt;&amp; dividendDates,</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                   <span class="keyword">const</span> std::vector&lt;Real&gt;&amp; dividends) {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        QL_REQUIRE(dividendDates.size() == dividends.size(),</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(dividendDates.size() == dividends.size(),</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                   <span class="stringliteral">&quot;size mismatch between dividend dates and amounts&quot;</span>);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        std::vector&lt;Date&gt;::const_iterator dd;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::vector&lt;Real&gt;::const_iterator d;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::vector&lt;Real&gt;::const_iterator <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        std::vector&lt;ext::shared_ptr&lt;Dividend&gt; &gt; items;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        items.reserve(dividendDates.size());</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">for</span> (dd = dividendDates.begin(), d = dividends.begin();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>             dd != dividendDates.end(); ++dd, ++d) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">for</span> (dd = dividendDates.begin(), <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a> = dividends.begin();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>             dd != dividendDates.end(); ++dd, ++<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>) {</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            items.push_back(ext::shared_ptr&lt;Dividend&gt;(<span class="keyword">new</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <a class="code hl_class" href="../../de/d6a/class_quant_lib_1_1_fixed_dividend.html">FixedDividend</a>(*d, *dd)));</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <a class="code hl_class" href="../../de/d6a/class_quant_lib_1_1_fixed_dividend.html">FixedDividend</a>(*<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, *dd)));</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> items;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
@@ -146,8 +145,13 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_fixed_dividend_html"><div class="ttname"><a href="../../de/d6a/class_quant_lib_1_1_fixed_dividend.html">QuantLib::FixedDividend</a></div><div class="ttdoc">Predetermined cash flow.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d04/dividend_8hpp_source.html#l00059">dividend.hpp:59</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_visitor_html"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html">QuantLib::Visitor</a></div><div class="ttdoc">Visitor for a specific class</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00040">visitor.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_visitor_html_a6d7e98e3f298924633a9ba9bf5b04a83"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">QuantLib::Visitor::visit</a></div><div class="ttdeci">virtual void visit(T &amp;)=0</div></div>
+<div class="ttc" id="adividend_8hpp_html"><div class="ttname"><a href="../../d3/d04/dividend_8hpp.html">dividend.hpp</a></div><div class="ttdoc">A stock dividend.</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aexchangeratemanager_8cpp_html_a85641069b0d4478ab8a7356c3bf32ea3"><div class="ttname"><a href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a></div><div class="ttdeci">Date d</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/exchangeratemanager_8cpp_source.html#l00032">exchangeratemanager.cpp:32</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_aac6496205c037b601b08d3532a4a18ae"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#aac6496205c037b601b08d3532a4a18ae">QuantLib::DividendVector</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; Dividend &gt; &gt; DividendVector(const std::vector&lt; Date &gt; &amp;dividendDates, const std::vector&lt; Real &gt; &amp;dividends)</div><div class="ttdoc">helper function building a sequence of fixed dividends</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da5/dividend_8cpp_source.html#l00035">dividend.cpp:35</a></div></div>
+<div class="ttc" id="aperturbativebarrieroptionengine_8cpp_html_ac58b0f1581c316228a305f7eb7cce633"><div class="ttname"><a href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a></div><div class="ttdeci">ext::shared_ptr&lt; BlackVolTermStructure &gt; v</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de0/perturbativebarrieroptionengine_8cpp_source.html#l01487">perturbativebarrieroptionengine.cpp:1487</a></div></div>
+<div class="ttc" id="avisitor_8hpp_html"><div class="ttname"><a href="../../d2/df0/visitor_8hpp.html">visitor.hpp</a></div><div class="ttdoc">degenerate base class for the Acyclic Visitor pattern</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/indexes/ibor/eurlibor.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/indexes/ibor/eurlibor.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">eurlibor.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d2/dc5/eurlibor_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2007 Ferdinando Ametrano</span></div>
@@ -107,12 +106,12 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/indexes/ibor/eurlibor.hpp&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/time/calendars/jointcalendar.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/time/calendars/target.hpp&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/time/calendars/unitedkingdom.hpp&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;ql/time/daycounters/actual360.hpp&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ql/currencies/europe.hpp&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/d6a/eurlibor_8hpp.html">ql/indexes/ibor/eurlibor.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/df2/jointcalendar_8hpp.html">ql/time/calendars/jointcalendar.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d69/target_8hpp.html">ql/time/calendars/target.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/ded/unitedkingdom_8hpp.html">ql/time/calendars/unitedkingdom.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/dbc/actual360_8hpp.html">ql/time/daycounters/actual360.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d00/europe_8hpp.html">ql/currencies/europe.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
@@ -127,7 +126,7 @@ $(function() {
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>              <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d">Years</a>:</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707">ModifiedFollowing</a>;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>              <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                QL_FAIL(<span class="stringliteral">&quot;invalid time units&quot;</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;invalid time units&quot;</span>);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            }</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
@@ -140,7 +139,7 @@ $(function() {
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>              <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d">Years</a>:</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>              <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                QL_FAIL(<span class="stringliteral">&quot;invalid time units&quot;</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a>(<span class="stringliteral">&quot;invalid time units&quot;</span>);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            }</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
@@ -159,15 +158,15 @@ $(function() {
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                              <a class="code hl_enumvalue" href="../../d5/d7b/namespace_quant_lib.html#a51033ff28c58a4dd772d61053b4f3bcaa925133cd0c258207022c40aa6a3425df">JoinBusinessDays</a>),</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                eurliborConvention(tenor), eurliborEOM(tenor),</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(), h),</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      target_(<a class="code hl_class" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>()) {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        QL_REQUIRE(this-&gt;<a class="code hl_function" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a893a77839fce3112da824bd5e08d5834">tenor</a>().units()!=<a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">Days</a>,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <a class="code hl_variable" href="../../dd/d2b/syntheticcdo_8cpp.html#a7a72e0b80e11b5af519d775e496bac13">target_</a>(<a class="code hl_class" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>()) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(this-&gt;<a class="code hl_function" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a893a77839fce3112da824bd5e08d5834">tenor</a>().units()!=<a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">Days</a>,</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                   <span class="stringliteral">&quot;for daily tenors (&quot;</span> &lt;&lt; this-&gt;<a class="code hl_function" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a893a77839fce3112da824bd5e08d5834">tenor</a>() &lt;&lt;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                   <span class="stringliteral">&quot;) dedicated DailyTenor constructor must be used&quot;</span>);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="../../d5/df8/class_quant_lib_1_1_e_u_r_libor.html#a3ae1be788c5cc61c18d408132e11041b">   79</a></span>    <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_function" href="../../d5/df8/class_quant_lib_1_1_e_u_r_libor.html#a3ae1be788c5cc61c18d408132e11041b">EURLibor::valueDate</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; fixingDate)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        QL_REQUIRE(<a class="code hl_function" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#accc3a81a3bf2b06b6a3696e3c4ff83ce">isValidFixingDate</a>(<a class="code hl_function" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#af332d4af13288e8638f60fc7b1c96a93">fixingDate</a>),</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_function" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#accc3a81a3bf2b06b6a3696e3c4ff83ce">isValidFixingDate</a>(<a class="code hl_function" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#af332d4af13288e8638f60fc7b1c96a93">fixingDate</a>),</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                   <span class="stringliteral">&quot;Fixing date &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#af332d4af13288e8638f60fc7b1c96a93">fixingDate</a> &lt;&lt; <span class="stringliteral">&quot; is not valid&quot;</span>);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="comment">// http://www.bba.org.uk/bba/jsp/polopoly.jsp?d=225&amp;a=1412 :</span></div>
@@ -197,6 +196,7 @@ $(function() {
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                <a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(), h) {}</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>}</div>
+<div class="ttc" id="aactual360_8hpp_html"><div class="ttname"><a href="../../d2/dbc/actual360_8hpp.html">actual360.hpp</a></div><div class="ttdoc">act/360 day counter</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual360_html"><div class="ttname"><a href="../../dd/d4e/class_quant_lib_1_1_actual360.html">QuantLib::Actual360</a></div><div class="ttdoc">Actual/360 day count convention.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbc/actual360_8hpp_source.html#l00037">actual360.hpp:37</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html_ab3fc4d2c4ba5243c3f5d51dcb3077ceb"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">QuantLib::Calendar::advance</a></div><div class="ttdeci">Date advance(const Date &amp;, Integer n, TimeUnit unit, BusinessDayConvention convention=Following, bool endOfMonth=false) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d2e/calendar_8cpp_source.html#l00130">calendar.cpp:130</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_daily_tenor_e_u_r_libor_html_aacc2cc0a50ffa3b0a47bc18194f3e2e6"><div class="ttname"><a href="../../da/d8b/class_quant_lib_1_1_daily_tenor_e_u_r_libor.html#aacc2cc0a50ffa3b0a47bc18194f3e2e6">QuantLib::DailyTenorEURLibor::DailyTenorEURLibor</a></div><div class="ttdeci">DailyTenorEURLibor(Natural settlementDays, const Handle&lt; YieldTermStructure &gt; &amp;h={})</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/eurlibor_8cpp_source.html#l00097">eurlibor.cpp:97</a></div></div>
@@ -219,6 +219,10 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_t_a_r_g_e_t_html"><div class="ttname"><a href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">QuantLib::TARGET</a></div><div class="ttdoc">TARGET calendar</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d69/target_8hpp_source.html#l00050">target.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_united_kingdom_html"><div class="ttname"><a href="../../d4/deb/class_quant_lib_1_1_united_kingdom.html">QuantLib::UnitedKingdom</a></div><div class="ttdoc">United Kingdom calendars.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/ded/unitedkingdom_8hpp_source.html#l00091">unitedkingdom.hpp:91</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a8efe9cb3e67c8d0585e57b4d53c5d2fe"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a8efe9cb3e67c8d0585e57b4d53c5d2fe">QL_FAIL</a></div><div class="ttdeci">#define QL_FAIL(message)</div><div class="ttdoc">throw an error (possibly with file and line information)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00092">errors.hpp:92</a></div></div>
+<div class="ttc" id="aeurlibor_8hpp_html"><div class="ttname"><a href="../../db/d6a/eurlibor_8hpp.html">eurlibor.hpp</a></div><div class="ttdoc">EUR LIBOR rate</div></div>
+<div class="ttc" id="aeurope_8hpp_html"><div class="ttname"><a href="../../d0/d00/europe_8hpp.html">europe.hpp</a></div><div class="ttdoc">European currencies.</div></div>
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da0e4551da8e98ec0440937d5281013b54">QuantLib::Months</a></div><div class="ttdeci">@ Months</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00039">timeunit.hpp:39</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d">QuantLib::Years</a></div><div class="ttdeci">@ Years</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00040">timeunit.hpp:40</a></div></div>
@@ -227,8 +231,12 @@ $(function() {
 <div class="ttc" id="agroup__datetime_html_ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707">QuantLib::ModifiedFollowing</a></div><div class="ttdeci">@ ModifiedFollowing</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00049">businessdayconvention.hpp:45</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18">QuantLib::Following</a></div><div class="ttdeci">@ Following</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00044">businessdayconvention.hpp:43</a></div></div>
 <div class="ttc" id="agroup__types_html_ga7e529c39c477ba1f5a22264d93e8457a"><div class="ttname"><a href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">QuantLib::Natural</a></div><div class="ttdeci">unsigned QL_INTEGER Natural</div><div class="ttdoc">positive integer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
+<div class="ttc" id="ajointcalendar_8hpp_html"><div class="ttname"><a href="../../d2/df2/jointcalendar_8hpp.html">jointcalendar.hpp</a></div><div class="ttdoc">Joint calendar.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a51033ff28c58a4dd772d61053b4f3bcaa925133cd0c258207022c40aa6a3425df"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a51033ff28c58a4dd772d61053b4f3bcaa925133cd0c258207022c40aa6a3425df">QuantLib::JoinBusinessDays</a></div><div class="ttdeci">@ JoinBusinessDays</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df2/jointcalendar_8hpp_source.html#l00043">jointcalendar.hpp:38</a></div></div>
+<div class="ttc" id="asyntheticcdo_8cpp_html_a7a72e0b80e11b5af519d775e496bac13"><div class="ttname"><a href="../../dd/d2b/syntheticcdo_8cpp.html#a7a72e0b80e11b5af519d775e496bac13">target_</a></div><div class="ttdeci">Real target_</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d2b/syntheticcdo_8cpp_source.html#l00219">syntheticcdo.cpp:219</a></div></div>
+<div class="ttc" id="atarget_8hpp_html"><div class="ttname"><a href="../../dc/d69/target_8hpp.html">target.hpp</a></div><div class="ttdoc">TARGET calendar.</div></div>
+<div class="ttc" id="aunitedkingdom_8hpp_html"><div class="ttname"><a href="../../dc/ded/unitedkingdom_8hpp.html">unitedkingdom.hpp</a></div><div class="ttdoc">UK calendars.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

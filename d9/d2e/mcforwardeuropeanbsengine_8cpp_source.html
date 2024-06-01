@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/pricingengines/forward/mcforwardeuropeanbsengine.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/pricingengines/forward/mcforwardeuropeanbsengine.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">mcforwardeuropeanbsengine.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d9/d2e/mcforwardeuropeanbsengine_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> This file is part of QuantLib, a free-software/open-source library</span></div>
@@ -102,7 +101,7 @@ $(function() {
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;ql/pricingengines/forward/mcforwardeuropeanbsengine.hpp&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d62/mcforwardeuropeanbsengine_8hpp.html">ql/pricingengines/forward/mcforwardeuropeanbsengine.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
@@ -114,22 +113,23 @@ $(function() {
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    : type_(type), moneyness_(moneyness), resetIndex_(resetIndex),</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      discount_(discount)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>       {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        QL_REQUIRE(moneyness&gt;=0.0,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(moneyness&gt;=0.0,</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                   <span class="stringliteral">&quot;moneyness less than zero not allowed&quot;</span>);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d0/dc0/class_quant_lib_1_1_forward_european_b_s_path_pricer.html#ac6e005ed21b73c75b8ecead7a34474ff">   32</a></span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d0/dc0/class_quant_lib_1_1_forward_european_b_s_path_pricer.html#ac6e005ed21b73c75b8ecead7a34474ff">ForwardEuropeanBSPathPricer::operator()</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d6/d60/class_quant_lib_1_1_path.html">Path</a>&amp; path)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n = path.<a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#a022887254632280a41166a9e97b87e0c">length</a>() - 1;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        QL_REQUIRE(n&gt;0, <span class="stringliteral">&quot;the path cannot be empty&quot;</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a> = path.<a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#a022887254632280a41166a9e97b87e0c">length</a>() - 1;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>&gt;0, <span class="stringliteral">&quot;the path cannot be empty&quot;</span>);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> resetLevel = path[<a class="code hl_variable" href="../../d0/dc0/class_quant_lib_1_1_forward_european_b_s_path_pricer.html#a1f4f249f5513749b2be8f470d2f114b0">resetIndex_</a>];</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike = resetLevel * <a class="code hl_variable" href="../../d0/dc0/class_quant_lib_1_1_forward_european_b_s_path_pricer.html#a0601f0de876fa7de177ee481c23e52ca">moneyness_</a>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">const</span> <a class="code hl_class" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a> payoff = <a class="code hl_class" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a>(<a class="code hl_variable" href="../../d0/dc0/class_quant_lib_1_1_forward_european_b_s_path_pricer.html#abcdb1c11e3593354931e650dd3dd13f2">type_</a>, strike);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">const</span> <a class="code hl_class" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a> <a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a> = <a class="code hl_class" href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">PlainVanillaPayoff</a>(<a class="code hl_variable" href="../../d0/dc0/class_quant_lib_1_1_forward_european_b_s_path_pricer.html#abcdb1c11e3593354931e650dd3dd13f2">type_</a>, strike);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> payoff(path.<a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#aa390cc96be968b536f4a17d299305e76">back</a>()) * <a class="code hl_variable" href="../../d0/dc0/class_quant_lib_1_1_forward_european_b_s_path_pricer.html#a03a7940acbfe70e2d64da8e1692e20b3">discount_</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a>(path.<a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#aa390cc96be968b536f4a17d299305e76">back</a>()) * <a class="code hl_variable" href="../../d0/dc0/class_quant_lib_1_1_forward_european_b_s_path_pricer.html#a03a7940acbfe70e2d64da8e1692e20b3">discount_</a>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="ttc" id="aandreasenhugevolatilityinterpl_8cpp_html_a4c79e7f153710550f0238535048a4d0a"><div class="ttname"><a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a></div><div class="ttdeci">Size n</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp_source.html#l00047">andreasenhugevolatilityinterpl.cpp:47</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_forward_european_b_s_path_pricer_html_a03a7940acbfe70e2d64da8e1692e20b3"><div class="ttname"><a href="../../d0/dc0/class_quant_lib_1_1_forward_european_b_s_path_pricer.html#a03a7940acbfe70e2d64da8e1692e20b3">QuantLib::ForwardEuropeanBSPathPricer::discount_</a></div><div class="ttdeci">DiscountFactor discount_</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d62/mcforwardeuropeanbsengine_8hpp_source.html#l00101">mcforwardeuropeanbsengine.hpp:101</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_forward_european_b_s_path_pricer_html_a0601f0de876fa7de177ee481c23e52ca"><div class="ttname"><a href="../../d0/dc0/class_quant_lib_1_1_forward_european_b_s_path_pricer.html#a0601f0de876fa7de177ee481c23e52ca">QuantLib::ForwardEuropeanBSPathPricer::moneyness_</a></div><div class="ttdeci">Real moneyness_</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d62/mcforwardeuropeanbsengine_8hpp_source.html#l00099">mcforwardeuropeanbsengine.hpp:99</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_forward_european_b_s_path_pricer_html_a1f4f249f5513749b2be8f470d2f114b0"><div class="ttname"><a href="../../d0/dc0/class_quant_lib_1_1_forward_european_b_s_path_pricer.html#a1f4f249f5513749b2be8f470d2f114b0">QuantLib::ForwardEuropeanBSPathPricer::resetIndex_</a></div><div class="ttdeci">Size resetIndex_</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d62/mcforwardeuropeanbsengine_8hpp_source.html#l00100">mcforwardeuropeanbsengine.hpp:100</a></div></div>
@@ -141,9 +141,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_path_html_a022887254632280a41166a9e97b87e0c"><div class="ttname"><a href="../../d6/d60/class_quant_lib_1_1_path.html#a022887254632280a41166a9e97b87e0c">QuantLib::Path::length</a></div><div class="ttdeci">Size length() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d4c/path_8hpp_source.html#l00094">path.hpp:94</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_path_html_aa390cc96be968b536f4a17d299305e76"><div class="ttname"><a href="../../d6/d60/class_quant_lib_1_1_path.html#aa390cc96be968b536f4a17d299305e76">QuantLib::Path::back</a></div><div class="ttdeci">Real back() const</div><div class="ttdoc">final asset value</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d4c/path_8hpp_source.html#l00130">path.hpp:130</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_plain_vanilla_payoff_html"><div class="ttname"><a href="../../db/de6/class_quant_lib_1_1_plain_vanilla_payoff.html">QuantLib::PlainVanillaPayoff</a></div><div class="ttdoc">Plain-vanilla payoff.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d95/payoffs_8hpp_source.html#l00105">payoffs.hpp:105</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga642a971a0bcbbd2fb26c35e1a06e5761"><div class="ttname"><a href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">QuantLib::DiscountFactor</a></div><div class="ttdeci">Real DiscountFactor</div><div class="ttdoc">discount factor between dates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00066">types.hpp:66</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="aintegralhestonvarianceoptionengine_8cpp_html_aac80ba3218a14ee2ac65bfc8989a2015"><div class="ttname"><a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp.html#aac80ba3218a14ee2ac65bfc8989a2015">payoff</a></div><div class="ttdeci">ext::shared_ptr&lt; QuantLib::Payoff &gt; payoff</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d1c/integralhestonvarianceoptionengine_8cpp_source.html#l00350">integralhestonvarianceoptionengine.cpp:350</a></div></div>
+<div class="ttc" id="amcforwardeuropeanbsengine_8hpp_html"><div class="ttname"><a href="../../d6/d62/mcforwardeuropeanbsengine_8hpp.html">mcforwardeuropeanbsengine.hpp</a></div><div class="ttdoc">Monte Carlo engine for forward-starting strike-reset European options using BS process.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

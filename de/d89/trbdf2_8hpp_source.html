@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/methods/finitedifferences/trbdf2.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/methods/finitedifferences/trbdf2.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">trbdf2.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../de/d89/trbdf2_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2011 Fabien Le Floc&#39;h</span></div>
@@ -105,15 +104,56 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file trbdf2.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief TR-BDF2 scheme for finite difference methods</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_trbdf2_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_trbdf2_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/methods/finitedifferences/finitedifferencemodel.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/d8c/finitedifferencemodel_8hpp.html">ql/methods/finitedifferences/finitedifferencemodel.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"></span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">    //! TR-BDF2 scheme for finite difference methods</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span><span class="comment">    /*! See &lt;http://ssrn.com/abstract=1648878&gt; for details.</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">        In this implementation, the passed operator must be derived</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        from either TimeConstantOperator or TimeDependentOperator.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        Also, it must implement at least the following interface:</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"></span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        \code</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">        typedef ... array_type;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"></span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        // copy constructor/assignment</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        // (these will be provided by the compiler if none is defined)</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        Operator(const Operator&amp;);</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        Operator&amp; operator=(const Operator&amp;);</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"></span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">        // inspectors</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        Size size();</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment"></span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">        // modifiers</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">        void setTime(Time t);</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment"></span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        // operator interface</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">        array_type applyTo(const array_type&amp;);</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">        array_type solveFor(const array_type&amp;);</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">        static Operator identity(Size size);</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment"></span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">        // operator algebra</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">        Operator operator*(Real, const Operator&amp;);</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">        Operator operator+(const Operator&amp;, const Operator&amp;);</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">        Operator operator+(const Operator&amp;, const Operator&amp;);</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">        \endcode</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment"></span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">        \warning The differential operator must be linear for</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">                 this evolver to work.</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment"></span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">        \ingroup findiff</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// NOTE: There is room for performance improvement especially in</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// the array manipulation</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
@@ -132,7 +172,7 @@ $(function() {
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        : <a class="code hl_variable" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#a7ec7f35b9cfc993cd78e13c84ee80f5c">L_</a>(L), <a class="code hl_variable" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#a9345bcefe07d2a311bb4580cf6844223">I_</a>(<a class="code hl_class" href="../../d3/dfb/class_quant_lib_1_1_fdm_linear_op.html">operator_type</a>::identity(L.size())),</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>          <a class="code hl_variable" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#a6be603d8547f31e72817d2aaf219e325">dt_</a>(0.0), <a class="code hl_variable" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#abb48456777566e37b094bb898bafc1a7">bcs_</a>(bcs), <a class="code hl_variable" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#a96c0f11fbeced8f51ee45a495d97e621">alpha_</a>(2.0-sqrt(2.0)) {}</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#ae31015dcf2ddc4f248be2533b0bbbd95">step</a>(<a class="code hl_typedef" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#ac07e755f1412353806d561469c9ad49f">array_type</a>&amp; a,</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                  <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                  <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#a7c6bf7e1e335626aa6f4e7a46f361b50">   88</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#a7c6bf7e1e335626aa6f4e7a46f361b50">setStep</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> dt) {</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <a class="code hl_variable" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#a6be603d8547f31e72817d2aaf219e325">dt_</a> = dt;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
@@ -155,7 +195,7 @@ $(function() {
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="comment">// inline definitions</span></div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Operator&gt;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#ae31015dcf2ddc4f248be2533b0bbbd95">  110</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#ae31015dcf2ddc4f248be2533b0bbbd95">TRBDF2&lt;Operator&gt;::step</a>(<a class="code hl_typedef" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#ac07e755f1412353806d561469c9ad49f">array_type</a>&amp; a, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> t) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#ae31015dcf2ddc4f248be2533b0bbbd95">  110</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#ae31015dcf2ddc4f248be2533b0bbbd95">TRBDF2&lt;Operator&gt;::step</a>(<a class="code hl_typedef" href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#ac07e755f1412353806d561469c9ad49f">array_type</a>&amp; a, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>) {</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i;</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> aInit(a.size());</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">for</span> (i=0; i&lt;a.size();i++) {</div>
@@ -163,10 +203,10 @@ $(function() {
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        }</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        aInit_ = aInit;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">for</span> (i=0; i&lt;bcs_.size(); i++)</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            bcs_[i]-&gt;setTime(t);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            bcs_[i]-&gt;setTime(<a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="comment">//trapezoidal explicit part</span></div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">if</span> (L_.isTimeDependent()) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            L_.setTime(t);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            L_.setTime(<a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>);</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            explicitTrapezoidalPart_ = I_ - 0.5*alpha_*dt_*L_;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">for</span> (i=0; i&lt;bcs_.size(); i++)</div>
@@ -177,7 +217,7 @@ $(function() {
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="comment">// trapezoidal implicit part</span></div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">if</span> (L_.isTimeDependent()) {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            L_.setTime(t-dt_);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            L_.setTime(<a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>-dt_);</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            implicitPart_ = I_ + 0.5*alpha_*dt_*L_;</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        }</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">for</span> (i=0; i&lt;bcs_.size(); i++)</div>
@@ -189,7 +229,7 @@ $(function() {
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="comment">// BDF2 explicit part</span></div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">if</span> (L_.isTimeDependent()) {</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            L_.setTime(t);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            L_.setTime(<a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>);</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        }</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">for</span> (i=0; i&lt;bcs_.size(); i++) {</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            bcs_[i]-&gt;applyBeforeApplying(explicitBDF2PartFull_);</div>
@@ -244,6 +284,8 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_t_r_b_d_f2_html_abb48456777566e37b094bb898bafc1a7"><div class="ttname"><a href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#abb48456777566e37b094bb898bafc1a7">QuantLib::TRBDF2::bcs_</a></div><div class="ttdeci">bc_set bcs_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d89/trbdf2_8hpp_source.html#l00102">trbdf2.hpp:102</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_t_r_b_d_f2_html_ac07e755f1412353806d561469c9ad49f"><div class="ttname"><a href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#ac07e755f1412353806d561469c9ad49f">QuantLib::TRBDF2::array_type</a></div><div class="ttdeci">traits::array_type array_type</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d89/trbdf2_8hpp_source.html#l00078">trbdf2.hpp:78</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_t_r_b_d_f2_html_ae31015dcf2ddc4f248be2533b0bbbd95"><div class="ttname"><a href="../../d6/dab/class_quant_lib_1_1_t_r_b_d_f2.html#ae31015dcf2ddc4f248be2533b0bbbd95">QuantLib::TRBDF2::step</a></div><div class="ttdeci">void step(array_type &amp;a, Time t)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d89/trbdf2_8hpp_source.html#l00110">trbdf2.hpp:110</a></div></div>
+<div class="ttc" id="adefaultprobabilitykey_8cpp_html_a15fc20af123a89cd6f40758e341a4a54"><div class="ttname"><a href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a></div><div class="ttdeci">const DefaultType &amp; t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ddb/defaultprobabilitykey_8cpp_source.html#l00039">defaultprobabilitykey.cpp:39</a></div></div>
+<div class="ttc" id="afinitedifferencemodel_8hpp_html"><div class="ttname"><a href="../../d8/d8c/finitedifferencemodel_8hpp.html">finitedifferencemodel.hpp</a></div><div class="ttdoc">generic finite difference model</div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>

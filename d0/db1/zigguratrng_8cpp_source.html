@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/math/zigguratrng.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/math/zigguratrng.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">zigguratrng.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d0/db1/zigguratrng_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2010 Kakhkhor Abdijalilov</span></div>
@@ -106,8 +105,8 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;ql/experimental/math/zigguratrng.hpp&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/math/distributions/normaldistribution.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d9b/zigguratrng_8hpp.html">ql/experimental/math/zigguratrng.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/df9/normaldistribution_8hpp.html">ql/math/distributions/normaldistribution.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
@@ -115,14 +114,14 @@ $(function() {
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="comment">// tail probability</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> p_ = 2.880541027242713E-004;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> q_ = 1.0 - p_;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#a718c871d40af9886cdc4689f2b3abf23">p_</a> = 2.880541027242713E-004;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> q_ = 1.0 - <a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#a718c871d40af9886cdc4689f2b3abf23">p_</a>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="comment">/* The tabulated values were calculated following Marsaglia</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">           and Tsang (2000). */</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="comment">// values of exp(-0.5*x*x)</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> f_ [128] = {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d6/d44/conundrumpricer_8cpp.html#a3b489a9db7ab8dd3ffa7df5627d4432c">f_</a> [128] = {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            1.000000000000000E+000, 9.635996931557717E-001,</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            9.362826817083744E-001, 9.130436479920410E-001,</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            8.922816508023054E-001, 8.732430489268560E-001,</div>
@@ -190,7 +189,7 @@ $(function() {
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        };</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="comment">// acceptance thresholds 2^24*x[i]/x[i+1]. k_[0] is special</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> k_[128] = {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_variable" href="../../d6/d44/conundrumpricer_8cpp.html#ad9b7baa0467afe8482b0cc2dda5b9ebc">k_</a>[128] = {</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            15555141,        0, 12590647, 14272656,</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            14988942, 15384587, 15635012, 15807564,</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            15933580, 16029597, 16105158, 16166150,</div>
@@ -304,22 +303,22 @@ $(function() {
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keywordflow">for</span> (;;) {</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> j = <a class="code hl_variable" href="../../d3/de2/class_quant_lib_1_1_ziggurat_rng.html#a8179b6f798136e72f4691fe0aa93ef76">mt32_</a>.<a class="code hl_function" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a57e46443f5120e9967183e7f183635a7">nextInt32</a>(); <span class="comment">// generate 32 bits of randomness</span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            <span class="keywordtype">int</span> f = j &amp; 1; <span class="comment">// 1 bit to choose a tails</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a> = j &amp; 1; <span class="comment">// 1 bit to choose a tails</span></div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            j &gt;&gt;= 1;</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = j &amp; 0x7f; <span class="comment">// 7 bits to choose a strip</span></div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            j &gt;&gt;= 7; <span class="comment">// the last 24 bits for accepttion/rejection</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            x = (c[f]*<span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span><span class="keyword">&gt;</span>(j))*w_[i]; <span class="comment">// x is uniform</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            x = (c[<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>]*<span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span><span class="keyword">&gt;</span>(j))*w_[i]; <span class="comment">// x is uniform</span></div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                                                   <span class="comment">// within the i-th strip</span></div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="keywordflow">if</span> (j &lt; k_[i]) <span class="comment">// if true, accept x</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="keywordflow">if</span> (j &lt; <a class="code hl_variable" href="../../d6/d44/conundrumpricer_8cpp.html#ad9b7baa0467afe8482b0cc2dda5b9ebc">k_</a>[i]) <span class="comment">// if true, accept x</span></div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="comment">// handle rejections</span></div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            <span class="keywordflow">if</span> (i!=0) { <span class="comment">// upper strips</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                <span class="keywordflow">if</span> ((f_[i-1]-f_[i])*<a class="code hl_variable" href="../../d3/de2/class_quant_lib_1_1_ziggurat_rng.html#a8179b6f798136e72f4691fe0aa93ef76">mt32_</a>.<a class="code hl_function" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a97a3fedfd3fb15531808709d2e58073f">nextReal</a>() + f_[i] &lt; std::exp(-0.5*x*x))</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                <span class="keywordflow">if</span> ((<a class="code hl_variable" href="../../d6/d44/conundrumpricer_8cpp.html#a3b489a9db7ab8dd3ffa7df5627d4432c">f_</a>[i-1]-<a class="code hl_variable" href="../../d6/d44/conundrumpricer_8cpp.html#a3b489a9db7ab8dd3ffa7df5627d4432c">f_</a>[i])*<a class="code hl_variable" href="../../d3/de2/class_quant_lib_1_1_ziggurat_rng.html#a8179b6f798136e72f4691fe0aa93ef76">mt32_</a>.<a class="code hl_function" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a97a3fedfd3fb15531808709d2e58073f">nextReal</a>() + <a class="code hl_variable" href="../../d6/d44/conundrumpricer_8cpp.html#a3b489a9db7ab8dd3ffa7df5627d4432c">f_</a>[i] &lt; std::exp(-0.5*x*x))</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            } <span class="keywordflow">else</span> { <span class="comment">// base strip, sample from the tail</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                x = c[f]*<a class="code hl_function" href="../../d7/d02/class_quant_lib_1_1_inverse_cumulative_normal.html#adf56cbfabafe9c6bbf4366412f9ea7d5">InverseCumulativeNormal::standard_value</a>(</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                                                      p_*<a class="code hl_variable" href="../../d3/de2/class_quant_lib_1_1_ziggurat_rng.html#a8179b6f798136e72f4691fe0aa93ef76">mt32_</a>.<a class="code hl_function" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a97a3fedfd3fb15531808709d2e58073f">nextReal</a>()+q_);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                x = c[<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>]*<a class="code hl_function" href="../../d7/d02/class_quant_lib_1_1_inverse_cumulative_normal.html#adf56cbfabafe9c6bbf4366412f9ea7d5">InverseCumulativeNormal::standard_value</a>(</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                                                      <a class="code hl_variable" href="../../d2/d3a/hestonrndcalculator_8cpp.html#a718c871d40af9886cdc4689f2b3abf23">p_</a>*<a class="code hl_variable" href="../../d3/de2/class_quant_lib_1_1_ziggurat_rng.html#a8179b6f798136e72f4691fe0aa93ef76">mt32_</a>.<a class="code hl_function" href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a97a3fedfd3fb15531808709d2e58073f">nextReal</a>()+q_);</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            }</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        }</div>
@@ -328,15 +327,21 @@ $(function() {
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    }</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>}</div>
-<div class="ttc" id="aclass_quant_lib_1_1_inverse_cumulative_normal_html_adf56cbfabafe9c6bbf4366412f9ea7d5"><div class="ttname"><a href="../../d7/d02/class_quant_lib_1_1_inverse_cumulative_normal.html#adf56cbfabafe9c6bbf4366412f9ea7d5">QuantLib::InverseCumulativeNormal::standard_value</a></div><div class="ttdeci">static Real standard_value(Real x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/normaldistribution_8hpp_source.html#l00149">normaldistribution.hpp:149</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_inverse_cumulative_normal_html_adf56cbfabafe9c6bbf4366412f9ea7d5"><div class="ttname"><a href="../../d7/d02/class_quant_lib_1_1_inverse_cumulative_normal.html#adf56cbfabafe9c6bbf4366412f9ea7d5">QuantLib::InverseCumulativeNormal::standard_value</a></div><div class="ttdeci">static Real standard_value(Real x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/normaldistribution_8hpp_source.html#l00113">normaldistribution.hpp:113</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_mersenne_twister_uniform_rng_html_a57e46443f5120e9967183e7f183635a7"><div class="ttname"><a href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a57e46443f5120e9967183e7f183635a7">QuantLib::MersenneTwisterUniformRng::nextInt32</a></div><div class="ttdeci">unsigned long nextInt32() const</div><div class="ttdoc">return a random integer in the [0,0xffffffff]-interval</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/mt19937uniformrng_8hpp_source.html#l00060">mt19937uniformrng.hpp:60</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_mersenne_twister_uniform_rng_html_a97a3fedfd3fb15531808709d2e58073f"><div class="ttname"><a href="../../dc/d49/class_quant_lib_1_1_mersenne_twister_uniform_rng.html#a97a3fedfd3fb15531808709d2e58073f">QuantLib::MersenneTwisterUniformRng::nextReal</a></div><div class="ttdeci">Real nextReal() const</div><div class="ttdoc">return a random number in the (0.0, 1.0)-interval</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/mt19937uniformrng_8hpp_source.html#l00056">mt19937uniformrng.hpp:56</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_ziggurat_rng_html_a2052bed081d36e3d3c216260365d6a31"><div class="ttname"><a href="../../d3/de2/class_quant_lib_1_1_ziggurat_rng.html#a2052bed081d36e3d3c216260365d6a31">QuantLib::ZigguratRng::ZigguratRng</a></div><div class="ttdeci">ZigguratRng(unsigned long seed=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db1/zigguratrng_8cpp_source.html#l00209">zigguratrng.cpp:209</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_ziggurat_rng_html_a8179b6f798136e72f4691fe0aa93ef76"><div class="ttname"><a href="../../d3/de2/class_quant_lib_1_1_ziggurat_rng.html#a8179b6f798136e72f4691fe0aa93ef76">QuantLib::ZigguratRng::mt32_</a></div><div class="ttdeci">MersenneTwisterUniformRng mt32_</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d9b/zigguratrng_8hpp_source.html#l00059">zigguratrng.hpp:59</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_ziggurat_rng_html_abe85b9c65acc829c86cd9d172723784d"><div class="ttname"><a href="../../d3/de2/class_quant_lib_1_1_ziggurat_rng.html#abe85b9c65acc829c86cd9d172723784d">QuantLib::ZigguratRng::nextGaussian</a></div><div class="ttdeci">Real nextGaussian() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db1/zigguratrng_8cpp_source.html#l00212">zigguratrng.cpp:212</a></div></div>
+<div class="ttc" id="aconundrumpricer_8cpp_html_a3b489a9db7ab8dd3ffa7df5627d4432c"><div class="ttname"><a href="../../d6/d44/conundrumpricer_8cpp.html#a3b489a9db7ab8dd3ffa7df5627d4432c">f_</a></div><div class="ttdeci">ext::function&lt; Real(Real)&gt; f_</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d44/conundrumpricer_8cpp_source.html#l00249">conundrumpricer.cpp:249</a></div></div>
+<div class="ttc" id="aconundrumpricer_8cpp_html_ad9b7baa0467afe8482b0cc2dda5b9ebc"><div class="ttname"><a href="../../d6/d44/conundrumpricer_8cpp.html#ad9b7baa0467afe8482b0cc2dda5b9ebc">k_</a></div><div class="ttdeci">Size k_</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d44/conundrumpricer_8cpp_source.html#l00250">conundrumpricer.cpp:250</a></div></div>
+<div class="ttc" id="adefaultdensitystructure_8cpp_html_ae19b4006a311a298a93a5cd06a7cb0e7"><div class="ttname"><a href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a></div><div class="ttdeci">F f</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d93/defaultdensitystructure_8cpp_source.html#l00032">defaultdensitystructure.cpp:32</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="ahestonrndcalculator_8cpp_html_a718c871d40af9886cdc4689f2b3abf23"><div class="ttname"><a href="../../d2/d3a/hestonrndcalculator_8cpp.html#a718c871d40af9886cdc4689f2b3abf23">p_</a></div><div class="ttdeci">const HestonParams p_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3a/hestonrndcalculator_8cpp_source.html#l00103">hestonrndcalculator.cpp:103</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="anormaldistribution_8hpp_html"><div class="ttname"><a href="../../d5/df9/normaldistribution_8hpp.html">normaldistribution.hpp</a></div><div class="ttdoc">normal, cumulative and inverse cumulative distributions</div></div>
+<div class="ttc" id="azigguratrng_8hpp_html"><div class="ttname"><a href="../../de/d9b/zigguratrng_8hpp.html">zigguratrng.hpp</a></div><div class="ttdoc">Ziggurat random-number generator.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/pricingengines/asian/mc_discr_geom_av_price.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/pricingengines/asian/mc_discr_geom_av_price.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">mc_discr_geom_av_price.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d2/d18/mc__discr__geom__av__price_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2000, 2001, 2002, 2003 RiskMap srl</span></div>
@@ -107,7 +106,7 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/pricingengines/asian/mc_discr_geom_av_price.hpp&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/df7/mc__discr__geom__av__price_8hpp.html">ql/pricingengines/asian/mc_discr_geom_av_price.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
@@ -115,18 +114,18 @@ $(function() {
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                                         <a class="code hl_enumeration" href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7">Option::Type</a> type,</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                                         <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> strike, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">DiscountFactor</a> discount,</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                                         <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> runningProduct, <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> pastFixings)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    : payoff_(type, strike), discount_(discount),</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    : <a class="code hl_variable" href="../../dc/d51/fdornsteinuhlenbeckvanillaengine_8cpp.html#afb9e2c9da25d0584f746121a0f5d79e4">payoff_</a>(type, strike), discount_(discount),</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      runningProduct_(runningProduct), pastFixings_(pastFixings) {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        QL_REQUIRE(strike&gt;=0.0, <span class="stringliteral">&quot;negative strike given&quot;</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(strike&gt;=0.0, <span class="stringliteral">&quot;negative strike given&quot;</span>);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../dc/d5c/class_quant_lib_1_1_geometric_a_p_o_path_pricer.html#ac6e005ed21b73c75b8ecead7a34474ff">   34</a></span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../dc/d5c/class_quant_lib_1_1_geometric_a_p_o_path_pricer.html#ac6e005ed21b73c75b8ecead7a34474ff">GeometricAPOPathPricer::operator()</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d6/d60/class_quant_lib_1_1_path.html">Path</a>&amp; path)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n = path.<a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#a022887254632280a41166a9e97b87e0c">length</a>() - 1;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        QL_REQUIRE(n&gt;0, <span class="stringliteral">&quot;the path cannot be empty&quot;</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a> = path.<a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#a022887254632280a41166a9e97b87e0c">length</a>() - 1;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>&gt;0, <span class="stringliteral">&quot;the path cannot be empty&quot;</span>);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> averagePrice;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> product = <a class="code hl_variable" href="../../dc/d5c/class_quant_lib_1_1_geometric_a_p_o_path_pricer.html#af7bfe5678e5fb28716cab530ef2320cb">runningProduct_</a>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> fixings = n+<a class="code hl_variable" href="../../dc/d5c/class_quant_lib_1_1_geometric_a_p_o_path_pricer.html#af7b74f117d77bca61083800382057efe">pastFixings_</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> fixings = <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>+<a class="code hl_variable" href="../../dc/d5c/class_quant_lib_1_1_geometric_a_p_o_path_pricer.html#af7b74f117d77bca61083800382057efe">pastFixings_</a>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">if</span> (path.<a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#abec030c6d306d47c8941964bf33c6b8e">timeGrid</a>().<a class="code hl_function" href="../../df/dff/class_quant_lib_1_1_time_grid.html#ad3f92bbc31006e1a850d053ef9c245a5">mandatoryTimes</a>()[0]==0.0) {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            fixings += 1;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            product *= path.<a class="code hl_function" href="../../d6/d60/class_quant_lib_1_1_path.html#af78ff4861aaf9bf0524b958dbb4d1b18">front</a>();</div>
@@ -134,7 +133,7 @@ $(function() {
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="comment">// care must be taken not to overflow product</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">constexpr</span> <span class="keywordtype">double</span> maxValue = <a class="code hl_define" href="../../d3/d8f/group__limit_macros.html#ga31675a375a563ed7a1bba05c664489af">QL_MAX_REAL</a>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        averagePrice = 1.0;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=1; i&lt;n+1; i++) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=1; i&lt;<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>+1; i++) {</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> price = path[i];</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">if</span> (product &lt; maxValue/price) {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                product *= price;</div>
@@ -148,6 +147,7 @@ $(function() {
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+<div class="ttc" id="aandreasenhugevolatilityinterpl_8cpp_html_a4c79e7f153710550f0238535048a4d0a"><div class="ttname"><a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a></div><div class="ttdeci">Size n</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp_source.html#l00047">andreasenhugevolatilityinterpl.cpp:47</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_geometric_a_p_o_path_pricer_html_a03a7940acbfe70e2d64da8e1692e20b3"><div class="ttname"><a href="../../dc/d5c/class_quant_lib_1_1_geometric_a_p_o_path_pricer.html#a03a7940acbfe70e2d64da8e1692e20b3">QuantLib::GeometricAPOPathPricer::discount_</a></div><div class="ttdeci">DiscountFactor discount_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df7/mc__discr__geom__av__price_8hpp_source.html#l00081">mc_discr_geom_av_price.hpp:81</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_geometric_a_p_o_path_pricer_html_a3d1dc98279327e77c9533ea3e9b62093"><div class="ttname"><a href="../../dc/d5c/class_quant_lib_1_1_geometric_a_p_o_path_pricer.html#a3d1dc98279327e77c9533ea3e9b62093">QuantLib::GeometricAPOPathPricer::payoff_</a></div><div class="ttdeci">PlainVanillaPayoff payoff_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df7/mc__discr__geom__av__price_8hpp_source.html#l00080">mc_discr_geom_av_price.hpp:80</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_geometric_a_p_o_path_pricer_html_a86d794f35e5cad47144c884217a73a33"><div class="ttname"><a href="../../dc/d5c/class_quant_lib_1_1_geometric_a_p_o_path_pricer.html#a86d794f35e5cad47144c884217a73a33">QuantLib::GeometricAPOPathPricer::GeometricAPOPathPricer</a></div><div class="ttdeci">GeometricAPOPathPricer(Option::Type type, Real strike, DiscountFactor discount, Real runningProduct=1.0, Size pastFixings=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d18/mc__discr__geom__av__price_8cpp_source.html#l00025">mc_discr_geom_av_price.cpp:25</a></div></div>
@@ -160,10 +160,13 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_path_html_abec030c6d306d47c8941964bf33c6b8e"><div class="ttname"><a href="../../d6/d60/class_quant_lib_1_1_path.html#abec030c6d306d47c8941964bf33c6b8e">QuantLib::Path::timeGrid</a></div><div class="ttdeci">const TimeGrid &amp; timeGrid() const</div><div class="ttdoc">time grid</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d4c/path_8hpp_source.html#l00142">path.hpp:142</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_path_html_af78ff4861aaf9bf0524b958dbb4d1b18"><div class="ttname"><a href="../../d6/d60/class_quant_lib_1_1_path.html#af78ff4861aaf9bf0524b958dbb4d1b18">QuantLib::Path::front</a></div><div class="ttdeci">Real front() const</div><div class="ttdoc">initial asset value</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d4c/path_8hpp_source.html#l00122">path.hpp:122</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_time_grid_html_ad3f92bbc31006e1a850d053ef9c245a5"><div class="ttname"><a href="../../df/dff/class_quant_lib_1_1_time_grid.html#ad3f92bbc31006e1a850d053ef9c245a5">QuantLib::TimeGrid::mandatoryTimes</a></div><div class="ttdeci">const std::vector&lt; Time &gt; &amp; mandatoryTimes() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc9/timegrid_8hpp_source.html#l00151">timegrid.hpp:151</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="afdornsteinuhlenbeckvanillaengine_8cpp_html_afb9e2c9da25d0584f746121a0f5d79e4"><div class="ttname"><a href="../../dc/d51/fdornsteinuhlenbeckvanillaengine_8cpp.html#afb9e2c9da25d0584f746121a0f5d79e4">payoff_</a></div><div class="ttdeci">const ext::shared_ptr&lt; Payoff &gt; payoff_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d51/fdornsteinuhlenbeckvanillaengine_8cpp_source.html#l00054">fdornsteinuhlenbeckvanillaengine.cpp:54</a></div></div>
 <div class="ttc" id="agroup__limit_macros_html_ga31675a375a563ed7a1bba05c664489af"><div class="ttname"><a href="../../d3/d8f/group__limit_macros.html#ga31675a375a563ed7a1bba05c664489af">QL_MAX_REAL</a></div><div class="ttdeci">#define QL_MAX_REAL</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/qldefines_8hpp_source.html#l00176">qldefines.hpp:176</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_ga642a971a0bcbbd2fb26c35e1a06e5761"><div class="ttname"><a href="../../d6/d59/group__types.html#ga642a971a0bcbbd2fb26c35e1a06e5761">QuantLib::DiscountFactor</a></div><div class="ttdeci">Real DiscountFactor</div><div class="ttdoc">discount factor between dates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00066">types.hpp:66</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="amc__discr__geom__av__price_8hpp_html"><div class="ttname"><a href="../../d9/df7/mc__discr__geom__av__price_8hpp.html">mc_discr_geom_av_price.hpp</a></div><div class="ttdoc">Monte Carlo engine for discrete geometric average price Asian.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

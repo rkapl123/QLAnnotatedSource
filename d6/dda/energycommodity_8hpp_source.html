@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/commodities/energycommodity.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/commodities/energycommodity.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">energycommodity.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d6/dda/energycommodity_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 J. Erik Radmall</span></div>
@@ -105,17 +104,21 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file energycommodity.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Energy commodity</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_energy_commodity_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_energy_commodity_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/experimental/commodities/commodity.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/experimental/commodities/commoditytype.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/experimental/commodities/commodityunitcost.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/experimental/commodities/unitofmeasure.hpp&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/experimental/commodities/quantity.hpp&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;ql/time/date.hpp&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;ql/money.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/dbe/commodity_8hpp.html">ql/experimental/commodities/commodity.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d46/commoditytype_8hpp.html">ql/experimental/commodities/commoditytype.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d4d/commodityunitcost_8hpp.html">ql/experimental/commodities/commodityunitcost.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/dc2/unitofmeasure_8hpp.html">ql/experimental/commodities/unitofmeasure.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/db8/quantity_8hpp.html">ql/experimental/commodities/quantity.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dd9/date_8hpp.html">ql/time/date.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/d8e/money_8hpp.html">ql/money.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
@@ -142,8 +145,9 @@ $(function() {
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">    #endif</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment"></span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">    //! Energy commodity class</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment"></span><span class="comment">    /*! \ingroup instruments */</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d3/d6a/class_quant_lib_1_1_energy_commodity.html">   63</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d3/d6a/class_quant_lib_1_1_energy_commodity.html">EnergyCommodity</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d9/d5a/class_quant_lib_1_1_commodity.html">Commodity</a> {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">class </span><a class="code hl_class" href="../../dc/d24/class_quant_lib_1_1_energy_commodity_1_1arguments.html">arguments</a>;</div>
@@ -275,10 +279,16 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_pricing_engine_1_1results_html"><div class="ttname"><a href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">QuantLib::PricingEngine::results</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcc/pricingengine_8hpp_source.html#l00051">pricingengine.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_quantity_html"><div class="ttname"><a href="../../d1/d7c/class_quant_lib_1_1_quantity.html">QuantLib::Quantity</a></div><div class="ttdoc">Amount of a commodity.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/db8/quantity_8hpp_source.html#l00034">quantity.hpp:34</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_unit_of_measure_html"><div class="ttname"><a href="../../df/deb/class_quant_lib_1_1_unit_of_measure.html">QuantLib::UnitOfMeasure</a></div><div class="ttdoc">Unit of measure specification</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc2/unitofmeasure_8hpp_source.html#l00037">unitofmeasure.hpp:37</a></div></div>
+<div class="ttc" id="acommodity_8hpp_html"><div class="ttname"><a href="../../db/dbe/commodity_8hpp.html">commodity.hpp</a></div><div class="ttdoc">Commodity base class.</div></div>
+<div class="ttc" id="acommoditytype_8hpp_html"><div class="ttname"><a href="../../dc/d46/commoditytype_8hpp.html">commoditytype.hpp</a></div><div class="ttdoc">commodity type</div></div>
+<div class="ttc" id="acommodityunitcost_8hpp_html"><div class="ttname"><a href="../../d0/d4d/commodityunitcost_8hpp.html">commodityunitcost.hpp</a></div><div class="ttdoc">Commodity unit cost.</div></div>
+<div class="ttc" id="adate_8hpp_html"><div class="ttname"><a href="../../d6/dd9/date_8hpp.html">date.hpp</a></div><div class="ttdoc">date- and time-related classes, typedefs and enumerations</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
+<div class="ttc" id="amoney_8hpp_html"><div class="ttname"><a href="../../d8/d8e/money_8hpp.html">money.hpp</a></div><div class="ttdoc">cash amount in a given currency</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a667d80c284f89eb33f170880e2965118"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a667d80c284f89eb33f170880e2965118">QuantLib::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, GFunctionFactory::YieldCurveModel type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da9/conundrumpricer_8hpp_source.html#l00183">conundrumpricer.hpp:183</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_ac088fafe52f59ee53000a038cccd669a"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#ac088fafe52f59ee53000a038cccd669a">QuantLib::EnergyDailyPositions</a></div><div class="ttdeci">std::map&lt; Date, EnergyDailyPosition &gt; EnergyDailyPositions</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dda/energycommodity_8hpp_source.html#l00052">energycommodity.hpp:52</a></div></div>
+<div class="ttc" id="aquantity_8hpp_html"><div class="ttname"><a href="../../d9/db8/quantity_8hpp.html">quantity.hpp</a></div><div class="ttdoc">Amount of a commodity.</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_energy_daily_position_html"><div class="ttname"><a href="../../db/d2a/struct_quant_lib_1_1_energy_daily_position.html">QuantLib::EnergyDailyPosition</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dda/energycommodity_8hpp_source.html#l00037">energycommodity.hpp:37</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_energy_daily_position_html_a1dc6df4f5eac6300e1bb1f8dce3a10fd"><div class="ttname"><a href="../../db/d2a/struct_quant_lib_1_1_energy_daily_position.html#a1dc6df4f5eac6300e1bb1f8dce3a10fd">QuantLib::EnergyDailyPosition::date</a></div><div class="ttdeci">Date date</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dda/energycommodity_8hpp_source.html#l00038">energycommodity.hpp:38</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_energy_daily_position_html_a222a2c5439b9e478023423ac7e6714e1"><div class="ttname"><a href="../../db/d2a/struct_quant_lib_1_1_energy_daily_position.html#a222a2c5439b9e478023423ac7e6714e1">QuantLib::EnergyDailyPosition::payLegPrice</a></div><div class="ttdeci">Real payLegPrice</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dda/energycommodity_8hpp_source.html#l00040">energycommodity.hpp:40</a></div></div>
@@ -287,6 +297,7 @@ $(function() {
 <div class="ttc" id="astruct_quant_lib_1_1_energy_daily_position_html_a8414b0947299a998e663f4ba212c9167"><div class="ttname"><a href="../../db/d2a/struct_quant_lib_1_1_energy_daily_position.html#a8414b0947299a998e663f4ba212c9167">QuantLib::EnergyDailyPosition::quantityAmount</a></div><div class="ttdeci">Real quantityAmount</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dda/energycommodity_8hpp_source.html#l00039">energycommodity.hpp:39</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_energy_daily_position_html_a934a2238905080b4001c06f1d6a9d8d1"><div class="ttname"><a href="../../db/d2a/struct_quant_lib_1_1_energy_daily_position.html#a934a2238905080b4001c06f1d6a9d8d1">QuantLib::EnergyDailyPosition::EnergyDailyPosition</a></div><div class="ttdeci">EnergyDailyPosition()=default</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_energy_daily_position_html_ad3978cb4fc4585ed8acf75b8632883b3"><div class="ttname"><a href="../../db/d2a/struct_quant_lib_1_1_energy_daily_position.html#ad3978cb4fc4585ed8acf75b8632883b3">QuantLib::EnergyDailyPosition::receiveLegPrice</a></div><div class="ttdeci">Real receiveLegPrice</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dda/energycommodity_8hpp_source.html#l00041">energycommodity.hpp:41</a></div></div>
+<div class="ttc" id="aunitofmeasure_8hpp_html"><div class="ttname"><a href="../../da/dc2/unitofmeasure_8hpp.html">unitofmeasure.hpp</a></div><div class="ttdoc">Unit of measure.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

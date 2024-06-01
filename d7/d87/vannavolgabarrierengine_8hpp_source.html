@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/barrieroption/vannavolgabarrierengine.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/barrieroption/vannavolgabarrierengine.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">vannavolgabarrierengine.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d7/d87/vannavolgabarrierengine_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2013 Yue Tian</span></div>
@@ -105,17 +104,24 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file vannavolgabarrierengine.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Vanna/Volga barrier option engine</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_vanna_volga_barrier_engine_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_vanna_volga_barrier_engine_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/processes/blackscholesprocess.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/instruments/barrieroption.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/experimental/fx/deltavolquote.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/da0/blackscholesprocess_8hpp.html">ql/processes/blackscholesprocess.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/d4a/barrieroption_8hpp.html">ql/instruments/barrieroption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d05/deltavolquote_8hpp.html">ql/experimental/fx/deltavolquote.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">    //! Vanna/Volga barrier option engine</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span><span class="comment">    /*!</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        \ingroup barrierengines</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d3/dfe/class_quant_lib_1_1_vanna_volga_barrier_engine.html">   37</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d3/dfe/class_quant_lib_1_1_vanna_volga_barrier_engine.html">VannaVolgaBarrierEngine</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d8/d4e/class_quant_lib_1_1_barrier_option_1_1engine.html">BarrierOption::engine</a> {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
@@ -148,6 +154,8 @@ $(function() {
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abarrieroption_8hpp_html"><div class="ttname"><a href="../../d8/d4a/barrieroption_8hpp.html">barrieroption.hpp</a></div><div class="ttdoc">Barrier option on a single asset.</div></div>
+<div class="ttc" id="ablackscholesprocess_8hpp_html"><div class="ttname"><a href="../../d0/da0/blackscholesprocess_8hpp.html">blackscholesprocess.hpp</a></div><div class="ttdoc">Black-Scholes processes.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_barrier_option_1_1engine_html"><div class="ttname"><a href="../../d8/d4e/class_quant_lib_1_1_barrier_option_1_1engine.html">QuantLib::BarrierOption::engine</a></div><div class="ttdoc">Barrier-option engine base class</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d4a/barrieroption_8hpp_source.html#l00092">barrieroption.hpp:94</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_vanna_volga_barrier_engine_html"><div class="ttname"><a href="../../d3/dfe/class_quant_lib_1_1_vanna_volga_barrier_engine.html">QuantLib::VannaVolgaBarrierEngine</a></div><div class="ttdoc">Vanna/Volga barrier option engine.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d87/vannavolgabarrierengine_8hpp_source.html#l00037">vannavolgabarrierengine.hpp:37</a></div></div>
@@ -161,6 +169,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_vanna_volga_barrier_engine_html_abee5d07b6dbd5d9c9c2455f76229a1d4"><div class="ttname"><a href="../../d3/dfe/class_quant_lib_1_1_vanna_volga_barrier_engine.html#abee5d07b6dbd5d9c9c2455f76229a1d4">QuantLib::VannaVolgaBarrierEngine::bsPriceWithSmile_</a></div><div class="ttdeci">const Real bsPriceWithSmile_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d87/vannavolgabarrierengine_8hpp_source.html#l00061">vannavolgabarrierengine.hpp:61</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_vanna_volga_barrier_engine_html_acac044ae64721b8e336c98ec2d68b6a5"><div class="ttname"><a href="../../d3/dfe/class_quant_lib_1_1_vanna_volga_barrier_engine.html#acac044ae64721b8e336c98ec2d68b6a5">QuantLib::VannaVolgaBarrierEngine::T_</a></div><div class="ttdeci">const Time T_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d87/vannavolgabarrierengine_8hpp_source.html#l00056">vannavolgabarrierengine.hpp:56</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_vanna_volga_barrier_engine_html_ae7b96e7fb657fbe52880c51d99ee097a"><div class="ttname"><a href="../../d3/dfe/class_quant_lib_1_1_vanna_volga_barrier_engine.html#ae7b96e7fb657fbe52880c51d99ee097a">QuantLib::VannaVolgaBarrierEngine::atmVol_</a></div><div class="ttdeci">const Handle&lt; DeltaVolQuote &gt; atmVol_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d87/vannavolgabarrierengine_8hpp_source.html#l00053">vannavolgabarrierengine.hpp:53</a></div></div>
+<div class="ttc" id="adeltavolquote_8hpp_html"><div class="ttname"><a href="../../d1/d05/deltavolquote_8hpp.html">deltavolquote.hpp</a></div><div class="ttdoc">Class for the quotation of delta vs vol.</div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>

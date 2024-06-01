@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/math/statistics/convergencestatistics.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/math/statistics/convergencestatistics.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">convergencestatistics.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d6/dc1/convergencestatistics_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2005 Gary Kennedy</span></div>
@@ -106,11 +105,15 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file convergencestatistics.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief statistics tool with risk measures</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_convergence_statistics_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_convergence_statistics_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/types.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/de3/types_8hpp.html">ql/types.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
@@ -120,14 +123,31 @@ $(function() {
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d0/d96/class_quant_lib_1_1_doubling_convergence_steps.html#a0745927c703448214a5de755f99195f1">   35</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_function" href="../../d0/d96/class_quant_lib_1_1_doubling_convergence_steps.html#a0745927c703448214a5de755f99195f1">initialSamples</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 1; }</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d0/d96/class_quant_lib_1_1_doubling_convergence_steps.html#a667e1a2c13a65ad09095b8cf7b800848">   36</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_function" href="../../d0/d96/class_quant_lib_1_1_doubling_convergence_steps.html#a667e1a2c13a65ad09095b8cf7b800848">nextSamples</a>(<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> current) { <span class="keywordflow">return</span> 2 * current + 1; }</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    };</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"></span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">    //! statistics class with convergence table</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"></span><span class="comment">    /*! This class decorates another statistics class adding a</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        convergence table calculation. The table tracks the</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        convergence of the mean.</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"></span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        It is possible to specify the number of samples at which the</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        mean should be stored by mean of the second template</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">        parameter; the default is to store \f$ 2^{n-1} \f$ samples at</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        the \f$ n \f$-th step. Any passed class must implement the</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">        following interface:</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">        \code</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">        Size initialSamples() const;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">        Size nextSamples(Size currentSamples) const;</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        \endcode</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">        as well as a copy constructor.</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment"></span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">        \test results are tested against known good values.</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> U = DoublingConvergenceSteps&gt;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html">   58</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html">ConvergenceStatistics</a> : <span class="keyword">public</span> T {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html">   58</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html">ConvergenceStatistics</a> : <span class="keyword">public</span> <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a> {</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html#aa8160fae99860b361fb09336cb2478e7">   60</a></span>        <span class="keyword">typedef</span> <span class="keyword">typename</span> T::value_type <a class="code hl_typedef" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html#aa8160fae99860b361fb09336cb2478e7">value_type</a>;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html#a1c8168a0d88468e6516d4641ef378a60">   61</a></span>        <span class="keyword">typedef</span> std::vector&lt;std::pair&lt;Size,value_type&gt; &gt; <a class="code hl_typedef" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html#a1c8168a0d88468e6516d4641ef378a60">table_type</a>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_class" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html">ConvergenceStatistics</a>(<span class="keyword">const</span> T&amp; stats,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_class" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html">ConvergenceStatistics</a>(<span class="keyword">const</span> <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>&amp; stats,</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                              <span class="keyword">const</span> U&amp; rule = U());</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_class" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html">ConvergenceStatistics</a>(<span class="keyword">const</span> U&amp; rule = U());</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html#a0fd2224497ce267aa05d4fe5915aa11d">   65</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html#a0fd2224497ce267aa05d4fe5915aa11d">add</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html#aa8160fae99860b361fb09336cb2478e7">value_type</a>&amp; value, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> weight = 1.0);</div>
@@ -155,9 +175,9 @@ $(function() {
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">// inline definitions</span></div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> U&gt;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html#aabab33bdd825123d705d469b60362455">   90</a></span>    <a class="code hl_function" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html#aabab33bdd825123d705d469b60362455">ConvergenceStatistics&lt;T,U&gt;::ConvergenceStatistics</a>(<span class="keyword">const</span> T&amp; stats,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html#aabab33bdd825123d705d469b60362455">   90</a></span>    <a class="code hl_function" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html#aabab33bdd825123d705d469b60362455">ConvergenceStatistics&lt;T,U&gt;::ConvergenceStatistics</a>(<span class="keyword">const</span> <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>&amp; stats,</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                                                      <span class="keyword">const</span> U&amp; rule)</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    : T(stats), samplingRule_(rule) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    : <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a>(stats), samplingRule_(rule) {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <a class="code hl_function" href="../../d1/dc5/class_quant_lib_1_1_convergence_statistics.html#ad20897c5c8bd47f5d4005989bead0e55">reset</a>();</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
@@ -213,9 +233,11 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_doubling_convergence_steps_html"><div class="ttname"><a href="../../d0/d96/class_quant_lib_1_1_doubling_convergence_steps.html">QuantLib::DoublingConvergenceSteps</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc1/convergencestatistics_8hpp_source.html#l00033">convergencestatistics.hpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_doubling_convergence_steps_html_a0745927c703448214a5de755f99195f1"><div class="ttname"><a href="../../d0/d96/class_quant_lib_1_1_doubling_convergence_steps.html#a0745927c703448214a5de755f99195f1">QuantLib::DoublingConvergenceSteps::initialSamples</a></div><div class="ttdeci">Size initialSamples() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc1/convergencestatistics_8hpp_source.html#l00035">convergencestatistics.hpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_doubling_convergence_steps_html_a667e1a2c13a65ad09095b8cf7b800848"><div class="ttname"><a href="../../d0/d96/class_quant_lib_1_1_doubling_convergence_steps.html#a667e1a2c13a65ad09095b8cf7b800848">QuantLib::DoublingConvergenceSteps::nextSamples</a></div><div class="ttdeci">Size nextSamples(Size current)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc1/convergencestatistics_8hpp_source.html#l00036">convergencestatistics.hpp:36</a></div></div>
+<div class="ttc" id="adefaultdensitystructure_8cpp_html_a27c0621a0cfba42bc41a097374ce1c1f"><div class="ttname"><a href="../../d8/d93/defaultdensitystructure_8cpp.html#a27c0621a0cfba42bc41a097374ce1c1f">T</a></div><div class="ttdeci">Time T</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d93/defaultdensitystructure_8cpp_source.html#l00033">defaultdensitystructure.cpp:33</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="atypes_8hpp_html"><div class="ttname"><a href="../../dd/de3/types_8hpp.html">types.hpp</a></div><div class="ttdoc">Custom types.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

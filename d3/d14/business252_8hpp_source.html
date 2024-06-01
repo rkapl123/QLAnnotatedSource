@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/time/daycounters/business252.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/time/daycounters/business252.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">business252.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d3/d14/business252_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2006 Piter Dias</span></div>
@@ -106,18 +105,23 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file business252.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief business/252 day counter</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_business252_day_counter_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_business252_day_counter_hpp</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/time/calendar.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/time/calendars/brazil.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/time/daycounter.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d39/calendar_8hpp.html">ql/time/calendar.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d48/brazil_8hpp.html">ql/time/calendars/brazil.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d32/daycounter_8hpp.html">ql/time/daycounter.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">    //! Business/252 day count convention</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"></span><span class="comment">    /*! \ingroup daycounters */</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d9/d61/class_quant_lib_1_1_business252.html">   37</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d9/d61/class_quant_lib_1_1_business252.html">Business252</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../db/d99/class_quant_lib_1_1_business252_1_1_impl.html">   39</a></span>        <span class="keyword">class </span><a class="code hl_class" href="../../db/d99/class_quant_lib_1_1_business252_1_1_impl.html">Impl</a> final : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/dba/class_quant_lib_1_1_day_counter_1_1_impl.html">DayCounter::Impl</a> {</div>
@@ -138,7 +142,9 @@ $(function() {
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_quant_lib_1_1_brazil_html"><div class="ttname"><a href="../../d0/d04/class_quant_lib_1_1_brazil.html">QuantLib::Brazil</a></div><div class="ttdoc">Brazilian calendar.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d48/brazil_8hpp_source.html#l00077">brazil.hpp:77</a></div></div>
+<div class="ttc" id="abrazil_8hpp_html"><div class="ttname"><a href="../../d4/d48/brazil_8hpp.html">brazil.hpp</a></div><div class="ttdoc">Brazilian calendar.</div></div>
+<div class="ttc" id="acalendar_8hpp_html"><div class="ttname"><a href="../../dc/d39/calendar_8hpp.html">calendar.hpp</a></div><div class="ttdoc">calendar class</div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_brazil_html"><div class="ttname"><a href="../../d0/d04/class_quant_lib_1_1_brazil.html">QuantLib::Brazil</a></div><div class="ttdoc">Brazilian calendar.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d48/brazil_8hpp_source.html#l00078">brazil.hpp:78</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_business252_1_1_impl_html"><div class="ttname"><a href="../../db/d99/class_quant_lib_1_1_business252_1_1_impl.html">QuantLib::Business252::Impl</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d14/business252_8hpp_source.html#l00039">business252.hpp:39</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_business252_1_1_impl_html_a021eab7f1f44c1c71b8dfd29b9c4864b"><div class="ttname"><a href="../../db/d99/class_quant_lib_1_1_business252_1_1_impl.html#a021eab7f1f44c1c71b8dfd29b9c4864b">QuantLib::Business252::Impl::calendar_</a></div><div class="ttdeci">Calendar calendar_</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d14/business252_8hpp_source.html#l00041">business252.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_business252_1_1_impl_html_a242878551af5425cf431edf6e86a25de"><div class="ttname"><a href="../../db/d99/class_quant_lib_1_1_business252_1_1_impl.html#a242878551af5425cf431edf6e86a25de">QuantLib::Business252::Impl::dayCount</a></div><div class="ttdeci">Date::serial_type dayCount(const Date &amp;d1, const Date &amp;d2) const override</div><div class="ttdoc">to be overloaded by more complex day counters</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d8c/business252_8cpp_source.html#l00078">business252.cpp:78</a></div></div>
@@ -152,6 +158,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_date_html_aac76e09f64720ef6bcd495b994b90177"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#aac76e09f64720ef6bcd495b994b90177">QuantLib::Date::serial_type</a></div><div class="ttdeci">std::int_fast32_t serial_type</div><div class="ttdoc">serial number type</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00128">date.hpp:128</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_day_counter_1_1_impl_html"><div class="ttname"><a href="../../dc/dba/class_quant_lib_1_1_day_counter_1_1_impl.html">QuantLib::DayCounter::Impl</a></div><div class="ttdoc">abstract base class for day counter implementations</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00047">daycounter.hpp:47</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_day_counter_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html">QuantLib::DayCounter</a></div><div class="ttdoc">day counter class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00044">daycounter.hpp:44</a></div></div>
+<div class="ttc" id="adaycounter_8hpp_html"><div class="ttname"><a href="../../df/d32/daycounter_8hpp.html">daycounter.hpp</a></div><div class="ttdoc">day counter class</div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>

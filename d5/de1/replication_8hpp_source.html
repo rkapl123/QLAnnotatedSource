@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/cashflows/replication.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/cashflows/replication.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">replication.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d5/de1/replication_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">  Copyright (C) 2007 Cristina Duminuco</span></div>
@@ -105,26 +104,34 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file replication.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Sub, Central, or Super replication</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_replication_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_replication_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/types.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/de3/types_8hpp.html">ql/types.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"></span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    //! Digital option replication strategy</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span><span class="comment">    /*! Specification of replication strategies used to price</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">        the embedded digital option in a digital coupon.</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../da/d23/struct_quant_lib_1_1_replication.html">   36</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../da/d23/struct_quant_lib_1_1_replication.html">Replication</a> {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7a7ab3a5cea583da15b13bfe3742dca4f8">   37</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> { <a class="code hl_enumvalue" href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7a3e53f06234367d0e453fa5ea0ad2ab34">Sub</a>, <a class="code hl_enumvalue" href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7a7ab3a5cea583da15b13bfe3742dca4f8">Central</a>, <a class="code hl_enumvalue" href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7a3993abca9102c73083a66e9e0bf08fba">Super</a> };</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    };</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"></span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">    /*! \relates Replication */</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::ostream&amp; <a class="code hl_function" href="../../d5/d7b/namespace_quant_lib.html#a667d80c284f89eb33f170880e2965118">operator&lt;&lt;</a>(std::ostream&amp;,</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                             <a class="code hl_enumeration" href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7">Replication::Type</a>);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../db/dbd/class_quant_lib_1_1_digital_replication.html">   44</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../db/dbd/class_quant_lib_1_1_digital_replication.html">DigitalReplication</a> {</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_class" href="../../db/dbd/class_quant_lib_1_1_digital_replication.html">DigitalReplication</a>(<a class="code hl_enumeration" href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7">Replication::Type</a> t = <a class="code hl_enumvalue" href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7a7ab3a5cea583da15b13bfe3742dca4f8">Replication::Central</a>,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_class" href="../../db/dbd/class_quant_lib_1_1_digital_replication.html">DigitalReplication</a>(<a class="code hl_enumeration" href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7">Replication::Type</a> <a class="code hl_variable" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a> = <a class="code hl_enumvalue" href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7a7ab3a5cea583da15b13bfe3742dca4f8">Replication::Central</a>,</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                           <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../db/dbd/class_quant_lib_1_1_digital_replication.html#a5aa3e06912a5458221b92435ca0d761d">gap</a> = 1e-4);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../db/dbd/class_quant_lib_1_1_digital_replication.html#a549451e262bc587fe830888598649524">   48</a></span>        <a class="code hl_enumeration" href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7">Replication::Type</a> <a class="code hl_function" href="../../db/dbd/class_quant_lib_1_1_digital_replication.html#a549451e262bc587fe830888598649524">replicationType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/dbd/class_quant_lib_1_1_digital_replication.html#aab6cebbb5dcd43e84bd6d3b5f0c489a1">replicationType_</a>;};</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../db/dbd/class_quant_lib_1_1_digital_replication.html#a5aa3e06912a5458221b92435ca0d761d">   49</a></span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../db/dbd/class_quant_lib_1_1_digital_replication.html#a5aa3e06912a5458221b92435ca0d761d">gap</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/dbd/class_quant_lib_1_1_digital_replication.html#a0bfda7af52aef129dd99f8664efd3da8">gap_</a>;};</div>
@@ -141,6 +148,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_digital_replication_html_a549451e262bc587fe830888598649524"><div class="ttname"><a href="../../db/dbd/class_quant_lib_1_1_digital_replication.html#a549451e262bc587fe830888598649524">QuantLib::DigitalReplication::replicationType</a></div><div class="ttdeci">Replication::Type replicationType() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de1/replication_8hpp_source.html#l00048">replication.hpp:48</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_digital_replication_html_a5aa3e06912a5458221b92435ca0d761d"><div class="ttname"><a href="../../db/dbd/class_quant_lib_1_1_digital_replication.html#a5aa3e06912a5458221b92435ca0d761d">QuantLib::DigitalReplication::gap</a></div><div class="ttdeci">Real gap() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de1/replication_8hpp_source.html#l00049">replication.hpp:49</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_digital_replication_html_aab6cebbb5dcd43e84bd6d3b5f0c489a1"><div class="ttname"><a href="../../db/dbd/class_quant_lib_1_1_digital_replication.html#aab6cebbb5dcd43e84bd6d3b5f0c489a1">QuantLib::DigitalReplication::replicationType_</a></div><div class="ttdeci">Replication::Type replicationType_</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de1/replication_8hpp_source.html#l00052">replication.hpp:52</a></div></div>
+<div class="ttc" id="adefaultprobabilitykey_8cpp_html_a15fc20af123a89cd6f40758e341a4a54"><div class="ttname"><a href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a></div><div class="ttdeci">const DefaultType &amp; t</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ddb/defaultprobabilitykey_8cpp_source.html#l00039">defaultprobabilitykey.cpp:39</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a667d80c284f89eb33f170880e2965118"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a667d80c284f89eb33f170880e2965118">QuantLib::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, GFunctionFactory::YieldCurveModel type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da9/conundrumpricer_8hpp_source.html#l00183">conundrumpricer.hpp:183</a></div></div>
@@ -149,6 +157,7 @@ $(function() {
 <div class="ttc" id="astruct_quant_lib_1_1_replication_html_a1d1cfd8ffb84e947f82999c682b666a7a3993abca9102c73083a66e9e0bf08fba"><div class="ttname"><a href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7a3993abca9102c73083a66e9e0bf08fba">QuantLib::Replication::Super</a></div><div class="ttdeci">@ Super</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de1/replication_8hpp_source.html#l00037">replication.hpp:37</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_replication_html_a1d1cfd8ffb84e947f82999c682b666a7a3e53f06234367d0e453fa5ea0ad2ab34"><div class="ttname"><a href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7a3e53f06234367d0e453fa5ea0ad2ab34">QuantLib::Replication::Sub</a></div><div class="ttdeci">@ Sub</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de1/replication_8hpp_source.html#l00037">replication.hpp:37</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_replication_html_a1d1cfd8ffb84e947f82999c682b666a7a7ab3a5cea583da15b13bfe3742dca4f8"><div class="ttname"><a href="../../da/d23/struct_quant_lib_1_1_replication.html#a1d1cfd8ffb84e947f82999c682b666a7a7ab3a5cea583da15b13bfe3742dca4f8">QuantLib::Replication::Central</a></div><div class="ttdeci">@ Central</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de1/replication_8hpp_source.html#l00037">replication.hpp:37</a></div></div>
+<div class="ttc" id="atypes_8hpp_html"><div class="ttname"><a href="../../dd/de3/types_8hpp.html">types.hpp</a></div><div class="ttdoc">Custom types.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/termstructures/localbootstrap.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/termstructures/localbootstrap.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">localbootstrap.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d8/ddb/localbootstrap_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 Simon Ibbotson</span></div>
@@ -105,18 +104,22 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file localbootstrap.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief localised-term-structure bootstrapper for most curve types.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_local_bootstrap_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_local_bootstrap_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/termstructures/bootstraphelper.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/math/optimization/costfunction.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/math/optimization/constraint.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/math/optimization/armijo.hpp&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/math/optimization/levenbergmarquardt.hpp&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;ql/math/optimization/problem.hpp&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;ql/utilities/dataformatters.hpp&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;ql/shared_ptr.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d76/bootstraphelper_8hpp.html">ql/termstructures/bootstraphelper.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/d16/costfunction_8hpp.html">ql/math/optimization/costfunction.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/de1/constraint_8hpp.html">ql/math/optimization/constraint.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d05/armijo_8hpp.html">ql/math/optimization/armijo.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/d33/levenbergmarquardt_8hpp.html">ql/math/optimization/levenbergmarquardt.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d37/problem_8hpp.html">ql/math/optimization/problem.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/db9/dataformatters_8hpp.html">ql/utilities/dataformatters.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/dc5/shared__ptr_8hpp.html">ql/shared_ptr.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
@@ -148,8 +151,24 @@ $(function() {
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d0/d2d/class_quant_lib_1_1_penalty_function.html#a6ed49e6fc958b5d80c212ed807773d99">   63</a></span>        <a class="code hl_typedef" href="../../d0/d2d/class_quant_lib_1_1_penalty_function.html#a4aeaa62a86b96cdb4083363fe30b8eab">helper_iterator</a> <a class="code hl_variable" href="../../d0/d2d/class_quant_lib_1_1_penalty_function.html#a6ed49e6fc958b5d80c212ed807773d99">rateHelpersEnd_</a>;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    };</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment"></span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">    //! Localised-term-structure bootstrapper for most curve types.</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment"></span><span class="comment">    /*! This algorithm enables a localised fitting for non-local</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">        interpolation methods.</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment"></span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">        As in the similar class (IterativeBootstrap) the input term</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">        structure is solved on a number of market instruments which</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">        are passed as a vector of handles to BootstrapHelper</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">        instances. Their maturities mark the boundaries of the</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">        interpolated segments.</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment"></span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">        Unlike the IterativeBootstrap class, the solution for each</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">        interpolated segment is derived using a local</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">        approximation. This restricts the risk profile s.t.  the risk</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">        is localised. Therefore, we obtain a local IR risk profile</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">        whilst using a smoother interpolation method. Particularly</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">        good for the convex-monotone spline method.</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Curve&gt;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../d4/dbd/class_quant_lib_1_1_local_bootstrap.html">   85</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d4/dbd/class_quant_lib_1_1_local_bootstrap.html">LocalBootstrap</a> {</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="../../d4/dbd/class_quant_lib_1_1_local_bootstrap.html#ad346897f534c947dcc4c1b0259681ce8">   86</a></span>        <span class="keyword">typedef</span> <span class="keyword">typename</span> Curve::traits_type <a class="code hl_typedef" href="../../d4/dbd/class_quant_lib_1_1_local_bootstrap.html#ad346897f534c947dcc4c1b0259681ce8">Traits</a>;</div>
@@ -183,16 +202,16 @@ $(function() {
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        ts_ = ts;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> n = ts_-&gt;instruments_.size();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        QL_REQUIRE(n &gt;= Interpolator::requiredPoints,</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                   <span class="stringliteral">&quot;not enough instruments: &quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot; provided, &quot;</span> &lt;&lt;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a> = ts_-&gt;instruments_.size();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a> &gt;= Interpolator::requiredPoints,</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                   <span class="stringliteral">&quot;not enough instruments: &quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a> &lt;&lt; <span class="stringliteral">&quot; provided, &quot;</span> &lt;&lt;</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                   Interpolator::requiredPoints &lt;&lt; <span class="stringliteral">&quot; required&quot;</span>);</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        QL_REQUIRE(n &gt; localisation_,</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                   <span class="stringliteral">&quot;not enough instruments: &quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot; provided, &quot;</span> &lt;&lt;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a> &gt; localisation_,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                   <span class="stringliteral">&quot;not enough instruments: &quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a> &lt;&lt; <span class="stringliteral">&quot; provided, &quot;</span> &lt;&lt;</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                   localisation_ &lt;&lt; <span class="stringliteral">&quot; required.&quot;</span>);</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;n; ++i){</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;<a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a>; ++i){</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            ts_-&gt;registerWithObservables(ts_-&gt;instruments_[i]);</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
@@ -211,13 +230,13 @@ $(function() {
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=1; i&lt;nInsts; ++i) {</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> m1 = ts_-&gt;instruments_[i-1]-&gt;pillarDate(),</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                 m2 = ts_-&gt;instruments_[i]-&gt;pillarDate();</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            QL_REQUIRE(m1 != m2,</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(m1 != m2,</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                       <span class="stringliteral">&quot;two instruments have the same pillar date (&quot;</span>&lt;&lt;m1&lt;&lt;<span class="stringliteral">&quot;)&quot;</span>);</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        }</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="comment">// check that there is no instruments with invalid quote</span></div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;nInsts; ++i)</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            QL_REQUIRE(ts_-&gt;instruments_[i]-&gt;quote()-&gt;isValid(),</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(ts_-&gt;instruments_[i]-&gt;quote()-&gt;isValid(),</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                       <a class="code hl_function" href="../../dc/da8/group__manips.html#gace46b8e41fd72ee71b9ca53cafd0277f">io::ordinal</a>(i+1) &lt;&lt; <span class="stringliteral">&quot; instrument (maturity: &quot;</span> &lt;&lt;</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                       ts_-&gt;instruments_[i]-&gt;maturityDate() &lt;&lt; <span class="stringliteral">&quot;, pillar: &quot;</span> &lt;&lt;</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                       ts_-&gt;instruments_[i]-&gt;pillarDate() &lt;&lt;</div>
@@ -232,7 +251,7 @@ $(function() {
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        }</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="comment">// set initial guess only if the current curve cannot be used as guess</span></div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">if</span> (validCurve_)</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            QL_ENSURE(ts_-&gt;data_.size() == nInsts+1,</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a394b39aa396098345f86d243f207f7af">QL_ENSURE</a>(ts_-&gt;data_.size() == nInsts+1,</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                      <span class="stringliteral">&quot;dimension mismatch: expected &quot;</span> &lt;&lt; nInsts+1 &lt;&lt;</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                      <span class="stringliteral">&quot;, actual &quot;</span> &lt;&lt; ts_-&gt;data_.size());</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">else</span> {</div>
@@ -309,7 +328,7 @@ $(function() {
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            <a class="code hl_enumeration" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7">EndCriteria::Type</a> endType = solver.<a class="code hl_function" href="../../dd/d57/class_quant_lib_1_1_levenberg_marquardt.html#af67ca22f313bdd3223a68b5c85f9065f">minimize</a>(toSolve, endCriteria);</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            <span class="comment">// check the end criteria</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            QL_REQUIRE(endType == <a class="code hl_enumvalue" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7a609aaafaa7919647e823d340096c355d">EndCriteria::StationaryFunctionAccuracy</a> ||</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(endType == <a class="code hl_enumvalue" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7a609aaafaa7919647e823d340096c355d">EndCriteria::StationaryFunctionAccuracy</a> ||</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                       endType == <a class="code hl_enumvalue" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7a36536d16f277f9dfa2406257a6933c1c">EndCriteria::StationaryFunctionValue</a>,</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                       <span class="stringliteral">&quot;Unable to strip yieldcurve to required accuracy &quot;</span> );</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            ++iInst;</div>
@@ -323,12 +342,12 @@ $(function() {
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i = initialIndex_;</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <a class="code hl_typedef" href="../../d0/d7c/class_quant_lib_1_1_array.html#a0282fb9d40dbac6ced245bd67c194257">Array::const_iterator</a> guessIt = x.<a class="code hl_function" href="../../d0/d7c/class_quant_lib_1_1_array.html#af820f57a2b80308855934b525a082765">begin</a>();</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="keywordflow">while</span> (guessIt != x.<a class="code hl_function" href="../../d0/d7c/class_quant_lib_1_1_array.html#a8edb38fc95e912ca47338586b47c5607">end</a>()) {</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            Traits::updateGuess(curve_-&gt;data_, *guessIt, i);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            Traits::updateGuess(<a class="code hl_variable" href="../../da/d4b/cashflows_8cpp.html#afa49f43cece1f4920561fbd64b6cf95c">curve_</a>-&gt;data_, *guessIt, i);</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            ++guessIt;</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            ++i;</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        }</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        curve_-&gt;interpolation_.<a class="code hl_function" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a44137bb65de2396875934e48a6ee5099">update</a>();</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <a class="code hl_variable" href="../../da/d4b/cashflows_8cpp.html#afa49f43cece1f4920561fbd64b6cf95c">curve_</a>-&gt;interpolation_.<a class="code hl_function" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a44137bb65de2396875934e48a6ee5099">update</a>();</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> penalty = 0.0;</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <a class="code hl_typedef" href="../../d0/d2d/class_quant_lib_1_1_penalty_function.html#a4aeaa62a86b96cdb4083363fe30b8eab">helper_iterator</a> instIt = rateHelpersStart_;</div>
@@ -345,12 +364,12 @@ $(function() {
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <a class="code hl_typedef" href="../../d0/d7c/class_quant_lib_1_1_array.html#a0282fb9d40dbac6ced245bd67c194257">Array::const_iterator</a> guessIt = x.<a class="code hl_function" href="../../d0/d7c/class_quant_lib_1_1_array.html#af820f57a2b80308855934b525a082765">begin</a>();</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i = initialIndex_;</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <span class="keywordflow">while</span> (guessIt != x.<a class="code hl_function" href="../../d0/d7c/class_quant_lib_1_1_array.html#a8edb38fc95e912ca47338586b47c5607">end</a>()) {</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            Traits::updateGuess(curve_-&gt;data_, *guessIt, i);</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            Traits::updateGuess(<a class="code hl_variable" href="../../da/d4b/cashflows_8cpp.html#afa49f43cece1f4920561fbd64b6cf95c">curve_</a>-&gt;data_, *guessIt, i);</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            ++guessIt;</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            ++i;</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        }</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        curve_-&gt;interpolation_.<a class="code hl_function" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a44137bb65de2396875934e48a6ee5099">update</a>();</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        <a class="code hl_variable" href="../../da/d4b/cashflows_8cpp.html#afa49f43cece1f4920561fbd64b6cf95c">curve_</a>-&gt;interpolation_.<a class="code hl_function" href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a44137bb65de2396875934e48a6ee5099">update</a>();</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> penalties(localisation_);</div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <a class="code hl_typedef" href="../../d0/d2d/class_quant_lib_1_1_penalty_function.html#a4aeaa62a86b96cdb4083363fe30b8eab">helper_iterator</a> instIt = rateHelpersStart_;</div>
@@ -367,6 +386,10 @@ $(function() {
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>}</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aandreasenhugevolatilityinterpl_8cpp_html_a4c79e7f153710550f0238535048a4d0a"><div class="ttname"><a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a4c79e7f153710550f0238535048a4d0a">n</a></div><div class="ttdeci">Size n</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp_source.html#l00047">andreasenhugevolatilityinterpl.cpp:47</a></div></div>
+<div class="ttc" id="aarmijo_8hpp_html"><div class="ttname"><a href="../../d5/d05/armijo_8hpp.html">armijo.hpp</a></div><div class="ttdoc">Armijo line-search class.</div></div>
+<div class="ttc" id="abootstraphelper_8hpp_html"><div class="ttname"><a href="../../d0/d76/bootstraphelper_8hpp.html">bootstraphelper.hpp</a></div><div class="ttdoc">base helper class used for bootstrapping</div></div>
+<div class="ttc" id="acashflows_8cpp_html_afa49f43cece1f4920561fbd64b6cf95c"><div class="ttname"><a href="../../da/d4b/cashflows_8cpp.html#afa49f43cece1f4920561fbd64b6cf95c">curve_</a></div><div class="ttdeci">ZeroSpreadedTermStructure curve_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d4b/cashflows_8cpp_source.html#l01187">cashflows.cpp:1187</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00052">array.hpp:52</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html_a0282fb9d40dbac6ced245bd67c194257"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#a0282fb9d40dbac6ced245bd67c194257">QuantLib::Array::const_iterator</a></div><div class="ttdeci">const Real * const_iterator</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00124">array.hpp:124</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html_a091d52af4badf3f1f1aa693e41dc0027"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html#a091d52af4badf3f1f1aa693e41dc0027">QuantLib::Array::data_</a></div><div class="ttdeci">std::unique_ptr&lt; Real[]&gt; data_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00145">array.hpp:145</a></div></div>
@@ -411,12 +434,20 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_positive_constraint_html"><div class="ttname"><a href="../../de/df5/class_quant_lib_1_1_positive_constraint.html">QuantLib::PositiveConstraint</a></div><div class="ttdoc">Constraint imposing positivity to all arguments</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/de1/constraint_8hpp_source.html#l00092">constraint.hpp:92</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_problem_html"><div class="ttname"><a href="../../d4/de4/class_quant_lib_1_1_problem.html">QuantLib::Problem</a></div><div class="ttdoc">Constrained optimization problem.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d37/problem_8hpp_source.html#l00042">problem.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_zero_spreaded_term_structure_html_a44137bb65de2396875934e48a6ee5099"><div class="ttname"><a href="../../dd/d6e/class_quant_lib_1_1_zero_spreaded_term_structure.html#a44137bb65de2396875934e48a6ee5099">QuantLib::ZeroSpreadedTermStructure::update</a></div><div class="ttdeci">void update() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da8/zerospreadedtermstructure_8hpp_source.html#l00118">zerospreadedtermstructure.hpp:118</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1detail_1_1_bootstrap_helper_sorter_html"><div class="ttname"><a href="../../d9/dd5/class_quant_lib_1_1detail_1_1_bootstrap_helper_sorter.html">QuantLib::detail::BootstrapHelperSorter</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d76/bootstraphelper_8hpp_source.html#l00245">bootstraphelper.hpp:245</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1detail_1_1_bootstrap_helper_sorter_html"><div class="ttname"><a href="../../d9/dd5/class_quant_lib_1_1detail_1_1_bootstrap_helper_sorter.html">QuantLib::detail::BootstrapHelperSorter</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d76/bootstraphelper_8hpp_source.html#l00244">bootstraphelper.hpp:244</a></div></div>
+<div class="ttc" id="aconstraint_8hpp_html"><div class="ttname"><a href="../../d4/de1/constraint_8hpp.html">constraint.hpp</a></div><div class="ttdoc">Abstract constraint class.</div></div>
+<div class="ttc" id="acostfunction_8hpp_html"><div class="ttname"><a href="../../db/d16/costfunction_8hpp.html">costfunction.hpp</a></div><div class="ttdoc">Optimization cost function class.</div></div>
+<div class="ttc" id="adataformatters_8hpp_html"><div class="ttname"><a href="../../db/db9/dataformatters_8hpp.html">dataformatters.hpp</a></div><div class="ttdoc">output manipulators</div></div>
+<div class="ttc" id="aerrors_8hpp_html_a394b39aa396098345f86d243f207f7af"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a394b39aa396098345f86d243f207f7af">QL_ENSURE</a></div><div class="ttdeci">#define QL_ENSURE(condition, message)</div><div class="ttdoc">throw an error if the given post-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00130">errors.hpp:130</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
 <div class="ttc" id="agroup__manips_html_gace46b8e41fd72ee71b9ca53cafd0277f"><div class="ttname"><a href="../../dc/da8/group__manips.html#gace46b8e41fd72ee71b9ca53cafd0277f">QuantLib::io::ordinal</a></div><div class="ttdeci">detail::ordinal_holder ordinal(Size)</div><div class="ttdoc">outputs naturals as 1st, 2nd, 3rd...</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db9/dataformatters_8hpp_source.html#l00116">dataformatters.hpp:116</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="alevenbergmarquardt_8hpp_html"><div class="ttname"><a href="../../da/d33/levenbergmarquardt_8hpp.html">levenbergmarquardt.hpp</a></div><div class="ttdoc">Levenberg-Marquardt optimization method.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="aproblem_8hpp_html"><div class="ttname"><a href="../../d5/d37/problem_8hpp.html">problem.hpp</a></div><div class="ttdoc">Abstract optimization problem class.</div></div>
+<div class="ttc" id="ashared__ptr_8hpp_html"><div class="ttname"><a href="../../d0/dc5/shared__ptr_8hpp.html">shared_ptr.hpp</a></div><div class="ttdoc">Maps shared_ptr to either the boost or std implementation.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

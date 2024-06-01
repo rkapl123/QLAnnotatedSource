@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/methods/finitedifferences/utilities/fdmmesherintegral.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/methods/finitedifferences/utilities/fdmmesherintegral.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">fdmmesherintegral.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d7/d4a/fdmmesherintegral_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2014 Klaus Spanderen</span></div>
@@ -105,12 +104,16 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file fdmmesherintegral.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief mesher based integral over target function.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_fdm_mesher_integral_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_fdm_mesher_integral_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/methods/finitedifferences/meshers/fdmmeshercomposite.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/functional.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/ddb/fdmmeshercomposite_8hpp.html">ql/methods/finitedifferences/meshers/fdmmeshercomposite.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/db4/functional_8hpp.html">ql/functional.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d2/d67/class_quant_lib_1_1_fdm_mesher_integral.html">   31</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d2/d67/class_quant_lib_1_1_fdm_mesher_integral.html">FdmMesherIntegral</a> {</div>
@@ -120,7 +123,7 @@ $(function() {
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keyword">const</span> ext::function&lt;<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp;)&gt;&amp;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                integrator1d);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d2/d67/class_quant_lib_1_1_fdm_mesher_integral.html#ad44e1606c121967ed298bef29a15eece">integrate</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; f) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d2/d67/class_quant_lib_1_1_fdm_mesher_integral.html#ad44e1606c121967ed298bef29a15eece">integrate</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a>&amp; <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d2/d67/class_quant_lib_1_1_fdm_mesher_integral.html#ae6722239e6ef4f209a981141fe9e9f48">   41</a></span>        <span class="keyword">const</span> std::vector&lt;ext::shared_ptr&lt;Fdm1dMesher&gt; &gt; <a class="code hl_variable" href="../../d2/d67/class_quant_lib_1_1_fdm_mesher_integral.html#ae6722239e6ef4f209a981141fe9e9f48">meshers_</a>;</div>
@@ -133,6 +136,9 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_mesher_integral_html_a0fcd7835292887b9c24fdfae87d07b8c"><div class="ttname"><a href="../../d2/d67/class_quant_lib_1_1_fdm_mesher_integral.html#a0fcd7835292887b9c24fdfae87d07b8c">QuantLib::FdmMesherIntegral::integrator1d_</a></div><div class="ttdeci">const ext::function&lt; Real(const Array &amp;, const Array &amp;)&gt; &amp; integrator1d_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4a/fdmmesherintegral_8hpp_source.html#l00042">fdmmesherintegral.hpp:42</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_mesher_integral_html_ad44e1606c121967ed298bef29a15eece"><div class="ttname"><a href="../../d2/d67/class_quant_lib_1_1_fdm_mesher_integral.html#ad44e1606c121967ed298bef29a15eece">QuantLib::FdmMesherIntegral::integrate</a></div><div class="ttdeci">Real integrate(const Array &amp;f) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0b/fdmmesherintegral_8cpp_source.html#l00033">fdmmesherintegral.cpp:33</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fdm_mesher_integral_html_ae6722239e6ef4f209a981141fe9e9f48"><div class="ttname"><a href="../../d2/d67/class_quant_lib_1_1_fdm_mesher_integral.html#ae6722239e6ef4f209a981141fe9e9f48">QuantLib::FdmMesherIntegral::meshers_</a></div><div class="ttdeci">const std::vector&lt; ext::shared_ptr&lt; Fdm1dMesher &gt; &gt; meshers_</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d4a/fdmmesherintegral_8hpp_source.html#l00041">fdmmesherintegral.hpp:41</a></div></div>
+<div class="ttc" id="adefaultdensitystructure_8cpp_html_ae19b4006a311a298a93a5cd06a7cb0e7"><div class="ttname"><a href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a></div><div class="ttdeci">F f</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d93/defaultdensitystructure_8cpp_source.html#l00032">defaultdensitystructure.cpp:32</a></div></div>
+<div class="ttc" id="afdmmeshercomposite_8hpp_html"><div class="ttname"><a href="../../dc/ddb/fdmmeshercomposite_8hpp.html">fdmmeshercomposite.hpp</a></div><div class="ttdoc">FdmMesher which is a composite of Fdm1dMesher.</div></div>
+<div class="ttc" id="afunctional_8hpp_html"><div class="ttname"><a href="../../d2/db4/functional_8hpp.html">functional.hpp</a></div><div class="ttdoc">Maps function, bind and cref to either the boost or std implementation.</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

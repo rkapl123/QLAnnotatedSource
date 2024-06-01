@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/pricingengines/vanilla/analyticdividendeuropeanengine.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/pricingengines/vanilla/analyticdividendeuropeanengine.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">analyticdividendeuropeanengine.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../db/d00/analyticdividendeuropeanengine_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2004, 2007 StatPro Italia srl</span></div>
@@ -105,46 +104,49 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file analyticdividendeuropeanengine.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief Analytic discrete-dividend European engine</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_analytic_dividend_european_engine_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_analytic_dividend_european_engine_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/instruments/dividendvanillaoption.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/processes/blackscholesprocess.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dde/vanillaoption_8hpp.html">ql/instruments/vanillaoption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/da0/blackscholesprocess_8hpp.html">ql/processes/blackscholesprocess.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    QL_DEPRECATED_DISABLE_WARNING</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html">   40</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html">AnalyticDividendEuropeanEngine</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d8/de7/class_quant_lib_1_1_dividend_vanilla_option_1_1engine.html">DividendVanillaOption::engine</a> {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        QL_DEPRECATED_ENABLE_WARNING</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_class" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html">AnalyticDividendEuropeanEngine</a>(ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; process,</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                                       <a class="code hl_typedef" href="../../d5/d7b/namespace_quant_lib.html#a2cbf2c853a5cc3fc7f8bbcedf51c859e">DividendSchedule</a> dividends);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        QL_DEPRECATED</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html">AnalyticDividendEuropeanEngine</a>(ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; process);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"></span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    //! Analytic pricing engine for European options with discrete dividends</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span><span class="comment">    /*! \ingroup vanillaengines</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        \test the correctness of the returned greeks is tested by</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">              reproducing numerical derivatives.</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html">   38</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html">AnalyticDividendEuropeanEngine</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d6/d09/class_quant_lib_1_1_one_asset_option_1_1engine.html">VanillaOption::engine</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_class" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html">AnalyticDividendEuropeanEngine</a>(ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; process,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                       <a class="code hl_typedef" href="../../d5/d7b/namespace_quant_lib.html#a2cbf2c853a5cc3fc7f8bbcedf51c859e">DividendSchedule</a> dividends);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   45</a></span>        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code hl_variable" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#abab30617bf36bfc9a09b3e2a7dc1594a">   46</a></span>        <a class="code hl_typedef" href="../../d5/d7b/namespace_quant_lib.html#a2cbf2c853a5cc3fc7f8bbcedf51c859e">DividendSchedule</a> <a class="code hl_variable" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#abab30617bf36bfc9a09b3e2a7dc1594a">dividends_</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    };</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">calculate</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">   54</a></span>        ext::shared_ptr&lt;GeneralizedBlackScholesProcess&gt; <a class="code hl_variable" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">process_</a>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#abab30617bf36bfc9a09b3e2a7dc1594a">   55</a></span>        <a class="code hl_typedef" href="../../d5/d7b/namespace_quant_lib.html#a2cbf2c853a5cc3fc7f8bbcedf51c859e">DividendSchedule</a> <a class="code hl_variable" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#abab30617bf36bfc9a09b3e2a7dc1594a">dividends_</a>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a66e806e9b92093657894eb258ff0e94c">   56</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a66e806e9b92093657894eb258ff0e94c">explicitDividends_</a>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    };</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html">QuantLib::AnalyticDividendEuropeanEngine</a></div><div class="ttdoc">Analytic pricing engine for European options with discrete dividends.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d00/analyticdividendeuropeanengine_8hpp_source.html#l00040">analyticdividendeuropeanengine.hpp:40</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::AnalyticDividendEuropeanEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da8/analyticdividendeuropeanengine_8cpp_source.html#l00041">analyticdividendeuropeanengine.cpp:41</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html_a66e806e9b92093657894eb258ff0e94c"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a66e806e9b92093657894eb258ff0e94c">QuantLib::AnalyticDividendEuropeanEngine::explicitDividends_</a></div><div class="ttdeci">bool explicitDividends_</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d00/analyticdividendeuropeanengine_8hpp_source.html#l00056">analyticdividendeuropeanengine.hpp:56</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html_abab30617bf36bfc9a09b3e2a7dc1594a"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#abab30617bf36bfc9a09b3e2a7dc1594a">QuantLib::AnalyticDividendEuropeanEngine::dividends_</a></div><div class="ttdeci">DividendSchedule dividends_</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d00/analyticdividendeuropeanengine_8hpp_source.html#l00055">analyticdividendeuropeanengine.hpp:55</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::AnalyticDividendEuropeanEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d00/analyticdividendeuropeanengine_8hpp_source.html#l00054">analyticdividendeuropeanengine.hpp:54</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_dividend_vanilla_option_1_1engine_html"><div class="ttname"><a href="../../d8/de7/class_quant_lib_1_1_dividend_vanilla_option_1_1engine.html">QuantLib::DividendVanillaOption::engine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d65/dividendvanillaoption_8hpp_source.html#l00074">dividendvanillaoption.hpp:76</a></div></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="ablackscholesprocess_8hpp_html"><div class="ttname"><a href="../../d0/da0/blackscholesprocess_8hpp.html">blackscholesprocess.hpp</a></div><div class="ttdoc">Black-Scholes processes.</div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html">QuantLib::AnalyticDividendEuropeanEngine</a></div><div class="ttdoc">Analytic pricing engine for European options with discrete dividends.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d00/analyticdividendeuropeanengine_8hpp_source.html#l00038">analyticdividendeuropeanengine.hpp:38</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html_a61eb1a24e5329ccc296715a40dc3a19a"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#a61eb1a24e5329ccc296715a40dc3a19a">QuantLib::AnalyticDividendEuropeanEngine::calculate</a></div><div class="ttdeci">void calculate() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da8/analyticdividendeuropeanengine_8cpp_source.html#l00034">analyticdividendeuropeanengine.cpp:34</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html_abab30617bf36bfc9a09b3e2a7dc1594a"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#abab30617bf36bfc9a09b3e2a7dc1594a">QuantLib::AnalyticDividendEuropeanEngine::dividends_</a></div><div class="ttdeci">DividendSchedule dividends_</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d00/analyticdividendeuropeanengine_8hpp_source.html#l00046">analyticdividendeuropeanengine.hpp:46</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_analytic_dividend_european_engine_html_ac7eeb4421e8f1769148f3aaca0624b20"><div class="ttname"><a href="../../d7/dc8/class_quant_lib_1_1_analytic_dividend_european_engine.html#ac7eeb4421e8f1769148f3aaca0624b20">QuantLib::AnalyticDividendEuropeanEngine::process_</a></div><div class="ttdeci">ext::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; process_</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d00/analyticdividendeuropeanengine_8hpp_source.html#l00045">analyticdividendeuropeanengine.hpp:45</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_one_asset_option_1_1engine_html"><div class="ttname"><a href="../../d6/d09/class_quant_lib_1_1_one_asset_option_1_1engine.html">QuantLib::OneAssetOption::engine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2b/oneassetoption_8hpp_source.html#l00080">oneassetoption.hpp:82</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a2cbf2c853a5cc3fc7f8bbcedf51c859e"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a2cbf2c853a5cc3fc7f8bbcedf51c859e">QuantLib::DividendSchedule</a></div><div class="ttdeci">std::vector&lt; ext::shared_ptr&lt; Dividend &gt; &gt; DividendSchedule</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d57/dividendschedule_8hpp_source.html#l00033">dividendschedule.hpp:33</a></div></div>
+<div class="ttc" id="avanillaoption_8hpp_html"><div class="ttname"><a href="../../d6/dde/vanillaoption_8hpp.html">vanillaoption.hpp</a></div><div class="ttdoc">Vanilla option on a single asset.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/math/randomnumbers/inversecumulativerng.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/math/randomnumbers/inversecumulativerng.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">inversecumulativerng.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d7/dc8/inversecumulativerng_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2003, 2004 Ferdinando Ametrano</span></div>
@@ -106,22 +105,47 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"></span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*! \file inversecumulativerng.hpp</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    \brief Inverse cumulative Gaussian random-number generator</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef quantlib_inversecumulative_rng_h</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define quantlib_inversecumulative_rng_h</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/methods/montecarlo/sample.hpp&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de9/sample_8hpp.html">ql/methods/montecarlo/sample.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"></span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    //! Inverse cumulative random number generator</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span><span class="comment">    /*! It uses a uniform deviate in (0, 1) as the source of cumulative</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">        distribution values.</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        Then an inverse cumulative distribution is used to calculate</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        the distribution deviate.</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"></span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        The uniform deviate is supplied by RNG.</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"></span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">        Class RNG must implement the following interface:</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        \code</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">            RNG::sample_type RNG::next() const;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        \endcode</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"></span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        The inverse cumulative distribution is supplied by IC.</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"></span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        Class IC must implement the following interface:</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">        \code</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">            IC::IC();</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">            Real IC::operator() const;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">        \endcode</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> RNG, <span class="keyword">class</span> IC&gt;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html">   54</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html">InverseCumulativeRng</a> {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html#ad6ae312199547dfd98f3b79b89a036f0">   56</a></span>        <span class="keyword">typedef</span> <a class="code hl_struct" href="../../d4/da1/struct_quant_lib_1_1_sample.html">Sample&lt;Real&gt;</a> <a class="code hl_typedef" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html#ad6ae312199547dfd98f3b79b89a036f0">sample_type</a>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html#abf33bf876d7887a0d4a55f3d3ebba7ba">   57</a></span>        <span class="keyword">typedef</span> RNG <a class="code hl_typedef" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html#abf33bf876d7887a0d4a55f3d3ebba7ba">urng_type</a>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html">InverseCumulativeRng</a>(<span class="keyword">const</span> RNG&amp; uniformGenerator);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_struct" href="../../d4/da1/struct_quant_lib_1_1_sample.html">sample_type</a> <a class="code hl_function" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html#a28b84543d7686b5f19a96142e965dcf4">next</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html">InverseCumulativeRng</a>(<span class="keyword">const</span> RNG&amp; uniformGenerator);<span class="comment"></span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">        //! returns a sample from a Gaussian distribution</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment"></span>        <a class="code hl_struct" href="../../d4/da1/struct_quant_lib_1_1_sample.html">sample_type</a> <a class="code hl_function" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html#a28b84543d7686b5f19a96142e965dcf4">next</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html#a5b45866e4fe2a7e4590496cecf387afc">   62</a></span>        RNG <a class="code hl_variable" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html#a5b45866e4fe2a7e4590496cecf387afc">uniformGenerator_</a>;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html#a1684a2d3d4771a19b38a400bf87c2b69">   63</a></span>        IC <a class="code hl_variable" href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html#a1684a2d3d4771a19b38a400bf87c2b69">ICND_</a>;</div>
@@ -150,6 +174,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_inverse_cumulative_rng_html_abf33bf876d7887a0d4a55f3d3ebba7ba"><div class="ttname"><a href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html#abf33bf876d7887a0d4a55f3d3ebba7ba">QuantLib::InverseCumulativeRng::urng_type</a></div><div class="ttdeci">RNG urng_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc8/inversecumulativerng_8hpp_source.html#l00057">inversecumulativerng.hpp:57</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_inverse_cumulative_rng_html_ad6ae312199547dfd98f3b79b89a036f0"><div class="ttname"><a href="../../de/d74/class_quant_lib_1_1_inverse_cumulative_rng.html#ad6ae312199547dfd98f3b79b89a036f0">QuantLib::InverseCumulativeRng::sample_type</a></div><div class="ttdeci">Sample&lt; Real &gt; sample_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dc8/inversecumulativerng_8hpp_source.html#l00056">inversecumulativerng.hpp:56</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="asample_8hpp_html"><div class="ttname"><a href="../../d5/de9/sample_8hpp.html">sample.hpp</a></div><div class="ttdoc">weighted sample</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_sample_html"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html">QuantLib::Sample</a></div><div class="ttdoc">weighted sample</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00035">sample.hpp:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

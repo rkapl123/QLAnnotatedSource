@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/models/marketmodels/models/capletcoterminalperiodic.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/models/marketmodels/models/capletcoterminalperiodic.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">capletcoterminalperiodic.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../db/d78/capletcoterminalperiodic_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span> </div>
@@ -107,19 +106,19 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ql/models/marketmodels/models/capletcoterminalperiodic.hpp&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/models/marketmodels/models/capletcoterminalmaxhomogeneity.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/models/marketmodels/models/piecewiseconstantvariance.hpp&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/models/marketmodels/models/volatilityinterpolationspecifier.hpp&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;ql/math/matrix.hpp&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ql/models/marketmodels/curvestate.hpp&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/models/marketmodels/evolutiondescription.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/models/marketmodels/piecewiseconstantcorrelation.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/models/marketmodels/models/pseudorootfacade.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/models/marketmodels/models/cotswaptofwdadapter.hpp&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/models/marketmodels/models/fwdperiodadapter.hpp&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;ql/models/marketmodels/models/fwdtocotswapadapter.hpp&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;ql/shared_ptr.hpp&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d62/capletcoterminalperiodic_8hpp.html">ql/models/marketmodels/models/capletcoterminalperiodic.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d4e/capletcoterminalmaxhomogeneity_8hpp.html">ql/models/marketmodels/models/capletcoterminalmaxhomogeneity.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d60/piecewiseconstantvariance_8hpp.html">ql/models/marketmodels/models/piecewiseconstantvariance.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/dbd/volatilityinterpolationspecifier_8hpp.html">ql/models/marketmodels/models/volatilityinterpolationspecifier.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/dce/matrix_8hpp.html">ql/math/matrix.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="../../d7/d20/curvestate_8hpp.html">ql/models/marketmodels/curvestate.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/df1/evolutiondescription_8hpp.html">ql/models/marketmodels/evolutiondescription.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/dec/piecewiseconstantcorrelation_8hpp.html">ql/models/marketmodels/piecewiseconstantcorrelation.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d5e/pseudorootfacade_8hpp.html">ql/models/marketmodels/models/pseudorootfacade.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../dc/d68/cotswaptofwdadapter_8hpp.html">ql/models/marketmodels/models/cotswaptofwdadapter.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d62/fwdperiodadapter_8hpp.html">ql/models/marketmodels/models/fwdperiodadapter.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/dcc/fwdtocotswapadapter_8hpp.html">ql/models/marketmodels/models/fwdtocotswapadapter.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/dc5/shared__ptr_8hpp.html">ql/shared_ptr.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div>
@@ -157,7 +156,7 @@ $(function() {
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> numberSmallRates = evolution.<a class="code hl_function" href="../../de/dd0/class_quant_lib_1_1_evolution_description.html#a1f7fca17f1af46f16730a2f1dbdd7f29">numberOfRates</a>();</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> numberSmallSteps = evolution.<a class="code hl_function" href="../../de/dd0/class_quant_lib_1_1_evolution_description.html#a9d1cf8d9e7aa612c66fee3a68fac3066">numberOfSteps</a>();</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        QL_REQUIRE( numberSmallSteps == numberSmallRates,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>( numberSmallSteps == numberSmallRates,</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="stringliteral">&quot;periodic calibration class requires evolution to the reset of each rate&quot;</span>);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> numberBigRates = numberSmallRates/period;</div>
@@ -165,7 +164,7 @@ $(function() {
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        std::vector&lt;Spread&gt; newDisplacements(numberBigRates,displacement);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        QL_REQUIRE(displacedSwapVariances.<a class="code hl_function" href="../../d7/d6b/class_quant_lib_1_1_volatility_interpolation_specifier.html#a9aefa4466580cc1ca01b37a0b86354da">getNoBigRates</a>() == numberBigRates,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(displacedSwapVariances.<a class="code hl_function" href="../../d7/d6b/class_quant_lib_1_1_volatility_interpolation_specifier.html#a9aefa4466580cc1ca01b37a0b86354da">getNoBigRates</a>() == numberBigRates,</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="stringliteral">&quot;mismatch between number of swap variances given and number of rates and period&quot;</span>);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> failures=0;</div>
@@ -267,6 +266,8 @@ $(function() {
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}</div>
+<div class="ttc" id="acapletcoterminalmaxhomogeneity_8hpp_html"><div class="ttname"><a href="../../d9/d4e/capletcoterminalmaxhomogeneity_8hpp.html">capletcoterminalmaxhomogeneity.hpp</a></div></div>
+<div class="ttc" id="acapletcoterminalperiodic_8hpp_html"><div class="ttname"><a href="../../df/d62/capletcoterminalperiodic_8hpp.html">capletcoterminalperiodic.hpp</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_t_s_m_m_caplet_calibration_html_a5ad6bdeabec616587a3f1c51338f3ea1"><div class="ttname"><a href="../../d8/d66/class_quant_lib_1_1_c_t_s_m_m_caplet_calibration.html#a5ad6bdeabec616587a3f1c51338f3ea1">QuantLib::CTSMMCapletCalibration::calibrate</a></div><div class="ttdeci">bool calibrate(Natural numberOfFactors, Natural maxIterations, Real tolerance, Natural innerMaxIterations=100, Real innerTolerance=1e-8)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd4/ctsmmcapletcalibration_8cpp_source.html#l00121">ctsmmcapletcalibration.cpp:121</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_t_s_m_m_caplet_calibration_html_a8ee8eaa94e118314c71b4ea2a19268f7"><div class="ttname"><a href="../../d8/d66/class_quant_lib_1_1_c_t_s_m_m_caplet_calibration.html#a8ee8eaa94e118314c71b4ea2a19268f7">QuantLib::CTSMMCapletCalibration::swapPseudoRoots</a></div><div class="ttdeci">const std::vector&lt; Matrix &gt; &amp; swapPseudoRoots() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d1c/ctsmmcapletcalibration_8hpp_source.html#l00168">ctsmmcapletcalibration.hpp:168</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_c_t_s_m_m_caplet_max_homogeneity_calibration_html"><div class="ttname"><a href="../../d0/daf/class_quant_lib_1_1_c_t_s_m_m_caplet_max_homogeneity_calibration.html">QuantLib::CTSMMCapletMaxHomogeneityCalibration</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d4e/capletcoterminalmaxhomogeneity_8hpp_source.html#l00028">capletcoterminalmaxhomogeneity.hpp:28</a></div></div>
@@ -285,12 +286,24 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_volatility_interpolation_specifier_html_a9afa1df8525233c08226fbc4dedd5a87"><div class="ttname"><a href="../../d7/d6b/class_quant_lib_1_1_volatility_interpolation_specifier.html#a9afa1df8525233c08226fbc4dedd5a87">QuantLib::VolatilityInterpolationSpecifier::setScalingFactors</a></div><div class="ttdeci">virtual void setScalingFactors(const std::vector&lt; Real &gt; &amp;scales)=0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_volatility_interpolation_specifier_html_ad47a5ba4981bc8e13a73b3d7afca6b2f"><div class="ttname"><a href="../../d7/d6b/class_quant_lib_1_1_volatility_interpolation_specifier.html#ad47a5ba4981bc8e13a73b3d7afca6b2f">QuantLib::VolatilityInterpolationSpecifier::originalVariances</a></div><div class="ttdeci">virtual const std::vector&lt; ext::shared_ptr&lt; PiecewiseConstantVariance &gt; &gt; &amp; originalVariances() const =0</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_volatility_interpolation_specifier_html_afe2795057471fe80208fbbe1d2b60254"><div class="ttname"><a href="../../d7/d6b/class_quant_lib_1_1_volatility_interpolation_specifier.html#afe2795057471fe80208fbbe1d2b60254">QuantLib::VolatilityInterpolationSpecifier::interpolatedVariances</a></div><div class="ttdeci">virtual const std::vector&lt; ext::shared_ptr&lt; PiecewiseConstantVariance &gt; &gt; &amp; interpolatedVariances() const =0</div></div>
+<div class="ttc" id="acotswaptofwdadapter_8hpp_html"><div class="ttname"><a href="../../dc/d68/cotswaptofwdadapter_8hpp.html">cotswaptofwdadapter.hpp</a></div></div>
+<div class="ttc" id="acurvestate_8hpp_html"><div class="ttname"><a href="../../d7/d20/curvestate_8hpp.html">curvestate.hpp</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aevolutiondescription_8hpp_html"><div class="ttname"><a href="../../dc/df1/evolutiondescription_8hpp.html">evolutiondescription.hpp</a></div></div>
+<div class="ttc" id="afwdperiodadapter_8hpp_html"><div class="ttname"><a href="../../d1/d62/fwdperiodadapter_8hpp.html">fwdperiodadapter.hpp</a></div></div>
+<div class="ttc" id="afwdtocotswapadapter_8hpp_html"><div class="ttname"><a href="../../d4/dcc/fwdtocotswapadapter_8hpp.html">fwdtocotswapadapter.hpp</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
 <div class="ttc" id="agroup__types_html_gae7427f4743503002b0c6eeeefae91a3d"><div class="ttname"><a href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">QuantLib::Spread</a></div><div class="ttdeci">Real Spread</div><div class="ttdoc">spreads on interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00074">types.hpp:74</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="amatrix_8hpp_html"><div class="ttname"><a href="../../df/dce/matrix_8hpp.html">matrix.hpp</a></div><div class="ttdoc">matrix used in linear algebra.</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_aece2c0c4a7c246f0f19c90334bc4769d"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#aece2c0c4a7c246f0f19c90334bc4769d">QuantLib::capletSwaptionPeriodicCalibration</a></div><div class="ttdeci">Integer capletSwaptionPeriodicCalibration(const EvolutionDescription &amp;evolution, const ext::shared_ptr&lt; PiecewiseConstantCorrelation &gt; &amp;corr, VolatilityInterpolationSpecifier &amp;displacedSwapVariances, const std::vector&lt; Volatility &gt; &amp;capletVols, const ext::shared_ptr&lt; CurveState &gt; &amp;cs, const Spread displacement, Real caplet0Swaption1Priority, Size numberOfFactors, Size period, Size max1dIterations, Real tolerance1d, Size maxUnperiodicIterations, Real toleranceUnperiodic, Size maxPeriodIterations, Real periodTolerance, Real &amp;, Real &amp;totalSwaptionError, std::vector&lt; Matrix &gt; &amp;swapCovariancePseudoRoots, std::vector&lt; Real &gt; &amp;finalScales, Size &amp;iterationsDone, Real &amp;errorImprovement, Matrix &amp;modelSwaptionVolsMatrix)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d78/capletcoterminalperiodic_8cpp_source.html#l00041">capletcoterminalperiodic.cpp:41</a></div></div>
+<div class="ttc" id="apiecewiseconstantcorrelation_8hpp_html"><div class="ttname"><a href="../../dc/dec/piecewiseconstantcorrelation_8hpp.html">piecewiseconstantcorrelation.hpp</a></div></div>
+<div class="ttc" id="apiecewiseconstantvariance_8hpp_html"><div class="ttname"><a href="../../d2/d60/piecewiseconstantvariance_8hpp.html">piecewiseconstantvariance.hpp</a></div></div>
+<div class="ttc" id="apseudorootfacade_8hpp_html"><div class="ttname"><a href="../../d5/d5e/pseudorootfacade_8hpp.html">pseudorootfacade.hpp</a></div></div>
+<div class="ttc" id="ashared__ptr_8hpp_html"><div class="ttname"><a href="../../d0/dc5/shared__ptr_8hpp.html">shared_ptr.hpp</a></div><div class="ttdoc">Maps shared_ptr to either the boost or std implementation.</div></div>
+<div class="ttc" id="avolatilityinterpolationspecifier_8hpp_html"><div class="ttname"><a href="../../d2/dbd/volatilityinterpolationspecifier_8hpp.html">volatilityinterpolationspecifier.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

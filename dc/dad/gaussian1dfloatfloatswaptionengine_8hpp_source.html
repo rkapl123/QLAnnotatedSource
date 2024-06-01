@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/pricingengines/swaption/gaussian1dfloatfloatswaptionengine.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/pricingengines/swaption/gaussian1dfloatfloatswaptionengine.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">gaussian1dfloatfloatswaptionengine.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../dc/dad/gaussian1dfloatfloatswaptionengine_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2013, 2015 Peter Caspers</span></div>
@@ -105,19 +104,44 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file gaussian1dfloatfloatswaptionengine.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief float float swaption engine for one factor interest rate models</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_pricers_gaussian1d_floatfloatswaption_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_pricers_gaussian1d_floatfloatswaption_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/instruments/floatfloatswaption.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/models/shortrate/onefactormodels/gaussian1dmodel.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/rebatedexercise.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d7c/floatfloatswaption_8hpp.html">ql/instruments/floatfloatswaption.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/dd9/gaussian1dmodel_8hpp.html">ql/models/shortrate/onefactormodels/gaussian1dmodel.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../de/d01/rebatedexercise_8hpp.html">ql/rebatedexercise.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/pricingengines/genericmodelengine.hpp&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d4f/genericmodelengine_8hpp.html">ql/pricingengines/genericmodelengine.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">    //! One factor model float float swaption engine</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"></span><span class="comment">    /*! \ingroup swaptionengines</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"></span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">         All float coupons with fixing date greater or</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">         equal the respective option expiry are considered</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">         part of the exercise into right. Note that this</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">         is different from the usual accrual start date</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">         greater or equal exercise date if the fixing lag</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">         is strictly greater than the exercise lag (which</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">         should be a rare case). For the redepmtion flows</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">         the criterion is that the associated start date</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">         of the redemption flow (i.e. the start date of</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">         the regular coupon period with same payment date</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">         as the redemption flow) is greater or equal the</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">         exercise date.</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment"></span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">         The addtional result underlyingValue is the npv</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">         of the underlying (as seen from &quot;today&quot;) including</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">         all fixings greater (or greater equal depending</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">         on includeTodaysExercise) today.</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d8/d85/class_quant_lib_1_1_gaussian1d_float_float_swaption_engine.html">   57</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d8/d85/class_quant_lib_1_1_gaussian1d_float_float_swaption_engine.html">Gaussian1dFloatFloatSwaptionEngine</a></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        : <span class="keyword">public</span> <a class="code hl_class" href="../../d6/d27/class_quant_lib_1_1_basket_generating_engine.html">BasketGeneratingEngine</a>,</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>          <span class="keyword">public</span> <a class="code hl_class" href="../../d2/d7e/class_quant_lib_1_1_generic_model_engine.html">GenericModelEngine</a>&lt;Gaussian1dModel,</div>
@@ -194,7 +218,7 @@ $(function() {
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d8/d85/class_quant_lib_1_1_gaussian1d_float_float_swaption_engine.html#aaa68a609f7e947f53b600fbe82acf33c">underlyingNpv</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; expiry, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> y) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_function" href="../../d8/d85/class_quant_lib_1_1_gaussian1d_float_float_swaption_engine.html#aaa68a609f7e947f53b600fbe82acf33c">underlyingNpv</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; expiry, <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a18279dd4d4460f2130f7a45358c14ffa">y</a>) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <a class="code hl_enumeration" href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">Swap::Type</a> <a class="code hl_function" href="../../d8/d85/class_quant_lib_1_1_gaussian1d_float_float_swaption_engine.html#ada90f0cf3ad51d40dc333e40823c5a2f">underlyingType</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> <a class="code hl_function" href="../../d8/d85/class_quant_lib_1_1_gaussian1d_float_float_swaption_engine.html#aa65a78a0c4d3688c4445850826706212">underlyingLastDate</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keyword">const</span> <a class="code hl_class" href="../../d0/d7c/class_quant_lib_1_1_array.html">Array</a> <a class="code hl_function" href="../../d8/d85/class_quant_lib_1_1_gaussian1d_float_float_swaption_engine.html#a35ac8946edb7d78cdc17fb934ebcf2c9">initialGuess</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; expiry) <span class="keyword">const override</span>;</div>
@@ -209,7 +233,7 @@ $(function() {
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="../../d8/d85/class_quant_lib_1_1_gaussian1d_float_float_swaption_engine.html#ae6ef20cd95584e6caf751815381944a0">  145</a></span>        <span class="keyword">const</span> <a class="code hl_enumeration" href="../../d8/d85/class_quant_lib_1_1_gaussian1d_float_float_swaption_engine.html#a0a08ebfc0eb7177e055684ade30ac882">Probabilities</a> <a class="code hl_variable" href="../../d8/d85/class_quant_lib_1_1_gaussian1d_float_float_swaption_engine.html#ae6ef20cd95584e6caf751815381944a0">probabilities_</a>;</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        std::pair&lt;Real, Real&gt; <a class="code hl_function" href="../../d8/d85/class_quant_lib_1_1_gaussian1d_float_float_swaption_engine.html#a171b19b3b9a2af4be3b77ac231f6c3e7">npvs</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; expiry,</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                                   <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> y,</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                                   <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a18279dd4d4460f2130f7a45358c14ffa">y</a>,</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                                   <span class="keywordtype">bool</span> includeExerciseOnxpiry,</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                                   <span class="keywordtype">bool</span> considerProbabilities = <span class="keyword">false</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
@@ -218,6 +242,7 @@ $(function() {
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aandreasenhugevolatilityinterpl_8cpp_html_a18279dd4d4460f2130f7a45358c14ffa"><div class="ttname"><a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a18279dd4d4460f2130f7a45358c14ffa">y</a></div><div class="ttdeci">Real y</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp_source.html#l00046">andreasenhugevolatilityinterpl.cpp:46</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_array_html"><div class="ttname"><a href="../../d0/d7c/class_quant_lib_1_1_array.html">QuantLib::Array</a></div><div class="ttdoc">1-D array used in linear algebra.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db5/array_8hpp_source.html#l00052">array.hpp:52</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_basket_generating_engine_html"><div class="ttname"><a href="../../d6/d27/class_quant_lib_1_1_basket_generating_engine.html">QuantLib::BasketGeneratingEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db9/basketgeneratingengine_8hpp_source.html#l00057">basketgeneratingengine.hpp:57</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
@@ -253,8 +278,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_pricing_engine_1_1arguments_html"><div class="ttname"><a href="../../d7/d14/class_quant_lib_1_1_pricing_engine_1_1arguments.html">QuantLib::PricingEngine::arguments</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcc/pricingengine_8hpp_source.html#l00045">pricingengine.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_pricing_engine_1_1results_html"><div class="ttname"><a href="../../df/d1a/class_quant_lib_1_1_pricing_engine_1_1results.html">QuantLib::PricingEngine::results</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dcc/pricingengine_8hpp_source.html#l00051">pricingengine.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_swap_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="../../dc/d54/class_quant_lib_1_1_swap.html#a1d1cfd8ffb84e947f82999c682b666a7">QuantLib::Swap::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6f/swap_8hpp_source.html#l00050">swap.hpp:50</a></div></div>
+<div class="ttc" id="afloatfloatswaption_8hpp_html"><div class="ttname"><a href="../../d2/d7c/floatfloatswaption_8hpp.html">floatfloatswaption.hpp</a></div><div class="ttdoc">floatfloatswaption class</div></div>
+<div class="ttc" id="agaussian1dmodel_8hpp_html"><div class="ttname"><a href="../../db/dd9/gaussian1dmodel_8hpp.html">gaussian1dmodel.hpp</a></div><div class="ttdoc">basic interface for one factor interest rate models</div></div>
+<div class="ttc" id="agenericmodelengine_8hpp_html"><div class="ttname"><a href="../../d2/d4f/genericmodelengine_8hpp.html">genericmodelengine.hpp</a></div><div class="ttdoc">Generic option engine based on a model.</div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="arebatedexercise_8hpp_html"><div class="ttname"><a href="../../de/d01/rebatedexercise_8hpp.html">rebatedexercise.hpp</a></div><div class="ttdoc">Option exercise with rebate payments.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

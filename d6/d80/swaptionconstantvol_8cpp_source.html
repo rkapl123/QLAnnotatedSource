@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/termstructures/volatility/swaption/swaptionconstantvol.cpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/termstructures/volatility/swaption/swaptionconstantvol.cpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">swaptionconstantvol.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d6/d80/swaptionconstantvol_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2008 Ferdinando Ametrano</span></div>
@@ -108,9 +107,9 @@ $(function() {
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;ql/quotes/simplequote.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;ql/termstructures/volatility/flatsmilesection.hpp&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ql/termstructures/volatility/swaption/swaptionconstantvol.hpp&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/d17/simplequote_8hpp.html">ql/quotes/simplequote.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/d3a/flatsmilesection_8hpp.html">ql/termstructures/volatility/flatsmilesection.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/db8/swaptionconstantvol_8hpp.html">ql/termstructures/volatility/swaption/swaptionconstantvol.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
@@ -168,11 +167,11 @@ $(function() {
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      maxSwapTenor_(100*<a class="code hl_enumvalue" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d">Years</a>), volatilityType_(type), shift_(shift) {}</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    ext::shared_ptr&lt;SmileSection&gt;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../d7/d8c/class_quant_lib_1_1_constant_swaption_volatility.html#a667ef6131c27555fa8be581f3b541a95">   82</a></span>    <a class="code hl_function" href="../../d7/d8c/class_quant_lib_1_1_constant_swaption_volatility.html#a667ef6131c27555fa8be581f3b541a95">ConstantSwaptionVolatility::smileSectionImpl</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; d,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../d7/d8c/class_quant_lib_1_1_constant_swaption_volatility.html#a667ef6131c27555fa8be581f3b541a95">   82</a></span>    <a class="code hl_function" href="../../d7/d8c/class_quant_lib_1_1_constant_swaption_volatility.html#a667ef6131c27555fa8be581f3b541a95">ConstantSwaptionVolatility::smileSectionImpl</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>,</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                                                 <span class="keyword">const</span> <a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp;)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> atmVol = <a class="code hl_variable" href="../../d7/d8c/class_quant_lib_1_1_constant_swaption_volatility.html#a14cc04bf8608e1205f4796cbb54fd7f5">volatility_</a>-&gt;value();</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span> ext::shared_ptr&lt;SmileSection&gt;(</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keyword">new</span> <a class="code hl_class" href="../../df/d7c/class_quant_lib_1_1_flat_smile_section.html">FlatSmileSection</a>(d, atmVol, <a class="code hl_function" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880">dayCounter</a>(), <a class="code hl_function" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a">referenceDate</a>(),</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keyword">new</span> <a class="code hl_class" href="../../df/d7c/class_quant_lib_1_1_flat_smile_section.html">FlatSmileSection</a>(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, atmVol, <a class="code hl_function" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880">dayCounter</a>(), <a class="code hl_function" href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a">referenceDate</a>(),</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                                 <a class="code hl_class" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null&lt;Rate&gt;</a>(), <a class="code hl_variable" href="../../d7/d8c/class_quant_lib_1_1_constant_swaption_volatility.html#afbd8ad9c676dbc8fa360b91a7b4f0e59">volatilityType_</a>, <a class="code hl_variable" href="../../d7/d8c/class_quant_lib_1_1_constant_swaption_volatility.html#a0c4303969da361a2bcf65aa333722f99">shift_</a>));</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
@@ -217,6 +216,8 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_swaption_volatility_structure_html"><div class="ttname"><a href="../../d0/db0/class_quant_lib_1_1_swaption_volatility_structure.html">QuantLib::SwaptionVolatilityStructure</a></div><div class="ttdoc">Swaption-volatility structure</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d1c/swaptionvolstructure_8hpp_source.html#l00041">swaptionvolstructure.hpp:41</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_term_structure_html_a34aadf8e384e50e6ee34067cc448262a"><div class="ttname"><a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#a34aadf8e384e50e6ee34067cc448262a">QuantLib::TermStructure::referenceDate</a></div><div class="ttdeci">virtual const Date &amp; referenceDate() const</div><div class="ttdoc">the date at which discount = 1.0 and/or variance = 0.0</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d3a/termstructure_8cpp_source.html#l00039">termstructure.cpp:39</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_term_structure_html_ad49654ea33055b03f8666910acc13880"><div class="ttname"><a href="../../d7/dbb/class_quant_lib_1_1_term_structure.html#ad49654ea33055b03f8666910acc13880">QuantLib::TermStructure::dayCounter</a></div><div class="ttdeci">virtual DayCounter dayCounter() const</div><div class="ttdoc">the day counter used for date/time conversion</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da6/termstructure_8hpp_source.html#l00115">termstructure.hpp:115</a></div></div>
+<div class="ttc" id="aexchangeratemanager_8cpp_html_a85641069b0d4478ab8a7356c3bf32ea3"><div class="ttname"><a href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a></div><div class="ttdeci">Date d</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/exchangeratemanager_8cpp_source.html#l00032">exchangeratemanager.cpp:32</a></div></div>
+<div class="ttc" id="aflatsmilesection_8hpp_html"><div class="ttname"><a href="../../d8/d3a/flatsmilesection_8hpp.html">flatsmilesection.hpp</a></div><div class="ttdoc">Flat SmileSection.</div></div>
 <div class="ttc" id="agroup__datetime_html_gaff46c5ae9385d20709bedade86edd368"><div class="ttname"><a href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">QuantLib::BusinessDayConvention</a></div><div class="ttdeci">BusinessDayConvention</div><div class="ttdoc">Business Day conventions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00041">businessdayconvention.hpp:41</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476da2dd3e252f82116d71a54132e95aaa56d">QuantLib::Years</a></div><div class="ttdeci">@ Years</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00040">timeunit.hpp:40</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
@@ -227,6 +228,8 @@ $(function() {
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a8b2aa10016abb1ffb6f55484a04a5143"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a8b2aa10016abb1ffb6f55484a04a5143">QuantLib::VolatilityType</a></div><div class="ttdeci">VolatilityType</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd6/volatilitytype_8hpp_source.html#l00032">volatilitytype.hpp:32</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="asimplequote_8hpp_html"><div class="ttname"><a href="../../d4/d17/simplequote_8hpp.html">simplequote.hpp</a></div><div class="ttdoc">simple quote class</div></div>
+<div class="ttc" id="aswaptionconstantvol_8hpp_html"><div class="ttname"><a href="../../d0/db8/swaptionconstantvol_8hpp.html">swaptionconstantvol.hpp</a></div><div class="ttdoc">Constant swaption volatility.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

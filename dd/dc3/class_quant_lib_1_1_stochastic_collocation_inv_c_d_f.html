@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -86,7 +85,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d7/df6/class_quant_lib_1_1_stochastic_collocation_inv_c_d_f-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">StochasticCollocationInvCDF Class Reference</div></div>
@@ -96,7 +94,7 @@ $(function() {
 <p>Stochastic collocation inverse cumulative distribution function.  
  <a href="../../dd/dc3/class_quant_lib_1_1_stochastic_collocation_inv_c_d_f.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html">ql/math/randomnumbers/stochasticcollocationinvcdf.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html">stochasticcollocationinvcdf.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Collaboration diagram for StochasticCollocationInvCDF:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -104,20 +102,19 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d5/dc4/class_quant_lib_1_1_stochastic_collocation_inv_c_d_f__coll__graph.png" border="0" usemap="#a_stochastic_collocation_inv_c_d_f_coll__map" alt="Collaboration graph"/></div>
 <map name="a_stochastic_collocation_inv_c_d_f_coll__map" id="a_stochastic_collocation_inv_c_d_f_coll__map">
-<area shape="rect" title="Stochastic collocation inverse cumulative distribution function." alt="" coords="357,1971,551,2069"/>
-<area shape="rect" title=" " alt="" coords="5,159,220,199"/>
-<area shape="rect" href="../../d9/dbc/class_quant_lib_1_1_interpolation.html" title="base class for 1&#45;D interpolations." alt="" coords="259,328,398,544"/>
-<area shape="rect" href="../../d0/d7c/class_quant_lib_1_1_array.html" title="1&#45;D array used in linear algebra." alt="" coords="499,621,657,1893"/>
-<area shape="rect" title=" " alt="" coords="551,409,691,463"/>
-<area shape="rect" title=" " alt="" coords="601,159,653,199"/>
-<area shape="rect" title=" " alt="" coords="678,152,795,207"/>
-<area shape="rect" title=" " alt="" coords="717,5,756,45"/>
-<area shape="rect" title=" " alt="" coords="715,416,777,456"/>
-<area shape="rect" title=" " alt="" coords="682,1237,794,1277"/>
-<area shape="rect" href="../../d2/d9c/class_quant_lib_1_1_lagrange_interpolation.html" title=" " alt="" coords="246,1223,417,1292"/>
-<area shape="rect" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html" title="base class for classes possibly allowing extrapolation" alt="" coords="244,108,403,251"/>
-<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="298,5,349,45"/>
-<area shape="rect" title=" " alt="" coords="427,152,577,207"/>
+<area shape="rect" title="Stochastic collocation inverse cumulative distribution function." alt="" coords="216,1941,409,2040"/>
+<area shape="rect" href="../../d0/d7c/class_quant_lib_1_1_array.html" title="1&#45;D array used in linear algebra." alt="" coords="73,592,232,1864"/>
+<area shape="rect" title=" " alt="" coords="43,394,183,449"/>
+<area shape="rect" title=" " alt="" coords="5,159,57,199"/>
+<area shape="rect" title=" " alt="" coords="82,152,199,207"/>
+<area shape="rect" title=" " alt="" coords="121,5,160,45"/>
+<area shape="rect" title=" " alt="" coords="207,401,269,441"/>
+<area shape="rect" title=" " alt="" coords="257,1208,369,1248"/>
+<area shape="rect" href="../../d2/d9c/class_quant_lib_1_1_lagrange_interpolation.html" title=" " alt="" coords="393,1193,563,1263"/>
+<area shape="rect" href="../../d9/dbc/class_quant_lib_1_1_interpolation.html" title="base class for 1&#45;D interpolations." alt="" coords="409,313,547,529"/>
+<area shape="rect" href="../../dc/d24/class_quant_lib_1_1_extrapolator.html" title="base class for classes possibly allowing extrapolation" alt="" coords="239,108,397,251"/>
+<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="293,5,343,45"/>
+<area shape="rect" title=" " alt="" coords="421,152,572,207"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -129,13 +126,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae8dc6f227c2ce94e4a408e8376943a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0e83d554525d8fc6f15f1adcce1c726"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc3/class_quant_lib_1_1_stochastic_collocation_inv_c_d_f.html#aa0e83d554525d8fc6f15f1adcce1c726">operator()</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> u) const</td></tr>
 <tr class="separator:aa0e83d554525d8fc6f15f1adcce1c726"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ab1db04c21d861b147c8ec515fbe6abc3"><td class="memItemLeft" align="right" valign="top">QL_DEPRECATED typedef <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc3/class_quant_lib_1_1_stochastic_collocation_inv_c_d_f.html#ab1db04c21d861b147c8ec515fbe6abc3">argument_type</a></td></tr>
-<tr class="separator:ab1db04c21d861b147c8ec515fbe6abc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe38b2e6180117ed68dbd80686618343"><td class="memItemLeft" align="right" valign="top">QL_DEPRECATED typedef <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc3/class_quant_lib_1_1_stochastic_collocation_inv_c_d_f.html#abe38b2e6180117ed68dbd80686618343">result_type</a></td></tr>
-<tr class="separator:abe38b2e6180117ed68dbd80686618343"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -260,40 +250,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ab1db04c21d861b147c8ec515fbe6abc3" name="ab1db04c21d861b147c8ec515fbe6abc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1db04c21d861b147c8ec515fbe6abc3">&#9670;&#160;</a></span>argument_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QL_DEPRECATED typedef <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> argument_type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000149">Deprecated:</a></b></dt><dd>Use <code>auto</code> or <code>decltype</code> instead. Deprecated in version 1.29. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html">stochasticcollocationinvcdf.hpp</a>.</p>
-
-</div>
-</div>
-<a id="abe38b2e6180117ed68dbd80686618343" name="abe38b2e6180117ed68dbd80686618343"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe38b2e6180117ed68dbd80686618343">&#9670;&#160;</a></span>result_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QL_DEPRECATED typedef <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> result_type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000150">Deprecated:</a></b></dt><dd>Use <code>auto</code> or <code>decltype</code> instead. Deprecated in version 1.29. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html">stochasticcollocationinvcdf.hpp</a>.</p>
-
-</div>
-</div>
 <a id="a48c41cf150b557ea5789f02c1be4b52f" name="a48c41cf150b557ea5789f02c1be4b52f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48c41cf150b557ea5789f02c1be4b52f">&#9670;&#160;</a></span>x_</h2>
 
@@ -314,7 +270,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html#l00066">66</a> of file <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html">stochasticcollocationinvcdf.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html">stochasticcollocationinvcdf.hpp</a>.</p>
 
 </div>
 </div>
@@ -338,7 +294,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html">stochasticcollocationinvcdf.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html">stochasticcollocationinvcdf.hpp</a>.</p>
 
 </div>
 </div>
@@ -362,7 +318,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html#l00068">68</a> of file <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html">stochasticcollocationinvcdf.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html">stochasticcollocationinvcdf.hpp</a>.</p>
 
 </div>
 </div>
@@ -386,7 +342,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html#l00069">69</a> of file <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html">stochasticcollocationinvcdf.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html#l00057">57</a> of file <a class="el" href="../../d1/dd1/stochasticcollocationinvcdf_8hpp_source.html">stochasticcollocationinvcdf.hpp</a>.</p>
 
 </div>
 </div>

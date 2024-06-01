@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/indexes/ibor/mosprime.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/indexes/ibor/mosprime.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">mosprime.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../d8/df9/mosprime_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">Copyright (C) 2018 Matthias Lungwitz</span></div>
@@ -105,18 +104,29 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file mosprime.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">\brief %MOSPRIME rate</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_mosprime_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_mosprime_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/indexes/iborindex.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/time/calendars/russia.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/time/daycounters/actualactual.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/currencies/europe.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d13/iborindex_8hpp.html">ql/indexes/iborindex.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d16/russia_8hpp.html">ql/time/calendars/russia.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d81/actualactual_8hpp.html">ql/time/daycounters/actualactual.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d00/europe_8hpp.html">ql/currencies/europe.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    //! %MOSPRIME rate</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span><span class="comment">    /*! Moscow Prime Offered Rate fixed by NFEA.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"></span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">    Conventions are taken from</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">    http://www.mosprime.com/uploads/files/MosPrime%20Rate%20Rules%20since%2030.01.2014.docx</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"></span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">    \warning Roll convention and EoM not yet checked.</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d9/d0e/class_quant_lib_1_1_mosprime.html">   42</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d9/d0e/class_quant_lib_1_1_mosprime.html">Mosprime</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html">IborIndex</a> {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d9/d0e/class_quant_lib_1_1_mosprime.html#ae507319f1b93e5ad55695c2adc4a5e25">   44</a></span>        <a class="code hl_function" href="../../d9/d0e/class_quant_lib_1_1_mosprime.html#ae507319f1b93e5ad55695c2adc4a5e25">Mosprime</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&amp; <a class="code hl_function" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a893a77839fce3112da824bd5e08d5834">tenor</a>,</div>
@@ -130,6 +140,7 @@ $(function() {
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aactualactual_8hpp_html"><div class="ttname"><a href="../../dd/d81/actualactual_8hpp.html">actualactual.hpp</a></div><div class="ttdoc">act/act day counters</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual_actual_html"><div class="ttname"><a href="../../de/dee/class_quant_lib_1_1_actual_actual.html">QuantLib::ActualActual</a></div><div class="ttdoc">Actual/Actual day count.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d81/actualactual_8hpp_source.html#l00051">actualactual.hpp:51</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual_actual_html_a63f911c95b83cbc4ac0d194f99c67578a98585fde8dc70056789d25e9b7263825"><div class="ttname"><a href="../../de/dee/class_quant_lib_1_1_actual_actual.html#a63f911c95b83cbc4ac0d194f99c67578a98585fde8dc70056789d25e9b7263825">QuantLib::ActualActual::ISDA</a></div><div class="ttdeci">@ ISDA</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d81/actualactual_8hpp_source.html#l00054">actualactual.hpp:54</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_handle_html"><div class="ttname"><a href="../../dc/dac/class_quant_lib_1_1_handle.html">QuantLib::Handle</a></div><div class="ttdoc">Shared handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00041">handle.hpp:41</a></div></div>
@@ -140,9 +151,12 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_r_u_b_currency_html"><div class="ttname"><a href="../../d9/d4d/class_quant_lib_1_1_r_u_b_currency.html">QuantLib::RUBCurrency</a></div><div class="ttdoc">Russian ruble.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d00/europe_8hpp_source.html#l00257">europe.hpp:257</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_russia_html"><div class="ttname"><a href="../../d9/d63/class_quant_lib_1_1_russia.html">QuantLib::Russia</a></div><div class="ttdoc">Russian calendars.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d16/russia_8hpp_source.html#l00058">russia.hpp:58</a></div></div>
+<div class="ttc" id="aeurope_8hpp_html"><div class="ttname"><a href="../../d0/d00/europe_8hpp.html">europe.hpp</a></div><div class="ttdoc">European currencies.</div></div>
 <div class="ttc" id="agroup__datetime_html_ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">QuantLib::Days</a></div><div class="ttdeci">@ Days</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d5a/timeunit_8hpp_source.html#l00037">timeunit.hpp:37</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a013e092c359f6031cc0563fd413ce707">QuantLib::ModifiedFollowing</a></div><div class="ttdeci">@ ModifiedFollowing</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da1/businessdayconvention_8hpp_source.html#l00049">businessdayconvention.hpp:45</a></div></div>
+<div class="ttc" id="aiborindex_8hpp_html"><div class="ttname"><a href="../../d2/d13/iborindex_8hpp.html">iborindex.hpp</a></div><div class="ttdoc">base class for Inter-Bank-Offered-Rate indexes</div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="arussia_8hpp_html"><div class="ttname"><a href="../../df/d16/russia_8hpp.html">russia.hpp</a></div><div class="ttdoc">Russian calendar.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

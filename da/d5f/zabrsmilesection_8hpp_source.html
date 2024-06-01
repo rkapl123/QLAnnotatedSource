@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuantLib: ql/experimental/volatility/zabrsmilesection.hpp Source File</title>
+<title>QuantLib: C:/dev/QuantLib/ql/experimental/volatility/zabrsmilesection.hpp Source File</title>
 <link rel="stylesheet" href="/styles/fonts.css" type="text/css">
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -32,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">Fully annotated sources - version 1.32</div>
+   <div id="projectnumber">fully annotated source code - version 1.34</div>
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(function() {
   <div class="headertitle"><div class="title">zabrsmilesection.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
+<a href="../../da/d5f/zabrsmilesection_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (C) 2014 Peter Caspers</span></div>
@@ -105,15 +104,19 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> FOR A PARTICULAR PURPOSE.  See the license for more details.</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*! \file zabrsmilesection.hpp</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    \brief zabr smile section</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef quantlib_zabr_smile_section_hpp</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define quantlib_zabr_smile_section_hpp</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;ql/experimental/volatility/zabr.hpp&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;ql/pricingengines/blackformula.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ql/termstructures/volatility/smilesection.hpp&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ql/termstructures/volatility/smilesectionutils.hpp&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;ql/time/daycounters/actual365fixed.hpp&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="../../d9/d1e/zabr_8hpp.html">ql/experimental/volatility/zabr.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d2f/blackformula_8hpp.html">ql/pricingengines/blackformula.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/d4a/smilesection_8hpp.html">ql/termstructures/volatility/smilesection.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d38/smilesectionutils_8hpp.html">ql/termstructures/volatility/smilesectionutils.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/dbf/actual365fixed_8hpp.html">ql/time/daycounters/actual365fixed.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
@@ -135,7 +138,7 @@ $(function() {
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                     std::vector&lt;Real&gt; zabrParameters,</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                     <span class="keyword">const</span> std::vector&lt;Real&gt;&amp; moneyness = std::vector&lt;Real&gt;(),</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                     <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> fdRefinement = 5);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_class" href="../../dc/de7/class_quant_lib_1_1_zabr_smile_section.html">ZabrSmileSection</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; d,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_class" href="../../dc/de7/class_quant_lib_1_1_zabr_smile_section.html">ZabrSmileSection</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>,</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                     <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> forward,</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                     std::vector&lt;Real&gt; zabrParameters,</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                     <span class="keyword">const</span> <a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&amp; dc = <a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>(),</div>
@@ -209,13 +212,13 @@ $(function() {
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>}</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Evaluation&gt;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="../../dc/de7/class_quant_lib_1_1_zabr_smile_section.html#a2e65c06274d5db683eb0d5d1e36ee7fd">  127</a></span><a class="code hl_function" href="../../dc/de7/class_quant_lib_1_1_zabr_smile_section.html#a866cd1fce4538f418e2260bb14509169">ZabrSmileSection&lt;Evaluation&gt;::ZabrSmileSection</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; d,</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="../../dc/de7/class_quant_lib_1_1_zabr_smile_section.html#a2e65c06274d5db683eb0d5d1e36ee7fd">  127</a></span><a class="code hl_function" href="../../dc/de7/class_quant_lib_1_1_zabr_smile_section.html#a866cd1fce4538f418e2260bb14509169">ZabrSmileSection&lt;Evaluation&gt;::ZabrSmileSection</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&amp; <a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>,</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                                               <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> forward,</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                                               std::vector&lt;Real&gt; zabrParams,</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                                               <span class="keyword">const</span> <a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a>&amp; dc,</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                                               <span class="keyword">const</span> std::vector&lt;Real&gt;&amp; moneyness,</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                                               <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> fdRefinement)</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>: <a class="code hl_class" href="../../d9/db6/class_quant_lib_1_1_smile_section.html">SmileSection</a>(d, dc, <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>()), forward_(forward), params_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(zabrParams)),</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>: <a class="code hl_class" href="../../d9/db6/class_quant_lib_1_1_smile_section.html">SmileSection</a>(<a class="code hl_variable" href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a>, dc, <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>()), forward_(forward), params_(<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::move(zabrParams)),</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  fdRefinement_(fdRefinement) {</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <a class="code hl_function" href="../../dc/de7/class_quant_lib_1_1_zabr_smile_section.html#a04bf02ad9b2de8e68d61f468952e8952">init</a>(moneyness);</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>}</div>
@@ -239,7 +242,7 @@ $(function() {
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="../../dc/de7/class_quant_lib_1_1_zabr_smile_section.html#aced06efdc4037a217dccc0b48b4b28e6">  154</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de7/class_quant_lib_1_1_zabr_smile_section.html#a04bf02ad9b2de8e68d61f468952e8952">ZabrSmileSection&lt;Evaluation&gt;::init</a>(<span class="keyword">const</span> std::vector&lt;Real&gt; &amp;moneyness,</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                                        <a class="code hl_struct" href="../../df/dbb/struct_quant_lib_1_1_zabr_local_volatility.html">ZabrLocalVolatility</a>) {</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    QL_REQUIRE(params_.size() &gt;= 5,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a>(params_.size() &gt;= 5,</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>               <span class="stringliteral">&quot;zabr expects 5 parameters (alpha,beta,nu,rho,gamma) but (&quot;</span></div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                   &lt;&lt; params_.size() &lt;&lt; <span class="stringliteral">&quot;) given&quot;</span>);</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
@@ -262,18 +265,18 @@ $(function() {
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> lastF = 0.0;</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordtype">bool</span> firstStrike = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> i : tmp) {</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> f = i * forward_;</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">if</span> (f &gt; 0.0) {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a> = i * forward_;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a> &gt; 0.0) {</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <span class="keywordflow">if</span> (!firstStrike) {</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> j = 1; j &lt;= fdRefinement_; ++j) {</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                    strikes_.push_back(lastF +</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                                       ((<span class="keywordtype">double</span>)j) * (f - lastF) /</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                                       ((<span class="keywordtype">double</span>)j) * (<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a> - lastF) /</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                                           (fdRefinement_ + 1));</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                }</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            }</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            firstStrike = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            lastF = f;</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            strikes_.push_back(f);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            lastF = <a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            strikes_.push_back(<a class="code hl_variable" href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a>);</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        }</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    }</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>}</div>
@@ -333,8 +336,8 @@ $(function() {
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> c0 = (*callPriceFct_)(strikes_.back());</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> c0p = ((*callPriceFct_)(strikes_.back() - eps) - c0) / eps;</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    a_ = c0p / c0;</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    b_ = std::log(c0) + a_ * strikes_.back();</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <a class="code hl_variable" href="../../d6/d44/conundrumpricer_8cpp.html#a114bd3f70557109ba551776610bb2dc1">a_</a> = c0p / c0;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a> = std::log(c0) + <a class="code hl_variable" href="../../d6/d44/conundrumpricer_8cpp.html#a114bd3f70557109ba551776610bb2dc1">a_</a> * strikes_.back();</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>}</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Evaluation&gt;</div>
@@ -364,7 +367,7 @@ $(function() {
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                                               <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> discount,</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                                               <a class="code hl_struct" href="../../df/dbb/struct_quant_lib_1_1_zabr_local_volatility.html">ZabrLocalVolatility</a>)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> call = strike &lt;= strikes_.back() ? (*callPriceFct_)(strike)</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                                          : exp(-a_ * strike + b_);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                                          : exp(-<a class="code hl_variable" href="../../d6/d44/conundrumpricer_8cpp.html#a114bd3f70557109ba551776610bb2dc1">a_</a> * strike + <a class="code hl_variable" href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a>);</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keywordflow">if</span> (type == <a class="code hl_enumvalue" href="../../d2/df1/class_quant_lib_1_1_option.html#a1d1cfd8ffb84e947f82999c682b666a7a59b9abc46faffa225d20abc5e5252417">Option::Call</a>)</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        <span class="keywordflow">return</span> call * discount;</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordflow">else</span></div>
@@ -420,6 +423,8 @@ $(function() {
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>}</div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aactual365fixed_8hpp_html"><div class="ttname"><a href="../../d6/dbf/actual365fixed_8hpp.html">actual365fixed.hpp</a></div><div class="ttdoc">Actual/365 (Fixed) day counter.</div></div>
+<div class="ttc" id="ablackformula_8hpp_html"><div class="ttname"><a href="../../d5/d2f/blackformula_8hpp.html">blackformula.hpp</a></div><div class="ttdoc">Black formula.</div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual365_fixed_html"><div class="ttname"><a href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">QuantLib::Actual365Fixed</a></div><div class="ttdoc">Actual/365 (Fixed) day count convention.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbf/actual365fixed_8hpp_source.html#l00045">actual365fixed.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_cubic_interpolation_html"><div class="ttname"><a href="../../de/dcf/class_quant_lib_1_1_cubic_interpolation.html">QuantLib::CubicInterpolation</a></div><div class="ttdoc">Cubic interpolation between discrete points.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d93/cubicinterpolation_8hpp_source.html#l00105">cubicinterpolation.hpp:105</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_cubic_interpolation_html_aeccb633d9226f37b800589483ea2f0f6a73a1396ca8adb89d7ff481ff55974c1e"><div class="ttname"><a href="../../de/dcf/class_quant_lib_1_1_cubic_interpolation.html#aeccb633d9226f37b800589483ea2f0f6a73a1396ca8adb89d7ff481ff55974c1e">QuantLib::CubicInterpolation::Spline</a></div><div class="ttdeci">@ Spline</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d93/cubicinterpolation_8hpp_source.html#l00112">cubicinterpolation.hpp:112</a></div></div>
@@ -452,20 +457,28 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_zabr_smile_section_html_ab8b8fca3c3cb2721c0e5d09cf51fc872"><div class="ttname"><a href="../../dc/de7/class_quant_lib_1_1_zabr_smile_section.html#ab8b8fca3c3cb2721c0e5d09cf51fc872">QuantLib::ZabrSmileSection::optionPrice</a></div><div class="ttdeci">Real optionPrice(Rate strike, Option::Type type=Option::Call, Real discount=1.0) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5f/zabrsmilesection_8hpp_source.html#l00064">zabrsmilesection.hpp:64</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_zabr_smile_section_html_ad31962cd41229edcf951a93ecacf0e2e"><div class="ttname"><a href="../../dc/de7/class_quant_lib_1_1_zabr_smile_section.html#ad31962cd41229edcf951a93ecacf0e2e">QuantLib::ZabrSmileSection::forward_</a></div><div class="ttdeci">Rate forward_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5f/zabrsmilesection_8hpp_source.html#l00107">zabrsmilesection.hpp:107</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_zabr_smile_section_html_ada8cff07d95e752d7cf21d9bc78c1ebb"><div class="ttname"><a href="../../dc/de7/class_quant_lib_1_1_zabr_smile_section.html#ada8cff07d95e752d7cf21d9bc78c1ebb">QuantLib::ZabrSmileSection::maxStrike</a></div><div class="ttdeci">Real maxStrike() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5f/zabrsmilesection_8hpp_source.html#l00061">zabrsmilesection.hpp:61</a></div></div>
+<div class="ttc" id="aconundrumpricer_8cpp_html_a114bd3f70557109ba551776610bb2dc1"><div class="ttname"><a href="../../d6/d44/conundrumpricer_8cpp.html#a114bd3f70557109ba551776610bb2dc1">a_</a></div><div class="ttdeci">Real a_</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d44/conundrumpricer_8cpp_source.html#l00248">conundrumpricer.cpp:248</a></div></div>
+<div class="ttc" id="adefaultdensitystructure_8cpp_html_ae19b4006a311a298a93a5cd06a7cb0e7"><div class="ttname"><a href="../../d8/d93/defaultdensitystructure_8cpp.html#ae19b4006a311a298a93a5cd06a7cb0e7">f</a></div><div class="ttdeci">F f</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d93/defaultdensitystructure_8cpp_source.html#l00032">defaultdensitystructure.cpp:32</a></div></div>
+<div class="ttc" id="aerrors_8hpp_html_a7a9bcab8006882bc7d5302a0861ab1a6"><div class="ttname"><a href="../../df/d52/errors_8hpp.html#a7a9bcab8006882bc7d5302a0861ab1a6">QL_REQUIRE</a></div><div class="ttdeci">#define QL_REQUIRE(condition, message)</div><div class="ttdoc">throw an error if the given pre-condition is not verified</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d52/errors_8hpp_source.html#l00117">errors.hpp:117</a></div></div>
+<div class="ttc" id="aexchangeratemanager_8cpp_html_a85641069b0d4478ab8a7356c3bf32ea3"><div class="ttname"><a href="../../d5/da5/exchangeratemanager_8cpp.html#a85641069b0d4478ab8a7356c3bf32ea3">d</a></div><div class="ttdeci">Date d</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/exchangeratemanager_8cpp_source.html#l00032">exchangeratemanager.cpp:32</a></div></div>
 <div class="ttc" id="agroup__limit_macros_html_ga31675a375a563ed7a1bba05c664489af"><div class="ttname"><a href="../../d3/d8f/group__limit_macros.html#ga31675a375a563ed7a1bba05c664489af">QL_MAX_REAL</a></div><div class="ttdeci">#define QL_MAX_REAL</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/qldefines_8hpp_source.html#l00176">qldefines.hpp:176</a></div></div>
 <div class="ttc" id="agroup__types_html_ga14fb8fca43a68f4168654e1f9f7e22f7"><div class="ttname"><a href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">QuantLib::Time</a></div><div class="ttdeci">Real Time</div><div class="ttdoc">continuous quantity with 1-year units</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00062">types.hpp:62</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
 <div class="ttc" id="agroup__types_html_gaaa95ab7fe66935e3f7535413fad2a7d3"><div class="ttname"><a href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">QuantLib::Volatility</a></div><div class="ttdeci">Real Volatility</div><div class="ttdoc">volatility</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="alsmbasissystem_8cpp_html_a348c18cf6f6480c5806950ba9b795c2d"><div class="ttname"><a href="../../d1/d41/lsmbasissystem_8cpp.html#a348c18cf6f6480c5806950ba9b795c2d">b_</a></div><div class="ttdeci">const VF_R b_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d41/lsmbasissystem_8cpp_source.html#l00071">lsmbasissystem.cpp:71</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a68f32e726c6ff990ad06f514ba28ce3b"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a68f32e726c6ff990ad06f514ba28ce3b">QuantLib::bachelierBlackFormula</a></div><div class="ttdeci">Real bachelierBlackFormula(Option::Type optionType, Real strike, Real forward, Real stdDev, Real discount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d18/blackformula_8cpp_source.html#l00704">blackformula.cpp:704</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a740b12c8fee5824d06a4aefe2fe691ab"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a740b12c8fee5824d06a4aefe2fe691ab">QuantLib::blackFormulaImpliedStdDev</a></div><div class="ttdeci">Real blackFormulaImpliedStdDev(Option::Type optionType, Real strike, Real forward, Real blackPrice, Real discount, Real displacement, Real guess, Real accuracy, Natural maxIterations)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d18/blackformula_8cpp_source.html#l00381">blackformula.cpp:381</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
+<div class="ttc" id="asmilesection_8hpp_html"><div class="ttname"><a href="../../d8/d4a/smilesection_8hpp.html">smilesection.hpp</a></div><div class="ttdoc">Smile section base class.</div></div>
+<div class="ttc" id="asmilesectionutils_8hpp_html"><div class="ttname"><a href="../../dd/d38/smilesectionutils_8hpp.html">smilesectionutils.hpp</a></div><div class="ttdoc">Additional utilities for smile sections.</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_zabr_full_fd_html"><div class="ttname"><a href="../../d7/dd3/struct_quant_lib_1_1_zabr_full_fd.html">QuantLib::ZabrFullFd</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5f/zabrsmilesection_8hpp_source.html#l00044">zabrsmilesection.hpp:44</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_zabr_local_volatility_html"><div class="ttname"><a href="../../df/dbb/struct_quant_lib_1_1_zabr_local_volatility.html">QuantLib::ZabrLocalVolatility</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5f/zabrsmilesection_8hpp_source.html#l00043">zabrsmilesection.hpp:43</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_zabr_short_maturity_lognormal_html"><div class="ttname"><a href="../../d4/d4e/struct_quant_lib_1_1_zabr_short_maturity_lognormal.html">QuantLib::ZabrShortMaturityLognormal</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5f/zabrsmilesection_8hpp_source.html#l00041">zabrsmilesection.hpp:41</a></div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_zabr_short_maturity_normal_html"><div class="ttname"><a href="../../db/d73/struct_quant_lib_1_1_zabr_short_maturity_normal.html">QuantLib::ZabrShortMaturityNormal</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5f/zabrsmilesection_8hpp_source.html#l00042">zabrsmilesection.hpp:42</a></div></div>
+<div class="ttc" id="azabr_8hpp_html"><div class="ttname"><a href="../../d9/d1e/zabr_8hpp.html">zabr.hpp</a></div><div class="ttdoc">ZABR functions Reference: Andreasen, Huge: ZABR - Expansions for the masses, Preliminary Version,...</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
