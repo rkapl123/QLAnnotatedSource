@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -124,12 +124,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6bded8896a46fad4d189950552432cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a168ed175a79c15ab470648076394d63a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic.html#a168ed175a79c15ab470648076394d63a">discount</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x) const =0</td></tr>
 <tr class="separator:a168ed175a79c15ab470648076394d63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92a94994ff0d9d974e4afdaf839bb40c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic.html#a92a94994ff0d9d974e4afdaf839bb40c">generateOperator</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, const <a class="el" href="../../dc/de9/class_quant_lib_1_1_transformed_grid.html">TransformedGrid</a> &amp;tg, <a class="el" href="../../db/d06/class_quant_lib_1_1_tridiagonal_operator.html">TridiagonalOperator</a> &amp;L) const</td></tr>
-<tr class="separator:a92a94994ff0d9d974e4afdaf839bb40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04f6476eb9c7af1b5816eb45e36156f1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../de/d56/qldefines_8hpp.html#a2e2c3685622dcbe6a5a2dfca6bdf7b98">QL_DEPRECATED_DISABLE_WARNING</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic.html#a04f6476eb9c7af1b5816eb45e36156f1">generateOperator</a> (<a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a> <a class="el" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, const <a class="el" href="../../dc/de9/class_quant_lib_1_1_transformed_grid.html">TransformedGrid</a> &amp;tg, <a class="el" href="../../db/d06/class_quant_lib_1_1_tridiagonal_operator.html">TridiagonalOperator</a> &amp;L) const</td></tr>
+<tr class="separator:a04f6476eb9c7af1b5816eb45e36156f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../db/da1/pde_8hpp_source.html#l00032">32</a> of file <a class="el" href="../../db/da1/pde_8hpp_source.html">pde.hpp</a>.</p>
+<div class="textblock"><dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000110">Deprecated:</a></b></dt><dd>Part of the old FD framework; copy this function in your codebase if needed. Deprecated in version 1.37. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../db/da1/pde_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../db/da1/pde_8hpp_source.html">pde.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa9b8a892fb1851fba9861d1cecd37155" name="aa9b8a892fb1851fba9861d1cecd37155"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa9b8a892fb1851fba9861d1cecd37155">&#9670;&#160;</a></span>~PdeSecondOrderParabolic()</h2>
@@ -192,17 +193,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="../../dc/de4/class_quant_lib_1_1_pde_b_s_m.html#a5e8031b6bc1abc7f8ca5b77c966d2442">PdeBSM</a>, and <a class="el" href="../../df/d5d/class_quant_lib_1_1_pde_constant_coeff.html#a27403594ec3078c4c2c7554504d6356c">PdeConstantCoeff&lt; PdeClass &gt;</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic_afaf479da3baa52185b369071b1689d89_icgraph.png" border="0" usemap="#ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_afaf479da3baa52185b369071b1689d89_icgraph" alt=""/></div>
-<map name="ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_afaf479da3baa52185b369071b1689d89_icgraph" id="ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_afaf479da3baa52185b369071b1689d89_icgraph">
-<area shape="rect" title=" " alt="" coords="176,5,245,31"/>
-<area shape="rect" href="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic.html#a92a94994ff0d9d974e4afdaf839bb40c" title=" " alt="" coords="5,5,128,31"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -241,17 +231,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="../../dc/de4/class_quant_lib_1_1_pde_b_s_m.html#a9a838a5026de50f3b47d8172ef6ac7f8">PdeBSM</a>, and <a class="el" href="../../df/d5d/class_quant_lib_1_1_pde_constant_coeff.html#a155510be4e540f60334434644e0f45f4">PdeConstantCoeff&lt; PdeClass &gt;</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a6bded8896a46fad4d189950552432cd3_icgraph.png" border="0" usemap="#ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a6bded8896a46fad4d189950552432cd3_icgraph" alt=""/></div>
-<map name="ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a6bded8896a46fad4d189950552432cd3_icgraph" id="ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a6bded8896a46fad4d189950552432cd3_icgraph">
-<area shape="rect" title=" " alt="" coords="176,5,219,31"/>
-<area shape="rect" href="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic.html#a92a94994ff0d9d974e4afdaf839bb40c" title=" " alt="" coords="5,5,128,31"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -290,22 +269,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="../../dc/de4/class_quant_lib_1_1_pde_b_s_m.html#aa9297aad7e221784aa8d4cb2e82f2d96">PdeBSM</a>, and <a class="el" href="../../df/d5d/class_quant_lib_1_1_pde_constant_coeff.html#add52a36dfe2f54d527d6721a67957ef9">PdeConstantCoeff&lt; PdeClass &gt;</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a168ed175a79c15ab470648076394d63a_icgraph.png" border="0" usemap="#ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a168ed175a79c15ab470648076394d63a_icgraph" alt=""/></div>
-<map name="ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a168ed175a79c15ab470648076394d63a_icgraph" id="ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a168ed175a79c15ab470648076394d63a_icgraph">
-<area shape="rect" title=" " alt="" coords="176,5,247,31"/>
-<area shape="rect" href="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic.html#a92a94994ff0d9d974e4afdaf839bb40c" title=" " alt="" coords="5,5,128,31"/>
-</map>
-</div>
 
 </div>
 </div>
-<a id="a92a94994ff0d9d974e4afdaf839bb40c" name="a92a94994ff0d9d974e4afdaf839bb40c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92a94994ff0d9d974e4afdaf839bb40c">&#9670;&#160;</a></span>generateOperator()</h2>
+<a id="a04f6476eb9c7af1b5816eb45e36156f1" name="a04f6476eb9c7af1b5816eb45e36156f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04f6476eb9c7af1b5816eb45e36156f1">&#9670;&#160;</a></span>generateOperator()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,7 +282,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void generateOperator </td>
+          <td class="memname">virtual <a class="el" href="../../de/d56/qldefines_8hpp.html#a2e2c3685622dcbe6a5a2dfca6bdf7b98">QL_DEPRECATED_DISABLE_WARNING</a> void generateOperator </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga14fb8fca43a68f4168654e1f9f7e22f7">Time</a>&#160;</td>
           <td class="paramname"><em>t</em>, </td>
@@ -344,25 +312,21 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/da1/pde_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../db/da1/pde_8hpp_source.html">pde.hpp</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../db/da1/pde_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../db/da1/pde_8hpp_source.html">pde.hpp</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a92a94994ff0d9d974e4afdaf839bb40c_cgraph.png" border="0" usemap="#ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a92a94994ff0d9d974e4afdaf839bb40c_cgraph" alt=""/></div>
-<map name="ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a92a94994ff0d9d974e4afdaf839bb40c_cgraph" id="ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a92a94994ff0d9d974e4afdaf839bb40c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,203,128,228"/>
-<area shape="rect" href="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic.html#afaf479da3baa52185b369071b1689d89" title=" " alt="" coords="247,5,316,31"/>
-<area shape="rect" href="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic.html#a168ed175a79c15ab470648076394d63a" title=" " alt="" coords="246,55,317,80"/>
-<area shape="rect" href="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic.html#a6bded8896a46fad4d189950552432cd3" title=" " alt="" coords="260,104,303,129"/>
-<area shape="rect" href="../../dc/de9/class_quant_lib_1_1_transformed_grid.html#a5af1ceacb1d7d313f4e39e78fc6851c7" title=" " alt="" coords="182,153,381,179"/>
-<area shape="rect" href="../../dc/de9/class_quant_lib_1_1_transformed_grid.html#acf1110b5c33ad70bba0c2db6ce414e02" title=" " alt="" coords="176,203,387,228"/>
-<area shape="rect" href="../../dc/de9/class_quant_lib_1_1_transformed_grid.html#a24fb5b1d5917b853e09501c03517c2d1" title=" " alt="" coords="178,252,385,277"/>
-<area shape="rect" href="../../dc/de9/class_quant_lib_1_1_transformed_grid.html#a200675916ca22f771d1483c7fa9aa21b" title=" " alt="" coords="193,302,370,342"/>
-<area shape="rect" href="../../db/d06/class_quant_lib_1_1_tridiagonal_operator.html#af67f1e3dddc642501ce58c719f54f177" title=" " alt="" coords="184,366,379,406"/>
-<area shape="rect" href="../../dc/de9/class_quant_lib_1_1_transformed_grid.html#acce0ab2cacc475b2434f24c65c91685a" title=" " alt="" coords="193,430,370,470"/>
-<area shape="rect" href="../../d0/d7c/class_quant_lib_1_1_array.html#acce0ab2cacc475b2434f24c65c91685a" title="dimension of the array" alt="" coords="435,437,580,463"/>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a04f6476eb9c7af1b5816eb45e36156f1_cgraph.png" border="0" usemap="#ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a04f6476eb9c7af1b5816eb45e36156f1_cgraph" alt=""/></div>
+<map name="ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a04f6476eb9c7af1b5816eb45e36156f1_cgraph" id="ad5/d33/class_quant_lib_1_1_pde_second_order_parabolic_a04f6476eb9c7af1b5816eb45e36156f1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,133,128,159"/>
+<area shape="rect" href="../../dc/de9/class_quant_lib_1_1_transformed_grid.html#a5af1ceacb1d7d313f4e39e78fc6851c7" title=" " alt="" coords="182,5,381,31"/>
+<area shape="rect" href="../../dc/de9/class_quant_lib_1_1_transformed_grid.html#acf1110b5c33ad70bba0c2db6ce414e02" title=" " alt="" coords="176,55,387,80"/>
+<area shape="rect" href="../../dc/de9/class_quant_lib_1_1_transformed_grid.html#a24fb5b1d5917b853e09501c03517c2d1" title=" " alt="" coords="178,104,385,129"/>
+<area shape="rect" href="../../dc/de9/class_quant_lib_1_1_transformed_grid.html#a200675916ca22f771d1483c7fa9aa21b" title=" " alt="" coords="193,154,370,194"/>
+<area shape="rect" href="../../db/d06/class_quant_lib_1_1_tridiagonal_operator.html#af67f1e3dddc642501ce58c719f54f177" title=" " alt="" coords="184,218,379,258"/>
+<area shape="rect" href="../../dc/de9/class_quant_lib_1_1_transformed_grid.html#acce0ab2cacc475b2434f24c65c91685a" title=" " alt="" coords="193,282,370,322"/>
 </map>
 </div>
 

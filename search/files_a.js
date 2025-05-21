@@ -14,6 +14,8 @@ var searchData=
   ['klugeextouprocess_2ehpp_11',['klugeextouprocess.hpp',['../d5/d2f/klugeextouprocess_8hpp.html',1,'']]],
   ['knuthuniformrng_2ecpp_12',['knuthuniformrng.cpp',['../d0/d48/knuthuniformrng_8cpp.html',1,'']]],
   ['knuthuniformrng_2ehpp_13',['knuthuniformrng.hpp',['../da/df7/knuthuniformrng_8hpp.html',1,'']]],
-  ['kronrodintegral_2ecpp_14',['kronrodintegral.cpp',['../de/d2b/kronrodintegral_8cpp.html',1,'']]],
-  ['kronrodintegral_2ehpp_15',['kronrodintegral.hpp',['../d4/dea/kronrodintegral_8hpp.html',1,'']]]
+  ['kofr_2ecpp_14',['kofr.cpp',['../d3/de7/kofr_8cpp.html',1,'']]],
+  ['kofr_2ehpp_15',['kofr.hpp',['../df/d09/kofr_8hpp.html',1,'']]],
+  ['kronrodintegral_2ecpp_16',['kronrodintegral.cpp',['../de/d2b/kronrodintegral_8cpp.html',1,'']]],
+  ['kronrodintegral_2ehpp_17',['kronrodintegral.hpp',['../d4/dea/kronrodintegral_8hpp.html',1,'']]]
 ];

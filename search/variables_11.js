@@ -1,8 +1,8 @@
 var searchData=
 [
   ['q_0',['q',['../d9/de0/perturbativebarrieroptionengine_8cpp.html#a0fb9f0202c3de1827f976e1050378f8f',1,'perturbativebarrieroptionengine.cpp']]],
-  ['q1_1',['Q1',['../da/dd8/class_quant_lib_1_1_margrabe_option_1_1arguments.html#a1ee402a368ee389be22c93da1113095d',1,'QuantLib::MargrabeOption::arguments']]],
-  ['q1_2',['q1',['../da/d94/class_quant_lib_1_1_lecuyer_uniform_rng.html#a9a6f8e39ea72420c2dbb304c98bb2503',1,'QuantLib::LecuyerUniformRng']]],
+  ['q1_1',['q1',['../da/d94/class_quant_lib_1_1_lecuyer_uniform_rng.html#a9a6f8e39ea72420c2dbb304c98bb2503',1,'QuantLib::LecuyerUniformRng']]],
+  ['q1_2',['Q1',['../da/dd8/class_quant_lib_1_1_margrabe_option_1_1arguments.html#a1ee402a368ee389be22c93da1113095d',1,'QuantLib::MargrabeOption::arguments']]],
   ['q1_5f_3',['Q1_',['../d2/d4e/class_quant_lib_1_1_margrabe_option.html#a8b2b2530472149462c7740380f3e29c1',1,'QuantLib::MargrabeOption']]],
   ['q2_4',['Q2',['../da/dd8/class_quant_lib_1_1_margrabe_option_1_1arguments.html#aa3e7521fcaaa405952b83f4da3133f11',1,'QuantLib::MargrabeOption::arguments']]],
   ['q2_5',['q2',['../da/d94/class_quant_lib_1_1_lecuyer_uniform_rng.html#ad41b8aefdaea08d69f8d898b40d1eea6',1,'QuantLib::LecuyerUniformRng']]],
@@ -40,7 +40,7 @@ var searchData=
   ['quote_5f_37',['quote_',['../d8/d40/class_quant_lib_1_1_constant_recovery_model.html#a6b6b1d8704216c65bc79d7c4b96dacc3',1,'QuantLib::ConstantRecoveryModel::quote_()'],['../d8/d1b/class_quant_lib_1_1_stock.html#a5d87a388f17e28809793d3f796120ffe',1,'QuantLib::Stock::quote_()'],['../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a5d87a388f17e28809793d3f796120ffe',1,'QuantLib::BootstrapHelper::quote_()'],['../d7/df6/creditdefaultswap_8cpp.html#a4ccef7cc330a145a80cf729a8076036a',1,'quote_():&#160;creditdefaultswap.cpp'],['../dd/d2b/syntheticcdo_8cpp.html#a4ccef7cc330a145a80cf729a8076036a',1,'quote_():&#160;syntheticcdo.cpp']]],
   ['quoteccyiborleg_5f_38',['quoteCcyIborLeg_',['../d1/d5d/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper_base.html#af2205917da09f904047dd63ff1ab3b77',1,'QuantLib::CrossCurrencyBasisSwapRateHelperBase']]],
   ['quoteccyidx_5f_39',['quoteCcyIdx_',['../d1/d5d/class_quant_lib_1_1_cross_currency_basis_swap_rate_helper_base.html#a7ffdf5a8785f37a11bf16e2dd8a23544',1,'QuantLib::CrossCurrencyBasisSwapRateHelperBase']]],
-  ['quotes_5f_40',['quotes_',['../de/d32/class_quant_lib_1_1_commodity_index.html#ad4e664d53d5808c33e427a321783ab23',1,'QuantLib::CommodityIndex::quotes_()'],['../d1/dc7/class_quant_lib_1_1_rendistato_basket.html#ac61a095b89dde0494f5f7316eb32efdc',1,'QuantLib::RendistatoBasket::quotes_()']]],
+  ['quotes_5f_40',['quotes_',['../d1/dc7/class_quant_lib_1_1_rendistato_basket.html#ac61a095b89dde0494f5f7316eb32efdc',1,'QuantLib::RendistatoBasket::quotes_()'],['../df/d38/class_quant_lib_1_1_simple_quote_variables.html#a78538ef501aea1bc63469b22444b6acb',1,'QuantLib::SimpleQuoteVariables::quotes_()']]],
   ['qvega_41',['qvega',['../d1/d48/class_quant_lib_1_1_quanto_option_results.html#a22b038229e304a87b5ee8e104fc6e0d2',1,'QuantLib::QuantoOptionResults']]],
   ['qvega_5f_42',['qvega_',['../d2/d0e/class_quant_lib_1_1_quanto_double_barrier_option.html#a7ba4ea799959d890a10aa2ce1f820323',1,'QuantLib::QuantoDoubleBarrierOption::qvega_()'],['../d4/d7a/class_quant_lib_1_1_quanto_barrier_option.html#a7ba4ea799959d890a10aa2ce1f820323',1,'QuantLib::QuantoBarrierOption::qvega_()'],['../db/de4/class_quant_lib_1_1_quanto_forward_vanilla_option.html#a7ba4ea799959d890a10aa2ce1f820323',1,'QuantLib::QuantoForwardVanillaOption::qvega_()'],['../d2/dbb/class_quant_lib_1_1_quanto_vanilla_option.html#a7ba4ea799959d890a10aa2ce1f820323',1,'QuantLib::QuantoVanillaOption::qvega_()']]]
 ];

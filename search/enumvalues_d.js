@@ -5,7 +5,7 @@ var searchData=
   ['nasd_2',['NASD',['../d5/d63/class_quant_lib_1_1_thirty360.html#a63f911c95b83cbc4ac0d194f99c67578a93395a1e8e05457cff06f86f3320bf71',1,'QuantLib::Thirty360']]],
   ['nearest_3',['Nearest',['../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368a02bcbe686019f8ce26f3a1b282a8f2d1',1,'QuantLib']]],
   ['nerc_4',['NERC',['../d2/d41/class_quant_lib_1_1_united_states.html#abe41cfffd960e29a5d8b07be00aeda42a6a00c6db1276885bef0cc051c47e095c',1,'QuantLib::UnitedStates']]],
-  ['newton_5',['Newton',['../de/dcc/class_quant_lib_1_1_qd_plus_american_engine.html#a8b06041d7c1fb05f379714f4312306eca8f30b8b078c89d4f5241949e7a5dd6f6',1,'QuantLib::QdPlusAmericanEngine']]],
+  ['newton_5',['Newton',['../dd/d50/class_quant_lib_1_1detail_1_1_sum_exponentials_root_solver.html#acf7192c608527efb8f8dedf0a3f2e706a8f30b8b078c89d4f5241949e7a5dd6f6',1,'QuantLib::detail::SumExponentialsRootSolver::Newton()'],['../de/dcc/class_quant_lib_1_1_qd_plus_american_engine.html#a8b06041d7c1fb05f379714f4312306eca8f30b8b078c89d4f5241949e7a5dd6f6',1,'QuantLib::QdPlusAmericanEngine::Newton()']]],
   ['nobias_6',['NoBias',['../d3/dfb/class_quant_lib_1_1_isda_cds_engine.html#ab5bbf9c9f5fb15eb85f2345d743e2567abaab00fd8bbb62e22147e90ff10bc275',1,'QuantLib::IsdaCdsEngine']]],
   ['noconversion_7',['NoConversion',['../d1/d7c/class_quant_lib_1_1_quantity.html#ac32291f3a839fe01ad0708ab8c53d107a72ed6bc56b64c8b02948e4208525cca7',1,'QuantLib::Quantity::NoConversion()'],['../d2/d26/class_quant_lib_1_1_money.html#ac32291f3a839fe01ad0708ab8c53d107a72ed6bc56b64c8b02948e4208525cca7',1,'QuantLib::Money::NoConversion()']]],
   ['nofrequency_8',['NoFrequency',['../d1/d37/group__datetime.html#gga6d41db8ba0ea90d22df35889df452adaad7764a2ea2518891555bd395faffb4da',1,'QuantLib']]],

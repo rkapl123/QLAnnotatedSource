@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -85,7 +85,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="../../db/d30/class_quant_lib_1_1_index-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Index Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
@@ -102,167 +101,165 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d5/dbc/class_quant_lib_1_1_index__inherit__graph.png" border="0" usemap="#a_index_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_index_inherit__map" id="a_index_inherit__map">
-<area shape="rect" title="purely virtual base class for indexes" alt="" coords="2533,240,2727,471"/>
-<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html" title="Base class for equity indexes." alt="" coords="2355,585,2534,1021"/>
-<area shape="rect" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html" title="Base class for inflation&#45;rate indexes,." alt="" coords="2559,585,2701,1021"/>
-<area shape="rect" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html" title="base class for interest rate indexes" alt="" coords="13250,519,13399,1087"/>
-<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="2557,5,2703,192"/>
-<area shape="rect" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html" title="Base class for year&#45;on&#45;year inflation indices." alt="" coords="1035,1223,1222,1527"/>
-<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html" title="Base class for zero inflation indices." alt="" coords="2535,1289,2725,1461"/>
-<area shape="rect" href="../../d0/de9/class_quant_lib_1_1_y_y_a_u_c_p_i.html" title="Quoted year&#45;on&#45;year AU CPI (i.e. not a ratio)" alt="" coords="5,1729,111,1783"/>
-<area shape="rect" href="../../de/d3f/class_quant_lib_1_1_y_y_a_u_c_p_ir.html" title="Year&#45;on&#45;year AUCPI (i.e. a ratio)" alt="" coords="135,1729,245,1783"/>
-<area shape="rect" href="../../d9/d7e/class_quant_lib_1_1_y_y_e_u_h_i_c_p.html" title="Quoted year&#45;on&#45;year EU HICP (i.e. not a ratio of EU HICP)" alt="" coords="269,1729,383,1783"/>
-<area shape="rect" href="../../d4/dbd/class_quant_lib_1_1_y_y_e_u_h_i_c_p_x_t.html" title="Quoted year&#45;on&#45;year EU HICPXT." alt="" coords="407,1729,535,1783"/>
-<area shape="rect" href="../../d0/d7c/class_quant_lib_1_1_y_y_e_u_h_i_c_pr.html" title="Year&#45;on&#45;year EU HICP (i.e. a ratio of EU HICP)" alt="" coords="560,1729,679,1783"/>
-<area shape="rect" href="../../d7/de7/class_quant_lib_1_1_y_y_f_r_h_i_c_p.html" title="Quoted year&#45;on&#45;year FR HICP (i.e. not a ratio)" alt="" coords="703,1729,816,1783"/>
-<area shape="rect" href="../../dc/d38/class_quant_lib_1_1_y_y_f_r_h_i_c_pr.html" title="Year&#45;on&#45;year FR HICP (i.e. a ratio)" alt="" coords="841,1729,958,1783"/>
-<area shape="rect" href="../../d4/d47/class_quant_lib_1_1_y_y_generic_c_p_i.html" title="Quoted year&#45;on&#45;year Generic CPI (i.e. not a ratio)" alt="" coords="983,1729,1115,1783"/>
-<area shape="rect" href="../../d7/d8e/class_quant_lib_1_1_y_y_generic_c_p_ir.html" title="Year&#45;on&#45;year GenericCPI (i.e. a ratio)" alt="" coords="1139,1729,1275,1783"/>
-<area shape="rect" href="../../d2/df5/class_quant_lib_1_1_y_y_u_k_r_p_i.html" title="Quoted year&#45;on&#45;year UK RPI (i.e. not a ratio of UK RPI)" alt="" coords="1300,1729,1405,1783"/>
-<area shape="rect" href="../../dc/d48/class_quant_lib_1_1_y_y_u_k_r_p_ir.html" title="Year&#45;on&#45;year UK RPI (i.e. a ratio of UK RPI)" alt="" coords="1430,1729,1539,1783"/>
-<area shape="rect" href="../../d2/d9c/class_quant_lib_1_1_y_y_u_s_c_p_i.html" title="Quoted year&#45;on&#45;year US CPI (i.e. not a ratio of US CPI)" alt="" coords="1564,1729,1669,1783"/>
-<area shape="rect" href="../../dc/dfa/class_quant_lib_1_1_y_y_u_s_c_p_ir.html" title="Year&#45;on&#45;year US CPI (i.e. a ratio of US CPI)" alt="" coords="1694,1729,1803,1783"/>
-<area shape="rect" href="../../dd/ddf/class_quant_lib_1_1_y_y_z_a_c_p_i.html" title="Quoted year&#45;on&#45;year South African CPI (i.e. not a ratio of ZA CPI)" alt="" coords="1828,1729,1931,1783"/>
-<area shape="rect" href="../../d3/d21/class_quant_lib_1_1_y_y_z_a_c_p_ir.html" title="Year&#45;on&#45;year South African CPI (i.e. a ratio of ZA CPI)" alt="" coords="1955,1729,2062,1783"/>
-<area shape="rect" href="../../dd/dd2/class_quant_lib_1_1_a_u_c_p_i.html" title="AU CPI index (either quarterly or annual)" alt="" coords="2087,1729,2173,1783"/>
-<area shape="rect" href="../../d0/dca/class_quant_lib_1_1_e_u_h_i_c_p.html" title="EU HICP index." alt="" coords="2198,1729,2294,1783"/>
-<area shape="rect" href="../../d0/dc0/class_quant_lib_1_1_e_u_h_i_c_p_x_t.html" title="EU HICPXT index." alt="" coords="2319,1729,2429,1783"/>
-<area shape="rect" href="../../d0/d29/class_quant_lib_1_1_f_r_h_i_c_p.html" title="FR HICP index." alt="" coords="2453,1729,2548,1783"/>
-<area shape="rect" href="../../dd/def/class_quant_lib_1_1_generic_c_p_i.html" title="Generic CPI index." alt="" coords="2573,1729,2687,1783"/>
-<area shape="rect" href="../../df/d05/class_quant_lib_1_1_u_k_h_i_c_p.html" title="UK HICP index." alt="" coords="2711,1729,2807,1783"/>
-<area shape="rect" href="../../dd/d6d/class_quant_lib_1_1_u_k_r_p_i.html" title="UK Retail Price Inflation Index." alt="" coords="2832,1729,2919,1783"/>
-<area shape="rect" href="../../d6/da4/class_quant_lib_1_1_u_s_c_p_i.html" title="US CPI index." alt="" coords="2943,1729,3029,1783"/>
-<area shape="rect" href="../../d2/d52/class_quant_lib_1_1_z_a_c_p_i.html" title="South African Consumer Price Inflation Index." alt="" coords="3054,1729,3139,1783"/>
-<area shape="rect" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html" title="Bond Market Association index." alt="" coords="13027,1289,13209,1461"/>
-<area shape="rect" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html" title="base class for Inter&#45;Bank&#45;Offered&#45;Rate indexes (e.g. Libor, etc.)" alt="" coords="13233,1230,13416,1519"/>
-<area shape="rect" href="../../d8/d92/class_quant_lib_1_1_swap_index.html" title="base class for swap&#45;rate indexes" alt="" coords="15509,1135,15700,1615"/>
-<area shape="rect" href="../../d3/dbf/class_quant_lib_1_1_swap_spread_index.html" title="class for swap&#45;rate spread indexes" alt="" coords="15725,1230,15879,1519"/>
-<area shape="rect" href="../../d5/d9e/class_quant_lib_1_1_bbsw.html" title="Bbsw index" alt="" coords="3163,1729,3243,1783"/>
-<area shape="rect" href="../../df/da4/class_quant_lib_1_1_bibor.html" title="Bibor index" alt="" coords="3889,1729,3968,1783"/>
-<area shape="rect" href="../../d9/df7/class_quant_lib_1_1_bkbm.html" title="Bkbm index" alt="" coords="4686,1729,4769,1783"/>
-<area shape="rect" href="../../d2/d11/class_quant_lib_1_1_cdor.html" title="CDOR rate" alt="" coords="5445,1729,5519,1783"/>
-<area shape="rect" href="../../da/d8b/class_quant_lib_1_1_daily_tenor_e_u_r_libor.html" title="base class for the one day deposit ICE EUR LIBOR indexes" alt="" coords="5544,1729,5708,1783"/>
-<area shape="rect" href="../../d2/d03/class_quant_lib_1_1_daily_tenor_libor.html" title="base class for all O/N&#45;S/N BBA LIBOR indexes but the EUR ones" alt="" coords="5732,1729,5869,1783"/>
-<area shape="rect" href="../../d5/df8/class_quant_lib_1_1_e_u_r_libor.html" title="base class for all ICE EUR LIBOR indexes but the O/N" alt="" coords="7129,1707,7243,1805"/>
-<area shape="rect" href="../../d1/d83/class_quant_lib_1_1_euribor.html" title="Euribor index" alt="" coords="9159,1729,9248,1783"/>
-<area shape="rect" href="../../d1/d00/class_quant_lib_1_1_euribor365.html" title="Actual/365 Euribor index." alt="" coords="11355,1729,11465,1783"/>
-<area shape="rect" href="../../d8/da5/class_quant_lib_1_1_jibar.html" title="JIBAR rate" alt="" coords="12974,1729,13049,1783"/>
-<area shape="rect" href="../../d4/d19/class_quant_lib_1_1_libor.html" title="base class for all ICE LIBOR indexes but the EUR, O/N, and S/N ones" alt="" coords="13073,1663,13248,1849"/>
-<area shape="rect" href="../../d9/d0e/class_quant_lib_1_1_mosprime.html" title="MOSPRIME rate" alt="" coords="13272,1729,13377,1783"/>
-<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html" title=" " alt="" coords="13402,1721,13535,1791"/>
-<area shape="rect" href="../../d9/d3e/class_quant_lib_1_1_pribor.html" title="PRIBOR rate" alt="" coords="13559,1729,13642,1783"/>
-<area shape="rect" href="../../d8/dc4/class_quant_lib_1_1_proxy_ibor.html" title="IborIndex calculated as proxy of some other IborIndex." alt="" coords="13667,1699,13785,1813"/>
-<area shape="rect" href="../../d9/d5d/class_quant_lib_1_1_robor.html" title="ROBOR rate" alt="" coords="13810,1729,13893,1783"/>
-<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_shibor.html" title=" " alt="" coords="13917,1721,14002,1791"/>
-<area shape="rect" href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html" title="THB THBFIX rate" alt="" coords="14026,1729,14117,1783"/>
-<area shape="rect" href="../../da/df0/class_quant_lib_1_1_t_r_libor.html" title="TRY LIBOR rate" alt="" coords="14141,1729,14233,1783"/>
-<area shape="rect" href="../../db/da0/class_quant_lib_1_1_tibor.html" title="JPY TIBOR index" alt="" coords="14257,1729,14333,1783"/>
-<area shape="rect" href="../../d9/dd7/class_quant_lib_1_1_wibor.html" title="WIBOR rate" alt="" coords="14358,1729,14441,1783"/>
-<area shape="rect" href="../../d3/d0b/class_quant_lib_1_1_zibor.html" title="CHF ZIBOR rate" alt="" coords="14465,1729,14541,1783"/>
-<area shape="rect" href="../../d8/d46/class_quant_lib_1_1_bbsw1_m.html" title="1&#45;month Bbsw index" alt="" coords="2725,1897,2823,1952"/>
-<area shape="rect" href="../../d4/d7b/class_quant_lib_1_1_bbsw2_m.html" title="2&#45;months Bbsw index" alt="" coords="2847,1897,2946,1952"/>
-<area shape="rect" href="../../d4/db4/class_quant_lib_1_1_bbsw3_m.html" title="3&#45;months Bbsw index" alt="" coords="2970,1897,3069,1952"/>
-<area shape="rect" href="../../d0/d87/class_quant_lib_1_1_bbsw4_m.html" title="4&#45;months Bbsw index" alt="" coords="3093,1897,3191,1952"/>
-<area shape="rect" href="../../d2/d4b/class_quant_lib_1_1_bbsw5_m.html" title="5&#45;months Bbsw index" alt="" coords="3215,1897,3314,1952"/>
-<area shape="rect" href="../../d1/d1b/class_quant_lib_1_1_bbsw6_m.html" title="6&#45;months Bbsw index" alt="" coords="3338,1897,3437,1952"/>
-<area shape="rect" href="../../d8/da6/class_quant_lib_1_1_bibor1_m.html" title="1&#45;month Bibor index" alt="" coords="3461,1897,3557,1952"/>
-<area shape="rect" href="../../d9/d07/class_quant_lib_1_1_bibor1_y.html" title="1&#45;year Bibor index" alt="" coords="3581,1897,3676,1952"/>
-<area shape="rect" href="../../d7/da2/class_quant_lib_1_1_bibor2_m.html" title="2&#45;months Bibor index" alt="" coords="3701,1897,3797,1952"/>
-<area shape="rect" href="../../de/d21/class_quant_lib_1_1_bibor3_m.html" title="3&#45;months Bibor index" alt="" coords="3821,1897,3917,1952"/>
-<area shape="rect" href="../../d6/d81/class_quant_lib_1_1_bibor6_m.html" title="6&#45;months Bibor index" alt="" coords="3941,1897,4037,1952"/>
-<area shape="rect" href="../../da/d03/class_quant_lib_1_1_bibor9_m.html" title=" " alt="" coords="4061,1897,4157,1952"/>
-<area shape="rect" href="../../db/d96/class_quant_lib_1_1_bibor_s_w.html" title="1&#45;week Bibor index" alt="" coords="4181,1897,4281,1952"/>
-<area shape="rect" href="../../d1/dd4/class_quant_lib_1_1_bkbm1_m.html" title="1&#45;month Bkbm index" alt="" coords="4305,1897,4405,1952"/>
-<area shape="rect" href="../../d5/d2c/class_quant_lib_1_1_bkbm2_m.html" title="2&#45;months Bkbm index" alt="" coords="4429,1897,4529,1952"/>
-<area shape="rect" href="../../d0/dbf/class_quant_lib_1_1_bkbm3_m.html" title="3&#45;months Bkbm index" alt="" coords="4553,1897,4653,1952"/>
-<area shape="rect" href="../../de/da7/class_quant_lib_1_1_bkbm4_m.html" title="4&#45;months Bkbm index" alt="" coords="4677,1897,4777,1952"/>
-<area shape="rect" href="../../dc/d54/class_quant_lib_1_1_bkbm5_m.html" title="5&#45;months Bkbm index" alt="" coords="4801,1897,4901,1952"/>
-<area shape="rect" href="../../d0/d10/class_quant_lib_1_1_bkbm6_m.html" title="6&#45;months Bkbm index" alt="" coords="4925,1897,5025,1952"/>
-<area shape="rect" href="../../d1/da7/class_quant_lib_1_1_e_u_r_libor_o_n.html" title="Overnight EUR Libor index." alt="" coords="5050,1897,5173,1952"/>
-<area shape="rect" href="../../dc/d68/class_quant_lib_1_1_c_a_d_libor_o_n.html" title="Overnight CAD Libor index." alt="" coords="5197,1897,5319,1952"/>
-<area shape="rect" href="../../d6/d02/class_quant_lib_1_1_daily_tenor_c_h_f_libor.html" title="base class for the one day deposit BBA CHF LIBOR indexes" alt="" coords="5343,1897,5506,1952"/>
-<area shape="rect" href="../../d8/d2c/class_quant_lib_1_1_daily_tenor_g_b_p_libor.html" title="Base class for the one day deposit ICE GBP LIBOR indexes." alt="" coords="5530,1897,5695,1952"/>
-<area shape="rect" href="../../dc/d19/class_quant_lib_1_1_daily_tenor_j_p_y_libor.html" title="base class for the one day deposit ICE JPY LIBOR indexes" alt="" coords="5720,1897,5881,1952"/>
-<area shape="rect" href="../../de/de2/class_quant_lib_1_1_daily_tenor_u_s_d_libor.html" title="base class for the one day deposit ICE USD LIBOR indexes" alt="" coords="5905,1897,6069,1952"/>
-<area shape="rect" href="../../d9/df5/class_quant_lib_1_1_g_b_p_libor_o_n.html" title="Overnight GBP Libor index." alt="" coords="5551,2000,5674,2055"/>
-<area shape="rect" href="../../df/d67/class_quant_lib_1_1_u_s_d_libor_o_n.html" title="Overnight USD Libor index." alt="" coords="5926,2000,6049,2055"/>
-<area shape="rect" href="../../d5/dd0/class_quant_lib_1_1_e_u_r_libor10_m.html" title=" " alt="" coords="6094,1897,6222,1952"/>
-<area shape="rect" href="../../d8/d31/class_quant_lib_1_1_e_u_r_libor11_m.html" title=" " alt="" coords="6246,1897,6374,1952"/>
-<area shape="rect" href="../../d2/dcb/class_quant_lib_1_1_e_u_r_libor1_m.html" title="1&#45;month EUR Libor index" alt="" coords="6399,1897,6520,1952"/>
-<area shape="rect" href="../../db/dec/class_quant_lib_1_1_e_u_r_libor1_y.html" title="1&#45;year EUR Libor index" alt="" coords="6544,1897,6663,1952"/>
-<area shape="rect" href="../../d7/d14/class_quant_lib_1_1_e_u_r_libor2_m.html" title=" " alt="" coords="6687,1897,6808,1952"/>
-<area shape="rect" href="../../d9/d93/class_quant_lib_1_1_e_u_r_libor2_w.html" title=" " alt="" coords="6833,1897,6955,1952"/>
-<area shape="rect" href="../../de/db8/class_quant_lib_1_1_e_u_r_libor3_m.html" title="3&#45;months EUR Libor index" alt="" coords="6980,1897,7101,1952"/>
-<area shape="rect" href="../../dc/d69/class_quant_lib_1_1_e_u_r_libor4_m.html" title=" " alt="" coords="7125,1897,7247,1952"/>
-<area shape="rect" href="../../d5/d8d/class_quant_lib_1_1_e_u_r_libor5_m.html" title=" " alt="" coords="7271,1897,7392,1952"/>
-<area shape="rect" href="../../d4/d7e/class_quant_lib_1_1_e_u_r_libor6_m.html" title="6&#45;months EUR Libor index" alt="" coords="7416,1897,7537,1952"/>
-<area shape="rect" href="../../d1/d5e/class_quant_lib_1_1_e_u_r_libor7_m.html" title=" " alt="" coords="7561,1897,7683,1952"/>
-<area shape="rect" href="../../dd/df6/class_quant_lib_1_1_e_u_r_libor8_m.html" title=" " alt="" coords="7707,1897,7828,1952"/>
-<area shape="rect" href="../../d2/def/class_quant_lib_1_1_e_u_r_libor9_m.html" title=" " alt="" coords="7852,1897,7973,1952"/>
-<area shape="rect" href="../../d9/dc3/class_quant_lib_1_1_e_u_r_libor_s_w.html" title=" " alt="" coords="7998,1897,8123,1952"/>
-<area shape="rect" href="../../d1/dcf/class_quant_lib_1_1_euribor10_m.html" title=" " alt="" coords="8147,1897,8262,1952"/>
-<area shape="rect" href="../../d4/dd2/class_quant_lib_1_1_euribor11_m.html" title=" " alt="" coords="8286,1897,8401,1952"/>
-<area shape="rect" href="../../d5/dc3/class_quant_lib_1_1_euribor1_m.html" title="1&#45;month Euribor index" alt="" coords="8425,1897,8531,1952"/>
-<area shape="rect" href="../../d9/dd9/class_quant_lib_1_1_euribor1_w.html" title="1&#45;week Euribor index" alt="" coords="8555,1897,8665,1952"/>
-<area shape="rect" href="../../d2/d03/class_quant_lib_1_1_euribor1_y.html" title="1&#45;year Euribor index" alt="" coords="8689,1897,8795,1952"/>
-<area shape="rect" href="../../d1/d24/class_quant_lib_1_1_euribor2_m.html" title=" " alt="" coords="8819,1897,8926,1952"/>
-<area shape="rect" href="../../d8/d91/class_quant_lib_1_1_euribor2_w.html" title=" " alt="" coords="8950,1897,9059,1952"/>
-<area shape="rect" href="../../d5/d08/class_quant_lib_1_1_euribor3_m.html" title="3&#45;months Euribor index" alt="" coords="9083,1897,9190,1952"/>
-<area shape="rect" href="../../de/dd2/class_quant_lib_1_1_euribor3_w.html" title=" " alt="" coords="9214,1897,9323,1952"/>
-<area shape="rect" href="../../dd/d01/class_quant_lib_1_1_euribor4_m.html" title=" " alt="" coords="9347,1897,9454,1952"/>
-<area shape="rect" href="../../db/d0a/class_quant_lib_1_1_euribor5_m.html" title=" " alt="" coords="9478,1897,9585,1952"/>
-<area shape="rect" href="../../d6/d37/class_quant_lib_1_1_euribor6_m.html" title="6&#45;months Euribor index" alt="" coords="9609,1897,9715,1952"/>
-<area shape="rect" href="../../d5/d27/class_quant_lib_1_1_euribor7_m.html" title=" " alt="" coords="9739,1897,9846,1952"/>
-<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_euribor8_m.html" title=" " alt="" coords="9870,1897,9977,1952"/>
-<area shape="rect" href="../../d2/d86/class_quant_lib_1_1_euribor9_m.html" title=" " alt="" coords="10001,1897,10107,1952"/>
-<area shape="rect" href="../../d4/d27/class_quant_lib_1_1_euribor365__10_m.html" title=" " alt="" coords="10132,1897,10275,1952"/>
-<area shape="rect" href="../../de/da5/class_quant_lib_1_1_euribor365__11_m.html" title=" " alt="" coords="10299,1897,10441,1952"/>
-<area shape="rect" href="../../dc/d34/class_quant_lib_1_1_euribor365__1_m.html" title=" " alt="" coords="10465,1897,10600,1952"/>
-<area shape="rect" href="../../d8/d7a/class_quant_lib_1_1_euribor365__1_y.html" title=" " alt="" coords="10625,1897,10758,1952"/>
-<area shape="rect" href="../../d9/d3d/class_quant_lib_1_1_euribor365__2_m.html" title=" " alt="" coords="10783,1897,10917,1952"/>
-<area shape="rect" href="../../d7/d6e/class_quant_lib_1_1_euribor365__2_w.html" title=" " alt="" coords="10941,1897,11079,1952"/>
-<area shape="rect" href="../../d9/d24/class_quant_lib_1_1_euribor365__3_m.html" title=" " alt="" coords="11103,1897,11237,1952"/>
-<area shape="rect" href="../../d6/df3/class_quant_lib_1_1_euribor365__3_w.html" title=" " alt="" coords="11261,1897,11399,1952"/>
-<area shape="rect" href="../../d9/da7/class_quant_lib_1_1_euribor365__4_m.html" title=" " alt="" coords="11423,1897,11557,1952"/>
-<area shape="rect" href="../../d8/da5/class_quant_lib_1_1_euribor365__5_m.html" title=" " alt="" coords="11581,1897,11716,1952"/>
-<area shape="rect" href="../../df/d43/class_quant_lib_1_1_euribor365__6_m.html" title=" " alt="" coords="11740,1897,11875,1952"/>
-<area shape="rect" href="../../df/dc2/class_quant_lib_1_1_euribor365__7_m.html" title=" " alt="" coords="11899,1897,12033,1952"/>
-<area shape="rect" href="../../d0/de2/class_quant_lib_1_1_euribor365__8_m.html" title=" " alt="" coords="12057,1897,12192,1952"/>
-<area shape="rect" href="../../d3/d6d/class_quant_lib_1_1_euribor365__9_m.html" title=" " alt="" coords="12216,1897,12351,1952"/>
-<area shape="rect" href="../../dc/dbd/class_quant_lib_1_1_euribor365___s_w.html" title=" " alt="" coords="12375,1897,12514,1952"/>
-<area shape="rect" href="../../d9/d11/class_quant_lib_1_1_a_u_d_libor.html" title="AUD LIBOR rate" alt="" coords="12539,1897,12641,1952"/>
-<area shape="rect" href="../../df/d61/class_quant_lib_1_1_c_a_d_libor.html" title="CAD LIBOR rate" alt="" coords="12665,1897,12768,1952"/>
-<area shape="rect" href="../../d5/dd1/class_quant_lib_1_1_c_h_f_libor.html" title="CHF LIBOR rate" alt="" coords="12792,1897,12895,1952"/>
-<area shape="rect" href="../../d0/dbd/class_quant_lib_1_1_d_k_k_libor.html" title="DKK LIBOR rate" alt="" coords="12919,1897,13021,1952"/>
-<area shape="rect" href="../../d8/d5e/class_quant_lib_1_1_g_b_p_libor.html" title="GBP LIBOR rate" alt="" coords="13046,1897,13150,1952"/>
-<area shape="rect" href="../../db/dd3/class_quant_lib_1_1_j_p_y_libor.html" title="JPY LIBOR rate" alt="" coords="13175,1897,13275,1952"/>
-<area shape="rect" href="../../d9/d74/class_quant_lib_1_1_n_z_d_libor.html" title="NZD LIBOR rate" alt="" coords="13299,1897,13401,1952"/>
-<area shape="rect" href="../../d6/d5c/class_quant_lib_1_1_s_e_k_libor.html" title="SEK LIBOR rate" alt="" coords="13425,1897,13528,1952"/>
-<area shape="rect" href="../../de/df9/class_quant_lib_1_1_u_s_d_libor.html" title="USD LIBOR rate" alt="" coords="13552,1897,13655,1952"/>
-<area shape="rect" href="../../d0/dd3/class_quant_lib_1_1_aonia.html" title="Aonia index" alt="" coords="13679,1897,13760,1952"/>
-<area shape="rect" href="../../da/d10/class_quant_lib_1_1_corra.html" title=" " alt="" coords="13784,1897,13863,1952"/>
-<area shape="rect" href="../../d4/d20/class_quant_lib_1_1_destr.html" title="Destr (Denmark Short&#45;Term Rate) index." alt="" coords="13887,1897,13965,1952"/>
-<area shape="rect" href="../../df/dbd/class_quant_lib_1_1_eonia.html" title="Eonia (Euro Overnight Index Average) rate fixed by the ECB." alt="" coords="13989,1897,14071,1952"/>
-<area shape="rect" href="../../db/da3/class_quant_lib_1_1_estr.html" title="ESTR (Euro Short&#45;Term Rate) rate fixed by the ECB." alt="" coords="14095,1897,14167,1952"/>
-<area shape="rect" href="../../d1/ddd/class_quant_lib_1_1_fed_funds.html" title="Fed Funds rate fixed by the FED." alt="" coords="14191,1897,14298,1952"/>
-<area shape="rect" href="../../d4/d4e/class_quant_lib_1_1_nzocr.html" title="Nzocr index" alt="" coords="14322,1897,14405,1952"/>
-<area shape="rect" href="../../de/de2/class_quant_lib_1_1_sofr.html" title="Sofr (Secured Overnight Financing Rate) index." alt="" coords="14429,1897,14500,1952"/>
-<area shape="rect" href="../../d9/d3e/class_quant_lib_1_1_sonia.html" title="Sonia (Sterling Overnight Index Average) rate." alt="" coords="14524,1897,14605,1952"/>
-<area shape="rect" href="../../d2/d1e/class_quant_lib_1_1_swestr.html" title="Swestr (Swedish krona Short Term Rate) index." alt="" coords="14630,1897,14718,1952"/>
-<area shape="rect" href="../../d8/d1a/class_quant_lib_1_1_tona.html" title="TONA index" alt="" coords="14743,1897,14819,1952"/>
-<area shape="rect" href="../../d4/d08/class_quant_lib_1_1_chf_libor_swap_isda_fix.html" title="ChfLiborSwapIsdaFix index base class" alt="" coords="14565,1721,14735,1791"/>
-<area shape="rect" href="../../d9/d31/class_quant_lib_1_1_eur_libor_swap_ifr_fix.html" title="EurLiborSwapIfrFix index base class" alt="" coords="14759,1721,14915,1791"/>
-<area shape="rect" href="../../d9/dbe/class_quant_lib_1_1_eur_libor_swap_isda_fix_a.html" title="EurLiborSwapIsdaFixA index base class" alt="" coords="14939,1721,15118,1791"/>
-<area shape="rect" href="../../d6/d2d/class_quant_lib_1_1_eur_libor_swap_isda_fix_b.html" title="EurLiborSwapIsdaFixB index base class" alt="" coords="15142,1721,15321,1791"/>
-<area shape="rect" href="../../d8/d7c/class_quant_lib_1_1_euribor_swap_ifr_fix.html" title="EuriborSwapIfrFix index base class" alt="" coords="15345,1721,15494,1791"/>
-<area shape="rect" href="../../d9/dd7/class_quant_lib_1_1_euribor_swap_isda_fix_a.html" title="EuriborSwapIsdaFixA index base class" alt="" coords="15519,1721,15691,1791"/>
-<area shape="rect" href="../../dc/d9b/class_quant_lib_1_1_euribor_swap_isda_fix_b.html" title="EuriborSwapIsdaFixB index base class" alt="" coords="15715,1721,15887,1791"/>
-<area shape="rect" href="../../d3/d64/class_quant_lib_1_1_gbp_libor_swap_isda_fix.html" title="GbpLiborSwapIsdaFix index base class" alt="" coords="15911,1721,16085,1791"/>
-<area shape="rect" href="../../d8/d96/class_quant_lib_1_1_jpy_libor_swap_isda_fix_am.html" title="JpyLiborSwapIsdaFixAm index base class" alt="" coords="16109,1721,16300,1791"/>
-<area shape="rect" href="../../d7/dec/class_quant_lib_1_1_jpy_libor_swap_isda_fix_pm.html" title="JpyLiborSwapIsdaFixPm index base class" alt="" coords="16324,1721,16515,1791"/>
-<area shape="rect" href="../../d2/d7c/class_quant_lib_1_1_overnight_indexed_swap_index.html" title="base class for overnight indexed swap indexes" alt="" coords="16539,1677,16750,1835"/>
-<area shape="rect" href="../../d1/df2/class_quant_lib_1_1_usd_libor_swap_isda_fix_am.html" title="UsdLiborSwapIsdaFixAm index base class" alt="" coords="16775,1721,16968,1791"/>
-<area shape="rect" href="../../d3/dec/class_quant_lib_1_1_usd_libor_swap_isda_fix_pm.html" title="UsdLiborSwapIsdaFixPm index base class" alt="" coords="16992,1721,17185,1791"/>
+<area shape="rect" title="purely virtual base class for indexes" alt="" coords="1457,255,1653,529"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html" title="base class for commodity indexes" alt="" coords="1155,577,1350,1189"/>
+<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html" title="Base class for equity indexes." alt="" coords="1374,665,1553,1101"/>
+<area shape="rect" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html" title="Base class for inflation&#45;rate indexes,." alt="" coords="1577,665,1720,1101"/>
+<area shape="rect" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html" title="base class for interest rate indexes" alt="" coords="12186,621,12335,1145"/>
+<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="1387,13,1534,199"/>
+<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="1559,5,1741,207"/>
+<area shape="rect" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html" title="Base class for year&#45;on&#45;year inflation indices." alt="" coords="537,1281,723,1673"/>
+<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html" title="Base class for zero inflation indices." alt="" coords="1553,1377,1744,1578"/>
+<area shape="rect" href="../../d0/de9/class_quant_lib_1_1_y_y_a_u_c_p_i.html" title="Quoted year&#45;on&#45;year AU CPI (i.e. not a ratio)" alt="" coords="5,1846,111,1915"/>
+<area shape="rect" href="../../d9/d7e/class_quant_lib_1_1_y_y_e_u_h_i_c_p.html" title="Quoted year&#45;on&#45;year EU HICP (i.e. not a ratio of EU HICP)" alt="" coords="135,1846,250,1915"/>
+<area shape="rect" href="../../d4/dbd/class_quant_lib_1_1_y_y_e_u_h_i_c_p_x_t.html" title="Quoted year&#45;on&#45;year EU HICPXT." alt="" coords="274,1846,402,1915"/>
+<area shape="rect" href="../../d7/de7/class_quant_lib_1_1_y_y_f_r_h_i_c_p.html" title="Quoted year&#45;on&#45;year FR HICP (i.e. not a ratio)" alt="" coords="427,1846,540,1915"/>
+<area shape="rect" href="../../d4/d47/class_quant_lib_1_1_y_y_generic_c_p_i.html" title="Quoted year&#45;on&#45;year Generic CPI (i.e. not a ratio)" alt="" coords="564,1846,696,1915"/>
+<area shape="rect" href="../../d2/df5/class_quant_lib_1_1_y_y_u_k_r_p_i.html" title="Quoted year&#45;on&#45;year UK RPI (i.e. not a ratio of UK RPI)" alt="" coords="720,1846,825,1915"/>
+<area shape="rect" href="../../d2/d9c/class_quant_lib_1_1_y_y_u_s_c_p_i.html" title="Quoted year&#45;on&#45;year US CPI (i.e. not a ratio of US CPI)" alt="" coords="849,1846,955,1915"/>
+<area shape="rect" href="../../dd/ddf/class_quant_lib_1_1_y_y_z_a_c_p_i.html" title="Quoted year&#45;on&#45;year South African CPI (i.e. not a ratio of ZA CPI)" alt="" coords="979,1846,1081,1915"/>
+<area shape="rect" href="../../dd/dd2/class_quant_lib_1_1_a_u_c_p_i.html" title="AU CPI index (either quarterly or annual)" alt="" coords="1105,1853,1192,1908"/>
+<area shape="rect" href="../../d0/dca/class_quant_lib_1_1_e_u_h_i_c_p.html" title="EU HICP index." alt="" coords="1217,1853,1313,1908"/>
+<area shape="rect" href="../../d0/dc0/class_quant_lib_1_1_e_u_h_i_c_p_x_t.html" title="EU HICPXT index." alt="" coords="1337,1853,1448,1908"/>
+<area shape="rect" href="../../d0/d29/class_quant_lib_1_1_f_r_h_i_c_p.html" title="FR HICP index." alt="" coords="1472,1853,1567,1908"/>
+<area shape="rect" href="../../dd/def/class_quant_lib_1_1_generic_c_p_i.html" title="Generic CPI index." alt="" coords="1591,1853,1706,1908"/>
+<area shape="rect" href="../../df/d05/class_quant_lib_1_1_u_k_h_i_c_p.html" title="UK HICP index." alt="" coords="1730,1853,1826,1908"/>
+<area shape="rect" href="../../dd/d6d/class_quant_lib_1_1_u_k_r_p_i.html" title="UK Retail Price Inflation Index." alt="" coords="1851,1853,1937,1908"/>
+<area shape="rect" href="../../d6/da4/class_quant_lib_1_1_u_s_c_p_i.html" title="US CPI index." alt="" coords="1961,1853,2048,1908"/>
+<area shape="rect" href="../../d2/d52/class_quant_lib_1_1_z_a_c_p_i.html" title="South African Consumer Price Inflation Index." alt="" coords="2073,1853,2158,1908"/>
+<area shape="rect" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html" title="Bond Market Association index." alt="" coords="11963,1391,12145,1563"/>
+<area shape="rect" href="../../d8/d47/class_quant_lib_1_1_ibor_index.html" title="base class for Inter&#45;Bank&#45;Offered&#45;Rate indexes (e.g. Libor, etc.)" alt="" coords="12169,1333,12352,1622"/>
+<area shape="rect" href="../../d8/d92/class_quant_lib_1_1_swap_index.html" title="base class for swap&#45;rate indexes" alt="" coords="14779,1237,14969,1717"/>
+<area shape="rect" href="../../d3/dbf/class_quant_lib_1_1_swap_spread_index.html" title="class for swap&#45;rate spread indexes" alt="" coords="14994,1333,15149,1622"/>
+<area shape="rect" href="../../d5/d9e/class_quant_lib_1_1_bbsw.html" title="Bbsw index" alt="" coords="2182,1853,2262,1908"/>
+<area shape="rect" href="../../df/da4/class_quant_lib_1_1_bibor.html" title="Bibor index" alt="" coords="2908,1853,2987,1908"/>
+<area shape="rect" href="../../d9/df7/class_quant_lib_1_1_bkbm.html" title="Bkbm index" alt="" coords="3705,1853,3787,1908"/>
+<area shape="rect" href="../../d2/d11/class_quant_lib_1_1_cdor.html" title="CDOR rate" alt="" coords="4387,1853,4462,1908"/>
+<area shape="rect" href="../../d9/d8f/class_quant_lib_1_1_custom_ibor_index.html" title=" " alt="" coords="4487,1765,4632,1996"/>
+<area shape="rect" href="../../da/d8b/class_quant_lib_1_1_daily_tenor_e_u_r_libor.html" title="base class for the one day deposit ICE EUR LIBOR indexes" alt="" coords="4656,1853,4820,1908"/>
+<area shape="rect" href="../../d2/d03/class_quant_lib_1_1_daily_tenor_libor.html" title="base class for all O/N&#45;S/N BBA LIBOR indexes but the EUR ones" alt="" coords="4844,1853,4981,1908"/>
+<area shape="rect" href="../../d5/df8/class_quant_lib_1_1_e_u_r_libor.html" title="base class for all ICE EUR LIBOR indexes but the O/N" alt="" coords="6147,1795,6263,1967"/>
+<area shape="rect" href="../../d1/d83/class_quant_lib_1_1_euribor.html" title="Euribor index" alt="" coords="8177,1853,8267,1908"/>
+<area shape="rect" href="../../d1/d00/class_quant_lib_1_1_euribor365.html" title="Actual/365 Euribor index." alt="" coords="10373,1853,10484,1908"/>
+<area shape="rect" href="../../d8/da5/class_quant_lib_1_1_jibar.html" title="JIBAR rate" alt="" coords="11993,1853,12067,1908"/>
+<area shape="rect" href="../../d4/d19/class_quant_lib_1_1_libor.html" title="base class for all ICE LIBOR indexes but the EUR, O/N, and S/N ones" alt="" coords="12092,1787,12267,1974"/>
+<area shape="rect" href="../../d9/d0e/class_quant_lib_1_1_mosprime.html" title="MOSPRIME rate" alt="" coords="12291,1853,12396,1908"/>
+<area shape="rect" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html" title=" " alt="" coords="12671,1846,12805,1915"/>
+<area shape="rect" href="../../d9/d3e/class_quant_lib_1_1_pribor.html" title="PRIBOR rate" alt="" coords="12829,1853,12911,1908"/>
+<area shape="rect" href="../../d8/dc4/class_quant_lib_1_1_proxy_ibor.html" title="IborIndex calculated as proxy of some other IborIndex." alt="" coords="12936,1824,13055,1937"/>
+<area shape="rect" href="../../d9/d5d/class_quant_lib_1_1_robor.html" title="ROBOR rate" alt="" coords="13079,1853,13162,1908"/>
+<area shape="rect" href="../../dd/d24/class_quant_lib_1_1_shibor.html" title=" " alt="" coords="13186,1846,13271,1915"/>
+<area shape="rect" href="../../d6/da8/class_quant_lib_1_1_t_h_b_f_i_x.html" title="THB THBFIX rate" alt="" coords="13295,1853,13386,1908"/>
+<area shape="rect" href="../../da/df0/class_quant_lib_1_1_t_r_libor.html" title="TRY LIBOR rate" alt="" coords="13411,1853,13503,1908"/>
+<area shape="rect" href="../../db/da0/class_quant_lib_1_1_tibor.html" title="JPY TIBOR index" alt="" coords="13527,1853,13603,1908"/>
+<area shape="rect" href="../../d9/dd7/class_quant_lib_1_1_wibor.html" title="WIBOR rate" alt="" coords="13627,1853,13710,1908"/>
+<area shape="rect" href="../../d3/d0b/class_quant_lib_1_1_zibor.html" title="CHF ZIBOR rate" alt="" coords="13735,1853,13811,1908"/>
+<area shape="rect" href="../../d8/d46/class_quant_lib_1_1_bbsw1_m.html" title="1&#45;month Bbsw index" alt="" coords="1743,2044,1842,2099"/>
+<area shape="rect" href="../../d4/d7b/class_quant_lib_1_1_bbsw2_m.html" title="2&#45;months Bbsw index" alt="" coords="1866,2044,1965,2099"/>
+<area shape="rect" href="../../d4/db4/class_quant_lib_1_1_bbsw3_m.html" title="3&#45;months Bbsw index" alt="" coords="1989,2044,2087,2099"/>
+<area shape="rect" href="../../d0/d87/class_quant_lib_1_1_bbsw4_m.html" title="4&#45;months Bbsw index" alt="" coords="2111,2044,2210,2099"/>
+<area shape="rect" href="../../d2/d4b/class_quant_lib_1_1_bbsw5_m.html" title="5&#45;months Bbsw index" alt="" coords="2234,2044,2333,2099"/>
+<area shape="rect" href="../../d1/d1b/class_quant_lib_1_1_bbsw6_m.html" title="6&#45;months Bbsw index" alt="" coords="2357,2044,2455,2099"/>
+<area shape="rect" href="../../d8/da6/class_quant_lib_1_1_bibor1_m.html" title="1&#45;month Bibor index" alt="" coords="2479,2044,2575,2099"/>
+<area shape="rect" href="../../d9/d07/class_quant_lib_1_1_bibor1_y.html" title="1&#45;year Bibor index" alt="" coords="2600,2044,2695,2099"/>
+<area shape="rect" href="../../d7/da2/class_quant_lib_1_1_bibor2_m.html" title="2&#45;months Bibor index" alt="" coords="2719,2044,2815,2099"/>
+<area shape="rect" href="../../de/d21/class_quant_lib_1_1_bibor3_m.html" title="3&#45;months Bibor index" alt="" coords="2839,2044,2935,2099"/>
+<area shape="rect" href="../../d6/d81/class_quant_lib_1_1_bibor6_m.html" title="6&#45;months Bibor index" alt="" coords="2959,2044,3055,2099"/>
+<area shape="rect" href="../../da/d03/class_quant_lib_1_1_bibor9_m.html" title=" " alt="" coords="3079,2044,3175,2099"/>
+<area shape="rect" href="../../db/d96/class_quant_lib_1_1_bibor_s_w.html" title="1&#45;week Bibor index" alt="" coords="3200,2044,3300,2099"/>
+<area shape="rect" href="../../d1/dd4/class_quant_lib_1_1_bkbm1_m.html" title="1&#45;month Bkbm index" alt="" coords="3324,2044,3424,2099"/>
+<area shape="rect" href="../../d5/d2c/class_quant_lib_1_1_bkbm2_m.html" title="2&#45;months Bkbm index" alt="" coords="3448,2044,3548,2099"/>
+<area shape="rect" href="../../d0/dbf/class_quant_lib_1_1_bkbm3_m.html" title="3&#45;months Bkbm index" alt="" coords="3572,2044,3672,2099"/>
+<area shape="rect" href="../../de/da7/class_quant_lib_1_1_bkbm4_m.html" title="4&#45;months Bkbm index" alt="" coords="3696,2044,3796,2099"/>
+<area shape="rect" href="../../dc/d54/class_quant_lib_1_1_bkbm5_m.html" title="5&#45;months Bkbm index" alt="" coords="3820,2044,3920,2099"/>
+<area shape="rect" href="../../d0/d10/class_quant_lib_1_1_bkbm6_m.html" title="6&#45;months Bkbm index" alt="" coords="3944,2044,4044,2099"/>
+<area shape="rect" href="../../d1/da7/class_quant_lib_1_1_e_u_r_libor_o_n.html" title="Overnight EUR Libor index." alt="" coords="4069,2044,4191,2099"/>
+<area shape="rect" href="../../dc/d68/class_quant_lib_1_1_c_a_d_libor_o_n.html" title="Overnight CAD Libor index." alt="" coords="4215,2044,4338,2099"/>
+<area shape="rect" href="../../d6/d02/class_quant_lib_1_1_daily_tenor_c_h_f_libor.html" title="base class for the one day deposit BBA CHF LIBOR indexes" alt="" coords="4362,2044,4525,2099"/>
+<area shape="rect" href="../../d8/d2c/class_quant_lib_1_1_daily_tenor_g_b_p_libor.html" title="Base class for the one day deposit ICE GBP LIBOR indexes." alt="" coords="4549,2044,4714,2099"/>
+<area shape="rect" href="../../dc/d19/class_quant_lib_1_1_daily_tenor_j_p_y_libor.html" title="base class for the one day deposit ICE JPY LIBOR indexes" alt="" coords="4739,2044,4900,2099"/>
+<area shape="rect" href="../../de/de2/class_quant_lib_1_1_daily_tenor_u_s_d_libor.html" title="base class for the one day deposit ICE USD LIBOR indexes" alt="" coords="4924,2044,5088,2099"/>
+<area shape="rect" href="../../d9/df5/class_quant_lib_1_1_g_b_p_libor_o_n.html" title="Overnight GBP Libor index." alt="" coords="4570,2147,4693,2201"/>
+<area shape="rect" href="../../df/d67/class_quant_lib_1_1_u_s_d_libor_o_n.html" title="Overnight USD Libor index." alt="" coords="4945,2147,5067,2201"/>
+<area shape="rect" href="../../d5/dd0/class_quant_lib_1_1_e_u_r_libor10_m.html" title=" " alt="" coords="5113,2044,5241,2099"/>
+<area shape="rect" href="../../d8/d31/class_quant_lib_1_1_e_u_r_libor11_m.html" title=" " alt="" coords="5265,2044,5393,2099"/>
+<area shape="rect" href="../../d2/dcb/class_quant_lib_1_1_e_u_r_libor1_m.html" title="1&#45;month EUR Libor index" alt="" coords="5417,2044,5539,2099"/>
+<area shape="rect" href="../../db/dec/class_quant_lib_1_1_e_u_r_libor1_y.html" title="1&#45;year EUR Libor index" alt="" coords="5563,2044,5681,2099"/>
+<area shape="rect" href="../../d7/d14/class_quant_lib_1_1_e_u_r_libor2_m.html" title=" " alt="" coords="5705,2044,5827,2099"/>
+<area shape="rect" href="../../d9/d93/class_quant_lib_1_1_e_u_r_libor2_w.html" title=" " alt="" coords="5851,2044,5974,2099"/>
+<area shape="rect" href="../../de/db8/class_quant_lib_1_1_e_u_r_libor3_m.html" title="3&#45;months EUR Libor index" alt="" coords="5999,2044,6120,2099"/>
+<area shape="rect" href="../../dc/d69/class_quant_lib_1_1_e_u_r_libor4_m.html" title=" " alt="" coords="6144,2044,6265,2099"/>
+<area shape="rect" href="../../d5/d8d/class_quant_lib_1_1_e_u_r_libor5_m.html" title=" " alt="" coords="6289,2044,6411,2099"/>
+<area shape="rect" href="../../d4/d7e/class_quant_lib_1_1_e_u_r_libor6_m.html" title="6&#45;months EUR Libor index" alt="" coords="6435,2044,6556,2099"/>
+<area shape="rect" href="../../d1/d5e/class_quant_lib_1_1_e_u_r_libor7_m.html" title=" " alt="" coords="6580,2044,6701,2099"/>
+<area shape="rect" href="../../dd/df6/class_quant_lib_1_1_e_u_r_libor8_m.html" title=" " alt="" coords="6725,2044,6847,2099"/>
+<area shape="rect" href="../../d2/def/class_quant_lib_1_1_e_u_r_libor9_m.html" title=" " alt="" coords="6871,2044,6992,2099"/>
+<area shape="rect" href="../../d9/dc3/class_quant_lib_1_1_e_u_r_libor_s_w.html" title=" " alt="" coords="7017,2044,7142,2099"/>
+<area shape="rect" href="../../d1/dcf/class_quant_lib_1_1_euribor10_m.html" title=" " alt="" coords="7166,2044,7281,2099"/>
+<area shape="rect" href="../../d4/dd2/class_quant_lib_1_1_euribor11_m.html" title=" " alt="" coords="7305,2044,7419,2099"/>
+<area shape="rect" href="../../d5/dc3/class_quant_lib_1_1_euribor1_m.html" title="1&#45;month Euribor index" alt="" coords="7443,2044,7550,2099"/>
+<area shape="rect" href="../../d9/dd9/class_quant_lib_1_1_euribor1_w.html" title="1&#45;week Euribor index" alt="" coords="7574,2044,7683,2099"/>
+<area shape="rect" href="../../d2/d03/class_quant_lib_1_1_euribor1_y.html" title="1&#45;year Euribor index" alt="" coords="7708,2044,7813,2099"/>
+<area shape="rect" href="../../d1/d24/class_quant_lib_1_1_euribor2_m.html" title=" " alt="" coords="7838,2044,7945,2099"/>
+<area shape="rect" href="../../d8/d91/class_quant_lib_1_1_euribor2_w.html" title=" " alt="" coords="7969,2044,8078,2099"/>
+<area shape="rect" href="../../d5/d08/class_quant_lib_1_1_euribor3_m.html" title="3&#45;months Euribor index" alt="" coords="8102,2044,8209,2099"/>
+<area shape="rect" href="../../de/dd2/class_quant_lib_1_1_euribor3_w.html" title=" " alt="" coords="8233,2044,8342,2099"/>
+<area shape="rect" href="../../dd/d01/class_quant_lib_1_1_euribor4_m.html" title=" " alt="" coords="8366,2044,8473,2099"/>
+<area shape="rect" href="../../db/d0a/class_quant_lib_1_1_euribor5_m.html" title=" " alt="" coords="8497,2044,8603,2099"/>
+<area shape="rect" href="../../d6/d37/class_quant_lib_1_1_euribor6_m.html" title="6&#45;months Euribor index" alt="" coords="8627,2044,8734,2099"/>
+<area shape="rect" href="../../d5/d27/class_quant_lib_1_1_euribor7_m.html" title=" " alt="" coords="8758,2044,8865,2099"/>
+<area shape="rect" href="../../dd/d3a/class_quant_lib_1_1_euribor8_m.html" title=" " alt="" coords="8889,2044,8995,2099"/>
+<area shape="rect" href="../../d2/d86/class_quant_lib_1_1_euribor9_m.html" title=" " alt="" coords="9019,2044,9126,2099"/>
+<area shape="rect" href="../../d4/d27/class_quant_lib_1_1_euribor365__10_m.html" title=" " alt="" coords="9151,2044,9293,2099"/>
+<area shape="rect" href="../../de/da5/class_quant_lib_1_1_euribor365__11_m.html" title=" " alt="" coords="9317,2044,9460,2099"/>
+<area shape="rect" href="../../dc/d34/class_quant_lib_1_1_euribor365__1_m.html" title=" " alt="" coords="9484,2044,9619,2099"/>
+<area shape="rect" href="../../d8/d7a/class_quant_lib_1_1_euribor365__1_y.html" title=" " alt="" coords="9643,2044,9777,2099"/>
+<area shape="rect" href="../../d9/d3d/class_quant_lib_1_1_euribor365__2_m.html" title=" " alt="" coords="9801,2044,9936,2099"/>
+<area shape="rect" href="../../d7/d6e/class_quant_lib_1_1_euribor365__2_w.html" title=" " alt="" coords="9960,2044,10097,2099"/>
+<area shape="rect" href="../../d9/d24/class_quant_lib_1_1_euribor365__3_m.html" title=" " alt="" coords="10121,2044,10256,2099"/>
+<area shape="rect" href="../../d6/df3/class_quant_lib_1_1_euribor365__3_w.html" title=" " alt="" coords="10280,2044,10417,2099"/>
+<area shape="rect" href="../../d9/da7/class_quant_lib_1_1_euribor365__4_m.html" title=" " alt="" coords="10441,2044,10576,2099"/>
+<area shape="rect" href="../../d8/da5/class_quant_lib_1_1_euribor365__5_m.html" title=" " alt="" coords="10600,2044,10735,2099"/>
+<area shape="rect" href="../../df/d43/class_quant_lib_1_1_euribor365__6_m.html" title=" " alt="" coords="10759,2044,10893,2099"/>
+<area shape="rect" href="../../df/dc2/class_quant_lib_1_1_euribor365__7_m.html" title=" " alt="" coords="10917,2044,11052,2099"/>
+<area shape="rect" href="../../d0/de2/class_quant_lib_1_1_euribor365__8_m.html" title=" " alt="" coords="11076,2044,11211,2099"/>
+<area shape="rect" href="../../d3/d6d/class_quant_lib_1_1_euribor365__9_m.html" title=" " alt="" coords="11235,2044,11369,2099"/>
+<area shape="rect" href="../../dc/dbd/class_quant_lib_1_1_euribor365___s_w.html" title=" " alt="" coords="11394,2044,11533,2099"/>
+<area shape="rect" href="../../d9/d11/class_quant_lib_1_1_a_u_d_libor.html" title="AUD LIBOR rate" alt="" coords="11557,2044,11660,2099"/>
+<area shape="rect" href="../../df/d61/class_quant_lib_1_1_c_a_d_libor.html" title="CAD LIBOR rate" alt="" coords="11684,2044,11787,2099"/>
+<area shape="rect" href="../../d5/dd1/class_quant_lib_1_1_c_h_f_libor.html" title="CHF LIBOR rate" alt="" coords="11811,2044,11913,2099"/>
+<area shape="rect" href="../../d0/dbd/class_quant_lib_1_1_d_k_k_libor.html" title="DKK LIBOR rate" alt="" coords="11937,2044,12040,2099"/>
+<area shape="rect" href="../../d8/d5e/class_quant_lib_1_1_g_b_p_libor.html" title="GBP LIBOR rate" alt="" coords="12065,2044,12169,2099"/>
+<area shape="rect" href="../../db/dd3/class_quant_lib_1_1_j_p_y_libor.html" title="JPY LIBOR rate" alt="" coords="12193,2044,12293,2099"/>
+<area shape="rect" href="../../d9/d74/class_quant_lib_1_1_n_z_d_libor.html" title="NZD LIBOR rate" alt="" coords="12318,2044,12419,2099"/>
+<area shape="rect" href="../../d6/d5c/class_quant_lib_1_1_s_e_k_libor.html" title="SEK LIBOR rate" alt="" coords="12444,2044,12547,2099"/>
+<area shape="rect" href="../../de/df9/class_quant_lib_1_1_u_s_d_libor.html" title="USD LIBOR rate" alt="" coords="12571,2044,12673,2099"/>
+<area shape="rect" href="../../d0/dd3/class_quant_lib_1_1_aonia.html" title="Aonia index" alt="" coords="12697,2044,12779,2099"/>
+<area shape="rect" href="../../da/d10/class_quant_lib_1_1_corra.html" title=" " alt="" coords="12803,2044,12881,2099"/>
+<area shape="rect" href="../../d4/d20/class_quant_lib_1_1_destr.html" title="Destr (Denmark Short&#45;Term Rate) index." alt="" coords="12905,2044,12984,2099"/>
+<area shape="rect" href="../../df/dbd/class_quant_lib_1_1_eonia.html" title="Eonia (Euro Overnight Index Average) rate fixed by the ECB." alt="" coords="13008,2044,13089,2099"/>
+<area shape="rect" href="../../db/da3/class_quant_lib_1_1_estr.html" title="ESTR (Euro Short&#45;Term Rate) rate fixed by the ECB." alt="" coords="13114,2044,13186,2099"/>
+<area shape="rect" href="../../d1/ddd/class_quant_lib_1_1_fed_funds.html" title="Fed Funds rate fixed by the FED." alt="" coords="13210,2044,13317,2099"/>
+<area shape="rect" href="../../d3/d7a/class_quant_lib_1_1_kofr.html" title="KOFR index." alt="" coords="13341,2044,13412,2099"/>
+<area shape="rect" href="../../d4/d4e/class_quant_lib_1_1_nzocr.html" title="Nzocr index" alt="" coords="13437,2044,13519,2099"/>
+<area shape="rect" href="../../d2/dfe/class_quant_lib_1_1_saron.html" title="SARON (Swiss Average Rate Overnight) index." alt="" coords="13543,2044,13626,2099"/>
+<area shape="rect" href="../../de/de2/class_quant_lib_1_1_sofr.html" title="Sofr (Secured Overnight Financing Rate) index." alt="" coords="13651,2044,13721,2099"/>
+<area shape="rect" href="../../d9/d3e/class_quant_lib_1_1_sonia.html" title="Sonia (Sterling Overnight Index Average) rate." alt="" coords="13745,2044,13827,2099"/>
+<area shape="rect" href="../../d2/d1e/class_quant_lib_1_1_swestr.html" title="Swestr (Swedish krona Short Term Rate) index." alt="" coords="13851,2044,13939,2099"/>
+<area shape="rect" href="../../d8/d1a/class_quant_lib_1_1_tona.html" title="TONA index" alt="" coords="13964,2044,14040,2099"/>
+<area shape="rect" href="../../d4/d08/class_quant_lib_1_1_chf_libor_swap_isda_fix.html" title="ChfLiborSwapIsdaFix index base class" alt="" coords="13835,1846,14004,1915"/>
+<area shape="rect" href="../../d9/d31/class_quant_lib_1_1_eur_libor_swap_ifr_fix.html" title="EurLiborSwapIfrFix index base class" alt="" coords="14028,1846,14184,1915"/>
+<area shape="rect" href="../../d9/dbe/class_quant_lib_1_1_eur_libor_swap_isda_fix_a.html" title="EurLiborSwapIsdaFixA index base class" alt="" coords="14209,1846,14387,1915"/>
+<area shape="rect" href="../../d6/d2d/class_quant_lib_1_1_eur_libor_swap_isda_fix_b.html" title="EurLiborSwapIsdaFixB index base class" alt="" coords="14411,1846,14590,1915"/>
+<area shape="rect" href="../../d8/d7c/class_quant_lib_1_1_euribor_swap_ifr_fix.html" title="EuriborSwapIfrFix index base class" alt="" coords="14614,1846,14763,1915"/>
+<area shape="rect" href="../../d9/dd7/class_quant_lib_1_1_euribor_swap_isda_fix_a.html" title="EuriborSwapIsdaFixA index base class" alt="" coords="14788,1846,14960,1915"/>
+<area shape="rect" href="../../dc/d9b/class_quant_lib_1_1_euribor_swap_isda_fix_b.html" title="EuriborSwapIsdaFixB index base class" alt="" coords="14984,1846,15156,1915"/>
+<area shape="rect" href="../../d3/d64/class_quant_lib_1_1_gbp_libor_swap_isda_fix.html" title="GbpLiborSwapIsdaFix index base class" alt="" coords="15180,1846,15355,1915"/>
+<area shape="rect" href="../../d8/d96/class_quant_lib_1_1_jpy_libor_swap_isda_fix_am.html" title="JpyLiborSwapIsdaFixAm index base class" alt="" coords="15379,1846,15569,1915"/>
+<area shape="rect" href="../../d7/dec/class_quant_lib_1_1_jpy_libor_swap_isda_fix_pm.html" title="JpyLiborSwapIsdaFixPm index base class" alt="" coords="15593,1846,15784,1915"/>
+<area shape="rect" href="../../d2/d7c/class_quant_lib_1_1_overnight_indexed_swap_index.html" title="base class for overnight indexed swap indexes" alt="" coords="15809,1802,16019,1959"/>
+<area shape="rect" href="../../d1/df2/class_quant_lib_1_1_usd_libor_swap_isda_fix_am.html" title="UsdLiborSwapIsdaFixAm index base class" alt="" coords="16044,1846,16237,1915"/>
+<area shape="rect" href="../../d3/dec/class_quant_lib_1_1_usd_libor_swap_isda_fix_pm.html" title="UsdLiborSwapIsdaFixPm index base class" alt="" coords="16261,1846,16455,1915"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -272,9 +269,9 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../dd/d4a/class_quant_lib_1_1_index__coll__graph.png" border="0" usemap="#a_index_coll__map" alt="Collaboration graph"/></div>
 <map name="a_index_coll__map" id="a_index_coll__map">
-<area shape="rect" title="purely virtual base class for indexes" alt="" coords="151,916,346,1147"/>
-<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="175,695,322,867"/>
-<area shape="rect" title=" " alt="" coords="185,592,313,632"/>
+<area shape="rect" title="purely virtual base class for indexes" alt="" coords="105,916,301,1191"/>
+<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="205,695,351,867"/>
+<area shape="rect" title=" " alt="" coords="214,592,342,632"/>
 <area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="76,343,259,529"/>
 <area shape="rect" title=" " alt="" coords="93,225,236,280"/>
 <area shape="rect" title=" " alt="" coords="5,108,180,148"/>
@@ -302,28 +299,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3fe8532d0a96ae0ba25ac781e150aa37"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#a3fe8532d0a96ae0ba25ac781e150aa37">fixing</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;fixingDate, <a class="el" href="../../d9/db9/classbool.html">bool</a> forecastTodaysFixing=false) const =0</td></tr>
 <tr class="memdesc:a3fe8532d0a96ae0ba25ac781e150aa37"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the fixing at the given date  <a href="../../d8/d39/class_quant_lib_1_1_index.html#a3fe8532d0a96ae0ba25ac781e150aa37">More...</a><br /></td></tr>
 <tr class="separator:a3fe8532d0a96ae0ba25ac781e150aa37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa171fcbad47de8436fee4603e42bf00a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#aa171fcbad47de8436fee4603e42bf00a">pastFixing</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;fixingDate) const</td></tr>
+<tr class="memdesc:aa171fcbad47de8436fee4603e42bf00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a past fixing at the given date  <a href="../../d8/d39/class_quant_lib_1_1_index.html#aa171fcbad47de8436fee4603e42bf00a">More...</a><br /></td></tr>
+<tr class="separator:aa171fcbad47de8436fee4603e42bf00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f81d85db7a5350e3bef6ab727691b57"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries</a>&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#a4f81d85db7a5350e3bef6ab727691b57">timeSeries</a> () const</td></tr>
 <tr class="memdesc:a4f81d85db7a5350e3bef6ab727691b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the fixing <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html" title="Container for historical data.">TimeSeries</a>  <a href="../../d8/d39/class_quant_lib_1_1_index.html#a4f81d85db7a5350e3bef6ab727691b57">More...</a><br /></td></tr>
 <tr class="separator:a4f81d85db7a5350e3bef6ab727691b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d511459f4bbc7cc8598b479d2ac4faf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#a4d511459f4bbc7cc8598b479d2ac4faf">allowsNativeFixings</a> ()</td></tr>
 <tr class="memdesc:a4d511459f4bbc7cc8598b479d2ac4faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if index allows for native fixings.  <a href="../../d8/d39/class_quant_lib_1_1_index.html#a4d511459f4bbc7cc8598b479d2ac4faf">More...</a><br /></td></tr>
 <tr class="separator:a4d511459f4bbc7cc8598b479d2ac4faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6209f2dee5b5f7065d3d3b9747eb419e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#a6209f2dee5b5f7065d3d3b9747eb419e">addFixing</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;fixingDate, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#a3fe8532d0a96ae0ba25ac781e150aa37">fixing</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> forceOverwrite=false)</td></tr>
-<tr class="memdesc:a6209f2dee5b5f7065d3d3b9747eb419e"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores the historical fixing at the given date  <a href="../../d8/d39/class_quant_lib_1_1_index.html#a6209f2dee5b5f7065d3d3b9747eb419e">More...</a><br /></td></tr>
-<tr class="separator:a6209f2dee5b5f7065d3d3b9747eb419e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7508199daa86b2f60ad153454b944558"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#a7508199daa86b2f60ad153454b944558">addFixings</a> (const <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries</a>&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;<a class="el" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> forceOverwrite=false)</td></tr>
-<tr class="memdesc:a7508199daa86b2f60ad153454b944558"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores historical fixings from a <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html" title="Container for historical data.">TimeSeries</a>  <a href="../../d8/d39/class_quant_lib_1_1_index.html#a7508199daa86b2f60ad153454b944558">More...</a><br /></td></tr>
-<tr class="separator:a7508199daa86b2f60ad153454b944558"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5a81c6efaef1986836098611234389a"><td class="memTemplParams" colspan="2">template&lt;class DateIterator , class ValueIterator &gt; </td></tr>
-<tr class="memitem:ac5a81c6efaef1986836098611234389a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#ac5a81c6efaef1986836098611234389a">addFixings</a> (DateIterator dBegin, DateIterator dEnd, ValueIterator vBegin, <a class="el" href="../../d9/db9/classbool.html">bool</a> forceOverwrite=false)</td></tr>
-<tr class="memdesc:ac5a81c6efaef1986836098611234389a"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores historical fixings at the given dates  <a href="../../d8/d39/class_quant_lib_1_1_index.html#ac5a81c6efaef1986836098611234389a">More...</a><br /></td></tr>
-<tr class="separator:ac5a81c6efaef1986836098611234389a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45034f65c461ffc15eb4679b02dde6c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#a45034f65c461ffc15eb4679b02dde6c1">clearFixings</a> ()</td></tr>
-<tr class="memdesc:a45034f65c461ffc15eb4679b02dde6c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">clears all stored historical fixings  <a href="../../d8/d39/class_quant_lib_1_1_index.html#a45034f65c461ffc15eb4679b02dde6c1">More...</a><br /></td></tr>
-<tr class="separator:a45034f65c461ffc15eb4679b02dde6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_observable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_observable')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a></td></tr>
-<tr class="memitem:a6438e92e07db169a97ed3eba36788dc4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a6438e92e07db169a97ed3eba36788dc4">Observable</a> ()</td></tr>
-<tr class="separator:a6438e92e07db169a97ed3eba36788dc4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d01c967371e909cd408401dd62b6fa inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a55d01c967371e909cd408401dd62b6fa">Observable</a> ()=default</td></tr>
+<tr class="separator:a55d01c967371e909cd408401dd62b6fa inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a840dd96e33a304cbf681d357de7f48d0">Observable</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
 <tr class="separator:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a522aacdd0f2408fe5e46527a6db999b4">operator=</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
@@ -336,19 +323,64 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a99f4333cda953ce3bfdc958ccea5fbf9 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a> ()</td></tr>
 <tr class="separator:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
+<tr class="memitem:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a52ef9232283da6f842e4574afeb854a0">Observer</a> ()=default</td></tr>
+<tr class="separator:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#af6a9d3ca0b7f388f3b7ccb1eccf11f63">Observer</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
+<tr class="separator:af6a9d3ca0b7f388f3b7ccb1eccf11f63 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6810b3645967da11d5f5d4804d37bacc inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a6810b3645967da11d5f5d4804d37bacc">operator=</a> (const <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &amp;)</td></tr>
+<tr class="separator:a6810b3645967da11d5f5d4804d37bacc inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cb58450d0039d83b21363773e589615 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a0cb58450d0039d83b21363773e589615">~Observer</a> ()</td></tr>
+<tr class="separator:a0cb58450d0039d83b21363773e589615 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6ade205ed506bf712da2704f80a73a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#ae98429250f6997df7b87f4b37454609e">iterator</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0">registerWith</a> (const ext::shared_ptr&lt; <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &gt; &amp;)</td></tr>
+<tr class="separator:aa6ade205ed506bf712da2704f80a73a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51d57eb97a3a57312a47bda29235f182 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a51d57eb97a3a57312a47bda29235f182">registerWithObservables</a> (const ext::shared_ptr&lt; <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a> &gt; &amp;)</td></tr>
+<tr class="separator:a51d57eb97a3a57312a47bda29235f182 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ce7359ad0f73a54dba555be24855804 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a4ce7359ad0f73a54dba555be24855804">unregisterWith</a> (const ext::shared_ptr&lt; <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &gt; &amp;)</td></tr>
+<tr class="separator:a4ce7359ad0f73a54dba555be24855804 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c19cb502f3b720b99b176ea6cc7e319 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a0c19cb502f3b720b99b176ea6cc7e319">unregisterWithAll</a> ()</td></tr>
+<tr class="separator:a0c19cb502f3b720b99b176ea6cc7e319 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b02345a8a15d3c5ea2844a2253f510 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a99b02345a8a15d3c5ea2844a2253f510">update</a> ()=0</td></tr>
+<tr class="separator:a99b02345a8a15d3c5ea2844a2253f510 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d53f9669c128dadc74a5d044a7c8e68 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a3d53f9669c128dadc74a5d044a7c8e68">deepUpdate</a> ()</td></tr>
+<tr class="separator:a3d53f9669c128dadc74a5d044a7c8e68 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Observer interface</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p >stores the historical fixing at the given date</p>
+<p >the date passed as arguments must be the actual calendar date of the fixing; no settlement days must be used. </p>
+</td></tr>
+<tr class="memitem:a44137bb65de2396875934e48a6ee5099"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
+<tr class="separator:a44137bb65de2396875934e48a6ee5099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6209f2dee5b5f7065d3d3b9747eb419e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#a6209f2dee5b5f7065d3d3b9747eb419e">addFixing</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;fixingDate, <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#a3fe8532d0a96ae0ba25ac781e150aa37">fixing</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> forceOverwrite=false)</td></tr>
+<tr class="separator:a6209f2dee5b5f7065d3d3b9747eb419e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7508199daa86b2f60ad153454b944558"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#a7508199daa86b2f60ad153454b944558">addFixings</a> (const <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html">TimeSeries</a>&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> &gt; &amp;<a class="el" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> forceOverwrite=false)</td></tr>
+<tr class="memdesc:a7508199daa86b2f60ad153454b944558"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores historical fixings from a <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html" title="Container for historical data.">TimeSeries</a>  <a href="../../d8/d39/class_quant_lib_1_1_index.html#a7508199daa86b2f60ad153454b944558">More...</a><br /></td></tr>
+<tr class="separator:a7508199daa86b2f60ad153454b944558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a81c6efaef1986836098611234389a"><td class="memTemplParams" colspan="2">template&lt;class DateIterator , class ValueIterator &gt; </td></tr>
+<tr class="memitem:ac5a81c6efaef1986836098611234389a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#ac5a81c6efaef1986836098611234389a">addFixings</a> (DateIterator dBegin, DateIterator dEnd, ValueIterator vBegin, <a class="el" href="../../d9/db9/classbool.html">bool</a> forceOverwrite=false)</td></tr>
+<tr class="memdesc:ac5a81c6efaef1986836098611234389a"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores historical fixings at the given dates  <a href="../../d8/d39/class_quant_lib_1_1_index.html#ac5a81c6efaef1986836098611234389a">More...</a><br /></td></tr>
+<tr class="separator:ac5a81c6efaef1986836098611234389a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45034f65c461ffc15eb4679b02dde6c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#a45034f65c461ffc15eb4679b02dde6c1">clearFixings</a> ()</td></tr>
+<tr class="memdesc:a45034f65c461ffc15eb4679b02dde6c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">clears all stored historical fixings  <a href="../../d8/d39/class_quant_lib_1_1_index.html#a45034f65c461ffc15eb4679b02dde6c1">More...</a><br /></td></tr>
+<tr class="separator:a45034f65c461ffc15eb4679b02dde6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20ef0a6ae99fb592dfe7672b9db4e52e"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#a20ef0a6ae99fb592dfe7672b9db4e52e">notifier</a> () const</td></tr>
+<tr class="separator:a20ef0a6ae99fb592dfe7672b9db4e52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af315c7aa233f881dd486c04fd8ae2154"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_quant_lib_1_1_index.html#af315c7aa233f881dd486c04fd8ae2154">checkNativeFixingsAllowed</a> ()</td></tr>
 <tr class="memdesc:af315c7aa233f881dd486c04fd8ae2154"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if index allows for native fixings  <a href="../../d8/d39/class_quant_lib_1_1_index.html#af315c7aa233f881dd486c04fd8ae2154">More...</a><br /></td></tr>
 <tr class="separator:af315c7aa233f881dd486c04fd8ae2154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
+<tr class="memitem:ae98429250f6997df7b87f4b37454609e inherit pub_types_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">typedef set_type::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#ae98429250f6997df7b87f4b37454609e">iterator</a></td></tr>
+<tr class="separator:ae98429250f6997df7b87f4b37454609e inherit pub_types_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >purely virtual base class for indexes </p>
 <dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000033">Warning:</a></b></dt><dd>this class performs no check that the provided/requested fixings are for dates in the past, i.e. for dates less than or equal to the evaluation date. It is up to the client code to take care of possible inconsistencies due to "seeing in the
          future" </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1c/index_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d0/d1c/index_8hpp_source.html">index.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1c/index_8hpp_source.html#l00045">45</a> of file <a class="el" href="../../d0/d1c/index_8hpp_source.html">index.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad90c5ff92c4a381bf1ac90137b0bc39e" name="ad90c5ff92c4a381bf1ac90137b0bc39e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad90c5ff92c4a381bf1ac90137b0bc39e">&#9670;&#160;</a></span>~Index()</h2>
@@ -402,7 +434,7 @@ Private Member Functions</h2></td></tr>
 <p>Returns the name of the index. </p>
 <dl class="caveats"><dt><b><a class="el" href="../../da/deb/caveats.html#_caveats000034">Warning:</a></b></dt><dd>This method is used for output and comparison between indexes. It is <b>not</b> meant to be used for writing switch-on-type code. </dd></dl>
 
-<p>Implemented in <a class="el" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#aa4f4ba750a08765e64da2d0bd473944a">EquityIndex</a>, <a class="el" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#aa4f4ba750a08765e64da2d0bd473944a">InflationIndex</a>, and <a class="el" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#aa4f4ba750a08765e64da2d0bd473944a">InterestRateIndex</a>.</p>
+<p>Implemented in <a class="el" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#aa4f4ba750a08765e64da2d0bd473944a">CommodityIndex</a>, <a class="el" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#aa4f4ba750a08765e64da2d0bd473944a">EquityIndex</a>, <a class="el" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#aa4f4ba750a08765e64da2d0bd473944a">InflationIndex</a>, and <a class="el" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#aa4f4ba750a08765e64da2d0bd473944a">InterestRateIndex</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -410,29 +442,45 @@ Private Member Functions</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a7f04e718c6856c4d3d77a496b6acad0d_icgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a7f04e718c6856c4d3d77a496b6acad0d_icgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_a7f04e718c6856c4d3d77a496b6acad0d_icgraph" id="ad8/d39/class_quant_lib_1_1_index_a7f04e718c6856c4d3d77a496b6acad0d_icgraph">
-<area shape="rect" title="Returns the name of the index." alt="" coords="1441,121,1496,147"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#ac5a81c6efaef1986836098611234389a" title="stores historical fixings at the given dates" alt="" coords="1261,21,1347,47"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#af315c7aa233f881dd486c04fd8ae2154" title="check if index allows for native fixings" alt="" coords="1215,71,1393,96"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a45034f65c461ffc15eb4679b02dde6c1" title="clears all stored historical fixings" alt="" coords="1029,120,1121,145"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a42dd84831643452f3b3a6ff22ede4cf5" title="returns whether a historical fixing was stored for the given date" alt="" coords="1238,172,1370,197"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a4f81d85db7a5350e3bef6ab727691b57" title="returns the fixing TimeSeries" alt="" coords="1262,292,1346,317"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a6209f2dee5b5f7065d3d3b9747eb419e" title="stores the historical fixing at the given date" alt="" coords="805,5,884,31"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7508199daa86b2f60ad153454b944558" title="stores historical fixings from a TimeSeries" alt="" coords="1033,71,1118,96"/>
-<area shape="rect" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#ace79d56d04a98736c996cfc112971709" title=" " alt="" coords="766,63,923,103"/>
-<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title=" " alt="" coords="753,269,936,309"/>
-<area shape="rect" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed" title=" " alt="" coords="984,221,1167,261"/>
-<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#a4d982a2e260cc24819e595f5c3726a4c" title=" " alt="" coords="984,285,1167,325"/>
-<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#ae7ae11d75ab37b16841c787c5f7dd712" title=" " alt="" coords="984,349,1167,389"/>
-<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#aa171fcbad47de8436fee4603e42bf00a" title=" " alt="" coords="1000,413,1151,453"/>
-<area shape="rect" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a7165392ffa4f80be839a6f7fde3cc7f1" title=" " alt="" coords="984,477,1167,517"/>
-<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#a53ea397c3ee438117a2e02cb7226eba1" title=" " alt="" coords="521,269,704,309"/>
-<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title="returns the fixing at the given date" alt="" coords="537,406,688,446"/>
-<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#a53ea397c3ee438117a2e02cb7226eba1" title="It can be overridden to implement particular conventions." alt="" coords="769,434,920,474"/>
-<area shape="rect" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed" title="returns the fixing at the given date" alt="" coords="753,498,936,538"/>
-<area shape="rect" href="../../dd/d7f/class_quant_lib_1_1_swaption_volatility_cube.html#a0aae6a914cd4a27e2141607516c71a15" title=" " alt="" coords="520,498,705,538"/>
-<area shape="rect" href="../../dd/d7f/class_quant_lib_1_1_swaption_volatility_cube.html#addc4dadb7da7e9e2779926424bac2ca0" title=" " alt="" coords="275,466,460,506"/>
-<area shape="rect" href="../../da/dca/class_quant_lib_1_1_interpolated_swaption_volatility_cube.html#aaabda23c949781900053ecaf5506f891" title=" " alt="" coords="263,530,472,570"/>
-<area shape="rect" href="../../da/dca/class_quant_lib_1_1_interpolated_swaption_volatility_cube.html#a4b3d02855e7d7d105191568e3f598dd0" title=" " alt="" coords="5,530,215,570"/>
+<area shape="rect" title="Returns the name of the index." alt="" coords="1441,238,1496,263"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#ac5a81c6efaef1986836098611234389a" title="stores historical fixings at the given dates" alt="" coords="1261,102,1347,127"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#af315c7aa233f881dd486c04fd8ae2154" title="check if index allows for native fixings" alt="" coords="1215,313,1393,338"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a45034f65c461ffc15eb4679b02dde6c1" title="clears all stored historical fixings" alt="" coords="1029,262,1121,287"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a42dd84831643452f3b3a6ff22ede4cf5" title="returns whether a historical fixing was stored for the given date" alt="" coords="1238,263,1370,289"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a20ef0a6ae99fb592dfe7672b9db4e52e" title=" " alt="" coords="1274,151,1334,177"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a4f81d85db7a5350e3bef6ab727691b57" title="returns the fixing TimeSeries" alt="" coords="1262,699,1346,725"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a6209f2dee5b5f7065d3d3b9747eb419e" title=" " alt="" coords="805,330,884,355"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7508199daa86b2f60ad153454b944558" title="stores historical fixings from a TimeSeries" alt="" coords="1033,387,1118,413"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a6e7c2f06156bc986266ded7619af86ac" title=" " alt="" coords="523,323,702,363"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#ad224c1a7c70301d545c2d63ece164d8b" title=" " alt="" coords="523,447,702,487"/>
+<area shape="rect" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#ace79d56d04a98736c996cfc112971709" title=" " alt="" coords="766,380,923,420"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a47256ff46c55a4a73152af3b83350ddf" title=" " alt="" coords="755,255,934,295"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#aa64e08ac478965e9f6bbc629775a9b8b" title=" " alt="" coords="986,133,1165,173"/>
+<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#af3d180493bd237902679823e0aafd810" title=" " alt="" coords="1000,197,1151,237"/>
+<area shape="rect" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#a1fcc53893b7eaf9da5947fed9e834d28" title=" " alt="" coords="997,5,1154,45"/>
+<area shape="rect" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#aa1b6afe709e0791de06c5b84e4a9eed4" title=" " alt="" coords="984,69,1167,109"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a644718bb2fb240de962dc3c9a1fdf0dc" title=" " alt="" coords="986,692,1165,732"/>
+<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#a4d982a2e260cc24819e595f5c3726a4c" title=" " alt="" coords="984,756,1167,796"/>
+<area shape="rect" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html#a4d982a2e260cc24819e595f5c3726a4c" title=" " alt="" coords="984,820,1167,860"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a2f40c105e875fb25daa9a7f6164a9321" title=" " alt="" coords="986,1012,1165,1052"/>
+<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#ae7ae11d75ab37b16841c787c5f7dd712" title=" " alt="" coords="984,884,1167,924"/>
+<area shape="rect" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html#ae7ae11d75ab37b16841c787c5f7dd712" title=" " alt="" coords="984,439,1167,479"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#aa171fcbad47de8436fee4603e42bf00a" title="returns a past fixing at the given date" alt="" coords="1034,642,1117,667"/>
+<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#aebdcb8f15464a94828a0904c4270ba7d" title="returns a past fixing at the given date" alt="" coords="984,948,1167,988"/>
+<area shape="rect" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html#aebdcb8f15464a94828a0904c4270ba7d" title="returns a past fixing at the given date" alt="" coords="984,527,1167,567"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a036758493110cb0f3acf413839ced60d" title=" " alt="" coords="755,508,934,548"/>
+<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title=" " alt="" coords="753,941,936,981"/>
+<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#a53ea397c3ee438117a2e02cb7226eba1" title=" " alt="" coords="521,941,704,981"/>
+<area shape="rect" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed" title=" " alt="" coords="753,444,936,484"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title="returns the fixing at the given date" alt="" coords="755,751,934,791"/>
+<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title="returns the fixing at the given date" alt="" coords="537,661,688,701"/>
+<area shape="rect" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed" title="returns the fixing at the given date" alt="" coords="753,572,936,612"/>
+<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#a53ea397c3ee438117a2e02cb7226eba1" title="It can be overridden to implement particular conventions." alt="" coords="769,636,920,676"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#ac495fd9bc1177fa5ff37da1dd4382f13" title=" " alt="" coords="523,751,702,791"/>
+<area shape="rect" href="../../dd/d7f/class_quant_lib_1_1_swaption_volatility_cube.html#a0aae6a914cd4a27e2141607516c71a15" title=" " alt="" coords="520,572,705,612"/>
+<area shape="rect" href="../../dd/d7f/class_quant_lib_1_1_swaption_volatility_cube.html#addc4dadb7da7e9e2779926424bac2ca0" title=" " alt="" coords="275,540,460,580"/>
+<area shape="rect" href="../../da/dca/class_quant_lib_1_1_interpolated_swaption_volatility_cube.html#aaabda23c949781900053ecaf5506f891" title=" " alt="" coords="263,604,472,644"/>
+<area shape="rect" href="../../da/dca/class_quant_lib_1_1_interpolated_swaption_volatility_cube.html#a4b3d02855e7d7d105191568e3f598dd0" title=" " alt="" coords="5,604,215,644"/>
 </map>
 </div>
 
@@ -463,7 +511,7 @@ Private Member Functions</h2></td></tr>
 
 <p>returns the calendar defining valid fixing dates </p>
 
-<p>Implemented in <a class="el" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#a49eac79c1c14fc7b389ff906ef6ecb68">EquityIndex</a>, <a class="el" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#a49eac79c1c14fc7b389ff906ef6ecb68">InflationIndex</a>, and <a class="el" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a49eac79c1c14fc7b389ff906ef6ecb68">InterestRateIndex</a>.</p>
+<p>Implemented in <a class="el" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a49eac79c1c14fc7b389ff906ef6ecb68">CommodityIndex</a>, <a class="el" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#a49eac79c1c14fc7b389ff906ef6ecb68">EquityIndex</a>, <a class="el" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#a49eac79c1c14fc7b389ff906ef6ecb68">InflationIndex</a>, and <a class="el" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a49eac79c1c14fc7b389ff906ef6ecb68">InterestRateIndex</a>.</p>
 
 </div>
 </div>
@@ -493,7 +541,7 @@ Private Member Functions</h2></td></tr>
 
 <p>returns TRUE if the fixing date is a valid one </p>
 
-<p>Implemented in <a class="el" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#ad407ea56ecad526bb75c9d210398dd77">InflationIndex</a>, <a class="el" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html#accc3a81a3bf2b06b6a3696e3c4ff83ce">BMAIndex</a>, <a class="el" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#accc3a81a3bf2b06b6a3696e3c4ff83ce">EquityIndex</a>, and <a class="el" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#accc3a81a3bf2b06b6a3696e3c4ff83ce">InterestRateIndex</a>.</p>
+<p>Implemented in <a class="el" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#ad407ea56ecad526bb75c9d210398dd77">InflationIndex</a>, <a class="el" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#accc3a81a3bf2b06b6a3696e3c4ff83ce">CommodityIndex</a>, <a class="el" href="../../d3/dcb/class_quant_lib_1_1_b_m_a_index.html#accc3a81a3bf2b06b6a3696e3c4ff83ce">BMAIndex</a>, <a class="el" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#accc3a81a3bf2b06b6a3696e3c4ff83ce">EquityIndex</a>, and <a class="el" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#accc3a81a3bf2b06b6a3696e3c4ff83ce">InterestRateIndex</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -501,8 +549,18 @@ Private Member Functions</h2></td></tr>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_abaaf5b4d83d8e96c321a71b3eec62a78_icgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_abaaf5b4d83d8e96c321a71b3eec62a78_icgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_abaaf5b4d83d8e96c321a71b3eec62a78_icgraph" id="ad8/d39/class_quant_lib_1_1_index_abaaf5b4d83d8e96c321a71b3eec62a78_icgraph">
-<area shape="rect" title="returns TRUE if the fixing date is a valid one" alt="" coords="139,5,261,31"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#ac5a81c6efaef1986836098611234389a" title="stores historical fixings at the given dates" alt="" coords="5,5,91,31"/>
+<area shape="rect" title="returns TRUE if the fixing date is a valid one" alt="" coords="1117,75,1240,101"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#ac5a81c6efaef1986836098611234389a" title="stores historical fixings at the given dates" alt="" coords="984,50,1069,75"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#aa171fcbad47de8436fee4603e42bf00a" title="returns a past fixing at the given date" alt="" coords="985,99,1068,125"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title="returns the fixing at the given date" alt="" coords="755,5,934,45"/>
+<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title="returns the fixing at the given date" alt="" coords="537,95,688,135"/>
+<area shape="rect" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed" title="returns the fixing at the given date" alt="" coords="753,184,936,224"/>
+<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#a53ea397c3ee438117a2e02cb7226eba1" title="It can be overridden to implement particular conventions." alt="" coords="769,120,920,160"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#ac495fd9bc1177fa5ff37da1dd4382f13" title=" " alt="" coords="523,5,702,45"/>
+<area shape="rect" href="../../dd/d7f/class_quant_lib_1_1_swaption_volatility_cube.html#a0aae6a914cd4a27e2141607516c71a15" title=" " alt="" coords="520,184,705,224"/>
+<area shape="rect" href="../../dd/d7f/class_quant_lib_1_1_swaption_volatility_cube.html#addc4dadb7da7e9e2779926424bac2ca0" title=" " alt="" coords="275,152,460,192"/>
+<area shape="rect" href="../../da/dca/class_quant_lib_1_1_interpolated_swaption_volatility_cube.html#aaabda23c949781900053ecaf5506f891" title=" " alt="" coords="263,216,472,256"/>
+<area shape="rect" href="../../da/dca/class_quant_lib_1_1_interpolated_swaption_volatility_cube.html#a4b3d02855e7d7d105191568e3f598dd0" title=" " alt="" coords="5,216,215,256"/>
 </map>
 </div>
 
@@ -526,7 +584,7 @@ Private Member Functions</h2></td></tr>
 
 <p>returns whether a historical fixing was stored for the given date </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1c/index_8hpp_source.html#l00138">138</a> of file <a class="el" href="../../d0/d1c/index_8hpp_source.html">index.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1c/index_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../d0/d1c/index_8hpp_source.html">index.hpp</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -535,7 +593,7 @@ Private Member Functions</h2></td></tr>
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a42dd84831643452f3b3a6ff22ede4cf5_cgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a42dd84831643452f3b3a6ff22ede4cf5_cgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_a42dd84831643452f3b3a6ff22ede4cf5_cgraph" id="ad8/d39/class_quant_lib_1_1_index_a42dd84831643452f3b3a6ff22ede4cf5_cgraph">
 <area shape="rect" title="returns whether a historical fixing was stored for the given date" alt="" coords="5,77,137,102"/>
-<area shape="rect" href="../../d7/d36/class_quant_lib_1_1_index_manager.html#a608ae3a4def88c6b4f72d26168cbf878" title="returns whether a specific historical fixing was stored for the index and date" alt="" coords="196,5,359,45"/>
+<area shape="rect" href="../../d7/d36/class_quant_lib_1_1_index_manager.html#a608ae3a4def88c6b4f72d26168cbf878" title=" " alt="" coords="196,5,359,45"/>
 <area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="185,69,369,109"/>
 <area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7f04e718c6856c4d3d77a496b6acad0d" title="Returns the name of the index." alt="" coords="250,134,305,159"/>
 </map>
@@ -580,7 +638,7 @@ Private Member Functions</h2></td></tr>
 <p>returns the fixing at the given date </p>
 <p >the date passed as arguments must be the actual calendar date of the fixing; no settlement days must be used. </p>
 
-<p>Implemented in <a class="el" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#afd7137a2242dfcc466e6ccc8ca906c8c">EquityIndex</a>, <a class="el" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#afd7137a2242dfcc466e6ccc8ca906c8c">ZeroInflationIndex</a>, <a class="el" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed">YoYInflationIndex</a>, <a class="el" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed">InterestRateIndex</a>, and <a class="el" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#af9fb44f6d7a585b565d1d6e1c290d602">InflationIndex</a>.</p>
+<p>Implemented in <a class="el" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#afd7137a2242dfcc466e6ccc8ca906c8c">CommodityIndex</a>, <a class="el" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#afd7137a2242dfcc466e6ccc8ca906c8c">EquityIndex</a>, <a class="el" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#afd7137a2242dfcc466e6ccc8ca906c8c">ZeroInflationIndex</a>, <a class="el" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed">YoYInflationIndex</a>, <a class="el" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed">InterestRateIndex</a>, and <a class="el" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#af9fb44f6d7a585b565d1d6e1c290d602">InflationIndex</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -588,8 +646,77 @@ Private Member Functions</h2></td></tr>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a3fe8532d0a96ae0ba25ac781e150aa37_icgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a3fe8532d0a96ae0ba25ac781e150aa37_icgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_a3fe8532d0a96ae0ba25ac781e150aa37_icgraph" id="ad8/d39/class_quant_lib_1_1_index_a3fe8532d0a96ae0ba25ac781e150aa37_icgraph">
-<area shape="rect" title="returns the fixing at the given date" alt="" coords="132,5,184,31"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a6209f2dee5b5f7065d3d3b9747eb419e" title="stores the historical fixing at the given date" alt="" coords="5,5,84,31"/>
+<area shape="rect" title="returns the fixing at the given date" alt="" coords="359,45,411,70"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a6209f2dee5b5f7065d3d3b9747eb419e" title=" " alt="" coords="232,45,311,70"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a6e7c2f06156bc986266ded7619af86ac" title=" " alt="" coords="5,5,184,45"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#ad224c1a7c70301d545c2d63ece164d8b" title=" " alt="" coords="5,69,184,109"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa171fcbad47de8436fee4603e42bf00a" name="aa171fcbad47de8436fee4603e42bf00a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa171fcbad47de8436fee4603e42bf00a">&#9670;&#160;</a></span>pastFixing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> pastFixing </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;&#160;</td>
+          <td class="paramname"><em>fixingDate</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns a past fixing at the given date </p>
+<p >the date passed as arguments must be the actual calendar date of the fixing; no settlement days must be used. </p>
+
+<p>Reimplemented in <a class="el" href="../../d3/dbf/class_quant_lib_1_1_swap_spread_index.html#a35fdb9cb37e9ae08958089f58f1bf23b">SwapSpreadIndex</a>, <a class="el" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#aebdcb8f15464a94828a0904c4270ba7d">ZeroInflationIndex</a>, <a class="el" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html#aebdcb8f15464a94828a0904c4270ba7d">YoYInflationIndex</a>, and <a class="el" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#a015f00d56260bf03bf62e89ea244391c">InflationIndex</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d1c/index_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d0/d1c/index_8hpp_source.html">index.hpp</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_aa171fcbad47de8436fee4603e42bf00a_cgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_aa171fcbad47de8436fee4603e42bf00a_cgraph" alt=""/></div>
+<map name="ad8/d39/class_quant_lib_1_1_index_aa171fcbad47de8436fee4603e42bf00a_cgraph" id="ad8/d39/class_quant_lib_1_1_index_aa171fcbad47de8436fee4603e42bf00a_cgraph">
+<area shape="rect" title="returns a past fixing at the given date" alt="" coords="5,53,88,78"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#abaaf5b4d83d8e96c321a71b3eec62a78" title="returns TRUE if the fixing date is a valid one" alt="" coords="136,27,259,53"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a4f81d85db7a5350e3bef6ab727691b57" title="returns the fixing TimeSeries" alt="" coords="155,77,239,102"/>
+<area shape="rect" href="../../d7/d36/class_quant_lib_1_1_index_manager.html#a541d72cc581417e4a2319c4c729484fa" title=" " alt="" coords="317,5,480,45"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="307,69,491,109"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7f04e718c6856c4d3d77a496b6acad0d" title="Returns the name of the index." alt="" coords="371,134,426,159"/>
+</map>
+</div>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_aa171fcbad47de8436fee4603e42bf00a_icgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_aa171fcbad47de8436fee4603e42bf00a_icgraph" alt=""/></div>
+<map name="ad8/d39/class_quant_lib_1_1_index_aa171fcbad47de8436fee4603e42bf00a_icgraph" id="ad8/d39/class_quant_lib_1_1_index_aa171fcbad47de8436fee4603e42bf00a_icgraph">
+<area shape="rect" title="returns a past fixing at the given date" alt="" coords="984,99,1067,125"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title="returns the fixing at the given date" alt="" coords="755,5,934,45"/>
+<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title="returns the fixing at the given date" alt="" coords="537,95,688,135"/>
+<area shape="rect" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed" title="returns the fixing at the given date" alt="" coords="753,184,936,224"/>
+<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#a53ea397c3ee438117a2e02cb7226eba1" title="It can be overridden to implement particular conventions." alt="" coords="769,120,920,160"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#ac495fd9bc1177fa5ff37da1dd4382f13" title=" " alt="" coords="523,5,702,45"/>
+<area shape="rect" href="../../dd/d7f/class_quant_lib_1_1_swaption_volatility_cube.html#a0aae6a914cd4a27e2141607516c71a15" title=" " alt="" coords="520,184,705,224"/>
+<area shape="rect" href="../../dd/d7f/class_quant_lib_1_1_swaption_volatility_cube.html#addc4dadb7da7e9e2779926424bac2ca0" title=" " alt="" coords="275,152,460,192"/>
+<area shape="rect" href="../../da/dca/class_quant_lib_1_1_interpolated_swaption_volatility_cube.html#aaabda23c949781900053ecaf5506f891" title=" " alt="" coords="263,216,472,256"/>
+<area shape="rect" href="../../da/dca/class_quant_lib_1_1_interpolated_swaption_volatility_cube.html#a4b3d02855e7d7d105191568e3f598dd0" title=" " alt="" coords="5,216,215,256"/>
 </map>
 </div>
 
@@ -612,42 +739,51 @@ Private Member Functions</h2></td></tr>
 
 <p>returns the fixing <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html" title="Container for historical data.">TimeSeries</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1c/index_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../d0/d1c/index_8hpp_source.html">index.hpp</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../d0/d1c/index_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../d0/d1c/index_8hpp_source.html">index.hpp</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a4f81d85db7a5350e3bef6ab727691b57_cgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a4f81d85db7a5350e3bef6ab727691b57_cgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_a4f81d85db7a5350e3bef6ab727691b57_cgraph" id="ad8/d39/class_quant_lib_1_1_index_a4f81d85db7a5350e3bef6ab727691b57_cgraph">
 <area shape="rect" title="returns the fixing TimeSeries" alt="" coords="5,77,89,102"/>
-<area shape="rect" href="../../d7/d36/class_quant_lib_1_1_index_manager.html#a541d72cc581417e4a2319c4c729484fa" title="returns the (possibly empty) history of the index fixings" alt="" coords="148,5,311,45"/>
+<area shape="rect" href="../../d7/d36/class_quant_lib_1_1_index_manager.html#a541d72cc581417e4a2319c4c729484fa" title=" " alt="" coords="148,5,311,45"/>
 <area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="137,69,321,109"/>
 <area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7f04e718c6856c4d3d77a496b6acad0d" title="Returns the name of the index." alt="" coords="202,134,257,159"/>
 </map>
 </div>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a4f81d85db7a5350e3bef6ab727691b57_icgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a4f81d85db7a5350e3bef6ab727691b57_icgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_a4f81d85db7a5350e3bef6ab727691b57_icgraph" id="ad8/d39/class_quant_lib_1_1_index_a4f81d85db7a5350e3bef6ab727691b57_icgraph">
-<area shape="rect" title="returns the fixing TimeSeries" alt="" coords="1215,144,1299,169"/>
-<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title=" " alt="" coords="753,88,936,128"/>
-<area shape="rect" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed" title=" " alt="" coords="984,40,1167,80"/>
-<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#a4d982a2e260cc24819e595f5c3726a4c" title=" " alt="" coords="984,104,1167,144"/>
-<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#ae7ae11d75ab37b16841c787c5f7dd712" title=" " alt="" coords="984,168,1167,208"/>
-<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#aa171fcbad47de8436fee4603e42bf00a" title=" " alt="" coords="1000,232,1151,272"/>
-<area shape="rect" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a7165392ffa4f80be839a6f7fde3cc7f1" title=" " alt="" coords="984,296,1167,336"/>
-<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#a53ea397c3ee438117a2e02cb7226eba1" title=" " alt="" coords="521,88,704,128"/>
-<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title="returns the fixing at the given date" alt="" coords="537,226,688,266"/>
-<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#a53ea397c3ee438117a2e02cb7226eba1" title="It can be overridden to implement particular conventions." alt="" coords="769,254,920,294"/>
-<area shape="rect" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed" title="returns the fixing at the given date" alt="" coords="753,318,936,358"/>
-<area shape="rect" href="../../dd/d7f/class_quant_lib_1_1_swaption_volatility_cube.html#a0aae6a914cd4a27e2141607516c71a15" title=" " alt="" coords="520,318,705,358"/>
-<area shape="rect" href="../../dd/d7f/class_quant_lib_1_1_swaption_volatility_cube.html#addc4dadb7da7e9e2779926424bac2ca0" title=" " alt="" coords="275,286,460,326"/>
-<area shape="rect" href="../../da/dca/class_quant_lib_1_1_interpolated_swaption_volatility_cube.html#aaabda23c949781900053ecaf5506f891" title=" " alt="" coords="263,350,472,390"/>
-<area shape="rect" href="../../da/dca/class_quant_lib_1_1_interpolated_swaption_volatility_cube.html#a4b3d02855e7d7d105191568e3f598dd0" title=" " alt="" coords="5,350,215,390"/>
+<area shape="rect" title="returns the fixing TimeSeries" alt="" coords="1215,301,1299,326"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a644718bb2fb240de962dc3c9a1fdf0dc" title=" " alt="" coords="986,5,1165,45"/>
+<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#a4d982a2e260cc24819e595f5c3726a4c" title=" " alt="" coords="984,69,1167,109"/>
+<area shape="rect" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html#a4d982a2e260cc24819e595f5c3726a4c" title=" " alt="" coords="984,133,1167,173"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a2f40c105e875fb25daa9a7f6164a9321" title=" " alt="" coords="986,197,1165,237"/>
+<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#ae7ae11d75ab37b16841c787c5f7dd712" title=" " alt="" coords="984,325,1167,365"/>
+<area shape="rect" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html#ae7ae11d75ab37b16841c787c5f7dd712" title=" " alt="" coords="984,389,1167,429"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#aa171fcbad47de8436fee4603e42bf00a" title="returns a past fixing at the given date" alt="" coords="1034,542,1117,567"/>
+<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#aebdcb8f15464a94828a0904c4270ba7d" title="returns a past fixing at the given date" alt="" coords="984,261,1167,301"/>
+<area shape="rect" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html#aebdcb8f15464a94828a0904c4270ba7d" title="returns a past fixing at the given date" alt="" coords="984,477,1167,517"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a036758493110cb0f3acf413839ced60d" title=" " alt="" coords="986,644,1165,684"/>
+<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title=" " alt="" coords="753,268,936,308"/>
+<area shape="rect" href="../../db/d74/class_quant_lib_1_1_zero_inflation_index.html#a53ea397c3ee438117a2e02cb7226eba1" title=" " alt="" coords="521,268,704,308"/>
+<area shape="rect" href="../../da/dff/class_quant_lib_1_1_yo_y_inflation_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed" title=" " alt="" coords="753,389,936,429"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title="returns the fixing at the given date" alt="" coords="755,453,934,493"/>
+<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#afd7137a2242dfcc466e6ccc8ca906c8c" title="returns the fixing at the given date" alt="" coords="537,543,688,583"/>
+<area shape="rect" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#a6c1767eeb3fb49aa0ee2a8be6be44eed" title="returns the fixing at the given date" alt="" coords="753,632,936,672"/>
+<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#a53ea397c3ee438117a2e02cb7226eba1" title="It can be overridden to implement particular conventions." alt="" coords="769,568,920,608"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#ac495fd9bc1177fa5ff37da1dd4382f13" title=" " alt="" coords="523,453,702,493"/>
+<area shape="rect" href="../../dd/d7f/class_quant_lib_1_1_swaption_volatility_cube.html#a0aae6a914cd4a27e2141607516c71a15" title=" " alt="" coords="520,632,705,672"/>
+<area shape="rect" href="../../dd/d7f/class_quant_lib_1_1_swaption_volatility_cube.html#addc4dadb7da7e9e2779926424bac2ca0" title=" " alt="" coords="275,600,460,640"/>
+<area shape="rect" href="../../da/dca/class_quant_lib_1_1_interpolated_swaption_volatility_cube.html#aaabda23c949781900053ecaf5506f891" title=" " alt="" coords="263,664,472,704"/>
+<area shape="rect" href="../../da/dca/class_quant_lib_1_1_interpolated_swaption_volatility_cube.html#a4b3d02855e7d7d105191568e3f598dd0" title=" " alt="" coords="5,664,215,704"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#ad224c1a7c70301d545c2d63ece164d8b" title=" " alt="" coords="755,696,934,736"/>
 </map>
 </div>
 
@@ -681,20 +817,67 @@ Private Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d3/dbf/class_quant_lib_1_1_swap_spread_index.html#a1300d4627713c020d787e79251fbd518">SwapSpreadIndex</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1c/index_8hpp_source.html#l00072">72</a> of file <a class="el" href="../../d0/d1c/index_8hpp_source.html">index.hpp</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../d0/d1c/index_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../d0/d1c/index_8hpp_source.html">index.hpp</a>.</p>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a4d511459f4bbc7cc8598b479d2ac4faf_icgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a4d511459f4bbc7cc8598b479d2ac4faf_icgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_a4d511459f4bbc7cc8598b479d2ac4faf_icgraph" id="ad8/d39/class_quant_lib_1_1_index_a4d511459f4bbc7cc8598b479d2ac4faf_icgraph">
-<area shape="rect" title="check if index allows for native fixings." alt="" coords="577,71,712,96"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#af315c7aa233f881dd486c04fd8ae2154" title="check if index allows for native fixings" alt="" coords="351,71,529,96"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a6209f2dee5b5f7065d3d3b9747eb419e" title="stores the historical fixing at the given date" alt="" coords="45,5,123,31"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7508199daa86b2f60ad153454b944558" title="stores historical fixings from a TimeSeries" alt="" coords="214,71,299,96"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a45034f65c461ffc15eb4679b02dde6c1" title="clears all stored historical fixings" alt="" coords="211,120,303,145"/>
-<area shape="rect" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#ace79d56d04a98736c996cfc112971709" title=" " alt="" coords="5,63,163,103"/>
+<area shape="rect" title="check if index allows for native fixings." alt="" coords="825,113,960,138"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#af315c7aa233f881dd486c04fd8ae2154" title="check if index allows for native fixings" alt="" coords="599,113,777,138"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a6209f2dee5b5f7065d3d3b9747eb419e" title=" " alt="" coords="282,45,361,70"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7508199daa86b2f60ad153454b944558" title="stores historical fixings from a TimeSeries" alt="" coords="462,113,547,138"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a45034f65c461ffc15eb4679b02dde6c1" title="clears all stored historical fixings" alt="" coords="459,166,551,191"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a6e7c2f06156bc986266ded7619af86ac" title=" " alt="" coords="5,5,184,45"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#ad224c1a7c70301d545c2d63ece164d8b" title=" " alt="" coords="5,69,184,109"/>
+<area shape="rect" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#ace79d56d04a98736c996cfc112971709" title=" " alt="" coords="243,101,400,141"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a47256ff46c55a4a73152af3b83350ddf" title=" " alt="" coords="232,165,411,205"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a44137bb65de2396875934e48a6ee5099" name="a44137bb65de2396875934e48a6ee5099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44137bb65de2396875934e48a6ee5099">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>
+
+<p>Implements <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a99b02345a8a15d3c5ea2844a2253f510">Observer</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d1c/index_8hpp_source.html#l00136">136</a> of file <a class="el" href="../../d0/d1c/index_8hpp_source.html">index.hpp</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a44137bb65de2396875934e48a6ee5099_cgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a44137bb65de2396875934e48a6ee5099_cgraph" alt=""/></div>
+<map name="ad8/d39/class_quant_lib_1_1_index_a44137bb65de2396875934e48a6ee5099_cgraph" id="ad8/d39/class_quant_lib_1_1_index_a44137bb65de2396875934e48a6ee5099_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,67,81"/>
+<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c" title=" " alt="" coords="115,49,261,89"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="333,5,480,60"/>
+<area shape="rect" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html#a9df97bdb2f4eae6b71f787614c60e1af" title=" " alt="" coords="309,85,504,125"/>
+<area shape="rect" href="../../d3/d71/class_quant_lib_1_1_observable_settings.html#ad60af33e471030b189974c2a12d525e6" title=" " alt="" coords="552,85,747,125"/>
 </map>
 </div>
 
@@ -740,25 +923,34 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>stores the historical fixing at the given date </p>
-<p >the date passed as arguments must be the actual calendar date of the fixing; no settlement days must be used. </p>
-
 <p>Reimplemented in <a class="el" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#ace79d56d04a98736c996cfc112971709">InflationIndex</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d14/index_8cpp_source.html#l00024">24</a> of file <a class="el" href="../../db/d14/index_8cpp_source.html">index.cpp</a>.</p>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a6209f2dee5b5f7065d3d3b9747eb419e_cgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a6209f2dee5b5f7065d3d3b9747eb419e_cgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_a6209f2dee5b5f7065d3d3b9747eb419e_cgraph" id="ad8/d39/class_quant_lib_1_1_index_a6209f2dee5b5f7065d3d3b9747eb419e_cgraph">
-<area shape="rect" title="stores the historical fixing at the given date" alt="" coords="5,80,84,105"/>
+<area shape="rect" title=" " alt="" coords="5,80,84,105"/>
 <area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7508199daa86b2f60ad153454b944558" title="stores historical fixings from a TimeSeries" alt="" coords="132,29,217,55"/>
 <area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#af315c7aa233f881dd486c04fd8ae2154" title="check if index allows for native fixings" alt="" coords="265,55,444,80"/>
 <area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a3fe8532d0a96ae0ba25ac781e150aa37" title="returns the fixing at the given date" alt="" coords="149,131,201,156"/>
 <area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a4d511459f4bbc7cc8598b479d2ac4faf" title="check if index allows for native fixings." alt="" coords="492,29,627,55"/>
 <area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7f04e718c6856c4d3d77a496b6acad0d" title="Returns the name of the index." alt="" coords="532,79,587,104"/>
+</map>
+</div>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a6209f2dee5b5f7065d3d3b9747eb419e_icgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a6209f2dee5b5f7065d3d3b9747eb419e_icgraph" alt=""/></div>
+<map name="ad8/d39/class_quant_lib_1_1_index_a6209f2dee5b5f7065d3d3b9747eb419e_icgraph" id="ad8/d39/class_quant_lib_1_1_index_a6209f2dee5b5f7065d3d3b9747eb419e_icgraph">
+<area shape="rect" title=" " alt="" coords="232,45,311,70"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a6e7c2f06156bc986266ded7619af86ac" title=" " alt="" coords="5,5,184,45"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#ad224c1a7c70301d545c2d63ece164d8b" title=" " alt="" coords="5,69,184,109"/>
 </map>
 </div>
 
@@ -793,12 +985,12 @@ Private Member Functions</h2></td></tr>
 <p>stores historical fixings from a <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html" title="Container for historical data.">TimeSeries</a> </p>
 <p >the dates in the <a class="el" href="../../d2/d05/class_quant_lib_1_1_time_series.html" title="Container for historical data.">TimeSeries</a> must be the actual calendar dates of the fixings; no settlement days must be used. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d14/index_8cpp_source.html#l00033">33</a> of file <a class="el" href="../../db/d14/index_8cpp_source.html">index.cpp</a>.</p>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../db/d14/index_8cpp_source.html#l00031">31</a> of file <a class="el" href="../../db/d14/index_8cpp_source.html">index.cpp</a>.</p>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a7508199daa86b2f60ad153454b944558_cgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a7508199daa86b2f60ad153454b944558_cgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_a7508199daa86b2f60ad153454b944558_cgraph" id="ad8/d39/class_quant_lib_1_1_index_a7508199daa86b2f60ad153454b944558_cgraph">
 <area shape="rect" title="stores historical fixings from a TimeSeries" alt="" coords="5,31,91,56"/>
@@ -807,16 +999,18 @@ Private Member Functions</h2></td></tr>
 <area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7f04e718c6856c4d3d77a496b6acad0d" title="Returns the name of the index." alt="" coords="405,55,460,80"/>
 </map>
 </div>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a7508199daa86b2f60ad153454b944558_icgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a7508199daa86b2f60ad153454b944558_icgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_a7508199daa86b2f60ad153454b944558_icgraph" id="ad8/d39/class_quant_lib_1_1_index_a7508199daa86b2f60ad153454b944558_icgraph">
-<area shape="rect" title="stores historical fixings from a TimeSeries" alt="" coords="211,42,296,67"/>
-<area shape="rect" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#ace79d56d04a98736c996cfc112971709" title=" " alt="" coords="5,5,163,45"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a6209f2dee5b5f7065d3d3b9747eb419e" title="stores the historical fixing at the given date" alt="" coords="45,70,123,95"/>
+<area shape="rect" title="stores historical fixings from a TimeSeries" alt="" coords="437,42,523,67"/>
+<area shape="rect" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#ace79d56d04a98736c996cfc112971709" title=" " alt="" coords="232,5,389,45"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a6209f2dee5b5f7065d3d3b9747eb419e" title=" " alt="" coords="271,70,350,95"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a6e7c2f06156bc986266ded7619af86ac" title=" " alt="" coords="5,31,184,71"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#ad224c1a7c70301d545c2d63ece164d8b" title=" " alt="" coords="5,95,184,135"/>
 </map>
 </div>
 
@@ -863,24 +1057,21 @@ Private Member Functions</h2></td></tr>
 <p>stores historical fixings at the given dates </p>
 <p >the dates passed as arguments must be the actual calendar dates of the fixings; no settlement days must be used. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1c/index_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../d0/d1c/index_8hpp_source.html">index.hpp</a>.</p>
-<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../d0/d1c/index_8hpp_source.html#l00100">100</a> of file <a class="el" href="../../d0/d1c/index_8hpp_source.html">index.hpp</a>.</p>
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_ac5a81c6efaef1986836098611234389a_cgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_ac5a81c6efaef1986836098611234389a_cgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_ac5a81c6efaef1986836098611234389a_cgraph" id="ad8/d39/class_quant_lib_1_1_index_ac5a81c6efaef1986836098611234389a_cgraph">
-<area shape="rect" title="stores historical fixings at the given dates" alt="" coords="5,196,91,221"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#af315c7aa233f881dd486c04fd8ae2154" title="check if index allows for native fixings" alt="" coords="141,5,320,31"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7f04e718c6856c4d3d77a496b6acad0d" title="Returns the name of the index." alt="" coords="411,55,465,80"/>
-<area shape="rect" href="../../d5/d7b/namespace_quant_lib.html#ab7d80f1774594ee7d9c1309083a44207" title=" " alt="" coords="174,107,287,132"/>
-<area shape="rect" href="../../d7/d36/class_quant_lib_1_1_index_manager.html#a541d72cc581417e4a2319c4c729484fa" title="returns the (possibly empty) history of the index fixings" alt="" coords="149,157,312,197"/>
-<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="139,221,323,261"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#abaaf5b4d83d8e96c321a71b3eec62a78" title="returns TRUE if the fixing date is a valid one" alt="" coords="169,285,292,311"/>
-<area shape="rect" href="../../d7/d36/class_quant_lib_1_1_index_manager.html#a656f861ee93f7f3e0dafbe406712a7ca" title="stores the historical fixings of the index" alt="" coords="149,335,312,375"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html#a8beb14a6b168772900b48e3161b4c0e6" title=" " alt="" coords="147,400,315,425"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a4d511459f4bbc7cc8598b479d2ac4faf" title="check if index allows for native fixings." alt="" coords="371,5,505,31"/>
+<area shape="rect" title="stores historical fixings at the given dates" alt="" coords="5,121,91,146"/>
+<area shape="rect" href="../../d7/d36/class_quant_lib_1_1_index_manager.html#adfd9184fea6e7b482f9aac64c94f0297" title="add fixings" alt="" coords="149,5,312,45"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#af315c7aa233f881dd486c04fd8ae2154" title="check if index allows for native fixings" alt="" coords="141,70,320,95"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7f04e718c6856c4d3d77a496b6acad0d" title="Returns the name of the index." alt="" coords="411,119,465,145"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="139,171,323,211"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#abaaf5b4d83d8e96c321a71b3eec62a78" title="returns TRUE if the fixing date is a valid one" alt="" coords="169,235,292,261"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a4d511459f4bbc7cc8598b479d2ac4faf" title="check if index allows for native fixings." alt="" coords="371,70,505,95"/>
 </map>
 </div>
 
@@ -903,20 +1094,86 @@ Private Member Functions</h2></td></tr>
 
 <p>clears all stored historical fixings </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d14/index_8cpp_source.html#l00045">45</a> of file <a class="el" href="../../db/d14/index_8cpp_source.html">index.cpp</a>.</p>
-<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="../../db/d14/index_8cpp_source.html#l00043">43</a> of file <a class="el" href="../../db/d14/index_8cpp_source.html">index.cpp</a>.</p>
+<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a45034f65c461ffc15eb4679b02dde6c1_cgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a45034f65c461ffc15eb4679b02dde6c1_cgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_a45034f65c461ffc15eb4679b02dde6c1_cgraph" id="ad8/d39/class_quant_lib_1_1_index_a45034f65c461ffc15eb4679b02dde6c1_cgraph">
 <area shape="rect" title="clears all stored historical fixings" alt="" coords="5,85,97,111"/>
 <area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#af315c7aa233f881dd486c04fd8ae2154" title="check if index allows for native fixings" alt="" coords="148,5,327,31"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7f04e718c6856c4d3d77a496b6acad0d" title="Returns the name of the index." alt="" coords="417,55,472,80"/>
-<area shape="rect" href="../../d7/d36/class_quant_lib_1_1_index_manager.html#aefc1fd999512aefe154064e77d3c5a18" title="clears the historical fixings of the index" alt="" coords="156,106,319,146"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7f04e718c6856c4d3d77a496b6acad0d" title="Returns the name of the index." alt="" coords="431,56,486,81"/>
+<area shape="rect" href="../../d7/d36/class_quant_lib_1_1_index_manager.html#aefc1fd999512aefe154064e77d3c5a18" title=" " alt="" coords="156,106,319,146"/>
 <area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="145,170,329,210"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a4d511459f4bbc7cc8598b479d2ac4faf" title="check if index allows for native fixings." alt="" coords="377,5,512,31"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a4d511459f4bbc7cc8598b479d2ac4faf" title="check if index allows for native fixings." alt="" coords="391,5,526,31"/>
+<area shape="rect" href="../../d7/d36/class_quant_lib_1_1_index_manager.html#ad97c52458abfb407fa45ccb6e18b2d61" title=" " alt="" coords="377,106,540,146"/>
+</map>
+</div>
+<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a45034f65c461ffc15eb4679b02dde6c1_icgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a45034f65c461ffc15eb4679b02dde6c1_icgraph" alt=""/></div>
+<map name="ad8/d39/class_quant_lib_1_1_index_a45034f65c461ffc15eb4679b02dde6c1_icgraph" id="ad8/d39/class_quant_lib_1_1_index_a45034f65c461ffc15eb4679b02dde6c1_icgraph">
+<area shape="rect" title="clears all stored historical fixings" alt="" coords="232,13,324,38"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a47256ff46c55a4a73152af3b83350ddf" title=" " alt="" coords="5,5,184,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a20ef0a6ae99fb592dfe7672b9db4e52e" name="a20ef0a6ae99fb592dfe7672b9db4e52e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ef0a6ae99fb592dfe7672b9db4e52e">&#9670;&#160;</a></span>notifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ext::shared_ptr&lt; <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &gt; notifier </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d1c/index_8hpp_source.html#l00113">113</a> of file <a class="el" href="../../d0/d1c/index_8hpp_source.html">index.hpp</a>.</p>
+<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a20ef0a6ae99fb592dfe7672b9db4e52e_cgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a20ef0a6ae99fb592dfe7672b9db4e52e_cgraph" alt=""/></div>
+<map name="ad8/d39/class_quant_lib_1_1_index_a20ef0a6ae99fb592dfe7672b9db4e52e_cgraph" id="ad8/d39/class_quant_lib_1_1_index_a20ef0a6ae99fb592dfe7672b9db4e52e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,70,65,95"/>
+<area shape="rect" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291" title="access to the unique instance" alt="" coords="113,5,297,45"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7f04e718c6856c4d3d77a496b6acad0d" title="Returns the name of the index." alt="" coords="178,70,233,95"/>
+<area shape="rect" href="../../d7/d36/class_quant_lib_1_1_index_manager.html#ad97c52458abfb407fa45ccb6e18b2d61" title=" " alt="" coords="124,120,287,160"/>
+</map>
+</div>
+<div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-20-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-20-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_a20ef0a6ae99fb592dfe7672b9db4e52e_icgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_a20ef0a6ae99fb592dfe7672b9db4e52e_icgraph" alt=""/></div>
+<map name="ad8/d39/class_quant_lib_1_1_index_a20ef0a6ae99fb592dfe7672b9db4e52e_icgraph" id="ad8/d39/class_quant_lib_1_1_index_a20ef0a6ae99fb592dfe7672b9db4e52e_icgraph">
+<area shape="rect" title=" " alt="" coords="236,109,296,134"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#aa64e08ac478965e9f6bbc629775a9b8b" title=" " alt="" coords="7,5,186,45"/>
+<area shape="rect" href="../../d3/d77/class_quant_lib_1_1_equity_index.html#af3d180493bd237902679823e0aafd810" title=" " alt="" coords="21,69,172,109"/>
+<area shape="rect" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#a1fcc53893b7eaf9da5947fed9e834d28" title=" " alt="" coords="18,133,175,173"/>
+<area shape="rect" href="../../d3/de8/class_quant_lib_1_1_interest_rate_index.html#aa1b6afe709e0791de06c5b84e4a9eed4" title=" " alt="" coords="5,197,188,237"/>
 </map>
 </div>
 
@@ -948,11 +1205,11 @@ Private Member Functions</h2></td></tr>
 <p>check if index allows for native fixings </p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d14/index_8cpp_source.html#l00050">50</a> of file <a class="el" href="../../db/d14/index_8cpp_source.html">index.cpp</a>.</p>
-<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-21-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div id="dynsection-21-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_af315c7aa233f881dd486c04fd8ae2154_cgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_af315c7aa233f881dd486c04fd8ae2154_cgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_af315c7aa233f881dd486c04fd8ae2154_cgraph" id="ad8/d39/class_quant_lib_1_1_index_af315c7aa233f881dd486c04fd8ae2154_cgraph">
 <area shape="rect" title="check if index allows for native fixings" alt="" coords="5,31,184,56"/>
@@ -960,18 +1217,21 @@ Private Member Functions</h2></td></tr>
 <area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7f04e718c6856c4d3d77a496b6acad0d" title="Returns the name of the index." alt="" coords="272,55,327,80"/>
 </map>
 </div>
-<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-22-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div id="dynsection-22-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d8/d39/class_quant_lib_1_1_index_af315c7aa233f881dd486c04fd8ae2154_icgraph.png" border="0" usemap="#ad8/d39/class_quant_lib_1_1_index_af315c7aa233f881dd486c04fd8ae2154_icgraph" alt=""/></div>
 <map name="ad8/d39/class_quant_lib_1_1_index_af315c7aa233f881dd486c04fd8ae2154_icgraph" id="ad8/d39/class_quant_lib_1_1_index_af315c7aa233f881dd486c04fd8ae2154_icgraph">
-<area shape="rect" title="check if index allows for native fixings" alt="" coords="351,71,529,96"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a6209f2dee5b5f7065d3d3b9747eb419e" title="stores the historical fixing at the given date" alt="" coords="45,5,123,31"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7508199daa86b2f60ad153454b944558" title="stores historical fixings from a TimeSeries" alt="" coords="214,71,299,96"/>
-<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a45034f65c461ffc15eb4679b02dde6c1" title="clears all stored historical fixings" alt="" coords="211,120,303,145"/>
-<area shape="rect" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#ace79d56d04a98736c996cfc112971709" title=" " alt="" coords="5,63,163,103"/>
+<area shape="rect" title="check if index allows for native fixings" alt="" coords="599,113,777,138"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a6209f2dee5b5f7065d3d3b9747eb419e" title=" " alt="" coords="282,45,361,70"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a7508199daa86b2f60ad153454b944558" title="stores historical fixings from a TimeSeries" alt="" coords="462,113,547,138"/>
+<area shape="rect" href="../../d8/d39/class_quant_lib_1_1_index.html#a45034f65c461ffc15eb4679b02dde6c1" title="clears all stored historical fixings" alt="" coords="459,166,551,191"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a6e7c2f06156bc986266ded7619af86ac" title=" " alt="" coords="5,5,184,45"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#ad224c1a7c70301d545c2d63ece164d8b" title=" " alt="" coords="5,69,184,109"/>
+<area shape="rect" href="../../dd/d68/class_quant_lib_1_1_inflation_index.html#ace79d56d04a98736c996cfc112971709" title=" " alt="" coords="243,101,400,141"/>
+<area shape="rect" href="../../de/d32/class_quant_lib_1_1_commodity_index.html#a47256ff46c55a4a73152af3b83350ddf" title=" " alt="" coords="232,165,411,205"/>
 </map>
 </div>
 

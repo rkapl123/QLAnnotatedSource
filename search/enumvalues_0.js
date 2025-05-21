@@ -31,8 +31,9 @@ var searchData=
   ['atmputcall50_28',['AtmPutCall50',['../de/db5/class_quant_lib_1_1_delta_vol_quote.html#a38960c27f35f05f126bdacd11750af00a212884fe42b4977fa4f60f7fd0d34250',1,'QuantLib::DeltaVolQuote']]],
   ['atmspot_29',['AtmSpot',['../de/db5/class_quant_lib_1_1_delta_vol_quote.html#a38960c27f35f05f126bdacd11750af00a137141ed6f2a641ec8cf209f05510058',1,'QuantLib::DeltaVolQuote']]],
   ['atmvegamax_30',['AtmVegaMax',['../de/db5/class_quant_lib_1_1_delta_vol_quote.html#a38960c27f35f05f126bdacd11750af00a4d8cb03d88a3bcccfadd048de13fa594',1,'QuantLib::DeltaVolQuote']]],
-  ['aug_31',['Aug',['../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba35b744bc15334aee236729b16b3763fb',1,'QuantLib']]],
-  ['august_32',['August',['../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba1c412406c5a889dd051e12d67f407d85',1,'QuantLib']]],
-  ['auto_33',['Auto',['../dd/dd4/class_quant_lib_1_1_qd_fp_american_engine.html#a8cda57efeffbe6c536388a4c01838b76ab81b7469043e9c54603ca3aebbe38e90',1,'QuantLib::QdFpAmericanEngine']]],
-  ['automatedconversion_34',['AutomatedConversion',['../d1/d7c/class_quant_lib_1_1_quantity.html#ac32291f3a839fe01ad0708ab8c53d107ad49f32edf8f7bca53bf83458dd499f39',1,'QuantLib::Quantity::AutomatedConversion()'],['../d2/d26/class_quant_lib_1_1_money.html#ac32291f3a839fe01ad0708ab8c53d107ad49f32edf8f7bca53bf83458dd499f39',1,'QuantLib::Money::AutomatedConversion()']]]
+  ['auckland_31',['Auckland',['../dd/deb/class_quant_lib_1_1_new_zealand.html#abe41cfffd960e29a5d8b07be00aeda42ace4173e19b64962db29f09401b9b6c1a',1,'QuantLib::NewZealand']]],
+  ['aug_32',['Aug',['../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba35b744bc15334aee236729b16b3763fb',1,'QuantLib']]],
+  ['august_33',['August',['../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba1c412406c5a889dd051e12d67f407d85',1,'QuantLib']]],
+  ['auto_34',['Auto',['../dd/dd4/class_quant_lib_1_1_qd_fp_american_engine.html#a8cda57efeffbe6c536388a4c01838b76ab81b7469043e9c54603ca3aebbe38e90',1,'QuantLib::QdFpAmericanEngine']]],
+  ['automatedconversion_35',['AutomatedConversion',['../d1/d7c/class_quant_lib_1_1_quantity.html#ac32291f3a839fe01ad0708ab8c53d107ad49f32edf8f7bca53bf83458dd499f39',1,'QuantLib::Quantity::AutomatedConversion()'],['../d2/d26/class_quant_lib_1_1_money.html#ac32291f3a839fe01ad0708ab8c53d107ad49f32edf8f7bca53bf83458dd499f39',1,'QuantLib::Money::AutomatedConversion()']]]
 ];

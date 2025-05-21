@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -85,7 +85,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle"><div class="title">functional.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -93,9 +93,7 @@ $(function() {
 <p>Maps function, bind and cref to either the boost or std implementation.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="../../de/d56/qldefines_8hpp_source.html">ql/qldefines.hpp</a>&gt;</code><br />
-<code>#include &lt;boost/function.hpp&gt;</code><br />
-<code>#include &lt;boost/bind/bind.hpp&gt;</code><br />
-<code>#include &lt;boost/ref.hpp&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
 </div>
 <p><a href="../../d2/db4/functional_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -108,34 +106,17 @@ Namespaces</h2></td></tr>
 <tr class="memitem:d1/dbf/namespace_quant_lib_1_1ext_1_1placeholders"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dbf/namespace_quant_lib_1_1ext_1_1placeholders.html">QuantLib::ext::placeholders</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:af6d4e6c3884ebfcb5986f31e60f7429c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db4/functional_8hpp.html#af6d4e6c3884ebfcb5986f31e60f7429c">QL_NULL_FUNCTION</a>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:af6d4e6c3884ebfcb5986f31e60f7429c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:abfeddc28a7e974da7bb14e824b1ef501"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:abfeddc28a7e974da7bb14e824b1ef501"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#abfeddc28a7e974da7bb14e824b1ef501">function</a> = std::function&lt; Ts... &gt;</td></tr>
+<tr class="separator:abfeddc28a7e974da7bb14e824b1ef501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Maps function, bind and cref to either the boost or std implementation. </p>
 
 <p class="definition">Definition in file <a class="el" href="../../d2/db4/functional_8hpp_source.html">functional.hpp</a>.</p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="af6d4e6c3884ebfcb5986f31e60f7429c" name="af6d4e6c3884ebfcb5986f31e60f7429c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6d4e6c3884ebfcb5986f31e60f7429c">&#9670;&#160;</a></span>QL_NULL_FUNCTION</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define QL_NULL_FUNCTION&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000018">Deprecated:</a></b></dt><dd>To check if a function is empty, use it in a bool context instead of comparing it to QL_NULL_FUNCTION. Deprecated in version 1.32. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d2/db4/functional_8hpp_source.html#l00078">78</a> of file <a class="el" href="../../d2/db4/functional_8hpp_source.html">functional.hpp</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

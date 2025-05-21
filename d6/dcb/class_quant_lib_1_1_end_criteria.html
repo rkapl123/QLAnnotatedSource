@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -86,6 +86,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../db/daf/class_quant_lib_1_1_end_criteria-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">EndCriteria Class Reference</div></div>
@@ -103,7 +104,7 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d7/d01/class_quant_lib_1_1_end_criteria__coll__graph.png" border="0" usemap="#a_end_criteria_coll__map" alt="Collaboration graph"/></div>
 <map name="a_end_criteria_coll__map" id="a_end_criteria_coll__map">
-<area shape="rect" title="Criteria to end optimization process:" alt="" coords="22,152,263,368"/>
+<area shape="rect" title="Criteria to end optimization process:" alt="" coords="22,152,263,383"/>
 <area shape="rect" title=" " alt="" coords="5,5,67,45"/>
 <area shape="rect" title=" " alt="" coords="207,5,291,45"/>
 </map>
@@ -119,6 +120,7 @@ Public Types</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7a609aaafaa7919647e823d340096c355d">StationaryFunctionAccuracy</a>
 , <a class="el" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7ad1805f716063d5991ba4a2c8aebf6308">ZeroGradientNorm</a>
+, <a class="el" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7aed7e2ee85e72af24d708242e4defb0d3">FunctionEpsilonTooSmall</a>
 , <a class="el" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7a4e81c184ac3ad48a389cd4454c4a05bb">Unknown</a>
 <br />
  }</td></tr>
@@ -151,6 +153,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1e2cf9029f159d6a966a13b66ef63bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e96d48d6092d0225f3b3c734238a4b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a2e96d48d6092d0225f3b3c734238a4b7">checkZeroGradientNorm</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> gNorm, <a class="el" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7">EndCriteria::Type</a> &amp;ecType) const</td></tr>
 <tr class="separator:a2e96d48d6092d0225f3b3c734238a4b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a2076dbee1b114c2d016dd595092406dc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a2076dbee1b114c2d016dd595092406dc">succeeded</a> (<a class="el" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7">EndCriteria::Type</a> ecType)</td></tr>
+<tr class="separator:a2076dbee1b114c2d016dd595092406dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -199,6 +206,7 @@ Protected Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="a1d1cfd8ffb84e947f82999c682b666a7a36536d16f277f9dfa2406257a6933c1c" name="a1d1cfd8ffb84e947f82999c682b666a7a36536d16f277f9dfa2406257a6933c1c"></a>StationaryFunctionValue&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a1d1cfd8ffb84e947f82999c682b666a7a609aaafaa7919647e823d340096c355d" name="a1d1cfd8ffb84e947f82999c682b666a7a609aaafaa7919647e823d340096c355d"></a>StationaryFunctionAccuracy&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a1d1cfd8ffb84e947f82999c682b666a7ad1805f716063d5991ba4a2c8aebf6308" name="a1d1cfd8ffb84e947f82999c682b666a7ad1805f716063d5991ba4a2c8aebf6308"></a>ZeroGradientNorm&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1d1cfd8ffb84e947f82999c682b666a7aed7e2ee85e72af24d708242e4defb0d3" name="a1d1cfd8ffb84e947f82999c682b666a7aed7e2ee85e72af24d708242e4defb0d3"></a>FunctionEpsilonTooSmall&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a1d1cfd8ffb84e947f82999c682b666a7a4e81c184ac3ad48a389cd4454c4a05bb" name="a1d1cfd8ffb84e947f82999c682b666a7a4e81c184ac3ad48a389cd4454c4a05bb"></a>Unknown&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -299,9 +307,8 @@ Protected Attributes</h2></td></tr>
 <area shape="rect" href="../../dc/d9f/class_quant_lib_1_1_particle_swarm_optimization.html#af67ca22f313bdd3223a68b5c85f9065f" title="minimize the optimization problem P" alt="" coords="240,183,479,223"/>
 <area shape="rect" href="../../dd/d57/class_quant_lib_1_1_levenberg_marquardt.html#af67ca22f313bdd3223a68b5c85f9065f" title="minimize the optimization problem P" alt="" coords="260,247,459,287"/>
 <area shape="rect" href="../../d6/d3a/class_quant_lib_1_1_decreasing_inertia.html#aa45ebd2a9fcc2e2d70c6882dc33b1ee9" title="initialize state for current problem" alt="" coords="268,311,451,351"/>
-<area shape="rect" href="../../d0/dbb/class_quant_lib_1_1_global_bootstrap.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="11,183,186,223"/>
-<area shape="rect" href="../../d4/dbd/class_quant_lib_1_1_local_bootstrap.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="14,247,183,287"/>
-<area shape="rect" href="../../d6/d27/class_quant_lib_1_1_basket_generating_engine.html#a7dbdfe85369d19bb0094a816d36d5f7f" title=" " alt="" coords="5,311,192,351"/>
+<area shape="rect" href="../../d4/dbd/class_quant_lib_1_1_local_bootstrap.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="14,215,183,255"/>
+<area shape="rect" href="../../d6/d27/class_quant_lib_1_1_basket_generating_engine.html#a7dbdfe85369d19bb0094a816d36d5f7f" title=" " alt="" coords="5,279,192,319"/>
 </map>
 </div>
 
@@ -394,12 +401,11 @@ Protected Attributes</h2></td></tr>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d6/dcb/class_quant_lib_1_1_end_criteria_a3b3025d8c148e9715643757ef69bbf6a_icgraph.png" border="0" usemap="#ad6/dcb/class_quant_lib_1_1_end_criteria_a3b3025d8c148e9715643757ef69bbf6a_icgraph" alt=""/></div>
 <map name="ad6/dcb/class_quant_lib_1_1_end_criteria_a3b3025d8c148e9715643757ef69bbf6a_icgraph" id="ad6/dcb/class_quant_lib_1_1_end_criteria_a3b3025d8c148e9715643757ef69bbf6a_icgraph">
-<area shape="rect" title=" " alt="" coords="487,109,597,134"/>
-<area shape="rect" href="../../dd/d57/class_quant_lib_1_1_levenberg_marquardt.html#af67ca22f313bdd3223a68b5c85f9065f" title="minimize the optimization problem P" alt="" coords="240,69,439,109"/>
-<area shape="rect" href="../../d3/d98/class_quant_lib_1_1_line_search_based_method.html#af67ca22f313bdd3223a68b5c85f9065f" title="minimize the optimization problem P" alt="" coords="247,133,431,173"/>
-<area shape="rect" href="../../d0/dbb/class_quant_lib_1_1_global_bootstrap.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="11,5,186,45"/>
-<area shape="rect" href="../../d4/dbd/class_quant_lib_1_1_local_bootstrap.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="14,69,183,109"/>
-<area shape="rect" href="../../d6/d27/class_quant_lib_1_1_basket_generating_engine.html#a7dbdfe85369d19bb0094a816d36d5f7f" title=" " alt="" coords="5,133,192,173"/>
+<area shape="rect" title=" " alt="" coords="487,77,597,102"/>
+<area shape="rect" href="../../dd/d57/class_quant_lib_1_1_levenberg_marquardt.html#af67ca22f313bdd3223a68b5c85f9065f" title="minimize the optimization problem P" alt="" coords="240,37,439,77"/>
+<area shape="rect" href="../../d3/d98/class_quant_lib_1_1_line_search_based_method.html#af67ca22f313bdd3223a68b5c85f9065f" title="minimize the optimization problem P" alt="" coords="247,101,431,141"/>
+<area shape="rect" href="../../d4/dbd/class_quant_lib_1_1_local_bootstrap.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="14,5,183,45"/>
+<area shape="rect" href="../../d6/d27/class_quant_lib_1_1_basket_generating_engine.html#a7dbdfe85369d19bb0094a816d36d5f7f" title=" " alt="" coords="5,69,192,109"/>
 </map>
 </div>
 
@@ -540,17 +546,13 @@ Protected Attributes</h2></td></tr>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d6/dcb/class_quant_lib_1_1_end_criteria_af94dba8b3985d78b4985a154d66253e5_icgraph.png" border="0" usemap="#ad6/dcb/class_quant_lib_1_1_end_criteria_af94dba8b3985d78b4985a154d66253e5_icgraph" alt=""/></div>
 <map name="ad6/dcb/class_quant_lib_1_1_end_criteria_af94dba8b3985d78b4985a154d66253e5_icgraph" id="ad6/dcb/class_quant_lib_1_1_end_criteria_af94dba8b3985d78b4985a154d66253e5_icgraph">
-<area shape="rect" title=" " alt="" coords="491,205,625,230"/>
-<area shape="rect" href="../../dd/d7c/class_quant_lib_1_1_simulated_annealing.html#a0de301da6f4b73ed844c9fc9d33fde22" title="minimize the optimization problem P" alt="" coords="243,5,440,45"/>
-<area shape="rect" href="../../d4/d1a/class_quant_lib_1_1_differential_evolution.html#ac751f7a68412da7eb1f1f6dc111c543d" title="minimize the optimization problem P" alt="" coords="244,69,439,109"/>
-<area shape="rect" href="../../dd/d57/class_quant_lib_1_1_levenberg_marquardt.html#af67ca22f313bdd3223a68b5c85f9065f" title="minimize the optimization problem P" alt="" coords="242,133,441,173"/>
-<area shape="rect" href="../../df/d78/class_quant_lib_1_1_simplex.html#af67ca22f313bdd3223a68b5c85f9065f" title="minimize the optimization problem P" alt="" coords="273,197,410,237"/>
-<area shape="rect" href="../../d4/df2/class_quant_lib_1_1_armijo_line_search.html#a89de4d4788fe811608de466079f3c900" title="Perform line search." alt="" coords="249,261,433,301"/>
-<area shape="rect" href="../../dd/d8e/class_quant_lib_1_1_goldstein_line_search.html#a89de4d4788fe811608de466079f3c900" title="Perform line search." alt="" coords="240,325,443,365"/>
-<area shape="rect" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a17f1249d1a9eadc624bdecfe70afc394" title=" " alt="" coords="303,390,380,415"/>
-<area shape="rect" href="../../d0/dbb/class_quant_lib_1_1_global_bootstrap.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="11,69,186,109"/>
-<area shape="rect" href="../../d4/dbd/class_quant_lib_1_1_local_bootstrap.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="14,133,183,173"/>
-<area shape="rect" href="../../d6/d27/class_quant_lib_1_1_basket_generating_engine.html#a7dbdfe85369d19bb0094a816d36d5f7f" title=" " alt="" coords="5,197,192,237"/>
+<area shape="rect" title=" " alt="" coords="256,173,391,198"/>
+<area shape="rect" href="../../dd/d7c/class_quant_lib_1_1_simulated_annealing.html#a0de301da6f4b73ed844c9fc9d33fde22" title="minimize the optimization problem P" alt="" coords="8,5,205,45"/>
+<area shape="rect" href="../../d4/d1a/class_quant_lib_1_1_differential_evolution.html#ac751f7a68412da7eb1f1f6dc111c543d" title="minimize the optimization problem P" alt="" coords="9,69,204,109"/>
+<area shape="rect" href="../../df/d78/class_quant_lib_1_1_simplex.html#af67ca22f313bdd3223a68b5c85f9065f" title="minimize the optimization problem P" alt="" coords="38,133,175,173"/>
+<area shape="rect" href="../../d4/df2/class_quant_lib_1_1_armijo_line_search.html#a89de4d4788fe811608de466079f3c900" title="Perform line search." alt="" coords="15,197,199,237"/>
+<area shape="rect" href="../../dd/d8e/class_quant_lib_1_1_goldstein_line_search.html#a89de4d4788fe811608de466079f3c900" title="Perform line search." alt="" coords="5,261,208,301"/>
+<area shape="rect" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a17f1249d1a9eadc624bdecfe70afc394" title=" " alt="" coords="68,326,145,351"/>
 </map>
 </div>
 
@@ -757,6 +759,46 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a2076dbee1b114c2d016dd595092406dc" name="a2076dbee1b114c2d016dd595092406dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2076dbee1b114c2d016dd595092406dc">&#9670;&#160;</a></span>succeeded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/db9/classbool.html">bool</a> succeeded </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dcb/class_quant_lib_1_1_end_criteria.html#a1d1cfd8ffb84e947f82999c682b666a7">EndCriteria::Type</a>&#160;</td>
+          <td class="paramname"><em>ecType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d91/endcriteria_8cpp_source.html#l00161">161</a> of file <a class="el" href="../../d0/d91/endcriteria_8cpp_source.html">endcriteria.cpp</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d6/dcb/class_quant_lib_1_1_end_criteria_a2076dbee1b114c2d016dd595092406dc_icgraph.png" border="0" usemap="#ad6/dcb/class_quant_lib_1_1_end_criteria_a2076dbee1b114c2d016dd595092406dc_icgraph" alt=""/></div>
+<map name="ad6/dcb/class_quant_lib_1_1_end_criteria_a2076dbee1b114c2d016dd595092406dc_icgraph" id="ad6/dcb/class_quant_lib_1_1_end_criteria_a2076dbee1b114c2d016dd595092406dc_icgraph">
+<area shape="rect" title=" " alt="" coords="228,45,313,70"/>
+<area shape="rect" href="../../d0/dbb/class_quant_lib_1_1_global_bootstrap.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="5,5,180,45"/>
+<area shape="rect" href="../../d4/dbd/class_quant_lib_1_1_local_bootstrap.html#a082ff96da379d5e17436372ccb3c0972" title=" " alt="" coords="8,69,177,109"/>
+</map>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="af75d2bb304cdff446e507879467b2582" name="af75d2bb304cdff446e507879467b2582"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af75d2bb304cdff446e507879467b2582">&#9670;&#160;</a></span>maxIterations_</h2>
@@ -780,7 +822,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Maximum number of iterations. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html#l00100">100</a> of file <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html">endcriteria.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html#l00102">102</a> of file <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html">endcriteria.hpp</a>.</p>
 
 </div>
 </div>
@@ -806,7 +848,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Maximun number of iterations in stationary state. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html#l00102">102</a> of file <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html">endcriteria.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html#l00104">104</a> of file <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html">endcriteria.hpp</a>.</p>
 
 </div>
 </div>
@@ -832,7 +874,7 @@ Protected Attributes</h2></td></tr>
 
 <p>root, function and gradient epsilons </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html#l00104">104</a> of file <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html">endcriteria.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html#l00106">106</a> of file <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html">endcriteria.hpp</a>.</p>
 
 </div>
 </div>
@@ -856,7 +898,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html#l00104">104</a> of file <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html">endcriteria.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html#l00106">106</a> of file <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html">endcriteria.hpp</a>.</p>
 
 </div>
 </div>
@@ -880,7 +922,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html#l00104">104</a> of file <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html">endcriteria.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html#l00106">106</a> of file <a class="el" href="../../dc/d36/endcriteria_8hpp_source.html">endcriteria.hpp</a>.</p>
 
 </div>
 </div>

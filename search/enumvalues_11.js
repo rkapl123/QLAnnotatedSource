@@ -12,6 +12,6 @@ var searchData=
   ['resettobestpoint_9',['ResetToBestPoint',['../d0/d18/class_quant_lib_1_1_hybrid_simulated_annealing.html#a17798a11cad9af0d74bfceb04eabba0eae2d740eb6321d6fb8b60c921610874e8',1,'QuantLib::HybridSimulatedAnnealing']]],
   ['resettoorigin_10',['ResetToOrigin',['../d0/d18/class_quant_lib_1_1_hybrid_simulated_annealing.html#a17798a11cad9af0d74bfceb04eabba0ead6e5b3bb653ffc9c50854e08bee3d60b',1,'QuantLib::HybridSimulatedAnnealing']]],
   ['restructuring_11',['Restructuring',['../d7/de1/struct_quant_lib_1_1_atomic_default.html#a1d1cfd8ffb84e947f82999c682b666a7a1354312e01b4e541f0ac04636aec58ba',1,'QuantLib::AtomicDefault']]],
-  ['ridder_12',['Ridder',['../de/dcc/class_quant_lib_1_1_qd_plus_american_engine.html#a8b06041d7c1fb05f379714f4312306eca608950afb4cc371d47b61aac780ed389',1,'QuantLib::QdPlusAmericanEngine']]],
+  ['ridder_12',['Ridder',['../dd/d50/class_quant_lib_1_1detail_1_1_sum_exponentials_root_solver.html#acf7192c608527efb8f8dedf0a3f2e706a608950afb4cc371d47b61aac780ed389',1,'QuantLib::detail::SumExponentialsRootSolver::Ridder()'],['../de/dcc/class_quant_lib_1_1_qd_plus_american_engine.html#a8b06041d7c1fb05f379714f4312306eca608950afb4cc371d47b61aac780ed389',1,'QuantLib::QdPlusAmericanEngine::Ridder()']]],
   ['runninghourlimit_13',['RunningHourLimit',['../d6/dde/class_quant_lib_1_1_fdm_v_p_p_step_condition_factory.html#a1d1cfd8ffb84e947f82999c682b666a7af15d73fa2b80e0ec69c2de328f798de7',1,'QuantLib::FdmVPPStepConditionFactory']]]
 ];

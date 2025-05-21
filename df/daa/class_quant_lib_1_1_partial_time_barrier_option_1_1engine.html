@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -89,10 +89,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Partial-Time-Barrier-Option engine base class  
+<p>Base class for partial-time barrier option engines.  
  <a href="../../df/daa/class_quant_lib_1_1_partial_time_barrier_option_1_1engine.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d8/d44/partialtimebarrieroption_8hpp_source.html">partialtimebarrieroption.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d9/d60/instruments_2partialtimebarrieroption_8hpp_source.html">partialtimebarrieroption.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for PartialTimeBarrierOption::engine:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -100,8 +100,8 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d0/daa/class_quant_lib_1_1_partial_time_barrier_option_1_1engine__inherit__graph.png" border="0" usemap="#a_partial_time_barrier_option_1_1engine_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_partial_time_barrier_option_1_1engine_inherit__map" id="a_partial_time_barrier_option_1_1engine_inherit__map">
-<area shape="rect" title="Partial&#45;Time&#45;Barrier&#45;Option engine base class" alt="" coords="35,948,201,1003"/>
-<area shape="rect" href="../../df/dcf/class_quant_lib_1_1_analytic_partial_time_barrier_option_engine.html" title=" " alt="" coords="25,1052,211,1473"/>
+<area shape="rect" title="Base class for partial&#45;time barrier option engines." alt="" coords="35,948,201,1003"/>
+<area shape="rect" href="../../df/dcf/class_quant_lib_1_1_analytic_partial_time_barrier_option_engine.html" title="analytic engine for partial&#45;time barrier options." alt="" coords="25,1052,211,1532"/>
 <area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title=" " alt="" coords="24,727,212,899"/>
 <area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="233,285,369,399"/>
 <area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="95,492,282,635"/>
@@ -116,10 +116,10 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d1/d77/class_quant_lib_1_1_partial_time_barrier_option_1_1engine__coll__graph.png" border="0" usemap="#a_partial_time_barrier_option_1_1engine_coll__map" alt="Collaboration graph"/></div>
 <map name="a_partial_time_barrier_option_1_1engine_coll__map" id="a_partial_time_barrier_option_1_1engine_coll__map">
-<area shape="rect" title="Partial&#45;Time&#45;Barrier&#45;Option engine base class" alt="" coords="1108,2280,1275,2335"/>
-<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title=" " alt="" coords="1097,2088,1285,2231"/>
-<area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="1157,1311,1293,1424"/>
-<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="897,1883,1083,1996"/>
+<area shape="rect" title="Base class for partial&#45;time barrier option engines." alt="" coords="1108,2309,1275,2364"/>
+<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title=" " alt="" coords="1097,2117,1285,2260"/>
+<area shape="rect" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html" title="interface for pricing engines" alt="" coords="1157,1325,1293,1439"/>
+<area shape="rect" href="../../d4/db7/class_quant_lib_1_1_generic_engine.html" title="template base class for option pricing engines" alt="" coords="897,1912,1083,2025"/>
 <area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="1021,695,1167,867"/>
 <area shape="rect" title=" " alt="" coords="918,592,1046,632"/>
 <area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="891,343,1073,529"/>
@@ -127,19 +127,19 @@ $(function() {
 <area shape="rect" title=" " alt="" coords="921,108,1096,148"/>
 <area shape="rect" title=" " alt="" coords="802,108,879,148"/>
 <area shape="rect" title=" " alt="" coords="821,5,860,45"/>
-<area shape="rect" href="../../db/d04/class_quant_lib_1_1_partial_time_barrier_option_1_1arguments.html" title="Arguments for barrier option calculation" alt="" coords="474,1905,583,1974"/>
-<area shape="rect" href="../../d9/d01/class_quant_lib_1_1_option_1_1arguments.html" title="basic option arguments" alt="" coords="201,1333,310,1402"/>
+<area shape="rect" href="../../db/d04/class_quant_lib_1_1_partial_time_barrier_option_1_1arguments.html" title="Arguments for partial&#45;time barrier option calculation" alt="" coords="474,1934,583,2003"/>
+<area shape="rect" href="../../d9/d01/class_quant_lib_1_1_option_1_1arguments.html" title="basic option arguments" alt="" coords="201,1347,310,1417"/>
 <area shape="rect" href="../../d7/d14/class_quant_lib_1_1_pricing_engine_1_1arguments.html" title=" " alt="" coords="355,746,473,815"/>
 <area shape="rect" title=" " alt="" coords="5,753,156,808"/>
 <area shape="rect" title=" " alt="" coords="180,753,331,808"/>
-<area shape="rect" title=" " alt="" coords="335,1347,389,1387"/>
-<area shape="rect" title=" " alt="" coords="439,1347,501,1387"/>
-<area shape="rect" title=" " alt="" coords="535,1347,619,1387"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="643,929,817,1805"/>
+<area shape="rect" title=" " alt="" coords="335,1362,389,1402"/>
+<area shape="rect" title=" " alt="" coords="439,1362,501,1402"/>
+<area shape="rect" title=" " alt="" coords="535,1362,619,1402"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="643,929,817,1835"/>
 <area shape="rect" title=" " alt="" coords="683,761,777,801"/>
-<area shape="rect" href="../../df/de8/class_partial_time_barrier_option_1_1results.html" title=" " alt="" coords="1229,1919,1295,1959"/>
-<area shape="rect" title=" " alt="" coords="1015,1347,1133,1387"/>
-<area shape="rect" title=" " alt="" coords="893,1347,991,1387"/>
+<area shape="rect" href="../../df/de8/class_partial_time_barrier_option_1_1results.html" title=" " alt="" coords="1229,1949,1295,1989"/>
+<area shape="rect" title=" " alt="" coords="1015,1362,1133,1402"/>
+<area shape="rect" title=" " alt="" coords="893,1362,991,1402"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -169,8 +169,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a6b564cec9dfa3d4397000b9f3b7a43f6 inherit pub_methods_class_quant_lib_1_1_pricing_engine"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d8c/class_quant_lib_1_1_pricing_engine.html#a6b564cec9dfa3d4397000b9f3b7a43f6">calculate</a> () const =0</td></tr>
 <tr class="separator:a6b564cec9dfa3d4397000b9f3b7a43f6 inherit pub_methods_class_quant_lib_1_1_pricing_engine"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_observable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_observable')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a></td></tr>
-<tr class="memitem:a6438e92e07db169a97ed3eba36788dc4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a6438e92e07db169a97ed3eba36788dc4">Observable</a> ()</td></tr>
-<tr class="separator:a6438e92e07db169a97ed3eba36788dc4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d01c967371e909cd408401dd62b6fa inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a55d01c967371e909cd408401dd62b6fa">Observable</a> ()=default</td></tr>
+<tr class="separator:a55d01c967371e909cd408401dd62b6fa inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a840dd96e33a304cbf681d357de7f48d0">Observable</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
 <tr class="separator:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a522aacdd0f2408fe5e46527a6db999b4">operator=</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
@@ -211,9 +211,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac34e18c69939ed8140f8cccc00ace941 inherit pro_attribs_class_quant_lib_1_1_generic_engine"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Partial-Time-Barrier-Option engine base class </p>
+<div class="textblock"><p >Base class for partial-time barrier option engines. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d44/partialtimebarrieroption_8hpp_source.html#l00074">74</a> of file <a class="el" href="../../d8/d44/partialtimebarrieroption_8hpp_source.html">partialtimebarrieroption.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d60/instruments_2partialtimebarrieroption_8hpp_source.html#l00099">99</a> of file <a class="el" href="../../d9/d60/instruments_2partialtimebarrieroption_8hpp_source.html">partialtimebarrieroption.hpp</a>.</p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->

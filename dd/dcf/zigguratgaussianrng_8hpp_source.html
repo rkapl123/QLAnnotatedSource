@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -179,10 +179,10 @@ $(function() {
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="comment">// This saves us generating a whole extra random number, while the added</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="comment">// precision of using 64 bits for double does not buy us much.</span></div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            std::uint64_t randomU64 = uint64Generator_.nextInt64();</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keyword">auto</span> u = 2.0 * (<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(randomU64 &gt;&gt; 11) + 0.5) * (1.0 / <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(1ULL &lt;&lt; 53)) - 1.0;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> u = 2.0 * (<a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(randomU64 &gt;&gt; 11) + 0.5) * (1.0 / <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(1ULL &lt;&lt; 53)) - 1.0;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keyword">auto</span> i = (int)(randomU64 &amp; 0xff);</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keyword">auto</span> x = u * normX(i);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> x = u * normX(i);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">if</span> (std::abs(x) &lt; normX(i + 1)) {</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                <span class="keywordflow">return</span> x;</div>
@@ -377,7 +377,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_ziggurat_gaussian_rng_html_ad6ae312199547dfd98f3b79b89a036f0"><div class="ttname"><a href="../../d1/db6/class_quant_lib_1_1_ziggurat_gaussian_rng.html#ad6ae312199547dfd98f3b79b89a036f0">QuantLib::ZigguratGaussianRng::sample_type</a></div><div class="ttdeci">Sample&lt; Real &gt; sample_type</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dcf/zigguratgaussianrng_8hpp_source.html#l00058">zigguratgaussianrng.hpp:58</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_ziggurat_gaussian_rng_html_adbbc2c4d9288520c41c9387719d80721"><div class="ttname"><a href="../../d1/db6/class_quant_lib_1_1_ziggurat_gaussian_rng.html#adbbc2c4d9288520c41c9387719d80721">QuantLib::ZigguratGaussianRng::zeroCase</a></div><div class="ttdeci">Real zeroCase(Real u) const</div><div class="ttdoc">compute a random number in the tail by hand</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dcf/zigguratgaussianrng_8hpp_source.html#l00113">zigguratgaussianrng.hpp:113</a></div></div>
 <div class="ttc" id="agroup__types_html_ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78"><div class="ttname"><a href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">QuantLib::Real</a></div><div class="ttdeci">QL_REAL Real</div><div class="ttdoc">real number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00050">types.hpp:50</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00037">any.hpp:37</a></div></div>
 <div class="ttc" id="asample_8hpp_html"><div class="ttname"><a href="../../d5/de9/sample_8hpp.html">sample.hpp</a></div><div class="ttdoc">weighted sample</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_sample_html"><div class="ttname"><a href="../../d4/da1/struct_quant_lib_1_1_sample.html">QuantLib::Sample</a></div><div class="ttdoc">weighted sample</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/sample_8hpp_source.html#l00035">sample.hpp:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

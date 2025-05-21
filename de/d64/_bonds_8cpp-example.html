@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -137,105 +137,70 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        std::cout &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">        /*********************</span></div>
-<div class="line"><span class="comment">         ***  MARKET DATA  ***</span></div>
-<div class="line"><span class="comment">         *********************/</span></div>
-<div class="line"> </div>
 <div class="line">        <a id="_a0" name="_a0"></a><a class="code hl_class" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> calendar = <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>();</div>
 <div class="line"> </div>
 <div class="line">        <a id="_a2" name="_a2"></a><a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> settlementDate(18, September, 2008);</div>
-<div class="line">        <span class="comment">// must be a business day</span></div>
-<div class="line">        settlementDate = calendar.<a id="a3" name="a3"></a><a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b">adjust</a>(settlementDate);</div>
 <div class="line"> </div>
-<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> fixingDays = 3;</div>
-<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> settlementDays = 3;</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> settlementDays = 3;</div>
 <div class="line"> </div>
-<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> todaysDate = calendar.<a id="a4" name="a4"></a><a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(settlementDate, -fixingDays, Days);</div>
-<div class="line">        <span class="comment">// nothing to do with Date::todaysDate</span></div>
+<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> todaysDate = calendar.<a id="a3" name="a3"></a><a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(settlementDate, -settlementDays, Days);</div>
 <div class="line">        Settings::instance().evaluationDate() = todaysDate;</div>
 <div class="line"> </div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Today: &quot;</span> &lt;&lt; todaysDate.<a id="a5" name="a5"></a><a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#a8beb14a6b168772900b48e3161b4c0e6">weekday</a>()</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Today: &quot;</span> &lt;&lt; todaysDate.<a id="a4" name="a4"></a><a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#a8beb14a6b168772900b48e3161b4c0e6">weekday</a>()</div>
 <div class="line">        &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; todaysDate &lt;&lt; std::endl;</div>
 <div class="line"> </div>
 <div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Settlement date: &quot;</span> &lt;&lt; settlementDate.<a class="code hl_function" href="../../db/d60/class_quant_lib_1_1_date.html#a8beb14a6b168772900b48e3161b4c0e6">weekday</a>()</div>
 <div class="line">        &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; settlementDate &lt;&lt; std::endl;</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">        <span class="comment">// Building of the bonds discounting yield curve</span></div>
+<div class="line"><span class="comment">        /***************************************</span></div>
+<div class="line"><span class="comment">         * BUILDING THE DISCOUNTING BOND CURVE *</span></div>
+<div class="line"><span class="comment">         ***************************************/</span></div>
 <div class="line"> </div>
-<div class="line"><span class="comment">        /*********************</span></div>
-<div class="line"><span class="comment">         ***  RATE HELPERS ***</span></div>
-<div class="line"><span class="comment">         *********************/</span></div>
-<div class="line"> </div>
-<div class="line">        <span class="comment">// RateHelpers are built from the above quotes together with</span></div>
-<div class="line">        <span class="comment">// other instrument dependant infos.  Quotes are passed in</span></div>
+<div class="line">        <span class="comment">// RateHelpers are built from the quotes together with</span></div>
+<div class="line">        <span class="comment">// other instrument-dependent info.  Quotes are passed in</span></div>
 <div class="line">        <span class="comment">// relinkable handles which could be relinked to some other</span></div>
 <div class="line">        <span class="comment">// data source later.</span></div>
 <div class="line"> </div>
-<div class="line">        <span class="comment">// Common data</span></div>
+<div class="line">        <span class="comment">// Note that bootstrapping might not be the optimal choice for</span></div>
+<div class="line">        <span class="comment">// bond curves, since it requires to select a set of bonds</span></div>
+<div class="line">        <span class="comment">// with maturities that are not too close.  For alternatives,</span></div>
+<div class="line">        <span class="comment">// see the FittedBondCurve example.</span></div>
 <div class="line"> </div>
-<div class="line">        <span class="comment">// ZC rates for the short end</span></div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> zc3mQuote=0.0096;</div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> zc6mQuote=0.0145;</div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> zc1yQuote=0.0194;</div>
-<div class="line"> </div>
-<div class="line">         <span class="keyword">auto</span> zc3mRate = ext::make_shared&lt;SimpleQuote&gt;(zc3mQuote);</div>
-<div class="line">         <span class="keyword">auto</span> zc6mRate = ext::make_shared&lt;SimpleQuote&gt;(zc6mQuote);</div>
-<div class="line">         <span class="keyword">auto</span> zc1yRate = ext::make_shared&lt;SimpleQuote&gt;(zc1yQuote);</div>
-<div class="line"> </div>
-<div class="line">         <a id="_a6" name="_a6"></a><a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> zcBondsDayCounter = <a id="_a7" name="_a7"></a><a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>();</div>
-<div class="line"> </div>
-<div class="line">         <span class="keyword">auto</span> zc3m = ext::make_shared&lt;DepositRateHelper&gt;(</div>
-<div class="line">                 <a id="_a8" name="_a8"></a><a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(zc3mRate),</div>
-<div class="line">                 3*Months, fixingDays,</div>
-<div class="line">                 calendar, ModifiedFollowing,</div>
-<div class="line">                 <span class="keyword">true</span>, zcBondsDayCounter);</div>
-<div class="line">         <span class="keyword">auto</span> zc6m = ext::make_shared&lt;DepositRateHelper&gt;(</div>
-<div class="line">                 <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(zc6mRate),</div>
-<div class="line">                 6*Months, fixingDays,</div>
-<div class="line">                 calendar, ModifiedFollowing,</div>
-<div class="line">                 <span class="keyword">true</span>, zcBondsDayCounter);</div>
-<div class="line">         <span class="keyword">auto</span> zc1y = ext::make_shared&lt;DepositRateHelper&gt;(</div>
-<div class="line">                 <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(zc1yRate),</div>
-<div class="line">                 1*Years, fixingDays,</div>
-<div class="line">                 calendar, ModifiedFollowing,</div>
-<div class="line">                 <span class="keyword">true</span>, zcBondsDayCounter);</div>
-<div class="line"> </div>
-<div class="line">        <span class="comment">// setup bonds</span></div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> redemption = 100.0;</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">const</span> <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> numberOfBonds = 5;</div>
 <div class="line"> </div>
 <div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> issueDates[] = {</div>
-<div class="line">                <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> (15, March, 2005),</div>
-<div class="line">                <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> (15, June, 2005),</div>
-<div class="line">                <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> (30, June, 2006),</div>
-<div class="line">                <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> (15, November, 2002),</div>
-<div class="line">                <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> (15, May, 1987)</div>
+<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(15, March, 2005),</div>
+<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(15, June, 2005),</div>
+<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(30, June, 2006),</div>
+<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(15, November, 2002),</div>
+<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(15, May, 1987)</div>
 <div class="line">        };</div>
 <div class="line"> </div>
 <div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> maturities[] = {</div>
-<div class="line">                <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> (31, August, 2010),</div>
-<div class="line">                <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> (31, August, 2011),</div>
-<div class="line">                <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> (31, August, 2013),</div>
-<div class="line">                <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> (15, August, 2018),</div>
-<div class="line">                <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> (15, May, 2038)</div>
+<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(31, August, 2010),</div>
+<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(31, August, 2011),</div>
+<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(31, August, 2013),</div>
+<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(15, August, 2018),</div>
+<div class="line">            <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(15, May, 2038)</div>
 <div class="line">        };</div>
 <div class="line"> </div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> couponRates[] = {</div>
-<div class="line">                0.02375,</div>
-<div class="line">                0.04625,</div>
-<div class="line">                0.03125,</div>
-<div class="line">                0.04000,</div>
-<div class="line">                0.04500</div>
+<div class="line">            0.02375,</div>
+<div class="line">            0.04625,</div>
+<div class="line">            0.03125,</div>
+<div class="line">            0.04000,</div>
+<div class="line">            0.04500</div>
 <div class="line">        };</div>
 <div class="line"> </div>
 <div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> marketQuotes[] = {</div>
-<div class="line">                100.390625,</div>
-<div class="line">                106.21875,</div>
-<div class="line">                100.59375,</div>
-<div class="line">                101.6875,</div>
-<div class="line">                102.140625</div>
+<div class="line">            100.390625,</div>
+<div class="line">            106.21875,</div>
+<div class="line">            100.59375,</div>
+<div class="line">            101.6875,</div>
+<div class="line">            102.140625</div>
 <div class="line">        };</div>
 <div class="line"> </div>
 <div class="line">        std::vector&lt;ext::shared_ptr&lt;SimpleQuote&gt;&gt; quote;</div>
@@ -243,29 +208,28 @@ $(function() {
 <div class="line">            quote.push_back(ext::make_shared&lt;SimpleQuote&gt;(marketQuote));</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <a id="_a9" name="_a9"></a><a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;Quote&gt;</a> quoteHandle[numberOfBonds];</div>
+<div class="line">        <a id="_a5" name="_a5"></a><a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;Quote&gt;</a> quoteHandle[numberOfBonds];</div>
 <div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;numberOfBonds; i++) {</div>
-<div class="line">            quoteHandle[i].<a id="a10" name="a10"></a><a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#a4c6b52dcdb036a4aa90b3533c80198d0">linkTo</a>(quote[i]);</div>
+<div class="line">            quoteHandle[i].<a id="a6" name="a6"></a><a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#a4c6b52dcdb036a4aa90b3533c80198d0">linkTo</a>(quote[i]);</div>
 <div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="comment">// Definition of the rate helpers</span></div>
-<div class="line">        std::vector&lt;ext::shared_ptr&lt;BondHelper&gt;&gt; bondsHelpers;</div>
+<div class="line">        </div>
+<div class="line">        std::vector&lt;ext::shared_ptr&lt;RateHelper&gt;&gt; bondHelpers;</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;numberOfBonds; i++) {</div>
 <div class="line"> </div>
-<div class="line">            <a id="_a11" name="_a11"></a><a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> schedule(issueDates[i], maturities[i], <a id="_a12" name="_a12"></a><a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(Semiannual), <a id="_a13" name="_a13"></a><a class="code hl_class" href="../../d2/d41/class_quant_lib_1_1_united_states.html">UnitedStates</a>(UnitedStates::GovernmentBond),</div>
-<div class="line">                    Unadjusted, Unadjusted, DateGeneration::Backward, <span class="keyword">false</span>);</div>
+<div class="line">            <a id="_a7" name="_a7"></a><a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> schedule(issueDates[i], maturities[i], <a id="_a8" name="_a8"></a><a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(Semiannual), calendar,</div>
+<div class="line">                              Unadjusted, Unadjusted, DateGeneration::Backward, <span class="keyword">false</span>);</div>
 <div class="line"> </div>
 <div class="line">            <span class="keyword">auto</span> bondHelper = ext::make_shared&lt;FixedRateBondHelper&gt;(</div>
-<div class="line">                    quoteHandle[i],</div>
-<div class="line">                    settlementDays,</div>
-<div class="line">                    100.0,</div>
-<div class="line">                    schedule,</div>
-<div class="line">                    std::vector&lt;Rate&gt;(1,couponRates[i]),</div>
-<div class="line">                    <a id="_a14" name="_a14"></a><a class="code hl_class" href="../../de/dee/class_quant_lib_1_1_actual_actual.html">ActualActual</a>(ActualActual::Bond),</div>
-<div class="line">                    Unadjusted,</div>
-<div class="line">                    redemption,</div>
-<div class="line">                    issueDates[i]);</div>
+<div class="line">                quoteHandle[i],</div>
+<div class="line">                settlementDays,</div>
+<div class="line">                100.0,</div>
+<div class="line">                schedule,</div>
+<div class="line">                std::vector&lt;Rate&gt;(1,couponRates[i]),</div>
+<div class="line">                <a id="_a9" name="_a9"></a><a class="code hl_class" href="../../de/dee/class_quant_lib_1_1_actual_actual.html">ActualActual</a>(ActualActual::Bond),</div>
+<div class="line">                Unadjusted,</div>
+<div class="line">                redemption,</div>
+<div class="line">                issueDates[i]);</div>
 <div class="line"> </div>
 <div class="line">            <span class="comment">// the above could also be done by creating a</span></div>
 <div class="line">            <span class="comment">// FixedRateBond instance and writing:</span></div>
@@ -275,210 +239,138 @@ $(function() {
 <div class="line">            <span class="comment">// This would also work for bonds that still don&#39;t have a</span></div>
 <div class="line">            <span class="comment">// specialized helper, such as floating-rate bonds.</span></div>
 <div class="line"> </div>
-<div class="line"> </div>
-<div class="line">            bondsHelpers.push_back(bondHelper);</div>
+<div class="line">            bondHelpers.push_back(bondHelper);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">        /*********************</span></div>
-<div class="line"><span class="comment">         **  CURVE BUILDING **</span></div>
-<div class="line"><span class="comment">         *********************/</span></div>
+<div class="line">        <span class="comment">// The term structure uses its day counter internally to</span></div>
+<div class="line">        <span class="comment">// convert between dates and times; it&#39;s not required to equal</span></div>
+<div class="line">        <span class="comment">// the day counter of the bonds.  In fact, a regular day</span></div>
+<div class="line">        <span class="comment">// counter is probably more appropriate.</span></div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// Any DayCounter would be fine.</span></div>
-<div class="line">         <span class="comment">// ActualActual::ISDA ensures that 30 years is 30.0</span></div>
-<div class="line">         <a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> termStructureDayCounter =</div>
-<div class="line">             <a class="code hl_class" href="../../de/dee/class_quant_lib_1_1_actual_actual.html">ActualActual</a>(ActualActual::ISDA);</div>
+<div class="line">        <a id="_a10" name="_a10"></a><a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> termStructureDayCounter = <a id="_a11" name="_a11"></a><a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>();</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// A depo-bond curve</span></div>
-<div class="line">         std::vector&lt;ext::shared_ptr&lt;RateHelper&gt;&gt; bondInstruments;</div>
+<div class="line">        <span class="comment">// The reference date of the term structure can be the</span></div>
+<div class="line">        <span class="comment">// settlement date of the bonds (since, during pricing, it</span></div>
+<div class="line">        <span class="comment">// won&#39;t be required to discount behind that date) but it can</span></div>
+<div class="line">        <span class="comment">// also be today&#39;s date.  This allows one to calculate both</span></div>
+<div class="line">        <span class="comment">// the price of the bond (based on the settlement date) and</span></div>
+<div class="line">        <span class="comment">// the NPV, that is, the value as of today&#39;s date of holding</span></div>
+<div class="line">        <span class="comment">// the bond and receiving its payments.</span></div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// Adding the ZC bonds to the curve for the short end</span></div>
-<div class="line">         bondInstruments.push_back(zc3m);</div>
-<div class="line">         bondInstruments.push_back(zc6m);</div>
-<div class="line">         bondInstruments.push_back(zc1y);</div>
-<div class="line"> </div>
-<div class="line">         <span class="comment">// Adding the Fixed rate bonds to the curve for the long end</span></div>
-<div class="line">         <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> i=0; i&lt;numberOfBonds; i++) {</div>
-<div class="line">             bondInstruments.push_back(bondsHelpers[i]);</div>
-<div class="line">         }</div>
-<div class="line"> </div>
-<div class="line">         <span class="keyword">auto</span> bondDiscountingTermStructure = ext::make_shared&lt;PiecewiseYieldCurve&lt;Discount,LogLinear&gt;&gt;(</div>
-<div class="line">                         settlementDate, bondInstruments, termStructureDayCounter);</div>
-<div class="line"> </div>
-<div class="line">         <span class="comment">// Building of the Libor forecasting curve</span></div>
-<div class="line">         <span class="comment">// deposits</span></div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> d1wQuote=0.043375;</div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> d1mQuote=0.031875;</div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> d3mQuote=0.0320375;</div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> d6mQuote=0.03385;</div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> d9mQuote=0.0338125;</div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> d1yQuote=0.0335125;</div>
-<div class="line">         <span class="comment">// swaps</span></div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> s2yQuote=0.0295;</div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> s3yQuote=0.0323;</div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> s5yQuote=0.0359;</div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> s10yQuote=0.0412;</div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> s15yQuote=0.0433;</div>
+<div class="line">        <span class="keyword">auto</span> bondDiscountingTermStructure = ext::make_shared&lt;PiecewiseYieldCurve&lt;Discount,LogLinear&gt;&gt;(</div>
+<div class="line">                         todaysDate, bondHelpers, termStructureDayCounter);</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="comment">         /********************</span></div>
-<div class="line"><span class="comment">          ***    QUOTES    ***</span></div>
-<div class="line"><span class="comment">          ********************/</span></div>
+<div class="line"><span class="comment">        /******************************************</span></div>
+<div class="line"><span class="comment">         * BUILDING THE EURIBOR FORECASTING CURVE *</span></div>
+<div class="line"><span class="comment">         ******************************************/</span></div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// SimpleQuote stores a value which can be manually changed;</span></div>
-<div class="line">         <span class="comment">// other Quote subclasses could read the value from a database</span></div>
-<div class="line">         <span class="comment">// or some kind of data feed.</span></div>
+<div class="line">        <span class="comment">// 6m deposit</span></div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> d6mQuote=0.03385;</div>
+<div class="line">        <span class="comment">// swaps, fixed vs 6m</span></div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> s2yQuote=0.0295;</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> s3yQuote=0.0323;</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> s5yQuote=0.0359;</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> s10yQuote=0.0412;</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">Rate</a> s15yQuote=0.0433;</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// deposits</span></div>
-<div class="line">         <span class="keyword">auto</span> d1wRate = ext::make_shared&lt;SimpleQuote&gt;(d1wQuote);</div>
-<div class="line">         <span class="keyword">auto</span> d1mRate = ext::make_shared&lt;SimpleQuote&gt;(d1mQuote);</div>
-<div class="line">         <span class="keyword">auto</span> d3mRate = ext::make_shared&lt;SimpleQuote&gt;(d3mQuote);</div>
-<div class="line">         <span class="keyword">auto</span> d6mRate = ext::make_shared&lt;SimpleQuote&gt;(d6mQuote);</div>
-<div class="line">         <span class="keyword">auto</span> d9mRate = ext::make_shared&lt;SimpleQuote&gt;(d9mQuote);</div>
-<div class="line">         <span class="keyword">auto</span> d1yRate = ext::make_shared&lt;SimpleQuote&gt;(d1yQuote);</div>
-<div class="line">         <span class="comment">// swaps</span></div>
-<div class="line">         <span class="keyword">auto</span> s2yRate = ext::make_shared&lt;SimpleQuote&gt;(s2yQuote);</div>
-<div class="line">         <span class="keyword">auto</span> s3yRate = ext::make_shared&lt;SimpleQuote&gt;(s3yQuote);</div>
-<div class="line">         <span class="keyword">auto</span> s5yRate = ext::make_shared&lt;SimpleQuote&gt;(s5yQuote);</div>
-<div class="line">         <span class="keyword">auto</span> s10yRate = ext::make_shared&lt;SimpleQuote&gt;(s10yQuote);</div>
-<div class="line">         <span class="keyword">auto</span> s15yRate = ext::make_shared&lt;SimpleQuote&gt;(s15yQuote);</div>
+<div class="line">        <span class="keyword">auto</span> d6mRate = ext::make_shared&lt;SimpleQuote&gt;(d6mQuote);</div>
+<div class="line">        <span class="keyword">auto</span> s2yRate = ext::make_shared&lt;SimpleQuote&gt;(s2yQuote);</div>
+<div class="line">        <span class="keyword">auto</span> s3yRate = ext::make_shared&lt;SimpleQuote&gt;(s3yQuote);</div>
+<div class="line">        <span class="keyword">auto</span> s5yRate = ext::make_shared&lt;SimpleQuote&gt;(s5yQuote);</div>
+<div class="line">        <span class="keyword">auto</span> s10yRate = ext::make_shared&lt;SimpleQuote&gt;(s10yQuote);</div>
+<div class="line">        <span class="keyword">auto</span> s15yRate = ext::make_shared&lt;SimpleQuote&gt;(s15yQuote);</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">         /*********************</span></div>
-<div class="line"><span class="comment">          ***  RATE HELPERS ***</span></div>
-<div class="line"><span class="comment">          *********************/</span></div>
+<div class="line">        <span class="comment">// setup depo</span></div>
+<div class="line">        <a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> depositDayCounter = <a id="_a12" name="_a12"></a><a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>();</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> fixingDays = 2;</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// RateHelpers are built from the above quotes together with</span></div>
-<div class="line">         <span class="comment">// other instrument dependant infos.  Quotes are passed in</span></div>
-<div class="line">         <span class="comment">// relinkable handles which could be relinked to some other</span></div>
-<div class="line">         <span class="comment">// data source later.</span></div>
-<div class="line"> </div>
-<div class="line">         <span class="comment">// deposits</span></div>
-<div class="line">         <a class="code hl_class" href="../../dd/d24/class_quant_lib_1_1_day_counter.html">DayCounter</a> depositDayCounter = <a id="_a15" name="_a15"></a><a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>();</div>
-<div class="line"> </div>
-<div class="line">         <span class="keyword">auto</span> d1w = ext::make_shared&lt;DepositRateHelper&gt;(</div>
-<div class="line">                 <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(d1wRate),</div>
-<div class="line">                 1*Weeks, fixingDays,</div>
-<div class="line">                 calendar, ModifiedFollowing,</div>
-<div class="line">                 <span class="keyword">true</span>, depositDayCounter);</div>
-<div class="line">         <span class="keyword">auto</span> d1m = ext::make_shared&lt;DepositRateHelper&gt;(</div>
-<div class="line">                 <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(d1mRate),</div>
-<div class="line">                 1*Months, fixingDays,</div>
-<div class="line">                 calendar, ModifiedFollowing,</div>
-<div class="line">                 <span class="keyword">true</span>, depositDayCounter);</div>
-<div class="line">         <span class="keyword">auto</span> d3m = ext::make_shared&lt;DepositRateHelper&gt;(</div>
-<div class="line">                 <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(d3mRate),</div>
-<div class="line">                 3*Months, fixingDays,</div>
-<div class="line">                 calendar, ModifiedFollowing,</div>
-<div class="line">                 <span class="keyword">true</span>, depositDayCounter);</div>
-<div class="line">         <span class="keyword">auto</span> d6m = ext::make_shared&lt;DepositRateHelper&gt;(</div>
-<div class="line">                 <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(d6mRate),</div>
+<div class="line">        <span class="keyword">auto</span> d6m = ext::make_shared&lt;DepositRateHelper&gt;(</div>
+<div class="line">                 <a id="_a13" name="_a13"></a><a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(d6mRate),</div>
 <div class="line">                 6*Months, fixingDays,</div>
 <div class="line">                 calendar, ModifiedFollowing,</div>
 <div class="line">                 <span class="keyword">true</span>, depositDayCounter);</div>
-<div class="line">         <span class="keyword">auto</span> d9m = ext::make_shared&lt;DepositRateHelper&gt;(</div>
-<div class="line">                 <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(d9mRate),</div>
-<div class="line">                 9*Months, fixingDays,</div>
-<div class="line">                 calendar, ModifiedFollowing,</div>
-<div class="line">                 <span class="keyword">true</span>, depositDayCounter);</div>
-<div class="line">         <span class="keyword">auto</span> d1y = ext::make_shared&lt;DepositRateHelper&gt;(</div>
-<div class="line">                 <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(d1yRate),</div>
-<div class="line">                 1*Years, fixingDays,</div>
-<div class="line">                 calendar, ModifiedFollowing,</div>
-<div class="line">                 <span class="keyword">true</span>, depositDayCounter);</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// setup swaps</span></div>
-<div class="line">         <span class="keyword">auto</span> swFixedLegFrequency = Annual;</div>
-<div class="line">         <span class="keyword">auto</span> swFixedLegConvention = Unadjusted;</div>
-<div class="line">         <span class="keyword">auto</span> swFixedLegDayCounter = <a id="_a16" name="_a16"></a><a class="code hl_class" href="../../d5/d63/class_quant_lib_1_1_thirty360.html">Thirty360</a>(Thirty360::European);</div>
-<div class="line">         <span class="keyword">auto</span> swFloatingLegIndex = ext::make_shared&lt;Euribor6M&gt;();</div>
+<div class="line">        <span class="comment">// setup swaps</span></div>
+<div class="line">        <span class="keyword">auto</span> swFixedLegFrequency = Annual;</div>
+<div class="line">        <span class="keyword">auto</span> swFixedLegConvention = Unadjusted;</div>
+<div class="line">        <span class="keyword">auto</span> swFixedLegDayCounter = <a id="_a14" name="_a14"></a><a class="code hl_class" href="../../d5/d63/class_quant_lib_1_1_thirty360.html">Thirty360</a>(Thirty360::European);</div>
+<div class="line">        <span class="keyword">auto</span> swFloatingLegIndex = ext::make_shared&lt;Euribor6M&gt;();</div>
 <div class="line"> </div>
-<div class="line">         <span class="keyword">const</span> <a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> forwardStart(1*Days);</div>
-<div class="line"> </div>
-<div class="line">         <span class="keyword">auto</span> s2y = ext::make_shared&lt;SwapRateHelper&gt;(</div>
+<div class="line">        <span class="keyword">auto</span> s2y = ext::make_shared&lt;SwapRateHelper&gt;(</div>
 <div class="line">                 <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(s2yRate), 2*Years,</div>
 <div class="line">                 calendar, swFixedLegFrequency,</div>
 <div class="line">                 swFixedLegConvention, swFixedLegDayCounter,</div>
-<div class="line">                 swFloatingLegIndex, <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(), forwardStart);</div>
-<div class="line">         <span class="keyword">auto</span> s3y = ext::make_shared&lt;SwapRateHelper&gt;(</div>
+<div class="line">                 swFloatingLegIndex);</div>
+<div class="line">        <span class="keyword">auto</span> s3y = ext::make_shared&lt;SwapRateHelper&gt;(</div>
 <div class="line">                 <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(s3yRate), 3*Years,</div>
 <div class="line">                 calendar, swFixedLegFrequency,</div>
 <div class="line">                 swFixedLegConvention, swFixedLegDayCounter,</div>
-<div class="line">                 swFloatingLegIndex, <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(), forwardStart);</div>
-<div class="line">         <span class="keyword">auto</span> s5y = ext::make_shared&lt;SwapRateHelper&gt;(</div>
+<div class="line">                 swFloatingLegIndex);</div>
+<div class="line">        <span class="keyword">auto</span> s5y = ext::make_shared&lt;SwapRateHelper&gt;(</div>
 <div class="line">                 <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(s5yRate), 5*Years,</div>
 <div class="line">                 calendar, swFixedLegFrequency,</div>
 <div class="line">                 swFixedLegConvention, swFixedLegDayCounter,</div>
-<div class="line">                 swFloatingLegIndex, <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(), forwardStart);</div>
-<div class="line">         <span class="keyword">auto</span> s10y = ext::make_shared&lt;SwapRateHelper&gt;(</div>
+<div class="line">                 swFloatingLegIndex);</div>
+<div class="line">        <span class="keyword">auto</span> s10y = ext::make_shared&lt;SwapRateHelper&gt;(</div>
 <div class="line">                 <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(s10yRate), 10*Years,</div>
 <div class="line">                 calendar, swFixedLegFrequency,</div>
 <div class="line">                 swFixedLegConvention, swFixedLegDayCounter,</div>
-<div class="line">                 swFloatingLegIndex, <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(), forwardStart);</div>
-<div class="line">         <span class="keyword">auto</span> s15y = ext::make_shared&lt;SwapRateHelper&gt;(</div>
+<div class="line">                 swFloatingLegIndex);</div>
+<div class="line">        <span class="keyword">auto</span> s15y = ext::make_shared&lt;SwapRateHelper&gt;(</div>
 <div class="line">                 <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(s15yRate), 15*Years,</div>
 <div class="line">                 calendar, swFixedLegFrequency,</div>
 <div class="line">                 swFixedLegConvention, swFixedLegDayCounter,</div>
-<div class="line">                 swFloatingLegIndex, <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;Quote&gt;</a>(), forwardStart);</div>
+<div class="line">                 swFloatingLegIndex);</div>
 <div class="line"> </div>
+<div class="line">        std::vector&lt;ext::shared_ptr&lt;RateHelper&gt;&gt; depoSwapInstruments;</div>
+<div class="line">        depoSwapInstruments.push_back(d6m);</div>
+<div class="line">        depoSwapInstruments.push_back(s2y);</div>
+<div class="line">        depoSwapInstruments.push_back(s3y);</div>
+<div class="line">        depoSwapInstruments.push_back(s5y);</div>
+<div class="line">        depoSwapInstruments.push_back(s10y);</div>
+<div class="line">        depoSwapInstruments.push_back(s15y);</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">         /*********************</span></div>
-<div class="line"><span class="comment">          **  CURVE BUILDING **</span></div>
-<div class="line"><span class="comment">          *********************/</span></div>
-<div class="line"> </div>
-<div class="line">         <span class="comment">// Any DayCounter would be fine.</span></div>
-<div class="line">         <span class="comment">// ActualActual::ISDA ensures that 30 years is 30.0</span></div>
-<div class="line"> </div>
-<div class="line">         <span class="comment">// A depo-swap curve</span></div>
-<div class="line">         std::vector&lt;ext::shared_ptr&lt;RateHelper&gt;&gt; depoSwapInstruments;</div>
-<div class="line">         depoSwapInstruments.push_back(d1w);</div>
-<div class="line">         depoSwapInstruments.push_back(d1m);</div>
-<div class="line">         depoSwapInstruments.push_back(d3m);</div>
-<div class="line">         depoSwapInstruments.push_back(d6m);</div>
-<div class="line">         depoSwapInstruments.push_back(d9m);</div>
-<div class="line">         depoSwapInstruments.push_back(d1y);</div>
-<div class="line">         depoSwapInstruments.push_back(s2y);</div>
-<div class="line">         depoSwapInstruments.push_back(s3y);</div>
-<div class="line">         depoSwapInstruments.push_back(s5y);</div>
-<div class="line">         depoSwapInstruments.push_back(s10y);</div>
-<div class="line">         depoSwapInstruments.push_back(s15y);</div>
-<div class="line">         <span class="keyword">auto</span> depoSwapTermStructure = ext::make_shared&lt;PiecewiseYieldCurve&lt;Discount, LogLinear&gt;&gt;(</div>
-<div class="line">                         settlementDate, depoSwapInstruments,</div>
+<div class="line">        <span class="comment">// The start of the curve can be today&#39;s date or spot, depending on your preferences.</span></div>
+<div class="line">        <span class="comment">// Here we&#39;re picking spot (mostly because we picked today&#39;s date for the bond curve).</span></div>
+<div class="line">        <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> spotDate = calendar.<a class="code hl_function" href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">advance</a>(todaysDate, fixingDays, Days);</div>
+<div class="line">        <span class="keyword">auto</span> depoSwapTermStructure = ext::make_shared&lt;PiecewiseYieldCurve&lt;Discount, LogLinear&gt;&gt;(</div>
+<div class="line">                         spotDate, depoSwapInstruments,</div>
 <div class="line">                         termStructureDayCounter);</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// Term structures that will be used for pricing:</span></div>
-<div class="line">         <span class="comment">// the one used for discounting cash flows</span></div>
-<div class="line">         <a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;YieldTermStructure&gt;</a> discountingTermStructure;</div>
-<div class="line">         <span class="comment">// the one used for forward rate forecasting</span></div>
-<div class="line">         <a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;YieldTermStructure&gt;</a> forecastingTermStructure;</div>
+<div class="line"><span class="comment">        /***********</span></div>
+<div class="line"><span class="comment">         * PRICING *</span></div>
+<div class="line"><span class="comment">         ***********/</span></div>
+<div class="line">        </div>
+<div class="line">        <a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;YieldTermStructure&gt;</a> discountingTermStructure;</div>
+<div class="line">        <a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;YieldTermStructure&gt;</a> forecastingTermStructure;</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">         /*********************</span></div>
-<div class="line"><span class="comment">          * BONDS TO BE PRICED *</span></div>
-<div class="line"><span class="comment">          **********************/</span></div>
+<div class="line">        <span class="comment">// bonds to be priced</span></div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// Common data</span></div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> faceAmount = 100;</div>
+<div class="line">        <span class="comment">// Common data</span></div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> faceAmount = 100;</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// Pricing engine</span></div>
-<div class="line">         <span class="keyword">auto</span> bondEngine = ext::make_shared&lt;DiscountingBondEngine&gt;(discountingTermStructure);</div>
+<div class="line">        <span class="comment">// Pricing engine</span></div>
+<div class="line">        <span class="keyword">auto</span> bondEngine = ext::make_shared&lt;DiscountingBondEngine&gt;(discountingTermStructure);</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// Zero coupon bond</span></div>
-<div class="line">         <a id="_a17" name="_a17"></a><a class="code hl_class" href="../../da/d3a/class_quant_lib_1_1_zero_coupon_bond.html">ZeroCouponBond</a> zeroCouponBond(</div>
+<div class="line">        <span class="comment">// Zero coupon bond</span></div>
+<div class="line">        <a id="_a15" name="_a15"></a><a class="code hl_class" href="../../da/d3a/class_quant_lib_1_1_zero_coupon_bond.html">ZeroCouponBond</a> zeroCouponBond(</div>
 <div class="line">                 settlementDays,</div>
-<div class="line">                 <a class="code hl_class" href="../../d2/d41/class_quant_lib_1_1_united_states.html">UnitedStates</a>(UnitedStates::GovernmentBond),</div>
+<div class="line">                 <a class="code hl_class" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>(),</div>
 <div class="line">                 faceAmount,</div>
 <div class="line">                 <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(15,August,2013),</div>
 <div class="line">                 Following,</div>
 <div class="line">                 <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(116.92),</div>
 <div class="line">                 <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(15,August,2003));</div>
 <div class="line"> </div>
-<div class="line">         zeroCouponBond.<a id="a18" name="a18"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(bondEngine);</div>
+<div class="line">        zeroCouponBond.<a id="a16" name="a16"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(bondEngine);</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// Fixed 4.5% US Treasury Note</span></div>
-<div class="line">         <a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> fixedBondSchedule(<a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(15, May, 2007),</div>
-<div class="line">                 <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(15,May,2017), <a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(Semiannual),</div>
-<div class="line">                 <a class="code hl_class" href="../../d2/d41/class_quant_lib_1_1_united_states.html">UnitedStates</a>(UnitedStates::GovernmentBond),</div>
-<div class="line">                 Unadjusted, Unadjusted, DateGeneration::Backward, <span class="keyword">false</span>);</div>
+<div class="line">        <span class="comment">// Fixed 4.5% bond</span></div>
+<div class="line">        <a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> fixedBondSchedule(</div>
+<div class="line">                 <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(15, May, 2007), <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(15,May,2017), <a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(Annual),</div>
+<div class="line">                 <a class="code hl_class" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>(), Unadjusted, Unadjusted, DateGeneration::Backward, <span class="keyword">false</span>);</div>
 <div class="line"> </div>
-<div class="line">         <a id="_a19" name="_a19"></a><a class="code hl_class" href="../../d8/df8/class_quant_lib_1_1_fixed_rate_bond.html">FixedRateBond</a> fixedRateBond(</div>
+<div class="line">        <a id="_a17" name="_a17"></a><a class="code hl_class" href="../../d8/df8/class_quant_lib_1_1_fixed_rate_bond.html">FixedRateBond</a> fixedRateBond(</div>
 <div class="line">                 settlementDays,</div>
 <div class="line">                 faceAmount,</div>
 <div class="line">                 fixedBondSchedule,</div>
@@ -487,25 +379,23 @@ $(function() {
 <div class="line">                 ModifiedFollowing,</div>
 <div class="line">                 100.0, <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(15, May, 2007));</div>
 <div class="line"> </div>
-<div class="line">         fixedRateBond.<a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(bondEngine);</div>
+<div class="line">        fixedRateBond.<a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(bondEngine);</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// Floating rate bond (3M USD Libor + 0.1%)</span></div>
-<div class="line">         <span class="comment">// Should and will be priced on another curve later...</span></div>
+<div class="line">        <span class="comment">// Floating rate bond (6M Euribor + 0.1%)</span></div>
 <div class="line"> </div>
-<div class="line">         <a class="code hl_class" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle&lt;YieldTermStructure&gt;</a> liborTermStructure;</div>
-<div class="line">         <span class="keyword">const</span> <span class="keyword">auto</span> libor3m = ext::make_shared&lt;USDLibor&gt;(<a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(3, Months), liborTermStructure);</div>
-<div class="line">         libor3m-&gt;addFixing(<a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(17, July, 2008),0.0278625);</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> euribor6m = ext::make_shared&lt;Euribor&gt;(<a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(6, Months), forecastingTermStructure);</div>
+<div class="line">        euribor6m-&gt;addFixing(<a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(18, October, 2007), 0.026);</div>
+<div class="line">        euribor6m-&gt;addFixing(<a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(17, April, 2008), 0.028);</div>
 <div class="line"> </div>
-<div class="line">         <a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> floatingBondSchedule(<a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(21, October, 2005),</div>
-<div class="line">                 <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(21, October, 2010), <a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(Quarterly),</div>
-<div class="line">                 <a class="code hl_class" href="../../d2/d41/class_quant_lib_1_1_united_states.html">UnitedStates</a>(UnitedStates::NYSE),</div>
-<div class="line">                 Unadjusted, Unadjusted, DateGeneration::Backward, <span class="keyword">true</span>);</div>
+<div class="line">        <a class="code hl_class" href="../../d5/d5b/class_quant_lib_1_1_schedule.html">Schedule</a> floatingBondSchedule(</div>
+<div class="line">                 <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(21, October, 2005), <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(21, October, 2010), <a class="code hl_class" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>(Semiannual),</div>
+<div class="line">                 <a class="code hl_class" href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">TARGET</a>(), Unadjusted, Unadjusted, DateGeneration::Backward, <span class="keyword">true</span>);</div>
 <div class="line"> </div>
-<div class="line">         <a id="_a20" name="_a20"></a><a class="code hl_class" href="../../d4/dcb/class_quant_lib_1_1_floating_rate_bond.html">FloatingRateBond</a> floatingRateBond(</div>
+<div class="line">        <a id="_a18" name="_a18"></a><a class="code hl_class" href="../../d4/dcb/class_quant_lib_1_1_floating_rate_bond.html">FloatingRateBond</a> floatingRateBond(</div>
 <div class="line">                 settlementDays,</div>
 <div class="line">                 faceAmount,</div>
 <div class="line">                 floatingBondSchedule,</div>
-<div class="line">                 libor3m,</div>
+<div class="line">                 euribor6m,</div>
 <div class="line">                 <a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(),</div>
 <div class="line">                 ModifiedFollowing,</div>
 <div class="line">                 <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a>(2),</div>
@@ -518,19 +408,19 @@ $(function() {
 <div class="line">                 <span class="comment">// Floors</span></div>
 <div class="line">                 std::vector&lt;Rate&gt;(),</div>
 <div class="line">                 <span class="comment">// Fixing in arrears</span></div>
-<div class="line">                 <span class="keyword">true</span>,</div>
+<div class="line">                 <span class="keyword">false</span>,</div>
 <div class="line">                 <a class="code hl_typedef" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(100.0),</div>
 <div class="line">                 <a class="code hl_class" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(21, October, 2005));</div>
 <div class="line"> </div>
-<div class="line">         floatingRateBond.<a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(bondEngine);</div>
+<div class="line">        floatingRateBond.<a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">setPricingEngine</a>(bondEngine);</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// Coupon pricers</span></div>
-<div class="line">         <span class="keyword">auto</span> pricer = ext::make_shared&lt;BlackIborCouponPricer&gt;();</div>
+<div class="line">        <span class="comment">// Coupon pricers</span></div>
+<div class="line">        <span class="keyword">auto</span> pricer = ext::make_shared&lt;BlackIborCouponPricer&gt;();</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// optionLet volatilities</span></div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> volatility = 0.0;</div>
-<div class="line">         <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;OptionletVolatilityStructure&gt;</a> vol;</div>
-<div class="line">         vol = <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;OptionletVolatilityStructure&gt;</a>(</div>
+<div class="line">        <span class="comment">// optionLet volatilities</span></div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaaa95ab7fe66935e3f7535413fad2a7d3">Volatility</a> volatility = 0.0;</div>
+<div class="line">        <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;OptionletVolatilityStructure&gt;</a> vol;</div>
+<div class="line">        vol = <a class="code hl_class" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle&lt;OptionletVolatilityStructure&gt;</a>(</div>
 <div class="line">                 ext::make_shared&lt;ConstantOptionletVolatility&gt;(</div>
 <div class="line">                                 settlementDays,</div>
 <div class="line">                                 calendar,</div>
@@ -538,97 +428,90 @@ $(function() {
 <div class="line">                                 volatility,</div>
 <div class="line">                                 <a class="code hl_class" href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">Actual365Fixed</a>()));</div>
 <div class="line"> </div>
-<div class="line">         pricer-&gt;setCapletVolatility(vol);</div>
-<div class="line">         setCouponPricer(floatingRateBond.<a id="a21" name="a21"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a6492fba1a8496caeaaa19e4bbff6b683">cashflows</a>(),pricer);</div>
+<div class="line">        pricer-&gt;setCapletVolatility(vol);</div>
+<div class="line">        setCouponPricer(floatingRateBond.<a id="a19" name="a19"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a6492fba1a8496caeaaa19e4bbff6b683">cashflows</a>(),pricer);</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// Yield curve bootstrapping</span></div>
-<div class="line">         forecastingTermStructure.<a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#a4c6b52dcdb036a4aa90b3533c80198d0">linkTo</a>(depoSwapTermStructure);</div>
-<div class="line">         discountingTermStructure.linkTo(bondDiscountingTermStructure);</div>
+<div class="line">        forecastingTermStructure.<a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#a4c6b52dcdb036a4aa90b3533c80198d0">linkTo</a>(depoSwapTermStructure);</div>
+<div class="line">        discountingTermStructure.linkTo(bondDiscountingTermStructure);</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// We are using the depo &amp; swap curve to estimate the future Libor rates</span></div>
-<div class="line">         liborTermStructure.<a class="code hl_function" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#a4c6b52dcdb036a4aa90b3533c80198d0">linkTo</a>(depoSwapTermStructure);</div>
+<div class="line">        std::cout &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">         /***************</span></div>
-<div class="line"><span class="comment">          * BOND PRICING *</span></div>
-<div class="line"><span class="comment">          ****************/</span></div>
+<div class="line">        <span class="comment">// write column headings</span></div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> widths[] = { 18, 10, 10, 10 };</div>
 <div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt;  <span class="stringliteral">&quot;                 &quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(widths[1]) &lt;&lt; <span class="stringliteral">&quot;ZC&quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(widths[2]) &lt;&lt; <span class="stringliteral">&quot;Fixed&quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(widths[3]) &lt;&lt; <span class="stringliteral">&quot;Floating&quot;</span></div>
+<div class="line">                  &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// write column headings</span></div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> widths[] = { 18, 10, 10, 10 };</div>
+<div class="line">        <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> width = widths[0] + widths[1] + widths[2] + widths[3];</div>
+<div class="line">        std::string rule(width, <span class="charliteral">&#39;-&#39;</span>);</div>
 <div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt;  <span class="stringliteral">&quot;                 &quot;</span></div>
-<div class="line">         &lt;&lt; std::setw(widths[1]) &lt;&lt; <span class="stringliteral">&quot;ZC&quot;</span></div>
-<div class="line">         &lt;&lt; std::setw(widths[2]) &lt;&lt; <span class="stringliteral">&quot;Fixed&quot;</span></div>
-<div class="line">         &lt;&lt; std::setw(widths[3]) &lt;&lt; <span class="stringliteral">&quot;Floating&quot;</span></div>
-<div class="line">         &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; rule &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line">         <a class="code hl_typedef" href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">Size</a> width = widths[0] + widths[1] + widths[2] + widths[3];</div>
-<div class="line">         std::string rule(width, <span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line">        std::cout &lt;&lt; std::fixed;</div>
+<div class="line">        std::cout &lt;&lt; std::setprecision(2);</div>
 <div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; rule &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Net present value&quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(widths[1]) &lt;&lt; zeroCouponBond.<a id="a20" name="a20"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">NPV</a>()</div>
+<div class="line">                  &lt;&lt; std::setw(widths[2]) &lt;&lt; fixedRateBond.<a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">NPV</a>()</div>
+<div class="line">                  &lt;&lt; std::setw(widths[3]) &lt;&lt; floatingRateBond.<a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">NPV</a>()</div>
+<div class="line">                  &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; std::fixed;</div>
-<div class="line">         std::cout &lt;&lt; std::setprecision(2);</div>
+<div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Clean price&quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(widths[1]) &lt;&lt; zeroCouponBond.<a id="a21" name="a21"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a04c101af83206923fd686044725444a7">cleanPrice</a>()</div>
+<div class="line">                  &lt;&lt; std::setw(widths[2]) &lt;&lt; fixedRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a04c101af83206923fd686044725444a7">cleanPrice</a>()</div>
+<div class="line">                  &lt;&lt; std::setw(widths[3]) &lt;&lt; floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a04c101af83206923fd686044725444a7">cleanPrice</a>()</div>
+<div class="line">                  &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Net present value&quot;</span></div>
-<div class="line">         &lt;&lt; std::setw(widths[1]) &lt;&lt; zeroCouponBond.<a id="a22" name="a22"></a><a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">NPV</a>()</div>
-<div class="line">         &lt;&lt; std::setw(widths[2]) &lt;&lt; fixedRateBond.<a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">NPV</a>()</div>
-<div class="line">         &lt;&lt; std::setw(widths[3]) &lt;&lt; floatingRateBond.<a class="code hl_function" href="../../d9/d65/class_quant_lib_1_1_instrument.html#a4f791921f063f3ea19bd6efa9ceb4892">NPV</a>()</div>
-<div class="line">         &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Dirty price&quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(widths[1]) &lt;&lt; zeroCouponBond.<a id="a22" name="a22"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a85c4207ffe9e1f712dfa6f1b3a9824f6">dirtyPrice</a>()</div>
+<div class="line">                  &lt;&lt; std::setw(widths[2]) &lt;&lt; fixedRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a85c4207ffe9e1f712dfa6f1b3a9824f6">dirtyPrice</a>()</div>
+<div class="line">                  &lt;&lt; std::setw(widths[3]) &lt;&lt; floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a85c4207ffe9e1f712dfa6f1b3a9824f6">dirtyPrice</a>()</div>
+<div class="line">                  &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Clean price&quot;</span></div>
-<div class="line">         &lt;&lt; std::setw(widths[1]) &lt;&lt; zeroCouponBond.<a id="a23" name="a23"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a04c101af83206923fd686044725444a7">cleanPrice</a>()</div>
-<div class="line">         &lt;&lt; std::setw(widths[2]) &lt;&lt; fixedRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a04c101af83206923fd686044725444a7">cleanPrice</a>()</div>
-<div class="line">         &lt;&lt; std::setw(widths[3]) &lt;&lt; floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a04c101af83206923fd686044725444a7">cleanPrice</a>()</div>
-<div class="line">         &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Accrued coupon&quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(widths[1]) &lt;&lt; zeroCouponBond.<a id="a23" name="a23"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a480521ba30a51962e09bddd5fbb59036">accruedAmount</a>()</div>
+<div class="line">                  &lt;&lt; std::setw(widths[2]) &lt;&lt; fixedRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a480521ba30a51962e09bddd5fbb59036">accruedAmount</a>()</div>
+<div class="line">                  &lt;&lt; std::setw(widths[3]) &lt;&lt; floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a480521ba30a51962e09bddd5fbb59036">accruedAmount</a>()</div>
+<div class="line">                  &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Dirty price&quot;</span></div>
-<div class="line">         &lt;&lt; std::setw(widths[1]) &lt;&lt; zeroCouponBond.<a id="a24" name="a24"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a85c4207ffe9e1f712dfa6f1b3a9824f6">dirtyPrice</a>()</div>
-<div class="line">         &lt;&lt; std::setw(widths[2]) &lt;&lt; fixedRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a85c4207ffe9e1f712dfa6f1b3a9824f6">dirtyPrice</a>()</div>
-<div class="line">         &lt;&lt; std::setw(widths[3]) &lt;&lt; floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a85c4207ffe9e1f712dfa6f1b3a9824f6">dirtyPrice</a>()</div>
-<div class="line">         &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Previous coupon&quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(widths[1]) &lt;&lt; <span class="stringliteral">&quot;N/A&quot;</span> <span class="comment">// zeroCouponBond</span></div>
+<div class="line">                  &lt;&lt; std::setw(widths[2]) &lt;&lt; io::rate(fixedRateBond.<a id="a24" name="a24"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a3180af5b636ecc0d353b5e08060528c6">previousCouponRate</a>())</div>
+<div class="line">                  &lt;&lt; std::setw(widths[3]) &lt;&lt; io::rate(floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a3180af5b636ecc0d353b5e08060528c6">previousCouponRate</a>())</div>
+<div class="line">                  &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Accrued coupon&quot;</span></div>
-<div class="line">         &lt;&lt; std::setw(widths[1]) &lt;&lt; zeroCouponBond.<a id="a25" name="a25"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a480521ba30a51962e09bddd5fbb59036">accruedAmount</a>()</div>
-<div class="line">         &lt;&lt; std::setw(widths[2]) &lt;&lt; fixedRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a480521ba30a51962e09bddd5fbb59036">accruedAmount</a>()</div>
-<div class="line">         &lt;&lt; std::setw(widths[3]) &lt;&lt; floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a480521ba30a51962e09bddd5fbb59036">accruedAmount</a>()</div>
-<div class="line">         &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Next coupon&quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(widths[1]) &lt;&lt; <span class="stringliteral">&quot;N/A&quot;</span> <span class="comment">// zeroCouponBond</span></div>
+<div class="line">                  &lt;&lt; std::setw(widths[2]) &lt;&lt; io::rate(fixedRateBond.<a id="a25" name="a25"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#af03d517a7683979e2f41098fce1f4b00">nextCouponRate</a>())</div>
+<div class="line">                  &lt;&lt; std::setw(widths[3]) &lt;&lt; io::rate(floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#af03d517a7683979e2f41098fce1f4b00">nextCouponRate</a>())</div>
+<div class="line">                  &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Previous coupon&quot;</span></div>
-<div class="line">         &lt;&lt; std::setw(widths[1]) &lt;&lt; <span class="stringliteral">&quot;N/A&quot;</span> <span class="comment">// zeroCouponBond</span></div>
-<div class="line">         &lt;&lt; std::setw(widths[2]) &lt;&lt; io::rate(fixedRateBond.<a id="a26" name="a26"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a3180af5b636ecc0d353b5e08060528c6">previousCouponRate</a>())</div>
-<div class="line">         &lt;&lt; std::setw(widths[3]) &lt;&lt; io::rate(floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a3180af5b636ecc0d353b5e08060528c6">previousCouponRate</a>())</div>
-<div class="line">         &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Yield&quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(widths[1])</div>
+<div class="line">                  &lt;&lt; io::rate(zeroCouponBond.<a id="a26" name="a26"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a468b1b1e7f434efc095665fe529b10ff">yield</a>(<a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(),Compounded,Annual))</div>
+<div class="line">                  &lt;&lt; std::setw(widths[2])</div>
+<div class="line">                  &lt;&lt; io::rate(fixedRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a468b1b1e7f434efc095665fe529b10ff">yield</a>(<a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(),Compounded,Annual))</div>
+<div class="line">                  &lt;&lt; std::setw(widths[3])</div>
+<div class="line">                  &lt;&lt; io::rate(floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a468b1b1e7f434efc095665fe529b10ff">yield</a>(<a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(),Compounded,Annual))</div>
+<div class="line">                  &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Next coupon&quot;</span></div>
-<div class="line">         &lt;&lt; std::setw(widths[1]) &lt;&lt; <span class="stringliteral">&quot;N/A&quot;</span> <span class="comment">// zeroCouponBond</span></div>
-<div class="line">         &lt;&lt; std::setw(widths[2]) &lt;&lt; io::rate(fixedRateBond.<a id="a27" name="a27"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#af03d517a7683979e2f41098fce1f4b00">nextCouponRate</a>())</div>
-<div class="line">         &lt;&lt; std::setw(widths[3]) &lt;&lt; io::rate(floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#af03d517a7683979e2f41098fce1f4b00">nextCouponRate</a>())</div>
-<div class="line">         &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; std::setw(widths[0]) &lt;&lt; <span class="stringliteral">&quot;Yield&quot;</span></div>
-<div class="line">         &lt;&lt; std::setw(widths[1])</div>
-<div class="line">         &lt;&lt; io::rate(zeroCouponBond.<a id="a28" name="a28"></a><a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a468b1b1e7f434efc095665fe529b10ff">yield</a>(<a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(),Compounded,Annual))</div>
-<div class="line">         &lt;&lt; std::setw(widths[2])</div>
-<div class="line">         &lt;&lt; io::rate(fixedRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a468b1b1e7f434efc095665fe529b10ff">yield</a>(<a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(),Compounded,Annual))</div>
-<div class="line">         &lt;&lt; std::setw(widths[3])</div>
-<div class="line">         &lt;&lt; io::rate(floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a468b1b1e7f434efc095665fe529b10ff">yield</a>(<a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(),Compounded,Annual))</div>
-<div class="line">         &lt;&lt; std::endl;</div>
+<div class="line">        <span class="comment">// Other computations</span></div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Sample indirect computations (for the floating rate bond): &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; rule &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Yield to Clean Price: &quot;</span></div>
+<div class="line">                  &lt;&lt; floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a04c101af83206923fd686044725444a7">cleanPrice</a>(floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a468b1b1e7f434efc095665fe529b10ff">yield</a>(<a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(),Compounded,Annual),<a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(),Compounded,Annual,settlementDate) &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line">         <span class="comment">// Other computations</span></div>
-<div class="line">         std::cout &lt;&lt; <span class="stringliteral">&quot;Sample indirect computations (for the floating rate bond): &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line">         std::cout &lt;&lt; rule &lt;&lt; std::endl;</div>
-<div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; <span class="stringliteral">&quot;Yield to Clean Price: &quot;</span></div>
-<div class="line">         &lt;&lt; floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a04c101af83206923fd686044725444a7">cleanPrice</a>(floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a468b1b1e7f434efc095665fe529b10ff">yield</a>(<a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(),Compounded,Annual),<a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(),Compounded,Annual,settlementDate) &lt;&lt; std::endl;</div>
-<div class="line"> </div>
-<div class="line">         std::cout &lt;&lt; <span class="stringliteral">&quot;Clean Price to Yield: &quot;</span></div>
-<div class="line">                   &lt;&lt; io::rate(floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a468b1b1e7f434efc095665fe529b10ff">yield</a>({floatingRateBond.cleanPrice(), Bond::Price::Clean},</div>
-<div class="line">                                                      <a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(), Compounded, Annual, settlementDate))</div>
-<div class="line">                   &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Clean Price to Yield: &quot;</span></div>
+<div class="line">                  &lt;&lt; io::rate(floatingRateBond.<a class="code hl_function" href="../../d8/d2e/class_quant_lib_1_1_bond.html#a468b1b1e7f434efc095665fe529b10ff">yield</a>({floatingRateBond.cleanPrice(), Bond::Price::Clean},</div>
+<div class="line">                                                     <a class="code hl_class" href="../../dd/d4e/class_quant_lib_1_1_actual360.html">Actual360</a>(), Compounded, Annual, settlementDate))</div>
+<div class="line">                  &lt;&lt; std::endl</div>
+<div class="line">                  &lt;&lt; std::endl;</div>
 <div class="line"> </div>
 <div class="line">         <span class="keywordflow">return</span> 0;</div>
 <div class="line"> </div>
@@ -648,18 +531,17 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_actual360_html"><div class="ttname"><a href="../../dd/d4e/class_quant_lib_1_1_actual360.html">QuantLib::Actual360</a></div><div class="ttdoc">Actual/360 day count convention.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbc/actual360_8hpp_source.html#l00037">actual360.hpp:37</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual365_fixed_html"><div class="ttname"><a href="../../d8/dbb/class_quant_lib_1_1_actual365_fixed.html">QuantLib::Actual365Fixed</a></div><div class="ttdoc">Actual/365 (Fixed) day count convention.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbf/actual365fixed_8hpp_source.html#l00045">actual365fixed.hpp:45</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_actual_actual_html"><div class="ttname"><a href="../../de/dee/class_quant_lib_1_1_actual_actual.html">QuantLib::ActualActual</a></div><div class="ttdoc">Actual/Actual day count.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d81/actualactual_8hpp_source.html#l00051">actualactual.hpp:51</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a04c101af83206923fd686044725444a7"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a04c101af83206923fd686044725444a7">QuantLib::Bond::cleanPrice</a></div><div class="ttdeci">Real cleanPrice() const</div><div class="ttdoc">theoretical clean price</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/bond_8cpp_source.html#l00174">bond.cpp:174</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a3180af5b636ecc0d353b5e08060528c6"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a3180af5b636ecc0d353b5e08060528c6">QuantLib::Bond::previousCouponRate</a></div><div class="ttdeci">Rate previousCouponRate(Date d=Date()) const</div><div class="ttdoc">Previous coupon already paid at a given date.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/bond_8cpp_source.html#l00279">bond.cpp:279</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a468b1b1e7f434efc095665fe529b10ff"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a468b1b1e7f434efc095665fe529b10ff">QuantLib::Bond::yield</a></div><div class="ttdeci">Rate yield(const DayCounter &amp;dc, Compounding comp, Frequency freq, Real accuracy=1.0e-8, Size maxEvaluations=100, Real guess=0.05, Bond::Price::Type priceType=Bond::Price::Clean) const</div><div class="ttdoc">theoretical bond yield</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/bond_8cpp_source.html#l00198">bond.cpp:198</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a480521ba30a51962e09bddd5fbb59036"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a480521ba30a51962e09bddd5fbb59036">QuantLib::Bond::accruedAmount</a></div><div class="ttdeci">virtual Real accruedAmount(Date d=Date()) const</div><div class="ttdoc">accrued amount at a given date</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/bond_8cpp_source.html#l00267">bond.cpp:267</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a6492fba1a8496caeaaa19e4bbff6b683"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a6492fba1a8496caeaaa19e4bbff6b683">QuantLib::Bond::cashflows</a></div><div class="ttdeci">const Leg &amp; cashflows() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00344">bond.hpp:344</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a85c4207ffe9e1f712dfa6f1b3a9824f6"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a85c4207ffe9e1f712dfa6f1b3a9824f6">QuantLib::Bond::dirtyPrice</a></div><div class="ttdeci">Real dirtyPrice() const</div><div class="ttdoc">theoretical dirty price</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/bond_8cpp_source.html#l00178">bond.cpp:178</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_bond_html_af03d517a7683979e2f41098fce1f4b00"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#af03d517a7683979e2f41098fce1f4b00">QuantLib::Bond::nextCouponRate</a></div><div class="ttdeci">virtual Rate nextCouponRate(Date d=Date()) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/bond_8cpp_source.html#l00275">bond.cpp:275</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a04c101af83206923fd686044725444a7"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a04c101af83206923fd686044725444a7">QuantLib::Bond::cleanPrice</a></div><div class="ttdeci">Real cleanPrice() const</div><div class="ttdoc">theoretical clean price</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/bond_8cpp_source.html#l00175">bond.cpp:175</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a3180af5b636ecc0d353b5e08060528c6"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a3180af5b636ecc0d353b5e08060528c6">QuantLib::Bond::previousCouponRate</a></div><div class="ttdeci">Rate previousCouponRate(Date d=Date()) const</div><div class="ttdoc">Previous coupon already paid at a given date.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/bond_8cpp_source.html#l00268">bond.cpp:268</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a468b1b1e7f434efc095665fe529b10ff"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a468b1b1e7f434efc095665fe529b10ff">QuantLib::Bond::yield</a></div><div class="ttdeci">Rate yield(const DayCounter &amp;dc, Compounding comp, Frequency freq, Real accuracy=1.0e-8, Size maxEvaluations=100, Real guess=0.05, Bond::Price::Type priceType=Bond::Price::Clean) const</div><div class="ttdoc">theoretical bond yield</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/bond_8cpp_source.html#l00199">bond.cpp:199</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a480521ba30a51962e09bddd5fbb59036"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a480521ba30a51962e09bddd5fbb59036">QuantLib::Bond::accruedAmount</a></div><div class="ttdeci">virtual Real accruedAmount(Date d=Date()) const</div><div class="ttdoc">accrued amount at a given date</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/bond_8cpp_source.html#l00256">bond.cpp:256</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a6492fba1a8496caeaaa19e4bbff6b683"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a6492fba1a8496caeaaa19e4bbff6b683">QuantLib::Bond::cashflows</a></div><div class="ttdeci">const Leg &amp; cashflows() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1e/bond_8hpp_source.html#l00330">bond.hpp:330</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bond_html_a85c4207ffe9e1f712dfa6f1b3a9824f6"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#a85c4207ffe9e1f712dfa6f1b3a9824f6">QuantLib::Bond::dirtyPrice</a></div><div class="ttdeci">Real dirtyPrice() const</div><div class="ttdoc">theoretical dirty price</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/bond_8cpp_source.html#l00179">bond.cpp:179</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_bond_html_af03d517a7683979e2f41098fce1f4b00"><div class="ttname"><a href="../../d8/d2e/class_quant_lib_1_1_bond.html#af03d517a7683979e2f41098fce1f4b00">QuantLib::Bond::nextCouponRate</a></div><div class="ttdeci">virtual Rate nextCouponRate(Date d=Date()) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/bond_8cpp_source.html#l00264">bond.cpp:264</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html">QuantLib::Calendar</a></div><div class="ttdoc">calendar class</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d39/calendar_8hpp_source.html#l00061">calendar.hpp:61</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_calendar_html_a712629806d9ef9a39f8144f368c81e4b"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html#a712629806d9ef9a39f8144f368c81e4b">QuantLib::Calendar::adjust</a></div><div class="ttdeci">Date adjust(const Date &amp;, BusinessDayConvention convention=Following) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d2e/calendar_8cpp_source.html#l00084">calendar.cpp:84</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_calendar_html_ab3fc4d2c4ba5243c3f5d51dcb3077ceb"><div class="ttname"><a href="../../da/d3e/class_quant_lib_1_1_calendar.html#ab3fc4d2c4ba5243c3f5d51dcb3077ceb">QuantLib::Calendar::advance</a></div><div class="ttdeci">Date advance(const Date &amp;, Integer n, TimeUnit unit, BusinessDayConvention convention=Following, bool endOfMonth=false) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d2e/calendar_8cpp_source.html#l00130">calendar.cpp:130</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_date_html_a8beb14a6b168772900b48e3161b4c0e6"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#a8beb14a6b168772900b48e3161b4c0e6">QuantLib::Date::weekday</a></div><div class="ttdeci">Weekday weekday() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00395">date.hpp:395</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_date_html_a8beb14a6b168772900b48e3161b4c0e6"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#a8beb14a6b168772900b48e3161b4c0e6">QuantLib::Date::weekday</a></div><div class="ttdeci">Weekday weekday() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00391">date.hpp:391</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_day_counter_html"><div class="ttname"><a href="../../dd/d24/class_quant_lib_1_1_day_counter.html">QuantLib::DayCounter</a></div><div class="ttdoc">day counter class</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d32/daycounter_8hpp_source.html#l00044">daycounter.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_fixed_rate_bond_html"><div class="ttname"><a href="../../d8/df8/class_quant_lib_1_1_fixed_rate_bond.html">QuantLib::FixedRateBond</a></div><div class="ttdoc">fixed-rate bond</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db1/fixedratebond_8hpp_source.html#l00046">fixedratebond.hpp:46</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_floating_rate_bond_html"><div class="ttname"><a href="../../d4/dcb/class_quant_lib_1_1_floating_rate_bond.html">QuantLib::FloatingRateBond</a></div><div class="ttdoc">floating-rate bond (possibly capped and/or floored)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/de7/floatingratebond_8hpp_source.html#l00042">floatingratebond.hpp:42</a></div></div>
@@ -668,11 +550,10 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_instrument_html_ae58e4c75062c7f3f4dedbd744f9a379f"><div class="ttname"><a href="../../d9/d65/class_quant_lib_1_1_instrument.html#ae58e4c75062c7f3f4dedbd744f9a379f">QuantLib::Instrument::setPricingEngine</a></div><div class="ttdeci">void setPricingEngine(const ext::shared_ptr&lt; PricingEngine &gt; &amp;)</div><div class="ttdoc">set the pricing engine to be used.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8b/instrument_8cpp_source.html#l00035">instrument.cpp:35</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_period_html"><div class="ttname"><a href="../../df/dfa/class_quant_lib_1_1_period.html">QuantLib::Period</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dff/period_8hpp_source.html#l00044">period.hpp:44</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_relinkable_handle_html"><div class="ttname"><a href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">QuantLib::RelinkableHandle</a></div><div class="ttdoc">Relinkable handle to an observable.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00117">handle.hpp:117</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_relinkable_handle_html_a4c6b52dcdb036a4aa90b3533c80198d0"><div class="ttname"><a href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#a4c6b52dcdb036a4aa90b3533c80198d0">QuantLib::RelinkableHandle::linkTo</a></div><div class="ttdeci">void linkTo(const ext::shared_ptr&lt; T &gt; &amp;h, bool registerAsObserver=true)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00217">handle.hpp:217</a></div></div>
+<div class="ttc" id="aclass_quant_lib_1_1_relinkable_handle_html_a4c6b52dcdb036a4aa90b3533c80198d0"><div class="ttname"><a href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html#a4c6b52dcdb036a4aa90b3533c80198d0">QuantLib::RelinkableHandle::linkTo</a></div><div class="ttdeci">void linkTo(const ext::shared_ptr&lt; T &gt; &amp;h, bool registerAsObserver=true)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd4/handle_8hpp_source.html#l00214">handle.hpp:214</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_schedule_html"><div class="ttname"><a href="../../d5/d5b/class_quant_lib_1_1_schedule.html">QuantLib::Schedule</a></div><div class="ttdoc">Payment schedule.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd1/schedule_8hpp_source.html#l00040">schedule.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_t_a_r_g_e_t_html"><div class="ttname"><a href="../../dd/d13/class_quant_lib_1_1_t_a_r_g_e_t.html">QuantLib::TARGET</a></div><div class="ttdoc">TARGET calendar</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d69/target_8hpp_source.html#l00050">target.hpp:50</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_thirty360_html"><div class="ttname"><a href="../../d5/d63/class_quant_lib_1_1_thirty360.html">QuantLib::Thirty360</a></div><div class="ttdoc">30/360 day count convention</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da8/thirty360_8hpp_source.html#l00076">thirty360.hpp:76</a></div></div>
-<div class="ttc" id="aclass_quant_lib_1_1_united_states_html"><div class="ttname"><a href="../../d2/d41/class_quant_lib_1_1_united_states.html">QuantLib::UnitedStates</a></div><div class="ttdoc">United States calendars.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d69/unitedstates_8hpp_source.html#l00156">unitedstates.hpp:156</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_zero_coupon_bond_html"><div class="ttname"><a href="../../da/d3a/class_quant_lib_1_1_zero_coupon_bond.html">QuantLib::ZeroCouponBond</a></div><div class="ttdoc">zero-coupon bond</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc3/zerocouponbond_8hpp_source.html#l00038">zerocouponbond.hpp:38</a></div></div>
 <div class="ttc" id="aconstantoptionletvol_8hpp_html"><div class="ttname"><a href="../../db/df3/constantoptionletvol_8hpp.html">constantoptionletvol.hpp</a></div><div class="ttdoc">Constant caplet/floorlet volatility.</div></div>
 <div class="ttc" id="acouponpricer_8hpp_html"><div class="ttname"><a href="../../de/d43/couponpricer_8hpp.html">couponpricer.hpp</a></div><div class="ttdoc">Coupon pricers.</div></div>
@@ -685,7 +566,7 @@ $(function() {
 <div class="ttc" id="agroup__types_html_gab9c87440c314438e51a899a03d2442d0"><div class="ttname"><a href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">QuantLib::Integer</a></div><div class="ttdeci">QL_INTEGER Integer</div><div class="ttdoc">integer number</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00035">types.hpp:35</a></div></div>
 <div class="ttc" id="agroup__types_html_gaede435af51236692b1107d7639581d39"><div class="ttname"><a href="../../d6/d59/group__types.html#gaede435af51236692b1107d7639581d39">QuantLib::Rate</a></div><div class="ttdeci">Real Rate</div><div class="ttdoc">interest rates</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00070">types.hpp:70</a></div></div>
 <div class="ttc" id="agroup__types_html_gaf38bdb4c54463b1f456655efa95b5c77"><div class="ttname"><a href="../../d6/d59/group__types.html#gaf38bdb4c54463b1f456655efa95b5c77">QuantLib::Size</a></div><div class="ttdeci">std::size_t Size</div><div class="ttdoc">size of a container</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de3/types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00037">any.hpp:37</a></div></div>
 <div class="ttc" id="apiecewiseyieldcurve_8hpp_html"><div class="ttname"><a href="../../d9/d9f/piecewiseyieldcurve_8hpp.html">piecewiseyieldcurve.hpp</a></div><div class="ttdoc">piecewise-interpolated term structure</div></div>
 <div class="ttc" id="aqldefines_8hpp_html"><div class="ttname"><a href="../../de/d56/qldefines_8hpp.html">qldefines.hpp</a></div><div class="ttdoc">Global definitions and compiler switches.</div></div>
 <div class="ttc" id="atarget_8hpp_html"><div class="ttname"><a href="../../dc/d69/target_8hpp.html">target.hpp</a></div><div class="ttdoc">TARGET calendar.</div></div>

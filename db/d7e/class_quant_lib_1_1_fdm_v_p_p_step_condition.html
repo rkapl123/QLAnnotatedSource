@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -113,17 +113,17 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../dd/d93/class_quant_lib_1_1_fdm_v_p_p_step_condition__coll__graph.png" border="0" usemap="#a_fdm_v_p_p_step_condition_coll__map" alt="Collaboration graph"/></div>
 <map name="a_fdm_v_p_p_step_condition_coll__map" id="a_fdm_v_p_p_step_condition_coll__map">
-<area shape="rect" title=" " alt="" coords="339,489,522,647"/>
+<area shape="rect" title=" " alt="" coords="337,489,519,647"/>
 <area shape="rect" href="../../dc/dda/class_quant_lib_1_1_step_condition.html" title=" " alt="" coords="5,269,168,339"/>
 <area shape="rect" href="../../dc/dda/class_quant_lib_1_1_step_condition.html" title="condition to be applied at every time step" alt="" coords="13,108,161,192"/>
-<area shape="rect" title=" " alt="" coords="192,284,280,324"/>
-<area shape="rect" title=" " alt="" coords="304,284,392,324"/>
-<area shape="rect" title=" " alt="" coords="417,277,567,331"/>
-<area shape="rect" title=" " alt="" coords="592,277,779,331"/>
-<area shape="rect" title=" " alt="" coords="803,277,946,331"/>
-<area shape="rect" title=" " alt="" coords="739,130,890,170"/>
-<area shape="rect" title=" " alt="" coords="915,130,1005,170"/>
-<area shape="rect" title=" " alt="" coords="941,5,979,45"/>
+<area shape="rect" title=" " alt="" coords="193,284,277,324"/>
+<area shape="rect" title=" " alt="" coords="301,284,389,324"/>
+<area shape="rect" title=" " alt="" coords="414,277,565,331"/>
+<area shape="rect" title=" " alt="" coords="589,277,776,331"/>
+<area shape="rect" title=" " alt="" coords="801,277,943,331"/>
+<area shape="rect" title=" " alt="" coords="737,130,887,170"/>
+<area shape="rect" title=" " alt="" coords="912,130,1003,170"/>
+<area shape="rect" title=" " alt="" coords="938,5,977,45"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -182,8 +182,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ab5827191df1e4c13dc7b96582bbece68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc9de4d9a5a851f71ea55f3758be59a5"><td class="memItemLeft" align="right" valign="top">const ext::shared_ptr&lt; <a class="el" href="../../de/d18/class_quant_lib_1_1_fdm_inner_value_calculator.html">FdmInnerValueCalculator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7e/class_quant_lib_1_1_fdm_v_p_p_step_condition.html#adc9de4d9a5a851f71ea55f3758be59a5">sparkSpreadPrice_</a></td></tr>
 <tr class="separator:adc9de4d9a5a851f71ea55f3758be59a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0811d5e4a57c88019480e9ee233b12f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; ext::function&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7e/class_quant_lib_1_1_fdm_v_p_p_step_condition.html#af0811d5e4a57c88019480e9ee233b12f">stateEvolveFcts_</a></td></tr>
-<tr class="separator:af0811d5e4a57c88019480e9ee233b12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acefe7dcf3c649d294a877610b94e9559"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::function&lt; <a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>(<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7e/class_quant_lib_1_1_fdm_v_p_p_step_condition.html#acefe7dcf3c649d294a877610b94e9559">stateEvolveFcts_</a></td></tr>
+<tr class="separator:acefe7dcf3c649d294a877610b94e9559"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -871,8 +871,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af0811d5e4a57c88019480e9ee233b12f" name="af0811d5e4a57c88019480e9ee233b12f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0811d5e4a57c88019480e9ee233b12f">&#9670;&#160;</a></span>stateEvolveFcts_</h2>
+<a id="acefe7dcf3c649d294a877610b94e9559" name="acefe7dcf3c649d294a877610b94e9559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acefe7dcf3c649d294a877610b94e9559">&#9670;&#160;</a></span>stateEvolveFcts_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -881,7 +881,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;ext::function&lt;<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt; &gt; stateEvolveFcts_</td>
+          <td class="memname">std::vector&lt;std::function&lt;<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>)&gt; &gt; stateEvolveFcts_</td>
         </tr>
       </table>
   </td>

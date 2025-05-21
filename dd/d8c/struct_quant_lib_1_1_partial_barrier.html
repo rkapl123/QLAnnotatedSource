@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -90,49 +90,33 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d8/d44/partialtimebarrieroption_8hpp_source.html">partialtimebarrieroption.hpp</a>&gt;</code></p>
+<p>choice of time range for partial-time barrier options  
+ <a href="../../dd/d8c/struct_quant_lib_1_1_partial_barrier.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d9/d60/instruments_2partialtimebarrieroption_8hpp_source.html">partialtimebarrieroption.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for PartialBarrier:</div>
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Collaboration diagram for PartialBarrier:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../dd/dca/struct_quant_lib_1_1_partial_barrier__inherit__graph.png" border="0" usemap="#a_partial_barrier_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_partial_barrier_inherit__map" id="a_partial_barrier_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,93,107,133"/>
-<area shape="rect" href="../../de/d3f/struct_quant_lib_1_1_barrier.html" title="Placeholder for enumerated barrier types." alt="" coords="24,5,88,45"/>
-</map>
-</div>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Collaboration diagram for PartialBarrier:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d4/df0/struct_quant_lib_1_1_partial_barrier__coll__graph.png" border="0" usemap="#a_partial_barrier_coll__map" alt="Collaboration graph"/></div>
 <map name="a_partial_barrier_coll__map" id="a_partial_barrier_coll__map">
-<area shape="rect" title=" " alt="" coords="5,93,107,133"/>
-<area shape="rect" href="../../de/d3f/struct_quant_lib_1_1_barrier.html" title="Placeholder for enumerated barrier types." alt="" coords="24,5,88,45"/>
+<area shape="rect" title="choice of time range for partial&#45;time barrier options" alt="" coords="5,5,107,45"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a1b00d070baaf3fae8b605e1b7c578c11"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/struct_quant_lib_1_1_partial_barrier.html#a1b00d070baaf3fae8b605e1b7c578c11">Range</a> { <a class="el" href="../../dd/d8c/struct_quant_lib_1_1_partial_barrier.html#a1b00d070baaf3fae8b605e1b7c578c11abd5f9c956752ce4dc707b4624b3a36f7">Start</a>
-, <a class="el" href="../../dd/d8c/struct_quant_lib_1_1_partial_barrier.html#a1b00d070baaf3fae8b605e1b7c578c11a667876a6f108081ad524d7d29d23d506">End</a>
-, <a class="el" href="../../dd/d8c/struct_quant_lib_1_1_partial_barrier.html#a1b00d070baaf3fae8b605e1b7c578c11a30c5d1087c14b857484dfb4cad6e28d2">EndB1</a>
-, <a class="el" href="../../dd/d8c/struct_quant_lib_1_1_partial_barrier.html#a1b00d070baaf3fae8b605e1b7c578c11abbc2243a0c6f322be3cf6fe2c57fbc93">EndB2</a>
+<tr class="memitem:a1b00d070baaf3fae8b605e1b7c578c11"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8c/struct_quant_lib_1_1_partial_barrier.html#a1b00d070baaf3fae8b605e1b7c578c11">Range</a> { <a class="el" href="../../dd/d8c/struct_quant_lib_1_1_partial_barrier.html#a1b00d070baaf3fae8b605e1b7c578c11abd5f9c956752ce4dc707b4624b3a36f7">Start</a> = 0
+, <a class="el" href="../../dd/d8c/struct_quant_lib_1_1_partial_barrier.html#a1b00d070baaf3fae8b605e1b7c578c11a30c5d1087c14b857484dfb4cad6e28d2">EndB1</a> = 2
+, <a class="el" href="../../dd/d8c/struct_quant_lib_1_1_partial_barrier.html#a1b00d070baaf3fae8b605e1b7c578c11abbc2243a0c6f322be3cf6fe2c57fbc93">EndB2</a> = 3
  }</td></tr>
 <tr class="separator:a1b00d070baaf3fae8b605e1b7c578c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_struct_quant_lib_1_1_barrier"><td colspan="2" onclick="javascript:toggleInherit('pub_types_struct_quant_lib_1_1_barrier')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../de/d3f/struct_quant_lib_1_1_barrier.html">Barrier</a></td></tr>
-<tr class="memitem:a1d1cfd8ffb84e947f82999c682b666a7 inherit pub_types_struct_quant_lib_1_1_barrier"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3f/struct_quant_lib_1_1_barrier.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> { <a class="el" href="../../de/d3f/struct_quant_lib_1_1_barrier.html#a1d1cfd8ffb84e947f82999c682b666a7a6ab88de83b4e4e5bb228513984281c5f">DownIn</a>
-, <a class="el" href="../../de/d3f/struct_quant_lib_1_1_barrier.html#a1d1cfd8ffb84e947f82999c682b666a7a8f909ed7a2ba7d90bc6cc0c0d06d6f43">UpIn</a>
-, <a class="el" href="../../de/d3f/struct_quant_lib_1_1_barrier.html#a1d1cfd8ffb84e947f82999c682b666a7a9defe9c8312773f17477f4a17f4c8292">DownOut</a>
-, <a class="el" href="../../de/d3f/struct_quant_lib_1_1_barrier.html#a1d1cfd8ffb84e947f82999c682b666a7aebd63d98ea3bbdd87adceafd229d6edc">UpOut</a>
- }</td></tr>
-<tr class="separator:a1d1cfd8ffb84e947f82999c682b666a7 inherit pub_types_struct_quant_lib_1_1_barrier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d8/d44/partialtimebarrieroption_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../d8/d44/partialtimebarrieroption_8hpp_source.html">partialtimebarrieroption.hpp</a>.</p>
+<div class="textblock"><p >choice of time range for partial-time barrier options </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d60/instruments_2partialtimebarrieroption_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../d9/d60/instruments_2partialtimebarrieroption_8hpp_source.html">partialtimebarrieroption.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a1b00d070baaf3fae8b605e1b7c578c11" name="a1b00d070baaf3fae8b605e1b7c578c11"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b00d070baaf3fae8b605e1b7c578c11">&#9670;&#160;</a></span>Range</h2>
@@ -146,13 +130,15 @@ Public Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1b00d070baaf3fae8b605e1b7c578c11abd5f9c956752ce4dc707b4624b3a36f7" name="a1b00d070baaf3fae8b605e1b7c578c11abd5f9c956752ce4dc707b4624b3a36f7"></a>Start&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1b00d070baaf3fae8b605e1b7c578c11a667876a6f108081ad524d7d29d23d506" name="a1b00d070baaf3fae8b605e1b7c578c11a667876a6f108081ad524d7d29d23d506"></a>End&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1b00d070baaf3fae8b605e1b7c578c11a30c5d1087c14b857484dfb4cad6e28d2" name="a1b00d070baaf3fae8b605e1b7c578c11a30c5d1087c14b857484dfb4cad6e28d2"></a>EndB1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1b00d070baaf3fae8b605e1b7c578c11abbc2243a0c6f322be3cf6fe2c57fbc93" name="a1b00d070baaf3fae8b605e1b7c578c11abbc2243a0c6f322be3cf6fe2c57fbc93"></a>EndB2&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1b00d070baaf3fae8b605e1b7c578c11abd5f9c956752ce4dc707b4624b3a36f7" name="a1b00d070baaf3fae8b605e1b7c578c11abd5f9c956752ce4dc707b4624b3a36f7"></a>Start&#160;</td><td class="fielddoc"><p >Monitor the barrier from the start of the option lifetime until the so-called cover event. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b00d070baaf3fae8b605e1b7c578c11a30c5d1087c14b857484dfb4cad6e28d2" name="a1b00d070baaf3fae8b605e1b7c578c11a30c5d1087c14b857484dfb4cad6e28d2"></a>EndB1&#160;</td><td class="fielddoc"><p >Monitor the barrier from the cover event to the exercise date; trigger a knock-out only if the barrier is hit or crossed from either side, regardless of the underlying value when monitoring starts. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b00d070baaf3fae8b605e1b7c578c11abbc2243a0c6f322be3cf6fe2c57fbc93" name="a1b00d070baaf3fae8b605e1b7c578c11abbc2243a0c6f322be3cf6fe2c57fbc93"></a>EndB2&#160;</td><td class="fielddoc"><p >Monitor the barrier from the cover event to the exercise date; immediately trigger a knock-out if the underlying value is on the wrong side of the barrier when monitoring starts. </p>
+</td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d44/partialtimebarrieroption_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../d8/d44/partialtimebarrieroption_8hpp_source.html">partialtimebarrieroption.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d60/instruments_2partialtimebarrieroption_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d9/d60/instruments_2partialtimebarrieroption_8hpp_source.html">partialtimebarrieroption.hpp</a>.</p>
 
 </div>
 </div>

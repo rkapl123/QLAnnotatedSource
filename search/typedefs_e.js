@@ -13,7 +13,7 @@ var searchData=
   ['pricingerrors_10',['PricingErrors',['../d5/d7b/namespace_quant_lib.html#a5f8b4eb889a2912144e71eb20abd52f2',1,'QuantLib']]],
   ['pricingperiods_11',['PricingPeriods',['../d5/d7b/namespace_quant_lib.html#a601cc4510014fa91b837b14a03d22ab3',1,'QuantLib']]],
   ['probability_12',['Probability',['../d6/d59/group__types.html#gad9817a6a21dfcb91429f0152c99d6313',1,'QuantLib']]],
-  ['projection_5ftime_13',['projection_time',['../d2/d05/class_quant_lib_1_1_time_series.html#a5c6cd43cd3d15570eadd7890a83c892a',1,'QuantLib::TimeSeries']]],
-  ['projection_5fvalue_14',['projection_value',['../d2/d05/class_quant_lib_1_1_time_series.html#a1875d72f9b78d6caa49502b45901ceea',1,'QuantLib::TimeSeries']]],
+  ['projection_5ftime_13',['projection_time',['../d2/d05/class_quant_lib_1_1_time_series.html#a6dfce9249efc7b51d3de777504e49e8c',1,'QuantLib::TimeSeries']]],
+  ['projection_5fvalue_14',['projection_value',['../d2/d05/class_quant_lib_1_1_time_series.html#a55924fa1a4eb5eecaf9a397b3f98c5cd',1,'QuantLib::TimeSeries']]],
   ['pseudorandom_15',['PseudoRandom',['../d5/d7b/namespace_quant_lib.html#af791c06b3da1d5f4b90a19f3f423e75e',1,'QuantLib']]]
 ];

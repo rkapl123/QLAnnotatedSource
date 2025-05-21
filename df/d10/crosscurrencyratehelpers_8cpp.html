@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -88,7 +88,8 @@ $(function() {
   <div class="headertitle"><div class="title">crosscurrencyratehelpers.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="../../dc/de6/iborcoupon_8hpp_source.html">ql/cashflows/iborcoupon.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../dc/dfb/overnightindexedcoupon_8hpp_source.html">ql/cashflows/overnightindexedcoupon.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../dc/de6/iborcoupon_8hpp_source.html">ql/cashflows/iborcoupon.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../dd/d40/cashflows_8hpp_source.html">ql/cashflows/cashflows.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../da/ddd/simplecashflow_8hpp_source.html">ql/cashflows/simplecashflow.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d7/ded/crosscurrencyratehelpers_8hpp_source.html">ql/experimental/termstructures/crosscurrencyratehelpers.hpp</a>&gt;</code><br />
@@ -123,7 +124,7 @@ Namespaces</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html#l00096">96</a> of file <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html">crosscurrencyratehelpers.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html#l00114">114</a> of file <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html">crosscurrencyratehelpers.cpp</a>.</p>
 
 </div>
 </div>
@@ -147,7 +148,7 @@ Namespaces</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html#l00097">97</a> of file <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html">crosscurrencyratehelpers.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html#l00115">115</a> of file <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html">crosscurrencyratehelpers.cpp</a>.</p>
 
 </div>
 </div>
@@ -171,7 +172,7 @@ Namespaces</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html#l00129">129</a> of file <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html">crosscurrencyratehelpers.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html#l00163">163</a> of file <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html">crosscurrencyratehelpers.cpp</a>.</p>
 
 </div>
 </div>
@@ -195,7 +196,7 @@ Namespaces</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html#l00130">130</a> of file <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html">crosscurrencyratehelpers.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html#l00164">164</a> of file <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html">crosscurrencyratehelpers.cpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +220,79 @@ Namespaces</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html#l00131">131</a> of file <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html">crosscurrencyratehelpers.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html#l00165">165</a> of file <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html">crosscurrencyratehelpers.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a57daa1f8311f3fe65b1ad262007229a4" name="a57daa1f8311f3fe65b1ad262007229a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57daa1f8311f3fe65b1ad262007229a4">&#9670;&#160;</a></span>paymentLag_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Integer paymentLag_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html#l00166">166</a> of file <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html">crosscurrencyratehelpers.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3b1e6756aa408474fd0342eb87ace307" name="a3b1e6756aa408474fd0342eb87ace307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b1e6756aa408474fd0342eb87ace307">&#9670;&#160;</a></span>paymentCalendar_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Calendar paymentCalendar_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html#l00167">167</a> of file <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html">crosscurrencyratehelpers.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a80921adec5b2e5641608d33585ec2a17" name="a80921adec5b2e5641608d33585ec2a17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80921adec5b2e5641608d33585ec2a17">&#9670;&#160;</a></span>convention_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BusinessDayConvention convention_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html#l00168">168</a> of file <a class="el" href="../../df/d10/crosscurrencyratehelpers_8cpp_source.html">crosscurrencyratehelpers.cpp</a>.</p>
 
 </div>
 </div>

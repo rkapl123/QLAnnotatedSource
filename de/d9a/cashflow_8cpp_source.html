@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -130,8 +130,8 @@ $(function() {
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="comment">// specified in the settings (if any)</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            ext::optional&lt;bool&gt; includeToday =</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                <a class="code hl_function" href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">Settings::instance</a>().<a class="code hl_function" href="../../d7/de1/class_quant_lib_1_1_settings.html#a9548897e80bff860b3153350fae79378">includeTodaysCashFlows</a>();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">if</span> (includeToday) <span class="comment">// NOLINT(readability-implicit-bool-conversion)</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                includeRefDate = *includeToday;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">if</span> (includeToday.has_value())</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                includeRefDate = includeToday;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/d6c/class_quant_lib_1_1_event.html#aec849cb9335c1489b335f183d1327cb6">Event::hasOccurred</a>(refDate, includeRefDate);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
@@ -169,7 +169,7 @@ $(function() {
 <div class="ttc" id="aclass_quant_lib_1_1_singleton_html_ab7455b7e1235d292c444095842349291"><div class="ttname"><a href="../../db/ddb/class_quant_lib_1_1_singleton.html#ab7455b7e1235d292c444095842349291">QuantLib::Singleton&lt; Settings &gt;::instance</a></div><div class="ttdeci">static Settings &amp; instance()</div><div class="ttdoc">access to the unique instance</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/singleton_8hpp_source.html#l00068">singleton.hpp:104</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_visitor_html"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html">QuantLib::Visitor</a></div><div class="ttdoc">Visitor for a specific class</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df0/visitor_8hpp_source.html#l00040">visitor.hpp:40</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_visitor_html_a6d7e98e3f298924633a9ba9bf5b04a83"><div class="ttname"><a href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83">QuantLib::Visitor::visit</a></div><div class="ttdeci">virtual void visit(T &amp;)=0</div></div>
-<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00037">any.hpp:37</a></div></div>
 <div class="ttc" id="aperturbativebarrieroptionengine_8cpp_html_ac58b0f1581c316228a305f7eb7cce633"><div class="ttname"><a href="../../d9/de0/perturbativebarrieroptionengine_8cpp.html#ac58b0f1581c316228a305f7eb7cce633">v</a></div><div class="ttdeci">ext::shared_ptr&lt; BlackVolTermStructure &gt; v</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/de0/perturbativebarrieroptionengine_8cpp_source.html#l01487">perturbativebarrieroptionengine.cpp:1487</a></div></div>
 <div class="ttc" id="asettings_8hpp_html"><div class="ttname"><a href="../../d5/d0f/settings_8hpp.html">settings.hpp</a></div><div class="ttdoc">global repository for run-time library settings</div></div>
 <div class="ttc" id="avisitor_8hpp_html"><div class="ttname"><a href="../../d2/df0/visitor_8hpp.html">visitor.hpp</a></div><div class="ttdoc">degenerate base class for the Acyclic Visitor pattern</div></div>

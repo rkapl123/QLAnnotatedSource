@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -117,30 +117,26 @@ $(function() {
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#if defined(QL_USE_STD_OPTIONAL)</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;boost/optional.hpp&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// Deprecated in version 1.39</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#pragma message(&quot;Warning: using boost::optional is deprecated.  Enable std::optional instead.&quot;</span>)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;boost/optional.hpp&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">namespace </span>ext {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d4/d5c/namespace_quant_lib_1_1ext.html">QuantLib::ext</a> {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">        #if defined(QL_USE_STD_OPTIONAL)</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">using </span>std::optional;                    <span class="comment">// NOLINT(misc-unused-using-decls)</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="comment">// here we can assume C++17</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> std::nullopt_t&amp; <a class="code hl_variable" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">nullopt</a> = std::nullopt;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">        #else</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">using </span>boost::optional;                  <span class="comment">// NOLINT(misc-unused-using-decls)</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="comment">// here we can&#39;t</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">extern</span> <span class="keyword">const</span> boost::none_t&amp; <a class="code hl_variable" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">nullopt</a>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> std::nullopt_t&amp; <a class="code hl_variable" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">nullopt</a> = std::nullopt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">        #else</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">using </span>boost::optional;                  <span class="comment">// NOLINT(misc-unused-using-decls)</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">   44</a></span>        <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> boost::none_t&amp; <a class="code hl_variable" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">nullopt</a> = boost::none;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="anamespace_quant_lib_1_1ext_html_a3d1f3fb2cb126ecea6a56dd80734c3d3"><div class="ttname"><a href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">QuantLib::ext::nullopt</a></div><div class="ttdeci">const boost::none_t &amp; nullopt</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d95/optional_8cpp_source.html#l00027">optional.cpp:27</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="anamespace_quant_lib_1_1ext_html"><div class="ttname"><a href="../../d4/d5c/namespace_quant_lib_1_1ext.html">QuantLib::ext</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00037">any.hpp:37</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_1_1ext_html_af1b9456d1c3d4c545afe099b56f81878"><div class="ttname"><a href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">QuantLib::ext::nullopt</a></div><div class="ttdeci">constexpr const boost::none_t &amp; nullopt</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd5/optional_8hpp_source.html#l00044">optional.hpp:44</a></div></div>
 <div class="ttc" id="aqldefines_8hpp_html"><div class="ttname"><a href="../../de/d56/qldefines_8hpp.html">qldefines.hpp</a></div><div class="ttdoc">Global definitions and compiler switches.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.9.1-->

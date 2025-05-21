@@ -24,5 +24,6 @@ var searchData=
   ['quantotermstructure_2ehpp_21',['quantotermstructure.hpp',['../df/dab/quantotermstructure_8hpp.html',1,'']]],
   ['quantovanillaoption_2ecpp_22',['quantovanillaoption.cpp',['../d9/d65/quantovanillaoption_8cpp.html',1,'']]],
   ['quantovanillaoption_2ehpp_23',['quantovanillaoption.hpp',['../db/d65/quantovanillaoption_8hpp.html',1,'']]],
-  ['quote_2ehpp_24',['quote.hpp',['../d2/d02/quote_8hpp.html',1,'']]]
+  ['quote_2ecpp_24',['quote.cpp',['../dd/d18/quote_8cpp.html',1,'']]],
+  ['quote_2ehpp_25',['quote.hpp',['../d2/d02/quote_8hpp.html',1,'']]]
 ];

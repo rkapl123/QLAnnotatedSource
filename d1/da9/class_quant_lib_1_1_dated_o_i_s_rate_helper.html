@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -90,9 +90,6 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Rate helper for bootstrapping over Overnight Indexed <a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html" title="Interest rate swap.">Swap</a> rates.  
- <a href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../de/d28/oisratehelper_8hpp_source.html">oisratehelper.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for DatedOISRateHelper:</div>
@@ -101,8 +98,10 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d5/d08/class_quant_lib_1_1_dated_o_i_s_rate_helper__inherit__graph.png" border="0" usemap="#a_dated_o_i_s_rate_helper_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_dated_o_i_s_rate_helper_inherit__map" id="a_dated_o_i_s_rate_helper_inherit__map">
-<area shape="rect" title="Rate helper for bootstrapping over Overnight Indexed Swap rates." alt="" coords="98,797,285,1028"/>
-<area shape="rect" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html" title="Base helper class for bootstrapping." alt="" coords="116,255,267,749"/>
+<area shape="rect" title=" " alt="" coords="107,1589,275,1659"/>
+<area shape="rect" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html" title="Rate helper for bootstrapping over Overnight Indexed Swap rates." alt="" coords="98,944,285,1541"/>
+<area shape="rect" href="../../d1/dd4/class_quant_lib_1_1_relative_date_bootstrap_helper.html" title="Bootstrap helper with date schedule relative to global evaluation date." alt="" coords="85,783,298,896"/>
+<area shape="rect" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html" title="Base helper class for bootstrapping." alt="" coords="112,255,271,735"/>
 <area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="5,5,188,207"/>
 <area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="213,13,359,199"/>
 </map>
@@ -114,48 +113,74 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d7/d19/class_quant_lib_1_1_dated_o_i_s_rate_helper__coll__graph.png" border="0" usemap="#a_dated_o_i_s_rate_helper_coll__map" alt="Collaboration graph"/></div>
 <map name="a_dated_o_i_s_rate_helper_coll__map" id="a_dated_o_i_s_rate_helper_coll__map">
-<area shape="rect" title="Rate helper for bootstrapping over Overnight Indexed Swap rates." alt="" coords="848,2920,1016,3063"/>
-<area shape="rect" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html" title="Base helper class for bootstrapping." alt="" coords="243,2436,394,2828"/>
-<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="98,343,281,529"/>
-<area shape="rect" title=" " alt="" coords="15,768,143,808"/>
-<area shape="rect" title=" " alt="" coords="118,225,261,280"/>
-<area shape="rect" title=" " alt="" coords="159,108,334,148"/>
-<area shape="rect" title=" " alt="" coords="40,108,117,148"/>
-<area shape="rect" title=" " alt="" coords="59,5,98,45"/>
-<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="5,1776,152,1948"/>
-<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title=" " alt="" coords="501,1666,686,2058"/>
-<area shape="rect" title=" " alt="" coords="745,409,895,463"/>
-<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title="Shared handle to an observable." alt="" coords="745,592,895,984"/>
-<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title="Shared handle to an observable." alt="" coords="567,1008,718,1400"/>
-<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title="Shared handle to an observable." alt="" coords="945,592,1095,984"/>
-<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title=" " alt="" coords="943,1659,1139,2065"/>
-<area shape="rect" title=" " alt="" coords="227,1842,277,1882"/>
-<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="302,1424,477,2300"/>
-<area shape="rect" title=" " alt="" coords="343,768,436,808"/>
-<area shape="rect" title=" " alt="" coords="520,2605,693,2659"/>
-<area shape="rect" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html" title=" " alt="" coords="718,2561,909,2703"/>
-<area shape="rect" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html" title="Relinkable handle to an observable." alt="" coords="761,1798,919,1926"/>
-<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="1147,2612,1197,2652"/>
-<area shape="rect" title=" " alt="" coords="1271,2612,1326,2652"/>
+<area shape="rect" title=" " alt="" coords="1809,3919,1977,3988"/>
+<area shape="rect" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html" title="Rate helper for bootstrapping over Overnight Indexed Swap rates." alt="" coords="1822,3668,1965,3869"/>
+<area shape="rect" href="../../d1/dd4/class_quant_lib_1_1_relative_date_bootstrap_helper.html" title="Bootstrap helper with date schedule relative to global evaluation date." alt="" coords="1111,3199,1324,3283"/>
+<area shape="rect" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html" title="Base helper class for bootstrapping." alt="" coords="810,2465,969,2843"/>
+<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html" title="Object that gets notified when a given observable changes." alt="" coords="913,343,1095,529"/>
+<area shape="rect" title=" " alt="" coords="835,768,963,808"/>
+<area shape="rect" title=" " alt="" coords="933,225,1075,280"/>
+<area shape="rect" title=" " alt="" coords="974,108,1149,148"/>
+<area shape="rect" title=" " alt="" coords="855,108,932,148"/>
+<area shape="rect" title=" " alt="" coords="874,5,913,45"/>
+<area shape="rect" href="../../d5/de0/class_quant_lib_1_1_observable.html" title="Object that notifies its changes to a set of observers." alt="" coords="745,1791,892,1963"/>
+<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title=" " alt="" coords="535,1681,721,2073"/>
+<area shape="rect" title=" " alt="" coords="278,409,429,463"/>
+<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title="Shared handle to an observable." alt="" coords="417,592,567,984"/>
+<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title="Shared handle to an observable." alt="" coords="182,1008,333,1400"/>
+<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title="Shared handle to an observable." alt="" coords="91,592,242,984"/>
+<area shape="rect" href="../../dc/dac/class_quant_lib_1_1_handle.html" title=" " alt="" coords="315,1673,511,2080"/>
+<area shape="rect" title=" " alt="" coords="916,1857,967,1897"/>
+<area shape="rect" href="../../db/d60/class_quant_lib_1_1_date.html" title="Concrete date class." alt="" coords="1097,1424,1271,2329"/>
+<area shape="rect" title=" " alt="" coords="1137,768,1231,808"/>
+<area shape="rect" href="../../d9/db9/classbool.html" title=" " alt="" coords="1059,2634,1109,2674"/>
+<area shape="rect" title=" " alt="" coords="1365,2634,1472,2674"/>
+<area shape="rect" href="../../df/dfa/class_quant_lib_1_1_period.html" title=" " alt="" coords="1502,3133,1607,3349"/>
+<area shape="rect" title=" " alt="" coords="1516,2634,1593,2674"/>
+<area shape="rect" title=" " alt="" coords="1631,3213,1782,3268"/>
+<area shape="rect" title=" " alt="" coords="1807,3213,1980,3268"/>
+<area shape="rect" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html" title=" " alt="" coords="182,2575,373,2733"/>
+<area shape="rect" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html" title="Relinkable handle to an observable." alt="" coords="5,1805,163,1948"/>
+<area shape="rect" title=" " alt="" coords="2005,3221,2171,3261"/>
+<area shape="rect" title=" " alt="" coords="2195,3221,2282,3261"/>
+<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html" title="calendar class" alt="" coords="2307,2920,2541,3561"/>
+<area shape="rect" title=" " alt="" coords="2349,2627,2499,2681"/>
+<area shape="rect" title=" " alt="" coords="2565,3221,2632,3261"/>
+<area shape="rect" title=" " alt="" coords="2657,3221,2711,3261"/>
+<area shape="rect" title=" " alt="" coords="2735,3221,2854,3261"/>
+<area shape="rect" title=" " alt="" coords="2878,3221,3034,3261"/>
+<area shape="rect" title=" " alt="" coords="3058,3213,3251,3268"/>
+<area shape="rect" title=" " alt="" coords="3275,3221,3327,3261"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae3e2d2e65ba356f6f3113d0d34e62529"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#ae3e2d2e65ba356f6f3113d0d34e62529">DatedOISRateHelper</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;startDate, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;endDate, const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;fixedRate, const ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt; &amp;overnightIndex, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; discountingCurve={}, <a class="el" href="../../d9/db9/classbool.html">bool</a> telescopicValueDates=false, <a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a> averagingMethod=<a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">RateAveraging::Compound</a>, <a class="el" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> paymentLag=0, <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> paymentConvention=<a class="el" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18">Following</a>, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> paymentFrequency=<a class="el" href="../../d1/d37/group__datetime.html#gga6d41db8ba0ea90d22df35889df452adaa508b18014c96e2d466c12b39d7f4e426">Annual</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;paymentCalendar=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), <a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> overnightSpread=0.0, ext::optional&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt; endOfMonth=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a>, ext::optional&lt; <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> &gt; fixedPaymentFrequency=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;fixedCalendar=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>())</td></tr>
-<tr class="separator:ae3e2d2e65ba356f6f3113d0d34e62529"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea022789376295e9d440ca3504c9f246"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d56/qldefines_8hpp.html#a0f9479a1b8e4a45ac141925c58c525e3">QL_DEPRECATED</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#aea022789376295e9d440ca3504c9f246">DatedOISRateHelper</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;startDate, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;endDate, const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;fixedRate, const ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt; &amp;overnightIndex, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; discountingCurve, <a class="el" href="../../d9/db9/classbool.html">bool</a> telescopicValueDates, <a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a> averagingMethod, <a class="el" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> paymentLag, <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> paymentConvention, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> paymentFrequency, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;paymentCalendar, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;forwardStart, <a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> overnightSpread=0.0, ext::optional&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt; endOfMonth=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a>, ext::optional&lt; <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> &gt; fixedPaymentFrequency=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;fixedCalendar=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>())</td></tr>
-<tr class="separator:aea022789376295e9d440ca3504c9f246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">RateHelper interface</div></td></tr>
-<tr class="memitem:ab5f37fe136acee4d7bfd196bcf8bb315"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#ab5f37fe136acee4d7bfd196bcf8bb315">impliedQuote</a> () const override</td></tr>
-<tr class="separator:ab5f37fe136acee4d7bfd196bcf8bb315"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11bcb6e45e2bf87e14a6d6132d2e84bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#a11bcb6e45e2bf87e14a6d6132d2e84bb">setTermStructure</a> (<a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> *) override</td></tr>
-<tr class="separator:a11bcb6e45e2bf87e14a6d6132d2e84bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea86e2eb4635284210b6003d580a75d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#aea86e2eb4635284210b6003d580a75d7">DatedOISRateHelper</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;startDate, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;endDate, const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;fixedRate, const ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt; &amp;overnightIndex, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; discountingCurve={}, <a class="el" href="../../d9/db9/classbool.html">bool</a> telescopicValueDates=false, <a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a> averagingMethod=<a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">RateAveraging::Compound</a>, <a class="el" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> paymentLag=0, <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> paymentConvention=<a class="el" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18">Following</a>, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> paymentFrequency=<a class="el" href="../../d1/d37/group__datetime.html#gga6d41db8ba0ea90d22df35889df452adaa508b18014c96e2d466c12b39d7f4e426">Annual</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;paymentCalendar=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), <a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> overnightSpread={}, ext::optional&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt; endOfMonth=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">ext::nullopt</a>, ext::optional&lt; <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> &gt; fixedPaymentFrequency=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">ext::nullopt</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;fixedCalendar=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> lookbackDays=<a class="el" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null</a>&lt; <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> &gt;(), <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> lockoutDays=0, <a class="el" href="../../d9/db9/classbool.html">bool</a> applyObservationShift=false, const ext::shared_ptr&lt; <a class="el" href="../../d1/dbd/class_quant_lib_1_1_floating_rate_coupon_pricer.html">FloatingRateCouponPricer</a> &gt; &amp;pricer={})</td></tr>
+<tr class="separator:aea86e2eb4635284210b6003d580a75d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfd1e93bc32da7855ee3f1c2ab733bfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#adfd1e93bc32da7855ee3f1c2ab733bfb">DatedOISRateHelper</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;startDate, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;endDate, const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;fixedRate, const ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt; &amp;overnightIndex, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; discountingCurve, <a class="el" href="../../d9/db9/classbool.html">bool</a> telescopicValueDates, <a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a> averagingMethod, <a class="el" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> paymentLag, <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> paymentConvention, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> paymentFrequency, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;paymentCalendar, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;forwardStart, <a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a> overnightSpread={}, ext::optional&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt; endOfMonth=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">ext::nullopt</a>, ext::optional&lt; <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> &gt; fixedPaymentFrequency=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">ext::nullopt</a>, const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;fixedCalendar=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>())</td></tr>
+<tr class="separator:adfd1e93bc32da7855ee3f1c2ab733bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_o_i_s_rate_helper')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html">OISRateHelper</a></td></tr>
+<tr class="memitem:a5e006f4070120853f50a53065a9aaf53 inherit pub_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a5e006f4070120853f50a53065a9aaf53">OISRateHelper</a> (<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> settlementDays, const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;tenor, const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;fixedRate, const ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt; &amp;overnightIndex, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; discountingCurve={}, <a class="el" href="../../d9/db9/classbool.html">bool</a> telescopicValueDates=false, <a class="el" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> paymentLag=0, <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> paymentConvention=<a class="el" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18">Following</a>, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> paymentFrequency=<a class="el" href="../../d1/d37/group__datetime.html#gga6d41db8ba0ea90d22df35889df452adaa508b18014c96e2d466c12b39d7f4e426">Annual</a>, <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> paymentCalendar=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), const <a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a> &amp;forwardStart=0 *<a class="el" href="../../d1/d37/group__datetime.html#ggadd9fe45e09605eee3e4a39c8a5c4476dacf3635c7cd314f8102d734f94d0791c0">Days</a>, const std::variant&lt; <a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &gt; &amp;overnightSpread=<a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>(0.0), <a class="el" href="../../de/d54/struct_quant_lib_1_1_pillar.html#ac5102e0b11ce43d0b9ef595c3c3ab0c3">Pillar::Choice</a> pillar=<a class="el" href="../../de/d54/struct_quant_lib_1_1_pillar.html#ac5102e0b11ce43d0b9ef595c3c3ab0c3a552a51d53f38e164a2a5a4dc316e1585">Pillar::LastRelevantDate</a>, <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> customPillarDate=<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(), <a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a> averagingMethod=<a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">RateAveraging::Compound</a>, ext::optional&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt; endOfMonth=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">ext::nullopt</a>, ext::optional&lt; <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> &gt; fixedPaymentFrequency=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">ext::nullopt</a>, <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> fixedCalendar=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> lookbackDays=<a class="el" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null</a>&lt; <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> &gt;(), <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> lockoutDays=0, <a class="el" href="../../d9/db9/classbool.html">bool</a> applyObservationShift=false, ext::shared_ptr&lt; <a class="el" href="../../d1/dbd/class_quant_lib_1_1_floating_rate_coupon_pricer.html">FloatingRateCouponPricer</a> &gt; pricer={}, <a class="el" href="../../dc/dcb/struct_quant_lib_1_1_date_generation.html#a11fcd51ef86118f65e603c1474377a78">DateGeneration::Rule</a> rule=<a class="el" href="../../dc/dcb/struct_quant_lib_1_1_date_generation.html#a11fcd51ef86118f65e603c1474377a78a67e19347f85332c3bbfd61266cecbe4e">DateGeneration::Backward</a>, <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> overnightCalendar=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>())</td></tr>
+<tr class="separator:a5e006f4070120853f50a53065a9aaf53 inherit pub_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad067269fbe95631314faf71c772af999 inherit pub_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#ad067269fbe95631314faf71c772af999">OISRateHelper</a> (const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;startDate, const <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> &amp;endDate, const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;fixedRate, const ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt; &amp;overnightIndex, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt; discountingCurve={}, <a class="el" href="../../d9/db9/classbool.html">bool</a> telescopicValueDates=false, <a class="el" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a> paymentLag=0, <a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a> paymentConvention=<a class="el" href="../../d1/d37/group__datetime.html#ggaff46c5ae9385d20709bedade86edd368ab6a37af780aa2b97f8bbdc4d149dae18">Following</a>, <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> paymentFrequency=<a class="el" href="../../d1/d37/group__datetime.html#gga6d41db8ba0ea90d22df35889df452adaa508b18014c96e2d466c12b39d7f4e426">Annual</a>, <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> paymentCalendar=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), const std::variant&lt; <a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &gt; &amp;overnightSpread=<a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>(0.0), <a class="el" href="../../de/d54/struct_quant_lib_1_1_pillar.html#ac5102e0b11ce43d0b9ef595c3c3ab0c3">Pillar::Choice</a> pillar=<a class="el" href="../../de/d54/struct_quant_lib_1_1_pillar.html#ac5102e0b11ce43d0b9ef595c3c3ab0c3a552a51d53f38e164a2a5a4dc316e1585">Pillar::LastRelevantDate</a>, <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> customPillarDate=<a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>(), <a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a> averagingMethod=<a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7a044dd0abbe13404b773041d998f909b9">RateAveraging::Compound</a>, ext::optional&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt; endOfMonth=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">ext::nullopt</a>, ext::optional&lt; <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> &gt; fixedPaymentFrequency=<a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">ext::nullopt</a>, <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> fixedCalendar=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>(), <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> lookbackDays=<a class="el" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null</a>&lt; <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> &gt;(), <a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a> lockoutDays=0, <a class="el" href="../../d9/db9/classbool.html">bool</a> applyObservationShift=false, ext::shared_ptr&lt; <a class="el" href="../../d1/dbd/class_quant_lib_1_1_floating_rate_coupon_pricer.html">FloatingRateCouponPricer</a> &gt; pricer={}, <a class="el" href="../../dc/dcb/struct_quant_lib_1_1_date_generation.html#a11fcd51ef86118f65e603c1474377a78">DateGeneration::Rule</a> rule=<a class="el" href="../../dc/dcb/struct_quant_lib_1_1_date_generation.html#a11fcd51ef86118f65e603c1474377a78a67e19347f85332c3bbfd61266cecbe4e">DateGeneration::Backward</a>, <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> overnightCalendar=<a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>())</td></tr>
+<tr class="separator:ad067269fbe95631314faf71c772af999 inherit pub_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5f37fe136acee4d7bfd196bcf8bb315 inherit pub_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#ab5f37fe136acee4d7bfd196bcf8bb315">impliedQuote</a> () const override</td></tr>
+<tr class="separator:ab5f37fe136acee4d7bfd196bcf8bb315 inherit pub_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11bcb6e45e2bf87e14a6d6132d2e84bb inherit pub_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a11bcb6e45e2bf87e14a6d6132d2e84bb">setTermStructure</a> (<a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> *) override</td></tr>
+<tr class="separator:a11bcb6e45e2bf87e14a6d6132d2e84bb inherit pub_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af114f26c194a3ddd270b0dc6b51f183d inherit pub_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d5/d34/class_quant_lib_1_1_overnight_indexed_swap.html">OvernightIndexedSwap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#af114f26c194a3ddd270b0dc6b51f183d">swap</a> () const</td></tr>
+<tr class="separator:af114f26c194a3ddd270b0dc6b51f183d inherit pub_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fcc1b62510947fbc30b2952fff63c2d inherit pub_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a6fcc1b62510947fbc30b2952fff63c2d">accept</a> (<a class="el" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a> &amp;) override</td></tr>
+<tr class="separator:a6fcc1b62510947fbc30b2952fff63c2d inherit pub_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_quant_lib_1_1_relative_date_bootstrap_helper"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_relative_date_bootstrap_helper')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d1/dd4/class_quant_lib_1_1_relative_date_bootstrap_helper.html">RelativeDateBootstrapHelper&lt; TS &gt;</a></td></tr>
+<tr class="memitem:a745e6086fb11d54921891d4dc9ac38ea inherit pub_methods_class_quant_lib_1_1_relative_date_bootstrap_helper"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dd4/class_quant_lib_1_1_relative_date_bootstrap_helper.html#a745e6086fb11d54921891d4dc9ac38ea">RelativeDateBootstrapHelper</a> (const std::variant&lt; <a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &gt; &amp;<a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a1b8cfcf8d0879d7c81dc1b72d3f5041c">quote</a>, <a class="el" href="../../d9/db9/classbool.html">bool</a> updateDates=true)</td></tr>
+<tr class="separator:a745e6086fb11d54921891d4dc9ac38ea inherit pub_methods_class_quant_lib_1_1_relative_date_bootstrap_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_relative_date_bootstrap_helper"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dd4/class_quant_lib_1_1_relative_date_bootstrap_helper.html#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
+<tr class="separator:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_relative_date_bootstrap_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_bootstrap_helper"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_bootstrap_helper')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html">BootstrapHelper&lt; TS &gt;</a></td></tr>
-<tr class="memitem:a8edd818cd1b993f75b4f4f9be6e7d95a inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a8edd818cd1b993f75b4f4f9be6e7d95a">BootstrapHelper</a> (<a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; <a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a1b8cfcf8d0879d7c81dc1b72d3f5041c">quote</a>)</td></tr>
-<tr class="separator:a8edd818cd1b993f75b4f4f9be6e7d95a inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e2d8f3f54ffbebf7627f11beb8b0dd2 inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a7e2d8f3f54ffbebf7627f11beb8b0dd2">BootstrapHelper</a> (<a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> <a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a1b8cfcf8d0879d7c81dc1b72d3f5041c">quote</a>)</td></tr>
-<tr class="separator:a7e2d8f3f54ffbebf7627f11beb8b0dd2 inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add2ecc4ea7ffe066b326e81a1e244e33 inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#add2ecc4ea7ffe066b326e81a1e244e33">BootstrapHelper</a> (const std::variant&lt; <a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>, <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &gt; &amp;<a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a1b8cfcf8d0879d7c81dc1b72d3f5041c">quote</a>)</td></tr>
+<tr class="separator:add2ecc4ea7ffe066b326e81a1e244e33 inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19de4abf1522dca98fa8c496d7ce1053 inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a19de4abf1522dca98fa8c496d7ce1053">~BootstrapHelper</a> () override=default</td></tr>
 <tr class="separator:a19de4abf1522dca98fa8c496d7ce1053 inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b8cfcf8d0879d7c81dc1b72d3f5041c inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a1b8cfcf8d0879d7c81dc1b72d3f5041c">quote</a> () const</td></tr>
@@ -180,8 +205,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7a0400995f63278e99cf2afec5ccdc6d inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a7a0400995f63278e99cf2afec5ccdc6d">latestDate</a> () const</td></tr>
 <tr class="memdesc:a7a0400995f63278e99cf2afec5ccdc6d inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">latest date  <a href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a7a0400995f63278e99cf2afec5ccdc6d">More...</a><br /></td></tr>
 <tr class="separator:a7a0400995f63278e99cf2afec5ccdc6d inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
-<tr class="separator:a44137bb65de2396875934e48a6ee5099 inherit pub_methods_class_quant_lib_1_1_bootstrap_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
 <tr class="memitem:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a52ef9232283da6f842e4574afeb854a0">Observer</a> ()=default</td></tr>
 <tr class="separator:a52ef9232283da6f842e4574afeb854a0 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,8 +227,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d53f9669c128dadc74a5d044a7c8e68 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#a3d53f9669c128dadc74a5d044a7c8e68">deepUpdate</a> ()</td></tr>
 <tr class="separator:a3d53f9669c128dadc74a5d044a7c8e68 inherit pub_methods_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_quant_lib_1_1_observable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_quant_lib_1_1_observable')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a></td></tr>
-<tr class="memitem:a6438e92e07db169a97ed3eba36788dc4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a6438e92e07db169a97ed3eba36788dc4">Observable</a> ()</td></tr>
-<tr class="separator:a6438e92e07db169a97ed3eba36788dc4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d01c967371e909cd408401dd62b6fa inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a55d01c967371e909cd408401dd62b6fa">Observable</a> ()=default</td></tr>
+<tr class="separator:a55d01c967371e909cd408401dd62b6fa inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a840dd96e33a304cbf681d357de7f48d0">Observable</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
 <tr class="separator:a840dd96e33a304cbf681d357de7f48d0 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522aacdd0f2408fe5e46527a6db999b4 inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a522aacdd0f2408fe5e46527a6db999b4">operator=</a> (const <a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html">Observable</a> &amp;)</td></tr>
@@ -219,27 +242,77 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de0/class_quant_lib_1_1_observable.html#a397546715bfc5aedd1d16dd202a19d4c">notifyObservers</a> ()</td></tr>
 <tr class="separator:a397546715bfc5aedd1d16dd202a19d4c inherit pub_methods_class_quant_lib_1_1_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">Visitability</h2></td></tr>
-<tr class="memitem:aa02c8ecd030a5d617ad61cecb49196d4"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d5/d34/class_quant_lib_1_1_overnight_indexed_swap.html">OvernightIndexedSwap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#aa02c8ecd030a5d617ad61cecb49196d4">swap_</a></td></tr>
-<tr class="separator:aa02c8ecd030a5d617ad61cecb49196d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e8f394e2be5705b297a1316eea82056"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#a2e8f394e2be5705b297a1316eea82056">termStructureHandle_</a></td></tr>
-<tr class="separator:a2e8f394e2be5705b297a1316eea82056"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56f398c46e63bbe59c77f21c6b39ffaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#a56f398c46e63bbe59c77f21c6b39ffaa">discountHandle_</a></td></tr>
-<tr class="separator:a56f398c46e63bbe59c77f21c6b39ffaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a187b5edd65f0805534b303324609fa7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#a187b5edd65f0805534b303324609fa7c">telescopicValueDates_</a></td></tr>
-<tr class="separator:a187b5edd65f0805534b303324609fa7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11983310cace758fa0f027631ce25843"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#a11983310cace758fa0f027631ce25843">discountRelinkableHandle_</a></td></tr>
-<tr class="separator:a11983310cace758fa0f027631ce25843"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eb136aecde14637f66e7636862fce8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#a8eb136aecde14637f66e7636862fce8b">averagingMethod_</a></td></tr>
-<tr class="separator:a8eb136aecde14637f66e7636862fce8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fcc1b62510947fbc30b2952fff63c2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper.html#a6fcc1b62510947fbc30b2952fff63c2d">accept</a> (<a class="el" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a> &amp;) override</td></tr>
-<tr class="separator:a6fcc1b62510947fbc30b2952fff63c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_class_quant_lib_1_1_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_quant_lib_1_1_observer')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html">Observer</a></td></tr>
 <tr class="memitem:ae98429250f6997df7b87f4b37454609e inherit pub_types_class_quant_lib_1_1_observer"><td class="memItemLeft" align="right" valign="top">typedef set_type::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfe/class_quant_lib_1_1_observer.html#ae98429250f6997df7b87f4b37454609e">iterator</a></td></tr>
 <tr class="separator:ae98429250f6997df7b87f4b37454609e inherit pub_types_class_quant_lib_1_1_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_quant_lib_1_1_o_i_s_rate_helper')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html">OISRateHelper</a></td></tr>
+<tr class="memitem:a208768f609eee2deb666b2fc019cd7cc inherit pro_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a208768f609eee2deb666b2fc019cd7cc">initialize</a> (const ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt; &amp;overnightIndex, <a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a> customPillarDate)</td></tr>
+<tr class="separator:a208768f609eee2deb666b2fc019cd7cc inherit pro_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99d980fe812ceb975a5e391d34d36439 inherit pro_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a99d980fe812ceb975a5e391d34d36439">initializeDates</a> () override</td></tr>
+<tr class="separator:a99d980fe812ceb975a5e391d34d36439 inherit pro_methods_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_quant_lib_1_1_relative_date_bootstrap_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_quant_lib_1_1_relative_date_bootstrap_helper')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d1/dd4/class_quant_lib_1_1_relative_date_bootstrap_helper.html">RelativeDateBootstrapHelper&lt; TS &gt;</a></td></tr>
+<tr class="inherit_header pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html">OISRateHelper</a></td></tr>
+<tr class="memitem:a8cb58608de54286272715a08a7492a7e inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a8cb58608de54286272715a08a7492a7e">settlementDays_</a></td></tr>
+<tr class="separator:a8cb58608de54286272715a08a7492a7e inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1e4aec3cba6f7cea92368273728ec8 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a6f1e4aec3cba6f7cea92368273728ec8">tenor_</a></td></tr>
+<tr class="separator:a6f1e4aec3cba6f7cea92368273728ec8 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56f0c18a8f1a3337b9f9456958e4611 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#ac56f0c18a8f1a3337b9f9456958e4611">startDate_</a></td></tr>
+<tr class="separator:ac56f0c18a8f1a3337b9f9456958e4611 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac13c69cfd95ff3957d5def2d7dd36f90 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#ac13c69cfd95ff3957d5def2d7dd36f90">endDate_</a></td></tr>
+<tr class="separator:ac13c69cfd95ff3957d5def2d7dd36f90 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01915df8f453229df43836485b99da0a inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d6/d43/class_quant_lib_1_1_overnight_index.html">OvernightIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a01915df8f453229df43836485b99da0a">overnightIndex_</a></td></tr>
+<tr class="separator:a01915df8f453229df43836485b99da0a inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02c8ecd030a5d617ad61cecb49196d4 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d5/d34/class_quant_lib_1_1_overnight_indexed_swap.html">OvernightIndexedSwap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#aa02c8ecd030a5d617ad61cecb49196d4">swap_</a></td></tr>
+<tr class="separator:aa02c8ecd030a5d617ad61cecb49196d4 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e8f394e2be5705b297a1316eea82056 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a2e8f394e2be5705b297a1316eea82056">termStructureHandle_</a></td></tr>
+<tr class="separator:a2e8f394e2be5705b297a1316eea82056 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56f398c46e63bbe59c77f21c6b39ffaa inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a56f398c46e63bbe59c77f21c6b39ffaa">discountHandle_</a></td></tr>
+<tr class="separator:a56f398c46e63bbe59c77f21c6b39ffaa inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a187b5edd65f0805534b303324609fa7c inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a187b5edd65f0805534b303324609fa7c">telescopicValueDates_</a></td></tr>
+<tr class="separator:a187b5edd65f0805534b303324609fa7c inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11983310cace758fa0f027631ce25843 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle</a>&lt; <a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a11983310cace758fa0f027631ce25843">discountRelinkableHandle_</a></td></tr>
+<tr class="separator:a11983310cace758fa0f027631ce25843 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57daa1f8311f3fe65b1ad262007229a4 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gab9c87440c314438e51a899a03d2442d0">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a57daa1f8311f3fe65b1ad262007229a4">paymentLag_</a></td></tr>
+<tr class="separator:a57daa1f8311f3fe65b1ad262007229a4 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c2ba6da16ec8c201da972e61b08334 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d37/group__datetime.html#gaff46c5ae9385d20709bedade86edd368">BusinessDayConvention</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#ab0c2ba6da16ec8c201da972e61b08334">paymentConvention_</a></td></tr>
+<tr class="separator:ab0c2ba6da16ec8c201da972e61b08334 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc825d201592eecbe5533798ba3b5760 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#acc825d201592eecbe5533798ba3b5760">paymentFrequency_</a></td></tr>
+<tr class="separator:acc825d201592eecbe5533798ba3b5760 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1e6756aa408474fd0342eb87ace307 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a3b1e6756aa408474fd0342eb87ace307">paymentCalendar_</a></td></tr>
+<tr class="separator:a3b1e6756aa408474fd0342eb87ace307 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a497006adbd7b8bec09761f23a10f3f2e inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dfa/class_quant_lib_1_1_period.html">Period</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a497006adbd7b8bec09761f23a10f3f2e">forwardStart_</a></td></tr>
+<tr class="separator:a497006adbd7b8bec09761f23a10f3f2e inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc914775d954c1673e5bcf4dd972f8ed inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#adc914775d954c1673e5bcf4dd972f8ed">overnightSpread_</a></td></tr>
+<tr class="separator:adc914775d954c1673e5bcf4dd972f8ed inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f90d19dfb220ddcaffa9d2c12fcac2f inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d54/struct_quant_lib_1_1_pillar.html#ac5102e0b11ce43d0b9ef595c3c3ab0c3">Pillar::Choice</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a3f90d19dfb220ddcaffa9d2c12fcac2f">pillarChoice_</a></td></tr>
+<tr class="separator:a3f90d19dfb220ddcaffa9d2c12fcac2f inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eb136aecde14637f66e7636862fce8b inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a8eb136aecde14637f66e7636862fce8b">averagingMethod_</a></td></tr>
+<tr class="separator:a8eb136aecde14637f66e7636862fce8b inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e80042be947b4404a9e2b10e40024e inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top">ext::optional&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a86e80042be947b4404a9e2b10e40024e">endOfMonth_</a></td></tr>
+<tr class="separator:a86e80042be947b4404a9e2b10e40024e inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b40c2b03401b9513e2c78d680e6794 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top">ext::optional&lt; <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#af6b40c2b03401b9513e2c78d680e6794">fixedPaymentFrequency_</a></td></tr>
+<tr class="separator:af6b40c2b03401b9513e2c78d680e6794 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad797690a2bfa71066adeade3df2062e3 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#ad797690a2bfa71066adeade3df2062e3">fixedCalendar_</a></td></tr>
+<tr class="separator:ad797690a2bfa71066adeade3df2062e3 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac8ac26fbd113de8e01b5b9e7f6c5e20 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#aac8ac26fbd113de8e01b5b9e7f6c5e20">overnightCalendar_</a></td></tr>
+<tr class="separator:aac8ac26fbd113de8e01b5b9e7f6c5e20 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e5cc523f4ae83f196010527b05f743b inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a2e5cc523f4ae83f196010527b05f743b">lookbackDays_</a></td></tr>
+<tr class="separator:a2e5cc523f4ae83f196010527b05f743b inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acacfb0af29909e3beac0ad34bfbcb155 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#acacfb0af29909e3beac0ad34bfbcb155">lockoutDays_</a></td></tr>
+<tr class="separator:acacfb0af29909e3beac0ad34bfbcb155 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769674274c3bd971fb8eaf2818bec4a8 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a769674274c3bd971fb8eaf2818bec4a8">applyObservationShift_</a></td></tr>
+<tr class="separator:a769674274c3bd971fb8eaf2818bec4a8 inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f4050559fda21f718742441d4c90eda inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top">ext::shared_ptr&lt; <a class="el" href="../../d1/dbd/class_quant_lib_1_1_floating_rate_coupon_pricer.html">FloatingRateCouponPricer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a6f4050559fda21f718742441d4c90eda">pricer_</a></td></tr>
+<tr class="separator:a6f4050559fda21f718742441d4c90eda inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0428b85c9033946cc024aa41a482eb inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dcb/struct_quant_lib_1_1_date_generation.html#a11fcd51ef86118f65e603c1474377a78">DateGeneration::Rule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html#a8a0428b85c9033946cc024aa41a482eb">rule_</a> = <a class="el" href="../../dc/dcb/struct_quant_lib_1_1_date_generation.html#a11fcd51ef86118f65e603c1474377a78a67e19347f85332c3bbfd61266cecbe4e">DateGeneration::Backward</a></td></tr>
+<tr class="separator:a8a0428b85c9033946cc024aa41a482eb inherit pro_attribs_class_quant_lib_1_1_o_i_s_rate_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_quant_lib_1_1_relative_date_bootstrap_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_quant_lib_1_1_relative_date_bootstrap_helper')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d1/dd4/class_quant_lib_1_1_relative_date_bootstrap_helper.html">RelativeDateBootstrapHelper&lt; TS &gt;</a></td></tr>
+<tr class="memitem:aab7be0a2ef3486101fe70ac7ba229d17 inherit pro_attribs_class_quant_lib_1_1_relative_date_bootstrap_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d60/class_quant_lib_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dd4/class_quant_lib_1_1_relative_date_bootstrap_helper.html#aab7be0a2ef3486101fe70ac7ba229d17">evaluationDate_</a></td></tr>
+<tr class="separator:aab7be0a2ef3486101fe70ac7ba229d17 inherit pro_attribs_class_quant_lib_1_1_relative_date_bootstrap_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af57fc95250d411419f7e624ccc66a8db inherit pro_attribs_class_quant_lib_1_1_relative_date_bootstrap_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dd4/class_quant_lib_1_1_relative_date_bootstrap_helper.html#af57fc95250d411419f7e624ccc66a8db">updateDates_</a></td></tr>
+<tr class="separator:af57fc95250d411419f7e624ccc66a8db inherit pro_attribs_class_quant_lib_1_1_relative_date_bootstrap_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_quant_lib_1_1_bootstrap_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_quant_lib_1_1_bootstrap_helper')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html">BootstrapHelper&lt; TS &gt;</a></td></tr>
 <tr class="memitem:a5d87a388f17e28809793d3f796120ffe inherit pro_attribs_class_quant_lib_1_1_bootstrap_helper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt; <a class="el" href="../../df/dec/class_quant_lib_1_1_quote.html">Quote</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a5d87a388f17e28809793d3f796120ffe">quote_</a></td></tr>
 <tr class="separator:a5d87a388f17e28809793d3f796120ffe inherit pro_attribs_class_quant_lib_1_1_bootstrap_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -257,12 +330,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a4d10e5a30c9bd78f4d75aa1aaf536f80 inherit pro_attribs_class_quant_lib_1_1_bootstrap_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Rate helper for bootstrapping over Overnight Indexed <a class="el" href="../../dc/d54/class_quant_lib_1_1_swap.html" title="Interest rate swap.">Swap</a> rates. </p>
+<div class="textblock"><dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000127">Deprecated:</a></b></dt><dd>Use <a class="el" href="../../dc/d68/class_quant_lib_1_1_o_i_s_rate_helper.html" title="Rate helper for bootstrapping over Overnight Indexed Swap rates.">OISRateHelper</a> instead. Deprecated in version 1.37. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html#l00098">98</a> of file <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html">oisratehelper.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html#l00145">145</a> of file <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html">oisratehelper.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae3e2d2e65ba356f6f3113d0d34e62529" name="ae3e2d2e65ba356f6f3113d0d34e62529"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3e2d2e65ba356f6f3113d0d34e62529">&#9670;&#160;</a></span>DatedOISRateHelper() <span class="overload">[1/2]</span></h2>
+<a id="aea86e2eb4635284210b6003d580a75d7" name="aea86e2eb4635284210b6003d580a75d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea86e2eb4635284210b6003d580a75d7">&#9670;&#160;</a></span>DatedOISRateHelper() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,25 +410,49 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>&#160;</td>
-          <td class="paramname"><em>overnightSpread</em> = <code>0.0</code>, </td>
+          <td class="paramname"><em>overnightSpread</em> = <code>{}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">ext::optional&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt;&#160;</td>
-          <td class="paramname"><em>endOfMonth</em> = <code><a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a></code>, </td>
+          <td class="paramname"><em>endOfMonth</em> = <code><a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">ext::nullopt</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">ext::optional&lt; <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> &gt;&#160;</td>
-          <td class="paramname"><em>fixedPaymentFrequency</em> = <code><a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a></code>, </td>
+          <td class="paramname"><em>fixedPaymentFrequency</em> = <code><a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">ext::nullopt</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a> &amp;&#160;</td>
-          <td class="paramname"><em>fixedCalendar</em> = <code><a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>()</code>&#160;</td>
+          <td class="paramname"><em>fixedCalendar</em> = <code><a class="el" href="../../da/d3e/class_quant_lib_1_1_calendar.html">Calendar</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a>&#160;</td>
+          <td class="paramname"><em>lookbackDays</em> = <code><a class="el" href="../../d0/d7a/class_quant_lib_1_1_null.html">Null</a>&lt;<a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a>&gt;()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#ga7e529c39c477ba1f5a22264d93e8457a">Natural</a>&#160;</td>
+          <td class="paramname"><em>lockoutDays</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td>
+          <td class="paramname"><em>applyObservationShift</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ext::shared_ptr&lt; <a class="el" href="../../d1/dbd/class_quant_lib_1_1_floating_rate_coupon_pricer.html">FloatingRateCouponPricer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pricer</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -365,40 +462,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html#l00160">160</a> of file <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html">oisratehelper.cpp</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper_ae3e2d2e65ba356f6f3113d0d34e62529_cgraph.png" border="0" usemap="#ad1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper_ae3e2d2e65ba356f6f3113d0d34e62529_cgraph" alt=""/></div>
-<map name="ad1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper_ae3e2d2e65ba356f6f3113d0d34e62529_cgraph" id="ad1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper_ae3e2d2e65ba356f6f3113d0d34e62529_cgraph">
-<area shape="rect" title=" " alt="" coords="5,454,148,479"/>
-<area shape="rect" href="../../da/d3e/class_quant_lib_1_1_calendar.html#a644718bb2fb240de962dc3c9a1fdf0dc" title="Returns whether or not the calendar is initialized." alt="" coords="227,5,360,45"/>
-<area shape="rect" href="../../de/dfe/class_quant_lib_1_1_observer.html#aa6ade205ed506bf712da2704f80a73a0" title=" " alt="" coords="227,69,360,109"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#ac463293df6624dda406e35225a6baa8a" title=" " alt="" coords="221,133,365,173"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#a2b61c371c9be80f1e2f0ed4e657a2077" title=" " alt="" coords="196,197,391,237"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#a9b2e2360b74e3c3607fd54328f049243" title=" " alt="" coords="221,261,365,301"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#aaf27a8100276ee1f4a5b8d2bd61aeb43" title=" " alt="" coords="221,325,365,365"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#a931ac71715326a1da57d378cff6344a4" title=" " alt="" coords="219,389,368,429"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#abbcaeb6cc299a4a443205caef96f0533" title=" " alt="" coords="450,511,661,551"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#aa4d683e58ad8e65ebcd0092cfd53ebfa" title=" " alt="" coords="213,504,374,544"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#a1dedcb9497f0add5b6d155a02f7ba9bb" title=" " alt="" coords="212,568,375,608"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#a957523a7e756337faf34c0fc26287595" title=" " alt="" coords="219,632,367,672"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#a4992b314a9f7ab3e7d5520461c8a0759" title=" " alt="" coords="214,696,373,736"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#a287060629f4e7dc2462fb320867598c5" title=" " alt="" coords="221,760,365,800"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#acadb6fba226bc8315308a309e5f257d6" title=" " alt="" coords="206,824,381,864"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#a9a6026c05c4ccf6daadc4579dfd3ba15" title=" " alt="" coords="221,888,365,928"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#a67337d6908219c826282bb3af72ab286" title=" " alt="" coords="470,293,641,333"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#af267e3b864d37c9223b1a9d1cb88ca21" title=" " alt="" coords="459,357,651,397"/>
-<area shape="rect" href="../../dc/dd0/class_quant_lib_1_1_make_o_i_s.html#ab928c38ff918006359c38db4cda85050" title=" " alt="" coords="439,696,672,736"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html#l00227">227</a> of file <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html">oisratehelper.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aea022789376295e9d440ca3504c9f246" name="aea022789376295e9d440ca3504c9f246"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea022789376295e9d440ca3504c9f246">&#9670;&#160;</a></span>DatedOISRateHelper() <span class="overload">[2/2]</span></h2>
+<a id="adfd1e93bc32da7855ee3f1c2ab733bfb" name="adfd1e93bc32da7855ee3f1c2ab733bfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfd1e93bc32da7855ee3f1c2ab733bfb">&#9670;&#160;</a></span>DatedOISRateHelper() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -479,19 +548,19 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#gae7427f4743503002b0c6eeeefae91a3d">Spread</a>&#160;</td>
-          <td class="paramname"><em>overnightSpread</em> = <code>0.0</code>, </td>
+          <td class="paramname"><em>overnightSpread</em> = <code>{}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">ext::optional&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a> &gt;&#160;</td>
-          <td class="paramname"><em>endOfMonth</em> = <code><a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a></code>, </td>
+          <td class="paramname"><em>endOfMonth</em> = <code><a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">ext::nullopt</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">ext::optional&lt; <a class="el" href="../../d1/d37/group__datetime.html#ga6d41db8ba0ea90d22df35889df452ada">Frequency</a> &gt;&#160;</td>
-          <td class="paramname"><em>fixedPaymentFrequency</em> = <code><a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#a3d1f3fb2cb126ecea6a56dd80734c3d3">ext::nullopt</a></code>, </td>
+          <td class="paramname"><em>fixedPaymentFrequency</em> = <code><a class="el" href="../../d4/d5c/namespace_quant_lib_1_1ext.html#af1b9456d1c3d4c545afe099b56f81878">ext::nullopt</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -506,265 +575,9 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000108">Deprecated:</a></b></dt><dd>Use the overload without forward start. Deprecated in version 1.35. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000128">Deprecated:</a></b></dt><dd>Use the overload without forward start. Deprecated in version 1.35. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html#l00218">218</a> of file <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html">oisratehelper.cpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab5f37fe136acee4d7bfd196bcf8bb315" name="ab5f37fe136acee4d7bfd196bcf8bb315"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5f37fe136acee4d7bfd196bcf8bb315">&#9670;&#160;</a></span>impliedQuote()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4bdf4bfe76b9ffa6fa64c47d8bfa0c78">Real</a> impliedQuote </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a084bbc018cd8351e5acbe2f64d153efa">BootstrapHelper&lt; TS &gt;</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html#l00254">254</a> of file <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html">oisratehelper.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a11bcb6e45e2bf87e14a6d6132d2e84bb" name="a11bcb6e45e2bf87e14a6d6132d2e84bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11bcb6e45e2bf87e14a6d6132d2e84bb">&#9670;&#160;</a></span>setTermStructure()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setTermStructure </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a> *&#160;</td>
-          <td class="paramname"><em>t</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html#l00238">238</a> of file <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html">oisratehelper.cpp</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper_a11bcb6e45e2bf87e14a6d6132d2e84bb_cgraph.png" border="0" usemap="#ad1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper_a11bcb6e45e2bf87e14a6d6132d2e84bb_cgraph" alt=""/></div>
-<map name="ad1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper_a11bcb6e45e2bf87e14a6d6132d2e84bb_cgraph" id="ad1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper_a11bcb6e45e2bf87e14a6d6132d2e84bb_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,128,38"/>
-<area shape="rect" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#ac8bb5ca2d4e7d7754be9f69e43a054ce" title="sets the term structure to be used for pricing" alt="" coords="176,5,351,45"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a6fcc1b62510947fbc30b2952fff63c2d" name="a6fcc1b62510947fbc30b2952fff63c2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fcc1b62510947fbc30b2952fff63c2d">&#9670;&#160;</a></span>accept()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void accept </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/dbd/class_quant_lib_1_1_acyclic_visitor.html">AcyclicVisitor</a> &amp;&#160;</td>
-          <td class="paramname"><em>v</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a1d7eaf2f5dccce1c7781b54d64ba4a07">BootstrapHelper&lt; TS &gt;</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html#l00261">261</a> of file <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html">oisratehelper.cpp</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../d1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper_a6fcc1b62510947fbc30b2952fff63c2d_cgraph.png" border="0" usemap="#ad1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper_a6fcc1b62510947fbc30b2952fff63c2d_cgraph" alt=""/></div>
-<map name="ad1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper_a6fcc1b62510947fbc30b2952fff63c2d_cgraph" id="ad1/da9/class_quant_lib_1_1_dated_o_i_s_rate_helper_a6fcc1b62510947fbc30b2952fff63c2d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,42,67,67"/>
-<area shape="rect" href="../../d4/de4/class_quant_lib_1_1_bootstrap_helper.html#a1d7eaf2f5dccce1c7781b54d64ba4a07" title=" " alt="" coords="115,5,289,45"/>
-<area shape="rect" href="../../d6/d87/class_quant_lib_1_1_visitor.html#a6d7e98e3f298924633a9ba9bf5b04a83" title=" " alt="" coords="337,35,464,75"/>
-</map>
-</div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa02c8ecd030a5d617ad61cecb49196d4" name="aa02c8ecd030a5d617ad61cecb49196d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa02c8ecd030a5d617ad61cecb49196d4">&#9670;&#160;</a></span>swap_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ext::shared_ptr&lt;<a class="el" href="../../d5/d34/class_quant_lib_1_1_overnight_indexed_swap.html">OvernightIndexedSwap</a>&gt; swap_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html#l00149">149</a> of file <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html">oisratehelper.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a2e8f394e2be5705b297a1316eea82056" name="a2e8f394e2be5705b297a1316eea82056"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e8f394e2be5705b297a1316eea82056">&#9670;&#160;</a></span>termStructureHandle_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle</a>&lt;<a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a>&gt; termStructureHandle_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html#l00150">150</a> of file <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html">oisratehelper.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a56f398c46e63bbe59c77f21c6b39ffaa" name="a56f398c46e63bbe59c77f21c6b39ffaa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56f398c46e63bbe59c77f21c6b39ffaa">&#9670;&#160;</a></span>discountHandle_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/dac/class_quant_lib_1_1_handle.html">Handle</a>&lt;<a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a>&gt; discountHandle_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html#l00152">152</a> of file <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html">oisratehelper.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a187b5edd65f0805534b303324609fa7c" name="a187b5edd65f0805534b303324609fa7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a187b5edd65f0805534b303324609fa7c">&#9670;&#160;</a></span>telescopicValueDates_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d9/db9/classbool.html">bool</a> telescopicValueDates_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html#l00153">153</a> of file <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html">oisratehelper.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a11983310cace758fa0f027631ce25843" name="a11983310cace758fa0f027631ce25843"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11983310cace758fa0f027631ce25843">&#9670;&#160;</a></span>discountRelinkableHandle_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d8/d4a/class_quant_lib_1_1_relinkable_handle.html">RelinkableHandle</a>&lt;<a class="el" href="../../d4/d11/class_quant_lib_1_1_yield_term_structure.html">YieldTermStructure</a>&gt; discountRelinkableHandle_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html">oisratehelper.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a8eb136aecde14637f66e7636862fce8b" name="a8eb136aecde14637f66e7636862fce8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8eb136aecde14637f66e7636862fce8b">&#9670;&#160;</a></span>averagingMethod_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d8/d47/struct_quant_lib_1_1_rate_averaging.html#a1d1cfd8ffb84e947f82999c682b666a7">RateAveraging::Type</a> averagingMethod_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../de/d28/oisratehelper_8hpp_source.html">oisratehelper.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html#l00252">252</a> of file <a class="el" href="../../dc/dc8/oisratehelper_8cpp_source.html">oisratehelper.cpp</a>.</p>
 
 </div>
 </div>

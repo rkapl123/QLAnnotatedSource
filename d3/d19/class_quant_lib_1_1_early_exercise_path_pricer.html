@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -133,8 +133,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a89ca8ea340a039f3c3afebf38c77a723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62de965db0bd3d8e840074c25404fa0b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d3/d19/class_quant_lib_1_1_early_exercise_path_pricer.html#a8f1d307035ca52ae82e4c13aa0cfe635">StateType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/class_quant_lib_1_1_early_exercise_path_pricer.html#a62de965db0bd3d8e840074c25404fa0b">state</a> (const PathType &amp;path, TimeType <a class="el" href="../../d1/ddb/defaultprobabilitykey_8cpp.html#a15fc20af123a89cd6f40758e341a4a54">t</a>) const =0</td></tr>
 <tr class="separator:a62de965db0bd3d8e840074c25404fa0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe123be54c74c0ba10885eaac680048b"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; ext::function&lt; ValueType(<a class="el" href="../../d3/d19/class_quant_lib_1_1_early_exercise_path_pricer.html#a8f1d307035ca52ae82e4c13aa0cfe635">StateType</a>)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/class_quant_lib_1_1_early_exercise_path_pricer.html#abe123be54c74c0ba10885eaac680048b">basisSystem</a> () const =0</td></tr>
-<tr class="separator:abe123be54c74c0ba10885eaac680048b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0505eb0d69111fe3c23b2b1dc5a9625f"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::function&lt; ValueType(<a class="el" href="../../d3/d19/class_quant_lib_1_1_early_exercise_path_pricer.html#a8f1d307035ca52ae82e4c13aa0cfe635">StateType</a>)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/class_quant_lib_1_1_early_exercise_path_pricer.html#a0505eb0d69111fe3c23b2b1dc5a9625f">basisSystem</a> () const =0</td></tr>
+<tr class="separator:a0505eb0d69111fe3c23b2b1dc5a9625f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class PathType, class TimeType = Size, class ValueType = Real&gt;<br />
@@ -262,8 +262,8 @@ class QuantLib::EarlyExercisePathPricer&lt; PathType, TimeType, ValueType &gt;</
 
 </div>
 </div>
-<a id="abe123be54c74c0ba10885eaac680048b" name="abe123be54c74c0ba10885eaac680048b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe123be54c74c0ba10885eaac680048b">&#9670;&#160;</a></span>basisSystem()</h2>
+<a id="a0505eb0d69111fe3c23b2b1dc5a9625f" name="a0505eb0d69111fe3c23b2b1dc5a9625f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0505eb0d69111fe3c23b2b1dc5a9625f">&#9670;&#160;</a></span>basisSystem()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +272,7 @@ class QuantLib::EarlyExercisePathPricer&lt; PathType, TimeType, ValueType &gt;</
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::vector&lt; ext::function&lt; ValueType(<a class="el" href="../../d3/d19/class_quant_lib_1_1_early_exercise_path_pricer.html#a8f1d307035ca52ae82e4c13aa0cfe635">StateType</a>)&gt; &gt; basisSystem </td>
+          <td class="memname">virtual std::vector&lt; std::function&lt; ValueType(<a class="el" href="../../d3/d19/class_quant_lib_1_1_early_exercise_path_pricer.html#a8f1d307035ca52ae82e4c13aa0cfe635">StateType</a>)&gt; &gt; basisSystem </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -285,7 +285,7 @@ class QuantLib::EarlyExercisePathPricer&lt; PathType, TimeType, ValueType &gt;</
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../db/d05/class_quant_lib_1_1_american_basket_path_pricer.html#aaace59ca07555a0ab5cb8d4f44956ba6">AmericanBasketPathPricer</a>, and <a class="el" href="../../de/d66/class_quant_lib_1_1_american_path_pricer.html#a1b46db50d70424dcd510a3e1dd8b4aa2">AmericanPathPricer</a>.</p>
+<p>Implemented in <a class="el" href="../../db/d05/class_quant_lib_1_1_american_basket_path_pricer.html#a84e4e846ef785641cfa7fd8cd396c56f">AmericanBasketPathPricer</a>, and <a class="el" href="../../de/d66/class_quant_lib_1_1_american_path_pricer.html#aaf7305ce96491be4c7ed6b7425374659">AmericanPathPricer</a>.</p>
 
 </div>
 </div>

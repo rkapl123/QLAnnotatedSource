@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -391,17 +391,16 @@ $(function() {
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            <span class="keywordflow">if</span> (incrementAndCheckForOverlow(nextCodeStr[4]))</div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                incrementAndCheckForOverlow(nextCodeStr[3]);</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        }</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="keywordflow">return</span> nextCodeStr;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="preprocessor">        #if defined(QL_EXTRA_SAFETY_CHECKS)</span></div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a394b39aa396098345f86d243f207f7af">QL_ENSURE</a>(<a class="code hl_function" href="../../db/d09/struct_quant_lib_1_1_e_c_b.html#a92e3d1b53805803a82b8eac9e2d6dd96">isECBcode</a>(nextCodeStr),</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                  <span class="stringliteral">&quot;the result &quot;</span> &lt;&lt; nextCodeStr &lt;&lt;</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                  <span class="stringliteral">&quot; is an invalid ECB code&quot;</span>);</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="preprocessor">        #endif</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="keywordflow">return</span> nextCodeStr;</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    }</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>}</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="preprocessor">        #if defined(QL_EXTRA_SAFETY_CHECKS)</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <a class="code hl_define" href="../../df/d52/errors_8hpp.html#a394b39aa396098345f86d243f207f7af">QL_ENSURE</a>(<a class="code hl_function" href="../../db/d09/struct_quant_lib_1_1_e_c_b.html#a92e3d1b53805803a82b8eac9e2d6dd96">isECBcode</a>(nextCodeStr),</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                  <span class="stringliteral">&quot;the result &quot;</span> &lt;&lt; nextCodeStr &lt;&lt;</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                  <span class="stringliteral">&quot; is an invalid ECB code&quot;</span>);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        <span class="keywordflow">return</span> nextCodeStr;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    }</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>}</div>
 <div class="ttc" id="aandreasenhugevolatilityinterpl_8cpp_html_a18279dd4d4460f2130f7a45358c14ffa"><div class="ttname"><a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp.html#a18279dd4d4460f2130f7a45358c14ffa">y</a></div><div class="ttdeci">Real y</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d70/andreasenhugevolatilityinterpl_8cpp_source.html#l00046">andreasenhugevolatilityinterpl.cpp:46</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html">QuantLib::Date</a></div><div class="ttdoc">Concrete date class.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00125">date.hpp:125</a></div></div>
 <div class="ttc" id="aclass_quant_lib_1_1_date_html_a12a9728ebab194c76dcde771ffc741e2"><div class="ttname"><a href="../../db/d60/class_quant_lib_1_1_date.html#a12a9728ebab194c76dcde771ffc741e2">QuantLib::Date::minDate</a></div><div class="ttdeci">static Date minDate()</div><div class="ttdoc">earliest allowed date</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da2/date_8cpp_source.html#l00766">date.cpp:766</a></div></div>
@@ -429,7 +428,7 @@ $(function() {
 <div class="ttc" id="agroup__datetime_html_ggae34b763987dcf60c6c619d327b8c9dbba8e8c7d515e22b7c7d882ae4c97584c14"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbba8e8c7d515e22b7c7d882ae4c97584c14">QuantLib::October</a></div><div class="ttdeci">@ October</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00066">date.hpp:66</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggae34b763987dcf60c6c619d327b8c9dbbaa00f035b8f40661118c16e2af3e61176"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbbaa00f035b8f40661118c16e2af3e61176">QuantLib::June</a></div><div class="ttdeci">@ June</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00062">date.hpp:62</a></div></div>
 <div class="ttc" id="agroup__datetime_html_ggae34b763987dcf60c6c619d327b8c9dbbaf5dc1d3f398ac54dfac9985fb9fbe47d"><div class="ttname"><a href="../../d1/d37/group__datetime.html#ggae34b763987dcf60c6c619d327b8c9dbbaf5dc1d3f398ac54dfac9985fb9fbe47d">QuantLib::September</a></div><div class="ttdeci">@ September</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/date_8hpp_source.html#l00065">date.hpp:65</a></div></div>
-<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00035">any.hpp:35</a></div></div>
+<div class="ttc" id="anamespace_quant_lib_html"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html">QuantLib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/any_8hpp_source.html#l00037">any.hpp:37</a></div></div>
 <div class="ttc" id="anamespace_quant_lib_html_a21e70758868d6dcff7998e4d5cabaa8f"><div class="ttname"><a href="../../d5/d7b/namespace_quant_lib.html#a21e70758868d6dcff7998e4d5cabaa8f">QuantLib::months</a></div><div class="ttdeci">Real months(const Period &amp;p)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d54/period_8cpp_source.html#l00296">period.cpp:296</a></div></div>
 <div class="ttc" id="asettings_8hpp_html"><div class="ttname"><a href="../../d5/d0f/settings_8hpp.html">settings.hpp</a></div><div class="ttdoc">global repository for run-time library settings</div></div>
 <div class="ttc" id="astruct_quant_lib_1_1_e_c_b_html_a12cd1dffc55a18da5d22e04fb2060e36"><div class="ttname"><a href="../../db/d09/struct_quant_lib_1_1_e_c_b.html#a12cd1dffc55a18da5d22e04fb2060e36">QuantLib::ECB::removeDate</a></div><div class="ttdeci">static void removeDate(const Date &amp;d)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de9/ecb_8cpp_source.html#l00168">ecb.cpp:168</a></div></div>

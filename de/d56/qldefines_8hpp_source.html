@@ -31,7 +31,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.quantlib.org">QuantLib</a>: a free/open-source library for quantitative finance
-   <div id="projectnumber">fully annotated source code - version 1.34</div>
+   <div id="projectnumber">fully annotated source code - version 1.38</div>
    </div>
   </td>
  </tr>
@@ -284,20 +284,20 @@ $(function() {
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="preprocessor">        __pragma(warning(disable : 4996))</span></div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="preprocessor">#    define QL_DEPRECATED_ENABLE_WARNING \</span></div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">        __pragma(warning(pop))</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">#elif defined(__clang__)</span></div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">#    define QL_DEPRECATED __attribute__((deprecated))</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">#    define QL_DEPRECATED_DISABLE_WARNING                               \</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">        _Pragma(&quot;GCC diagnostic push&quot;</span>)                                  \</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        _Pragma(&quot;GCC diagnostic ignored \&quot;-Wdeprecated-declarations\&quot;&quot;)</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">#    define QL_DEPRECATED_DISABLE_WARNING                                 \</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">        _Pragma(&quot;clang diagnostic push&quot;</span>)                                  \</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        _Pragma(&quot;clang diagnostic ignored \&quot;-Wdeprecated-declarations\&quot;&quot;)</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">#    define QL_DEPRECATED_ENABLE_WARNING \</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">        _Pragma(&quot;GCC diagnostic pop&quot;</span>)</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">#elif defined(__clang__)</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">        _Pragma(&quot;clang diagnostic pop&quot;</span>)</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">#    define QL_DEPRECATED __attribute__((deprecated))</span></div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">#    define QL_DEPRECATED_DISABLE_WARNING                                 \</span></div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">        _Pragma(&quot;clang diagnostic push&quot;</span>)                                  \</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        _Pragma(&quot;clang diagnostic ignored \&quot;-Wdeprecated-declarations\&quot;&quot;)</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">#    define QL_DEPRECATED_DISABLE_WARNING                               \</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">        _Pragma(&quot;GCC diagnostic push&quot;</span>)                                  \</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        _Pragma(&quot;GCC diagnostic ignored \&quot;-Wdeprecated-declarations\&quot;&quot;)</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="preprocessor">#    define QL_DEPRECATED_ENABLE_WARNING \</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">        _Pragma(&quot;clang diagnostic pop&quot;</span>)</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">        _Pragma(&quot;GCC diagnostic pop&quot;</span>)</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="comment">// we don&#39;t know how to enable it, just define the macros away</span></div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="../../de/d56/qldefines_8hpp.html#a0f9479a1b8e4a45ac141925c58c525e3">  215</a></span><span class="preprocessor">#    define QL_DEPRECATED</span></div>

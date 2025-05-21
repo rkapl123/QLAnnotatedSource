@@ -15,12 +15,13 @@ var searchData=
   ['klugeextouprocess_12',['KlugeExtOUProcess',['../df/de6/class_quant_lib_1_1_kluge_ext_o_u_process.html',1,'QuantLib']]],
   ['kneighbors_13',['KNeighbors',['../d4/d71/class_quant_lib_1_1_k_neighbors.html',1,'QuantLib']]],
   ['knuthuniformrng_14',['KnuthUniformRng',['../d8/dca/class_quant_lib_1_1_knuth_uniform_rng.html',1,'QuantLib']]],
-  ['krugercubic_15',['KrugerCubic',['../de/d36/class_quant_lib_1_1_kruger_cubic.html',1,'QuantLib']]],
-  ['krugerlog_16',['KrugerLog',['../da/de8/class_quant_lib_1_1_kruger_log.html',1,'QuantLib']]],
-  ['krugerlogcubic_17',['KrugerLogCubic',['../d1/dd9/class_quant_lib_1_1_kruger_log_cubic.html',1,'QuantLib']]],
-  ['krugerlogmixedlinearcubic_18',['KrugerLogMixedLinearCubic',['../df/dcc/class_quant_lib_1_1_kruger_log_mixed_linear_cubic.html',1,'QuantLib']]],
-  ['krwcurrency_19',['KRWCurrency',['../d1/d2b/class_quant_lib_1_1_k_r_w_currency.html',1,'QuantLib']]],
-  ['krximpl_20',['KrxImpl',['../d8/d11/class_quant_lib_1_1_south_korea_1_1_krx_impl.html',1,'QuantLib::SouthKorea']]],
-  ['kwdcurrency_21',['KWDCurrency',['../da/d02/class_quant_lib_1_1_k_w_d_currency.html',1,'QuantLib']]],
-  ['kztcurrency_22',['KZTCurrency',['../d4/d06/class_quant_lib_1_1_k_z_t_currency.html',1,'QuantLib']]]
+  ['kofr_15',['Kofr',['../d3/d7a/class_quant_lib_1_1_kofr.html',1,'QuantLib']]],
+  ['krugercubic_16',['KrugerCubic',['../de/d36/class_quant_lib_1_1_kruger_cubic.html',1,'QuantLib']]],
+  ['krugerlog_17',['KrugerLog',['../da/de8/class_quant_lib_1_1_kruger_log.html',1,'QuantLib']]],
+  ['krugerlogcubic_18',['KrugerLogCubic',['../d1/dd9/class_quant_lib_1_1_kruger_log_cubic.html',1,'QuantLib']]],
+  ['krugerlogmixedlinearcubic_19',['KrugerLogMixedLinearCubic',['../df/dcc/class_quant_lib_1_1_kruger_log_mixed_linear_cubic.html',1,'QuantLib']]],
+  ['krwcurrency_20',['KRWCurrency',['../d1/d2b/class_quant_lib_1_1_k_r_w_currency.html',1,'QuantLib']]],
+  ['krximpl_21',['KrxImpl',['../d8/d11/class_quant_lib_1_1_south_korea_1_1_krx_impl.html',1,'QuantLib::SouthKorea']]],
+  ['kwdcurrency_22',['KWDCurrency',['../da/d02/class_quant_lib_1_1_k_w_d_currency.html',1,'QuantLib']]],
+  ['kztcurrency_23',['KZTCurrency',['../d4/d06/class_quant_lib_1_1_k_z_t_currency.html',1,'QuantLib']]]
 ];
